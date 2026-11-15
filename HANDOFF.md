@@ -4,6 +4,16 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:50 — Nico — rama `main` — ordenador de Nico
+**Hecho**: Nico y Jorge aprueban la prueba v2 («súbelo»). Publicada en público en las tres redes desde el navegador integrado del Mac de Nico, con los textos de `lotes/prueba-v2-huellas-luna/metadatos.json`:
+- YouTube: https://youtube.com/shorts/D_2cV1qhmfA (no para niños; derechos de autor: sin problemas)
+- Instagram: https://www.instagram.com/reel/DfxOzoPR6pD/ (formato «Original» 9:16)
+- TikTok: https://www.tiktok.com/@parece.mentira85/video/7708440623040269590 (pasó la revisión, «Todo el mundo»)
+Excepción de tema repetido registrada en `DECISIONS.md` y en `lotes/IDEAS.md`.
+**Aprendido para el agente**: el selector de archivos del navegador integrado no lo puede manejar Claude (la app de Claude no se puede controlar); la persona elige el archivo y Claude hace el resto. Instagram recorta a 1:1 por defecto. Las sugerencias de hashtags de Instagram se comen el clic de «Compartir»: escribir un espacio al final antes de compartir.
+**Pendientes**: decidir las revisiones automáticas de TikTok; música definitiva; prueba SVG vs. IA.
+**Siguiente paso**: lote de la tarde v2 (Jorge, en curso) y primer lote automático de mañana a las 07:52.
+
 ## 2026-11-15 17:45 — Jorge — rama `main` — ordenador de Jorge
 **Hecho**: v2 del lote 2026-11-15-tarde con el motor v2. Guiones ampliados (155/152/142 palabras, `textos_v2.json` y `guiones.md`), voz nueva por API desde el Mac de Jorge (52,3 / 46,7 / 46,3 s), `generadores/a_v2.py` (paso v1→v2 reutilizable), render en el workspace y copia a `lotes/2026-11-15-tarde/v2/` del Mac de Jorge.
 **Pruebas**: ffprobe, ebur128 (−19,3…−19,6 LUFS), hojas de fotogramas revisadas.

@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-15 17:30 — Nico_
+_Última actualización: 2026-11-15 17:50 — Nico_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -21,6 +21,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- Publicado: prueba v2 «Huellas en la Luna» (2026-11-15) en YouTube, Instagram y TikTok — ver `lotes/prueba-v2-huellas-luna/estado.md`.
 - Lotes producidos en el sistema nuevo: `2026-11-15-tarde` (3 vídeos v1, en revisión; MP4 en el Mac de Jorge, SRT en Drive).
 - Vídeos antiguos (001–007 + piloto Venus): retirados de las redes; ver `DECISIONS.md`.
 

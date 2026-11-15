@@ -4,9 +4,9 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Publicar la prueba v2 «Huellas en la Luna» en YouTube, Instagram y TikTok (aprobada con «súbelo») — Nico — 2026-11-15 17:32
 
 ## Pendiente
+- [ ] Decidir si se activan en TikTok las «revisiones automáticas de contenido» (ajuste de cuenta que ofrece TikTok al subir)
 - [ ] Revisar el lote 2026-11-15-tarde v2 y decir «ok» o cambios (vídeos en el Mac de Jorge y en el chat de Jorge)
 - [ ] Instalar Google Drive para ordenador en los dos Macs (modo transmitir, sin copias de carpetas) para que los MP4 >10 MB lleguen a Drive
 - [ ] Elegir música definitiva (hoy el motor genera una base por código, sin licencias)
@@ -25,6 +25,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Prueba v2 «Huellas en la Luna» publicada: YouTube https://youtube.com/shorts/D_2cV1qhmfA · Instagram https://www.instagram.com/reel/DfxOzoPR6pD/ · TikTok https://www.tiktok.com/@parece.mentira85/video/7708440623040269590 — Nico — 2026-11-15
 - [x] Lote 2026-11-15-tarde v2 con motor v2 (52 / 47 / 46 s, karaoke, rótulos, música) — Jorge — 2026-11-15
 - [x] Prueba v2 revisada: a Nico y Jorge les encanta; se publica (mejoras más adelante) — Nico — 2026-11-15
 - [x] Motor v2 en `main` (subtítulo karaoke, transiciones desenfoque/zoom, rótulos de dato, SVG, música generada + mezcla a −19 LUFS, grano) y vídeo de prueba v2 de 47 s — Nico — 2026-11-15
