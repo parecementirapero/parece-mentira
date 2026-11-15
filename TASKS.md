@@ -4,7 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-_(nada)_
+- [ ] Crear el agente diario y las dos tareas programadas (08:00 Nico, 20:00 Jorge) — Nico — 2026-11-15 16:35
 
 ## Pendiente
 - [ ] Guardar la API key de ElevenLabs en `.env` en cada ordenador
@@ -13,7 +13,6 @@ _(nada)_
 - [ ] Conectar en la app de Claude la misma carpeta local de trabajo en los dos ordenadores (p. ej. `Documents/Parece Mentira`)
 - [ ] Pasar a «Solo yo» el TikTok «Mi cerebro cuando toca callarse» desde el móvil
 - [ ] Montar el script de montaje 9:16 reproducible en Python dentro del repo
-- [ ] Crear las dos tareas programadas (08:00 Nico, 20:00 Jorge)
 - [ ] Lista de 20–30 temas iniciales en `lotes/IDEAS.md`
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
