@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 16:52 — Jorge — rama `main`
+**Hecho**: tarea programada «Parece Mentira — lote tarde (20:00, Jorge)» creada desde el Mac de Jorge, ligada a ese Mac y a `/Users/jorgegomez/Documents/Parece Mentira`, a las 19:52 Europe/Madrid (modo automático). Mismo prompt que la de la mañana con turno «tarde». Carpeta de Jorge apuntada en AGENTE.md; en el Mac de Jorge la clave está en `claves.txt` (no `.env`).
+**Ojo**: la primera ejecución es HOY a las 19:52 → primer lote real `2026-11-15-tarde`. El Mac de Jorge debe estar encendido con la app de Claude abierta.
+**Pendientes**: Mac de Nico (clave/sesiones); revisar prueba del motor; plan de créditos ElevenLabs; desactivar la tarea antigua de Codex.
+**Siguiente paso**: revisar el primer lote de la tarde y responder «ok» o cambios en su chat.
+
 ## 2026-11-15 16:55 — Nico — rama `main`
 **Hecho**
 - `motor/`: motor de montaje 9:16 en Python (Pillow + NumPy + FFmpeg). Escenas con fondo, cámara con paralaje, transiciones (fundido, barrido, corte), 13 tipos de elemento (forma, esfera con volumen y giro, brillo, rayos, partículas, suelo, agua, huella, flecha, barra, persona, imagen, grupo), subtítulo blanco abajo, SRT, manifiesto con SHA-256 y hoja de fotogramas. Documentado en `motor/README.md`.

@@ -12,7 +12,7 @@ _Creado: 2026-11-15 — Nico_
 | Turno | Hora (Europe/Madrid) | Ordenador | Carpeta local de trabajo | Carpeta de lote |
 |---|---|---|---|---|
 | `manana` | 08:00 | MacBook Air de Nico | `/Users/nico/Documents/Codex/Parece Mentira` | `lotes/AAAA-MM-DD-manana` |
-| `tarde` | 20:00 | Mac de Jorge | ⏳ pendiente (Jorge la conecta al crear su tarea) | `lotes/AAAA-MM-DD-tarde` |
+| `tarde` | 20:00 | Mac de Jorge (`jorges-macbook-air-2`) | `/Users/jorgegomez/Documents/Parece Mentira` | `lotes/AAAA-MM-DD-tarde` |
 
 En el registro, el agente firma como **«Agente 08:00 (Nico)»** o **«Agente 20:00 (Jorge)»**.
 
@@ -49,7 +49,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 - Voz oficial: **«Narrador PM - Curiosidades v1»**, voice_id `EuJOG4WNDCMcwTFrXKUc` (ver `DECISIONS.md`).
 - Orden de intentos:
-  1. **API**: clave `ELEVENLABS_API_KEY` en el `.env` de la carpeta local del turno (nunca en el repo). Llamada `POST https://api.elevenlabs.io/v1/text-to-speech/EuJOG4WNDCMcwTFrXKUc` desde `device_bash` o desde el workspace.
+  1. **API**: clave `ELEVENLABS_API_KEY` en el `.env` (Mac de Nico) o `claves.txt` (Mac de Jorge) de la carpeta local del turno (nunca en el repo ni en el chat). Llamada `POST https://api.elevenlabs.io/v1/text-to-speech/EuJOG4WNDCMcwTFrXKUc` desde `device_bash` o desde el workspace.
   2. **Navegador integrado** (sesión de ElevenLabs ya iniciada en ese ordenador): Text to Speech con esa voz, descargar el MP3.
 - Antes de generar, mira los créditos que quedan. Un lote gasta ≈2.500 caracteres. **Si no llegan, no se compra nada**: lote «pendiente de voz».
 - Si la voz falla por cualquier motivo: el vídeo queda **«pendiente de voz»**. Prohibido usar otra voz (ni del sistema ni de otra cuenta).
@@ -109,7 +109,7 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
 Cada tarea programada se crea **desde el ordenador que la va a ejecutar** (queda ligada a ese ordenador y a su carpeta local).
 
 - **08:00 — Nico**: creada el 2026-11-15 desde el MacBook Air de Nico.
-- **20:00 — Jorge**: ⏳ pendiente. Jorge, en la app de Claude de su Mac (con la carpeta de trabajo conectada), escribe:
+- **20:00 — Jorge**: creada el 2026-11-15 desde el Mac de Jorge (19:52 Europe/Madrid, ligada a ese Mac y a `/Users/jorgegomez/Documents/Parece Mentira`). Primera ejecución: 2026-11-15. Instrucciones originales:
   > Crea la tarea programada de la tarde de Parece Mentira según AGENTE.md del repo: todos los días a las 20:00 Europe/Madrid, que use este ordenador y mi carpeta de trabajo.
 
   El prompt de esa tarea es el mismo que el de la mañana cambiando `manana`→`tarde`, `08:00`→`20:00`, `Nico`→`Jorge` y la carpeta local. Después, Jorge rellena su carpeta en la tabla del punto 0.
