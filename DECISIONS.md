@@ -40,4 +40,5 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
   3. **Música**: Pixabay Music (guardando el certificado de licencia de cada pista en la carpeta del lote, por si hay reclamaciones de Content ID) o la música de ElevenLabs incluida en el plan. Solo se paga una biblioteca si las reclamaciones se vuelven un problema.
 
 ## Redes
+- Excepción a «no repetir temas»: se publica la prueba v2 «Huellas en la Luna» aunque el tema estaba usado en el sistema antiguo. — 2026-11-15 — Nico (con Jorge) — motivo: el vídeo antiguo está retirado y esta es la primera muestra del estilo nuevo
 - Todo lo publicado antes del 2026-11-15 se retiró: YouTube en privado, TikTok en «Solo yo» (salvo «Mi cerebro cuando toca callarse», bloqueado; hay que hacerlo desde el móvil), Instagram borrado. — 2026-11-15 — Jorge
