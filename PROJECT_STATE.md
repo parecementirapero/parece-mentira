@@ -9,7 +9,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Pieza | Estado |
 |---|---|
 | Gmail (parecementirapero.media@gmail.com) | ✅ conectado |
-| Google Drive (misma cuenta) | ✅ conectado, vacío salvo «Parece Mentira — Revisión» |
+| Google Drive (misma cuenta) | ⚠️ conectado, pero el conector no sube archivos de más de ≈3 MB por llamada: los MP4 no llegan a Drive |
 | GitHub (`parecementirapero/parece-mentira`) | ✅ conectado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Jorge | ✅ sesión iniciada en el navegador integrado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Nico | ✅ sesión iniciada en el navegador integrado (2026-11-15) |
@@ -21,11 +21,13 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
-- Lotes producidos en el sistema nuevo: ninguno todavía.
+- Lotes producidos en el sistema nuevo: `2026-11-15-tarde` (3 vídeos v1, en revisión; MP4 en el Mac de Jorge, SRT en Drive).
 - Vídeos antiguos (001–007 + piloto Venus): retirados de las redes; ver `DECISIONS.md`.
 
 ## Presupuesto
 Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (pendiente de contratar). Ver `DECISIONS.md`.
 
 ## Siguiente paso
-Los dos Macs ya tienen clave de ElevenLabs y sesiones. Revisar el primer lote de la tarde (Jorge) y la prueba del motor (Nico); primera ejecución de la mañana el 2026-11-16 a las 07:52.
+Revisar el lote 2026-11-15-tarde (vídeos en el Mac de Jorge) y escribir «ok» o cambios en su chat. Resolver la vía de subida de MP4 a Drive.
+
+_Anterior:_ Los dos Macs ya tienen clave de ElevenLabs y sesiones. Revisar el primer lote de la tarde (Jorge) y la prueba del motor (Nico); primera ejecución de la mañana el 2026-11-16 a las 07:52.

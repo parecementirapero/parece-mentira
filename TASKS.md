@@ -4,9 +4,10 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-15-tarde — Agente 20:00 (Jorge) — 2026-11-15 16:55 — arrancando
 
 ## Pendiente
+- [ ] Subida de MP4 a Drive: el conector solo admite ≈3 MB por llamada; decidir vía (subir a mano, Drive para escritorio sincronizando la carpeta del lote, o publicar desde el navegador integrado sin pasar por Drive)
+- [ ] Publicar lote 2026-11-15-tarde tras «ok» en su chat
 - [ ] Música de fondo: preparar en el motor la mezcla a −19 LUFS con pista de Pixabay o de ElevenLabs y guardar el certificado de licencia por lote
 - [ ] Aplicar `motor/OBJETIVO.md` al motor (subtítulo karaoke arriba, gancho, cámara, rótulos de dato, textura, final en bucle, música)
 - [ ] Aplicar al motor las mejoras de la revisión del 005 (ver `HANDOFF.md` 2026-11-15 17:05): subtítulo con zona reservada, huella de bota reconocible, módulo lunar reconocible, colisiones Tierra/Sol/barra, final con más acción
@@ -19,6 +20,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-15-tarde (3 vídeos, en revisión; MP4 solo en el Mac de Jorge, Drive solo SRT por límite de tamaño del conector) — Agente 20:00 (Jorge) — 2026-11-15
 - [x] Presupuesto ampliado y prioridad de gasto aceptados (ElevenLabs Pro → prueba SVG vs. IA → música gratis) → `DECISIONS.md`, `CLAUDE.md` — Nico — 2026-11-15
 - [x] Confirmados por Nico los cambios de estilo de `motor/OBJETIVO.md` (subtítulo karaoke arriba, 45–60 s, música) → `DECISIONS.md` — Nico — 2026-11-15
 - [x] Análisis de los 13 vídeos objetivo → `motor/OBJETIVO.md` (hojas en `~/Documents/Parece Mentira/referencias-objetivo/`) — Nico — 2026-11-15

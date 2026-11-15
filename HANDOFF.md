@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:10 — Agente 20:00 (Jorge) — rama `main`
+**Hecho**: lote `2026-11-15-tarde` (primera ejecución de la tarea de la tarde; arrancó a las 16:52 hora de Madrid). Tres temas verificados con dos fuentes cada uno: guerra anglo-zanzibariana de 38 minutos (historia, reconstrucción con reloj), la Luna se aleja 3,8 cm al año (ciencia, comparación con las uñas), moáis con cuerpo enterrado (misterio por pistas). Guiones de 125–135 palabras con cifras en letra (`lotes/2026-11-15-tarde/guiones.md`), metadatos por red (`metadatos.json`), generadores de `episodio.json` en `lotes/2026-11-15-tarde/generadores/` (nuevo helper de reloj con agujas que giran sobre el centro en `comun.py`). Voz por API desde el Mac de Jorge (`with-timestamps`, `eleven_multilingual_v2`), ~2.150 caracteres; quedan ~36.000 de 40.000. Render con `motor/` y QC. Correo único enviado (id `1a1dff810fee0c30`).
+**Pruebas**: ffprobe de los 3 MP4 (1080×1920, 30 fps, h264 yuv420p, AAC 48 kHz estéreo, 45,2 / 41,5 / 39,0 s); hojas de fotogramas del motor y del MP4 revisadas.
+**Bloqueo**: Drive. El conector rechaza archivos de más de 10 MB y, además, cada llamada tiene un tope de ≈3 MB de archivo; ni recodificando a CRF 24 (4–6 MB) entran. En Drive solo están los SRT. Los MP4 están en `Documents/Parece Mentira/lotes/2026-11-15-tarde` del Mac de Jorge. Además, la carpeta `/mnt/user-data/outputs` del workspace modifica los MP4 al copiarlos (añade ≈5,9 KB de metadatos): el SHA del archivo final no coincide con el del manifiesto; en `estado.md` va el SHA del archivo del Mac.
+**Pendientes**: decidir la vía de subida a Drive (ver `TASKS.md`); `motor/`: valorar un CRF configurable; esperar «ok» en el chat del lote.
+**Siguiente paso**: revisar los vídeos y responder «ok» (o «ok 1 y 3») o cambios en https://claude.ai/code/session_019BG1dGzAeKkhhB4LNjrkX3
+
 ## 2026-11-15 17:10 — Nico — rama `main` — ordenador de Nico
 **Hecho**: Nico y Jorge aceptan ampliar el presupuesto. Registrado en `DECISIONS.md` («Presupuesto y gastos») y en `CLAUDE.md`: 1) ElevenLabs Pro; 2) ilustraciones SVG gratis primero y prueba comparativa con IA antes de pagar; 3) música gratis (Pixabay con certificado o ElevenLabs).
 **Pendientes**: importe mensual exacto; contratar Pro (lo hace una persona, no Claude); prueba SVG vs. IA.
