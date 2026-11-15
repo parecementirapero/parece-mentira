@@ -4,7 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-_(nada)_
+- [ ] Montar el motor 9:16 reproducible en `motor/` y probarlo con un vídeo — Nico — 2026-11-15 16:40
 
 ## Pendiente
 - [ ] Jorge: crear desde su Mac la tarea programada de las 20:00 (instrucciones al final de `AGENTE.md`) y apuntar su carpeta local en la tabla del punto 0
@@ -14,7 +14,6 @@ _(nada)_
 - [ ] Nico: iniciar sesión en YouTube Studio, Instagram, TikTok y ElevenLabs en el navegador integrado de la app de Claude en su ordenador
 - [ ] Jorge: conectar su carpeta local de trabajo en la app de Claude (la de Nico ya está: `Documents/Codex/Parece Mentira`)
 - [ ] Pasar a «Solo yo» el TikTok «Mi cerebro cuando toca callarse» desde el móvil
-- [ ] Montar el script de montaje 9:16 reproducible en Python dentro del repo
 - [ ] Lista de 20–30 temas iniciales en `lotes/IDEAS.md`
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
