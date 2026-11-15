@@ -4,6 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Referencias nuevas (9 vídeos) → `motor/REFERENCIAS_2.md`; motor: cámara con foco + elementos HUD; lote 2026-11-15-tarde v3 (mismo audio v2) — Jorge — 2026-11-15 17:52
 
 ## Pendiente
 - [ ] Decidir si se activan en TikTok las «revisiones automáticas de contenido» (ajuste de cuenta que ofrece TikTok al subir)
