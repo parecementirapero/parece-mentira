@@ -4,12 +4,12 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Aplicar `motor/OBJETIVO.md` al motor (subtítulo karaoke arriba, gancho, cámara, rótulos de dato, textura, final en bucle, música) — Nico — 2026-11-15 17:10 — en rama `motor-v2` + vídeo de prueba (005 Huellas en la Luna)
 
 ## Pendiente
 - [ ] Subida de MP4 a Drive: el conector solo admite ≈3 MB por llamada; decidir vía (subir a mano, Drive para escritorio sincronizando la carpeta del lote, o publicar desde el navegador integrado sin pasar por Drive)
 - [ ] Publicar lote 2026-11-15-tarde tras «ok» en su chat
 - [ ] Música de fondo: preparar en el motor la mezcla a −19 LUFS con pista de Pixabay o de ElevenLabs y guardar el certificado de licencia por lote
-- [ ] Aplicar `motor/OBJETIVO.md` al motor (subtítulo karaoke arriba, gancho, cámara, rótulos de dato, textura, final en bucle, música)
 - [ ] Aplicar al motor las mejoras de la revisión del 005 (ver `HANDOFF.md` 2026-11-15 17:05): subtítulo con zona reservada, huella de bota reconocible, módulo lunar reconocible, colisiones Tierra/Sol/barra, final con más acción
 - [ ] Desactivar la tarea antigua de Codex de las 08:00 para que no produzca lotes en paralelo
 - [ ] Nico o Jorge: contratar ElevenLabs Pro desde la cuenta del proyecto y avisar en `HANDOFF.md` (decidido, ver `DECISIONS.md`)
