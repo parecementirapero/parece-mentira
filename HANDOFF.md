@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 00:10 — Jorge — rama `main` — ordenador de Jorge
+**Decisión**: se deja Drive. Desde el próximo lote, el agente envía los 3 MP4 a su propio chat (`device_stage_files` + `SendUserFile`) y el correo de las 08:00/20:00 lleva el enlace a ese chat para verlos y dar el «ok» allí.
+**Cambiado**: DECISIONS (Drive tachado + regla nueva), AGENTE §7, CLAUDE.md, TASKS (fuera las tareas de Drive para ordenador), PROJECT_STATE.
+**Siguiente paso**: comprobar en el lote de las 07:52 (Nico) que los vídeos aparecen en el chat y el correo enlaza bien.
+
 ## 2026-11-16 00:05 — Jorge — rama `main` — ordenador de Jorge
 **Hecho**: lote 2026-11-15-tarde v4 publicado en YouTube Shorts, Instagram Reels y TikTok desde el navegador integrado (Jorge elige cada archivo en el selector). Enlaces en `lotes/2026-11-15-tarde/estado.md`. Vídeos aprobados copiados a `~/Documents/Parece Mentira/PARA PUBLICAR/`.
 **Trucos**: Instagram → icono de recorte → «Original»; texto con clic en el campo y escribir (no execCommand). TikTok → borrar el título por defecto seleccionando con un Range en JS + Backspace; cmd+a no funciona.

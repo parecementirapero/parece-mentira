@@ -21,7 +21,7 @@ Este repo es la **única fuente de verdad**: lo que no esté aquí, no está dec
 ### 3. Mientras trabajas
 - Una petición que contradiga `DECISIONS.md` **no se aplica en silencio**: se señala a la persona y, si confirma, se cambia `DECISIONS.md` con fecha, quién y motivo.
 - Commits pequeños y frecuentes. Nada de secretos en el repo (`.env` está ignorado).
-- Los vídeos y audios pesados **no** se suben a git: van a Drive (ver `DECISIONS.md`). En `lotes/` solo texto: guiones, metadatos, enlaces.
+- Los vídeos y audios pesados **no** se suben a git: se quedan en la carpeta local del Mac y se revisan en el chat de Claude (ver `DECISIONS.md`). En `lotes/` solo texto: guiones, metadatos, enlaces.
 
 ### 4. Al terminar (o al parar a medias)
 1. `TASKS.md`: mueve la tarea a «Hecho» (o déjala «En curso» con una nota de dónde se quedó).

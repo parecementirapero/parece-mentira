@@ -10,11 +10,8 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
 - [ ] Decidir si se activan en TikTok las «revisiones automáticas de contenido» (ajuste de cuenta que ofrece TikTok al subir)
 - [ ] Revisar el lote 2026-11-15-tarde **v4** (01 v4c, 02 v4, 03 v4) y decir «ok» o cambios (Mac de Jorge, `lotes/2026-11-15-tarde/v3/`, y chat de Jorge)
-- [ ] Instalar Google Drive para ordenador en los dos Macs (modo transmitir, sin copias de carpetas) para que los MP4 >10 MB lleguen a Drive
 - [ ] Elegir música definitiva (hoy el motor genera una base por código, sin licencias)
-- [ ] Subida de MP4 a Drive: el conector solo admite ≈3 MB por llamada; decidir vía (subir a mano, Drive para escritorio sincronizando la carpeta del lote, o publicar desde el navegador integrado sin pasar por Drive)
 - [ ] Lote 2026-11-15-tarde v2 con el motor v2 cuando Nico lo termine (subtítulo karaoke arriba, música, 45–60 s / 130–170 palabras, rótulos de dato, gancho más claro, finales con acción) y volver a pedir «ok» en su chat — decidido por Nico 2026-11-15
-- [ ] Instalar Google Drive para escritorio en el Mac de Jorge y sincronizar `lotes/` (propuesta para que los MP4 lleguen a Drive)
 - [ ] Motor: CRF configurable y SHA del manifiesto igual al archivo entregado
 - [ ] Música de fondo: preparar en el motor la mezcla a −19 LUFS con pista de Pixabay o de ElevenLabs y guardar el certificado de licencia por lote
 - [ ] Aplicar al motor las mejoras de la revisión del 005 (ver `HANDOFF.md` 2026-11-15 17:05): subtítulo con zona reservada, huella de bota reconocible, módulo lunar reconocible, colisiones Tierra/Sol/barra, final con más acción
@@ -27,6 +24,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Se deja Drive: la revisión se hace en el chat de Claude (AGENTE §7, DECISIONS) — Jorge — 2026-11-16
 - [x] Publicar lote 2026-11-15-tarde v4 (01 v4c, 02 v4, 03 v4) en YouTube, Instagram y TikTok (aprobado por Jorge: «súbelos») — Jorge — 2026-11-15 23:42 → hecho 2026-11-16 00:05: 3 redes, enlaces en `lotes/2026-11-15-tarde/estado.md`
 - [x] Estilo de ilustración v4 en los 3 vídeos del lote 2026-11-15-tarde (balanza del 01 arreglada) — Jorge — 2026-11-15
 - [x] Referencias 2 (9 vídeos) analizadas → `motor/REFERENCIAS_2.md`, DECISIONS y AGENTE; motor v2.1 (cámara con foco, elementos HUD) — Jorge — 2026-11-15

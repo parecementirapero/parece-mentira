@@ -80,12 +80,12 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 7. Entrega
 
-1. **Drive**: dentro de «Parece Mentira — Revisión» (`1Sm8Yf72fJBxO7roWSOGT-hpRM0DK0j6i`) crea la subcarpeta `<lote>` y sube los 3 MP4 + SRT (conector de Google Drive). Si la subida queda esperando aprobación o falla, los archivos se quedan en la carpeta local y el correo lo dice.
+1. **Vídeos en el chat (sin Drive)**: copia los 3 MP4 de la carpeta local al contenedor con `device_stage_files` y **envíalos con `SendUserFile`** (uno por vídeo, con un pie corto: «1/3 · título · duración»). Así se ven y se reproducen dentro del chat de Claude, desde el Mac o el móvil. Si un MP4 no se puede enviar, dilo en el chat y en el correo (el archivo sigue en la carpeta local).
 2. **Correo** (conector de Gmail) a `parecementirapero.media@gmail.com` — **una sola notificación por turno**:
    - Asunto: `[Parece Mentira] Lote <lote> — 3 vídeos para revisar`
-   - Cuerpo: enlace a la subcarpeta de Drive; por vídeo: título, duración, versión y SHA-256 corto, fuentes; vídeos «pendiente de voz» si los hay; **enlace a este chat** (la sesión de la ejecución) y la instrucción: _«Para publicar, escribe "ok" en el chat (o "ok 1 y 3" para solo esos). Para cambios, escríbelos ahí.»_
-3. **Registro** en el repo: `lotes/<lote>/estado.md` (enlace Drive, estado «en revisión», enlace al chat, id del correo), `TASKS.md` (el lote pasa a «Hecho» con nota «en revisión»), `PROJECT_STATE.md`, entrada en `HANDOFF.md`. Commit + push y comprobar que entró.
-4. Responde en el chat con un resumen corto (lo que hay en Drive y qué falta) y **espera**.
+   - Cuerpo: **enlace a este chat** (la sesión de la ejecución, donde están los vídeos para verlos) y la instrucción: _«Abre el chat, mira los vídeos y escribe "ok" (o "ok 1 y 3" para solo esos). Para cambios, escríbelos ahí.»_; por vídeo: título, duración, versión y SHA-256 corto, fuentes; vídeos «pendiente de voz» si los hay. Sin enlaces a Drive.
+3. **Registro** en el repo: `lotes/<lote>/estado.md` (estado «en revisión», enlace al chat, id del correo), `TASKS.md` (el lote pasa a «Hecho» con nota «en revisión»), `PROJECT_STATE.md`, entrada en `HANDOFF.md`. Commit + push y comprobar que entró.
+4. Responde en el chat con un resumen corto (los vídeos enviados arriba y qué falta) y **espera** el «ok».
 
 ## 8. Publicar tras «ok»
 
@@ -103,7 +103,7 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
 ## 9. Límites
 
 - No publica ni programa sin «ok». No compra nada ni cambia de plan. No mete contraseñas ni códigos (si una sesión caducó, avisa).
-- Nada pesado en git (MP3/MP4 van a la carpeta local y a Drive).
+- Nada pesado en git (MP3/MP4 se quedan en la carpeta local; la revisión se hace con los vídeos enviados al chat).
 - Si algo bloquea el lote, se registra la causa en `estado.md` y `HANDOFF.md`, y se avisa en el mismo correo del turno.
 
 ---

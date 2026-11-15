@@ -9,7 +9,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Pieza | Estado |
 |---|---|
 | Gmail (parecementirapero.media@gmail.com) | ✅ conectado |
-| Google Drive (misma cuenta) | ⚠️ conectado, pero el conector no sube archivos de más de ≈3 MB por llamada: los MP4 no llegan a Drive |
+| Google Drive | ⛔ ya no se usa (2026-11-16): los vídeos se revisan en el chat de Claude del agente |
 | GitHub (`parecementirapero/parece-mentira`) | ✅ conectado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Jorge | ✅ sesión iniciada en el navegador integrado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Nico | ✅ sesión iniciada en el navegador integrado (2026-11-15) |
@@ -30,6 +30,6 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (pendiente de contratar). Ver `DECISIONS.md`.
 
 ## Siguiente paso
-Revisar el lote 2026-11-15-tarde (vídeos en el Mac de Jorge) y escribir «ok» o cambios en su chat. Resolver la vía de subida de MP4 a Drive.
+Revisar el lote 2026-11-15-tarde (vídeos en el Mac de Jorge) y escribir «ok» o cambios en su chat.
 
 _Anterior:_ Los dos Macs ya tienen clave de ElevenLabs y sesiones. Revisar el primer lote de la tarde (Jorge) y la prueba del motor (Nico); primera ejecución de la mañana el 2026-11-16 a las 07:52.
