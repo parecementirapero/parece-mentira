@@ -35,3 +35,7 @@ Hecha desde el chat del Mac de Jorge con `generadores/a_v2.py` (reajusta las esc
 QC: ffprobe 1080×1920, 30 fps, h264 + AAC; hojas de fotogramas revisadas (karaoke a y=300 para no pisar la torre del palacio y la cabeza del moái; rótulos en la mitad de abajo).
 Drive: **no subidos** (el conector no admite >10 MB). Pendiente de Google Drive para ordenador.
 Voz v2: ~2.500 caracteres.
+
+## Versión 3 (referencias 2) — Jorge — 2026-11-15 18:20
+Mismo audio que la v2 (0 créditos de ElevenLabs). `generadores/a_v3.py`: planos de ~2,7 s (19/18/17 planos) general → primer plano → detalle con `camara.foco`, rótulos HUD, término clave en amarillo, etiqueta roja de contexto, viñeta más marcada en escenas oscuras.
+Archivos: `lotes/2026-11-15-tarde/v3/` del Mac de Jorge (52,3 / 46,7 / 46,3 s; −19,4 / −19,6 / −19,3 LUFS). Drive: pendiente (Google Drive para ordenador).

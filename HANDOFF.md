@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 18:20 — Jorge — rama `main` — ordenador de Jorge
+**Hecho**: análisis de 9 vídeos de referencia (20 archivos de WhatsApp) → `motor/REFERENCIAS_2.md`, regla nueva en `DECISIONS.md` y aviso en `AGENTE.md`. Motor v2.1: `camara.foco` y elementos `"hud": true` (README). `generadores/a_v3.py` y lote 2026-11-15-tarde v3 con el audio v2 (sin gastar créditos).
+**Pruebas**: hojas de fotogramas cada 1,5 s de los 3 vídeos; ffprobe (1080×1920, h264/AAC, 52,3/46,7/46,3 s); ebur128 −19,3…−19,6 LUFS.
+**Pendientes**: callouts con línea y planos en sección en el motor; focos manuales donde el detalle corta personajes; «ok» de Nico/Jorge; Google Drive para ordenador.
+**Siguiente paso**: revisar la v3.
+
 ## 2026-11-15 17:50 — Nico — rama `main` — ordenador de Nico
 **Hecho**: Nico y Jorge aprueban la prueba v2 («súbelo»). Publicada en público en las tres redes desde el navegador integrado del Mac de Nico, con los textos de `lotes/prueba-v2-huellas-luna/metadatos.json`:
 - YouTube: https://youtube.com/shorts/D_2cV1qhmfA (no para niños; derechos de autor: sin problemas)
