@@ -4,6 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Publicar lote 2026-11-15-tarde v4 (01 v4c, 02 v4, 03 v4) en YouTube, Instagram y TikTok (aprobado por Jorge: «súbelos») — Jorge — 2026-11-15 23:42
 
 ## Pendiente
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
