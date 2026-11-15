@@ -4,10 +4,11 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-15-tarde v2: rehacer los 3 vídeos con el motor v2 (karaoke arriba, música, 45–60 s) — Jorge — 2026-11-15 17:32 — desde el chat del Mac de Jorge
 - [ ] Publicar la prueba v2 «Huellas en la Luna» en YouTube, Instagram y TikTok (aprobada con «súbelo») — Nico — 2026-11-15 17:32
 
 ## Pendiente
+- [ ] Revisar el lote 2026-11-15-tarde v2 y decir «ok» o cambios (vídeos en el Mac de Jorge y en el chat de Jorge)
+- [ ] Instalar Google Drive para ordenador en los dos Macs (modo transmitir, sin copias de carpetas) para que los MP4 >10 MB lleguen a Drive
 - [ ] Elegir música definitiva (hoy el motor genera una base por código, sin licencias)
 - [ ] Subida de MP4 a Drive: el conector solo admite ≈3 MB por llamada; decidir vía (subir a mano, Drive para escritorio sincronizando la carpeta del lote, o publicar desde el navegador integrado sin pasar por Drive)
 - [ ] Lote 2026-11-15-tarde v2 con el motor v2 cuando Nico lo termine (subtítulo karaoke arriba, música, 45–60 s / 130–170 palabras, rótulos de dato, gancho más claro, finales con acción) y volver a pedir «ok» en su chat — decidido por Nico 2026-11-15
@@ -24,6 +25,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-15-tarde v2 con motor v2 (52 / 47 / 46 s, karaoke, rótulos, música) — Jorge — 2026-11-15
 - [x] Prueba v2 revisada: a Nico y Jorge les encanta; se publica (mejoras más adelante) — Nico — 2026-11-15
 - [x] Motor v2 en `main` (subtítulo karaoke, transiciones desenfoque/zoom, rótulos de dato, SVG, música generada + mezcla a −19 LUFS, grano) y vídeo de prueba v2 de 47 s — Nico — 2026-11-15
 - [x] Lote 2026-11-15-tarde (3 vídeos, en revisión; MP4 solo en el Mac de Jorge, Drive solo SRT por límite de tamaño del conector) — Agente 20:00 (Jorge) — 2026-11-15

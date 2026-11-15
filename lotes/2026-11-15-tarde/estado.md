@@ -22,3 +22,16 @@ Nota: el SHA del manifiesto (`*_manifest.json`) es el del render; al copiar al M
 
 ## Publicación
 _(pendiente de «ok»)_
+
+## Versión 2 (motor v2) — Jorge — 2026-11-15 17:45
+Hecha desde el chat del Mac de Jorge con `generadores/a_v2.py` (reajusta las escenas v1 a la locución v2, karaoke arriba con palabras clave, rótulos de dato, transiciones v2, música generada `curiosidad|misterio`, grano 0,035).
+
+| # | Archivo (Mac de Jorge, `lotes/2026-11-15-tarde/v2/`) | Duración | LUFS |
+|---|---|---|---|
+| 1 | `2026-11-15-tarde-01-guerra-38-minutos_v2.mp4` | 52,3 s | −19,4 |
+| 2 | `2026-11-15-tarde-02-luna-se-aleja_v2.mp4` | 46,7 s | −19,6 |
+| 3 | `2026-11-15-tarde-03-moais-con-cuerpo_v2.mp4` | 46,3 s | −19,3 |
+
+QC: ffprobe 1080×1920, 30 fps, h264 + AAC; hojas de fotogramas revisadas (karaoke a y=300 para no pisar la torre del palacio y la cabeza del moái; rótulos en la mitad de abajo).
+Drive: **no subidos** (el conector no admite >10 MB). Pendiente de Google Drive para ordenador.
+Voz v2: ~2.500 caracteres.

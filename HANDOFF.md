@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:45 — Jorge — rama `main` — ordenador de Jorge
+**Hecho**: v2 del lote 2026-11-15-tarde con el motor v2. Guiones ampliados (155/152/142 palabras, `textos_v2.json` y `guiones.md`), voz nueva por API desde el Mac de Jorge (52,3 / 46,7 / 46,3 s), `generadores/a_v2.py` (paso v1→v2 reutilizable), render en el workspace y copia a `lotes/2026-11-15-tarde/v2/` del Mac de Jorge.
+**Pruebas**: ffprobe, ebur128 (−19,3…−19,6 LUFS), hojas de fotogramas revisadas.
+**Ojo**: karaoke a y=300 (≈16 %) en este lote para no tapar escenarios altos; el conector de Drive sigue sin admitir los MP4.
+**Siguiente paso**: «ok» o cambios de Nico y Jorge; Google Drive para ordenador.
+
 ## 2026-11-15 17:30 — Nico — rama `motor-v2` fusionada en `main` — ordenador de Nico
 **Hecho**
 - Motor v2 (`motor/README.md` → «Novedades v2»): subtítulo karaoke arriba con palabras clave en cápsula (modo por defecto; `"modo": "clasico"` para el de la v1), transiciones `desenfoque` y `zoom`, elemento `rotulo` (cifra + unidad, puede contar), `imagen` con SVG, música generada por código (`motor/musica.py`) con sidechain y normalización a −19 LUFS, grano fijo y tope de 8 Mb/s.

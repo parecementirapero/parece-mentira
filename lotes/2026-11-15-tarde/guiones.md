@@ -76,3 +76,28 @@ Si crees que los moáis de la Isla de Pascua son solo cabezas, tus ojos te han e
 
 - [Live Science — Do the Easter Island Heads Really Have Bodies?](https://www.livescience.com/20580-easter-island-heads-bodies.html)
 - [ExplorersWeb — Yes, the Easter Island Statues Have Bodies](https://explorersweb.com/easter-island-statues-bodies/)
+
+
+---
+
+# Versión 2 (motor v2) — Jorge — 2026-11-15
+
+Guiones ampliados a 45–60 s (DECISIONS 2026-11-15). Añadidos marcados en el texto; los datos nuevos amplían lo ya verificado.
+
+## 01 v2 (155 palabras)
+
+La guerra más corta de la historia duró menos que un partido de fútbol. Fue en Zanzíbar, el veintisiete de agosto de mil ochocientos noventa y seis. Días antes había muerto el sultán, y su sobrino Jalid se instaló en el palacio sin el visto bueno de los británicos. Gran Bretaña le dio un ultimátum: o te vas, o disparamos. Jalid se atrincheró con casi tres mil hombres y hasta armó el yate real. Pasadas las nueve de la mañana, tres cruceros y dos cañoneras abrieron fuego sobre el palacio. A las nueve y cuarenta, los cañones ya estaban en silencio y el palacio, en ruinas. Unos treinta y ocho minutos en total. El balance fue brutal y desigual: unos quinientos muertos o heridos de un lado, y un solo marinero británico herido del otro. Poco después, Zanzíbar ya tenía un sultán nuevo, elegido por Londres. Y desde entonces, ninguna guerra registrada ha durado menos.
+
+_Añadido: «con casi tres mil hombres y hasta armó el yate real» (History Today: ~2.800 defensores y el yate real *Glasgow*); cierre «ninguna guerra registrada ha durado menos» (History Hit)._
+
+## 02 v2 (152 palabras)
+
+Mira tus uñas: la Luna se aleja de nosotros más o menos a la misma velocidad a la que crecen. Unos tres coma ocho centímetros cada año. ¿Y cómo lo sabemos con tanta precisión? Porque los astronautas del Apolo dejaron allí espejos especiales. Los primeros los colocó el Apolo once en mil novecientos sesenta y nueve, y todavía funcionan. Desde la Tierra se dispara un láser, la luz rebota en esos espejos y vuelve. Midiendo cuánto tarda el viaje de ida y vuelta, se calcula la distancia: unos trescientos ochenta y cuatro mil kilómetros. La culpa la tienen las mareas: el agua de los océanos frena un poquito el giro de la Tierra y, a cambio, empuja a la Luna hacia una órbita más amplia. Por eso los días se alargan, aunque muy despacio: un segundo cada cuarenta mil años, más o menos. Tranquilo, la Luna no se va a escapar mañana.
+
+_Añadido: Apolo 11 en 1969, los reflectores siguen funcionando (NASA JPL); distancia media ~384.000 km (NASA)._
+
+## 03 v2 (142 palabras)
+
+Si crees que los moáis de la Isla de Pascua son solo cabezas, tus ojos te han engañado. Primera pista: en la ladera de un volcán hay unas ciento cincuenta estatuas que parecen cabezas gigantes saliendo de la hierba. Ese volcán es Rano Raraku, la cantera donde se tallaron casi todas. Segunda pista: en mil novecientos catorce, unos arqueólogos empezaron a cavar a su alrededor. Y encontraron la respuesta: debajo de la tierra hay un torso entero. Siglos de erosión fueron enterrando los cuerpos hasta los hombros. Entre dos mil diez y dos mil catorce, el equipo de la arqueóloga Jo Anne Van Tilburg desenterró dos de ellos y encontró grabados en la espalda. En la isla hay casi mil moáis, y algunos miden hasta diez metros y pesan decenas de toneladas. Lo que asoma es solo la mitad de la historia.
+
+_Añadido: Rano Raraku, la cantera de casi todos los moáis (Live Science, ExplorersWeb); «pesan decenas de toneladas» (media ≈12 t, los mayores > 80 t)._
