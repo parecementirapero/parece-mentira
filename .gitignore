@@ -1,0 +1,20 @@
+# Secretos
+.env
+*.key
+
+# Media pesada (va a Drive, no a git)
+*.mp4
+*.mov
+*.mp3
+*.wav
+*.m4a
+renders/
+tmp/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Sistema
+.DS_Store
