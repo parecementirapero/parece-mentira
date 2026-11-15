@@ -87,8 +87,11 @@ class Escena:
         self.ini = float(spec["inicio"])
         self.fin = float(spec["fin"])
         self.fondo = fondo_img(spec.get("fondo", {}))
-        self.elems = [crear(e, base_dir) for e in spec.get("elementos", [])]
+        self.elems = [crear(e, base_dir) for e in spec.get("elementos", []) if not e.get("hud")]
+        # elementos "hud": se pintan después de la cámara (no se recortan al acercar el plano)
+        self.hud = [crear(e, base_dir) for e in spec.get("elementos", []) if e.get("hud")]
         cam = spec.get("camara", {})
+        self.foco = cam.get("foco")  # [[x0, y0], [x1, y1]] punto que queda en el centro del encuadre
         self.zoom = cam.get("zoom", [1.0, 1.04])
         self.pan = cam.get("pan", [[0, 0], [0, -24]])
         self.temblor = cam.get("temblor", 0)
@@ -111,8 +114,15 @@ class Escena:
         z = self.zoom[0] + (self.zoom[1] - self.zoom[0]) * u
         if abs(z - 1) > 1e-3:
             cw, ch = W / z, H / z
-            img = img.crop((int((W - cw) / 2), int((H - ch) / 2),
-                            int((W + cw) / 2), int((H + ch) / 2))).resize((W, H), Image.BICUBIC)
+            cx, cy = W / 2, H / 2
+            if self.foco:
+                (fx0, fy0), (fx1, fy1) = self.foco
+                cx = min(max(fx0 + (fx1 - fx0) * u, cw / 2), W - cw / 2)
+                cy = min(max(fy0 + (fy1 - fy0) * u, ch / 2), H - ch / 2)
+            img = img.crop((int(cx - cw / 2), int(cy - ch / 2),
+                            int(cx + cw / 2), int(cy + ch / 2))).resize((W, H), Image.BICUBIC)
+        for e in self.hud:
+            e.dibujar(img, t, (0, 0))
         if self.vineta:
             k = round(self.vineta, 2)
             if k not in vin_cache:

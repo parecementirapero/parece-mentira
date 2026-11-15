@@ -49,6 +49,11 @@ Tiempo de render aproximado: 2,5–3 s de cálculo por segundo de vídeo.
 - **Grano**: `"grano": 0.035` (textura fija; uno animado multiplicaba ×8 el peso del MP4). El vídeo lleva tope de 8 Mb/s.
 - Ejemplo completo: `ejemplos/v2-huellas-luna/generar.py RUTA_AUDIO` (47 s, 8 escenas, gancho en el fotograma 0 y final en bucle). Render ≈ 2 min.
 
+## Novedades v2.1 (2026-11-15, Jorge — referencias `motor/REFERENCIAS_2.md`)
+- **Cámara con foco**: `"camara": {"zoom": [1.5, 1.6], "foco": [[x0, y0], [x1, y1]]}` encuadra ese punto del lienzo (primer plano / detalle) en vez del centro. Sin `foco`, igual que antes.
+- **Elementos HUD**: cualquier elemento con `"hud": true` se pinta después de la cámara (etiquetas, palabras clave, cifras): no se recorta ni se agranda al acercar el plano.
+- **Planos dentro de una escena**: se trocea una escena en planos con `"entrada": "corte"` y los `keys` desplazados (ver `lotes/2026-11-15-tarde/generadores/a_v3.py`).
+
 ## Elementos (`tipo`)
 Propiedades comunes animables con `keys` (`[{"t": s, "x": .., "op": .., "ease": "suave|lineal|entrada|salida|rebote"}]`):
 `x, y, escala, ex, ey, rot, op, z` (z = paralaje: 0 fondo quieto, 1 primer plano).
