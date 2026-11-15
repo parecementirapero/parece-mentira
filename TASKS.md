@@ -4,9 +4,10 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Aplicar `motor/OBJETIVO.md` al motor (subtítulo karaoke arriba, gancho, cámara, rótulos de dato, textura, final en bucle, música) — Nico — 2026-11-15 17:10 — en rama `motor-v2` + vídeo de prueba (005 Huellas en la Luna)
 
 ## Pendiente
+- [ ] Nico: ver la prueba `renders/prueba/v2/prueba-v2-huellas-luna_v1.mp4` y decir qué falta para el nivel de los objetivos (base para decidir la prueba SVG vs. IA)
+- [ ] Elegir música definitiva (hoy el motor genera una base por código, sin licencias)
 - [ ] Subida de MP4 a Drive: el conector solo admite ≈3 MB por llamada; decidir vía (subir a mano, Drive para escritorio sincronizando la carpeta del lote, o publicar desde el navegador integrado sin pasar por Drive)
 - [ ] Lote 2026-11-15-tarde v2 con el motor v2 cuando Nico lo termine (subtítulo karaoke arriba, música, 45–60 s / 130–170 palabras, rótulos de dato, gancho más claro, finales con acción) y volver a pedir «ok» en su chat — decidido por Nico 2026-11-15
 - [ ] Instalar Google Drive para escritorio en el Mac de Jorge y sincronizar `lotes/` (propuesta para que los MP4 lleguen a Drive)
@@ -22,6 +23,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Motor v2 en `main` (subtítulo karaoke, transiciones desenfoque/zoom, rótulos de dato, SVG, música generada + mezcla a −19 LUFS, grano) y vídeo de prueba v2 de 47 s — Nico — 2026-11-15
 - [x] Lote 2026-11-15-tarde (3 vídeos, en revisión; MP4 solo en el Mac de Jorge, Drive solo SRT por límite de tamaño del conector) — Agente 20:00 (Jorge) — 2026-11-15
 - [x] Presupuesto ampliado y prioridad de gasto aceptados (ElevenLabs Pro → prueba SVG vs. IA → música gratis) → `DECISIONS.md`, `CLAUDE.md` — Nico — 2026-11-15
 - [x] Confirmados por Nico los cambios de estilo de `motor/OBJETIVO.md` (subtítulo karaoke arriba, 45–60 s, música) → `DECISIONS.md` — Nico — 2026-11-15

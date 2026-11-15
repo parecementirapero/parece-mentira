@@ -4,6 +4,17 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:30 — Nico — rama `motor-v2` fusionada en `main` — ordenador de Nico
+**Hecho**
+- Motor v2 (`motor/README.md` → «Novedades v2»): subtítulo karaoke arriba con palabras clave en cápsula (modo por defecto; `"modo": "clasico"` para el de la v1), transiciones `desenfoque` y `zoom`, elemento `rotulo` (cifra + unidad, puede contar), `imagen` con SVG, música generada por código (`motor/musica.py`) con sidechain y normalización a −19 LUFS, grano fijo y tope de 8 Mb/s.
+- Prueba `motor/ejemplos/v2-huellas-luna/` (guion 155 palabras, 8 escenas, gancho en el fotograma 0, final en bucle, 8 SVG). Voz nueva con `/with-timestamps` desde el Mac de Nico (~830 caracteres). Vídeo en `~/Documents/Parece Mentira/renders/prueba/v2/` (no en git).
+- `005-huellas-luna` fijado en `"modo": "clasico"` para que siga saliendo como la v1.
+
+**Pruebas**: `ffprobe` → 1080×1920, 30 fps, h264, AAC 48 kHz estéreo, 47,2 s, 27 MB; `ebur128` → −19,5 LUFS; 0 % de instantes estáticos; hojas de fotogramas revisadas (corregidos: bota que no tapaba su huella, rótulos sobre la Tierra, «2011» tapado por la sonda, bota asomando en el bucle, peso de 212 MB por el grano animado). El 005 se sigue renderizando sin errores.
+**Fuentes del guion**: The Planetary Society y ASU/phys.org (LRO a 21 km, 2011); erosión por micrometeoritos (Space.com, cita de Mark Robinson, ASU).
+**Pendientes**: que Nico vea la prueba; música definitiva; prueba SVG vs. IA.
+**Siguiente paso**: el chat del lote 2026-11-15-tarde ya puede rehacer los 3 vídeos con el motor v2 (estaba esperando a que `motor-v2` entrara en `main`).
+
 ## 2026-11-15 17:20 — Nico (en el chat del lote 2026-11-15-tarde) — rama `main`
 **Hecho**: Nico revisa el lote de la tarde: está en el estilo antiguo (subtítulo abajo, sin música, 39–45 s). Decide **esperar al motor v2** y sacar la v2 de los 3 vídeos con el estilo nuevo; la v1 no se publica. Propuestas de mejora apuntadas en `TASKS.md` (gancho más claro, rótulos de dato, personajes más reconocibles, finales con acción, Drive para escritorio, CRF configurable).
 **Siguiente paso**: cuando `motor-v2` esté en `main`, rehacer el lote con guiones de 130–170 palabras (voz nueva) y pedir «ok» en https://claude.ai/code/session_019BG1dGzAeKkhhB4LNjrkX3
