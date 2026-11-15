@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:15 — Nico — rama `main` — ordenador de Nico
+**Hecho**: análisis de 13 vídeos objetivo (descargas de TikTok que pasó Nico) → `motor/OBJETIVO.md`: ficha técnica medida (duración, cortes, movimiento, LUFS), rasgos de estilo comunes y lista priorizada de cambios para el motor. Hojas de fotogramas en `~/Documents/Parece Mentira/referencias-objetivo/` (no en git).
+**Pruebas**: `ffprobe`, detección de cortes (`scene>0.25`), `ebur128`, `silencedetect`, diferencia entre fotogramas; revisión visual de las 13 hojas y del gancho (0–3 s) de 4 vídeos.
+**Ojo**: varios cambios contradicen `DECISIONS.md`/`AGENTE.md` (subtítulo arriba tipo karaoke, 45–60 s, música). No se ha cambiado nada: falta confirmación.
+**Siguiente paso**: confirmar esos cambios y, después, aplicarlos al motor junto con las mejoras de la revisión del 005.
+
 ## 2026-11-15 17:05 — Nico — rama `main` — ordenador de Nico
 **Hecho**: revisión de `renders/prueba/prueba-005-huellas-luna_v1.mp4` (fotograma cada 1 s + detalle a media resolución; hojas en `renders/prueba/hoja1s_*.jpg` y `revision_detalle.jpg`).
 **Pruebas**: `ffprobe` → 1080×1920, 30 fps, h264, AAC 48 kHz estéreo, 32,9 s; sin congelados (`freezedetect`).
