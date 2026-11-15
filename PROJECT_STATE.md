@@ -13,7 +13,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | GitHub (`parecementirapero/parece-mentira`) | ✅ conectado |
 | YouTube / Instagram / TikTok — ordenador de Nico | ✅ sesión iniciada en el navegador integrado |
 | YouTube / Instagram / TikTok — ordenador de Jorge | ⏳ pendiente |
-| ElevenLabs | ⏳ cuenta nueva y voz nueva en preparación |
+| ElevenLabs | ✅ voz «Narrador PM - Curiosidades v1» lista (plan Starter); ⏳ falta API key en `.env` |
 | Carpeta local de trabajo | ⏳ pendiente en ambos ordenadores |
 | Tareas programadas 08:00 / 20:00 | ⏳ pendiente |
 
@@ -22,4 +22,4 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 - Vídeos antiguos (001–007 + piloto Venus): retirados de las redes; ver `DECISIONS.md`.
 
 ## Siguiente paso
-Elegir: voz de ElevenLabs, carpeta local o script de montaje.
+API key de ElevenLabs en `.env`, carpeta local o script de montaje.

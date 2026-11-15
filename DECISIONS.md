@@ -24,7 +24,7 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 
 ## Voz
 - ~~Voz ElevenLabs «Archivo Oculto — Narración», Eleven v4, estabilidad 50 %, similitud 75 %.~~
-- Pendiente: voz nueva de ElevenLabs (hombre, acento de España, ritmo rápido con gancho), en una cuenta nueva con plan de pago. Hasta tenerla, un vídeo sin voz se marca «pendiente de voz»; no se genera voz alternativa. — 2026-11-15 — Nico
+- Voz oficial: ElevenLabs «Narrador PM - Curiosidades v1» (voice_id `EuJOG4WNDCMcwTFrXKUc`), hombre ~30 años, acento de España, ritmo ágil. Cuenta nueva de ElevenLabs, plan Starter (licencia comercial). Si falla la voz, el vídeo se marca «pendiente de voz»; no se genera voz alternativa. — 2026-11-15 — Nico
 
 ## Redes
 - Todo lo publicado antes del 2026-11-15 se retiró: YouTube en privado, TikTok en «Solo yo» (salvo «Mi cerebro cuando toca callarse», bloqueado; hay que hacerlo desde el móvil), Instagram borrado. — 2026-11-15 — Nico

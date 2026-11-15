@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 16:30 — Nico — rama `main`
+**Hecho**: comprobada en ElevenLabs (navegador integrado, ordenador de Nico) la voz «Narrador PM - Curiosidades v1», voice_id `EuJOG4WNDCMcwTFrXKUc`. Plan Starter con licencia comercial. Registrada en `DECISIONS.md`.
+**Pruebas**: lectura de la lista de voces y de la página de suscripción.
+**Pendientes**: API key en `.env`; decidir si el plan Starter basta (ver `TASKS.md`).
+**Siguiente paso**: API key de ElevenLabs o carpeta local.
+
 ## 2026-11-15 16:25 — Nico — rama `main`
 **Hecho**
 - Repo creado de cero en la cuenta compartida y estructura base: `CLAUDE.md` (protocolo), `TASKS.md`, `PROJECT_STATE.md`, `DECISIONS.md`, `HANDOFF.md`, `lotes/`.
