@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-15-tarde
 
-- **Estado**: en revisión (esperando «ok» en el chat)
+- **Estado**: en revisión — **v1 en espera**: Nico decide (2026-11-15) no publicar la v1 y rehacer los 3 vídeos (v2) con el motor v2 y el estilo nuevo de `DECISIONS.md`. Después se vuelve a pedir «ok».
 - **Agente**: Agente 20:00 (Jorge) · Mac de Jorge · carpeta local `Documents/Parece Mentira/lotes/2026-11-15-tarde`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dGzAeKkhhB4LNjrkX3
 - **Drive**: https://drive.google.com/drive/folders/1nNCCTMwP2WMKok84Ykactyt2aj5Wvdtc — **solo los 3 SRT**. Los MP4 no se subieron: el conector de Drive acepta ≈3 MB por llamada (y 10 MB por archivo) y los vídeos pesan 7–12 MB. Los MP4 están en la carpeta local del Mac de Jorge.

@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:20 — Nico (en el chat del lote 2026-11-15-tarde) — rama `main`
+**Hecho**: Nico revisa el lote de la tarde: está en el estilo antiguo (subtítulo abajo, sin música, 39–45 s). Decide **esperar al motor v2** y sacar la v2 de los 3 vídeos con el estilo nuevo; la v1 no se publica. Propuestas de mejora apuntadas en `TASKS.md` (gancho más claro, rótulos de dato, personajes más reconocibles, finales con acción, Drive para escritorio, CRF configurable).
+**Siguiente paso**: cuando `motor-v2` esté en `main`, rehacer el lote con guiones de 130–170 palabras (voz nueva) y pedir «ok» en https://claude.ai/code/session_019BG1dGzAeKkhhB4LNjrkX3
+
 ## 2026-11-15 17:10 — Agente 20:00 (Jorge) — rama `main`
 **Hecho**: lote `2026-11-15-tarde` (primera ejecución de la tarea de la tarde; arrancó a las 16:52 hora de Madrid). Tres temas verificados con dos fuentes cada uno: guerra anglo-zanzibariana de 38 minutos (historia, reconstrucción con reloj), la Luna se aleja 3,8 cm al año (ciencia, comparación con las uñas), moáis con cuerpo enterrado (misterio por pistas). Guiones de 125–135 palabras con cifras en letra (`lotes/2026-11-15-tarde/guiones.md`), metadatos por red (`metadatos.json`), generadores de `episodio.json` en `lotes/2026-11-15-tarde/generadores/` (nuevo helper de reloj con agujas que giran sobre el centro en `comun.py`). Voz por API desde el Mac de Jorge (`with-timestamps`, `eleven_multilingual_v2`), ~2.150 caracteres; quedan ~36.000 de 40.000. Render con `motor/` y QC. Correo único enviado (id `1a1dff810fee0c30`).
 **Pruebas**: ffprobe de los 3 MP4 (1080×1920, 30 fps, h264 yuv420p, AAC 48 kHz estéreo, 45,2 / 41,5 / 39,0 s); hojas de fotogramas del motor y del MP4 revisadas.
