@@ -8,6 +8,6 @@
 ## Publicación
 | Red | URL | Estado |
 |---|---|---|
-| YouTube | | pendiente |
+| YouTube | https://youtube.com/shorts/D_2cV1qhmfA | ✅ publicado 2026-11-15 17:40 (público, no para niños; derechos de autor sin problemas) |
 | Instagram | | pendiente |
 | TikTok | | pendiente |
