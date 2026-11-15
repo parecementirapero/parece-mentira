@@ -4,6 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Lote 2026-11-15-tarde v2: rehacer los 3 vídeos con el motor v2 (karaoke arriba, música, 45–60 s) — Jorge — 2026-11-15 17:32 — desde el chat del Mac de Jorge
 
 ## Pendiente
 - [ ] Nico: ver la prueba `renders/prueba/v2/prueba-v2-huellas-luna_v1.mp4` y decir qué falta para el nivel de los objetivos (base para decidir la prueba SVG vs. IA)
