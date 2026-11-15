@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 620">
+  <defs>
+    <linearGradient id="tela" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f4f5f8"/><stop offset="0.65" stop-color="#d9dbe3"/><stop offset="1" stop-color="#a9adba"/></linearGradient>
+    <linearGradient id="goma" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f7380"/><stop offset="1" stop-color="#3b3e48"/></linearGradient>
+  </defs>
+  <!-- caña de la bota -->
+  <path d="M150 0 L360 0 L372 300 C376 340 380 360 400 380 L150 380 Z" fill="url(#tela)"/>
+  <path d="M150 0 L182 0 L182 380 L150 380 Z" fill="#ffffff" opacity="0.45"/>
+  <rect x="148" y="120" width="226" height="26" fill="#2f5bd6"/>
+  <rect x="148" y="250" width="232" height="14" fill="#c9ccd6"/>
+  <!-- pie -->
+  <path d="M110 360 C110 330 140 318 170 318 L400 318 C470 318 512 360 512 430 L512 470 L104 470 Z" fill="url(#tela)"/>
+  <path d="M120 420 L506 420" stroke="#b4b8c4" stroke-width="6"/>
+  <!-- suela con surcos -->
+  <path d="M96 466 L516 466 L512 520 C510 540 496 548 476 548 L120 548 C104 548 92 536 94 518 Z" fill="url(#goma)"/>
+  <g stroke="#2a2c34" stroke-width="10" stroke-linecap="round">
+    <path d="M140 548 L140 566"/><path d="M190 548 L190 566"/><path d="M240 548 L240 566"/><path d="M290 548 L290 566"/>
+    <path d="M340 548 L340 566"/><path d="M390 548 L390 566"/><path d="M440 548 L440 566"/>
+  </g>
+</svg>

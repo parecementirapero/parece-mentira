@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420">
+  <defs>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="0.45" stop-color="#e0a52a"/><stop offset="1" stop-color="#8a5a10"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a5bd0"/><stop offset="1" stop-color="#14215e"/></linearGradient>
+    <pattern id="celdas" width="34" height="34" patternUnits="userSpaceOnUse"><rect width="34" height="34" fill="url(#panel)"/><path d="M0 0 H34 V34" stroke="#8fa6ff" stroke-width="2" fill="none" opacity="0.5"/></pattern>
+  </defs>
+  <!-- panel solar -->
+  <rect x="380" y="60" width="350" height="150" rx="8" fill="url(#celdas)" stroke="#c7d0ff" stroke-width="4"/>
+  <rect x="320" y="125" width="64" height="16" fill="#9aa0ad"/>
+  <!-- cuerpo con lámina dorada -->
+  <rect x="120" y="70" width="210" height="240" rx="14" fill="url(#oro)"/>
+  <path d="M130 90 L320 290 M150 80 L320 250 M120 150 L280 310" stroke="#fff2b8" stroke-width="5" opacity="0.35"/>
+  <!-- antena -->
+  <path d="M150 70 L120 10" stroke="#c3c7d1" stroke-width="8"/><ellipse cx="114" cy="12" rx="40" ry="14" fill="#e8eaf0"/>
+  <!-- cámaras mirando abajo -->
+  <rect x="160" y="300" width="56" height="70" rx="8" fill="#d9dbe3"/><rect x="232" y="300" width="56" height="70" rx="8" fill="#d9dbe3"/>
+  <circle cx="188" cy="372" r="20" fill="#1b1f2e" stroke="#9aa0ad" stroke-width="5"/><circle cx="260" cy="372" r="20" fill="#1b1f2e" stroke="#9aa0ad" stroke-width="5"/>
+  <circle cx="182" cy="366" r="6" fill="#8fd0ff"/><circle cx="254" cy="366" r="6" fill="#8fd0ff"/>
+</svg>

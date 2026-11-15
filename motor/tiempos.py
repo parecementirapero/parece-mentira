@@ -74,7 +74,8 @@ def trocear(palabras, max_chars=26):
     def cerrar():
         if grupo:
             out.append({"texto": " ".join(p["texto"] for p in grupo),
-                        "inicio": grupo[0]["inicio"], "fin": grupo[-1]["fin"]})
+                        "inicio": grupo[0]["inicio"], "fin": grupo[-1]["fin"],
+                        "palabras": [dict(p) for p in grupo]})
             grupo.clear()
     for p in palabras:
         largo = len(" ".join(x["texto"] for x in grupo + [p]))

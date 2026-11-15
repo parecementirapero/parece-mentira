@@ -1,6 +1,6 @@
 # Motor de montaje 9:16
 
-Convierte un `episodio.json` + la locución en un MP4 listo para revisar (1080×1920, 30 fps, H.264 yuv420p, AAC 48 kHz estéreo) con subtítulo blanco abajo, SRT, manifiesto con SHA-256 y hoja de fotogramas para el control de calidad.
+Convierte un `episodio.json` + la locución en un MP4 listo para revisar (1080×1920, 30 fps, H.264 yuv420p, AAC 48 kHz estéreo) con subtítulo karaoke arriba (o el clásico abajo), música de fondo, mezcla a −19 LUFS, SRT, manifiesto con SHA-256 y hoja de fotogramas para el control de calidad.
 
 Requisitos: Python 3.9+, `pip install pillow numpy`, FFmpeg con libx264 y ffprobe.
 
@@ -40,6 +40,15 @@ Tiempo de render aproximado: 2,5–3 s de cálculo por segundo de vídeo.
 - Tiempos de escena en segundos absolutos; los `keys` de cada elemento, **relativos al inicio de su escena**.
 - Los elementos se pintan en orden: el primero queda al fondo.
 
+## Novedades v2 (2026-11-15, estilo de `motor/OBJETIVO.md`)
+- **Subtítulo karaoke** (por defecto): `"estilo_subtitulos": {"modo": "karaoke", "y": 350, "tam": 62, "claves": ["palabra", ...]}`. Necesita la alineación de ElevenLabs (`/with-timestamps`). Las palabras clave salen en cápsula. `"modo": "clasico"` = el blanco abajo de la v1.
+- **Transiciones**: `"entrada": "desenfoque"` (barrido rápido con desenfoque de movimiento) y `"zoom"` (atraviesa la escena anterior), además de `fundido|barrido|corte`.
+- **Rótulos de dato**: elemento `rotulo` (`texto` o `contar: [desde, hasta, s]` + `contar_desde`, `unidad`, `tam`, `color`, `capsula`).
+- **Ilustraciones SVG**: `imagen` acepta `.svg` (se rasteriza con `rsvg-convert`), con `sombra` opcional. Ejemplos en `ejemplos/v2-huellas-luna/svg/`.
+- **Música**: `"musica": {"archivo": "pista.mp3", "db": -16}` o `{"generar": "curiosidad|misterio", "semilla": 1}` (música generada por código, sin licencias). La voz atenúa la música (sidechain) y la mezcla se normaliza a `"lufs": -19`.
+- **Grano**: `"grano": 0.035` (textura fija; uno animado multiplicaba ×8 el peso del MP4). El vídeo lleva tope de 8 Mb/s.
+- Ejemplo completo: `ejemplos/v2-huellas-luna/generar.py RUTA_AUDIO` (47 s, 8 escenas, gancho en el fotograma 0 y final en bucle). Render ≈ 2 min.
+
 ## Elementos (`tipo`)
 Propiedades comunes animables con `keys` (`[{"t": s, "x": .., "op": .., "ease": "suave|lineal|entrada|salida|rebote"}]`):
 `x, y, escala, ex, ey, rot, op, z` (z = paralaje: 0 fondo quieto, 1 primer plano).
@@ -58,13 +67,14 @@ Movimiento continuo con `anim`: `flotar [px, s]`, `girar º/s`, `balanceo [º, s
 | `flecha` | flechas y trazos que se dibujan; la punta sigue la dirección final | puntos (lienzo), grosor, color, contorno, progreso, punta, discontinua |
 | `barra` | barras que se llenan | ancho, alto, progreso, color, fondo, vertical |
 | `persona` | personaje sencillo, también astronauta | alto, piel, ropa, pelo, casco, brazo_i, brazo_d, paso |
-| `imagen` | PNG dibujado aparte | archivo, ancho |
+| `imagen` | PNG o SVG dibujado aparte | archivo, ancho, sombra |
+| `rotulo` | cifra grande + unidad (dato en pantalla), puede contar | texto, contar, contar_desde, unidad, tam, color, capsula |
 | `grupo` | objetos que se mueven juntos (hijos con x, y relativos) | ancho, alto, hijos |
 
 Si un tema necesita algo que no existe, se añade un tipo nuevo en `elementos.py` con `@tipo("nombre")`, se documenta aquí y se comprueba que `ejemplos/005-huellas-luna` sigue saliendo igual.
 
 ## Reglas de estilo (de `DECISIONS.md`)
-Pantalla completa, sin título, sin rótulos, **solo** el subtítulo blanco abajo y sin Nova. Siempre hay algo moviéndose; cada cambio de plano tiene que aportar información. Las flechas apuntan hacia donde va el movimiento. Las cifras van en letra en la locución; el subtítulo puede ponerlas en número.
+Pantalla completa, sin título fijo y sin Nova; subtítulo karaoke arriba y rótulos de dato integrados en la escena (ver `DECISIONS.md` y `OBJETIVO.md`). Siempre hay algo moviéndose; cada cambio de plano tiene que aportar información. Las flechas apuntan hacia donde va el movimiento. Las cifras van en letra en la locución; el subtítulo puede ponerlas en número.
 
 ## Ejemplo
 `ejemplos/005-huellas-luna/generar.py` genera el `episodio.json` de la prueba del 2026-11-15 (6 escenas: playa vista desde arriba con ola y viento, pisada en la Luna, insignias de viento y lluvia tachadas, astronauta con rastro y años que pasan, sonda sobre el módulo con los senderos y lupa). El MP3 y el SRT no están en git; están en la carpeta local de Nico (`005-locucion.mp3`, `005-huellas-v1.srt`).

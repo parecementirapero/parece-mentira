@@ -21,6 +21,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from .core import W, H, FPS, rgb, lerp_arr, vineta, EASE
 from .elementos import crear
 from . import tiempos
+from .subtitulos import SubtitulosKaraoke
+from . import musica as musica_mod
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 FUENTE = os.path.join(AQUI, "fuentes", "Poppins-Bold.ttf")
@@ -47,6 +49,35 @@ def fondo_img(spec):
     arr = arr + rng.normal(0, 1.4, arr.shape[:2])[..., None]
     out = np.concatenate([np.clip(arr, 0, 255), np.full((H, W, 1), 255.0)], 2).astype(np.uint8)
     return Image.fromarray(out, "RGBA")
+
+
+# ====================================================================== transiciones
+def _desenfoque_h(img, k):
+    """Desenfoque de movimiento horizontal barato (reducir y ampliar en x)."""
+    if k < 2:
+        return img
+    return img.resize((max(8, int(W / k)), H), Image.BILINEAR).resize((W, H), Image.BILINEAR)
+
+
+def _latigazo(prev, cur, u):
+    """Barrido rápido de cámara con desenfoque de movimiento (como en los vídeos objetivo)."""
+    k = 1 + 34 * math.sin(math.pi * u)
+    off = int(W * u)
+    comp = Image.new("RGBA", (W, H))
+    comp.alpha_composite(_desenfoque_h(prev, k).crop((off, 0, W, H)), (0, 0))
+    comp.alpha_composite(_desenfoque_h(cur, k).crop((0, 0, off, H)), (W - off, 0))
+    return comp
+
+
+def _zoom_paso(prev, cur, u):
+    """Entra en la escena siguiente atravesando la anterior (zoom + fundido)."""
+    z1 = 1 + 0.9 * u
+    cw, ch = W / z1, H / z1
+    a = prev.crop((int((W - cw) / 2), int((H - ch) / 2), int((W + cw) / 2), int((H + ch) / 2))).resize((W, H), Image.BILINEAR)
+    z2 = 1.35 - 0.35 * u
+    cw, ch = W / z2, H / z2
+    b = cur.crop((int((W - cw) / 2), int((H - ch) / 2), int((W + cw) / 2), int((H + ch) / 2))).resize((W, H), Image.BILINEAR)
+    return Image.blend(a, b, u)
 
 
 # ====================================================================== escena
@@ -162,8 +193,14 @@ class Episodio:
         self.duracion = float(s.get("duracion") or (self.dur_audio + s.get("cola", 0.5)))
         self.escenas = [Escena(e, self.dir) for e in s["escenas"]]
         self.escenas.sort(key=lambda e: e.ini)
-        self.subs = Subtitulos(self._subtitulos(), s.get("estilo_subtitulos", {}))
+        est = s.get("estilo_subtitulos", {})
+        if est.get("modo", "karaoke") == "clasico":
+            self.subs = Subtitulos(self._subtitulos(), est)
+        else:
+            self.subs = SubtitulosKaraoke(self._subtitulos(), est)
         self._vin = {}
+        self.grano = float(s.get("grano", 0.0))
+        self._granos = None
 
     def _abs(self, p):
         return p if os.path.isabs(p) else os.path.join(self.dir, p)
@@ -199,10 +236,29 @@ class Episodio:
                 comp = prev.copy()
                 comp.alpha_composite(img.crop((0, 0, W - off, H)), (off, 0))
                 img = comp
+            elif esc.entrada == "desenfoque":
+                img = _latigazo(prev, img, u)
+            elif esc.entrada == "zoom":
+                img = _zoom_paso(prev, img, u)
             else:
                 img = Image.blend(prev, img, u)
         self.subs.dibujar(img, t)
-        return img.convert("RGB")
+        out = img.convert("RGB")
+        if self.grano > 0:
+            out = self._con_grano(out, t)
+        return out
+
+    def _con_grano(self, img, t):
+        # grano fijo (textura de papel): uno animado multiplica el peso del MP4 por 20
+        if self._granos is None:
+            rng = np.random.default_rng(7)
+            g = rng.normal(0, 255 * self.grano, (H // 2, W // 2)).astype(np.float32)
+            g = np.repeat(np.repeat(g, 2, 0), 2, 1)
+            g = np.asarray(Image.fromarray(np.clip(g + 128, 0, 255).astype(np.uint8)).filter(
+                ImageFilter.GaussianBlur(0.8)), np.float32) - 128
+            self._granos = g[..., None]
+        arr = np.asarray(img, np.float32) + self._granos
+        return Image.fromarray(np.clip(arr, 0, 255).astype(np.uint8), "RGB")
 
     # ------------------------------------------------------------------ salida
     def nombre(self):
@@ -232,11 +288,12 @@ class Episodio:
         mp4 = os.path.join(salida, self.nombre() + ".mp4")
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
-        if self.audio:
-            cmd += ["-ss", f"{desde:.3f}", "-i", self.audio,
+        audio = self._audio_final(salida) if self.audio else None
+        if audio:
+            cmd += ["-ss", f"{desde:.3f}", "-i", audio,
                     "-filter_complex", f"[1:a]apad,atrim=0:{hasta - desde:.3f},aresample=48000[a]",
                     "-map", "0:v", "-map", "[a]", "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-ar", "48000"]
-        cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-pix_fmt", "yuv420p",
+        cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-maxrate", "8M", "-bufsize", "16M", "-pix_fmt", "yuv420p",
                 "-movflags", "+faststart", "-t", f"{hasta - desde:.3f}", mp4]
         p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
         for i in range(n):
@@ -251,6 +308,23 @@ class Episodio:
         tiempos.escribir_srt(self.subs.l, srt)
         self._manifiesto(salida, mp4, srt, n)
         return mp4
+
+    def _audio_final(self, salida):
+        """Voz sola (normalizada) o voz + música de fondo, a -19 LUFS (DECISIONS.md)."""
+        m = self.s.get("musica")
+        lufs = self.s.get("lufs", -19.0)
+        mix = os.path.join(salida, self.nombre() + "_mezcla.wav")
+        if not m:
+            subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", self.audio, "-af",
+                                   f"loudnorm=I={lufs}:TP=-1.5:LRA=11,aresample=48000", "-ac", "2", mix])
+            return mix
+        if m.get("archivo"):
+            pista = self._abs(m["archivo"])
+        else:
+            pista = os.path.join(salida, self.nombre() + "_musica.wav")
+            musica_mod.generar(pista, self.duracion + 0.2, m.get("generar", "curiosidad"), m.get("semilla", 1))
+        self.musica_usada = pista
+        return musica_mod.mezclar(self.audio, pista, mix, self.duracion, m.get("db", -17.0), lufs)
 
     def _manifiesto(self, salida, mp4, srt, n):
         def sha(p):
@@ -270,7 +344,9 @@ class Episodio:
             "creado": dt.datetime.now().isoformat(timespec="seconds"),
             "duracion_s": round(self.duracion, 3), "fotogramas": n, "fps": FPS, "resolucion": [W, H],
             "sha256": {"mp4": sha(mp4), "srt": sha(srt), "episodio_json": sha(self.ruta),
-                       "audio": sha(self.audio) if self.audio else None},
+                       "audio": sha(self.audio) if self.audio else None,
+                       "musica": sha(self.musica_usada) if getattr(self, "musica_usada", None) else None},
+            "musica": self.s.get("musica"),
             "motor_commit": commit, "ffmpeg": ff, "fuente": os.path.basename(FUENTE),
             "escenas": [{"inicio": e.ini, "fin": e.fin} for e in self.escenas],
         }
