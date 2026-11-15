@@ -4,6 +4,20 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:00 — Nico — rama `main` — ordenador de Nico (`macbook-air-de-nicolas-local`)
+**Hecho**
+- Carpeta `/Users/nico/Documents/Parece Mentira` con `lotes/`, `renders/` y `claves.txt` (`ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID=EuJOG4WNDCMcwTFrXKUc`). La tarea de las 08:00 (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`) ya apunta a esta carpeta; `AGENTE.md` y `PROJECT_STATE.md` actualizados (antes ponían `Documents/Codex/...`, que queda solo para `referencias/`).
+- ElevenLabs (sesión ya iniciada con la cuenta del proyecto en el navegador integrado): clave API **«Parece Mentira - Nico»**, sin caducidad, restringida a «De texto a voz» y «Usuario». La copió y pegó Nico en `claves.txt`; Claude no la ha visto ni escrito.
+- Navegador integrado del Mac de Nico: permiso «siempre» para instagram.com y tiktok.com. Sesiones: YouTube Studio (canal «Parece Mentira», ya estaba), Instagram **@parecementiramedia** y TikTok Studio **parece.mentira85** (iniciadas por Nico). No se ha publicado ni cambiado nada.
+
+**Pruebas**: `claves.txt` → la clave empieza por `sk_` (comprobado sin mostrarla). TTS con voice_id `EuJOG4WNDCMcwTFrXKUc`, modelo `eleven_multilingual_v2` → HTTP 200, `renders/prueba/prueba-nico.mp3`, MP3 128 kbps 44,1 kHz, 4,0 s. Lectura de las tres redes: sesión dentro en las tres.
+
+**Pendientes**: revisar la prueba del motor; plan de créditos de ElevenLabs (ahora hay dos claves sobre la misma cuenta y los mismos créditos); TikTok «Mi cerebro cuando toca callarse» sigue visible en TikTok Studio (pasarlo a «Solo yo» desde el móvil).
+
+**Siguiente paso**: revisar el lote de la tarde de Jorge; primera ejecución de la mañana el 2026-11-16 a las 07:52 en este Mac (debe estar encendido con la app de Claude abierta).
+
+---
+
 ## 2026-11-15 16:55 — Nico — rama `main`
 **Hecho**: alineado con `DECISIONS.md` (carpeta `~/Documents/Parece Mentira` + `claves.txt`). Tarea de las 08:00 rehecha con esa carpeta y con la de referencias (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`); la anterior, ligada a `Documents/Codex/Parece Mentira`, está borrada. `AGENTE.md`: voz por `/with-timestamps` (MP3 + alineación para los subtítulos). Prueba del motor movida a `~/Documents/Parece Mentira/renders/prueba/`.
 **Pruebas**: la carpeta existe en el Mac de Nico con `claves.txt` y `renders/prueba/prueba-nico.mp3`; tarea activa con las 2 carpetas.

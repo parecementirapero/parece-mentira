@@ -5,9 +5,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
 - [ ] Lote 2026-11-15-tarde — Agente 20:00 (Jorge) — 2026-11-15 16:55 — arrancando
-- [ ] Nico: carpeta local `~/Documents/Parece Mentira` (lotes/, renders/, claves.txt) en su Mac — Nico — 2026-11-15 16:45
-- [ ] Nico: clave API de ElevenLabs «Parece Mentira - Nico» (solo texto a voz + usuario) en `claves.txt` y audio de prueba — Nico — 2026-11-15 16:45
-- [ ] Nico: iniciar sesión en ElevenLabs, YouTube Studio, Instagram y TikTok en el navegador integrado de su Mac — Nico — 2026-11-15 16:45
 
 ## Pendiente
 - [ ] Nico: revisar la prueba del motor (`renders/prueba/prueba-005-huellas-luna_v1.mp4` en `~/Documents/Parece Mentira`) y decir qué mejorar del estilo
@@ -18,6 +15,8 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Mac de Nico: carpeta `/Users/nico/Documents/Parece Mentira` (claves.txt, lotes/, renders/); clave API «Parece Mentira - Nico» (solo texto a voz + usuario, sin caducidad) pegada por Nico en `claves.txt`; audio de prueba OK — Nico — 2026-11-15
+- [x] Mac de Nico: sesiones de ElevenLabs, YouTube Studio, Instagram (@parecementiramedia) y TikTok (parece.mentira85) en el navegador integrado — Nico — 2026-11-15
 - [x] Tarea programada 20:00 creada desde el Mac de Jorge (19:52, carpeta `/Users/jorgegomez/Documents/Parece Mentira`); carpeta apuntada en AGENTE.md — Jorge — 2026-11-15
 - [x] Motor de montaje 9:16 en `motor/` (13 tipos de elemento, subtítulos, SRT, manifiesto, hoja de fotogramas) y prueba con el 005 — Nico — 2026-11-15
 - [x] Clave de API «Parece Mentira» (solo texto a voz + usuario) creada y guardada en el Mac de Jorge; `api.elevenlabs.io` permitido en la red; audio de prueba OK — Jorge — 2026-11-15
