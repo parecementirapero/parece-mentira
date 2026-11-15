@@ -1,0 +1,112 @@
+# Agente diario — Parece Mentira
+
+Manual que sigue **cada ejecución programada** (y cualquier Claude que produzca un lote a mano).
+Si algo de aquí choca con `DECISIONS.md`, manda `DECISIONS.md`: se avisa y no se improvisa.
+
+_Creado: 2026-11-15 — Nico_
+
+---
+
+## 0. Turnos y ordenadores
+
+| Turno | Hora (Europe/Madrid) | Ordenador | Carpeta local de trabajo | Carpeta de lote |
+|---|---|---|---|---|
+| `manana` | 08:00 | MacBook Air de Nico | `/Users/nico/Documents/Codex/Parece Mentira` | `lotes/AAAA-MM-DD-manana` |
+| `tarde` | 20:00 | Mac de Jorge | ⏳ pendiente (Jorge la conecta al crear su tarea) | `lotes/AAAA-MM-DD-tarde` |
+
+En el registro, el agente firma como **«Agente 08:00 (Nico)»** o **«Agente 20:00 (Jorge)»**.
+
+Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
+
+---
+
+## 1. Arranque (idempotente: nunca duplicar un lote)
+
+1. Clona `https://github.com/parecementirapero/parece-mentira` y sigue `CLAUDE.md` (pull, leer `PROJECT_STATE.md`, `TASKS.md`, `HANDOFF.md`, `DECISIONS.md`).
+2. Calcula el lote: fecha de hoy en Europe/Madrid + turno → `AAAA-MM-DD-manana|tarde`.
+3. Si `lotes/<lote>/estado.md` ya existe: **retoma** desde el último paso registrado; no empieces otro.
+4. Si en `TASKS.md` el lote está «En curso» por otra persona/agente: no lo toques, registra el motivo en `HANDOFF.md` y termina.
+5. Reserva en `TASKS.md` → «En curso»: `Lote <lote> — Agente HH:00 (Nico|Jorge) — fecha hora`. Commit + push **antes** de seguir.
+6. Comprueba que la carpeta local del turno responde (`device_list_dir`). Si el ordenador no contesta: registra «ordenador no disponible», deja la tarea en «Pendiente» y termina.
+
+## 2. Ideas (3 temas)
+
+- Fuente de temas: `lotes/IDEAS.md`. Nunca repetir un tema de «Usados»; las continuaciones valen si aportan información nueva y se entienden solas.
+- Mezcla: historia, ciencia, misterio/curiosidad. Tres estructuras distintas por lote (comparación visible, experimento, reconstrucción con salto temporal, misterio por pistas, metáfora visual).
+- Cada dato central se contrasta con **al menos dos fuentes fiables** (WebSearch/WebFetch). Si no se puede verificar, se cambia de tema.
+- Anota los 3 temas en `IDEAS.md` → «Usados» con el lote, en el mismo commit que los guiones.
+
+## 3. Guiones
+
+`lotes/<lote>/guiones.md`, por vídeo:
+- **Gancho** en la primera frase (el primer plano tiene que entenderse sin sonido).
+- **Locución**: 110–140 palabras (≈35–50 s), español de España, tono cercano, **cifras escritas en letra**.
+- **Planos**: qué se ve en cada frase (acciones pequeñas que explican el dato).
+- **Fuentes** con enlace (van a la descripción).
+- Título (sin «| elevenlabs.io»), descripción y hashtags por red → `lotes/<lote>/metadatos.json`.
+
+## 4. Voz (ElevenLabs)
+
+- Voz oficial: **«Narrador PM - Curiosidades v1»**, voice_id `EuJOG4WNDCMcwTFrXKUc` (ver `DECISIONS.md`).
+- Orden de intentos:
+  1. **API**: clave `ELEVENLABS_API_KEY` en el `.env` de la carpeta local del turno (nunca en el repo). Llamada `POST https://api.elevenlabs.io/v1/text-to-speech/EuJOG4WNDCMcwTFrXKUc` desde `device_bash` o desde el workspace.
+  2. **Navegador integrado** (sesión de ElevenLabs ya iniciada en ese ordenador): Text to Speech con esa voz, descargar el MP3.
+- Antes de generar, mira los créditos que quedan. Un lote gasta ≈2.500 caracteres. **Si no llegan, no se compra nada**: lote «pendiente de voz».
+- Si la voz falla por cualquier motivo: el vídeo queda **«pendiente de voz»**. Prohibido usar otra voz (ni del sistema ni de otra cuenta).
+- Guarda `NN-locucion.mp3` en la carpeta local del lote.
+
+## 5. Montaje 9:16
+
+- Motor reproducible en Python en `motor/` del repo. **Si `motor/` no existe todavía**, esta ejecución lo crea (Pillow/NumPy + FFmpeg), lo documenta en `motor/README.md` y lo sube; las siguientes ejecuciones lo reutilizan y mejoran sin romper lo anterior.
+- Especificación de salida: **1080×1920, 30 fps, H.264 yuv420p (`-preset veryfast`), AAC 48 kHz estéreo**, duración = locución + ~0,5 s.
+- Estilo obligatorio (`DECISIONS.md`): ilustración a **pantalla completa**, sin título arriba, sin rótulos blancos con borde azul, **solo subtítulo blanco abajo** sincronizado con la voz, **sin Nova** dentro del vídeo. Ilustración 2.5D en capas, luces y sombras, **algo moviéndose siempre**, cámara estable, flechas y giros correctos. Nada de zooms sobre una imagen fija como única animación.
+- Referencias de estilo: `referencias/` de la carpeta local de Nico (INDICE.json y hojas de fotogramas). Se toma la técnica, nunca metraje, personajes ni textos.
+- Sincroniza escenas y subtítulos con los tiempos reales del MP3 (alineación por palabras de la API de ElevenLabs si está disponible; si no, por duración de frases).
+- Salida por vídeo en la carpeta local del lote: `NN-slug_v1.mp4`, `NN-slug_v1.srt`, `NN-slug_v1_manifest.json` (SHA-256 de vídeo, guion y voz).
+
+## 6. Control de calidad (no se entrega sin esto)
+
+- `ffprobe`: resolución, fps, códecs, que haya audio y que dure lo que la locución.
+- Hoja de fotogramas (1 cada 2 s) y **mirarla**: texto legible, nada cortado, sin panel en medio, sin título, sin Nova, flechas bien orientadas, algo en movimiento en cada plano.
+- Revisar cifras y nombres contra el guion y las fuentes.
+- Si un vídeo no pasa, se corrige y se sube a `_v2`; nunca se entrega uno roto.
+
+## 7. Entrega
+
+1. **Drive**: dentro de «Parece Mentira — Revisión» (`1Sm8Yf72fJBxO7roWSOGT-hpRM0DK0j6i`) crea la subcarpeta `<lote>` y sube los 3 MP4 + SRT (conector de Google Drive). Si la subida queda esperando aprobación o falla, los archivos se quedan en la carpeta local y el correo lo dice.
+2. **Correo** (conector de Gmail) a `parecementirapero.media@gmail.com` — **una sola notificación por turno**:
+   - Asunto: `[Parece Mentira] Lote <lote> — 3 vídeos para revisar`
+   - Cuerpo: enlace a la subcarpeta de Drive; por vídeo: título, duración, versión y SHA-256 corto, fuentes; vídeos «pendiente de voz» si los hay; **enlace a este chat** (la sesión de la ejecución) y la instrucción: _«Para publicar, escribe "ok" en el chat (o "ok 1 y 3" para solo esos). Para cambios, escríbelos ahí.»_
+3. **Registro** en el repo: `lotes/<lote>/estado.md` (enlace Drive, estado «en revisión», enlace al chat, id del correo), `TASKS.md` (el lote pasa a «Hecho» con nota «en revisión»), `PROJECT_STATE.md`, entrada en `HANDOFF.md`. Commit + push y comprobar que entró.
+4. Responde en el chat con un resumen corto (lo que hay en Drive y qué falta) y **espera**.
+
+## 8. Publicar tras «ok»
+
+Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3» para algunos). Cualquier otro mensaje = cambios, no aprobación. La aprobación vale para **esa versión exacta**: si se toca algo, hay versión nueva y hace falta otro «ok».
+
+1. Antes de cada subida, comprueba en la red que ese vídeo no está ya publicado (evitar duplicados).
+2. Publica desde el **navegador integrado** del ordenador del turno, con las sesiones ya iniciadas:
+   - YouTube Studio (Short, público, título y descripción de `metadatos.json`, «no es contenido para niños»).
+   - Instagram @parecementiramedia (Reel).
+   - TikTok (con la descripción y hashtags de TikTok).
+   Si el navegador integrado no deja elegir el archivo, usa Claude in Chrome si está disponible; si no, deja el vídeo listo, di exactamente qué paso falta y no insistas.
+3. Si una red falla, solo se reintenta esa red tras comprobar que no se publicó.
+4. Registra en `lotes/<lote>/estado.md` la URL de cada publicación (o el motivo del bloqueo), actualiza `HANDOFF.md` y push.
+
+## 9. Límites
+
+- No publica ni programa sin «ok». No compra nada ni cambia de plan. No mete contraseñas ni códigos (si una sesión caducó, avisa).
+- Nada pesado en git (MP3/MP4 van a la carpeta local y a Drive).
+- Si algo bloquea el lote, se registra la causa en `estado.md` y `HANDOFF.md`, y se avisa en el mismo correo del turno.
+
+---
+
+## Tareas programadas
+
+Cada tarea programada se crea **desde el ordenador que la va a ejecutar** (queda ligada a ese ordenador y a su carpeta local).
+
+- **08:00 — Nico**: creada el 2026-11-15 desde el MacBook Air de Nico.
+- **20:00 — Jorge**: ⏳ pendiente. Jorge, en la app de Claude de su Mac (con la carpeta de trabajo conectada), escribe:
+  > Crea la tarea programada de la tarde de Parece Mentira según AGENTE.md del repo: todos los días a las 20:00 Europe/Madrid, que use este ordenador y mi carpeta de trabajo.
+
+  El prompt de esa tarea es el mismo que el de la mañana cambiando `manana`→`tarde`, `08:00`→`20:00`, `Nico`→`Jorge` y la carpeta local. Después, Jorge rellena su carpeta en la tabla del punto 0.

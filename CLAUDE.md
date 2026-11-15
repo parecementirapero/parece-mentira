@@ -41,5 +41,6 @@ PROJECT_STATE.md   estado actual del proyecto
 TASKS.md           tablero de tareas (pendiente / en curso / hecho)
 DECISIONS.md       decisiones vigentes con fecha y motivo
 HANDOFF.md         registro de traspasos (lo más reciente arriba)
+AGENTE.md          manual del agente diario (lotes de 08:00 y 20:00)
 lotes/AAAA-MM-DD-manana|tarde/   guiones, metadatos y enlaces de cada lote
 ```
