@@ -10,7 +10,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Nico: iniciar sesión en ElevenLabs, YouTube Studio, Instagram y TikTok en el navegador integrado de su Mac — Nico — 2026-11-15 16:45
 
 ## Pendiente
-- [ ] Nico: revisar la prueba del motor (`pruebas-motor/prueba-005-huellas-luna_v1.mp4` en su carpeta local) y decir qué mejorar del estilo
+- [ ] Nico: revisar la prueba del motor (`renders/prueba/prueba-005-huellas-luna_v1.mp4` en `~/Documents/Parece Mentira`) y decir qué mejorar del estilo
 - [ ] Desactivar la tarea antigua de Codex de las 08:00 para que no produzca lotes en paralelo
 - [ ] Decidir plan de ElevenLabs: Starter (30k créditos/mes) se queda corto para 6 vídeos/día (~90k caracteres/mes); Creator 22 $/mes da 121k
 - [ ] Pasar a «Solo yo» el TikTok «Mi cerebro cuando toca callarse» desde el móvil

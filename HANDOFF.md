@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 16:55 — Nico — rama `main`
+**Hecho**: alineado con `DECISIONS.md` (carpeta `~/Documents/Parece Mentira` + `claves.txt`). Tarea de las 08:00 rehecha con esa carpeta y con la de referencias (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`); la anterior, ligada a `Documents/Codex/Parece Mentira`, está borrada. `AGENTE.md`: voz por `/with-timestamps` (MP3 + alineación para los subtítulos). Prueba del motor movida a `~/Documents/Parece Mentira/renders/prueba/`.
+**Pruebas**: la carpeta existe en el Mac de Nico con `claves.txt` y `renders/prueba/prueba-nico.mp3`; tarea activa con las 2 carpetas.
+**Siguiente paso**: lote de las 19:52 en el Mac de Jorge (primera ejecución real) y de las 07:52 en el de Nico.
+
+---
+
 ## 2026-11-15 16:52 — Jorge — rama `main`
 **Hecho**: tarea programada «Parece Mentira — lote tarde (20:00, Jorge)» creada desde el Mac de Jorge, ligada a ese Mac y a `/Users/jorgegomez/Documents/Parece Mentira`, a las 19:52 Europe/Madrid (modo automático). Mismo prompt que la de la mañana con turno «tarde». Carpeta de Jorge apuntada en AGENTE.md; en el Mac de Jorge la clave está en `claves.txt` (no `.env`).
 **Ojo**: la primera ejecución es HOY a las 19:52 → primer lote real `2026-11-15-tarde`. El Mac de Jorge debe estar encendido con la app de Claude abierta.

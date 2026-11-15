@@ -11,8 +11,10 @@ _Creado: 2026-11-15 — Nico_
 
 | Turno | Hora (Europe/Madrid) | Ordenador | Carpeta local de trabajo | Carpeta de lote |
 |---|---|---|---|---|
-| `manana` | 08:00 | MacBook Air de Nico | `/Users/nico/Documents/Codex/Parece Mentira` | `lotes/AAAA-MM-DD-manana` |
+| `manana` | 08:00 | MacBook Air de Nico | `/Users/nico/Documents/Parece Mentira` | `lotes/AAAA-MM-DD-manana` |
 | `tarde` | 20:00 | Mac de Jorge (`jorges-macbook-air-2`) | `/Users/jorgegomez/Documents/Parece Mentira` | `lotes/AAAA-MM-DD-tarde` |
+
+Carpeta local (ver `DECISIONS.md`): `claves.txt` (ELEVENLABS_API_KEY, ELEVENLABS_VOICE_ID; nunca al repo ni al chat), `lotes/<lote>/` (MP3, MP4, SRT y manifiestos del lote) y `renders/` (pruebas). Referencias de estilo: `/Users/nico/Documents/Codex/Parece Mentira/referencias` (solo en el Mac de Nico).
 
 En el registro, el agente firma como **«Agente 08:00 (Nico)»** o **«Agente 20:00 (Jorge)»**.
 
@@ -49,7 +51,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 - Voz oficial: **«Narrador PM - Curiosidades v1»**, voice_id `EuJOG4WNDCMcwTFrXKUc` (ver `DECISIONS.md`).
 - Orden de intentos:
-  1. **API**: clave `ELEVENLABS_API_KEY` en el `.env` (Mac de Nico) o `claves.txt` (Mac de Jorge) de la carpeta local del turno (nunca en el repo ni en el chat). Llamada `POST https://api.elevenlabs.io/v1/text-to-speech/EuJOG4WNDCMcwTFrXKUc` desde `device_bash` o desde el workspace.
+  1. **API**: clave `ELEVENLABS_API_KEY` de `claves.txt` en la carpeta local del turno (en los dos Macs; nunca en el repo ni en el chat). Llamada `POST https://api.elevenlabs.io/v1/text-to-speech/EuJOG4WNDCMcwTFrXKUc/with-timestamps` desde `device_bash` o desde el workspace (`api.elevenlabs.io` está permitido). Guarda el MP3 y el JSON de alineación: el motor lo usa para sincronizar los subtítulos.
   2. **Navegador integrado** (sesión de ElevenLabs ya iniciada en ese ordenador): Text to Speech con esa voz, descargar el MP3.
 - Antes de generar, mira los créditos que quedan. Un lote gasta ≈2.500 caracteres. **Si no llegan, no se compra nada**: lote «pendiente de voz».
 - Si la voz falla por cualquier motivo: el vídeo queda **«pendiente de voz»**. Prohibido usar otra voz (ni del sistema ni de otra cuenta).
@@ -63,7 +65,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 - Si un tema necesita un objeto que el motor no tiene, se añade un tipo nuevo en `motor/elementos.py` (sin romper el ejemplo 005) y se documenta en el README del motor.
 - Especificación de salida: **1080×1920, 30 fps, H.264 yuv420p (`-preset veryfast`), AAC 48 kHz estéreo**, duración = locución + ~0,5 s.
 - Estilo obligatorio (`DECISIONS.md`): ilustración a **pantalla completa**, sin título arriba, sin rótulos blancos con borde azul, **solo subtítulo blanco abajo** sincronizado con la voz, **sin Nova** dentro del vídeo. Ilustración 2.5D en capas, luces y sombras, **algo moviéndose siempre**, cámara estable, flechas y giros correctos. Nada de zooms sobre una imagen fija como única animación.
-- Referencias de estilo: `referencias/` de la carpeta local de Nico (INDICE.json y hojas de fotogramas). Se toma la técnica, nunca metraje, personajes ni textos.
+- Referencias de estilo: `/Users/nico/Documents/Codex/Parece Mentira/referencias/` (INDICE.json y hojas de fotogramas; solo en el Mac de Nico). Se toma la técnica, nunca metraje, personajes ni textos.
 - Sincroniza escenas y subtítulos con los tiempos reales del MP3 (alineación por palabras de la API de ElevenLabs si está disponible; si no, por duración de frases).
 - Salida por vídeo en la carpeta local del lote: `NN-slug_v1.mp4`, `NN-slug_v1.srt`, `NN-slug_v1_manifest.json` (SHA-256 de vídeo, guion y voz).
 
@@ -108,7 +110,7 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
 
 Cada tarea programada se crea **desde el ordenador que la va a ejecutar** (queda ligada a ese ordenador y a su carpeta local).
 
-- **08:00 — Nico**: creada el 2026-11-15 desde el MacBook Air de Nico.
+- **08:00 — Nico**: «Parece Mentira — lote mañana (08:00, Nico)», arranca a las 07:52; creada el 2026-11-15 desde el MacBook Air de Nico con las carpetas `/Users/nico/Documents/Parece Mentira` y `/Users/nico/Documents/Codex/Parece Mentira` (referencias). Primera ejecución: 2026-11-16.
 - **20:00 — Jorge**: creada el 2026-11-15 desde el Mac de Jorge (19:52 Europe/Madrid, ligada a ese Mac y a `/Users/jorgegomez/Documents/Parece Mentira`). Primera ejecución: 2026-11-15. Instrucciones originales:
   > Crea la tarea programada de la tarde de Parece Mentira según AGENTE.md del repo: todos los días a las 20:00 Europe/Madrid, que use este ordenador y mi carpeta de trabajo.
 
