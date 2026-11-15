@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-15 — Nico_
+_Última actualización: 2026-11-15 — Jorge_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -11,8 +11,8 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Gmail (parecementirapero.media@gmail.com) | ✅ conectado |
 | Google Drive (misma cuenta) | ✅ conectado, vacío salvo «Parece Mentira — Revisión» |
 | GitHub (`parecementirapero/parece-mentira`) | ✅ conectado |
-| YouTube / Instagram / TikTok — ordenador de Nico | ✅ sesión iniciada en el navegador integrado |
-| YouTube / Instagram / TikTok — ordenador de Jorge | ⏳ pendiente |
+| YouTube / Instagram / TikTok / ElevenLabs — ordenador de Jorge | ✅ sesión iniciada en el navegador integrado |
+| YouTube / Instagram / TikTok / ElevenLabs — ordenador de Nico | ⏳ pendiente |
 | ElevenLabs | ✅ voz «Narrador PM - Curiosidades v1» lista (plan Starter); ⏳ falta API key en `.env` |
 | Carpeta local de trabajo | ⏳ pendiente en ambos ordenadores |
 | Tareas programadas 08:00 / 20:00 | ⏳ pendiente |

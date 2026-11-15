@@ -9,7 +9,7 @@ _(nada)_
 ## Pendiente
 - [ ] Guardar la API key de ElevenLabs en `.env` en cada ordenador
 - [ ] Decidir plan de ElevenLabs: Starter (30k créditos/mes) se queda corto para 6 vídeos/día (~90k caracteres/mes); Creator 22 $/mes da 121k
-- [ ] Jorge: iniciar sesión en YouTube Studio, Instagram y TikTok en el navegador integrado de la app de Claude en su ordenador
+- [ ] Nico: iniciar sesión en YouTube Studio, Instagram, TikTok y ElevenLabs en el navegador integrado de la app de Claude en su ordenador
 - [ ] Conectar en la app de Claude la misma carpeta local de trabajo en los dos ordenadores (p. ej. `Documents/Parece Mentira`)
 - [ ] Pasar a «Solo yo» el TikTok «Mi cerebro cuando toca callarse» desde el móvil
 - [ ] Montar el script de montaje 9:16 reproducible en Python dentro del repo
@@ -18,10 +18,10 @@ _(nada)_
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
-- [x] Comprobar la voz nueva en ElevenLabs: «Narrador PM - Curiosidades v1» existe — Nico — 2026-11-15
-- [x] Gmail y Drive conectados a la cuenta del proyecto — Nico — 2026-11-15
-- [x] Drive vaciado y carpeta «Parece Mentira — Revisión» creada — Nico — 2026-11-15
-- [x] Sesiones de YouTube, Instagram y TikTok en el navegador integrado (ordenador de Nico) — Nico — 2026-11-15
-- [x] Retirar lo publicado en las tres redes — Nico — 2026-11-15
-- [x] Repo `parecementirapero/parece-mentira` creado, app de Claude instalada con acceso solo a este repo — Nico — 2026-11-15
-- [x] Estructura base del repo (este protocolo) — Nico — 2026-11-15
+- [x] Comprobar la voz nueva en ElevenLabs: «Narrador PM - Curiosidades v1» existe — Jorge — 2026-11-15
+- [x] Gmail y Drive conectados a la cuenta del proyecto — Jorge — 2026-11-15
+- [x] Drive vaciado y carpeta «Parece Mentira — Revisión» creada — Jorge — 2026-11-15
+- [x] Sesiones de YouTube, Instagram y TikTok en el navegador integrado (ordenador de Jorge) — Jorge — 2026-11-15
+- [x] Retirar lo publicado en las tres redes — Jorge — 2026-11-15
+- [x] Repo `parecementirapero/parece-mentira` creado, app de Claude instalada con acceso solo a este repo — Jorge — 2026-11-15
+- [x] Estructura base del repo (este protocolo) — Jorge — 2026-11-15
