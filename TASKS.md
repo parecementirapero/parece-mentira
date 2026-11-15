@@ -9,7 +9,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
 - [ ] Decidir si se activan en TikTok las «revisiones automáticas de contenido» (ajuste de cuenta que ofrece TikTok al subir)
-- [ ] Revisar el lote 2026-11-15-tarde **v3** y decir «ok» o cambios (Mac de Jorge, `lotes/2026-11-15-tarde/v3/`, y chat de Jorge)
+- [ ] Revisar el lote 2026-11-15-tarde **v4** (01 v4c, 02 v4, 03 v4) y decir «ok» o cambios (Mac de Jorge, `lotes/2026-11-15-tarde/v3/`, y chat de Jorge)
 - [ ] Instalar Google Drive para ordenador en los dos Macs (modo transmitir, sin copias de carpetas) para que los MP4 >10 MB lleguen a Drive
 - [ ] Elegir música definitiva (hoy el motor genera una base por código, sin licencias)
 - [ ] Subida de MP4 a Drive: el conector solo admite ≈3 MB por llamada; decidir vía (subir a mano, Drive para escritorio sincronizando la carpeta del lote, o publicar desde el navegador integrado sin pasar por Drive)
@@ -27,6 +27,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Estilo de ilustración v4 en los 3 vídeos del lote 2026-11-15-tarde (balanza del 01 arreglada) — Jorge — 2026-11-15
 - [x] Referencias 2 (9 vídeos) analizadas → `motor/REFERENCIAS_2.md`, DECISIONS y AGENTE; motor v2.1 (cámara con foco, elementos HUD) — Jorge — 2026-11-15
 - [x] Lote 2026-11-15-tarde v3 (mismo audio, 17–19 planos por vídeo, etiquetas) — Jorge — 2026-11-15
 - [x] Prueba v2 «Huellas en la Luna» publicada: YouTube https://youtube.com/shorts/D_2cV1qhmfA · Instagram https://www.instagram.com/reel/DfxOzoPR6pD/ · TikTok https://www.tiktok.com/@parece.mentira85/video/7708440623040269590 — Nico — 2026-11-15

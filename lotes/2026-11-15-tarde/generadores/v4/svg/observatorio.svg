@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920"><defs>
+<filter id="grano" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 0.10"/></feComponentTransfer>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="papel" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="9"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0 0.12  0 0 0 0.55 0"/>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="10" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+</filter>
+<linearGradient id="cer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26345e"/><stop offset="1" stop-color="#0d1428"/></linearGradient><linearGradient id="cup" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f2f4f8"/><stop offset="1" stop-color="#8e94a4"/></linearGradient><linearGradient id="muro" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9dce4"/><stop offset="1" stop-color="#9aa0ae"/></linearGradient></defs><path d="M0 1460 C260 1330 620 1380 1080 1290 L1080 1920 L0 1920 Z" fill="url(#cer)"/><path d="M0 1460 C260 1330 620 1380 1080 1290" stroke="#6d82c8" stroke-width="4" opacity="0.6" fill="none"/><rect x="330" y="1240" width="340" height="230" fill="url(#muro)"/><path d="M310 1245 A190 190 0 0 1 690 1245 Z" fill="url(#cup)"/><path d="M500 1062 L540 1062 L560 1245 L480 1245 Z" fill="#1a1f2b"/><rect x="300" y="1236" width="400" height="14" fill="#7d8494"/><rect x="360" y="1330" width="22" height="34" rx="3" fill="#ffd77a" opacity="0.85"/><rect x="410" y="1330" width="22" height="34" rx="3" fill="#ffd77a" opacity="0.85"/><rect x="460" y="1330" width="22" height="34" rx="3" fill="#ffd77a" opacity="0.85"/><rect x="510" y="1330" width="22" height="34" rx="3" fill="#ffd77a" opacity="0.85"/><rect x="560" y="1330" width="22" height="34" rx="3" fill="#ffd77a" opacity="0.85"/><rect x="610" y="1330" width="22" height="34" rx="3" fill="#ffd77a" opacity="0.85"/><path d="M550 1491 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M82 1840 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M530 1658 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M465 1784 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M702 1740 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M625 1535 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M257 1585 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M36 1719 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M928 1840 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M68 1553 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M674 1487 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M238 1630 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M825 1497 l20 -60 l20 60 Z" fill="#0a1022"/><path d="M59 1571 l20 -60 l20 60 Z" fill="#0a1022"/></svg>

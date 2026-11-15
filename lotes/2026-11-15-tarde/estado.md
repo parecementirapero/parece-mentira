@@ -46,3 +46,9 @@ Archivo: `lotes/2026-11-15-tarde/v4/` del Mac de Jorge (52,3 s, −19,4 LUFS, 50
 
 ## Ejecución programada de las 19:52 — Agente 20:00 (Jorge) — 2026-11-15 19:55
 El lote ya existía: no se duplica. Sin cambios en los vídeos; sigue esperando el visto bueno de la v4 del 01 (y después «ok»). Sin correo nuevo (ya enviado en este turno).
+
+## Versión 4 completa (estilo de ilustración aprobado por Jorge) — Jorge — 2026-11-15 23:40
+- 01 v4c: balanza rehecha (platos que cuelgan en vertical, viga sobre el pivote, balanza entera en plano).
+- 02 v4 (`gen_02.py`, `ilus_02.py`): 18 planos — uña, Tierra/Luna detalladas, regla, superficie lunar con astronauta y retrorreflector, observatorio con láser, cronómetro, mareas, órbita, campo de día con caracol.
+- 03 v4 (`gen_03.py`, `ilus_03.py`): 14 planos — moáis de piedra con textura, ladera de Rano Raraku, arqueólogo de 1914, corte del terreno con el torso, espalda con grabados y lupa, ahu al atardecer, escala de 10 m.
+Mismo audio v2 (0 créditos). Archivos en `lotes/2026-11-15-tarde/v4/` del Mac de Jorge. **Versión candidata: v4 (01 v4c, 02 v4, 03 v4)**, esperando «ok».

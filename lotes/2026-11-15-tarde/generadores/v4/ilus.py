@@ -391,18 +391,24 @@ def balanza():
             '<rect x="384" y="200" width="32" height="750" fill="url(#br)"/>',
             '<circle cx="400" cy="190" r="34" fill="url(#br)"/>']
     guardar("balanza_base", "".join(base), 800, 1040, d)
-    # viga con la barra en el centro exacto del lienzo (800x900, eje en y=450) para que gire sobre el pivote
-    viga = ['<rect x="20" y="438" width="760" height="24" rx="12" fill="url(#br)"/>', '<circle cx="400" cy="450" r="22" fill="url(#br)"/>']
-    for side in (60, 740):
-        viga.append(f'<line x1="{side}" y1="450" x2="{side-110}" y2="770" stroke="#8a6a2a" stroke-width="4"/>'
-                    f'<line x1="{side}" y1="450" x2="{side+110}" y2="770" stroke="#8a6a2a" stroke-width="4"/>'
-                    f'<path d="M{side-150} 770 Q{side} 830 {side+150} 770 Z" fill="url(#br)"/>')
-    for i in range(160):
-        x = 60 + R.uniform(-120, 120)
-        y = 760 - abs(R.gauss(0, 30)) - (120 - abs(x - 60)) * 0.35
-        viga.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="7" fill="{R.choice(["#c0392b","#e74c3c","#a93226"])}"/>')
-    viga.append('<circle cx="740" cy="754" r="12" fill="#3b82f6" stroke="#fff" stroke-width="3"/>')
-    guardar("balanza_viga", "".join(viga), 800, 900, d)
+    # viga sola (800x60, eje en el centro) y platos aparte que cuelgan siempre en vertical
+    guardar("balanza_viga", '<rect x="20" y="18" width="760" height="24" rx="12" fill="url(#br)"/>'
+            '<circle cx="400" cy="30" r="24" fill="url(#br)"/><circle cx="40" cy="30" r="12" fill="url(#br)"/>'
+            '<circle cx="760" cy="30" r="12" fill="url(#br)"/>', 800, 60, d)
+    for nombre, puntos in (("plato_izq", 160), ("plato_der", 0)):
+        p = ['<circle cx="160" cy="14" r="10" fill="none" stroke="#8a6a2a" stroke-width="5"/>',
+             '<line x1="160" y1="22" x2="40" y2="330" stroke="#8a6a2a" stroke-width="4"/>',
+             '<line x1="160" y1="22" x2="280" y2="330" stroke="#8a6a2a" stroke-width="4"/>',
+             '<line x1="160" y1="22" x2="160" y2="330" stroke="#8a6a2a" stroke-width="3" opacity="0.6"/>',
+             '<path d="M10 330 Q160 400 310 330 Z" fill="url(#br)"/>',
+             '<path d="M10 330 Q160 345 310 330" stroke="#fff3c0" stroke-width="3" fill="none" opacity="0.7"/>']
+        for i in range(puntos):
+            x = 160 + R.uniform(-125, 125)
+            y = 322 - abs(R.gauss(0, 26)) - (125 - abs(x - 160)) * 0.3
+            p.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="7" fill="{R.choice(["#c0392b","#e74c3c","#a93226"])}"/>')
+        if not puntos:
+            p.append('<circle cx="160" cy="318" r="13" fill="#3b82f6" stroke="#fff" stroke-width="3"/>')
+        guardar(nombre, "".join(p), 320, 420, d)
 
 
 def todo():

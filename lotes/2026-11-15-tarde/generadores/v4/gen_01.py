@@ -160,15 +160,36 @@ S[-1]["elementos"].append({**ROT(0.6, 2.1, "", tam=150, x=540, y=1560), "contar"
 
 # ---------------------------------------------------------------- 9. balanza 500 contra 1
 def balanza(ang_t, t_inc):
+    """Base + viga que gira sobre el pivote + platos que cuelgan en vertical de los extremos."""
+    import math
+    PX, PY, L = 540, 930, 360
+    def ends(th):
+        r = math.radians(th)
+        return (PX - L * math.cos(r), PY + L * math.sin(r)), (PX + L * math.cos(r), PY - L * math.sin(r))
+    tiempos = [0, t_inc] + [t_inc + 0.05 * i for i in range(1, 21)]
+    def ang(t):
+        if t <= t_inc:
+            return ang_t[0]
+        u = min((t - t_inc) / 1.0, 1)
+        c1, c3 = 1.70158, 2.70158
+        e = 1 + c3 * (u - 1) ** 3 + c1 * (u - 1) ** 2   # rebote suave (easeOutBack)
+        return ang_t[0] + (ang_t[1] - ang_t[0]) * e
+    kv, ki, kd = [], [], []
+    for t in tiempos:
+        th = ang(t)
+        (lx, ly), (rx, ry) = ends(th)
+        kv.append({"t": round(t, 3), "rot": round(-th, 3), "ease": "lineal"})
+        ki.append({"t": round(t, 3), "x": round(lx, 1), "y": round(ly + 200, 1), "ease": "lineal"})
+        kd.append({"t": round(t, 3), "x": round(rx, 1), "y": round(ry + 200, 1), "ease": "lineal"})
     return [IMG("balanza_base", ancho=800, x=540, y=1260, z=0.5),
-            IMG("balanza_viga", ancho=800, x=540, y=930, z=0.52,
-                keys=[{"t": 0, "rot": ang_t[0]}, {"t": t_inc, "rot": ang_t[0]}, {"t": t_inc + 1.0, "rot": ang_t[1], "ease": "rebote"}])]
+            IMG("plato_izq", ancho=320, z=0.51, keys=ki), IMG("plato_der", ancho=320, z=0.51, keys=kd),
+            IMG("balanza_viga", ancho=800, x=PX, y=PY, z=0.53, keys=kv)]
 luz = {"tipo": "brillo", "x": 540, "y": 700, "radio": 700, "color": "#ffe9a8", "intensidad": 0.25, "z": 0.05}
 plano(35.99, 38.37, ["#0d1324", "#1f2b48"], [luz, *balanza((0, 12), 0.9), polvo("#c8d4ff", 30)], cam(1.0, 1.04, (540, 1050), (540, 1040)),
       entrada="desenfoque", dur=0.4, vineta=0.65)
-plano(38.37, 40.95, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.06, 1.12, (480, 1080), (470, 1080)), vineta=0.65)
+plano(38.37, 40.95, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.0, 1.05, (540, 1050), (520, 1060)), vineta=0.65)
 S[-1]["elementos"].append(ROT(0.4, 2.3, "≈500", unidad="BAJAS", tam=120, x=540, y=1500))
-plano(40.95, 43.63, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.04, 1.1, (540, 1080), (545, 1080)), vineta=0.65)
+plano(40.95, 43.63, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.0, 1.05, (540, 1050), (560, 1060)), vineta=0.65)
 S[-1]["elementos"].append(ROT(0.6, 2.4, "1", unidad="HERIDO BRITÁNICO", tam=120, x=540, y=1500))
 
 # ---------------------------------------------------------------- 10. sultán nuevo, elegido por Londres

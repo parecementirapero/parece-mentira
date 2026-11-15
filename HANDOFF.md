@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 23:40 — Jorge — rama `main` — ordenador de Jorge
+**Hecho**: a Jorge le gusta el estilo v4. Balanza del 01 rehecha (v4c). 02 y 03 hechos en el mismo estilo con ilustraciones nuevas (`ilus_02.py`, `ilus_03.py`) y montaje (`comun_v4.py`, `gen_02.py`, `gen_03.py`). Mismo audio. DECISIONS y AGENTE: el estilo v4 pasa a ser obligatorio.
+**Pruebas**: hojas de fotogramas de los 3; ffprobe 1080×1920; ebur128 −19,3…−19,6 LUFS.
+**Siguiente paso**: «ok» de Nico/Jorge y publicar; Google Drive para ordenador.
+
 ## 2026-11-15 19:55 — Agente 20:00 (Jorge) — rama `main` — ordenador de Jorge
 **Hecho**: ejecución programada de las 19:52. El lote `2026-11-15-tarde` ya existe (`estado.md`; primera ejecución a las 16:52 y versiones v2, v3 y v4 del vídeo 01 hechas a mano por Jorge). Arranque idempotente (AGENTE.md §1.3): **no se crea otro lote ni se duplica nada**. El último paso registrado (v4 del vídeo 01) espera el visto bueno de una persona antes de rehacer 02 y 03, así que no hay trabajo automático que retomar.
 **Pruebas**: carpeta local del Mac de Jorge responde (`lotes/2026-11-15-tarde/` con v1, v2, v3 y v4).
