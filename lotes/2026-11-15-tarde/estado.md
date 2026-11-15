@@ -52,3 +52,14 @@ El lote ya existía: no se duplica. Sin cambios en los vídeos; sigue esperando 
 - 02 v4 (`gen_02.py`, `ilus_02.py`): 18 planos — uña, Tierra/Luna detalladas, regla, superficie lunar con astronauta y retrorreflector, observatorio con láser, cronómetro, mareas, órbita, campo de día con caracol.
 - 03 v4 (`gen_03.py`, `ilus_03.py`): 14 planos — moáis de piedra con textura, ladera de Rano Raraku, arqueólogo de 1914, corte del terreno con el torso, espalda con grabados y lupa, ahu al atardecer, escala de 10 m.
 Mismo audio v2 (0 créditos). Archivos en `lotes/2026-11-15-tarde/v4/` del Mac de Jorge. **Versión candidata: v4 (01 v4c, 02 v4, 03 v4)**, esperando «ok».
+
+## Publicación v4 — Jorge — 2026-11-16 00:05
+Aprobado por Jorge («súbelos»). Archivos: `~/Documents/Parece Mentira/PARA PUBLICAR/` del Mac de Jorge (carpeta nueva para vídeos con «ok»).
+
+| # | YouTube Shorts | Instagram Reels | TikTok |
+|---|---|---|---|
+| 1 Zanzíbar | https://youtube.com/shorts/bS6AUPYxr7s | https://www.instagram.com/parecementiramedia/reel/Dfx5fcDRQ6Y/ | https://www.tiktok.com/@parece.mentira85/video/7708537122914979094 |
+| 2 Luna | https://youtube.com/shorts/oZSuHN-46FI | https://www.instagram.com/parecementiramedia/reel/Dfx5sljx4kO/ | https://www.tiktok.com/@parece.mentira85/video/7708537356684512534 |
+| 3 Moáis | https://youtube.com/shorts/XGf1wOPygU8 | https://www.instagram.com/parecementiramedia/reel/Dfx6Dfwxs9a/ | https://www.tiktok.com/@parece.mentira85/video/7708537566387113238 |
+
+Todo público. TikTok 3 (moáis) quedó «Content under review» al publicar (TikTok lo muestra como «Solo yo» hasta revisarlo). Títulos sin «#Shorts» en Instagram/TikTok; texto con resumen, «¿Lo sabías?…», fuentes y hashtags.

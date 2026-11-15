@@ -22,6 +22,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 
 ## Contenido
 - Publicado: prueba v2 «Huellas en la Luna» (2026-11-15) en YouTube, Instagram y TikTok — ver `lotes/prueba-v2-huellas-luna/estado.md`.
+- Publicado: lote 2026-11-15-tarde v4 (Zanzíbar, Luna, moáis) el 2026-11-16 en las 3 redes — ver `lotes/2026-11-15-tarde/estado.md`. Vídeos con «ok» en `~/Documents/Parece Mentira/PARA PUBLICAR/` (Mac de Jorge).
 - Lotes producidos en el sistema nuevo: `2026-11-15-tarde` (3 vídeos v1, en revisión; MP4 en el Mac de Jorge, SRT en Drive).
 - Vídeos antiguos (001–007 + piloto Venus): retirados de las redes; ver `DECISIONS.md`.
 

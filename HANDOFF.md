@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 00:05 — Jorge — rama `main` — ordenador de Jorge
+**Hecho**: lote 2026-11-15-tarde v4 publicado en YouTube Shorts, Instagram Reels y TikTok desde el navegador integrado (Jorge elige cada archivo en el selector). Enlaces en `lotes/2026-11-15-tarde/estado.md`. Vídeos aprobados copiados a `~/Documents/Parece Mentira/PARA PUBLICAR/`.
+**Trucos**: Instagram → icono de recorte → «Original»; texto con clic en el campo y escribir (no execCommand). TikTok → borrar el título por defecto seleccionando con un Range en JS + Backspace; cmd+a no funciona.
+**Pendientes**: TikTok de los moáis en revisión; reel antiguo DfxOzoPR6pD en Instagram (¿borrar?); TikTok «Mi cerebro» aún público (poner «Solo yo» desde el móvil); Google Drive para ordenador.
+**Siguiente paso**: próximo lote automático 07:52 (Nico).
+
 ## 2026-11-15 23:40 — Jorge — rama `main` — ordenador de Jorge
 **Hecho**: a Jorge le gusta el estilo v4. Balanza del 01 rehecha (v4c). 02 y 03 hechos en el mismo estilo con ilustraciones nuevas (`ilus_02.py`, `ilus_03.py`) y montaje (`comun_v4.py`, `gen_02.py`, `gen_03.py`). Mismo audio. DECISIONS y AGENTE: el estilo v4 pasa a ser obligatorio.
 **Pruebas**: hojas de fotogramas de los 3; ffprobe 1080×1920; ebur128 −19,3…−19,6 LUFS.
