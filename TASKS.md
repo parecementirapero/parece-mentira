@@ -4,7 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-_(nada)_
+- [ ] Comprobar la voz nueva en ElevenLabs — Nico — 2026-11-15 16:26
 
 ## Pendiente
 - [ ] Crear la voz nueva en ElevenLabs (hombre, acento de España, ritmo rápido) y guardar la API key en `.env` en cada ordenador
