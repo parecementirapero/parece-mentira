@@ -4,6 +4,21 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:05 — Nico — rama `main` — ordenador de Nico
+**Hecho**: revisión de `renders/prueba/prueba-005-huellas-luna_v1.mp4` (fotograma cada 1 s + detalle a media resolución; hojas en `renders/prueba/hoja1s_*.jpg` y `revision_detalle.jpg`).
+**Pruebas**: `ffprobe` → 1080×1920, 30 fps, h264, AAC 48 kHz estéreo, 32,9 s; sin congelados (`freezedetect`).
+**Pasa**: pantalla completa, sin título, sin Nova, solo subtítulo blanco abajo, siempre hay algo moviéndose, la historia se entiende sin sonido (playa → Luna → sonda → rastro).
+**A mejorar (por prioridad)**
+1. **El subtítulo choca con los elementos**: la lupa tapa «desde tan lejos no distingue cada bota» y la huella de bota queda pegada a «No hay viento ni lluvia…». Hace falta una franja reservada para el subtítulo (≈70–82 % de alto) donde no entre ningún elemento, o que los elementos la esquiven.
+2. **La huella de bota no se reconoce**: parecen dos pastillas con rayas. Necesita la silueta de una suela (puntera + tacón unidos) con las rayas por dentro, hundida en el polvo (sombra interior), no en relieve.
+3. **El módulo lunar visto desde arriba parece una tuerca o una señal**. Mejor una vista lateral simplificada (cuerpo dorado + patas) o una sombra reconocible.
+4. **Colisiones**: el Sol pasa por encima de la Tierra y la barra amarilla (¿50 años?) corta la Tierra y no tiene etiqueta, así que no se entiende qué mide. O se etiqueta («1969 → hoy») o se quita.
+5. **Huella de la playa**: en el segundo 0 es enorme y en el 1 encoge de golpe; que aparezca pisándose (hundimiento + sombra) a su tamaño final.
+6. **El final (≈29–33 s) es casi estático y repite el plano de la escena 2**: falta un cierre con acción (zoom lento a la huella iluminada, la Tierra que sale, un destello…) que deje el remate «todavía se puede ver».
+7. **Poco 2.5D**: los fondos son planos. Añadir capas con paralaje (cráteres en primer plano, horizonte, estrellas) y sombras proyectadas por el Sol.
+8. Menores: el icono de lluvia tachado apenas se ve; la cifra del subtítulo sale como «50» (la locución sí debe ir en letra; en el subtítulo vale el número, pero hay que decidirlo).
+**Siguiente paso**: aplicar 1–4 antes del primer lote (07:52); 5–8 cuando se pueda.
+
 ## 2026-11-15 17:00 — Nico — rama `main` — ordenador de Nico (`macbook-air-de-nicolas-local`)
 **Hecho**
 - Carpeta `/Users/nico/Documents/Parece Mentira` con `lotes/`, `renders/` y `claves.txt` (`ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID=EuJOG4WNDCMcwTFrXKUc`). La tarea de las 08:00 (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`) ya apunta a esta carpeta; `AGENTE.md` y `PROJECT_STATE.md` actualizados (antes ponían `Documents/Codex/...`, que queda solo para `referencias/`).
