@@ -9,6 +9,9 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 - Drive dedicado solo al proyecto. Carpeta fija de revisión: «Parece Mentira — Revisión» (https://drive.google.com/drive/folders/1Sm8Yf72fJBxO7roWSOGT-hpRM0DK0j6i), una subcarpeta por lote. — 2026-11-15 — Jorge
 - Publicación gratuita desde el navegador integrado de la app de Claude (sesiones ya iniciadas), no servicios de pago. — 2026-11-15 — Jorge
 
+- Carpeta local de trabajo en cada Mac: `~/Documents/Parece Mentira/` con `claves.txt` (ELEVENLABS_API_KEY, ELEVENLABS_VOICE_ID; nunca al repo), `lotes/` y `renders/`. — 2026-11-15 — Jorge
+- `api.elevenlabs.io` añadido a los dominios permitidos de la cuenta de Claude. — 2026-11-15 — Jorge
+
 ## Flujo diario
 - Dos lotes al día: 08:00 en el ordenador de Nico y 20:00 en el de Jorge (una sola notificación por turno). — 2026-11-15 — Jorge
 - Cada lote: ideas sin repetir temas (se admiten continuaciones con información nueva) → guiones → voz → montaje 9:16 → subida a Drive → correo de aviso a parecementirapero.media@gmail.com. — 2026-11-15 — Jorge

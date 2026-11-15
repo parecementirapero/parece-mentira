@@ -13,7 +13,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | GitHub (`parecementirapero/parece-mentira`) | ✅ conectado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Jorge | ✅ sesión iniciada en el navegador integrado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Nico | ⏳ pendiente |
-| ElevenLabs | ✅ voz «Narrador PM - Curiosidades v1» lista (plan Starter); ⏳ falta API key en `.env` |
+| ElevenLabs | ✅ voz «Narrador PM - Curiosidades v1», clave API en el Mac de Jorge, prueba OK; ⏳ clave en el Mac de Nico |
 | Carpeta local de trabajo | ✅ Nico: `/Users/nico/Documents/Codex/Parece Mentira` · ⏳ Jorge |
 | Agente diario | ✅ manual en `AGENTE.md` |
 | Tarea programada 08:00 (Mac de Nico) | ✅ creada; primera ejecución 2026-11-16 a las 07:52 |

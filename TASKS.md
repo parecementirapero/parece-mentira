@@ -9,7 +9,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 ## Pendiente
 - [ ] Jorge: crear desde su Mac la tarea programada de las 20:00 (instrucciones al final de `AGENTE.md`) y apuntar su carpeta local en la tabla del punto 0
 - [ ] Desactivar la tarea antigua de Codex de las 08:00 para que no produzca lotes en paralelo
-- [ ] Guardar la API key de ElevenLabs en `.env` en cada ordenador
+- [ ] Nico: guardar la API key de ElevenLabs en `Documents/Parece Mentira/claves.txt` en su Mac (misma clave «Parece Mentira»)
 - [ ] Decidir plan de ElevenLabs: Starter (30k créditos/mes) se queda corto para 6 vídeos/día (~90k caracteres/mes); Creator 22 $/mes da 121k
 - [ ] Nico: iniciar sesión en YouTube Studio, Instagram, TikTok y ElevenLabs en el navegador integrado de la app de Claude en su ordenador
 - [ ] Jorge: conectar su carpeta local de trabajo en la app de Claude (la de Nico ya está: `Documents/Codex/Parece Mentira`)
@@ -18,6 +18,8 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Clave de API «Parece Mentira» (solo texto a voz + usuario) creada y guardada en el Mac de Jorge; `api.elevenlabs.io` permitido en la red; audio de prueba OK — Jorge — 2026-11-15
+- [x] Carpeta local `Documents/Parece Mentira` (claves.txt, lotes/, renders/) en el Mac de Jorge — Jorge — 2026-11-15
 - [x] Agente diario (`AGENTE.md`), registro de temas (`lotes/IDEAS.md`) y tarea programada de las 08:00 en el Mac de Nico — Nico — 2026-11-15
 - [x] Comprobar la voz nueva en ElevenLabs: «Narrador PM - Curiosidades v1» existe — Jorge — 2026-11-15
 - [x] Gmail y Drive conectados a la cuenta del proyecto — Jorge — 2026-11-15

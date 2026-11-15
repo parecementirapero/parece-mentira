@@ -1,5 +1,6 @@
 # Secretos
 .env
+claves.txt
 *.key
 
 # Media pesada (va a Drive, no a git)
