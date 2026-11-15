@@ -5,13 +5,14 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
 - [ ] Montar el motor 9:16 reproducible en `motor/` y probarlo con un vídeo — Nico — 2026-11-15 16:40
+- [ ] Nico: carpeta local `~/Documents/Parece Mentira` (lotes/, renders/, claves.txt) en su Mac — Nico — 2026-11-15 16:45
+- [ ] Nico: clave API de ElevenLabs «Parece Mentira - Nico» (solo texto a voz + usuario) en `claves.txt` y audio de prueba — Nico — 2026-11-15 16:45
+- [ ] Nico: iniciar sesión en ElevenLabs, YouTube Studio, Instagram y TikTok en el navegador integrado de su Mac — Nico — 2026-11-15 16:45
 
 ## Pendiente
 - [ ] Jorge: crear desde su Mac la tarea programada de las 20:00 (instrucciones al final de `AGENTE.md`) y apuntar su carpeta local en la tabla del punto 0
 - [ ] Desactivar la tarea antigua de Codex de las 08:00 para que no produzca lotes en paralelo
-- [ ] Nico: guardar la API key de ElevenLabs en `Documents/Parece Mentira/claves.txt` en su Mac (misma clave «Parece Mentira»)
 - [ ] Decidir plan de ElevenLabs: Starter (30k créditos/mes) se queda corto para 6 vídeos/día (~90k caracteres/mes); Creator 22 $/mes da 121k
-- [ ] Nico: iniciar sesión en YouTube Studio, Instagram, TikTok y ElevenLabs en el navegador integrado de la app de Claude en su ordenador
 - [ ] Jorge: conectar su carpeta local de trabajo en la app de Claude (la de Nico ya está: `Documents/Codex/Parece Mentira`)
 - [ ] Pasar a «Solo yo» el TikTok «Mi cerebro cuando toca callarse» desde el móvil
 - [ ] Lista de 20–30 temas iniciales en `lotes/IDEAS.md`
