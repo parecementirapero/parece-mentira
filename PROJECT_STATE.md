@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-15 17:00 — Nico_
+_Última actualización: 2026-11-15 17:10 — Nico_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -23,6 +23,9 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 ## Contenido
 - Lotes producidos en el sistema nuevo: ninguno todavía.
 - Vídeos antiguos (001–007 + piloto Venus): retirados de las redes; ver `DECISIONS.md`.
+
+## Presupuesto
+Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (pendiente de contratar). Ver `DECISIONS.md`.
 
 ## Siguiente paso
 Los dos Macs ya tienen clave de ElevenLabs y sesiones. Revisar el primer lote de la tarde (Jorge) y la prueba del motor (Nico); primera ejecución de la mañana el 2026-11-16 a las 07:52.

@@ -32,5 +32,12 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 - ~~Voz ElevenLabs «Archivo Oculto — Narración», Eleven v4, estabilidad 50 %, similitud 75 %.~~
 - Voz oficial: ElevenLabs «Narrador PM - Curiosidades v1» (voice_id `EuJOG4WNDCMcwTFrXKUc`), hombre ~30 años, acento de España, ritmo ágil. Cuenta nueva de ElevenLabs, plan Starter (licencia comercial). Si falla la voz, el vídeo se marca «pendiente de voz»; no se genera voz alternativa. — 2026-11-15 — Jorge
 
+## Presupuesto y gastos
+- ~~Presupuesto 50–150 €/mes entre ambos proyectos.~~
+- Presupuesto **ampliado** (importe mensual por concretar). Prioridad de gasto: — 2026-11-15 — Nico (aceptado por Nico y Jorge) — motivo: llegar al nivel de los vídeos objetivo (`motor/OBJETIVO.md`) con 6 vídeos/día de 45–60 s
+  1. **ElevenLabs Pro** (99 $/mes, 600k créditos): 6 vídeos/día × ~900 caracteres ≈ 160k/mes no caben en Creator (121k). Lo contrata una persona desde la cuenta.
+  2. **Ilustraciones**: primero el motor con escenas SVG (gratis). Se hace una prueba comparando un vídeo SVG con uno con ilustraciones generadas por IA; solo si el SVG se queda corto se elige y se paga un servicio de imagen.
+  3. **Música**: Pixabay Music (guardando el certificado de licencia de cada pista en la carpeta del lote, por si hay reclamaciones de Content ID) o la música de ElevenLabs incluida en el plan. Solo se paga una biblioteca si las reclamaciones se vuelven un problema.
+
 ## Redes
 - Todo lo publicado antes del 2026-11-15 se retiró: YouTube en privado, TikTok en «Solo yo» (salvo «Mi cerebro cuando toca callarse», bloqueado; hay que hacerlo desde el móvil), Instagram borrado. — 2026-11-15 — Jorge

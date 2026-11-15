@@ -5,6 +5,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 ---
 
 ## 2026-11-15 17:10 — Nico — rama `main` — ordenador de Nico
+**Hecho**: Nico y Jorge aceptan ampliar el presupuesto. Registrado en `DECISIONS.md` («Presupuesto y gastos») y en `CLAUDE.md`: 1) ElevenLabs Pro; 2) ilustraciones SVG gratis primero y prueba comparativa con IA antes de pagar; 3) música gratis (Pixabay con certificado o ElevenLabs).
+**Pendientes**: importe mensual exacto; contratar Pro (lo hace una persona, no Claude); prueba SVG vs. IA.
+**Siguiente paso**: aplicar `motor/OBJETIVO.md` al motor.
+
+## 2026-11-15 17:10 — Nico — rama `main` — ordenador de Nico
 **Hecho**: Nico confirma los cambios de `motor/OBJETIVO.md` → `DECISIONS.md` (subtítulo karaoke arriba con palabra clave en cápsula, rótulos de dato permitidos, 45–60 s, música de fondo con licencia) y `AGENTE.md` (130–170 palabras). Antigua regla del subtítulo abajo tachada.
 **Ojo créditos**: 6 vídeos/día × ~900 caracteres ≈ 160k/mes → no cabe en Creator (121k); ver tarea «Decidir plan de ElevenLabs».
 **Siguiente paso**: aplicar `OBJETIVO.md` al motor; elegir fuente de música; Jorge debe saber que el estilo cambia antes del lote de las 19:52.

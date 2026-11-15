@@ -7,16 +7,19 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Lote 2026-11-15-tarde — Agente 20:00 (Jorge) — 2026-11-15 16:55 — arrancando
 
 ## Pendiente
-- [ ] Elegir fuente de música de fondo con licencia comercial (ver `DECISIONS.md`)
+- [ ] Música de fondo: preparar en el motor la mezcla a −19 LUFS con pista de Pixabay o de ElevenLabs y guardar el certificado de licencia por lote
 - [ ] Aplicar `motor/OBJETIVO.md` al motor (subtítulo karaoke arriba, gancho, cámara, rótulos de dato, textura, final en bucle, música)
 - [ ] Aplicar al motor las mejoras de la revisión del 005 (ver `HANDOFF.md` 2026-11-15 17:05): subtítulo con zona reservada, huella de bota reconocible, módulo lunar reconocible, colisiones Tierra/Sol/barra, final con más acción
 - [ ] Desactivar la tarea antigua de Codex de las 08:00 para que no produzca lotes en paralelo
-- [ ] Decidir plan de ElevenLabs: Starter (30k créditos/mes) se queda corto para 6 vídeos/día (~90k caracteres/mes); Creator 22 $/mes da 121k
+- [ ] Nico o Jorge: contratar ElevenLabs Pro desde la cuenta del proyecto y avisar en `HANDOFF.md` (decidido, ver `DECISIONS.md`)
+- [ ] Concretar el importe mensual del presupuesto ampliado y apuntarlo en `DECISIONS.md`
+- [ ] Prueba comparativa: mismo vídeo con escenas SVG vs. ilustraciones IA, para decidir si se paga un servicio de imagen
 - [ ] Pasar a «Solo yo» el TikTok «Mi cerebro cuando toca callarse» desde el móvil
 - [ ] Lista de 20–30 temas iniciales en `lotes/IDEAS.md`
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Presupuesto ampliado y prioridad de gasto aceptados (ElevenLabs Pro → prueba SVG vs. IA → música gratis) → `DECISIONS.md`, `CLAUDE.md` — Nico — 2026-11-15
 - [x] Confirmados por Nico los cambios de estilo de `motor/OBJETIVO.md` (subtítulo karaoke arriba, 45–60 s, música) → `DECISIONS.md` — Nico — 2026-11-15
 - [x] Análisis de los 13 vídeos objetivo → `motor/OBJETIVO.md` (hojas en `~/Documents/Parece Mentira/referencias-objetivo/`) — Nico — 2026-11-15
 - [x] Revisión de la prueba del motor (005 Huellas en la Luna): pasa formato y estilo base; lista de mejoras en `HANDOFF.md` — Nico — 2026-11-15

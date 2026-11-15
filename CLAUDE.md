@@ -32,7 +32,7 @@ Este repo es la **única fuente de verdad**: lo que no esté aquí, no está dec
 ## Reglas de seguridad
 - Publicar en redes **solo** cuando la persona escriba «ok» para ese lote concreto en el chat.
 - Nunca meter contraseñas ni códigos: los inicios de sesión los hace la persona.
-- Sin compras ni gastos nuevos sin confirmación (presupuesto: 50–150 €/mes entre ambos proyectos).
+- Sin compras ni gastos nuevos sin confirmación (presupuesto ampliado el 2026-11-15, importe por concretar: ver «Presupuesto y gastos» en `DECISIONS.md`). Las suscripciones las contratan Nico o Jorge desde la cuenta; Claude no compra.
 
 ## Estructura
 ```
