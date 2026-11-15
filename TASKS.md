@@ -5,6 +5,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
 - [ ] Lote 2026-11-15-tarde — Agente 20:00 (Jorge) — 2026-11-15 16:55 — arrancando
+- [ ] Analizar los 13 vídeos objetivo (referencias de estilo) y sacar especificación para el motor — Nico — 2026-11-15 17:00
 
 ## Pendiente
 - [ ] Aplicar al motor las mejoras de la revisión del 005 (ver `HANDOFF.md` 2026-11-15 17:05): subtítulo con zona reservada, huella de bota reconocible, módulo lunar reconocible, colisiones Tierra/Sol/barra, final con más acción
