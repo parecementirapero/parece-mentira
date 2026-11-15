@@ -16,6 +16,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | ElevenLabs | ✅ voz «Narrador PM - Curiosidades v1», clave API en el Mac de Jorge, prueba OK; ⏳ clave en el Mac de Nico |
 | Carpeta local de trabajo | ✅ Nico: `/Users/nico/Documents/Codex/Parece Mentira` · ⏳ Jorge |
 | Agente diario | ✅ manual en `AGENTE.md` |
+| Motor de montaje | ✅ `motor/` probado con el 005 (render de 33 s en ~90 s) |
 | Tarea programada 08:00 (Mac de Nico) | ✅ creada; primera ejecución 2026-11-16 a las 07:52 |
 | Tarea programada 20:00 (Mac de Jorge) | ⏳ la crea Jorge desde su Mac |
 
@@ -24,4 +25,4 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 - Vídeos antiguos (001–007 + piloto Venus): retirados de las redes; ver `DECISIONS.md`.
 
 ## Siguiente paso
-API key de ElevenLabs en el `.env` de la carpeta local (si no, el agente usa el navegador integrado; en el Mac de Nico falta iniciar sesión en ElevenLabs y en las redes). Jorge: crear la tarea de las 20:00. Recomendado: preparar `motor/` antes del primer lote para que la primera ejecución no lo tenga que crear desde cero.
+API key de ElevenLabs en el `.env` de la carpeta local (si no, el agente usa el navegador integrado; en el Mac de Nico falta iniciar sesión en ElevenLabs y en las redes). Jorge: crear la tarea de las 20:00. Nico revisa la prueba del motor.

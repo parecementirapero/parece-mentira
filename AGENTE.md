@@ -57,7 +57,10 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 5. Montaje 9:16
 
-- Motor reproducible en Python en `motor/` del repo. **Si `motor/` no existe todavía**, esta ejecución lo crea (Pillow/NumPy + FFmpeg), lo documenta en `motor/README.md` y lo sube; las siguientes ejecuciones lo reutilizan y mejoran sin romper lo anterior.
+- Motor reproducible en `motor/` (lee `motor/README.md`): un `episodio.json` por vídeo → `python3 -m motor.render episodio.json --salida <dir>`. Dependencias: `pip install -r requirements.txt` (Pillow, NumPy) y FFmpeg. Se renderiza en el workspace y los resultados se copian a la carpeta local del lote.
+- Itera con `--hoja` (5 s) hasta que la hoja de fotogramas esté bien; luego render completo (~90 s por vídeo de 30 s).
+- Ejemplo completo para copiar el estilo y la estructura: `motor/ejemplos/005-huellas-luna/generar.py`.
+- Si un tema necesita un objeto que el motor no tiene, se añade un tipo nuevo en `motor/elementos.py` (sin romper el ejemplo 005) y se documenta en el README del motor.
 - Especificación de salida: **1080×1920, 30 fps, H.264 yuv420p (`-preset veryfast`), AAC 48 kHz estéreo**, duración = locución + ~0,5 s.
 - Estilo obligatorio (`DECISIONS.md`): ilustración a **pantalla completa**, sin título arriba, sin rótulos blancos con borde azul, **solo subtítulo blanco abajo** sincronizado con la voz, **sin Nova** dentro del vídeo. Ilustración 2.5D en capas, luces y sombras, **algo moviéndose siempre**, cámara estable, flechas y giros correctos. Nada de zooms sobre una imagen fija como única animación.
 - Referencias de estilo: `referencias/` de la carpeta local de Nico (INDICE.json y hojas de fotogramas). Se toma la técnica, nunca metraje, personajes ni textos.

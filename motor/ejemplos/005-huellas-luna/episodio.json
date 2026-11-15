@@ -1,0 +1,2417 @@
+{
+ "id": "prueba-005-huellas-luna",
+ "version": 1,
+ "audio": "005-locucion.mp3",
+ "subtitulos": {
+  "srt": "005-huellas-v1.srt"
+ },
+ "estilo_subtitulos": {
+  "y": 1560,
+  "tam": 66
+ },
+ "escenas": [
+  {
+   "inicio": 0,
+   "fin": 5.93,
+   "fondo": {
+    "colores": [
+     "#f3d9a4",
+     "#d9b47a"
+    ]
+   },
+   "camara": {
+    "zoom": [
+     1.0,
+     1.07
+    ],
+    "pan": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      -30
+     ]
+    ]
+   },
+   "vineta": 0.4,
+   "elementos": [
+    {
+     "tipo": "suelo",
+     "material": "arena",
+     "borde": -120,
+     "ondulacion": 0,
+     "z": 0.5,
+     "semilla": 3
+    },
+    {
+     "tipo": "forma",
+     "forma": "elipse",
+     "ancho": 54,
+     "alto": 32.4,
+     "relleno": [
+      "#ffd9e2",
+      "#e89aae"
+     ],
+     "sombra": {
+      "radio": 6,
+      "desplaz": [
+       0,
+       5
+      ]
+     },
+     "x": 190,
+     "y": 1500,
+     "rot": 20,
+     "z": 0.5,
+     "brillo": true
+    },
+    {
+     "tipo": "forma",
+     "forma": "elipse",
+     "ancho": 42,
+     "alto": 25.2,
+     "relleno": [
+      "#ffd9e2",
+      "#e89aae"
+     ],
+     "sombra": {
+      "radio": 6,
+      "desplaz": [
+       0,
+       5
+      ]
+     },
+     "x": 880,
+     "y": 1240,
+     "rot": -30,
+     "z": 0.5,
+     "brillo": true
+    },
+    {
+     "tipo": "forma",
+     "forma": "elipse",
+     "ancho": 36,
+     "alto": 21.599999999999998,
+     "relleno": [
+      "#ffd9e2",
+      "#e89aae"
+     ],
+     "sombra": {
+      "radio": 6,
+      "desplaz": [
+       0,
+       5
+      ]
+     },
+     "x": 820,
+     "y": 1660,
+     "rot": 60,
+     "z": 0.5,
+     "brillo": true
+    },
+    {
+     "tipo": "forma",
+     "forma": "poligono",
+     "puntos": [
+      [
+       0,
+       -46
+      ],
+      [
+       12,
+       -14
+      ],
+      [
+       44,
+       -14
+      ],
+      [
+       18,
+       6
+      ],
+      [
+       28,
+       40
+      ],
+      [
+       0,
+       18
+      ],
+      [
+       -28,
+       40
+      ],
+      [
+       -18,
+       6
+      ],
+      [
+       -44,
+       -14
+      ],
+      [
+       -12,
+       -14
+      ]
+     ],
+     "relleno": [
+      "#ffb05a",
+      "#f27c35"
+     ],
+     "brillo": true,
+     "sombra": {
+      "radio": 8,
+      "desplaz": [
+       0,
+       7
+      ]
+     },
+     "x": 240,
+     "y": 1180,
+     "rot": 15,
+     "z": 0.5
+    },
+    {
+     "tipo": "agua",
+     "lado": "arriba",
+     "z": 0.5,
+     "amplitud": 26,
+     "colores": [
+      "#1a6fa6",
+      "#68d6e4"
+     ],
+     "keys": [
+      {
+       "t": 0,
+       "nivel": 380
+      },
+      {
+       "t": 2.6,
+       "nivel": 430
+      },
+      {
+       "t": 3.5,
+       "nivel": 1260,
+       "ease": "salida"
+      },
+      {
+       "t": 4.8,
+       "nivel": 470
+      },
+      {
+       "t": 5.93,
+       "nivel": 420
+      }
+     ]
+    },
+    {
+     "tipo": "forma",
+     "forma": "elipse",
+     "ancho": 150,
+     "alto": 300,
+     "relleno": "#5a3d1e",
+     "op_relleno": 0.6,
+     "desenfoque": 22,
+     "x": 540,
+     "y": 1050,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0.1,
+       "op": 0,
+       "escala": 1.8
+      },
+      {
+       "t": 0.8,
+       "op": 0.7,
+       "escala": 1.0,
+       "ease": "entrada"
+      },
+      {
+       "t": 0.95,
+       "op": 0
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "pie",
+     "largo": 300,
+     "color": "#7a5a2e88",
+     "x": 540,
+     "y": 1040,
+     "z": 0.6,
+     "semilla": 3,
+     "keys": [
+      {
+       "t": 0.75,
+       "marca": 0
+      },
+      {
+       "t": 1.0,
+       "marca": 1
+      },
+      {
+       "t": 3.25,
+       "borrado": 0
+      },
+      {
+       "t": 4.6,
+       "borrado": 1
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "pie",
+     "suela": true,
+     "color_suela": "#efbf98",
+     "largo": 300,
+     "x": 540,
+     "z": 0.7,
+     "keys": [
+      {
+       "t": 0.0,
+       "escala": 2.8,
+       "y": 520,
+       "op": 0
+      },
+      {
+       "t": 0.15,
+       "op": 1
+      },
+      {
+       "t": 0.8,
+       "escala": 1.0,
+       "y": 1040,
+       "ease": "entrada"
+      },
+      {
+       "t": 1.25,
+       "escala": 1.0,
+       "y": 1040
+      },
+      {
+       "t": 1.75,
+       "escala": 2.6,
+       "y": 420,
+       "op": 0,
+       "ease": "entrada"
+      }
+     ]
+    },
+    {
+     "tipo": "particulas",
+     "clase": "polvo",
+     "color": "#fff1d2",
+     "area": [
+      -50,
+      0,
+      1130,
+      1920
+     ],
+     "n": 80,
+     "tam": [
+      2,
+      4.5
+     ],
+     "vel": [
+      -320,
+      25
+     ],
+     "z": 0.8,
+     "semilla": 2,
+     "keys": [
+      {
+       "t": 1.8,
+       "op": 0
+      },
+      {
+       "t": 2.2,
+       "op": 1
+      },
+      {
+       "t": 5.5,
+       "op": 0.8
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       1150,
+       820
+      ],
+      [
+       900,
+       790
+      ],
+      [
+       650,
+       845
+      ],
+      [
+       380,
+       805
+      ]
+     ],
+     "grosor": 9,
+     "color": "#ffffffcc",
+     "punta": false,
+     "z": 0.8,
+     "anim": {
+      "deriva": [
+       -160,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 1.9,
+       "progreso": 0,
+       "op": 1
+      },
+      {
+       "t": 2.5999999999999996,
+       "progreso": 1
+      },
+      {
+       "t": 3.3,
+       "op": 0
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       1150,
+       1250
+      ],
+      [
+       900,
+       1220
+      ],
+      [
+       650,
+       1275
+      ],
+      [
+       380,
+       1235
+      ]
+     ],
+     "grosor": 9,
+     "color": "#ffffffcc",
+     "punta": false,
+     "z": 0.8,
+     "anim": {
+      "deriva": [
+       -160,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 2.25,
+       "progreso": 0,
+       "op": 1
+      },
+      {
+       "t": 2.95,
+       "progreso": 1
+      },
+      {
+       "t": 3.65,
+       "op": 0
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       1150,
+       1600
+      ],
+      [
+       900,
+       1570
+      ],
+      [
+       650,
+       1625
+      ],
+      [
+       380,
+       1585
+      ]
+     ],
+     "grosor": 9,
+     "color": "#ffffffcc",
+     "punta": false,
+     "z": 0.8,
+     "anim": {
+      "deriva": [
+       -160,
+       0
+      ]
+     },
+     "keys": [
+      {
+       "t": 2.6,
+       "progreso": 0,
+       "op": 1
+      },
+      {
+       "t": 3.3,
+       "progreso": 1
+      },
+      {
+       "t": 4.0,
+       "op": 0
+      }
+     ]
+    },
+    {
+     "tipo": "brillo",
+     "x": 120,
+     "y": 120,
+     "radio": 700,
+     "color": "#fff3c4",
+     "intensidad": 0.45,
+     "z": 0.1
+    }
+   ]
+  },
+  {
+   "inicio": 5.93,
+   "fin": 11.93,
+   "entrada": "barrido",
+   "fondo": {
+    "colores": [
+     "#02030a",
+     "#0b1030",
+     "#1c2142"
+    ]
+   },
+   "camara": {
+    "zoom": [
+     1.0,
+     1.04
+    ],
+    "pan": [
+     [
+      0,
+      0
+     ],
+     [
+      -20,
+      -10
+     ]
+    ]
+   },
+   "elementos": [
+    {
+     "tipo": "particulas",
+     "clase": "estrellas",
+     "area": [
+      0,
+      0,
+      1080,
+      1150
+     ],
+     "n": 110,
+     "tam": [
+      1.2,
+      3.2
+     ],
+     "vel": [
+      -5,
+      0
+     ],
+     "color": "#ffffff",
+     "z": 0.1,
+     "semilla": 4
+    },
+    {
+     "tipo": "brillo",
+     "x": 800,
+     "y": 360,
+     "radio": 260,
+     "color": "#6fb6ff",
+     "intensidad": 0.35,
+     "z": 0.2
+    },
+    {
+     "tipo": "esfera",
+     "x": 800,
+     "y": 360,
+     "radio": 118,
+     "textura": "tierra",
+     "halo": "#8fd0ff",
+     "giro": 14,
+     "luz": [
+      -0.7,
+      -0.4
+     ],
+     "z": 0.2,
+     "semilla": 8,
+     "anim": {
+      "flotar": [
+       6,
+       5
+      ]
+     }
+    },
+    {
+     "tipo": "suelo",
+     "material": "luna",
+     "borde": 1040,
+     "crateres": 18,
+     "z": 0.6,
+     "semilla": 12
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 420,
+     "color": "#23232fcc",
+     "x": 540,
+     "y": 1360,
+     "ey": 0.55,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0.6,
+       "marca": 0
+      },
+      {
+       "t": 0.95,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "brillo",
+     "x": 540,
+     "y": 1360,
+     "radio": 260,
+     "color": "#d9d9e6",
+     "intensidad": 0.7,
+     "ey": 0.5,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0.6,
+       "escala": 0.3,
+       "op": 0
+      },
+      {
+       "t": 0.6799999999999999,
+       "op": 0.8
+      },
+      {
+       "t": 1.5,
+       "escala": 1.4,
+       "op": 0,
+       "ease": "salida"
+      }
+     ]
+    },
+    {
+     "tipo": "forma",
+     "forma": "elipse",
+     "ancho": 150,
+     "alto": 300,
+     "relleno": "#000000",
+     "op_relleno": 0.55,
+     "desenfoque": 22,
+     "x": 540,
+     "y": 1370,
+     "ey": 0.55,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0.0,
+       "op": 0,
+       "escala": 1.7
+      },
+      {
+       "t": 0.6,
+       "op": 0.8,
+       "escala": 1.0,
+       "ease": "entrada"
+      },
+      {
+       "t": 0.75,
+       "op": 0
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "suela": true,
+     "color_suela": "#eceef4",
+     "largo": 420,
+     "x": 540,
+     "ey": 0.55,
+     "z": 0.7,
+     "keys": [
+      {
+       "t": 0.0,
+       "escala": 2.8,
+       "y": 840,
+       "op": 0
+      },
+      {
+       "t": 0.15,
+       "op": 1
+      },
+      {
+       "t": 0.6,
+       "escala": 1.0,
+       "y": 1360,
+       "ease": "entrada"
+      },
+      {
+       "t": 0.95,
+       "escala": 1.0,
+       "y": 1360,
+       "op": 1
+      },
+      {
+       "t": 1.4,
+       "escala": 2.4,
+       "y": 760,
+       "op": 0,
+       "ease": "entrada"
+      }
+     ]
+    },
+    {
+     "tipo": "forma",
+     "forma": "circulo",
+     "radio": 135,
+     "relleno": "#0e1430",
+     "op_relleno": 0.8,
+     "grosor": 7,
+     "borde": "#dfe6ff",
+     "x": 290,
+     "y": 640,
+     "z": 0.4,
+     "keys": [
+      {
+       "t": 1.9,
+       "escala": 0,
+       "ease": "rebote"
+      },
+      {
+       "t": 2.3,
+       "escala": 1
+      }
+     ]
+    },
+    {
+     "tipo": "forma",
+     "forma": "circulo",
+     "radio": 135,
+     "relleno": "#0e1430",
+     "op_relleno": 0.8,
+     "grosor": 7,
+     "borde": "#dfe6ff",
+     "x": 790,
+     "y": 640,
+     "z": 0.4,
+     "keys": [
+      {
+       "t": 2.1,
+       "escala": 0,
+       "ease": "rebote"
+      },
+      {
+       "t": 2.5,
+       "escala": 1
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       200,
+       590
+      ],
+      [
+       250,
+       572
+      ],
+      [
+       300,
+       602
+      ],
+      [
+       370,
+       584
+      ]
+     ],
+     "grosor": 11,
+     "color": "#bfe3ff",
+     "punta": false,
+     "z": 0.4,
+     "anim": {
+      "flotar": [
+       4,
+       1.2
+      ]
+     },
+     "fase": 0,
+     "keys": [
+      {
+       "t": 2.3,
+       "progreso": 0
+      },
+      {
+       "t": 2.7,
+       "progreso": 1
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       200,
+       640
+      ],
+      [
+       250,
+       622
+      ],
+      [
+       300,
+       652
+      ],
+      [
+       370,
+       634
+      ]
+     ],
+     "grosor": 11,
+     "color": "#bfe3ff",
+     "punta": false,
+     "z": 0.4,
+     "anim": {
+      "flotar": [
+       4,
+       1.2
+      ]
+     },
+     "fase": 1,
+     "keys": [
+      {
+       "t": 2.42,
+       "progreso": 0
+      },
+      {
+       "t": 2.8200000000000003,
+       "progreso": 1
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       200,
+       690
+      ],
+      [
+       250,
+       672
+      ],
+      [
+       300,
+       702
+      ],
+      [
+       370,
+       684
+      ]
+     ],
+     "grosor": 11,
+     "color": "#bfe3ff",
+     "punta": false,
+     "z": 0.4,
+     "anim": {
+      "flotar": [
+       4,
+       1.2
+      ]
+     },
+     "fase": 2,
+     "keys": [
+      {
+       "t": 2.54,
+       "progreso": 0
+      },
+      {
+       "t": 2.9400000000000004,
+       "progreso": 1
+      }
+     ]
+    },
+    {
+     "tipo": "particulas",
+     "clase": "lluvia",
+     "color": "#9fd4ff",
+     "area": [
+      715,
+      555,
+      865,
+      725
+     ],
+     "n": 16,
+     "tam": [
+      3,
+      4
+     ],
+     "vel": [
+      0,
+      420
+     ],
+     "dispersion": 0.15,
+     "z": 0.4,
+     "semilla": 6,
+     "keys": [
+      {
+       "t": 2.4,
+       "op": 0
+      },
+      {
+       "t": 2.7,
+       "op": 1
+      }
+     ]
+    },
+    {
+     "tipo": "forma",
+     "forma": "redondeado",
+     "ancho": 300,
+     "alto": 26,
+     "relleno": "#ff4d61",
+     "sombra": {
+      "radio": 6
+     },
+     "x": 290,
+     "y": 640,
+     "rot": -45,
+     "z": 0.4,
+     "keys": [
+      {
+       "t": 3.75,
+       "escala": 0,
+       "ex": 0
+      },
+      {
+       "t": 4.05,
+       "escala": 1,
+       "ex": 1,
+       "ease": "rebote"
+      }
+     ]
+    },
+    {
+     "tipo": "forma",
+     "forma": "redondeado",
+     "ancho": 300,
+     "alto": 26,
+     "relleno": "#ff4d61",
+     "sombra": {
+      "radio": 6
+     },
+     "x": 790,
+     "y": 640,
+     "rot": -45,
+     "z": 0.4,
+     "keys": [
+      {
+       "t": 4.6,
+       "escala": 0,
+       "ex": 0
+      },
+      {
+       "t": 4.9,
+       "escala": 1,
+       "ex": 1,
+       "ease": "rebote"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "inicio": 11.93,
+   "fin": 17.33,
+   "fondo": {
+    "colores": [
+     "#02030a",
+     "#0b1030",
+     "#1c2142"
+    ]
+   },
+   "camara": {
+    "zoom": [
+     1.02,
+     1.0
+    ],
+    "pan": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ]
+   },
+   "elementos": [
+    {
+     "tipo": "particulas",
+     "clase": "estrellas",
+     "area": [
+      0,
+      0,
+      1080,
+      1150
+     ],
+     "n": 110,
+     "tam": [
+      1.2,
+      3.2
+     ],
+     "vel": [
+      -5,
+      0
+     ],
+     "color": "#ffffff",
+     "z": 0.1,
+     "semilla": 4
+    },
+    {
+     "tipo": "brillo",
+     "x": 800,
+     "y": 360,
+     "radio": 260,
+     "color": "#6fb6ff",
+     "intensidad": 0.35,
+     "z": 0.2
+    },
+    {
+     "tipo": "esfera",
+     "x": 800,
+     "y": 360,
+     "radio": 118,
+     "textura": "tierra",
+     "halo": "#8fd0ff",
+     "giro": 14,
+     "luz": [
+      -0.7,
+      -0.4
+     ],
+     "z": 0.2,
+     "semilla": 8,
+     "anim": {
+      "flotar": [
+       6,
+       5
+      ]
+     }
+    },
+    {
+     "tipo": "suelo",
+     "material": "luna",
+     "borde": 1040,
+     "crateres": 18,
+     "z": 0.6,
+     "semilla": 12
+    },
+    {
+     "tipo": "esfera",
+     "x": -100,
+     "y": 520,
+     "radio": 62,
+     "textura": "sol",
+     "color": "#fff3b0",
+     "color2": "#ffb347",
+     "z": 0.15,
+     "keys": [
+      {
+       "t": 2.6,
+       "x": -100,
+       "y": 560,
+       "op": 1,
+       "ease": "lineal"
+      },
+      {
+       "t": 2.6,
+       "x": -100,
+       "y": 560,
+       "ease": "lineal"
+      },
+      {
+       "t": 3.05,
+       "y": 360
+      },
+      {
+       "t": 3.49,
+       "x": 1180,
+       "y": 560,
+       "ease": "lineal"
+      },
+      {
+       "t": 3.5,
+       "x": -100,
+       "y": 560,
+       "ease": "lineal"
+      },
+      {
+       "t": 3.9499999999999997,
+       "y": 360
+      },
+      {
+       "t": 4.390000000000001,
+       "x": 1180,
+       "y": 560,
+       "ease": "lineal"
+      },
+      {
+       "t": 4.4,
+       "x": -100,
+       "y": 560,
+       "ease": "lineal"
+      },
+      {
+       "t": 4.85,
+       "y": 360
+      },
+      {
+       "t": 5.29,
+       "x": 1180,
+       "y": 560,
+       "ease": "lineal"
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 120,
+     "color": "#2c2c3aaa",
+     "x": 170,
+     "y": 1422,
+     "ey": 0.5,
+     "lado": "der",
+     "rot": 90,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0.25,
+       "marca": 0
+      },
+      {
+       "t": 0.4,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 120,
+     "color": "#2c2c3aaa",
+     "x": 295,
+     "y": 1458,
+     "ey": 0.5,
+     "lado": "izq",
+     "rot": 90,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0.61,
+       "marca": 0
+      },
+      {
+       "t": 0.76,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 120,
+     "color": "#2c2c3aaa",
+     "x": 420,
+     "y": 1422,
+     "ey": 0.5,
+     "lado": "der",
+     "rot": 90,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0.97,
+       "marca": 0
+      },
+      {
+       "t": 1.12,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 120,
+     "color": "#2c2c3aaa",
+     "x": 545,
+     "y": 1458,
+     "ey": 0.5,
+     "lado": "izq",
+     "rot": 90,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 1.33,
+       "marca": 0
+      },
+      {
+       "t": 1.48,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 120,
+     "color": "#2c2c3aaa",
+     "x": 670,
+     "y": 1422,
+     "ey": 0.5,
+     "lado": "der",
+     "rot": 90,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 1.69,
+       "marca": 0
+      },
+      {
+       "t": 1.8399999999999999,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 120,
+     "color": "#2c2c3aaa",
+     "x": 795,
+     "y": 1458,
+     "ey": 0.5,
+     "lado": "izq",
+     "rot": 90,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 2.05,
+       "marca": 0
+      },
+      {
+       "t": 2.1999999999999997,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 120,
+     "color": "#2c2c3aaa",
+     "x": 920,
+     "y": 1422,
+     "ey": 0.5,
+     "lado": "der",
+     "rot": 90,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 2.41,
+       "marca": 0
+      },
+      {
+       "t": 2.56,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "persona",
+     "casco": true,
+     "alto": 360,
+     "z": 0.65,
+     "y": 1250,
+     "paso": 1.0,
+     "brazo_i": 18,
+     "brazo_d": 18,
+     "keys": [
+      {
+       "t": 0,
+       "x": 120,
+       "op": 1,
+       "ease": "lineal"
+      },
+      {
+       "t": 2.6,
+       "x": 960,
+       "ease": "lineal"
+      },
+      {
+       "t": 2.9,
+       "op": 0
+      }
+     ]
+    },
+    {
+     "tipo": "barra",
+     "x": 540,
+     "y": 230,
+     "ancho": 760,
+     "alto": 30,
+     "color": "#ffd34d",
+     "fondo": "#ffffff30",
+     "z": 0.0,
+     "keys": [
+      {
+       "t": 2.6,
+       "progreso": 0,
+       "op": 0
+      },
+      {
+       "t": 2.8,
+       "op": 1
+      },
+      {
+       "t": 5.3,
+       "progreso": 1,
+       "ease": "lineal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "inicio": 17.33,
+   "fin": 22.77,
+   "fondo": {
+    "colores": [
+     "#9a9aa6",
+     "#6e6e7c"
+    ]
+   },
+   "camara": {
+    "zoom": [
+     1.0,
+     1.06
+    ],
+    "pan": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ]
+   },
+   "vineta": 0.6,
+   "elementos": [
+    {
+     "tipo": "suelo",
+     "material": "luna",
+     "borde": -150,
+     "crateres": 26,
+     "ondulacion": 0,
+     "z": 0.5,
+     "semilla": 21
+    },
+    {
+     "tipo": "grupo",
+     "x": 540,
+     "y": 980,
+     "ancho": 420,
+     "alto": 420,
+     "z": 0.5,
+     "hijos": [
+      {
+       "tipo": "forma",
+       "forma": "elipse",
+       "ancho": 330,
+       "alto": 330,
+       "relleno": "#000000",
+       "op_relleno": 0.45,
+       "desenfoque": 18,
+       "x": 18,
+       "y": 26
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": -110,
+       "y": -110,
+       "rot": -45
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": 110,
+       "y": -110,
+       "rot": 45
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": -110,
+       "y": 110,
+       "rot": 45
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": 110,
+       "y": 110,
+       "rot": -45
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": -165,
+       "y": -165
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": 165,
+       "y": -165
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": -165,
+       "y": 165
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": 165,
+       "y": 165
+      },
+      {
+       "tipo": "forma",
+       "forma": "poligono",
+       "puntos": [
+        [
+         -50,
+         -120
+        ],
+        [
+         50,
+         -120
+        ],
+        [
+         120,
+         -50
+        ],
+        [
+         120,
+         50
+        ],
+        [
+         50,
+         120
+        ],
+        [
+         -50,
+         120
+        ],
+        [
+         -120,
+         50
+        ],
+        [
+         -120,
+         -50
+        ]
+       ],
+       "relleno": [
+        "#ffd36b",
+        "#c98a1c"
+       ],
+       "brillo": true
+      },
+      {
+       "tipo": "forma",
+       "forma": "poligono",
+       "puntos": [
+        [
+         -30,
+         -72
+        ],
+        [
+         30,
+         -72
+        ],
+        [
+         72,
+         -30
+        ],
+        [
+         72,
+         30
+        ],
+        [
+         30,
+         72
+        ],
+        [
+         -30,
+         72
+        ],
+        [
+         -72,
+         30
+        ],
+        [
+         -72,
+         -30
+        ]
+       ],
+       "relleno": [
+        "#b8b8c4",
+        "#7c7c8a"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       600,
+       1130
+      ],
+      [
+       660,
+       1290
+      ],
+      [
+       610,
+       1440
+      ],
+      [
+       700,
+       1600
+      ],
+      [
+       820,
+       1680
+      ]
+     ],
+     "grosor": 11,
+     "color": "#3e3e4c",
+     "punta": false,
+     "z": 0.5,
+     "keys": [
+      {
+       "t": 1.4,
+       "progreso": 0
+      },
+      {
+       "t": 3.4,
+       "progreso": 1
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       420,
+       1080
+      ],
+      [
+       300,
+       1200
+      ],
+      [
+       240,
+       1380
+      ],
+      [
+       150,
+       1480
+      ]
+     ],
+     "grosor": 11,
+     "color": "#3e3e4c",
+     "punta": false,
+     "z": 0.5,
+     "keys": [
+      {
+       "t": 1.7999999999999998,
+       "progreso": 0
+      },
+      {
+       "t": 3.8,
+       "progreso": 1
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       700,
+       900
+      ],
+      [
+       850,
+       820
+      ],
+      [
+       930,
+       700
+      ]
+     ],
+     "grosor": 11,
+     "color": "#3e3e4c",
+     "punta": false,
+     "z": 0.5,
+     "keys": [
+      {
+       "t": 2.2,
+       "progreso": 0
+      },
+      {
+       "t": 4.2,
+       "progreso": 1
+      }
+     ]
+    },
+    {
+     "tipo": "forma",
+     "forma": "poligono",
+     "puntos": [
+      [
+       -70,
+       -560
+      ],
+      [
+       70,
+       -560
+      ],
+      [
+       330,
+       560
+      ],
+      [
+       -330,
+       560
+      ]
+     ],
+     "relleno": "#9fe0ff",
+     "op_relleno": 0.18,
+     "desenfoque": 10,
+     "y": 900,
+     "z": 0.7,
+     "keys": [
+      {
+       "t": 0,
+       "x": -280,
+       "ease": "lineal"
+      },
+      {
+       "t": 5.4,
+       "x": 1360,
+       "ease": "lineal"
+      },
+      {
+       "t": 0.0,
+       "op": 1
+      }
+     ]
+    },
+    {
+     "tipo": "grupo",
+     "ancho": 520,
+     "alto": 260,
+     "z": 0.7,
+     "y": 330,
+     "keys": [
+      {
+       "t": 0,
+       "x": -280,
+       "ease": "lineal"
+      },
+      {
+       "t": 5.4,
+       "x": 1360,
+       "ease": "lineal"
+      }
+     ],
+     "anim": {
+      "balanceo": [
+       3,
+       3
+      ]
+     },
+     "hijos": [
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 180,
+       "alto": 70,
+       "relleno": [
+        "#3c6fd1",
+        "#1b3c86"
+       ],
+       "grosor": 4,
+       "borde": "#9fc0ff",
+       "x": -160,
+       "esquinas": 6
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 180,
+       "alto": 70,
+       "relleno": [
+        "#3c6fd1",
+        "#1b3c86"
+       ],
+       "grosor": 4,
+       "borde": "#9fc0ff",
+       "x": 160,
+       "esquinas": 6
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 110,
+       "alto": 110,
+       "relleno": [
+        "#ffd36b",
+        "#c98a1c"
+       ],
+       "brillo": true,
+       "esquinas": 18,
+       "sombra": {
+        "radio": 10
+       }
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 22,
+       "relleno": "#eef2ff",
+       "x": 0,
+       "y": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "inicio": 22.77,
+   "fin": 27.8,
+   "entrada": "fundido",
+   "fondo": {
+    "colores": [
+     "#9a9aa6",
+     "#6e6e7c"
+    ]
+   },
+   "camara": {
+    "zoom": [
+     1.06,
+     1.12
+    ],
+    "pan": [
+     [
+      0,
+      0
+     ],
+     [
+      -40,
+      -60
+     ]
+    ]
+   },
+   "vineta": 0.6,
+   "elementos": [
+    {
+     "tipo": "suelo",
+     "material": "luna",
+     "borde": -150,
+     "crateres": 26,
+     "ondulacion": 0,
+     "z": 0.5,
+     "semilla": 21
+    },
+    {
+     "tipo": "grupo",
+     "x": 540,
+     "y": 980,
+     "ancho": 420,
+     "alto": 420,
+     "z": 0.5,
+     "hijos": [
+      {
+       "tipo": "forma",
+       "forma": "elipse",
+       "ancho": 330,
+       "alto": 330,
+       "relleno": "#000000",
+       "op_relleno": 0.45,
+       "desenfoque": 18,
+       "x": 18,
+       "y": 26
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": -110,
+       "y": -110,
+       "rot": -45
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": 110,
+       "y": -110,
+       "rot": 45
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": -110,
+       "y": 110,
+       "rot": 45
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 24,
+       "alto": 170,
+       "relleno": [
+        "#d8d8e0",
+        "#8b8b98"
+       ],
+       "x": 110,
+       "y": 110,
+       "rot": -45
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": -165,
+       "y": -165
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": 165,
+       "y": -165
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": -165,
+       "y": 165
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 26,
+       "relleno": [
+        "#e6e6ee",
+        "#9a9aa8"
+       ],
+       "x": 165,
+       "y": 165
+      },
+      {
+       "tipo": "forma",
+       "forma": "poligono",
+       "puntos": [
+        [
+         -50,
+         -120
+        ],
+        [
+         50,
+         -120
+        ],
+        [
+         120,
+         -50
+        ],
+        [
+         120,
+         50
+        ],
+        [
+         50,
+         120
+        ],
+        [
+         -50,
+         120
+        ],
+        [
+         -120,
+         50
+        ],
+        [
+         -120,
+         -50
+        ]
+       ],
+       "relleno": [
+        "#ffd36b",
+        "#c98a1c"
+       ],
+       "brillo": true
+      },
+      {
+       "tipo": "forma",
+       "forma": "poligono",
+       "puntos": [
+        [
+         -30,
+         -72
+        ],
+        [
+         30,
+         -72
+        ],
+        [
+         72,
+         -30
+        ],
+        [
+         72,
+         30
+        ],
+        [
+         30,
+         72
+        ],
+        [
+         -30,
+         72
+        ],
+        [
+         -72,
+         30
+        ],
+        [
+         -72,
+         -30
+        ]
+       ],
+       "relleno": [
+        "#b8b8c4",
+        "#7c7c8a"
+       ]
+      }
+     ]
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       600,
+       1130
+      ],
+      [
+       660,
+       1290
+      ],
+      [
+       610,
+       1440
+      ],
+      [
+       700,
+       1600
+      ],
+      [
+       820,
+       1680
+      ]
+     ],
+     "grosor": 11,
+     "color": "#3e3e4c",
+     "punta": false,
+     "z": 0.5
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       420,
+       1080
+      ],
+      [
+       300,
+       1200
+      ],
+      [
+       240,
+       1380
+      ],
+      [
+       150,
+       1480
+      ]
+     ],
+     "grosor": 11,
+     "color": "#3e3e4c",
+     "punta": false,
+     "z": 0.5
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       700,
+       900
+      ],
+      [
+       850,
+       820
+      ],
+      [
+       930,
+       700
+      ]
+     ],
+     "grosor": 11,
+     "color": "#3e3e4c",
+     "punta": false,
+     "z": 0.5
+    },
+    {
+     "tipo": "flecha",
+     "puntos": [
+      [
+       600,
+       1130
+      ],
+      [
+       660,
+       1290
+      ],
+      [
+       610,
+       1440
+      ],
+      [
+       700,
+       1600
+      ],
+      [
+       820,
+       1680
+      ]
+     ],
+     "grosor": 30,
+     "color": "#fff4b8",
+     "punta": false,
+     "z": 0.5,
+     "keys": [
+      {
+       "t": 3.5,
+       "op": 0,
+       "progreso": 0
+      },
+      {
+       "t": 4.4,
+       "op": 0.45,
+       "progreso": 1
+      }
+     ]
+    },
+    {
+     "tipo": "grupo",
+     "ancho": 520,
+     "alto": 520,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": 0,
+       "x": 470,
+       "y": 1180,
+       "escala": 0.0
+      },
+      {
+       "t": 0.4,
+       "escala": 1.0,
+       "ease": "rebote"
+      },
+      {
+       "t": 1.6,
+       "x": 650,
+       "y": 1380
+      },
+      {
+       "t": 3.2,
+       "x": 700,
+       "y": 1560
+      }
+     ],
+     "hijos": [
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 56,
+       "alto": 210,
+       "relleno": [
+        "#4b3b6b",
+        "#2a2140"
+       ],
+       "x": 150,
+       "y": 150,
+       "rot": -45,
+       "sombra": {
+        "radio": 10
+       }
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 165,
+       "relleno": "#e8f6ff",
+       "op_relleno": 0.16,
+       "grosor": 20,
+       "borde": "#f2f4fb",
+       "brillo": true,
+       "sombra": {
+        "radio": 12
+       }
+      }
+     ]
+    },
+    {
+     "tipo": "grupo",
+     "ancho": 520,
+     "alto": 260,
+     "z": 0.7,
+     "y": 330,
+     "keys": [
+      {
+       "t": 0,
+       "x": 1360,
+       "ease": "lineal"
+      },
+      {
+       "t": 5.0,
+       "x": -280,
+       "ease": "lineal"
+      }
+     ],
+     "anim": {
+      "balanceo": [
+       3,
+       3
+      ]
+     },
+     "hijos": [
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 180,
+       "alto": 70,
+       "relleno": [
+        "#3c6fd1",
+        "#1b3c86"
+       ],
+       "grosor": 4,
+       "borde": "#9fc0ff",
+       "x": -160,
+       "esquinas": 6
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 180,
+       "alto": 70,
+       "relleno": [
+        "#3c6fd1",
+        "#1b3c86"
+       ],
+       "grosor": 4,
+       "borde": "#9fc0ff",
+       "x": 160,
+       "esquinas": 6
+      },
+      {
+       "tipo": "forma",
+       "forma": "redondeado",
+       "ancho": 110,
+       "alto": 110,
+       "relleno": [
+        "#ffd36b",
+        "#c98a1c"
+       ],
+       "brillo": true,
+       "esquinas": 18,
+       "sombra": {
+        "radio": 10
+       }
+      },
+      {
+       "tipo": "forma",
+       "forma": "circulo",
+       "radio": 22,
+       "relleno": "#eef2ff",
+       "x": 0,
+       "y": 70
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "inicio": 27.8,
+   "fin": 32.95,
+   "fondo": {
+    "colores": [
+     "#02030a",
+     "#0b1030",
+     "#1c2142"
+    ]
+   },
+   "camara": {
+    "zoom": [
+     1.0,
+     1.14
+    ],
+    "pan": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      -60
+     ]
+    ]
+   },
+   "elementos": [
+    {
+     "tipo": "particulas",
+     "clase": "estrellas",
+     "area": [
+      0,
+      0,
+      1080,
+      1150
+     ],
+     "n": 110,
+     "tam": [
+      1.2,
+      3.2
+     ],
+     "vel": [
+      -5,
+      0
+     ],
+     "color": "#ffffff",
+     "z": 0.1,
+     "semilla": 4
+    },
+    {
+     "tipo": "brillo",
+     "x": 800,
+     "y": 360,
+     "radio": 260,
+     "color": "#6fb6ff",
+     "intensidad": 0.35,
+     "z": 0.2
+    },
+    {
+     "tipo": "esfera",
+     "x": 800,
+     "y": 360,
+     "radio": 118,
+     "textura": "tierra",
+     "halo": "#8fd0ff",
+     "giro": 14,
+     "luz": [
+      -0.7,
+      -0.4
+     ],
+     "z": 0.2,
+     "semilla": 8,
+     "anim": {
+      "flotar": [
+       6,
+       5
+      ]
+     }
+    },
+    {
+     "tipo": "suelo",
+     "material": "luna",
+     "borde": 1040,
+     "crateres": 18,
+     "z": 0.6,
+     "semilla": 12
+    },
+    {
+     "tipo": "huella",
+     "clase": "bota",
+     "largo": 420,
+     "color": "#23232fcc",
+     "x": 540,
+     "y": 1360,
+     "ey": 0.55,
+     "z": 0.6,
+     "keys": [
+      {
+       "t": -1,
+       "marca": 0
+      },
+      {
+       "t": -0.65,
+       "marca": 1
+      }
+     ]
+    },
+    {
+     "tipo": "brillo",
+     "x": 540,
+     "y": 1360,
+     "radio": 320,
+     "color": "#fffbe0",
+     "ey": 0.5,
+     "z": 0.6,
+     "intensidad": 0.6,
+     "anim": {
+      "pulso": [
+       0.08,
+       2.2
+      ]
+     },
+     "keys": [
+      {
+       "t": 0.8,
+       "op": 0
+      },
+      {
+       "t": 2.0,
+       "op": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

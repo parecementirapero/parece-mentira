@@ -4,6 +4,20 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 16:55 — Nico — rama `main`
+**Hecho**
+- `motor/`: motor de montaje 9:16 en Python (Pillow + NumPy + FFmpeg). Escenas con fondo, cámara con paralaje, transiciones (fundido, barrido, corte), 13 tipos de elemento (forma, esfera con volumen y giro, brillo, rayos, partículas, suelo, agua, huella, flecha, barra, persona, imagen, grupo), subtítulo blanco abajo, SRT, manifiesto con SHA-256 y hoja de fotogramas. Documentado en `motor/README.md`.
+- Ejemplo `motor/ejemplos/005-huellas-luna/` (6 escenas) renderizado con la locución antigua del 005 **solo como prueba técnica** (no es la voz nueva; no se publica).
+- `AGENTE.md` punto 5 apunta al motor; `requirements.txt`; `.gitignore` ignora `out/`.
+
+**Pruebas**: `ffprobe` → 1080×1920, 30 fps, h264 yuv420p, AAC 48 kHz estéreo, 32,94 s, 8,2 MB; render en 87 s; hoja de fotogramas revisada (corregidos: mancha en la playa, textura de la Tierra, sol encima de la barra, tamaño de la huella lunar, brillo final). Vídeo y hoja en `pruebas-motor/` de la carpeta local de Nico.
+
+**Pendientes**: que Nico revise la prueba; sesiones de ElevenLabs y redes en el navegador integrado del Mac de Nico (o API key en `.env`); tarea de las 20:00 de Jorge.
+
+**Siguiente paso**: primera ejecución automática mañana a las 07:52.
+
+---
+
 ## 2026-11-15 16:40 — Jorge — rama `main`
 **Hecho**: carpeta `~/Documents/Parece Mentira` en el Mac de Jorge; clave API de ElevenLabs «Parece Mentira» creada (permisos: texto a voz y usuario) y guardada por Jorge en `claves.txt`; dominio `api.elevenlabs.io` permitido; TTS de prueba con voice_id `EuJOG4WNDCMcwTFrXKUc` → HTTP 200, MP3 128 kbps 44,1 kHz.
 **Nota**: el ordenador conectado a este chat es el de Jorge («jorges-macbook-air-2»); las sesiones de redes y ElevenLabs del navegador integrado están en ese Mac.

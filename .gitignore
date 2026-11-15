@@ -19,3 +19,7 @@ __pycache__/
 
 # Sistema
 .DS_Store
+
+# Salidas del motor
+out/
+*_hoja.jpg
