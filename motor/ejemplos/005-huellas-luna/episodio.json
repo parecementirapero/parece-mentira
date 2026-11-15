@@ -6,6 +6,7 @@
   "srt": "005-huellas-v1.srt"
  },
  "estilo_subtitulos": {
+  "modo": "clasico",
   "y": 1560,
   "tam": 66
  },

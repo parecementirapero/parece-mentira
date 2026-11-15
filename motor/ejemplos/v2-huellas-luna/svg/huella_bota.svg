@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640">
+  <defs>
+    <linearGradient id="hondo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c5f6b"/><stop offset="1" stop-color="#7d808c"/>
+    </linearGradient>
+    <linearGradient id="borde" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2e303a" stop-opacity="0.9"/><stop offset="0.5" stop-color="#2e303a" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f2f3f7" stop-opacity="0.85"/>
+    </linearGradient>
+    <clipPath id="suela"><path id="p" d="M160 18 C250 18 292 80 292 170 C292 250 262 300 250 360 C240 420 262 470 258 540 C254 600 214 624 160 624 C106 624 66 600 62 540 C58 470 80 420 70 360 C58 300 28 250 28 170 C28 80 70 18 160 18 Z"/></clipPath>
+    <filter id="f" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <!-- reborde de polvo levantado alrededor -->
+  <use href="#p" fill="none" stroke="#c9cbd3" stroke-width="22" opacity="0.55" filter="url(#f)"/>
+  <use href="#p" fill="url(#hondo)"/>
+  <g clip-path="url(#suela)">
+    <!-- surcos de la suela (huella de las botas del Apolo) -->
+    <g fill="#4a4d58" opacity="0.95">
+      <rect x="20" y="70" width="280" height="22" rx="6"/><rect x="20" y="112" width="280" height="22" rx="6"/>
+      <rect x="20" y="154" width="280" height="22" rx="6"/><rect x="20" y="196" width="280" height="22" rx="6"/>
+      <rect x="20" y="238" width="280" height="22" rx="6"/><rect x="20" y="280" width="280" height="22" rx="6"/>
+      <rect x="20" y="380" width="280" height="22" rx="6"/><rect x="20" y="422" width="280" height="22" rx="6"/>
+      <rect x="20" y="464" width="280" height="22" rx="6"/><rect x="20" y="506" width="280" height="22" rx="6"/>
+      <rect x="20" y="548" width="280" height="22" rx="6"/>
+    </g>
+    <g fill="#9a9da8" opacity="0.7">
+      <rect x="20" y="92" width="280" height="6" rx="3"/><rect x="20" y="134" width="280" height="6" rx="3"/>
+      <rect x="20" y="176" width="280" height="6" rx="3"/><rect x="20" y="218" width="280" height="6" rx="3"/>
+      <rect x="20" y="260" width="280" height="6" rx="3"/><rect x="20" y="302" width="280" height="6" rx="3"/>
+      <rect x="20" y="402" width="280" height="6" rx="3"/><rect x="20" y="444" width="280" height="6" rx="3"/>
+      <rect x="20" y="486" width="280" height="6" rx="3"/><rect x="20" y="528" width="280" height="6" rx="3"/>
+      <rect x="20" y="570" width="280" height="6" rx="3"/>
+    </g>
+    <!-- sombra interior arriba y luz en el borde de abajo: está hundida -->
+    <use href="#p" fill="none" stroke="url(#borde)" stroke-width="34"/>
+  </g>
+  <use href="#p" fill="none" stroke="#3a3c46" stroke-width="3" opacity="0.6"/>
+</svg>

@@ -843,16 +843,93 @@ class Persona(Elemento):
 
 
 # ====================================================================== imagen
+_SVG = {}
+
+
+def _svg(ruta, ancho, sombra=None):
+    """Rasteriza un SVG a `ancho` px con rsvg-convert (librsvg). Cacheado por ruta y ancho."""
+    import io
+    import subprocess
+    clave = (ruta, ancho, str(sombra))
+    if clave not in _SVG:
+        png = subprocess.check_output(["rsvg-convert", "-w", str(ancho), ruta])
+        img = Image.open(io.BytesIO(png)).convert("RGBA")
+        if sombra:
+            img = sombra_suave(img, tuple(sombra.get("desplaz", (0, 20))), sombra.get("radio", 18),
+                               sombra.get("op", 0.45))
+        _SVG[clave] = img
+    return _SVG[clave]
+
+
 @tipo("imagen")
 class Imagen(Elemento):
     """PNG externo (por ejemplo un sprite dibujado aparte). archivo (relativo al JSON), ancho."""
 
     def sprite_estatico(self):
         import os
-        img = Image.open(os.path.join(self.base_dir, self.s["archivo"])).convert("RGBA")
+        ruta = os.path.join(self.base_dir, self.s["archivo"])
+        if ruta.lower().endswith(".svg"):
+            return _svg(ruta, int(self.s.get("ancho", 600)), self.s.get("sombra"))
+        img = Image.open(ruta).convert("RGBA")
         if "ancho" in self.s:
             k = self.s["ancho"] / img.width
             img = img.resize((int(img.width * k), int(img.height * k)), Image.LANCZOS)
+        return img
+
+
+# ====================================================================== rótulo
+@tipo("rotulo")
+class Rotulo(Elemento):
+    """Rótulo de dato integrado en la escena (DECISIONS 2026-11-15): cifra grande + unidad pequeña.
+    texto, unidad, tam (120), color, color_unidad, capsula (color de fondo o null), borde,
+    contar: [desde, hasta, segundos] → la cifra corre desde `desde` hasta `hasta` (separador de miles «.»).
+    Animable: x, y, escala, op, rot."""
+    dinamico = True
+
+    def _fuentes(self):
+        import os
+        from PIL import ImageFont
+        if not hasattr(self, "_fb"):
+            aqui = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fuentes")
+            tam = self.s.get("tam", 120)
+            self._fb = ImageFont.truetype(os.path.join(aqui, "Poppins-Bold.ttf"), tam)
+            self._fu = ImageFont.truetype(os.path.join(aqui, "Poppins-Bold.ttf"), max(20, int(tam * 0.36)))
+        return self._fb, self._fu
+
+    def _texto(self, t):
+        c = self.s.get("contar")
+        if not c:
+            return str(self.s.get("texto", ""))
+        a, b, dur = c
+        u = min(max(t - self.s.get("contar_desde", 0), 0) / max(dur, 1e-3), 1)
+        u = 1 - (1 - u) ** 3
+        v = int(round(a + (b - a) * u))
+        return f"{v:,}".replace(",", ".")
+
+    def sprite(self, t, st):
+        txt = self._texto(t)
+        clave = txt
+        if clave == self._cache_key:
+            return self._cache
+        fb, fu = self._fuentes()
+        uni = self.s.get("unidad", "")
+        wt = fb.getlength(txt)
+        wu = fu.getlength(uni) + (14 if uni else 0)
+        asc, desc = fb.getmetrics()
+        pad = int(self.s.get("tam", 120) * 0.28)
+        w, h = int(wt + wu + 2 * pad), int(asc + desc * 0.4 + pad * 1.2)
+        img = Image.new("RGBA", (w + 60, h + 60), (0, 0, 0, 0))
+        d = ImageDraw.Draw(img)
+        if self.s.get("capsula", "#0d1330d8"):
+            d.rounded_rectangle((30, 30, 30 + w, 30 + h), radius=int(h * 0.28), fill=rgb(self.s.get("capsula", "#0d1330d8")),
+                                outline=rgb(self.s.get("borde", "#ffffff40")), width=3)
+        x0, y0 = 30 + pad, 30 + pad * 0.45
+        d.text((x0, y0), txt, font=fb, fill=rgb(self.s.get("color", "#ffd34d")))
+        if uni:
+            ua, _ = fu.getmetrics()
+            d.text((x0 + wt + 14, y0 + asc - ua - 2), uni, font=fu, fill=rgb(self.s.get("color_unidad", "#ffffff")))
+        img = sombra_suave(img, (0, 12), 16, 0.5)
+        self._cache, self._cache_key = img, clave
         return img
 
 

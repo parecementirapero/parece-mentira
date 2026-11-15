@@ -216,7 +216,7 @@ ep = {
     "id": "prueba-005-huellas-luna", "version": 1,
     "audio": "005-locucion.mp3",
     "subtitulos": {"srt": "005-huellas-v1.srt"},
-    "estilo_subtitulos": {"y": 1560, "tam": 66},
+    "estilo_subtitulos": {"modo": "clasico", "y": 1560, "tam": 66},
     "escenas": [e1, e2, e3, e4, e5, e6],
 }
 json.dump(ep, open("episodio.json", "w"), ensure_ascii=False, indent=1)

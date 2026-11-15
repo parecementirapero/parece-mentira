@@ -23,3 +23,4 @@ __pycache__/
 # Salidas del motor
 out/
 *_hoja.jpg
+motor/ejemplos/v2-huellas-luna/episodio.json
