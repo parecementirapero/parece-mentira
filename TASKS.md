@@ -4,6 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Lote 2026-11-15-tarde — Agente 20:00 (Jorge) — 2026-11-15 16:55 — arrancando
 - [ ] Nico: carpeta local `~/Documents/Parece Mentira` (lotes/, renders/, claves.txt) en su Mac — Nico — 2026-11-15 16:45
 - [ ] Nico: clave API de ElevenLabs «Parece Mentira - Nico» (solo texto a voz + usuario) en `claves.txt` y audio de prueba — Nico — 2026-11-15 16:45
 - [ ] Nico: iniciar sesión en ElevenLabs, YouTube Studio, Instagram y TikTok en el navegador integrado de su Mac — Nico — 2026-11-15 16:45
