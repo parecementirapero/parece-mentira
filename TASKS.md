@@ -7,7 +7,8 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Lote 2026-11-15-tarde — Agente 20:00 (Jorge) — 2026-11-15 16:55 — arrancando
 
 ## Pendiente
-- [ ] Confirmar (Nico/Jorge) los cambios de estilo de `motor/OBJETIVO.md` que tocan `DECISIONS.md`: subtítulo karaoke arriba con palabra clave resaltada, duración 45–60 s, música de fondo
+- [ ] Elegir fuente de música de fondo con licencia comercial (ver `DECISIONS.md`)
+- [ ] Aplicar `motor/OBJETIVO.md` al motor (subtítulo karaoke arriba, gancho, cámara, rótulos de dato, textura, final en bucle, música)
 - [ ] Aplicar al motor las mejoras de la revisión del 005 (ver `HANDOFF.md` 2026-11-15 17:05): subtítulo con zona reservada, huella de bota reconocible, módulo lunar reconocible, colisiones Tierra/Sol/barra, final con más acción
 - [ ] Desactivar la tarea antigua de Codex de las 08:00 para que no produzca lotes en paralelo
 - [ ] Decidir plan de ElevenLabs: Starter (30k créditos/mes) se queda corto para 6 vídeos/día (~90k caracteres/mes); Creator 22 $/mes da 121k
@@ -16,6 +17,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Confirmados por Nico los cambios de estilo de `motor/OBJETIVO.md` (subtítulo karaoke arriba, 45–60 s, música) → `DECISIONS.md` — Nico — 2026-11-15
 - [x] Análisis de los 13 vídeos objetivo → `motor/OBJETIVO.md` (hojas en `~/Documents/Parece Mentira/referencias-objetivo/`) — Nico — 2026-11-15
 - [x] Revisión de la prueba del motor (005 Huellas en la Luna): pasa formato y estilo base; lista de mejoras en `HANDOFF.md` — Nico — 2026-11-15
 - [x] Mac de Nico: carpeta `/Users/nico/Documents/Parece Mentira` (claves.txt, lotes/, renders/); clave API «Parece Mentira - Nico» (solo texto a voz + usuario, sin caducidad) pegada por Nico en `claves.txt`; audio de prueba OK — Nico — 2026-11-15

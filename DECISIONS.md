@@ -19,7 +19,10 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 
 ## Estilo de los vídeos
 - Formato vertical 9:16, a pantalla completa (la ilustración ocupa todo el reel, sin panel/«cuadrito» en medio). — 2026-11-14 — Nico
-- Sin título arriba, sin rótulos blancos con borde azul; solo subtítulo blanco abajo. — 2026-11-14 — Nico
+- ~~Sin título arriba, sin rótulos blancos con borde azul; solo subtítulo blanco abajo. — 2026-11-14 — Nico~~
+- Sin título fijo ni rótulos blancos con borde azul. **Subtítulo arriba (≈18 % de alto), tipo karaoke**: palabras dichas en gris translúcido, la actual en blanco negrita, palabras clave dentro de una cápsula oscura. Se permiten rótulos de dato integrados en la escena (cifra + unidad, barras con etiqueta). — 2026-11-15 — Nico — motivo: así lo hacen los 13 vídeos objetivo (`motor/OBJETIVO.md`)
+- Duración objetivo **45–60 s** (≈130–170 palabras de locución). — 2026-11-15 — Nico — motivo: mediana de los vídeos objetivo ≈57 s
+- **Música de fondo** baja bajo la voz, mezcla final ≈ −19 LUFS. Solo música con licencia que permita uso comercial en YouTube, Instagram y TikTok; fuente por decidir. — 2026-11-15 — Nico — motivo: todos los objetivos llevan base continua
 - Nova (supernova de colores) sigue siendo la mascota del canal, pero no aparece dentro de los vídeos. — 2026-11-14 — Nico
 - Más movimiento: que pase algo constantemente en pantalla, ilustración 2.5D en capas, luces y sombras, acciones pequeñas que expliquen, cámara estable. Flechas y giros bien hechos. — 2026-11-14 — Nico
 - Títulos sin «| elevenlabs.io». — 2026-11-15 — Jorge

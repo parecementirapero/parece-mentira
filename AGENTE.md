@@ -42,7 +42,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 `lotes/<lote>/guiones.md`, por vídeo:
 - **Gancho** en la primera frase (el primer plano tiene que entenderse sin sonido).
-- **Locución**: 110–140 palabras (≈35–50 s), español de España, tono cercano, **cifras escritas en letra**.
+- **Locución**: 130–170 palabras (≈45–60 s; ver `DECISIONS.md`), español de España, tono cercano, **cifras escritas en letra**.
 - **Planos**: qué se ve en cada frase (acciones pequeñas que explican el dato).
 - **Fuentes** con enlace (van a la descripción).
 - Título (sin «| elevenlabs.io»), descripción y hashtags por red → `lotes/<lote>/metadatos.json`.
