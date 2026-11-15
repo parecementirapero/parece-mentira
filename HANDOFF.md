@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 17:10 — Nico — rama `main` — ordenador de Nico
+**Hecho**: Nico confirma los cambios de `motor/OBJETIVO.md` → `DECISIONS.md` (subtítulo karaoke arriba con palabra clave en cápsula, rótulos de dato permitidos, 45–60 s, música de fondo con licencia) y `AGENTE.md` (130–170 palabras). Antigua regla del subtítulo abajo tachada.
+**Ojo créditos**: 6 vídeos/día × ~900 caracteres ≈ 160k/mes → no cabe en Creator (121k); ver tarea «Decidir plan de ElevenLabs».
+**Siguiente paso**: aplicar `OBJETIVO.md` al motor; elegir fuente de música; Jorge debe saber que el estilo cambia antes del lote de las 19:52.
+
 ## 2026-11-15 17:15 — Nico — rama `main` — ordenador de Nico
 **Hecho**: análisis de 13 vídeos objetivo (descargas de TikTok que pasó Nico) → `motor/OBJETIVO.md`: ficha técnica medida (duración, cortes, movimiento, LUFS), rasgos de estilo comunes y lista priorizada de cambios para el motor. Hojas de fotogramas en `~/Documents/Parece Mentira/referencias-objetivo/` (no en git).
 **Pruebas**: `ffprobe`, detección de cortes (`scene>0.25`), `ebur128`, `silencedetect`, diferencia entre fotogramas; revisión visual de las 13 hojas y del gancho (0–3 s) de 4 vídeos.
