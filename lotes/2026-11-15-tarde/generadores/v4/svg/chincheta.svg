@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 200" width="120" height="200"><defs>
+<filter id="grano" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 0.10"/></feComponentTransfer>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="papel" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="9"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0 0.12  0 0 0 0.55 0"/>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="10" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+</filter>
+<radialGradient id="cb" cx="0.35" cy="0.35" r="0.5"><stop offset="0" stop-color="#ff8a7a" stop-opacity="1"/><stop offset="0.6" stop-color="#d62f22" stop-opacity="1"/><stop offset="1" stop-color="#8a1a12" stop-opacity="1"/></radialGradient></defs><ellipse cx="60" cy="188" rx="22" ry="8" fill="#000" opacity="0.35" filter="url(#blur8)"/><line x1="60" y1="90" x2="60" y2="186" stroke="#7b7f88" stroke-width="7" stroke-linecap="round"/><circle cx="60" cy="62" r="52" fill="url(#cb)"/><circle cx="44" cy="44" r="14" fill="#fff" opacity="0.7"/></svg>

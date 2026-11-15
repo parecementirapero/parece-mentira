@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-15 18:45 — Jorge — rama `main` — ordenador de Jorge
+**Hecho**: Jorge ve la v3 «estática y de dibujo infantil». Prueba v4 del vídeo 01 con ilustración SVG detallada hecha a mano por código (`generadores/v4/`), 23 planos y movimiento continuo; sin coste.
+**Pruebas**: hojas de fotogramas (corregidos humo en bolas y balanza invertida/descolgada); ffprobe y ebur128.
+**Siguiente paso**: si gusta, mismo método para 02 y 03 y convertir `ilus.py` en una biblioteca de piezas reutilizables para los agentes.
+
 ## 2026-11-15 18:20 — Jorge — rama `main` — ordenador de Jorge
 **Hecho**: análisis de 9 vídeos de referencia (20 archivos de WhatsApp) → `motor/REFERENCIAS_2.md`, regla nueva en `DECISIONS.md` y aviso en `AGENTE.md`. Motor v2.1: `camara.foco` y elementos `"hud": true` (README). `generadores/a_v3.py` y lote 2026-11-15-tarde v3 con el audio v2 (sin gastar créditos).
 **Pruebas**: hojas de fotogramas cada 1,5 s de los 3 vídeos; ffprobe (1080×1920, h264/AAC, 52,3/46,7/46,3 s); ebur128 −19,3…−19,6 LUFS.

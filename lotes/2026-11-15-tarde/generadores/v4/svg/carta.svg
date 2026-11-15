@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1020" width="760" height="1020"><defs>
+<filter id="grano" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 0.10"/></feComponentTransfer>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="papel" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="9"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0 0.12  0 0 0 0.55 0"/>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="10" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+</filter>
+<linearGradient id="cp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ebcd"/><stop offset="1" stop-color="#dcc690"/></linearGradient><radialGradient id="lacre" cx="0.4" cy="0.4" r="0.5"><stop offset="0" stop-color="#e0473a" stop-opacity="1"/><stop offset="1" stop-color="#7a1610" stop-opacity="1"/></radialGradient></defs><g filter="url(#sombra)"><path d="M40 40 L700 20 L720 960 L30 980 Z" fill="url(#cp)"/></g><path d="M40 40 L700 20 L720 960 L30 980 Z" filter="url(#papel)"/><text x="380" y="190" font-family="DejaVu Serif" font-weight="bold" font-size="72" fill="#3a2410" text-anchor="middle" letter-spacing="6">ULTIMÁTUM</text><line x1="120" y1="230" x2="640" y2="226" stroke="#3a2410" stroke-width="3"/><path d="M120 300 q106.5245324633202 -10 213.0490649266404 0 t213.0490649266404 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 352 q102.57100243787463 -10 205.14200487574925 0 t205.14200487574925 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 404 q126.28945767568226 -10 252.57891535136451 0 t252.57891535136451 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 456 q115.62281628595046 -10 231.24563257190093 0 t231.24563257190093 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 508 q96.5279600202911 -10 193.0559200405822 0 t193.0559200405822 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 560 q100.94047329329919 -10 201.88094658659838 0 t201.88094658659838 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 612 q107.63447922061084 -10 215.26895844122168 0 t215.26895844122168 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 664 q111.37159397153498 -10 222.74318794306996 0 t222.74318794306996 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 716 q115.1964857160612 -10 230.3929714321224 0 t230.3929714321224 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><path d="M120 768 q108.57584553069944 -10 217.15169106139888 0 t217.15169106139888 0" stroke="#4a3018" stroke-width="5" fill="none" opacity="0.75"/><circle cx="560" cy="860" r="70" fill="url(#lacre)"/><circle cx="560" cy="860" r="44" fill="none" stroke="#5a0f0a" stroke-width="5"/><text x="560" y="878" font-family="DejaVu Serif" font-weight="bold" font-size="48" fill="#5a0f0a" text-anchor="middle">GB</text></svg>

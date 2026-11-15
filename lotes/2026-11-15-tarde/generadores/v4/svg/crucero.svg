@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420"><defs>
+<filter id="grano" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 0.10"/></feComponentTransfer>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="papel" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="9"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0 0.12  0 0 0 0.55 0"/>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="10" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+</filter>
+<linearGradient id="casco" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a515e"/><stop offset="1" stop-color="#1c2027"/></linearGradient><linearGradient id="sup" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f1e6"/><stop offset="1" stop-color="#b9b5a6"/></linearGradient><linearGradient id="chim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0b45a"/><stop offset="1" stop-color="#8a6224"/></linearGradient></defs><ellipse cx="450" cy="330" rx="430" ry="26" fill="#000" opacity="0.3" filter="url(#blur8)"/><path d="M40 250 L860 250 L820 330 L110 330 Z" fill="url(#casco)"/><path d="M110 318 L820 318 L812 330 L116 330 Z" fill="#8e2a22"/><path d="M40 250 L860 250 L856 258 L44 258 Z" fill="#c9c4b4"/><circle cx="150" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="198" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="246" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="294" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="342" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="390" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="438" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="486" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="534" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="582" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="630" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="678" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="726" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><circle cx="774" cy="285" r="6" fill="#ffd77a" opacity="0.8"/><rect x="240" y="190" width="420" height="62" fill="url(#sup)"/><rect x="320" y="150" width="200" height="44" fill="url(#sup)"/><rect x="360" y="40" width="54" height="130" rx="6" fill="url(#chim)"/><rect x="360" y="40" width="54" height="14" fill="#2a2a2a"/><rect x="470" y="40" width="54" height="130" rx="6" fill="url(#chim)"/><rect x="470" y="40" width="54" height="14" fill="#2a2a2a"/><line x1="250" y1="190" x2="250" y2="10" stroke="#2c2f36" stroke-width="8"/><line x1="640" y1="190" x2="640" y2="30" stroke="#2c2f36" stroke-width="8"/><line x1="250" y1="20" x2="640" y2="40" stroke="#2c2f36" stroke-width="2"/><rect x="70" y="232" width="110" height="20" rx="8" fill="#3a3f48"/><rect x="-30" y="236" width="120" height="12" rx="6" fill="#2a2e35"/><rect x="700" y="232" width="110" height="20" rx="8" fill="#3a3f48"/><g transform="translate(830 180)"><rect width="60" height="38" fill="#c8102e"/><rect width="26" height="18" fill="#012169"/><path d="M0 0 L26 18 M26 0 L0 18" stroke="#fff" stroke-width="3"/></g><line x1="830" y1="180" x2="830" y2="250" stroke="#2c2f36" stroke-width="4"/></svg>

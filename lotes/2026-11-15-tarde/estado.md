@@ -39,3 +39,7 @@ Voz v2: ~2.500 caracteres.
 ## Versión 3 (referencias 2) — Jorge — 2026-11-15 18:20
 Mismo audio que la v2 (0 créditos de ElevenLabs). `generadores/a_v3.py`: planos de ~2,7 s (19/18/17 planos) general → primer plano → detalle con `camara.foco`, rótulos HUD, término clave en amarillo, etiqueta roja de contexto, viñeta más marcada en escenas oscuras.
 Archivos: `lotes/2026-11-15-tarde/v3/` del Mac de Jorge (52,3 / 46,7 / 46,3 s; −19,4 / −19,6 / −19,3 LUFS). Drive: pendiente (Google Drive para ordenador).
+
+## Versión 4 del vídeo 01 (ilustración nueva) — Jorge — 2026-11-15 18:45
+Prueba de dibujo «de verdad» sin pagar nada: `generadores/v4/ilus.py` genera ilustraciones SVG detalladas (estadio con focos y público, mapa antiguo, palacio al atardecer/mañana/en ruinas, crucero, yate, reloj de bolsillo, balanza, carta con lacre, siluetas a contraluz) y `generadores/v4/gen_01.py` monta 23 planos (uno por frase) con movimiento continuo (humo, olas, cámara, fogonazos). Mismo audio v2.
+Archivo: `lotes/2026-11-15-tarde/v4/` del Mac de Jorge (52,3 s, −19,4 LUFS, 50 MB). Pendiente de visto bueno antes de hacer 02 y 03 igual.
