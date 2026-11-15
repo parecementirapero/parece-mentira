@@ -164,11 +164,11 @@ def balanza(ang_t, t_inc):
             IMG("balanza_viga", ancho=800, x=540, y=930, z=0.52,
                 keys=[{"t": 0, "rot": ang_t[0]}, {"t": t_inc, "rot": ang_t[0]}, {"t": t_inc + 1.0, "rot": ang_t[1], "ease": "rebote"}])]
 luz = {"tipo": "brillo", "x": 540, "y": 700, "radio": 700, "color": "#ffe9a8", "intensidad": 0.25, "z": 0.05}
-plano(35.99, 38.37, ["#0d1324", "#1f2b48"], [luz, *balanza((0, 12), 0.9), polvo("#c8d4ff", 30)], cam(1.0, 1.06, (540, 1000), (540, 980)),
+plano(35.99, 38.37, ["#0d1324", "#1f2b48"], [luz, *balanza((0, 12), 0.9), polvo("#c8d4ff", 30)], cam(1.0, 1.04, (540, 1050), (540, 1040)),
       entrada="desenfoque", dur=0.4, vineta=0.65)
-plano(38.37, 40.95, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.7, 1.85, (300, 1300), (290, 1290)), vineta=0.65)
+plano(38.37, 40.95, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.06, 1.12, (480, 1080), (470, 1080)), vineta=0.65)
 S[-1]["elementos"].append(ROT(0.4, 2.3, "≈500", unidad="BAJAS", tam=120, x=540, y=1500))
-plano(40.95, 43.63, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.9, 2.1, (800, 1180), (810, 1170)), vineta=0.65)
+plano(40.95, 43.63, ["#0d1324", "#1f2b48"], [luz, *balanza((12, 12), 0)], cam(1.04, 1.1, (540, 1080), (545, 1080)), vineta=0.65)
 S[-1]["elementos"].append(ROT(0.6, 2.4, "1", unidad="HERIDO BRITÁNICO", tam=120, x=540, y=1500))
 
 # ---------------------------------------------------------------- 10. sultán nuevo, elegido por Londres
