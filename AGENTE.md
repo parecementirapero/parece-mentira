@@ -92,11 +92,19 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 - Revisar cifras y nombres contra el guion y las fuentes.
 - Si un vídeo no pasa, se corrige y se sube a `_v2`; nunca se entrega uno roto.
 
+## 6b. Portadas (una por vídeo, elegida entre 4)
+
+1. Texto de portada en `metadatos.json` → `"portada": {"texto": "NO SON SOLO CABEZAS", "clave": "cabezas"}`: **2–5 palabras**, la promesa del vídeo (no el título entero), coherente con el gancho; `clave` = la palabra que va en amarillo.
+2. `python3 -m motor.portadas <carpeta del vídeo>/episodio.json --texto "…" --clave "…" --salida <carpeta local del lote>/NN-portadas` (o `--mp4 NN-slug_v1.mp4`). Saca 4 candidatas de fotogramas distintos sin rótulos del vídeo, con el texto en 4 sitios (arriba, centro, abajo, dato), y una `hoja-portadas.jpg` con la vista recortada 3:4 de las cuadrículas de perfil.
+3. **Mira la hoja y elige tú** (la puntuación solo ordena; falla con cosas como «hay una cara»): 1) sujeto grande y reconocible a tamaño de cuadrícula, mejor si enseña la sorpresa que promete el texto; 2) el texto no tapa el sujeto y se lee en la vista 3:4; 3) contraste y color fuertes; 4) coherente con el primer segundo (sin engañar). Regístralo: `python3 -m motor.portadas --elegir <carpeta> N --motivo "…"` → `portada.jpg`.
+4. En `metadatos.json` → `"etiquetas"` añade `"portada": "<diseño elegido>"` (arriba, centro, abajo, dato) para medir qué diseño funciona.
+
 ## 7. Entrega
 
 1. **Vídeos en el chat (sin Drive)**: copia los 3 MP4 de la carpeta local al contenedor con `device_stage_files` y **envíalos con `SendUserFile`** (uno por vídeo, con un pie corto: «1/3 · título · duración»). Así se ven y se reproducen dentro del chat de Claude, desde el Mac o el móvil. Si un MP4 no se puede enviar, dilo en el chat y en el correo (el archivo sigue en la carpeta local).
 2. **Correo** (conector de Gmail) a `parecementirapero.media@gmail.com` — **una sola notificación por turno**:
    - Asunto: `[Parece Mentira] Lote <lote> — 3 vídeos para revisar`
+   - Antes del correo, en el chat: envía también la `hoja-portadas.jpg` de cada vídeo con `SendUserFile` y una línea con la elegida y el motivo (se pueden cambiar en la respuesta: «portada 2 del vídeo 1»). El «ok» aprueba también las portadas.
    - Cuerpo: **enlace a este chat** (la sesión de la ejecución, donde están los vídeos para verlos) y la instrucción: _«Abre el chat, mira los vídeos y escribe "ok" (o "ok 1 y 3" para solo esos). Para cambios, escríbelos ahí.»_; por vídeo: título, duración, versión y SHA-256 corto, fuentes, comentario fijado y, si lo hay, de qué vídeo es parte 2; vídeos «pendiente de voz» si los hay. Sin enlaces a Drive.
 3. **Registro** en el repo: `lotes/<lote>/estado.md` (estado «en revisión», enlace al chat, id del correo), `TASKS.md` (el lote pasa a «Hecho» con nota «en revisión»), `PROJECT_STATE.md`, entrada en `HANDOFF.md`. Commit + push y comprobar que entró.
 4. Responde en el chat con un resumen corto (los vídeos enviados arriba y qué falta) y **espera** el «ok».
@@ -108,17 +116,17 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
 1. Antes de cada subida, comprueba en la red que ese vídeo no está ya publicado (evitar duplicados).
 2. **Subidas separadas solo en YouTube** (ver `DECISIONS.md`): el primero se publica ya y cada uno de los siguientes **1 hora después** del anterior. En TikTok e Instagram se publican todos seguidos al dar el «ok».
 3. **YouTube, automático por la API** (`publicar/README.md`), desde `device_bash` en la carpeta local del turno:
-   `python3 publicar/subir_youtube.py --claves claves.txt --metadatos <repo>/lotes/<lote>/metadatos.json --clave 01 --video lotes/<lote>/<archivo>.mp4` y, para los siguientes, `--publicar-en <hora con zona, +1 h, +2 h>`. Copia antes `publicar/subir_youtube.py` del repo a la carpeta local si falta o ha cambiado. Si el script dice que faltan claves o que la red no llega a Google, sube a YouTube desde el navegador como antes y avisa en el chat de qué falta.
+   `python3 publicar/subir_youtube.py --claves claves.txt --metadatos <repo>/lotes/<lote>/metadatos.json --clave 01 --video lotes/<lote>/<archivo>.mp4` y, para los siguientes, `--publicar-en <hora con zona, +1 h, +2 h>`. Añade siempre `--portada <carpeta local del lote>/NN-portadas/portada.jpg`: el script intenta ponerla por la API y dice `"portada": "puesta"` o `"no: …"` (en Shorts YouTube solo deja miniaturas propias a algunos canales). Si dice que no, en Studio → el Short → Miniatura, elige el fotograma del segundo `eleccion.t` de `portadas.json` (o sube `portada.jpg` si aparece «Subir miniatura»). Copia antes `publicar/subir_youtube.py` del repo a la carpeta local si falta o ha cambiado. Si el script dice que faltan claves o que la red no llega a Google, sube a YouTube desde el navegador como antes y avisa en el chat de qué falta.
 4. **TikTok e Instagram, desde el navegador integrado** del ordenador del turno, con las sesiones ya iniciadas. El selector de archivos no lo puede manejar Claude: pide en el chat que la persona elija el archivo (di cuál) y haz tú todo lo demás.
-   - TikTok: todos seguidos, sin programar.
-   - Instagram @parecementiramedia (Reel, formato original 9:16): todos seguidos.
+   - TikTok: todos seguidos, sin programar. **Portada**: «Editar portada» → si hay opción de subir imagen, pide a la persona que elija `NN-portadas/portada.jpg`; si no, elige el fotograma del segundo `eleccion.t` y añade el texto de `portada.texto` con la herramienta de texto de la portada.
+   - Instagram @parecementiramedia (Reel, formato original 9:16): todos seguidos. **Portada**: en «Portada» → «Seleccionar del ordenador», pide a la persona que elija `NN-portadas/portada.jpg` (es el mismo tipo de paso que elegir el vídeo).
    Si el navegador integrado no deja elegir el archivo, usa Claude in Chrome si está disponible; si no, deja el vídeo listo, di exactamente qué paso falta y no insistas.
 5. Si una red falla, solo se reintenta esa red tras comprobar que no se publicó.
 6. Registra en `lotes/<lote>/estado.md` la URL de cada publicación (o el motivo del bloqueo), actualiza `HANDOFF.md` y push.
 7. **Comentario fijado y vídeo relacionado** (sin pedir nada más: lo cubre el «ok»):
    - YouTube: cuando cada vídeo ya sea público, abre `https://www.youtube.com/shorts/<id>` en el navegador integrado, escribe el `comentario` de `metadatos.json` y fíjalo (⋮ del comentario → Fijar). Para los programados (+1 h, +2 h), programa un aviso en este mismo chat con `send_later` a esa hora y hazlo entonces. Si el vídeo es una parte 2, en Studio → Detalles → «Vídeo relacionado» elige la parte 1.
    - TikTok: en la página del vídeo, mismo comentario y fíjalo (⋯ → Fijar). Instagram: escribe el comentario (la web no siempre deja fijar; si no deja, se queda sin fijar).
-8. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6.
+8. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`, `portada`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6.
 
 ## 9. Límites
 

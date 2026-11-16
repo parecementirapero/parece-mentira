@@ -22,7 +22,8 @@ import sys
 AQUI = os.path.dirname(os.path.abspath(__file__))
 REDES = {"youtube": "YouTube", "tiktok": "TikTok", "instagram": "Instagram"}
 ETIQUETAS = {"tema": "tema", "gancho": "tipo de gancho", "estructura": "estructura",
-             "turno": "turno de publicación", "duracionTramo": "duración", "voz": "voz"}
+             "turno": "turno de publicación", "duracionTramo": "duración", "voz": "voz",
+             "portada": "diseño de portada"}
 FUENTES_NOMBRE = {"Feed de Shorts": "el feed de Shorts"}
 
 

@@ -52,17 +52,27 @@ def salir(msg, **extra):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--claves", required=True)
-    ap.add_argument("--metadatos", required=True)
-    ap.add_argument("--clave", required=True, help="número del vídeo en metadatos.json, p. ej. 01")
-    ap.add_argument("--video", required=True)
+    ap.add_argument("--metadatos")
+    ap.add_argument("--clave", help="número del vídeo en metadatos.json, p. ej. 01")
+    ap.add_argument("--video")
     ap.add_argument("--publicar-en", dest="publicar_en")
     ap.add_argument("--prueba", action="store_true")
+    ap.add_argument("--portada", help="JPEG de la portada elegida (motor.portadas → portada.jpg). Si YouTube no deja ponerla, sigue sin ella")
+    ap.add_argument("--solo-portada", dest="solo_portada", help="id de un vídeo ya subido: solo pone la portada")
     a = ap.parse_args()
 
+    if a.solo_portada and not a.portada:
+        salir("--solo-portada necesita --portada")
     k = claves(a.claves)
     falta = [n for n in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_UPLOAD_REFRESH_TOKEN") if not k.get(n)]
     if falta:
         salir("Faltan en claves.txt: " + ", ".join(falta) + " (ver publicar/README.md)")
+    if a.solo_portada:
+        auth = _token(k)
+        print(json.dumps({"ok": True, "id": a.solo_portada, "portada": poner_portada(auth, a.solo_portada, a.portada)}, ensure_ascii=False))
+        return
+    if not (a.metadatos and a.clave and a.video):
+        salir("Faltan --metadatos, --clave y --video")
     m = json.load(open(a.metadatos, encoding="utf-8")).get(a.clave)
     if not m or "youtube" not in m:
         salir(f"metadatos.json no tiene el vídeo {a.clave} con su bloque «youtube»")
@@ -72,12 +82,7 @@ def main():
     titulo = yt["titulo"][:100]
 
     # 1. token de acceso
-    st, _, cuerpo = peticion("https://oauth2.googleapis.com/token", urllib.parse.urlencode({
-        "client_id": k["YT_CLIENT_ID"], "client_secret": k["YT_CLIENT_SECRET"],
-        "refresh_token": k["YT_UPLOAD_REFRESH_TOKEN"], "grant_type": "refresh_token"}).encode())
-    if st != 200:
-        salir("Google rechaza el token de subida (repite la autorización con --subir)", detalle=cuerpo.decode()[:300])
-    auth = {"Authorization": "Bearer " + json.loads(cuerpo)["access_token"]}
+    auth = _token(k)
 
     # 2. no duplicar: busca el mismo título entre las últimas subidas del canal
     st, _, cuerpo = peticion(f"{API}/channels?part=contentDetails&mine=true", cabeceras=auth)
@@ -111,8 +116,41 @@ def main():
     if st not in (200, 201):
         salir("La subida falló", estado=st, detalle=cuerpo.decode()[:400])
     v = json.loads(cuerpo)
+    portada = poner_portada(auth, v["id"], a.portada) if a.portada else None
     print(json.dumps({"ok": True, "id": v["id"], "url": f"https://youtube.com/shorts/{v['id']}",
-                      "estado": v.get("status", {}).get("privacyStatus"), "publicaEn": a.publicar_en}, ensure_ascii=False))
+                      "estado": v.get("status", {}).get("privacyStatus"), "publicaEn": a.publicar_en,
+                      "portada": portada}, ensure_ascii=False))
+
+
+def _token(k):
+    st, _, cuerpo = peticion("https://oauth2.googleapis.com/token", urllib.parse.urlencode({
+        "client_id": k["YT_CLIENT_ID"], "client_secret": k["YT_CLIENT_SECRET"],
+        "refresh_token": k["YT_UPLOAD_REFRESH_TOKEN"], "grant_type": "refresh_token"}).encode())
+    if st != 200:
+        salir("Google rechaza el token de subida (repite la autorización con --subir)", detalle=cuerpo.decode()[:300])
+    return {"Authorization": "Bearer " + json.loads(cuerpo)["access_token"]}
+
+
+def poner_portada(auth, vid, ruta, intentos=4, espera=30):
+    """thumbnails.set. En Shorts YouTube solo lo acepta en canales con miniaturas personalizadas
+    (verificados / Programa de Socios) y cuando el vídeo ya está procesado: reintenta y, si no, lo dice."""
+    import time
+    if not os.path.isfile(ruta):
+        return "no: no encuentro " + ruta
+    datos = open(ruta, "rb").read()
+    if len(datos) > 2 * 1024 * 1024:
+        return "no: la portada pesa más de 2 MB"
+    ultimo = ""
+    for i in range(intentos):
+        st, _, cuerpo = peticion(f"https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId={vid}",
+                                 datos, {**auth, "Content-Type": "image/jpeg"}, "POST")
+        if st == 200:
+            return "puesta"
+        ultimo = f"{st} {cuerpo.decode(errors='replace')[:200]}"
+        if st == 403:      # el canal no puede poner miniaturas personalizadas: no tiene sentido reintentar
+            break
+        time.sleep(espera)
+    return "no: " + ultimo
 
 
 if __name__ == "__main__":

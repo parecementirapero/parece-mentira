@@ -23,7 +23,22 @@
     "titulo": "History Hit — The Anglo-Zanzibar War: the shortest war in history",
     "url": "https://www.historyhit.com/the-anglo-zanzibar-war-the-shortest-war-in-history-which-lasted-38-minutes/"
    }
-  ]
+  ],
+  "portada": {
+   "texto": "La guerra duró 38 minutos",
+   "clave": "38 minutos",
+   "eleccion": {
+    "por": "revisión visual",
+    "numero": 1,
+    "diseno": "dato",
+    "t": 18.3,
+    "motivo": "palacio y barcos de guerra a la vez, cifra en cápsula legible en la cuadrícula"
+   },
+   "nota": "hecha a posteriori (2026-11-16); imágenes fuera de git"
+  },
+  "etiquetas": {
+   "portada": "dato"
+  }
  },
  "02": {
   "archivo": "02-luna-se-aleja_v1.mp4",
@@ -49,7 +64,22 @@
     "titulo": "EarthSky — The Moon is slowly receding from Earth",
     "url": "https://earthsky.org/tonight/wayward-moon-receding-from-earth/"
    }
-  ]
+  ],
+  "portada": {
+   "texto": "La Luna se escapa",
+   "clave": "escapa",
+   "eleccion": {
+    "por": "revisión visual",
+    "numero": 4,
+    "diseno": "abajo",
+    "t": 10.8,
+    "motivo": "astronauta en la Luna con la Tierra al fondo: sujeto reconocible y contraste fuerte"
+   },
+   "nota": "hecha a posteriori (2026-11-16); imágenes fuera de git"
+  },
+  "etiquetas": {
+   "portada": "abajo"
+  }
  },
  "03": {
   "archivo": "03-moais-con-cuerpo_v1.mp4",
@@ -75,6 +105,21 @@
     "titulo": "ExplorersWeb — Yes, the Easter Island Statues Have Bodies",
     "url": "https://explorersweb.com/easter-island-statues-bodies/"
    }
-  ]
+  ],
+  "portada": {
+   "texto": "No son solo cabezas",
+   "clave": "cabezas",
+   "eleccion": {
+    "por": "revisión visual",
+    "numero": 2,
+    "diseno": "abajo",
+    "t": 24.3,
+    "motivo": "moái con el cuerpo bajo tierra: enseña la sorpresa que promete el texto"
+   },
+   "nota": "hecha a posteriori (2026-11-16); imágenes fuera de git"
+  },
+  "etiquetas": {
+   "portada": "abajo"
+  }
  }
 }

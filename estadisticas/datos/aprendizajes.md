@@ -8,7 +8,6 @@ Vídeos analizados: 4.
 
 - **[pista]** En YouTube, separa las subidas del mismo lote (al menos 1–2 h entre vídeos) en vez de subir los 3 seguidos. _(motivo: ráfaga 1.270 vs solos 3.481 de mediana; 4 vídeos)_
 - **[pista]** En TikTok, separa las subidas del mismo lote (al menos 1–2 h entre vídeos) en vez de subir los 3 seguidos. _(motivo: ráfaga 408 vs solos 613 de mediana; 4 vídeos)_
-- **[pista]** El primer fotograma y la primera frase deciden si YouTube sigue enseñando el vídeo: apunta a que más del 65 % se quede (imagen llamativa desde el fotograma 0, el dato o la pregunta en la primera frase, sin introducción). Por debajo de ≈60 % se quedaron «La guerra más corta de la his…», «Los moáis de la Isla de Pascu…». _(motivo: correlación 1,0 entre «se quedaron viendo» y vistas; 4 vídeos)_
 - **[pista]** Más de la mitad de la audiencia es de Latinoamérica: evita expresiones muy de España en el gancho y usa referencias que se entiendan en los dos lados (la voz puede seguir siendo de España). _(motivo: Latinoamérica 79 % vs España 19 %; 4 vídeos)_
 - **[pista]** Con 4 vídeos todo son pistas: cambia una sola cosa por lote (tema, gancho o estructura) para poder atribuir el resultado. _(motivo: muestra pequeña; 4 vídeos)_
 
@@ -28,7 +27,6 @@ Vídeos analizados: 4.
 ### Por tema
 
 - **[pista]** Vistas medias en YouTube: Espacio 3.481 (1), Ciencia 1.711 (1), Histórico 1.270 (1). Gana «Espacio».
-- **[pista]** % que se queda en vez de deslizar en YouTube: Espacio 76,5 % (1), Ciencia 65,3 % (1), Histórico 60,5 % (1). Gana «Espacio».
 - **[pista]** Vistas medias en TikTok: Espacio 613 (1), Ciencia 441 (1), Histórico 408 (1), Misterio 382 (1). Gana «Espacio».
 
 ### Por tipo de gancho
@@ -38,17 +36,12 @@ Vídeos analizados: 4.
 ### Por estructura
 
 - **[pista]** Vistas medias en YouTube: comparación 2.596 (2), reconstrucción 1.270 (1). Gana «comparación».
-- **[pista]** % que se queda en vez de deslizar en YouTube: comparación 70,9 % (2), reconstrucción 60,5 % (1). Gana «comparación».
 - **[pista]** Vistas medias en TikTok: comparación 527 (2), reconstrucción 408 (1), misterio por pistas 382 (1). Gana «comparación».
 
 ### Por duración
 
 - **[pista]** Vistas medias en YouTube: 40–50 s 2.596 (2), 50–60 s 1.270 (1). Gana «40–50 s».
 - **[pista]** Vistas medias en TikTok: 40–50 s 479 (3), 50–60 s 408 (1). Gana «40–50 s».
-
-### Primer segundo
-
-- **[pista]** Cuantos más se quedan en vez de deslizar, más enseña YouTube el vídeo: «Esta pisada lleva más de 50 año…» 76,5 % → 3.481 vistas, «La Luna se está alejando de la …» 65,3 % → 1.711 vistas, «La guerra más corta de la histo…» 60,5 % → 1.270 vistas, «Los moáis de la Isla de Pascua …» 55,6 % → 5 vistas.
 
 ### Redes
 

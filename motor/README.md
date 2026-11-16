@@ -64,6 +64,9 @@ Tiempo de render aproximado: 2,5–3 s de cálculo por segundo de vídeo.
 - Opciones: `{"max_palabras": 16, "panel": true, "alfa": 225, "tam": 69, "color_panel": "#070b1e", "alfa_panel": 150}`.
 - Motivo: en los Reels virales del nicho el gancho se lee entero en el primer fotograma (`claude/analisis-reels-virales-2026-11-16.md` en el Proyecto de Claude).
 
+## Portadas (2026-11-16, Nico)
+`python3 -m motor.portadas DIR/episodio.json --texto "NO SON SOLO CABEZAS" --clave cabezas --salida DIR/portadas` (o `--mp4 vídeo.mp4`) → 4 candidatas (fotogramas distintos sin rótulos del vídeo; texto arriba / centro / abajo / dato en cápsula amarilla, siempre dentro del recorte 3:4 de las cuadrículas de perfil), `hoja-portadas.jpg` y `portadas.json` con la puntuación. La puntuación (color, detalle, tamaño del sujeto, texto que no tapa el sujeto, legibilidad a 180 px) **solo ordena**: la elección final se hace mirando la hoja y se registra con `--elegir DIR/portadas N --motivo "…"` → `portada.jpg`. Criterios en `AGENTE.md` §6b. ~20 s por vídeo.
+
 ## Elementos (`tipo`)
 Propiedades comunes animables con `keys` (`[{"t": s, "x": .., "op": .., "ease": "suave|lineal|entrada|salida|rebote"}]`):
 `x, y, escala, ex, ey, rot, op, z` (z = paralaje: 0 fondo quieto, 1 primer plano).
