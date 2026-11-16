@@ -33,7 +33,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 2. Ideas (3 temas)
 
-- Fuente de temas: `lotes/IDEAS.md`. Nunca repetir un tema de «Usados»; las continuaciones valen si aportan información nueva y se entienden solas.
+- Fuente de temas: `lotes/IDEAS.md`. **Si hay una sección «Reservados para el lote <lote>» con el lote de hoy, se usan esos temas** (y se quita la sección al pasarlos a «Usados»). Nunca repetir un tema de «Usados»; las continuaciones valen si aportan información nueva y se entienden solas.
 - Mezcla: historia, ciencia, misterio/curiosidad. Tres estructuras distintas por lote (comparación visible, experimento, reconstrucción con salto temporal, misterio por pistas, metáfora visual).
 - Cada dato central se contrasta con **al menos dos fuentes fiables** (WebSearch/WebFetch). Si no se puede verificar, se cambia de tema.
 - Anota los 3 temas en `IDEAS.md` → «Usados» con el lote, en el mismo commit que los guiones.

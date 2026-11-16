@@ -17,6 +17,7 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 - Dos lotes al día: 08:00 en el ordenador de Nico y 20:00 en el de Jorge (una sola notificación por turno). — 2026-11-15 — Jorge
 - Cada lote: ideas sin repetir temas (se admiten continuaciones con información nueva) → guiones → voz → montaje 9:16 → vídeos en el chat del agente → correo de aviso con el enlace al chat a parecementirapero.media@gmail.com. — 2026-11-15 — Jorge
 - Se publica en YouTube, Instagram y TikTok solo cuando la persona responde «ok» en el chat de ese lote. — 2026-11-15 — Jorge
+- **Prueba de temas cotidianos** (2026-11-16 — Jorge): solo el lote **2026-11-16-tarde** sale con 2 temas de vida cotidiana + 1 histórico conectado con hoy, usando los temas reservados en `lotes/IDEAS.md`. Regla de la prueba: cada idea toca algo que el espectador hace, ve o siente, y se nota en los 2 primeros segundos; lo histórico se cuenta desde el presente. Desde el 2026-11-17 Nico y Jorge deciden si se queda como mezcla fija. Motivo: Jorge cree que los datos del pasado sueltos conectan menos con la gente.
 
 ## Estilo de los vídeos
 - Formato vertical 9:16, a pantalla completa (la ilustración ocupa todo el reel, sin panel/«cuadrito» en medio). — 2026-11-14 — Nico

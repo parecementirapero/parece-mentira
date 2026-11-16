@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 13:00 — Jorge (vía Claude) — rama main
+- Qué: prueba de temas cotidianos para el lote de esta tarde. Jorge propone que las ideas conecten con la vida cotidiana y no solo datos del pasado. Se prueba solo en el lote 2026-11-16-tarde con 2 temas cotidianos + 1 histórico conectado con hoy (nudillos, efecto puerta, móvil vs. Apolo 11), reservados en `lotes/IDEAS.md`. `AGENTE.md` §2: el agente usa los temas reservados para su lote.
+- Pruebas: ninguna (solo texto).
+- Pendiente: Nico y Jorge deciden el 2026-11-17 si se queda (tarea en `TASKS.md`).
+- Siguiente paso: lo hace el agente de las 20:00 sin tocar su tarea programada.
+
 ## 2026-11-16 12:55 — Nico — rama `main` — chat en la nube (sin acceso a los Macs)
 **Hecho**: módulo nuevo `motor/acabado.py` (post-proceso sobre un MP4 ya renderizado, sin coste): halo/bloom en las luces, LUT «documental» generado por código (negros levantados, sombras frías, luces cálidas, saturación 90 %) al 75 %, textura de papel en luz suave, capa de bokeh y polvo en primer plano, parpadeo de exposición leve, aberración cromática de 2 px y grano animado solo en luminancia (`-tune grain`, tope 8 Mb/s). Parámetro `--fuerza` (1.0 normal, 1.7 intenso). **No está integrado en `render.py`** todavía.
 **Pruebas**: render del 02 v4 (Luna) sin voz ni subtítulos (el audio está en el Mac de Jorge), 46,7 s; acabado normal e intenso; vídeo comparativo lado a lado; fotogramas revisados (1,5/6/11/20/32/42 s). Pesos: 38,6 MB antes → 47 MB después. Tiempo: ~4,5 min de acabado sobre 2 min de render (las partículas en Python son lo lento).
