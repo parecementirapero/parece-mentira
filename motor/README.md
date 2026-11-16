@@ -59,6 +59,11 @@ Tiempo de render aproximado: 2,5–3 s de cálculo por segundo de vídeo.
 - **Rótulo que cuenta**: `"decimales": 1` (coma decimal: 3,8 · 23,5), `"contar_prefijo": "+"` y `"miles": false` (años: 1969).
 - `motor/acabado.py`: post-proceso de prueba (grano, LUT, papel, bokeh). **No se usa** (DECISIONS 2026-11-16).
 
+## Novedades v2.3 (2026-11-16, Nico — gancho en el fotograma 0)
+- `"estilo_subtitulos": {"gancho": true}`: la **primera frase** (hasta `.` `?` `!` `…`, máx. 16 palabras) se ve **entera desde el fotograma 0**, un 15 % más grande y sobre un panel oscuro translúcido; dentro sigue el karaoke (la palabra que suena en negrita). Al acabar esa frase vuelve el karaoke normal. Sin `gancho`, el fotograma 0 sale sin texto porque la voz aún no ha empezado.
+- Opciones: `{"max_palabras": 16, "panel": true, "alfa": 225, "tam": 69, "color_panel": "#070b1e", "alfa_panel": 150}`.
+- Motivo: en los Reels virales del nicho el gancho se lee entero en el primer fotograma (`claude/analisis-reels-virales-2026-11-16.md` en el Proyecto de Claude).
+
 ## Elementos (`tipo`)
 Propiedades comunes animables con `keys` (`[{"t": s, "x": .., "op": .., "ease": "suave|lineal|entrada|salida|rebote"}]`):
 `x, y, escala, ex, ey, rot, op, z` (z = paralaje: 0 fondo quieto, 1 primer plano).

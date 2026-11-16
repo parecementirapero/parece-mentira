@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Motor: gancho legible en el fotograma 0 (la primera frase entera visible desde el inicio, estilo karaoke) a partir del análisis de Reels virales del nicho — Nico — 2026-11-16 18:50
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
@@ -34,6 +33,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Motor v2.3: gancho legible en el fotograma 0 (`"gancho": true`), reglas de gancho en AGENTE (negación, POV, paradoja) a partir del análisis de Reels virales del nicho — Nico — 2026-11-16
 - [x] Mejoras de crecimiento: moáis revisado («se quedaron viendo» 55,6 %), `studio.json` + análisis «Primer segundo», comentario fijado, series/parte 2, créditos de ElevenLabs al arrancar, avisos por correo (tarea de las 9:14) y resumen semanal los lunes 9:41 — Nico — 2026-11-16
 - [x] Subida automática a YouTube tras «ok» (`publicar/subir_youtube.py`), subidas separadas cada 1 h y ganchos para España y Latinoamérica — Nico — 2026-11-16
 - [x] Análisis diario de estadísticas (`aprendizajes.md` + vista «Conclusiones») y el agente de lotes lo usa para decidir — Nico — 2026-11-16

@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 18:55 — Nico — rama `main`
+**Hecho**: análisis de ~80 Reels del nicho en Instagram (navegador integrado, cuenta @parecementiramedia, solo lectura) → informe en el Proyecto de Claude (`claude/analisis-reels-virales-2026-11-16.md`). Conclusión principal: en los virales el gancho se lee entero en el primer fotograma; en los nuestros el fotograma 0 sale sin texto. Motor v2.3: `"estilo_subtitulos": {"gancho": true}` muestra la primera frase entera desde el fotograma 0 (+15 % de tamaño, panel oscuro translúcido, karaoke dentro) y luego sigue el karaoke normal. AGENTE.md: el agente lo activa siempre, primera frase ≤ 12 palabras, formatos negación/POV/paradoja/escala y etiquetas nuevas de `gancho`. DECISIONS.md: decisión nueva (no es título fijo).
+**Pruebas**: fotogramas a 0 / 0,6 / 1,6 / 2,8 / 3,5 s con el gancho de los moáis y un fondo de prueba: frase entera en el 0, palabra actual en negrita, cápsula de clave, vuelta al karaoke normal; sin `gancho`, igual que antes. Sin render completo (no hay audio en la nube).
+**Pendiente**: ver el primer lote con el gancho y comparar «se quedaron viendo» en `studio.json`.
+**Siguiente paso**: el lote de las 20:00 de hoy ya lo aplica si hace `git pull` (AGENTE punto «Gancho en pantalla»).
+
 ## 2026-11-16 18:35 — Nico — rama `main`
 **Hecho**: (1) Moáis revisado: sin avisos ni restricciones (API y Studio); YouTube lo enseñó a ≈9 personas y solo el 55,6 % se quedó (pisada 76,5 % → 3.481 vistas, Luna 65,3 %, guerra 60,5 %): el primer segundo decide. Nuevo `estadisticas/studio.json` (datos que solo da Studio) unido a los vídeos en `construir.py`, sección «Primer segundo» en el análisis y comparación por gancho/estructura/tema con «se quedan» y retención a 3 s; dato en la ficha de la web. (2) `AGENTE.md`: créditos de ElevenLabs y datos de Studio al arrancar, regla del primer segundo, comentario fijado (en el correo de revisión; se fija tras publicar, con `send_later` para los programados), series/parte 2 y vídeo relacionado; sección «Continuaciones prometidas» en `lotes/IDEAS.md`. (3) Tarea de las 9:14 ampliada: correo «[AVISO]» si falla la recogida, hay errores en `notas` o el permiso de TikTok caduca en menos de 30 días. Nueva tarea «Parece Mentira: resumen semanal por correo» (lunes 9:41, nube, `trig_01Fio936VfVUNaM7HguqEF7g`).
 **Pruebas**: análisis y web con datos reales sin errores. ElevenLabs: 6.820 de 40.000 caracteres usados (plan starter, se renueva el 15-12).
