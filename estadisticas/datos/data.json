@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-16T15:44:09+01:00",
+ "generado": "2026-11-16T17:01:20+01:00",
  "ejemplo": false,
  "canal": "Parece Mentira",
  "canalTotales": {
@@ -15,8 +15,8 @@
    "fecha": "2026-11-15",
    "hora": "17:38",
    "duracion": 48,
-   "vistas": 2955,
-   "likes": 52,
+   "vistas": 3197,
+   "likes": 60,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -28,7 +28,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 22.1,
+   "horasPublicado": 23.4,
    "lote": "prueba-v2-huellas-luna",
    "etiquetas": {
     "tema": "Espacio",
@@ -57,7 +57,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 16.0,
+   "horasPublicado": 17.2,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Histórico",
@@ -72,8 +72,8 @@
    "fecha": "2026-11-15",
    "hora": "23:48",
    "duracion": 47,
-   "vistas": 1592,
-   "likes": 32,
+   "vistas": 1678,
+   "likes": 35,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -85,7 +85,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 15.9,
+   "horasPublicado": 17.2,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Ciencia",
@@ -113,7 +113,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 15.9,
+   "horasPublicado": 17.2,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Misterio",
@@ -246,9 +246,9 @@
  "historico": {
   "2026-11-16": {
    "youtube": {
-    "D_2cV1qhmfA": 2955,
+    "D_2cV1qhmfA": 3197,
     "bS6AUPYxr7s": 1262,
-    "oZSuHN-46FI": 1592,
+    "oZSuHN-46FI": 1678,
     "XGf1wOPygU8": 5
    },
    "tiktok": {},
@@ -256,7 +256,7 @@
   }
  },
  "notas": [
-  "TikTok sin conectar.",
+  "Tiktok falló hoy (TikTok no devolvió token (invalid_grant: Refresh token is invalid or expired.). Vuelve a ejecutar autorizar_tiktok.py y actualiza TIKTOK_REF); se muestran los datos anteriores.",
   "Instagram sin conectar."
  ]
 }
