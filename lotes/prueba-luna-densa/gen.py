@@ -70,8 +70,14 @@ def _(d):
 
 @v.plano(17, "3,8 cm")
 def _(d):
-    return P(["#1b2236", "#0b0f1c"], [brillo(540, 900, 700, "#9fb3ff", 0.3), polvo("#cfe0ff", 25, sem=5),
+    x0, x1 = 540 - 480 + 18, 540 - 480 + 18 + 365   # 0 cm y 3,8 cm sobre la regla
+    return P(ESPACIO, [BG("bg_esp_petroleo"), estrellas(25, 5), brillo(540, 900, 700, "#9fb3ff", 0.25),
              IMG("regla", ancho=1000, x=540, y=1050, z=0.5, keys=K(d, (0, {"rot": -4}), (1, {"rot": -1}))),
+             # la Luna recorre en un año lo que mide la barra: el dato se VE, no solo se lee
+             brillo(0, 800, 150, "#dfe6ff", 0.5, 0.54, keys=K(d, (0.05, {"x": x0 + 182}), (0.7, {"x": x1 + 182, "ease": "salida"}))),
+             luna(0, 800, 120, 0.56, keys=K(d, (0.05, {"x": x0 + 182}), (0.7, {"x": x1 + 182, "ease": "salida"}))),
+             flecha([[x0 + 182, 800], [x1 + 110, 800]], 0.08, d * 0.7, CIAN, 6, [14, 10], punta=False),
+             IMG("dedo", ancho=210, x=175, y=1560, z=0.45, rot=8, keys=K(d, (0, {"y": 1640}), (0.5, {"y": 1540, "ease": "salida"}))),
              {"tipo": "barra", "x": 540 - 480 + 18 + 182, "y": 920, "ancho": 365, "alto": 44, "color": "#ff5a4a", "fondo": "#ffffff15", "z": 0.55,
               "keys": K(d, (0.05, {"progreso": 0}), (0.7, {"progreso": 1, "ease": "salida"}))}],
              cam(1.15, 1.3, (380, 1000), (420, 980)), "zoom",
@@ -94,14 +100,22 @@ def _(d):
 
 
 def cuenta(n):
+    """Cuenta atrás EN la rampa de lanzamiento: mismo encuadre que el despegue, cada número más cerca y con más humo,
+    para que los tres micro planos y el despegue se lean como una sola acción."""
     def fn(d):
-        luces = [{"tipo": "forma", "forma": "circulo", "radio": 18, "relleno": c, "x": 200 + i * 110, "y": 1320 + (i % 2) * 60, "z": 0.5,
-                  "anim": {"parpadeo": [0.25, 0.1 + i * 0.03]}} for i, c in enumerate(["#ff5a4a", "#5dff7a", "#ffd23f", "#5dd0ff", "#ff5a4a", "#5dff7a", "#ffd23f"])]
-        zoom = {3: (1.0, 1.04), 2: (1.15, 1.2), 1: (1.35, 1.42)}[n]
-        return P(["#0b0f1c", "#1b2236"], [brillo(540, 900, 600, "#ff7a4a", 0.25 + 0.1 * (3 - n), pulso=[0.2, 0.15]),
-                 {"tipo": "forma", "forma": "redondeado", "ancho": 900, "alto": 360, "relleno": ["#2b3140", "#141822"], "esquinas": 30, "x": 540, "y": 1350, "z": 0.45}, *luces],
-                 cam(*zoom, (540, 960), (540, 960)), "desenfoque" if n == 3 else "corte", 0.2,
-                 hud=[rotulo(0.0, d, str(n), tam=240, x=540, y=820, color="#ff5a4a", sin_pop=True)], sfx=[(0.0, "tic", -14)])
+        k = 3 - n  # 0, 1, 2
+        zoom = [(1.0, 1.05), (1.18, 1.24), (1.4, 1.48)][k]
+        humo = [brillo(540 + dx, 1650 + dy, 200 + 40 * k, "#d9d2c8", 0.25 + 0.15 * k, 0.55, pulso=[0.15, 0.2])
+                for dx, dy in [(-240, 30), (-110, 60), (0, 80), (130, 50), (250, 40)][:1 + 2 * k]]
+        torre = [{"tipo": "forma", "forma": "rect", "ancho": 26, "alto": 620, "relleno": ["#5a6274", "#2b3140"], "x": 700, "y": 1300, "z": 0.5},
+                 *[{"tipo": "forma", "forma": "rect", "ancho": 130, "alto": 12, "relleno": "#5a6274", "x": 640, "y": 1050 + i * 150, "z": 0.5} for i in range(3)],
+                 {"tipo": "forma", "forma": "circulo", "radio": 12, "relleno": "#ff5a4a", "x": 700, "y": 975, "z": 0.52, "anim": {"parpadeo": [0.3, 0.0]}}]
+        return P(["#0b1838", "#e88a4a"], [brillo(540, 1500, 900, "#ffb45a", 0.35 + 0.08 * k), polvo("#ffffff", 30, (0, 0, 1080, 900), 7, "estrellas"),
+                 *torre, IMG("cohete", ancho=230, x=540, y=1150, z=0.6, anim={"temblor": [1.5 + 2 * k, 0.05]} if k else {}),
+                 brillo(540, 1560, 120 + 50 * k, "#ffe9a0", 0.5 + 0.2 * k, 0.59, pulso=[0.3, 0.1]), *humo],
+                 {"zoom": list(zoom), "foco": [[540, 1150], [540, 1150]], "pan": [[0, 0], [0, 0]], "temblor": 2 * k},
+                 "desenfoque" if n == 3 else "corte", 0.2,
+                 hud=[rotulo(0.0, d, str(n), tam=230, x=250, y=760, color="#ff5a4a", sin_pop=True, fijo=True)], sfx=[(0.0, "tic", -14)])
     return fn
 
 
@@ -175,8 +189,12 @@ def _(d):
 
 @v.plano(50, "vuelve en 2,5 s")
 def _(d):
-    return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#9fb3ff", 0.3), polvo("#cfe0ff", 20, sem=11), *cronometro(0, 900, 0.1, d * 0.75)],
-             cam(1.0, 1.12, (540, 1050), (540, 1050)), "zoom", vineta=0.65,
+    return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#9fb3ff", 0.3), polvo("#cfe0ff", 20, sem=11), *cronometro(0, 900, 0.1, d * 0.75),
+             # debajo, el viaje que se está cronometrando: la luz va a la Luna y vuelve
+             tierra(190, 1620, 200, 0.5), luna(900, 1620, 120, 0.5),
+             {"tipo": "forma", "forma": "rect", "ancho": 600, "alto": 3, "relleno": "#5dff7a55", "x": 545, "y": 1620, "z": 0.45},
+             brillo(0, 1620, 60, "#5dff7a", 1.0, 0.55, keys=[{"t": 0.1, "x": 300, "ease": "lineal"}, {"t": 0.1 + d * 0.325, "x": 840, "ease": "lineal"}, {"t": 0.1 + d * 0.65, "x": 300}])],
+             cam(1.0, 1.08, (540, 1100), (540, 1100)), "zoom", vineta=0.5,
              hud=[{**contador(0.1, d - 0.05, 0, 2.5, d * 0.6, "SEGUNDOS", y=1560), "decimales": 1},
                   contexto(0.1, d - 0.05, "384.400 KM HASTA LA LUNA")],
              sfx=[(0.15 + i * 0.16, "tic", -22) for i in range(int(d / 0.16) - 1)])
@@ -237,8 +255,10 @@ def _(d):
 
 @v.plano(81, "resultado")
 def _(d):
-    return P(["#1a1410", "#3a2a1c"], [brillo(540, 1000, 650, "#ffcf8a", 0.3), *reloj(540, 1000, 700, 3, 0, 9, 0, 0.0, d)],
-             cam(1.25, 1.35, (540, 960), (540, 960)), "zoom", 0.25, vineta=0.7, sfx=[(0.0, "tictac", -15, {"dur": d, "ritmo": 0.2})])
+    return P(ESPACIO, [BG("bg_esp_ambar"), estrellas(25, 41),
+             IMG("tierra_hd", ancho=1000, x=540, y=1000, z=0.3, op=0.55, keys=[{"t": 0, "rot": 0, "ease": "lineal"}, {"t": d, "rot": 55, "ease": "salida"}]),
+             brillo(540, 1000, 520, "#ffcf8a", 0.3, 0.35), *reloj(540, 1000, 520, 3, 0, 9, 0, 0.0, d)],
+             cam(1.15, 1.25, (540, 960), (540, 960)), "zoom", 0.25, vineta=0.6, sfx=[(0.0, "tictac", -15, {"dur": d, "ritmo": 0.2})])
 
 
 @v.plano(82, "los días se alargan")
@@ -401,7 +421,10 @@ def _(d):
 @v.plano(134, "hoy / futuro")
 def _(d):
     return P(ESPACIO, [BG("bg_esp_petroleo"), *satelite(d), estrellas(30, 34), luna(300, 980, 340, 0.4), fugaz(d * 0.3, 820, 300, 1040, 180),
-             luna(780, 980, 340, 0.4, keys=K(d, (0, {"escala": 1.0}), (0.6, {"escala": 0.55, "ease": "salida"})))],
+             IMG("tierra_hd", ancho=1300, x=540, y=2150, z=0.3, anim={"girar": 3}),
+             {"tipo": "forma", "forma": "rect", "ancho": 4, "alto": 900, "relleno": "#ffffff30", "x": 540, "y": 900, "z": 0.2},
+             luna(780, 980, 340, 0.4, keys=K(d, (0, {"escala": 1.0, "y": 980}), (0.6, {"escala": 0.55, "y": 900, "ease": "salida"}))),
+             flecha([[780, 1150], [780, 1010]], d * 0.15, d * 0.6, CIAN, 7, [14, 10], z=0.35)],
              cam(1.0, 1.04), hud=[rotulo(0.05, d - 0.05, "HOY", tam=70, x=300, y=1260), rotulo(0.1, d - 0.05, "FUTURO", tam=70, x=780, y=1260)])
 
 
@@ -433,12 +456,12 @@ def _(d):
              {"tipo": "forma", "forma": "circulo", "radio": 170, "relleno": "#06070c", "x": 540, "y": 820, "z": 0.35},
              IMG("personas_mirando", ancho=1180, x=540, y=1640, z=0.85),
              *[brillo(x, y, 90, "#ffffff", 1.0, 0.86, keys=[{"t": f * d, "op": 0}, {"t": f * d + 0.05, "op": 1}, {"t": f * d + 0.25, "op": 0}]) for x, y, f in flashes]],
-             cam(1.0, 1.12, (540, 1100), (540, 900)), "desenfoque",
+             cam(1.5, 1.0, (540, 1560), (540, 960)), "desenfoque",
              hud=[amarillo(0.2, d - 0.05, "NO TE LO PIERDAS", y=1290, tam=84, x=470)], sfx=[(f * d, "tic", -18) for _, _, f in flashes])
 
 
 # ================================================================== construir
 # Variante del experimento H1 (motor/APRENDIZAJE.md): python3 gen.py DIR voz.mp3 alineacion.json palabra
 PALABRA = len(sys.argv) > 4 and sys.argv[4] == "palabra"
-v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else ""), version=5, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
+v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else ""), version=6, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
             claves=["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"])
