@@ -44,11 +44,23 @@ def _ctx():
     return ssl.create_default_context()
 
 
-def _get(url, binario=False):
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+def _get(url, binario=False, intentos=4):
+    import time
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Api-User-Agent": UA})
     try:
-        with urllib.request.urlopen(req, context=_ctx(), timeout=60) as r:
-            datos = r.read()
+        for i in range(intentos):
+            try:
+                with urllib.request.urlopen(req, context=_ctx(), timeout=60) as r:
+                    datos = r.read()
+                break
+            except urllib.error.HTTPError as e:
+                if e.code not in (429, 503) or i == intentos - 1:
+                    raise
+                espera = e.headers.get("Retry-After")
+                time.sleep(min(60, int(espera)) if espera and espera.isdigit() else 5 * 2 ** i)   # 5, 10, 20 s
+    except urllib.error.HTTPError as e:
+        raise SystemExit(json.dumps({"ok": False, "error": f"{urllib.parse.urlparse(url).netloc} responde {e.code}",
+                                     "detalle": e.read().decode(errors="replace")[:300]}, ensure_ascii=False))
     except urllib.error.URLError as e:
         raise SystemExit(json.dumps({"ok": False, "error": f"sin acceso a {urllib.parse.urlparse(url).netloc}: {e}",
                                      "ayuda": "permitir en claude.ai → Settings → Capabilities: " + ", ".join(DOMINIOS)},
@@ -78,7 +90,7 @@ def filtrar(resultados):
 
 def buscar(q, n=10):
     params = {"q": q, "license": ",".join(sorted(LICENCIAS_OK)), "source": ",".join(sorted(FUENTES_OK)),
-              "page_size": min(50, max(n * 3, 20)), "mature": "false"}
+              "page_size": 20, "mature": "false"}   # sin cuenta, Openverse no deja más de 20 por página
     r = _get(API + "?" + urllib.parse.urlencode(params))
     return filtrar(r.get("results", []))[:n]
 
@@ -110,11 +122,18 @@ def licencia_commons(meta):
 
 
 def comprobar_commons(item):
-    titulo = urllib.parse.unquote((item.get("foreign_landing_url") or "").rsplit("/", 1)[-1])
-    if not titulo.lower().startswith("file:"):
+    url = item.get("foreign_landing_url") or ""
+    base = {"action": "query", "prop": "imageinfo", "iiprop": "url|extmetadata|size|sha1", "format": "json",
+            "iiurlwidth": 2160}   # versión escalada (thumburl): suficiente para 1080×1920 y lo que pide Wikimedia
+    m = re.search(r"[?&]curid=(\d+)", url)
+    titulo = urllib.parse.unquote(url.rsplit("/", 1)[-1])
+    if m:
+        base["pageids"] = m.group(1)
+    elif titulo.lower().startswith("file:"):
+        base["titles"] = titulo
+    else:
         return {"ok": False, "motivo": "no es una página de archivo de Commons"}
-    q = urllib.parse.urlencode({"action": "query", "titles": titulo, "prop": "imageinfo",
-                                "iiprop": "url|extmetadata|size|sha1", "format": "json"})
+    q = urllib.parse.urlencode(base)
     d = _get("https://commons.wikimedia.org/w/api.php?" + q)
     return evaluar_commons(d)
 
@@ -138,7 +157,7 @@ def evaluar_commons(d):
             "licencia_nombre": _limpio(meta.get("LicenseShortName", {}).get("value")),
             "licencia_url": meta.get("LicenseUrl", {}).get("value", ""),
             "autor": autor, "titulo": pags[0].get("title", "").replace("File:", ""),
-            "pagina": ii.get("descriptionurl", ""), "archivo_url": ii.get("url", ""),
+            "pagina": ii.get("descriptionurl", ""), "pageid": pags[0].get("pageid"), "archivo_url": ii.get("thumburl") or ii.get("url", ""),
             "ancho": ii.get("width"), "alto": ii.get("height"), "restricciones": restr}
 
 
@@ -176,12 +195,20 @@ def comprobar(item):
 
 
 # ---------- 3. descarga y registro ----------
+def _titulo_corto(t, maximo=70):
+    t = re.sub(r"\.(jpe?g|png|tiff?|gif|webp)$", "", t, flags=re.I)
+    t = re.sub(r"\s*-\s*(DSC|IMG|P)\w*\d+$", "", t).replace("_", " ").strip()
+    if len(t) > maximo:
+        t = t[:maximo].rsplit(" ", 1)[0].rstrip(" ,;-") + "…"
+    return t
+
+
 def credito(e):
-    if e["licencia"] == "by":
-        lic = f"CC BY {e['version']}".strip()
-        return f"{e['titulo']} — {e['autor']} ({e['fuente']}), {lic}: {e['pagina']}"
-    nombre = "dominio público" if e["licencia"] == "pdm" else "CC0"
-    return f"{e['titulo']} — {e['autor']} ({e['fuente']}), {nombre}: {e['pagina']}"
+    lic = f"CC BY {e['version']}".strip() if e["licencia"] == "by" else ("dominio público" if e["licencia"] == "pdm" else "CC0")
+    pagina = e["pagina"]
+    if e.get("pageid") and len(pagina) > 70:      # enlace corto equivalente de Commons
+        pagina = f"https://commons.wikimedia.org/w/index.php?curid={e['pageid']}"
+    return f"«{_titulo_corto(e['titulo'])}» — {e['autor']} ({e['fuente']}), {lic}: {pagina}"
 
 
 def descargar(item_id, lote, video, uso=""):
@@ -230,7 +257,7 @@ def main(argv=None):
     a = ap.parse_args(argv)
     if a.cmd == "buscar":
         res = buscar(a.q, a.n)
-        print(json.dumps([{"id": x["id"], "titulo": x.get("title"), "fuente": x.get("source"), "licencia": x.get("license"),
+        print(json.dumps([{"id": x["id"], "titulo": _limpio(x.get("title")), "fuente": x.get("source"), "licencia": x.get("license"),
                            "tam": f"{x.get('width')}×{x.get('height')}", "miniatura": x.get("thumbnail"),
                            "pagina": x.get("foreign_landing_url")} for x in res], ensure_ascii=False, indent=1))
     elif a.cmd == "descargar":

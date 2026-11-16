@@ -8,7 +8,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
-- [ ] Permitir en claude.ai → Settings → Capabilities: `api.openverse.org`, `commons.wikimedia.org`, `upload.wikimedia.org`, `collectionapi.metmuseum.org`, `images.metmuseum.org` (sin esto el experimento «plano real» se salta) y hacer la primera prueba real de `motor/openverse.py` (no se ha podido probar contra las APIs) — Nico
 - [ ] Decidir si se cambian las portadas de los 3 vídeos ya publicados (lote 2026-11-15-tarde; elegidas en `metadatos.json` → `portada`): YouTube con `subir_youtube.py --solo-portada <id> --portada …` desde el Mac de Jorge (si el canal lo permite) e Instagram desde la app del móvil (Editar → portada); TikTok no deja cambiarla después — Nico/Jorge
 - [ ] Estadísticas: conectar Instagram siguiendo `estadisticas/README.md` — APLAZADO por Nico (2026-11-16: «eso ya lo haremos en un futuro»); no recordarlo salvo que lo pidan. Notas: se usa el Facebook personal de Jorge (la cuenta nueva de Nico quedó suspendida en revisión: no crear más cuentas nuevas). Registro en Meta for Developers a medias: falta verificar el móvil (el SMS no llega; probar desde la app de Facebook del móvil → Centro de cuentas → Información de contacto, o por WhatsApp/llamada). Después: crear app, «API setup with Instagram login», añadir @parecementiramedia (debe ser cuenta profesional), generar token → secreto `IG_TOKEN`
 - [ ] Créditos de ElevenLabs: quedan 33.180 de 40.000 (≈9 lotes, se acaban hacia el 21-11; se renuevan el 15-12). Decidir Nico/Jorge: ampliar plan o bajar a un lote al día — Nico/Jorge
@@ -36,6 +35,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Openverse: dominios permitidos (Nico) y prueba real en el Mac de Jorge: búsqueda, comprobación en Commons (moái CC0), descarga, `creditos.json` y crédito corto; arreglos: máx. 20 por página sin cuenta, enlaces `?curid=`, reintentos ante 429, versión escalada, regla de obras modernas — Nico — 2026-11-16
 - [x] Openverse: `motor/openverse.py` (solo PD/CC0/CC BY de Commons y el Met, comprobación en origen, rechaza SA/NC/ND, restricciones y PD solo de EE. UU., créditos y `creditos.json`), pruebas sin red, AGENTE §5b y DECISIONS (experimento «plano real» desde el lote 2026-11-17-manana) — Nico — 2026-11-16
 - [x] «Luna densa» v5: sonidos de satélite, estrellas fugaces y rayas de líneas discontinuas; dinosaurios comiendo hojas con mordisco; meteorito detallado que se acerca y cae antes del cambio de escena — Nico — 2026-11-16
 - [x] Agente de portadas autónomo (`.claude/agents/portadas.md`): texto + variante, 8 candidatas, elige sin «ok», manda la elegida al chat y al correo; AGENTE §6b/§7 y DECISIONS actualizados — Nico — 2026-11-16

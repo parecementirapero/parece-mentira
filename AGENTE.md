@@ -87,9 +87,9 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 5b. Imágenes reales (experimento desde el lote 2026-11-17-manana, Nico)
 
-Solo si el tema tiene algo real que enseñar (un grabado, una foto de la NASA, un objeto de museo) y es el experimento del lote (punto 2). **El objetivo del canal es monetizar: ante cualquier duda, no se usa.**
+**Siempre desde `device_bash` en el Mac del turno** (desde la nube, Wikimedia corta la conexión con «429 demasiadas peticiones»). Solo si el tema tiene algo real que enseñar (un grabado, una foto de la NASA, un objeto de museo) y es el experimento del lote (punto 2). **El objetivo del canal es monetizar: ante cualquier duda, no se usa.**
 1. `python3 -m motor.openverse buscar "<términos en inglés>"` → candidatas ya filtradas (solo dominio público, CC0 y CC BY; solo Wikimedia Commons y The Met; nada de SA, NC ni ND).
-2. Mira la miniatura y descarta personas reales identificables, logotipos o marcas.
+2. Mira la miniatura y descarta personas reales identificables, logotipos o marcas, y **fotos de obras modernas** (esculturas, cuadros, juguetes, carteles, edificios recientes, figuras de Lego…): la licencia de la foto no cubre la obra que sale en ella. Sí valen objetos antiguos, paisajes, grabados antiguos, documentos y fotos de la NASA.
 3. `python3 -m motor.openverse descargar <id> --lote <carpeta local del lote> --video NN --uso "plano N, …"`: comprueba la licencia **en la fuente original** (si no coincide, hay restricciones o es dominio público solo en EE. UU., la rechaza), descarga la imagen y la apunta en `<lote>/creditos.json` con fecha y SHA-256. Mira la imagen descargada y pon `"revision_visual": "ok"` en su entrada. Copia `creditos.json` a `lotes/<lote>/` del repo (solo texto).
 4. **Máximo 2 planos reales por vídeo y ≤ 20 % de la duración**, siempre con animación nuestra encima (cámara con foco, flechas, rótulos o capas) y con narración: nunca la imagen sola y quieta. Así el vídeo sigue siendo claramente nuestro (YouTube revisa el «contenido reutilizado» del canal entero, aunque la licencia lo permita).
 5. **Créditos obligatorios**: añade la salida de `python3 -m motor.openverse creditos <lote> --video NN` al final de la descripción de YouTube, Instagram y TikTok en `metadatos.json`.
