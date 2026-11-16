@@ -276,6 +276,7 @@ class Episodio:
         return f"{self.s['id']}_v{self.s.get('version', 1)}"
 
     def hoja(self, salida, cada=2.0):
+        self.precalentar(min(4, os.cpu_count() or 1))
         ts = list(np.arange(0.25, self.duracion, cada))
         miniaturas = [self.frame(float(t)).resize((270, 480), Image.LANCZOS) for t in ts]
         cols = 6
@@ -292,29 +293,68 @@ class Episodio:
         hoja.save(ruta, quality=88)
         return ruta
 
-    def render(self, salida, desde=0.0, hasta=None):
-        os.makedirs(salida, exist_ok=True)
-        hasta = self.duracion if hasta is None else min(hasta, self.duracion)
-        n = int(round((hasta - desde) * FPS))
-        mp4 = os.path.join(salida, self.nombre() + ".mp4")
-        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
-               "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
-        audio = self._audio_final(salida) if self.audio else None
-        if audio:
-            cmd += ["-ss", f"{desde:.3f}", "-i", audio,
-                    "-filter_complex", f"[1:a]apad,atrim=0:{hasta - desde:.3f},aresample=48000[a]",
-                    "-map", "0:v", "-map", "[a]", "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-ar", "48000"]
-        cmd += ["-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-maxrate", "8M", "-bufsize", "16M", "-pix_fmt", "yuv420p",
-                "-movflags", "+faststart", "-t", f"{hasta - desde:.3f}", mp4]
+    def _video(self, mp4, desde, n, extra=()):
+        """Renderiza n fotogramas desde `desde` a un MP4 (vídeo solo, o con audio si `extra` trae sus argumentos)."""
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", *extra,
+               "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-maxrate", "8M", "-bufsize", "16M", "-pix_fmt", "yuv420p", mp4]
         p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
         for i in range(n):
             t = desde + i / FPS
             p.stdin.write(self.frame(t).tobytes())
             if i % 90 == 0:
-                print(f"  {t:6.2f}s / {hasta:.2f}s", file=sys.stderr, flush=True)
+                print(f"  {t:6.2f}s", file=sys.stderr, flush=True)
         p.stdin.close()
         if p.wait() != 0:
             raise SystemExit("ffmpeg falló")
+
+    def precalentar(self, procesos=2):
+        """Rasteriza de antemano (y en paralelo) todos los SVG del episodio a la caché de disco."""
+        from concurrent.futures import ThreadPoolExecutor
+        from .elementos import rasterizar
+        pend = set()
+        for e in self.s["escenas"]:
+            for x in e.get("elementos", []):
+                if x.get("tipo") == "imagen" and str(x.get("archivo", "")).lower().endswith(".svg"):
+                    pend.add((os.path.join(self.dir, x["archivo"]), int(x.get("ancho", 600))))
+        with ThreadPoolExecutor(max(1, procesos)) as ex:
+            list(ex.map(lambda a: rasterizar(*a), sorted(pend)))
+        return len(pend)
+
+    def render(self, salida, desde=0.0, hasta=None, procesos=None):
+        """procesos: nº de procesos en paralelo (por defecto, los núcleos de la máquina, máx. 4). Cada uno renderiza un
+        tramo y luego se unen sin recodificar; el resultado es el mismo vídeo en menos tiempo."""
+        os.makedirs(salida, exist_ok=True)
+        hasta = self.duracion if hasta is None else min(hasta, self.duracion)
+        n = int(round((hasta - desde) * FPS))
+        mp4 = os.path.join(salida, self.nombre() + ".mp4")
+        audio = self._audio_final(salida) if self.audio else None
+        a_args = []
+        if audio:
+            a_args = ["-ss", f"{desde:.3f}", "-i", audio, "-filter_complex", f"[1:a]apad,atrim=0:{hasta - desde:.3f},aresample=48000[a]",
+                      "-map", "0:v", "-map", "[a]", "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-ar", "48000"]
+        procesos = procesos or min(4, os.cpu_count() or 1)
+        self.precalentar(procesos)
+        if procesos <= 1 or n < 120:
+            self._video(mp4, desde, n, [*a_args, "-movflags", "+faststart", "-t", f"{hasta - desde:.3f}"])
+        else:
+            import multiprocessing as mp
+            cortes = [round(n * i / procesos) for i in range(procesos + 1)]
+            partes = [os.path.join(salida, f"_parte{i}.mp4") for i in range(procesos)]
+            ctx = mp.get_context("fork")
+            hijos = [ctx.Process(target=self._video, args=(partes[i], desde + cortes[i] / FPS, cortes[i + 1] - cortes[i])) for i in range(procesos)]
+            for h in hijos: h.start()
+            for h in hijos: h.join()
+            if any(h.exitcode for h in hijos):
+                raise SystemExit("falló un tramo del render en paralelo")
+            lista = os.path.join(salida, "_partes.txt")
+            open(lista, "w").write("".join(f"file '{os.path.abspath(x)}'\n" for x in partes))
+            cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lista]
+            if audio:
+                cmd += ["-ss", f"{desde:.3f}", "-i", audio, "-filter_complex", f"[1:a]apad,atrim=0:{hasta - desde:.3f},aresample=48000[a]",
+                        "-map", "0:v", "-map", "[a]", "-c:a", "aac", "-b:a", "192k", "-ac", "2", "-ar", "48000"]
+            cmd += ["-c:v", "copy", "-movflags", "+faststart", "-t", f"{hasta - desde:.3f}", mp4]
+            subprocess.check_call(cmd)
+            for x in partes + [lista]: os.remove(x)
         srt = os.path.join(salida, self.nombre() + ".srt")
         tiempos.escribir_srt(self.subs.l, srt)
         self._manifiesto(salida, mp4, srt, n)
@@ -337,7 +377,8 @@ class Episodio:
             pista = self._abs(m["archivo"])
         elif m:
             pista = os.path.join(salida, self.nombre() + "_musica.wav")
-            musica_mod.generar(pista, self.duracion + 0.2, m.get("generar", "curiosidad"), m.get("semilla", 1))
+            musica_mod.generar(pista, self.duracion + (0.0 if m.get("bucle") else 0.2), m.get("generar", "curiosidad"), m.get("semilla", 1),
+                               energia=m.get("energia"), bucle=bool(m.get("bucle")))
         self.musica_usada = pista
         return musica_mod.mezclar(self.audio, pista, mix, self.duracion, (m or {}).get("db", -17.0), lufs, sfx=fx,
                                   sfx_bajo_voz=self.s.get("sfx_bajo_voz", True))
@@ -378,13 +419,14 @@ def main(argv=None):
     ap.add_argument("--cada", type=float, default=2.0)
     ap.add_argument("--desde", type=float, default=0.0)
     ap.add_argument("--hasta", type=float, default=None)
+    ap.add_argument("--procesos", type=int, default=None, help="procesos en paralelo (por defecto: núcleos, máx. 4)")
     a = ap.parse_args(argv)
     ep = Episodio(a.episodio)
     salida = a.salida or os.path.join(ep.dir, "out")
     if a.hoja:
         print(ep.hoja(salida, a.cada))
     else:
-        print(ep.render(salida, a.desde, a.hasta))
+        print(ep.render(salida, a.desde, a.hasta, a.procesos))
         print(ep.hoja(salida, a.cada))
 
 

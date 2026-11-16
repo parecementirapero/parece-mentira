@@ -35,12 +35,40 @@ def _back(u, s=1.70158):
     return u * u * ((s + 1) * u + s) + 1
 
 
+def _elastico(u):
+    if u <= 0 or u >= 1:
+        return float(min(max(u, 0), 1))
+    return 2 ** (-10 * u) * math.sin((u - 0.075) * 2 * math.pi / 0.3) + 1
+
+
+def _bote(u):
+    for a, b, c in ((1 / 2.75, 0, 0), (2 / 2.75, 1.5 / 2.75, 0.75), (2.5 / 2.75, 2.25 / 2.75, 0.9375), (1.01, 2.625 / 2.75, 0.984375)):
+        if u < a:
+            u -= b
+            return 7.5625 * u * u + c
+    return 1.0
+
+
+def _anticipa(u, s=2.2):
+    """Retrocede un poco antes de salir y se pasa un poco antes de frenar (anticipación + inercia)."""
+    u *= 2
+    if u < 1:
+        return 0.5 * (u * u * ((s + 1) * u - s))
+    u -= 2
+    return 0.5 * (u * u * ((s + 1) * u + s) + 2)
+
+
 EASE = {
     "lineal": lambda u: u,
     "suave": lambda u: u * u * (3 - 2 * u),
     "entrada": lambda u: u * u * u,
     "salida": lambda u: 1 - (1 - u) ** 3,
-    "rebote": _back,
+    "rebote": _back,                      # se pasa un poco y vuelve (overshoot)
+    "elastico": _elastico,                # muelle: se pasa y oscila hasta pararse
+    "bote": _bote,                        # cae y bota en el suelo
+    "anticipa": _anticipa,                # toma impulso hacia atrás, sale y se pasa
+    "golpe": lambda u: 1 - (1 - u) ** 5,  # arranque muy brusco y frenada larga (impactos, latigazos)
+    "expo": lambda u: 1.0 if u >= 1 else 1 - 2 ** (-10 * u),
 }
 
 

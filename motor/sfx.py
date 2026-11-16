@@ -1,5 +1,6 @@
 """Efectos de sonido generados por código (sin licencias): whoosh, pop, tic, golpe, zap, brillo, ding, rumor, ola,
-senal (satélite), fugaz (estrella fugaz), trazo (raya de línea discontinua), mordisco, meteoro, tictac (reloj), agua.
+senal (satélite), fugaz (estrella fugaz), trazo (raya de línea discontinua), mordisco, meteoro, tictac (reloj), agua,
+subida (tensión antes de una revelación), impacto (golpe de revelación), roce (cambio de plano discreto), burbuja.
 
 En episodio.json:  "sfx": [{"t": 1.2, "tipo": "whoosh", "db": -10, "dur": 0.45}, ...]
 `t` en segundos absolutos. El motor los mezcla con la voz y la música (no se atenúan bajo la voz).
@@ -210,9 +211,49 @@ def meteoro(dur=1.2, rng=None):
     return np.tanh((rugido + grave + crep) * 1.2) * env
 
 
+def subida(dur=1.0, rng=None):
+    """Subida de tensión antes de una revelación (riser): ruido y tono que suben y se cortan en seco."""
+    rng = rng or np.random.default_rng(11)
+    n = int(dur * SR)
+    u = np.linspace(0, 1, n)
+    r = rng.normal(0, 1, n)
+    aire = _paso_bajo(r, 400 + 6000 * u ** 2) - _paso_bajo(r, 300)
+    tono = np.sin(2 * np.pi * np.cumsum(220 * 2 ** (u * 2.2)) / SR) * 0.35
+    return (aire * 0.8 + tono) * u ** 2.2 * np.clip((1 - u) / 0.012, 0, 1)
+
+
+def impacto(dur=0.9, rng=None):
+    """Golpe de revelación: caída grave (sub) + chasquido + cola corta. Para el dato fuerte o el remate."""
+    rng = rng or np.random.default_rng(12)
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    sub = np.sin(2 * np.pi * np.cumsum(38 + 110 * np.exp(-t / 0.035)) / SR) * np.exp(-t / 0.28)
+    clic = rng.normal(0, 1, n); clic = (clic - _paso_bajo(clic, 2500)) * np.exp(-t / 0.004) * 0.7
+    cola = _paso_bajo(rng.normal(0, 1, n), 900) * np.exp(-t / 0.18) * 0.5
+    return np.tanh((sub + clic + cola) * 1.5)
+
+
+def roce(dur=0.22, rng=None):
+    """Roce de aire muy corto y suave para cambios de plano (alternativa discreta al whoosh)."""
+    rng = rng or np.random.default_rng(13)
+    n = int(dur * SR)
+    u = np.linspace(0, 1, n)
+    r = rng.normal(0, 1, n)
+    x = _paso_bajo(r, 1500 + 3500 * u) - _paso_bajo(r, 900)
+    return x * np.sin(np.pi * u) ** 3
+
+
+def burbuja(dur=0.09, f=600):
+    """Una burbuja/gota suelta (tono que sube)."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    return np.sin(2 * np.pi * np.cumsum(f * (1 + 1.8 * t / dur)) / SR) * np.sin(np.pi * t / dur) ** 2
+
+
 TIPOS = {"whoosh": whoosh, "pop": pop, "tic": tic, "golpe": golpe, "zap": zap, "brillo": brillo, "ding": ding,
          "rumor": rumor, "ola": ola, "senal": senal, "fugaz": fugaz, "trazo": trazo, "mordisco": mordisco, "meteoro": meteoro,
-         "tictac": tictac, "agua": agua}
+         "tictac": tictac, "agua": agua,
+         "subida": subida, "impacto": impacto, "roce": roce, "burbuja": burbuja}
 
 
 def pista(eventos, dur, ruta):

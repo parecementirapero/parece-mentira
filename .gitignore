@@ -24,3 +24,6 @@ __pycache__/
 out/
 *_hoja.jpg
 motor/ejemplos/v2-huellas-luna/episodio.json
+
+# caché de SVG rasterizados
+.raster/

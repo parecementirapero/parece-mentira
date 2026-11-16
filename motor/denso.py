@@ -53,15 +53,57 @@ def cam(z0, z1, f0=(540, 960), f1=None, temblor=0):
     return {"zoom": [z0, z1], "foco": [list(f0), list(f1 or f0)], "pan": [[0, 0], [0, 0]], "temblor": temblor}
 
 
-def P(fondo, els, camara, entrada="corte", dur_entrada=0.3, vineta=0.55, hud=(), sfx=()):
+def P(fondo, els, camara, entrada="corte", dur_entrada=0.3, vineta=0.55, hud=(), sfx=(), energia=None):
     """Un plano: fondo [arriba, abajo], elementos, cámara, entrada (corte|desenfoque|zoom|barrido),
-    rótulos `hud` y sonidos `sfx` = [(t dentro del plano, tipo, dB[, {opciones}])]."""
-    return dict(fondo=fondo, els=els, cam=camara, entrada=entrada, dur=dur_entrada, vineta=vineta, hud=list(hud), sfx=list(sfx))
+    rótulos `hud` y sonidos `sfx` = [(t dentro del plano, tipo, dB[, {opciones}])].
+    energia (0..1, opcional): fuerza la energía de la música en este plano (0,3 = recogida, 0,9 = clímax)."""
+    return dict(fondo=fondo, els=els, cam=camara, entrada=entrada, dur=dur_entrada, vineta=vineta, hud=list(hud), sfx=list(sfx), energia=energia)
 
 
 def K(d, *pares):
     """Claves en FRACCIÓN de la duración del plano: K(d, (0, {...}), (0.6, {...}))."""
     return [{"t": round(f * d, 3), **v} for f, v in pares]
+
+
+# ------------------------------------------------------------------ movimiento con vida (principios de animación; GUIA_CALIDAD §3)
+def aparece(t0, dur=0.4):
+    """El objeto entra de golpe y se asienta como un muelle (se pasa y vuelve). Súmalo a sus otras claves."""
+    return [{"t": t0, "escala": 0.0, "op": 0}, {"t": t0 + 0.04, "op": 1}, {"t": t0 + dur, "escala": 1.0, "ease": "elastico"}]
+
+
+def cae(t0, t1, y0, y1, aplasta=0.16):
+    """Caída con peso: se estira al caer, bota en el suelo y se aplasta al aterrizar (conserva el volumen).
+    Sonido que le va: (t1 - 0.25*(t1-t0), "golpe", -14)."""
+    tg = t0 + (t1 - t0) * 0.36  # primer contacto con el suelo en la curva «bote»
+    return [{"t": t0, "y": y0, "ex": 1 - aplasta * 0.5, "ey": 1 + aplasta}, {"t": t1, "y": y1, "ease": "bote"},
+            {"t": tg, "ex": 1 - aplasta * 0.5, "ey": 1 + aplasta, "ease": "lineal"}, {"t": tg + 0.06, "ex": 1 + aplasta, "ey": 1 - aplasta, "ease": "salida"},
+            {"t": tg + 0.3, "ex": 1.0, "ey": 1.0, "ease": "elastico"}]
+
+
+def lanza(t0, t1, p0, p1):
+    """Sale disparado tomando impulso hacia atrás primero (anticipación) y pasándose un poco al llegar."""
+    return [{"t": t0, "x": p0[0], "y": p0[1]}, {"t": t1, "x": p1[0], "y": p1[1], "ease": "anticipa"}]
+
+
+def late(t0, veces=2, amp=0.14, periodo=0.3):
+    """Latido para llamar la atención sobre el objeto del que se habla (señalización)."""
+    ks = [{"t": t0, "escala": 1.0}]
+    for i in range(veces):
+        ks += [{"t": t0 + i * periodo + periodo * 0.35, "escala": 1 + amp, "ease": "salida"}, {"t": t0 + (i + 1) * periodo, "escala": 1.0, "ease": "suave"}]
+    return ks
+
+
+def sigue(keys, retraso=0.1):
+    """Copia unas claves con retraso: para la pieza que va detrás de otra (inercia: cola, mochila, sombra, rótulo)."""
+    return [{**k, "t": round(k["t"] + retraso, 3)} for k in keys]
+
+
+def senala(x, y, t0, t1, radio=110, color=AMBAR, z=0.85):
+    """Anillo que se dibuja alrededor de lo que se nombra (señalización: el ojo va donde va la voz)."""
+    return {"tipo": "forma", "forma": "elipse", "ancho": radio * 2, "alto": radio * 2, "relleno": "#ffffff", "op_relleno": 0, "grosor": 7,
+            "borde": color, "x": x, "y": y, "z": z,
+            "keys": [{"t": t0, "escala": 1.6, "op": 0}, {"t": t0 + 0.25, "escala": 1.0, "op": 1, "ease": "golpe"},
+                     {"t": t1, "escala": 1.06, "op": 1}, {"t": t1 + 0.2, "op": 0}]}
 
 
 # ------------------------------------------------------------------ rótulos
@@ -250,11 +292,13 @@ class Video:
             self.MOVIDOS.append(f"«{(h.get('texto') or '') or h.get('unidad', '')}» en «{nombre}» → x={h.get('x', 540)}, y={h.get('y', 960)}, tam={h.get('tam', 120)}")
         return tocado
 
-    def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=320, grano=0.03, zona_segura=True):
+    def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=320, grano=0.03, zona_segura=True,
+                  musica_viva=True):
         """Monta todos los planos y escribe salida/episodio.json. Devuelve la lista de avisos de lectura (vacía = bien).
         zona_segura=True recoloca solos los rótulos que la app taparía (míralos luego en la hoja de fotogramas:
         al subirlos pueden pisar al sujeto; en ese caso, colócalos tú dentro de y=240…1400)."""
         self.MOVIDOS = []
+        forzada = {}
         global _V
         _V = self
         self.PLANOS.sort(key=lambda p: p[0])
@@ -297,13 +341,27 @@ class Video:
                     if db <= -20: continue      # fuera los whoosh pequeños repetidos
                     db -= 9                      # y los que quedan, bastante más bajos
                 fx(ini + t, tipo, db, **(s[3] if len(s) > 3 else {}))
+            if p.get("energia") is not None:
+                forzada[k] = p["energia"]
             escenas.append(esc)
             informe.append((d, nombre))
         ep = {"id": id_, "version": version, "audio": self.audio,
               "subtitulos": {"alineacion": self.alineacion, "max_chars": 26},
               "estilo_subtitulos": {"modo": "karaoke", "y": y_subtitulo, "tam": 62, "claves": list(claves)},
-              "musica": musica or {"generar": "curiosidad", "semilla": 1, "db": -13}, "lufs": -19, "grano": grano,
+              "musica": dict(musica or {"generar": "curiosidad", "semilla": 1, "db": -13}), "lufs": -19, "grano": grano,
               "escenas": escenas, "sfx": sorted(self.FX, key=lambda e: e["t"])}
+        if musica_viva and "archivo" not in ep["musica"]:
+            # la música sigue al montaje: se recoge en el gancho y en los planos largos y aprieta donde hay ráfagas de cortes;
+            # termina en el acorde que resuelve en el primero (si el Short se repite, enlaza)
+            ini = [e["inicio"] for e in escenas]
+            curva = []
+            for k, e in enumerate(escenas):
+                c = (e["inicio"] + e["fin"]) / 2
+                cortes = sum(1 for t in ini if abs(t - c) <= 2.0)
+                nivel = forzada.get(k, min(0.95, max(0.3, 0.25 + 0.14 * cortes)))
+                curva.append([round(c, 2), round(0.35 if c < 1.5 and k not in forzada else nivel, 2)])
+            ep["musica"].setdefault("energia", curva)
+            ep["musica"].setdefault("bucle", True)
         if gancho:
             ep["estilo_subtitulos"]["gancho"] = True  # DECISIONS 2026-11-16: gancho entero en el fotograma 0
         json.dump(ep, open(os.path.join(self.out, "episodio.json"), "w"), ensure_ascii=False, indent=1)

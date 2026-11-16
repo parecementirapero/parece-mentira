@@ -846,14 +846,34 @@ class Persona(Elemento):
 _SVG = {}
 
 
-def _svg(ruta, ancho, sombra=None):
-    """Rasteriza un SVG a `ancho` px con rsvg-convert (librsvg). Cacheado por ruta y ancho."""
-    import io
+def _ruta_raster(ruta, ancho):
+    """PNG en caché de disco de un SVG a ese ancho (junto al SVG, en .raster/). Cambia si cambia el SVG."""
+    import os
+    st = os.stat(ruta)
+    d = os.path.join(os.path.dirname(ruta), ".raster")
+    return os.path.join(d, f"{os.path.splitext(os.path.basename(ruta))[0]}_{int(ancho)}_{st.st_size}_{int(st.st_mtime)}.png")
+
+
+def rasterizar(ruta, ancho):
+    """Rasteriza un SVG con rsvg-convert a la caché de disco (si no está ya) y devuelve la ruta del PNG.
+    Los fondos con feTurbulence tardan 1–3 s cada uno: con la caché solo se pagan una vez, también entre
+    ejecuciones de --hoja y entre los procesos del render en paralelo."""
+    import os
     import subprocess
+    png = _ruta_raster(ruta, ancho)
+    if not os.path.exists(png):
+        os.makedirs(os.path.dirname(png), exist_ok=True)
+        tmp = f"{png}.{os.getpid()}.tmp"
+        subprocess.check_call(["rsvg-convert", "-w", str(int(ancho)), ruta, "-o", tmp])
+        os.replace(tmp, png)
+    return png
+
+
+def _svg(ruta, ancho, sombra=None):
+    """SVG rasterizado a `ancho` px. Caché en memoria (por proceso) y en disco (.raster/)."""
     clave = (ruta, ancho, str(sombra))
     if clave not in _SVG:
-        png = subprocess.check_output(["rsvg-convert", "-w", str(ancho), ruta])
-        img = Image.open(io.BytesIO(png)).convert("RGBA")
+        img = Image.open(rasterizar(ruta, ancho)).convert("RGBA")
         if sombra:
             img = sombra_suave(img, tuple(sombra.get("desplaz", (0, 20))), sombra.get("radio", 18),
                                sombra.get("op", 0.45))

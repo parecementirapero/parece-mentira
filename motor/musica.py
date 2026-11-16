@@ -57,7 +57,19 @@ def _lp(x, corte):
         return y
 
 
-def generar(salida, dur, estilo="curiosidad", semilla=1):
+def _curva(energia, t):
+    """Interpola [(segundo, nivel 0..1), ...] sobre el eje de tiempo t."""
+    if not energia:
+        return np.full(len(t), 0.5)
+    e = sorted(energia)
+    return np.interp(t, [a for a, _ in e], [b for _, b in e])
+
+
+def generar(salida, dur, estilo="curiosidad", semilla=1, energia=None, bucle=False):
+    """energia: [(segundo, nivel 0..1)] → la música se abre (más brillo y arpegio) y gana pulso (bombo suave y
+    shaker por encima de 0,55) donde el vídeo aprieta, y se recoge donde hay que escuchar la voz.
+    bucle: el último acorde es el que resuelve en el primero y no hay fundido largo: al reiniciarse el Short
+    la música enlaza sin corte."""
     cfg = ESTILOS[estilo]
     rng = np.random.default_rng(semilla)
     n = int(dur * SR)
@@ -65,9 +77,13 @@ def generar(salida, dur, estilo="curiosidad", semilla=1):
     L, R = np.zeros(n), np.zeros(n)
     compas = 4 * 60 / cfg["bpm"]
     dur_acorde = 2 * compas
+    E = _curva(energia, t)
+    Larp, Rarp = np.zeros(n), np.zeros(n)
+    n_ac = int(np.ceil(dur / dur_acorde))
+    desfase = (len(cfg["acordes"]) - n_ac % len(cfg["acordes"])) % len(cfg["acordes"]) if bucle else 0
     k = 0
     while k * dur_acorde < dur:
-        raiz, tp = cfg["acordes"][k % len(cfg["acordes"])]
+        raiz, tp = cfg["acordes"][(k + desfase) % len(cfg["acordes"])]
         f = _acorde(raiz, tp, cfg["octava"])
         a0, a1 = int(k * dur_acorde * SR), min(n, int(((k + 1) * dur_acorde + 1.2) * SR))
         tt = np.arange(a1 - a0) / SR
@@ -94,17 +110,40 @@ def generar(salida, dur, estilo="curiosidad", semilla=1):
                 tb = np.arange(b1 - b0) / SR
                 nota = (np.sin(2 * np.pi * fr * tb) + 0.3 * np.sin(4 * np.pi * fr * tb)) * np.exp(-tb * 4.5) * 0.05
                 pan = 0.5 + 0.35 * np.sin(m * 1.3)
-                L[b0:b1] += nota * pan
-                R[b0:b1] += nota * (1 - pan)
+                Larp[b0:b1] += nota * pan
+                Rarp[b0:b1] += nota * (1 - pan)
                 m += 1
         k += 1
     corte = 900 + 1400 * cfg["brillo"]
-    L, R = _lp(L, corte), _lp(R, corte)
+    if energia is None:
+        L, R = _lp(L + Larp, corte), _lp(R + Rarp, corte)
+    else:
+        # dos versiones (oscura y brillante) mezcladas según la energía; el arpegio entra con ella
+        ga = 0.35 + 1.1 * E
+        Lo, Ro = _lp(L + Larp * ga, corte * 0.7), _lp(R + Rarp * ga, corte * 0.7)
+        Lb, Rb = _lp(L + Larp * ga, corte * 2.6), _lp(R + Rarp * ga, corte * 2.6)
+        L, R = Lo * (1 - E) + Lb * E, Ro * (1 - E) + Rb * E
+        # pulso: bombo suave en cada negra y shaker a contratiempo, solo donde la energía pasa de 0,55
+        negra = 60 / cfg["bpm"]
+        m = 0
+        while m * negra < dur:
+            i0 = int(m * negra * SR)
+            g = max(0.0, float(E[min(i0, n - 1)]) - 0.55) / 0.45
+            if g > 0:
+                nb = min(n - i0, int(0.22 * SR)); tb = np.arange(nb) / SR
+                bombo = np.sin(2 * np.pi * np.cumsum(45 + 70 * np.exp(-tb / 0.03)) / SR) * np.exp(-tb / 0.09) * 0.22 * g
+                L[i0:i0 + nb] += bombo; R[i0:i0 + nb] += bombo
+                j0 = i0 + int(negra / 2 * SR); ns = min(max(0, n - j0), int(0.06 * SR))
+                if ns > 0:
+                    sh = rng.normal(0, 1, ns); sh = (sh - _lp(sh, 5000)) * np.exp(-np.arange(ns) / SR / 0.015) * 0.05 * g
+                    L[j0:j0 + ns] += sh * 0.4; R[j0:j0 + ns] += sh * 0.6
+            m += 1
+        L, R = L * (0.8 + 0.35 * E), R * (0.8 + 0.35 * E)
     # vaivén lento del volumen
     lfo = 0.85 + 0.15 * np.sin(2 * np.pi * t / 7.0)
     L, R = L * lfo, R * lfo
     # entrada y salida
-    fade = np.minimum(1, t / 1.0) * np.minimum(1, (dur - t) / 1.5)
+    fade = (np.minimum(1, t / 0.12) * np.minimum(1, (dur - t) / 0.2)) if bucle else (np.minimum(1, t / 1.0) * np.minimum(1, (dur - t) / 1.5))
     L, R = L * fade, R * fade
     pico = max(np.abs(L).max(), np.abs(R).max(), 1e-6)
     est = np.stack([L, R], 1) / pico * 0.6
