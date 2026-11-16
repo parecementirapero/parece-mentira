@@ -12,7 +12,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Estadísticas: cuando haya datos reales, tarea programada en la nube que republique cada mañana la página de Claude «Parece Mentira · Estadísticas» con `estadisticas/web/index.html`
 - [ ] Estadísticas: rellenar `estadisticas/etiquetas.json` (tema, voz, gancho) de los vídeos publicados para el Laboratorio
 - [ ] 2026-11-17 — Nico y Jorge: decidir si se prueba el lote de la mañana en la nube (tarea programada sin depender del Mac: voz por API, montaje y vídeos en el chat; publicar sigue necesitando un Mac encendido en el «ok»). Antes: decidir si la clave de ElevenLabs se guarda en la configuración del entorno en la nube (nunca en el repo) y copiar MP3/MP4 a la carpeta local al publicar. Si sale bien, pasar también el de las 20:00 — propuesto por Jorge 2026-11-16
-- [ ] Revisar la prueba «Luna densa» v2 (38 planos con micro escenas, efectos de sonido; vídeo en el chat de Nico) y decidir si ese ritmo pasa a ser el estándar; si gusta, generar la locución con el texto de `lotes/prueba-luna-densa/guion.txt` (velocidad ≈1,1 para que quepa en ~47 s) y volver a montarlo con `gen.py DIR audio.mp3 alineacion.json`
+- [ ] Revisar la prueba «Luna densa» v3 (39 planos de 0,3 a 2,7 s, efectos de sonido; vídeo en el chat de Nico) y decidir si ese ritmo pasa a ser el estándar; si gusta, generar la locución con el texto de `lotes/prueba-luna-densa/guion.txt` (155 palabras, velocidad normal) y volver a montarlo con `gen.py DIR audio.mp3 alineacion.json`
 - [ ] Nico y Jorge: tras ver el lote 2026-11-16-tarde (prueba de temas cotidianos), decidir el 2026-11-17 si la mezcla 2 cotidianos + 1 histórico se queda fija, pasa a todo cotidiano o se vuelve a lo de antes; apuntarlo en `DECISIONS.md`
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
@@ -33,6 +33,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## Hecho
 - [x] Web de estadísticas: `estadisticas/` (recoger.py, construir.py, plantilla, autorizar.py, etiquetas) + workflow diario `.github/workflows/estadisticas.yml`; página de Claude publicada con datos de ejemplo — Nico — 2026-11-16
+- [x] «Luna densa» v3: ritmo variable (0,3–2,7 s), planos atados a palabras, control de lectura, guion de 155 palabras — Nico — 2026-11-16
 - [x] «Luna densa» v2 con micro escenas y detalles secundarios (38 planos) — Nico — 2026-11-16
 - [x] Prueba «Luna densa» desde cero: guion de 169 palabras, 29 planos en 46,6 s, 7 ilustraciones nuevas, 110 efectos de sonido; motor con `sfx` y rótulos con decimales — Nico — 2026-11-16
 - [x] Nivel de acabado decidido: ninguno, se queda como el v4 (Nico) — 2026-11-16

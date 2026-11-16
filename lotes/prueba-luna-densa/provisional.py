@@ -1,7 +1,7 @@
 """Alineación y audio PROVISIONALES (sin voz) para montar antes de tener la locución de ElevenLabs.
 Reparte el guion en DUR segundos por caracteres, con pausas en la puntuación. Uso: python3 provisional.py DIR"""
 import json, os, subprocess, sys
-DUR = 46.6
+DUR = round(len(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guion.txt"), encoding="utf-8").read().split()) / 3.28 + 0.5, 2)  # ritmo natural de la voz v1 (152 palabras en 46,3 s)
 out = sys.argv[1]; os.makedirs(out, exist_ok=True)
 txt = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "guion.txt"), encoding="utf-8").read().strip()
 PAUSA = {".": 0.32, "?": 0.32, ":": 0.22, ",": 0.12}
