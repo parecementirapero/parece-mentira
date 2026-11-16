@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 20:50 — Nico — rama `main` — chat en la nube (Mac de Nico)
+**Decisión**: Nico pide dejar en `DECISIONS.md` el método «denso» (prueba de la Luna) como estándar de los vídeos: planos atados a palabras, duración variable, micro escenas, tiempo de lectura, detalles de fondo que duran, figuras y fondos detallados, neones sobre oscuro, sonido de detalle bajo y música presente. Sustituye la regla de «un plano por frase» del v4.
+**Ojo**: `AGENTE.md` y el motor aún no lo aplican; los lotes automáticos siguen como antes hasta hacer la biblioteca y reescribir el manual. Falta que Jorge lo vea.
+**Siguiente paso**: biblioteca en `motor/` + `AGENTE.md`.
+
 ## 2026-11-16 20:35 — Nico — rama `main` — chat en la nube (Mac de Nico)
 **Hecho**: a Nico le sonaba demasiado el «shhh» de los cambios de plano y poco la música. En `lotes/prueba-luna-densa/gen.py`: el whoosh automático de transición solo suena si han pasado ≥ 5 s desde el anterior y a −24 dB (antes en todas, a −15); fuera los whoosh pequeños repetidos; los demás 9 dB más bajos (29 → 14 en total). Música de −17 a −13 dB.
 **Pruebas**: render 54,9 s, −19,1 LUFS. No escuchado desde la nube.
