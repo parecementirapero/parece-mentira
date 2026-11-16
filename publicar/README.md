@@ -23,6 +23,6 @@ Solo se publica cuando una persona escribe **«ok»** en el chat del lote (ver `
 
 ## Cómo lo usa el agente
 
-Por cada vídeo con «ok», en este orden: el 1 se publica ya y los demás se programan cada 2 horas (`--publicar-en`, hora con zona, p. ej. `2026-11-17T12:00:00+01:00`). El script no duplica: si ya existe un vídeo con el mismo título en el canal, devuelve su enlace sin subir nada. La salida es una línea JSON con `url`, que va a `lotes/<lote>/estado.md`.
+Por cada vídeo con «ok», en este orden: el 1 se publica ya y los demás se programan cada hora (`--publicar-en`, hora con zona, p. ej. `2026-11-17T12:00:00+01:00`). El script no duplica: si ya existe un vídeo con el mismo título en el canal, devuelve su enlace sin subir nada. La salida es una línea JSON con `url`, que va a `lotes/<lote>/estado.md`.
 
 Ninguna clave entra en el repo ni en el chat.
