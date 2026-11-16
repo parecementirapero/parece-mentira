@@ -310,7 +310,7 @@ def recoger_todo():
             r = mod.recoger(MADRID)
             if r is None:
                 datos[nombre] = previo.get(nombre)
-                if not datos[nombre]: notas.append(f"{nombre.capitalize()} sin conectar.")
+                if not datos[nombre]: notas.append(f"{ {'tiktok': 'TikTok', 'instagram': 'Instagram'}[nombre]} sin conectar.")
             else:
                 datos[nombre], n = r; notas += n
         except Exception as e:
