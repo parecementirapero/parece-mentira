@@ -18,6 +18,8 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 - Las estadísticas incluyen TikTok (Display API, app en sandbox con la cuenta del canal como usuario de prueba; sin retención) e Instagram (Instagram API with Instagram Login, app de Meta en desarrollo). Los tokens que se renuevan solos (TikTok rota en cada uso, Instagram cada lunes) los guarda el workflow en los secretos con `GH_PAT` (token de GitHub solo con «Secrets: read and write» en este repo) — 2026-11-16 — Nico — motivo: comparar las 3 redes sin tocar nada a mano
 
 ## Flujo diario
+- **Subidas separadas** (2026-11-16 — Nico): los vídeos aprobados de un lote no se suben a la vez. El primero sale al dar el «ok» y los demás cada 2 horas (YouTube programado por la API, TikTok con la opción de programar de TikTok Studio; Instagram sigue saliendo seguido porque la web no programa). Motivo: las estadísticas muestran que los vídeos subidos con minutos de diferencia tienen bastantes menos vistas.
+- **YouTube se sube por la API oficial tras el «ok»** (2026-11-16 — Nico): `publicar/subir_youtube.py` con un permiso de subida aparte (`YT_UPLOAD_REFRESH_TOKEN` en `claves.txt`, nunca en el repo). TikTok e Instagram siguen por el navegador integrado (la persona solo elige el archivo) hasta tener la auditoría de TikTok y la API de Instagram. Motivo: que el «ok» baste para publicar.
 - **Decisiones basadas en las estadísticas** (2026-11-16 — Nico): antes de elegir temas, gancho, estructura y duración, el agente de cada lote lee `estadisticas/datos/aprendizajes.md` (conclusiones que se recalculan solas cada mañana, con su fuerza: pista/tendencia/firme), hace un solo experimento por lote y etiqueta cada vídeo (`tema`, `gancho`, `estructura`, `experimento`) para poder medirlo. Las recomendaciones que choquen con estas decisiones no se aplican solas: se proponen en el correo del turno. Motivo: que el canal aprenda de lo que funciona y lo que no.
 - Dos lotes al día: 08:00 en el ordenador de Nico y 20:00 en el de Jorge (una sola notificación por turno). — 2026-11-15 — Jorge
 - Cada lote: ideas sin repetir temas (se admiten continuaciones con información nueva) → guiones → voz → montaje 9:16 → vídeos en el chat del agente → correo de aviso con el enlace al chat a parecementirapero.media@gmail.com. — 2026-11-15 — Jorge
@@ -35,6 +37,7 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 - Nova (supernova de colores) sigue siendo la mascota del canal, pero no aparece dentro de los vídeos. — 2026-11-14 — Nico
 - Más movimiento: que pase algo constantemente en pantalla, ilustración 2.5D en capas, luces y sombras, acciones pequeñas que expliquen, cámara estable. Flechas y giros bien hechos. — 2026-11-14 — Nico
 - Títulos sin «| elevenlabs.io». — 2026-11-15 — Jorge
+- **Ganchos para España y Latinoamérica** (2026-11-16 — Nico): la voz sigue siendo de España, pero gancho y guion evitan expresiones solo de España y usan referencias que se entiendan en los dos lados. Motivo: el 79 % de las vistas de YouTube con país viene de Latinoamérica (México primero).
 - Guiones de locución con las cifras escritas en letra. Cada dato con fuente citada en la descripción. — 2026-11-14 — Nico
 
 ## Voz

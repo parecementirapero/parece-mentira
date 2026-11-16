@@ -4,10 +4,10 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Subida automática a YouTube tras «ok» (API) + subidas separadas + ganchos para España y Latinoamérica — Nico — 2026-11-16 18:10
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Puesta en marcha de la subida automática a YouTube: permitir `oauth2.googleapis.com` y `www.googleapis.com` en los dominios de Claude y ejecutar `autorizar.py --subir` en un Mac; copiar las 3 líneas al `claves.txt` del otro Mac (ver `publicar/README.md`) — Nico/Jorge
 - [ ] Estadísticas: conectar Instagram siguiendo `estadisticas/README.md` — Nico — 2026-11-16 17:26 — EN PAUSA: se usa el Facebook personal de Jorge (la cuenta nueva de Nico quedó suspendida en revisión: no crear más cuentas nuevas). Registro en Meta for Developers a medias: falta verificar el móvil (el SMS no llega; probar desde la app de Facebook del móvil → Centro de cuentas → Información de contacto, o por WhatsApp/llamada). Después: crear app, «API setup with Instagram login», añadir @parecementiramedia (debe ser cuenta profesional), generar token → secreto `IG_TOKEN`
 - [ ] Estadísticas: tarea programada en la nube que republique cada mañana (≈9:15) la página de Claude «Parece Mentira · Estadísticas» (https://claude.ai/artifact/JMkrEuUZrAmq7yzqVao8ea) con `estadisticas/web/index.html`
 - [ ] Estadísticas: rellenar `estadisticas/etiquetas.json` (tema, voz, gancho) de los vídeos publicados para el Laboratorio
@@ -32,6 +32,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Subida automática a YouTube tras «ok» (`publicar/subir_youtube.py`), subidas separadas cada 2 h y ganchos para España y Latinoamérica — Nico — 2026-11-16
 - [x] Análisis diario de estadísticas (`aprendizajes.md` + vista «Conclusiones») y el agente de lotes lo usa para decidir — Nico — 2026-11-16
 - [x] Estadísticas: transiciones suaves y muchas más gráficas (audiencia YouTube, calendario, reparto, dispersión, pirámide de edad) — Nico — 2026-11-16
 - [x] Estadísticas: rediseño «observatorio» (fondo espacial, mapa orbital con un planeta por red según sus vistas; dentro de cada red: cifras, vistas por día, destacados, lista de vídeos y ficha; comparativa, laboratorio y horas como módulos) — Nico — 2026-11-16

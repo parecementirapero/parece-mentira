@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 18:30 — Nico — rama `main`
+**Hecho**: Nico aprueba las dos propuestas del análisis → `DECISIONS.md`: subidas separadas cada 2 h y ganchos que se entiendan en España y Latinoamérica (voz de España). `publicar/subir_youtube.py`: sube a YouTube por la API oficial (subida reanudable, no duplica por título, `--publicar-en` para programar, `--prueba`). La documentación de `videos.insert` (actualizada el 2026-10-15) dice que los proyectos sin verificar ya no quedan forzados a privado. `estadisticas/autorizar.py --subir` saca un permiso aparte (`youtube.upload` + `youtube.readonly`) y lo guarda en `claves.txt`. `AGENTE.md` punto 8 reescrito (YouTube por API, TikTok programado en TikTok Studio, Instagram seguido; la persona solo elige el archivo en TikTok/Instagram). Scripts copiados al Mac de Jorge (`estadisticas/autorizar.py`, `publicar/subir_youtube.py`).
+**Pruebas**: el script falla bien sin claves; ni el workspace ni el Mac llegan todavía a `oauth2.googleapis.com` (dominio no permitido en la cuenta de Claude).
+**Pendiente**: permitir `oauth2.googleapis.com` y `www.googleapis.com` en Claude, ejecutar `autorizar.py --subir` y copiar las líneas al Mac de Nico. TikTok por API exige la auditoría de TikTok; Instagram, la verificación de Meta.
+**Siguiente paso**: primera subida real con el próximo «ok».
+
 ## 2026-11-16 18:00 — Nico — rama `main` — commit `d197071`
 **Hecho**: `estadisticas/analizar.py` saca conclusiones de `data.json` con su fuerza (pista <5 vídeos, tendencia 5–14, firme 15+): ranking por red, vídeos que la red no enseñó, efecto de subir en ráfaga, comparación por tema/gancho/estructura/turno/duración (excluye los vídeos sin empuje), gancho (retención a 3 s), % visto y duración, dónde cae la curva, TikTok vs YouTube, likes y compartidos por 1.000, audiencia (países, edad, fuentes, suscritos) y evolución semanal. `construir.py` lo ejecuta en cada actualización: escribe `estadisticas/datos/aprendizajes.md` y la web tiene la vista nueva «Conclusiones». `AGENTE.md` (punto 2 y 8.5): el agente lee las conclusiones antes de elegir, hace un experimento por lote, apunta «Decisiones según las estadísticas» en `estado.md` y etiqueta los vídeos (`tema`, `gancho`, `estructura`, `experimento`) en `metadatos.json` y `etiquetas.json`. Etiquetados a mano los 4 vídeos publicados. Decisión nueva en `DECISIONS.md`.
 **Pruebas**: análisis con datos reales y de ejemplo; web en Chromium sin errores; artefacto republicado (1794848427-4e86).

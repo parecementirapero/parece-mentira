@@ -5,18 +5,23 @@ Abre el navegador, inicias sesión con la cuenta del canal (parecementirapero.me
 aceptas y el script te enseña el YT_REFRESH_TOKEN para pegarlo en los secretos de GitHub.
 
 Uso (ver README.md):
-  python3 estadisticas/autorizar.py CLIENT_ID CLIENT_SECRET
+  python3 estadisticas/autorizar.py CLIENT_ID CLIENT_SECRET          # estadísticas (solo lectura)
+  python3 estadisticas/autorizar.py --subir CLIENT_ID CLIENT_SECRET  # permiso para SUBIR vídeos (publicar/README.md)
 """
 import http.server, json, os, secrets, select, ssl, sys, threading, urllib.parse, urllib.request, webbrowser
 
 # El Python de python.org en Mac a veces no trae certificados: usamos los del sistema si existen.
 CTX = ssl.create_default_context(cafile="/etc/ssl/cert.pem") if os.path.exists("/etc/ssl/cert.pem") else ssl.create_default_context()
 
-SCOPES = "https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/yt-analytics.readonly"
+SUBIR = "--subir" in sys.argv
+args = [x for x in sys.argv[1:] if x != "--subir"]
+SCOPES = ("https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube.readonly" if SUBIR
+          else "https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/yt-analytics.readonly")
+NOMBRE = "YT_UPLOAD_REFRESH_TOKEN" if SUBIR else "YT_REFRESH_TOKEN"
 
-if len(sys.argv) != 3:
-    sys.exit("Uso: python3 estadisticas/autorizar.py CLIENT_ID CLIENT_SECRET")
-cid, csec = sys.argv[1], sys.argv[2]
+if len(args) != 2:
+    sys.exit("Uso: python3 estadisticas/autorizar.py [--subir] CLIENT_ID CLIENT_SECRET")
+cid, csec = args
 estado = secrets.token_urlsafe(16)
 resultado = {}
 
@@ -41,6 +46,8 @@ url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode({
     "client_id": cid, "redirect_uri": redir, "response_type": "code", "scope": SCOPES,
     "access_type": "offline", "prompt": "consent", "state": estado})
 print("\nSe va a abrir el navegador. Entra con la cuenta DUEÑA del canal y acepta.")
+if SUBIR:
+    print("Si sale «Google no ha verificado esta aplicación»: Configuración avanzada → Ir a Parece Mentira Stats.")
 print("Si no se abre solo, copia esta dirección en el navegador:\n\n" + url + "\n")
 print("Si al final el navegador muestra un error o una página en blanco, copia la dirección")
 print("de la barra (empieza por http://127.0.0.1:8765/) y pégala aquí + Intro.\n")
@@ -74,9 +81,19 @@ tok = json.loads(urllib.request.urlopen("https://oauth2.googleapis.com/token", c
 if "refresh_token" not in tok:
     sys.exit("Google no devolvió refresh_token. Quita el acceso de la app en myaccount.google.com/permissions y repite.")
 
-print("✅ Autorizado. Pega esto como secreto YT_REFRESH_TOKEN en GitHub (no lo compartas ni lo subas al repo):\n")
-print(tok["refresh_token"] + "\n")
+if SUBIR:
+    print("✅ Autorizado para subir vídeos. No lo compartas ni lo subas al repo.")
+else:
+    print("✅ Autorizado. Pega esto como secreto YT_REFRESH_TOKEN en GitHub (no lo compartas ni lo subas al repo):\n")
+    print(tok["refresh_token"] + "\n")
 if os.path.exists("claves.txt"):
-    with open("claves.txt", "a", encoding="utf-8") as f:
-        f.write("\nYT_REFRESH_TOKEN=" + tok["refresh_token"] + "\n")
-    print("También lo he guardado al final de claves.txt (línea YT_REFRESH_TOKEN=).")
+    lineas = [l for l in open("claves.txt", encoding="utf-8").read().splitlines() if not l.strip().startswith(NOMBRE + "=")]
+    nuevas = {NOMBRE: tok["refresh_token"]}
+    if SUBIR:
+        nuevas.update({"YT_CLIENT_ID": cid, "YT_CLIENT_SECRET": csec})
+        lineas = [l for l in lineas if l.split("=", 1)[0].strip() not in nuevas]
+    lineas += [f"{k}={v}" for k, v in nuevas.items()]
+    open("claves.txt", "w", encoding="utf-8").write("\n".join(lineas) + "\n")
+    print("Guardado en claves.txt (" + ", ".join(nuevas) + ").")
+elif SUBIR:
+    print("No encuentro claves.txt en esta carpeta: ejecútalo desde ~/Documents/Parece Mentira.")

@@ -49,7 +49,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 ## 3. Guiones
 
 `lotes/<lote>/guiones.md`, por vídeo:
-- **Gancho** en la primera frase (el primer plano tiene que entenderse sin sonido).
+- **Gancho** en la primera frase (el primer plano tiene que entenderse sin sonido). Que se entienda igual en España y en Latinoamérica: nada de expresiones solo de España (vale «¿sabías que…?», no «flipar», «tío», «mola»), y referencias que funcionen en los dos lados. La voz sigue siendo de España.
 - **Locución**: 130–170 palabras (≈45–60 s; ver `DECISIONS.md`), español de España, tono cercano, **cifras escritas en letra**.
 - **Planos**: qué se ve en cada frase (acciones pequeñas que explican el dato).
 - **Fuentes** con enlace (van a la descripción).
@@ -100,14 +100,16 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3» para algunos). Cualquier otro mensaje = cambios, no aprobación. La aprobación vale para **esa versión exacta**: si se toca algo, hay versión nueva y hace falta otro «ok».
 
 1. Antes de cada subida, comprueba en la red que ese vídeo no está ya publicado (evitar duplicados).
-2. Publica desde el **navegador integrado** del ordenador del turno, con las sesiones ya iniciadas:
-   - YouTube Studio (Short, público, título y descripción de `metadatos.json`, «no es contenido para niños»).
-   - Instagram @parecementiramedia (Reel).
-   - TikTok (con la descripción y hashtags de TikTok).
+2. **Subidas separadas** (ver `DECISIONS.md`): los vídeos aprobados no salen a la vez. El primero se publica ya y cada uno de los siguientes **2 horas después** del anterior.
+3. **YouTube, automático por la API** (`publicar/README.md`), desde `device_bash` en la carpeta local del turno:
+   `python3 publicar/subir_youtube.py --claves claves.txt --metadatos <repo>/lotes/<lote>/metadatos.json --clave 01 --video lotes/<lote>/<archivo>.mp4` y, para los siguientes, `--publicar-en <hora con zona, +2 h, +4 h>`. Copia antes `publicar/subir_youtube.py` del repo a la carpeta local si falta o ha cambiado. Si el script dice que faltan claves o que la red no llega a Google, sube a YouTube desde el navegador como antes y avisa en el chat de qué falta.
+4. **TikTok e Instagram, desde el navegador integrado** del ordenador del turno, con las sesiones ya iniciadas. El selector de archivos no lo puede manejar Claude: pide en el chat que la persona elija el archivo (di cuál) y haz tú todo lo demás.
+   - TikTok: usa la opción de **programar** de TikTok Studio con las mismas horas que YouTube.
+   - Instagram @parecementiramedia (Reel, formato original 9:16): la web no programa; se publican seguidos.
    Si el navegador integrado no deja elegir el archivo, usa Claude in Chrome si está disponible; si no, deja el vídeo listo, di exactamente qué paso falta y no insistas.
-3. Si una red falla, solo se reintenta esa red tras comprobar que no se publicó.
-4. Registra en `lotes/<lote>/estado.md` la URL de cada publicación (o el motivo del bloqueo), actualiza `HANDOFF.md` y push.
-5. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 4.
+5. Si una red falla, solo se reintenta esa red tras comprobar que no se publicó.
+6. Registra en `lotes/<lote>/estado.md` la URL de cada publicación (o el motivo del bloqueo), actualiza `HANDOFF.md` y push.
+7. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6.
 
 ## 9. Límites
 
