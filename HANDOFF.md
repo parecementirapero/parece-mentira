@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 15:58 — Nico (en el Mac de Jorge) — rama `main` — en pausa
+**Hecho**: tarea programada «Estadísticas Parece Mentira: republicar página» (9:14 Madrid, nube, modo automático, `trig_01M865HVYsaR3X7rTzNwALEt`). Secreto `GH_PAT` creado (token fine-grained sin caducidad, solo repo `parece-mentira`, solo Secrets lectura/escritura; copia en `claves.txt`). Página `condiciones.md` añadida a parecementirapero.github.io. TikTok for Developers: cuenta creada por Nico, app «Parece Mentira Stats» y sandbox «estadisticas» a medio configurar (ver TASKS).
+**Siguiente paso**: terminar la app de TikTok (icono, scopes, target user, Apply changes) → `autorizar_tiktok.py` → secretos → Instagram.
+
 ## 2026-11-16 15:45 — Nico (en el Mac de Jorge) — rama `main` — commit `435c720`
 **Hecho**: YouTube conectado a las estadísticas. Cliente OAuth «stats» (App de escritorio) creado; `autorizar.py` ejecutado en el Mac de Jorge (ID, secreto y token en `~/Documents/Parece Mentira/claves.txt`); secretos `YT_CLIENT_ID`, `YT_CLIENT_SECRET` y `YT_REFRESH_TOKEN` en GitHub. Workflow lanzado a mano: OK (commit «estadísticas: actualización 2026-11-16»): 4 vídeos públicos, 7 suscriptores; retención «pendiente» hasta que pasen 48–72 h.
 **Problemas resueltos en el Mac**: licencia de Xcode sin aceptar (`sudo xcodebuild -license accept`); `git clone` del repo privado falla (sin sesión de GitHub en git) → se copió solo el script a `~/Documents/Parece Mentira/estadisticas/`; Python de python.org sin certificados → `autorizar.py` usa `/etc/ssl/cert.pem`; ahora además usa el puerto fijo 8765, deja pegar la URL de vuelta a mano y guarda el token en `claves.txt`.
