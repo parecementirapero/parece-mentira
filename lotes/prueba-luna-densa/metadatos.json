@@ -1,0 +1,55 @@
+{
+ "01": {
+  "archivo": "luna-densa_con_voz_v2.mp4",
+  "titulo": "La Luna se nos va… y se llevará los eclipses 🌑",
+  "youtube": {
+   "titulo": "La Luna se nos va… y se llevará los eclipses 🌑 #Shorts",
+   "descripcion": "La Luna se aleja de la Tierra 3,8 cm al año, lo que crecen tus uñas. Lo medimos con un láser y los espejos que dejó el Apolo 11. Por eso los días se alargan: con los dinosaurios duraban 23,5 horas y el año tenía 372 días (lo cuenta una almeja fósil), y hace 1.400 millones de años, solo 18 horas. Dentro de unos 600 millones de años la Luna ya no podrá tapar el Sol: se acabarán los eclipses totales.\n\nFuentes:\n- Universidad de Wisconsin–Madison — Thank the moon for Earth's lengthening day (PNAS, 2018): https://news.wisc.edu/thank-the-moon-for-earths-lengthening-day\n- Space.com — Ancient clam fossil reveals Earth's day was shorter 70 million years ago (de Winter et al., 2020): https://space.com/ancient-clam-fossil-reveals-earth-shorter-day.html\n- Sky & Telescope — When will the last total solar eclipse occur?: https://skyandtelescope.com/astronomy-resources/astronomy-questions-answers/when-will-the-last-total-solar-eclipse-occur\n- NASA JPL — Apollo 11 Experiment Continues to Return Valuable Data: https://www.jpl.nasa.gov/news/apollo-11-experiment-continues-to-return-valuable-data/\n\n#Shorts #ciencia #luna #eclipse #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "La Luna se aleja de la Tierra 3,8 cm al año, lo que crecen tus uñas. Lo medimos con un láser y los espejos que dejó el Apolo 11. Por eso los días se alargan: con los dinosaurios duraban 23,5 horas y el año tenía 372 días (lo cuenta una almeja fósil), y hace 1.400 millones de años, solo 18 horas. Dentro de unos 600 millones de años la Luna ya no podrá tapar el Sol: se acabarán los eclipses totales.\n\nFuentes:\n- Universidad de Wisconsin–Madison — Thank the moon for Earth's lengthening day (PNAS, 2018): https://news.wisc.edu/thank-the-moon-for-earths-lengthening-day\n- Space.com — Ancient clam fossil reveals Earth's day was shorter 70 million years ago (de Winter et al., 2020): https://space.com/ancient-clam-fossil-reveals-earth-shorter-day.html\n- Sky & Telescope — When will the last total solar eclipse occur?: https://skyandtelescope.com/astronomy-resources/astronomy-questions-answers/when-will-the-last-total-solar-eclipse-occur\n- NASA JPL — Apollo 11 Experiment Continues to Return Valuable Data: https://www.jpl.nasa.gov/news/apollo-11-experiment-continues-to-return-valuable-data/\n\n#ciencia #luna #eclipse #espacio #dinosaurios #curiosidades #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "La Luna se aleja de la Tierra 3,8 cm al año, lo que crecen tus uñas. Lo medimos con un láser y los espejos que dejó el Apolo 11. Por eso los días se alargan: con los dinosaurios duraban 23,5 horas y el año tenía 372 días (lo cuenta una almeja fósil), y hace 1.400 millones de años, solo 18 horas. Dentro de unos 600 millones de años la Luna ya no podrá tapar el Sol: se acabarán los eclipses totales. Fuentes: https://news.wisc.edu/thank-the-moon-for-earths-lengthening-day https://space.com/ancient-clam-fossil-reveals-earth-shorter-day.html https://skyandtelescope.com/astronomy-resources/astronomy-questions-answers/when-will-the-last-total-solar-eclipse-occur #ciencia #luna #eclipse #espacio #curiosidades #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "Universidad de Wisconsin–Madison — Thank the moon for Earth's lengthening day (PNAS, 2018)",
+    "url": "https://news.wisc.edu/thank-the-moon-for-earths-lengthening-day"
+   },
+   {
+    "titulo": "Space.com — Ancient clam fossil reveals Earth's day was shorter 70 million years ago (de Winter et al., 2020)",
+    "url": "https://space.com/ancient-clam-fossil-reveals-earth-shorter-day.html"
+   },
+   {
+    "titulo": "Sky & Telescope — When will the last total solar eclipse occur?",
+    "url": "https://skyandtelescope.com/astronomy-resources/astronomy-questions-answers/when-will-the-last-total-solar-eclipse-occur"
+   },
+   {
+    "titulo": "NASA JPL — Apollo 11 Experiment Continues to Return Valuable Data",
+    "url": "https://www.jpl.nasa.gov/news/apollo-11-experiment-continues-to-return-valuable-data/"
+   }
+  ],
+  "comentario": "¿Has visto alguna vez un eclipse total? 👇",
+  "etiquetas": {
+   "tema": "Ciencia",
+   "gancho": "orden + comparación cotidiana (uñas)",
+   "estructura": "cadena de datos",
+   "experimento": "método denso (40 planos, micro escenas, efectos de sonido); rehace el tema del 02 del lote 2026-11-15-tarde",
+   "portada": "centro"
+  },
+  "portada": {
+   "texto": "LA LUNA SE NOS VA",
+   "clave": "VA",
+   "eleccion": {
+    "por": "revisión visual",
+    "numero": 4,
+    "diseno": "centro",
+    "t": 5.3,
+    "motivo": "uña + Tierra y Luna con la flecha: enseña la comparación del gancho y el tema"
+   }
+  }
+ }
+}

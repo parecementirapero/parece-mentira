@@ -69,5 +69,6 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 
 ## Redes
 - Excepción a «no repetir temas»: se publica la prueba v2 «Huellas en la Luna» aunque el tema estaba usado en el sistema antiguo. — 2026-11-15 — Nico (con Jorge) — motivo: el vídeo antiguo está retirado y esta es la primera muestra del estilo nuevo
+- Excepción a «no repetir temas»: se publica «La Luna se nos va…» (método denso, `lotes/prueba-luna-densa/`) aunque el tema ya salió en el 02 del lote 2026-11-15-tarde; el vídeo antiguo se retira (privado). — 2026-11-16 — Nico — motivo: es la primera muestra del método denso y trae datos nuevos (dinosaurios, almeja fósil, fin de los eclipses totales)
 - Todo lo publicado antes del 2026-11-15 se retiró: YouTube en privado, TikTok en «Solo yo» (salvo «Mi cerebro cuando toca callarse», bloqueado; hay que hacerlo desde el móvil), Instagram borrado. — 2026-11-15 — Jorge
 - **Sin post-proceso de acabado** (grano animado, LUT documental, papel, bokeh): probado sobre el 02 v4 y Nico prefiere el aspecto original («me gusta más como estaba antes»). `motor/acabado.py` se queda en el repo sin usar. — 2026-11-16 — Nico
