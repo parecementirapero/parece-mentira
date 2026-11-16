@@ -469,7 +469,7 @@ function pintarVs(host, r){
 }
 /* nombres bonitos de Analytics */
 const DISP={MOBILE:'Móvil',TABLET:'Tablet',DESKTOP:'Ordenador',TV:'Tele',GAME_CONSOLE:'Consola',UNKNOWN_PLATFORM:'Otros'};
-const SO={ANDROID:'Android',IOS:'iPhone (iOS)',WINDOWS:'Windows',MACINTOSH:'Mac',LINUX:'Linux',CHROMECAST:'Chromecast',SMART_TV:'Smart TV',PLAYSTATION:'PlayStation',XBOX:'Xbox',OTHER:'Otros'};
+const SO={ANDROID:'Android',IOS:'iPhone (iOS)',WINDOWS:'Windows',MACINTOSH:'Mac',LINUX:'Linux',CHROMECAST:'Chromecast',SMART_TV:'Smart TV',WEBOS:'Tele LG',TIZEN:'Tele Samsung',ROKUOS:'Roku',ANDROID_TV:'Android TV',PLAYSTATION:'PlayStation',XBOX:'Xbox',OTHER:'Otros'};
 const SUB={SUBSCRIBED:'Suscritos',UNSUBSCRIBED:'No suscritos'};
 const PAIS=(()=>{try{const d=new Intl.DisplayNames(['es'],{type:'region'});return c=>d.of(c)}catch(e){return c=>c}})();
 const BANDERA=c=>/^[A-Z]{2}$/.test(c)?String.fromCodePoint(...[...c].map(x=>127397+x.charCodeAt(0))):'';
@@ -627,10 +627,10 @@ function pintarYoutubeExtra(){
   if(ps.length)barrasH(document.getElementById('yt-paises'),ps.slice(0,8).map(([c,v,mn])=>({k:(BANDERA(c)+' '+PAIS(c)).trim(),v,extra:fmt(mn)+' minutos vistos'})),{nombre:'Vistas',ml:150});else pend(document.getElementById('yt-paises'),'Sin datos de países todavía.');
   partida(document.getElementById('yt-disp2'),(X.dispositivos||[]).map(([k,v],i)=>({k:DISP[k]||k,v,color:CAT[i%6]})),{unidad:'vistas'});
   const su=X.suscritos||[];partida(document.getElementById('yt-subs'),su.map(([k,v,p])=>({k:SUB[k]||k,v,color:k==='SUBSCRIBED'?CAT[2]:CAT[0],extra:p!=null?`Ven el ${pct(p)} de media`:''})),{unidad:'vistas'});
-  const sS=su.find(x=>x[0]==='SUBSCRIBED'),sN=su.find(x=>x[0]==='UNSUBSCRIBED');if(sS&&sN&&sS[2]!=null&&sN[2]!=null)document.getElementById('yt-subs-nota').textContent=`Los suscritos ven el ${pct(sS[2])} de media; el resto, el ${pct(sN[2])}`;
+  const sS=su.find(x=>x[0]==='SUBSCRIBED'),sN=su.find(x=>x[0]==='UNSUBSCRIBED');if(sS&&sN&&sS[1]&&sN[1]&&sS[2]!=null&&sN[2]!=null)document.getElementById('yt-subs-nota').textContent=`Los suscritos ven el ${pct(sS[2])} de media; el resto, el ${pct(sN[2])}`;
   partida(document.getElementById('yt-so'),(X.sistemas||[]).map(([k,v],i)=>({k:SO[k]||k,v,color:CAT[i%6]})),{unidad:'vistas'});
   const fu=X.fuentes||[], tf=fu.reduce((s,f)=>s+f[1],0);
-  if(fu.length)barrasH(document.getElementById('yt-fuentes'),fu.slice(0,7).map(([k,v])=>({k,v:v/tf*100,extra:fmt(v)+' vistas'})),{fmt:pct,nombre:'Vistas',max:100,ml:150});else pend(document.getElementById('yt-fuentes'),'Sin datos todavía.');
+  if(fu.length)barrasH(document.getElementById('yt-fuentes'),fu.slice(0,7).map(([k,v])=>({k,v:v/tf*100,extra:fmt(v)+' vistas'})),{fmt:pct,nombre:'Vistas',max:100,ml:180});else pend(document.getElementById('yt-fuentes'),'Sin datos todavía.');
 }
 function pintarRedExtra(r){
   const x=REDES[r], ult=[...VID[r]].sort((a,b)=>(b.fecha+b.hora).localeCompare(a.fecha+a.hora)).slice(0,10);
