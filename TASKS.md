@@ -4,10 +4,10 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Prueba de acabado visual (grano animado, LUT documental, textura de papel, partículas/capas) antes/después sobre el vídeo 02 v4 — Nico — 2026-11-16 12:40 — prueba solo visual en el workspace (el audio está en los Macs)
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Nico y Jorge: elegir nivel de acabado (ninguno / normal / intenso) tras ver la prueba del 02; si se aprueba, integrar `motor/acabado.py` en `render.py` (opción `"acabado"` en episodio.json) y bajar la aberración cromática a 1 px
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
 - [ ] Decidir si se activan en TikTok las «revisiones automáticas de contenido» (ajuste de cuenta que ofrece TikTok al subir)
@@ -26,6 +26,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Prueba de acabado visual antes/después del 02 v4 (Luna) con `motor/acabado.py`: bloom, LUT documental, papel, partículas en primer plano, parpadeo, grano animado — Nico — 2026-11-16
 - [x] Se deja Drive: la revisión se hace en el chat de Claude (AGENTE §7, DECISIONS) — Jorge — 2026-11-16
 - [x] Publicar lote 2026-11-15-tarde v4 (01 v4c, 02 v4, 03 v4) en YouTube, Instagram y TikTok (aprobado por Jorge: «súbelos») — Jorge — 2026-11-15 23:42 → hecho 2026-11-16 00:05: 3 redes, enlaces en `lotes/2026-11-15-tarde/estado.md`
 - [x] Estilo de ilustración v4 en los 3 vídeos del lote 2026-11-15-tarde (balanza del 01 arreglada) — Jorge — 2026-11-15

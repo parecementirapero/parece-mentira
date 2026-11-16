@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 12:55 — Nico — rama `main` — chat en la nube (sin acceso a los Macs)
+**Hecho**: módulo nuevo `motor/acabado.py` (post-proceso sobre un MP4 ya renderizado, sin coste): halo/bloom en las luces, LUT «documental» generado por código (negros levantados, sombras frías, luces cálidas, saturación 90 %) al 75 %, textura de papel en luz suave, capa de bokeh y polvo en primer plano, parpadeo de exposición leve, aberración cromática de 2 px y grano animado solo en luminancia (`-tune grain`, tope 8 Mb/s). Parámetro `--fuerza` (1.0 normal, 1.7 intenso). **No está integrado en `render.py`** todavía.
+**Pruebas**: render del 02 v4 (Luna) sin voz ni subtítulos (el audio está en el Mac de Jorge), 46,7 s; acabado normal e intenso; vídeo comparativo lado a lado; fotogramas revisados (1,5/6/11/20/32/42 s). Pesos: 38,6 MB antes → 47 MB después. Tiempo: ~4,5 min de acabado sobre 2 min de render (las partículas en Python son lo lento).
+**Pendientes**: que Nico y Jorge elijan nivel; integrarlo en el motor; bajar la aberración a 1 px (en las estrellas deja puntitos de color); acelerar las partículas.
+**Siguiente paso**: decisión de nivel en el chat y, si se aprueba, apuntarlo en `DECISIONS.md` y aplicarlo al próximo lote.
+
 ## 2026-11-16 00:10 — Jorge — rama `main` — ordenador de Jorge
 **Decisión**: se deja Drive. Desde el próximo lote, el agente envía los 3 MP4 a su propio chat (`device_stage_files` + `SendUserFile`) y el correo de las 08:00/20:00 lleva el enlace a ese chat para verlos y dar el «ok» allí.
 **Cambiado**: DECISIONS (Drive tachado + regla nueva), AGENTE §7, CLAUDE.md, TASKS (fuera las tareas de Drive para ordenador), PROJECT_STATE.
