@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 15:45 — Nico (en el Mac de Jorge) — rama `main` — commit `435c720`
+**Hecho**: YouTube conectado a las estadísticas. Cliente OAuth «stats» (App de escritorio) creado; `autorizar.py` ejecutado en el Mac de Jorge (ID, secreto y token en `~/Documents/Parece Mentira/claves.txt`); secretos `YT_CLIENT_ID`, `YT_CLIENT_SECRET` y `YT_REFRESH_TOKEN` en GitHub. Workflow lanzado a mano: OK (commit «estadísticas: actualización 2026-11-16»): 4 vídeos públicos, 7 suscriptores; retención «pendiente» hasta que pasen 48–72 h.
+**Problemas resueltos en el Mac**: licencia de Xcode sin aceptar (`sudo xcodebuild -license accept`); `git clone` del repo privado falla (sin sesión de GitHub en git) → se copió solo el script a `~/Documents/Parece Mentira/estadisticas/`; Python de python.org sin certificados → `autorizar.py` usa `/etc/ssl/cert.pem`; ahora además usa el puerto fijo 8765, deja pegar la URL de vuelta a mano y guarda el token en `claves.txt`.
+**Siguiente paso**: `GH_PAT`, TikTok e Instagram (README); tarea programada que republique la página de Claude cada mañana.
+
 ## 2026-11-16 15:20 — Nico — rama `main`
 **Hecho (navegador integrado del Mac de Nico, con permiso de Nico)**: aceptada la Política de Datos de Usuario de las APIs de Google y creado Google Auth Platform («Parece Mentira Stats», externo). Google ya exige página principal + privacidad en dominio propio para publicar → creado el repo público `parecementirapero.github.io` (GitHub Pages) con `index.md` (portada: TikTok, Instagram, contacto) y `privacidad.md`; puestos en «Información de marca» + dominio autorizado; app **En producción**. La app de Claude no tiene acceso de escritura a ese repo (se editó desde la web de GitHub).
 **Siguiente paso**: en el Mac de Nico, pulsar «Crear» en el formulario del cliente «stats» ya preparado, copiar ID y secreto a `claves.txt` y seguir el README desde el paso 4.
