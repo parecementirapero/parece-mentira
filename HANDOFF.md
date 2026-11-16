@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 19:45 — Nico — rama `main` — chat en la nube (Mac de Nico)
+**Hecho**: Nico ejecutó en su Terminal `estadisticas/autorizar.py --subir` → `YT_UPLOAD_REFRESH_TOKEN`, `YT_CLIENT_ID` y `YT_CLIENT_SECRET` en `/Users/nico/Documents/Parece Mentira/claves.txt`. El Mac de Nico ya puede subir a YouTube por API en el lote de las 08:00.
+**Pruebas**: `subir_youtube.py --prueba` desde el Mac de Nico (metadatos del lote 2026-11-15-tarde, vídeo 02, archivo vacío): token canjeado y canal consultado sin errores, no se subió nada. Ojo: no detectó como «yaEstaba» el título de la Luna; puede que el título publicado sea distinto. Revisar en la primera subida real que no duplica.
+**Seguridad**: Nico pegó todas las claves de `claves.txt` en el chat (incluidas `GH_PAT` y la de ElevenLabs). Se le recomendó rotarlas; él dijo que no importa.
+**Siguiente paso**: lote 2026-11-17-manana con subida por API tras el «ok».
+
 ## 2026-11-16 19:40 — Nico — rama `main` — chat en la nube (Mac de Nico)
 **Hecho**: el Mac de Nico no tenía código del repo (solo `claves.txt`, `lotes/`, `renders/`, `referencias-objetivo/`). Copiados a `/Users/nico/Documents/Parece Mentira/` los scripts que tienen que correr en el Mac del turno de las 08:00: `publicar/` (subir_youtube.py), `motor/` (openverse.py, portadas.py…) y `estadisticas/autorizar.py`, desde `main` commit `f47be02` (anotado en `VERSION_COPIA.txt`). El .tgz usado quedó en `_to_delete/` (borrar a mano).
 **Pruebas**: `subir_youtube.py --prueba` corre en el Mac de Nico y dice que faltan `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_UPLOAD_REFRESH_TOKEN` (esperado).
