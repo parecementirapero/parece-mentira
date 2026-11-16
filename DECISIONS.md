@@ -14,6 +14,7 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 - `api.elevenlabs.io` añadido a los dominios permitidos de la cuenta de Claude. — 2026-11-15 — Jorge
 
 - Estadísticas del canal: web propia en `estadisticas/` actualizada cada mañana antes de las 9:00 por GitHub Actions (nube, 0 €), en vez de un correo diario. Credenciales de Google solo en los secretos de GitHub (`YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`), nunca en el repo; acceso de solo lectura (youtube.readonly + yt-analytics.readonly) — 2026-11-16 — Nico — motivo: ver histórico y comparar vídeos sin depender de un Mac encendido
+- Las estadísticas incluyen TikTok (Display API, app en sandbox con la cuenta del canal como usuario de prueba; sin retención) e Instagram (Instagram API with Instagram Login, app de Meta en desarrollo). Los tokens que se renuevan solos (TikTok rota en cada uso, Instagram cada lunes) los guarda el workflow en los secretos con `GH_PAT` (token de GitHub solo con «Secrets: read and write» en este repo) — 2026-11-16 — Nico — motivo: comparar las 3 redes sin tocar nada a mano
 
 ## Flujo diario
 - Dos lotes al día: 08:00 en el ordenador de Nico y 20:00 en el de Jorge (una sola notificación por turno). — 2026-11-15 — Jorge

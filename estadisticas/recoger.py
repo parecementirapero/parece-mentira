@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Recoge las estadísticas del canal de YouTube y las guarda en datos/data.json.
+"""Recoge las estadísticas de YouTube, TikTok e Instagram y las guarda en datos/data.json.
 
 Solo usa la librería estándar de Python (nada que instalar).
 
-Credenciales (variables de entorno, NUNCA en el repo):
-  YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
-  -> se consiguen una sola vez con autorizar.py (ver README.md)
+Credenciales (variables de entorno / secretos de GitHub, NUNCA en el repo), ver README.md:
+  YouTube:   YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN      (autorizar.py)
+  TikTok:    TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, TIKTOK_REFRESH_TOKEN  (autorizar_tiktok.py)
+  Instagram: IG_TOKEN                                              (panel de Meta)
+  GH_PAT:    para guardar los tokens que TikTok/Instagram renuevan
+Cada red es independiente: si falta o falla una, se conservan sus datos del día anterior.
 
 Uso:
   python3 estadisticas/recoger.py                 # datos reales
@@ -36,27 +39,12 @@ TEMAS_HASHTAG = {  # hashtag de la descripción -> tema (si no hay etiqueta manu
 
 
 # ---------------------------------------------------------------- HTTP / OAuth
-def _http(url, data=None, headers=None, intentos=4):
-    for i in range(intentos):
-        try:
-            req = urllib.request.Request(url, data=data, headers=headers or {})
-            with urllib.request.urlopen(req, timeout=60) as r:
-                return json.loads(r.read().decode())
-        except urllib.error.HTTPError as e:
-            cuerpo = e.read().decode(errors="replace")
-            if e.code in (429, 500, 502, 503) and i < intentos - 1:
-                time.sleep(2 ** i * 3); continue
-            raise RuntimeError(f"HTTP {e.code} en {url.split('?')[0]}: {cuerpo[:500]}") from None
-        except urllib.error.URLError:
-            if i < intentos - 1:
-                time.sleep(2 ** i * 3); continue
-            raise
+sys.path.insert(0, AQUI)
+from comun import http as _http, faltan  # noqa: E402
+import tiktok, instagram  # noqa: E402
 
 
 def token_de_acceso():
-    faltan = [k for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN") if not os.environ.get(k)]
-    if faltan:
-        sys.exit("Faltan variables de entorno: " + ", ".join(faltan) + " (ver estadisticas/README.md)")
     cuerpo = urllib.parse.urlencode({
         "client_id": os.environ["YT_CLIENT_ID"], "client_secret": os.environ["YT_CLIENT_SECRET"],
         "refresh_token": os.environ["YT_REFRESH_TOKEN"], "grant_type": "refresh_token"}).encode()
@@ -64,7 +52,7 @@ def token_de_acceso():
         return _http("https://oauth2.googleapis.com/token", cuerpo)["access_token"]
     except RuntimeError as e:
         if "invalid_grant" in str(e):
-            sys.exit("El permiso de Google ha caducado o se ha revocado (invalid_grant). "
+            raise RuntimeError("El permiso de Google ha caducado o se ha revocado (invalid_grant). "
                      "Vuelve a ejecutar autorizar.py y actualiza el secreto YT_REFRESH_TOKEN. "
                      "Si pasa cada 7 días: la app de Google Cloud está en modo «Prueba»; pásala a «En producción».")
         raise
@@ -116,7 +104,7 @@ def cargar_etiquetas():
 
 
 # ---------------------------------------------------------------- recogida
-def recoger():
+def recoger_youtube():
     yt = YouTube(token_de_acceso())
     ahora = dt.datetime.now(MADRID)
     hoy = ahora.date()
@@ -177,7 +165,7 @@ def recoger():
         # etiquetas: automáticas y luego las manuales encima
         item["etiquetas"] = {"tema": tema_por_hashtags(sn.get("description"))}
         if item["lote"]: item["etiquetas"]["lote"] = item["lote"]
-        item["etiquetas"].update(etiquetas.get(vid, {}))
+        item["etiquetas"].update({k: x for k, x in etiquetas.get(vid, {}).items() if k not in ("tiktok", "instagram")})
         item["tema"] = item["etiquetas"].get("tema", "Sin etiquetar")
 
         if horas >= 48:  # antes Analytics no suele tener la curva
@@ -209,7 +197,6 @@ def recoger():
                "subs": d["subscribersGained"] - d["subscribersLost"], "likes": d["likes"]} for d in diario]
 
     return {
-        "generado": ahora.isoformat(timespec="seconds"), "ejemplo": False,
         "canal": canal["snippet"]["title"],
         "canalTotales": {"suscriptores": int(canal["statistics"].get("subscriberCount", 0)),
                          "vistas": int(canal["statistics"].get("viewCount", 0)),
@@ -217,6 +204,123 @@ def recoger():
         "videos": videos, "diario": diario,
         "notas": [] if engaged else ["La API no devolvió «vistas enganchadas» (engagedViews)."],
     }
+
+
+# ---------------------------------------------------------------- unir redes
+def _palabras(t):
+    return {w for w in re.findall(r"[a-záéíóúñü0-9]{4,}", (t or "").lower())}
+
+
+def enlaces_entre_redes(etiquetas):
+    """Grupos {youtube, tiktok, instagram} sacados de lotes/*/estado.md y de etiquetas.json."""
+    pat = {"youtube": r"youtube\.com/shorts/([A-Za-z0-9_-]{11})",
+           "instagram": r"instagram\.com/(?:[\w.]+/)?reel/([A-Za-z0-9_-]+)",
+           "tiktok": r"tiktok\.com/@[\w.]+/video/(\d+)"}
+    grupos = []
+    for f in sorted(glob.glob(os.path.join(RAIZ, "lotes", "*", "estado.md"))):
+        texto = open(f, encoding="utf-8").read()
+        sueltos = {}
+        for linea in texto.splitlines():
+            g = {red: m.group(1) for red, p in pat.items() if (m := re.search(p, linea))}
+            if len(g) >= 2: grupos.append(g)
+            elif len(g) == 1: sueltos.setdefault(*next(iter(g.items())))
+        todos = {red: set(re.findall(p, texto)) for red, p in pat.items()}
+        if all(len(v) <= 1 for v in todos.values()) and sum(len(v) for v in todos.values()) >= 2:
+            grupos.append({red: next(iter(v)) for red, v in todos.items() if v})
+    for yid, e in etiquetas.items():
+        g = {"youtube": yid, **{r: e[r] for r in ("tiktok", "instagram") if e.get(r)}}
+        if len(g) >= 2: grupos.append(g)
+    return grupos
+
+
+def construir_contenidos(datos, etiquetas):
+    """Une el mismo vídeo publicado en varias redes. Primero por enlaces; si no, por fecha y título."""
+    yt = {v["id"]: v for v in datos.get("videos", [])}
+    tt = {v["id"]: v for v in (datos.get("tiktok") or {}).get("videos", [])}
+    ig = {v["codigo"]: v for v in (datos.get("instagram") or {}).get("videos", [])}
+    usados = {"youtube": set(), "tiktok": set(), "instagram": set()}
+    cont = []
+    for g in enlaces_entre_redes(etiquetas):
+        g = {r: i for r, i in g.items() if i in {"youtube": yt, "tiktok": tt, "instagram": ig}[r]}
+        if len(g) < 2 or any(i in usados[r] for r, i in g.items()): continue
+        for r, i in g.items(): usados[r].add(i)
+        cont.append(g)
+    for yid in yt:
+        if yid not in usados["youtube"]:
+            usados["youtube"].add(yid); cont.append({"youtube": yid})
+    for red, tabla in (("tiktok", tt), ("instagram", ig)):
+        for i, v in tabla.items():
+            if i in usados[red]: continue
+            mejor, nota = None, 0.0
+            f = dt.date.fromisoformat(v["fecha"])
+            for c in cont:
+                if red in c or "youtube" not in c: continue
+                y = yt[c["youtube"]]
+                if abs((dt.date.fromisoformat(y["fecha"]) - f).days) > 1: continue
+                a, b = _palabras(y["titulo"]), _palabras(v["titulo"])
+                j = len(a & b) / max(1, len(a | b))
+                if j > nota: mejor, nota = c, j
+            usados[red].add(i)
+            if mejor and nota >= 0.25: mejor[red] = i
+            else: cont.append({red: i})
+    salida = []
+    for c in cont:
+        base = yt.get(c.get("youtube")) or tt.get(c.get("tiktok")) or ig.get(c.get("instagram"))
+        salida.append({"clave": c.get("youtube") or c.get("tiktok") or c.get("instagram"),
+                       "titulo": base["titulo"], "fecha": base["fecha"], **c})
+    return sorted(salida, key=lambda x: x["fecha"])
+
+
+def foto_del_dia(datos, previo, hoy):
+    """Guarda cada día las vistas de cada vídeo: así hay vistas por día también en TikTok e Instagram."""
+    hist = dict((previo or {}).get("historico") or {})
+    hist[hoy] = {"youtube": {v["id"]: v["vistas"] for v in datos.get("videos", [])},
+                 "tiktok": {v["id"]: v["vistas"] for v in (datos.get("tiktok") or {}).get("videos", [])},
+                 "instagram": {v["codigo"]: v["vistas"] for v in (datos.get("instagram") or {}).get("videos", []) if v.get("vistas") is not None}}
+    return {k: hist[k] for k in sorted(hist)[-120:]}
+
+
+def cargar_previo():
+    try:
+        d = json.load(open(SALIDA, encoding="utf-8"))
+        return None if d.get("ejemplo") else d
+    except Exception:
+        return None
+
+
+def recoger_todo():
+    ahora = dt.datetime.now(MADRID)
+    previo = cargar_previo() or {}
+    datos, notas = {}, []
+
+    if faltan("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"):
+        notas.append("YouTube sin conectar.")
+        yt = {k: previo[k] for k in ("canal", "canalTotales", "videos", "diario") if k in previo}
+    else:
+        try:
+            yt = recoger_youtube(); notas += yt.pop("notas", [])
+        except Exception as e:
+            print(f"::error::YouTube: {e}"); notas.append(f"YouTube falló hoy ({str(e)[:140]}); se muestran los datos anteriores.")
+            yt = {k: previo[k] for k in ("canal", "canalTotales", "videos", "diario") if k in previo}
+    datos.update(yt)
+    datos.setdefault("videos", []); datos.setdefault("diario", [])
+
+    for nombre, mod in (("tiktok", tiktok), ("instagram", instagram)):
+        try:
+            r = mod.recoger(MADRID)
+            if r is None:
+                datos[nombre] = previo.get(nombre)
+                if not datos[nombre]: notas.append(f"{nombre.capitalize()} sin conectar.")
+            else:
+                datos[nombre], n = r; notas += n
+        except Exception as e:
+            print(f"::error::{nombre}: {e}")
+            notas.append(f"{nombre.capitalize()} falló hoy ({str(e)[:140]}); se muestran los datos anteriores.")
+            datos[nombre] = previo.get(nombre)
+
+    datos["contenidos"] = construir_contenidos(datos, cargar_etiquetas())
+    datos["historico"] = foto_del_dia(datos, previo, ahora.date().isoformat())
+    return {"generado": ahora.isoformat(timespec="seconds"), "ejemplo": False, **datos, "notas": notas}
 
 
 def ya_actualizado_hoy():
@@ -236,8 +340,11 @@ if __name__ == "__main__":
         if h < 8 or ya_actualizado_hoy():
             print(f"Nada que hacer (hora de Madrid: {h}, ya actualizado hoy: {ya_actualizado_hoy()})")
             sys.exit(0)
-    datos = recoger()
+    datos = recoger_todo()
     os.makedirs(os.path.dirname(SALIDA), exist_ok=True)
     with open(SALIDA, "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
-    print(f"OK: {len(datos['videos'])} vídeos públicos, {len(datos['diario'])} días -> {SALIDA}")
+    tt, ig = datos.get("tiktok") or {}, datos.get("instagram") or {}
+    print(f"OK: YouTube {len(datos['videos'])} · TikTok {len(tt.get('videos', []))} · Instagram {len(ig.get('videos', []))} "
+          f"· {len(datos['contenidos'])} contenidos -> {SALIDA}")
+    for n in datos["notas"]: print("  nota:", n)

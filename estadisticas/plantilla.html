@@ -12,6 +12,7 @@
   --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#8a8984;
   --series-1:#2a78d6; --series-2:#eb6834; --ref:#a9a8a2;
   --good:#006300; --bad:#c03030; --chip:#ecebe7; --accent-soft:#cde2fb;
+  --red-youtube:#2a78d6; --red-tiktok:#eb6834; --red-instagram:#1baf7a;
 }
 @media (prefers-color-scheme: dark){
   :root:where(:not([data-theme="light"])){
@@ -20,6 +21,7 @@
     --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8d8c86;
     --series-1:#3987e5; --series-2:#d95926; --ref:#6b6a65;
     --good:#3fbf3f; --bad:#e66767; --chip:#272725; --accent-soft:#184f95;
+    --red-youtube:#3987e5; --red-tiktok:#d95926; --red-instagram:#199e70;
   }
 }
 *{box-sizing:border-box}
@@ -88,6 +90,7 @@ footer{margin-top:22px;color:var(--text-muted);font-size:12px}
 
 <nav class="tabs" id="tabs">
   <a href="#resumen" data-v="resumen">Resumen</a>
+  <a href="#redes" data-v="redes">Redes</a>
   <a href="#videos" data-v="videos">Vídeos</a>
   <a href="#laboratorio" data-v="laboratorio">Laboratorio</a>
   <a href="#horas" data-v="horas">Mejores horas</a>
@@ -102,6 +105,7 @@ footer{margin-top:22px;color:var(--text-muted);font-size:12px}
 
 <!-- RESUMEN -->
 <section class="view" id="v-resumen">
+  <div class="meta" style="margin:-6px 0 10px">Resumen de YouTube · las tres redes juntas, en la pestaña <a href="#redes" style="color:var(--series-1)">Redes</a></div>
   <div class="grid kpis" id="kpis"></div>
   <div class="grid two" style="margin-top:14px">
     <div class="card">
@@ -113,6 +117,23 @@ footer{margin-top:22px;color:var(--text-muted);font-size:12px}
       <h2>Lo destacado</h2><div class="hint">Calculado automáticamente cada mañana</div>
       <div id="destacado"></div>
     </div>
+  </div>
+</section>
+
+<!-- REDES -->
+<section class="view" id="v-redes">
+  <div class="grid kpis" id="redes-kpis"></div>
+  <div class="card" style="margin-top:14px">
+    <h2>Vistas de cada vídeo por red</h2><div class="hint">Vídeos publicados en el periodo. El mismo vídeo en las 3 redes cuenta como uno.</div>
+    <div class="legend" id="redes-leyenda"></div><div id="redes-barras"></div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h2>Vistas por día en cada red</h2><div class="hint">YouTube: Analytics. TikTok e Instagram: diferencia con la foto del día anterior (empieza el día que se conecta cada red)</div>
+    <div class="legend" id="redes-leyenda2"></div><div id="redes-diario"></div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h2>Comparativa por vídeo</h2><div class="hint">Pulsa en un vídeo para ver su ficha completa</div>
+    <div class="scroll"><table id="redes-tabla"></table></div>
   </div>
 </section>
 
@@ -158,7 +179,7 @@ let state = {dias:7, tema:'', sort:'vistas', asc:false, video:null};
 
 document.getElementById('upd').textContent = 'Actualizado el ' + new Date(D.generado).toLocaleString('es-ES',{dateStyle:'long',timeStyle:'short',timeZone:'Europe/Madrid'}) + (D.canalTotales? ' · '+NF.format(D.canalTotales.suscriptores)+' suscriptores · '+D.canalTotales.videos+' vídeos públicos':'');
 if(D.ejemplo)document.getElementById('badge').hidden=false;
-document.getElementById('foot').textContent = 'Vistas, likes y comentarios: al momento (YouTube Data API). Retención, compartidos, suscriptores y fuentes: YouTube Analytics, con 1–3 días de retraso. Se actualiza solo cada mañana antes de las 9:00 (GitHub Actions).'+(D.notas&&D.notas.length?' '+D.notas.join(' '):'');
+document.getElementById('foot').textContent = 'Vistas, likes y comentarios: al momento (YouTube Data API). Retención, compartidos, suscriptores y fuentes: YouTube Analytics, con 1–3 días de retraso. TikTok: contadores públicos (sin retención). Instagram: insights de Reels. Se actualiza solo cada mañana antes de las 9:00 (GitHub Actions).'+(D.notas&&D.notas.length?' '+D.notas.join(' '):'');
 [...new Set(D.videos.map(v=>v.tema))].forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;document.getElementById('tema').append(o)});
 
 /* ---------- tooltip ---------- */
@@ -321,10 +342,19 @@ function renderFicha(){
     <div><h2>Curva de retención</h2><div class="hint">% de espectadores que siguen viendo en cada momento (más de 100 % = lo vuelven a ver)</div>
       <div class="legend"><span><i style="background:var(--series-1)"></i>Este vídeo</span><span><i class="dash"></i>Media del canal</span></div><div id="curva"></div></div>
     <div><h2>De dónde vienen las vistas</h2><div class="hint">% del total</div><div id="fuentes"></div></div></div>
-   <div style="margin-top:12px"><h2>Vistas por día desde que se publicó</h2><div class="hint">Las de los 2 últimos días pueden estar incompletas</div><div id="vdia"></div></div>`;
+   <div id="otras"></div>
+   <div style="margin-top:12px"><h2>Vistas por día desde que se publicó</h2><div class="hint">YouTube: las de los 2 últimos días pueden estar incompletas. TikTok e Instagram: desde que se conectó cada red</div><div class="legend" id="vdia-ley"></div><div id="vdia"></div></div>`;
+  document.getElementById('otras').innerHTML=bloqueOtrasRedes(v);
   document.getElementById('back').onclick=()=>{state.video=null;renderVideos()};
-  if(v.vistasDia&&v.vistasDia.length>1) lineChart(document.getElementById('vdia'),v.vistasDia.map(d=>fecha(d[0])),[{name:'Vistas',values:v.vistasDia.map(d=>d[1]),color:'var(--series-1)'}],{h:180});
-  else document.getElementById('vdia').innerHTML='<p class="pend">Todavía no hay datos por día.</p>';
+  {const c=contenidos().find(x=>x.youtube===v.id)||{};const yd=Object.fromEntries((v.vistasDia||[]).map(d=>[d[0],d[1]]));
+   const td=c.tiktok?Object.fromEntries(deltasRed('tiktok',c.tiktok)):{}, idd=c.instagram?Object.fromEntries(deltasRed('instagram',c.instagram)):{};
+   const fs=[...new Set([...Object.keys(yd),...Object.keys(td),...Object.keys(idd)])].filter(f=>f>=v.fecha).sort();
+   const ser=[{name:'YouTube',values:fs.map(f=>yd[f]??null),color:'var(--red-youtube)'}];
+   if(c.tiktok)ser.push({name:'TikTok',values:fs.map(f=>td[f]??null),color:'var(--red-tiktok)'});
+   if(c.instagram)ser.push({name:'Instagram',values:fs.map(f=>idd[f]??null),color:'var(--red-instagram)'});
+   document.getElementById('vdia-ley').innerHTML=ser.length>1?ser.map(x=>`<span><i style="background:${x.color}"></i>${x.name}</span>`).join(''):'';
+   if(fs.length>1)lineChart(document.getElementById('vdia'),fs.map(fecha),ser,{h:200,tipTitle:i=>fecha(fs[i])});
+   else document.getElementById('vdia').innerHTML='<p class="pend">Todavía no hay datos por día.</p>';}
   if(!v.curva){document.getElementById('curva').innerHTML='<p class="pend">Retención pendiente: YouTube la publica 48–72 h después de subir el vídeo.</p>';document.getElementById('fuentes').innerHTML='<p class="pend">Pendiente.</p>';return}
   const media=curvaMedia()||[];
   const dur=v.duracion||1, xs=v.curva.map(p=>Math.round(p[0]*dur)+' s');
@@ -370,14 +400,105 @@ function renderHoras(){
   vbar(document.getElementById('chart-horas'),rows);
 }
 
+/* ---------- REDES ---------- */
+const REDES=[['youtube','YouTube'],['tiktok','TikTok'],['instagram','Instagram']];
+const TT=Object.fromEntries(((D.tiktok||{}).videos||[]).map(v=>[v.id,v]));
+const IG=Object.fromEntries(((D.instagram||{}).videos||[]).map(v=>[v.codigo,v]));
+const YT=Object.fromEntries(D.videos.map(v=>[v.id,v]));
+const TABLA={youtube:YT,tiktok:TT,instagram:IG};
+const conectada=r=>r==='youtube'?D.videos.length>0||!!D.canalTotales:!!D[r];
+function videoDe(c,r){return c[r]?TABLA[r][c[r]]:null}
+function contenidos(){return (D.contenidos||D.videos.map(v=>({clave:v.id,titulo:v.titulo,fecha:v.fecha,youtube:v.id})))}
+function contPeriodo(){return contenidos().filter(c=>diasDesde(c.fecha)<state.dias)}
+/* vistas por día de una red a partir de las fotos diarias (historico) */
+function deltasRed(red, id){
+  const h=D.historico||{}, fs=Object.keys(h).sort(), out=[];
+  for(let i=1;i<fs.length;i++){
+    const a=(h[fs[i-1]][red]||{}), b=(h[fs[i]][red]||{});
+    let v=0,ok=false;
+    for(const k in b){if(id&&k!==id)continue; if(a[k]!=null){v+=Math.max(0,b[k]-a[k]);ok=true}}
+    out.push([fs[i],ok?v:null]);
+  }
+  return out;
+}
+function legendaRedes(el){document.getElementById(el).innerHTML=REDES.map(([r,n])=>`<span><i style="background:var(--red-${r});height:8px;width:8px;border-radius:2px"></i>${n}${conectada(r)?'':' <span class="pend">(sin conectar)</span>'}</span>`).join('')}
+function renderRedes(){
+  const cs=contPeriodo();
+  const tot={youtube:D.canalTotales,tiktok:(D.tiktok||{}).totales,instagram:(D.instagram||{}).totales};
+  const suma=r=>cs.reduce((s,c)=>s+((videoDe(c,r)||{}).vistas||0),0);
+  const total=REDES.reduce((s,[r])=>s+suma(r),0);
+  document.getElementById('redes-kpis').innerHTML=REDES.map(([r,n])=>{
+    if(!conectada(r))return `<div class="card kpi"><div class="lbl"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--red-${r});margin-right:6px"></i>${n}</div><div class="val" style="font-size:18px;color:var(--text-muted)">Sin conectar</div><div class="delta"><span>ver estadisticas/README.md</span></div></div>`;
+    const t=tot[r]||{}, seg=t.seguidores??t.suscriptores, nv=cs.filter(c=>c[r]).length, v=suma(r);
+    return `<div class="card kpi"><div class="lbl"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--red-${r});margin-right:6px"></i>${n}${(D[r]||{}).cuenta?' · @'+D[r].cuenta:''}</div><div class="val">${fmt(v)}</div><div class="delta"><span>vistas de ${nv} vídeo${nv===1?'':'s'} · ${total?Math.round(v/total*100):0} % del total${seg!=null?' · '+fmt(seg)+' seguidores':''}</span></div></div>`}).join('')+
+    `<div class="card kpi"><div class="lbl">Las tres redes</div><div class="val">${fmt(total)}</div><div class="delta"><span>vistas de ${cs.length} vídeos del periodo</span></div></div>`;
+  legendaRedes('redes-leyenda');legendaRedes('redes-leyenda2');
+  stacked(document.getElementById('redes-barras'),[...cs].sort((a,b)=>REDES.reduce((s,[r])=>s+((videoDe(b,r)||{}).vistas||0),0)-REDES.reduce((s,[r])=>s+((videoDe(a,r)||{}).vistas||0),0)));
+  // diario
+  const dias=[...new Set([...D.diario.map(d=>d.fecha),...Object.keys(D.historico||{})])].sort().slice(-state.dias);
+  const yd=Object.fromEntries(D.diario.map(d=>[d.fecha,d.vistas]));
+  const td=Object.fromEntries(deltasRed('tiktok')), id=Object.fromEntries(deltasRed('instagram'));
+  const ser=[{name:'YouTube',values:dias.map(f=>yd[f]??null),color:'var(--red-youtube)'}];
+  if(D.tiktok)ser.push({name:'TikTok',values:dias.map(f=>td[f]??null),color:'var(--red-tiktok)'});
+  if(D.instagram)ser.push({name:'Instagram',values:dias.map(f=>id[f]??null),color:'var(--red-instagram)'});
+  if(dias.length>1&&ser.some(s=>s.values.some(x=>x!=null)))lineChart(document.getElementById('redes-diario'),dias.map(fecha),ser,{tipTitle:i=>fecha(dias[i])});
+  else document.getElementById('redes-diario').innerHTML='<p class="pend">Aún no hay suficientes días.</p>';
+  // tabla
+  const t=document.getElementById('redes-tabla');
+  const fila=c=>{const v=REDES.map(([r])=>videoDe(c,r));const vs=v.map(x=>x?x.vistas:null);const tot=vs.reduce((s,x)=>s+(x||0),0);
+    const max=Math.max(...vs.map(x=>x||0));const mejor=max>0?REDES[vs.indexOf(max)][1]:'—';const ig=v[2],tt=v[1];
+    return `<tr data-yt="${c.youtube||''}"><td><div class="tt">${c.titulo}</div><span class="meta">${fecha(c.fecha)}</span></td>`+
+      vs.map((x,i)=>`<td>${x==null?'<span class="pend">—</span>':`<a href="${v[i].url}" target="_blank" rel="noopener" style="color:inherit" onclick="event.stopPropagation()">${fmt(x)}</a>`}</td>`).join('')+
+      `<td><b>${fmt(tot)}</b></td><td>${mejor}</td><td>${tt&&tt.compartidos!=null?fmt(tt.compartidos):'—'}</td><td>${ig&&ig.tiempoMedio!=null?ig.tiempoMedio.toLocaleString('es-ES')+' s':'—'}</td><td>${ig&&ig.tasaSalto!=null?pct(ig.tasaSalto):'—'}</td></tr>`};
+  t.innerHTML='<thead><tr><th>Vídeo</th><th>YouTube</th><th>TikTok</th><th>Instagram</th><th>Total</th><th>Mejor red</th><th>Compart. TikTok</th><th>Tiempo medio IG</th><th>Salto IG</th></tr></thead><tbody>'+
+    (cs.length?cs.slice().reverse().map(fila).join(''):'<tr><td colspan="9" class="meta">No hay vídeos en este periodo.</td></tr>')+'</tbody>';
+  t.querySelectorAll('tbody tr[data-yt]').forEach(tr=>{if(!tr.dataset.yt){tr.style.cursor='default';return}tr.onclick=()=>{state.video=tr.dataset.yt;location.hash='videos'}});
+}
+function stacked(host, cs){
+  host.innerHTML='';
+  if(!cs.length){host.innerHTML='<p class="pend">No hay vídeos en este periodo.</p>';return}
+  const W=host.clientWidth||700, rh=30, ml=Math.min(260,Math.max(140,W*.32)), mr=64, H=cs.length*rh+4;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H},host);
+  const tots=cs.map(c=>REDES.reduce((s,[r])=>s+((videoDe(c,r)||{}).vistas||0),0)), max=Math.max(...tots,1);
+  cs.forEach((c,i)=>{
+    const y=i*rh+4; let x=ml;
+    const lab=el('text',{x:ml-10,y:y+15,'text-anchor':'end',style:'fill:var(--text-secondary);font-size:12px'},svg);
+    const t=c.titulo.length>Math.floor(ml/6.6)?c.titulo.slice(0,Math.floor(ml/6.6)-1)+'…':c.titulo;lab.textContent=t;
+    const segs=REDES.map(([r,n])=>[r,n,(videoDe(c,r)||{}).vistas||0]).filter(s=>s[2]>0);
+    segs.forEach(([r,n,v],k)=>{
+      const w=(W-ml-mr)*v/max, last=k===segs.length-1;
+      const ww=Math.max(1,w-(last?0:2));
+      const d=last?`M${x},${y+3}h${Math.max(0,ww-4)}q4,0 4,4v10q0,4 -4,4h${-Math.max(0,ww-4)}Z`:`M${x},${y+3}h${ww}v18h${-ww}Z`;
+      const pth=el('path',{d,fill:`var(--red-${r})`},svg);
+      pth.addEventListener('mousemove',e=>showTip(e,`<b>${c.titulo}</b><br>${n}: <b>${fmt(v)}</b> (${Math.round(v/tots[i]*100)} %)`));
+      pth.addEventListener('mouseleave',hideTip);
+      x+=w;
+    });
+    const tv=el('text',{x:x+6,y:y+16,style:'fill:var(--text-primary);font-size:12px'},svg);tv.textContent=fmtK(tots[i]);
+  });
+}
+/* en la ficha: el mismo vídeo en las otras redes */
+function bloqueOtrasRedes(v){
+  const c=contenidos().find(x=>x.youtube===v.id); if(!c)return '';
+  const tt=videoDe(c,'tiktok'), ig=videoDe(c,'instagram');
+  if(!tt&&!ig)return `<p class="meta" style="margin-top:10px">No se ha encontrado este vídeo en TikTok ni en Instagram${D.tiktok||D.instagram?'':' (redes sin conectar)'}. Se puede enlazar a mano en <code>etiquetas.json</code>.</p>`;
+  const caja=(n,r,x,extra)=>`<div class="card" style="padding:12px"><div class="lbl" style="font-weight:600"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--red-${r});margin-right:6px"></i>${n} · <a href="${x.url}" target="_blank" rel="noopener" style="color:var(--series-1)">abrir ↗</a></div>
+    <div class="facts" style="margin:8px 0 0"><div><b>${fmt(x.vistas)}</b><span>vistas</span></div><div><b>${fmt(x.likes)}</b><span>likes</span></div><div><b>${fmt(x.comentarios)}</b><span>comentarios</span></div><div><b>${fmt(x.compartidos)}</b><span>compartidos</span></div>${extra}</div></div>`;
+  let h='<h2 style="margin-top:16px">En las otras redes</h2><div class="grid half" style="margin-top:8px">';
+  if(tt)h+=caja('TikTok','tiktok',tt,'');
+  if(ig)h+=caja('Instagram','instagram',ig,`${ig.alcance!=null?`<div><b>${fmt(ig.alcance)}</b><span>alcance</span></div>`:''}${ig.guardados!=null?`<div><b>${fmt(ig.guardados)}</b><span>guardados</span></div>`:''}${ig.tiempoMedio!=null?`<div><b>${ig.tiempoMedio.toLocaleString('es-ES')} s</b><span>tiempo medio${v.duracion?' ('+Math.round(ig.tiempoMedio/v.duracion*100)+' %)':''}</span></div>`:''}${ig.tasaSalto!=null?`<div><b>${pct(ig.tasaSalto)}</b><span>se lo saltan</span></div>`:''}`);
+  return h+'</div>';
+}
+
 /* ---------- routing ---------- */
-const views=['resumen','videos','laboratorio','horas'];
+const views=['resumen','redes','videos','laboratorio','horas'];
 function render(){
   const v=views.includes(location.hash.slice(1))?location.hash.slice(1):'resumen';
   document.querySelectorAll('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));
   document.querySelectorAll('#tabs a').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
   document.getElementById('tema').parentElement.style.display = (v==='horas'||v==='laboratorio')?'none':'';
-  ({resumen:renderResumen,videos:renderVideos,laboratorio:renderLab,horas:renderHoras})[v]();
+  document.getElementById('tema').style.display = v==='redes'?'none':'';
+  ({resumen:renderResumen,redes:renderRedes,videos:renderVideos,laboratorio:renderLab,horas:renderHoras})[v]();
 }
 document.querySelectorAll('#rango button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#rango button').forEach(x=>x.classList.toggle('on',x===b));state.dias=+b.dataset.d;render()});
 document.getElementById('tema').onchange=e=>{state.tema=e.target.value;render()};

@@ -4,11 +4,10 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Estadísticas: añadir TikTok e Instagram a la web — Nico — 2026-11-16 14:00
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
-- [ ] Estadísticas: poner en marcha Google Cloud + secretos de GitHub siguiendo `estadisticas/README.md` (pasos 1–6, ~15 min, cuenta parecementirapero.media@gmail.com) — Nico o Jorge
+- [ ] Estadísticas: poner en marcha las 3 redes siguiendo `estadisticas/README.md` — YouTube (pasos 1–6, Google Cloud con parecementirapero.media@gmail.com), `GH_PAT` (paso 7), TikTok (app sandbox + `autorizar_tiktok.py`) e Instagram (cuenta profesional + app de Meta + `IG_TOKEN`) — Nico o Jorge
 - [ ] Estadísticas: cuando haya datos reales, tarea programada en la nube que republique cada mañana la página de Claude «Parece Mentira · Estadísticas» con `estadisticas/web/index.html`
 - [ ] Estadísticas: rellenar `estadisticas/etiquetas.json` (tema, voz, gancho) de los vídeos publicados para el Laboratorio
 - [ ] 2026-11-17 — Nico y Jorge: decidir si se prueba el lote de la mañana en la nube (tarea programada sin depender del Mac: voz por API, montaje y vídeos en el chat; publicar sigue necesitando un Mac encendido en el «ok»). Antes: decidir si la clave de ElevenLabs se guarda en la configuración del entorno en la nube (nunca en el repo) y copiar MP3/MP4 a la carpeta local al publicar. Si sale bien, pasar también el de las 20:00 — propuesto por Jorge 2026-11-16
@@ -32,6 +31,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Estadísticas de TikTok (Display API) e Instagram (insights de Reels) en la web: pestaña «Redes», ficha con «En las otras redes», unión del mismo vídeo entre redes, vistas por día con foto diaria, renovación automática de tokens — Nico — 2026-11-16
 - [x] Web de estadísticas: `estadisticas/` (recoger.py, construir.py, plantilla, autorizar.py, etiquetas) + workflow diario `.github/workflows/estadisticas.yml`; página de Claude publicada con datos de ejemplo — Nico — 2026-11-16
 - [x] «Luna densa» v3: ritmo variable (0,3–2,7 s), planos atados a palabras, control de lectura, guion de 155 palabras — Nico — 2026-11-16
 - [x] «Luna densa» v2 con micro escenas y detalles secundarios (38 planos) — Nico — 2026-11-16

@@ -47,7 +47,34 @@ for d in range(56):
     f = fin - dt.timedelta(days=55-d)
     v = max(int(400 + d*55 + random.uniform(-250, 350) + (900 if d % 7 in (5, 6) else 0)), 120)
     diario.append({"fecha": f.isoformat(), "vistas": v, "minutos": v//2, "subs": int(v*random.uniform(.004, .01)), "likes": int(v*.045)})
+# --- TikTok e Instagram (inventados): el mismo vídeo en las tres redes, salvo algunos
+tt_v, ig_v, cont, hist = [], [], [], {}
+for i, v in enumerate(videos):
+    c = {"clave": v["id"], "titulo": v["titulo"], "fecha": v["fecha"], "youtube": v["id"]}
+    if i % 5 != 4:
+        tid = str(7708440623040269590 + i)
+        tt_v.append({"id": tid, "titulo": v["titulo"], "url": "https://www.tiktok.com/@parece.mentira85", "fecha": v["fecha"], "hora": v["hora"],
+                     "duracion": v["duracion"], "vistas": int(v["vistas"] * random.uniform(.4, 2.2)), "likes": int(v["likes"] * random.uniform(1, 2)),
+                     "comentarios": int(v["comentarios"] * 1.5), "compartidos": int(v["compartidos"] * random.uniform(1.5, 3))})
+        c["tiktok"] = tid
+    if i % 4 != 3:
+        cod = f"DfEj{i:03d}"
+        ig_v.append({"id": str(18000000000 + i), "codigo": cod, "titulo": v["titulo"], "url": "https://www.instagram.com/parecementiramedia/",
+                     "fecha": v["fecha"], "hora": v["hora"], "vistas": int(v["vistas"] * random.uniform(.2, .9)), "alcance": int(v["vistas"] * .5),
+                     "likes": int(v["likes"] * .8), "comentarios": int(v["comentarios"] * .6), "compartidos": int(v["compartidos"] * .9),
+                     "guardados": int(v["likes"] * .2), "tiempoMedio": round(v["duracion"] * random.uniform(.35, .7), 1), "tasaSalto": round(random.uniform(25, 55), 1)})
+        c["instagram"] = cod
+    cont.append(c)
+for d in range(14):
+    f = (fin - dt.timedelta(days=13 - d)).isoformat(); k = (d + 1) / 14
+    hist[f] = {"youtube": {v["id"]: int(v["vistas"] * k) for v in videos if v["fecha"] <= f},
+               "tiktok": {v["id"]: int(v["vistas"] * k) for v in tt_v if v["fecha"] <= f},
+               "instagram": {v["codigo"]: int(v["vistas"] * k) for v in ig_v if v["fecha"] <= f}}
+
 out = {"generado": "2026-11-16T09:00:00+01:00", "ejemplo": True, "canal": "Parece Mentira",
        "canalTotales": {"suscriptores": 1284, "vistas": sum(x["vistas"] for x in videos), "videos": len(videos)},
-       "videos": videos, "diario": diario, "notas": []}
+       "videos": videos, "diario": diario, "notas": [],
+       "tiktok": {"cuenta": "parece.mentira85", "totales": {"seguidores": 2310, "likes": 15400, "videos": len(tt_v)}, "videos": tt_v},
+       "instagram": {"cuenta": "parecementiramedia", "totales": {"seguidores": 870, "videos": len(ig_v)}, "videos": ig_v},
+       "contenidos": cont, "historico": hist}
 json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json"), "w"), ensure_ascii=False)

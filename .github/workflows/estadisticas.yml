@@ -1,6 +1,6 @@
 name: Estadísticas del canal
 
-# Cada mañana antes de las 9:00 (hora de Madrid) recoge las estadísticas de YouTube,
+# Cada mañana antes de las 9:00 (hora de Madrid) recoge las estadísticas de YouTube, TikTok e Instagram,
 # reconstruye la web y lo guarda en el repo. Dos horarios en UTC para cubrir
 # horario de invierno y de verano; recoger.py --si-toca evita repetir el mismo día.
 on:
@@ -27,14 +27,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Recoger datos de YouTube
+      - name: Recoger datos de YouTube, TikTok e Instagram
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          # Para guardar los tokens que TikTok e Instagram renuevan (PAT con permiso «Secrets: read and write»)
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          if [ -z "$YT_REFRESH_TOKEN" ]; then
-            echo "::warning::Faltan los secretos de Google (ver estadisticas/README.md). No se recoge nada."
+          if [ -z "$YT_REFRESH_TOKEN$TIKTOK_REFRESH_TOKEN$IG_TOKEN" ]; then
+            echo "::warning::No hay ninguna red conectada (ver estadisticas/README.md). No se recoge nada."
             exit 0
           fi
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then

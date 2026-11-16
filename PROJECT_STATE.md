@@ -15,7 +15,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Nico | ✅ sesión iniciada en el navegador integrado (2026-11-15) |
 | ElevenLabs | ✅ voz «Narrador PM - Curiosidades v1», clave API en el Mac de Jorge («Parece Mentira») y en el de Nico («Parece Mentira - Nico»), prueba OK en los dos |
 | Carpeta local de trabajo | ✅ Nico: `/Users/nico/Documents/Parece Mentira` (referencias en `Documents/Codex/Parece Mentira/referencias`) · ✅ Jorge: `/Users/jorgegomez/Documents/Parece Mentira` |
-| Web de estadísticas (`estadisticas/`) | 🟡 código listo y probado con datos de ejemplo; falta Google Cloud + secretos de GitHub (`estadisticas/README.md`) |
+| Web de estadísticas (`estadisticas/`) — YouTube, TikTok e Instagram | 🟡 código listo y probado con datos de ejemplo y APIs simuladas; falta conectar las 3 redes y `GH_PAT` (`estadisticas/README.md`) |
 | Agente diario | ✅ manual en `AGENTE.md` |
 | Motor de montaje (v2.1: foco + HUD, Jorge) | ✅ v2 en `main` (karaoke arriba, rótulos, SVG, música, −19 LUFS); prueba v2 de 47 s en ~2 min |
 | Tarea programada 08:00 (Mac de Nico) | ✅ creada (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`, carpetas `Documents/Parece Mentira` + `Documents/Codex/Parece Mentira`); primera ejecución 2026-11-16 a las 07:52 |
