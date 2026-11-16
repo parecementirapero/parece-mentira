@@ -115,7 +115,7 @@ def rotulo(t0, t1, texto="", **k):
 
 def amarillo(t0, t1, texto, y=1360, tam=96, color="#ffd23f", x=540):
     """Palabra clave grande e inclinada, sin cápsula. Sobre fondos oscuros, pásale un neón (CIAN, MAGENTA, LIMA)."""
-    return rotulo(t0, t1, texto, tam=tam, color=color, capsula=None, rot=-6, x=x, y=y)
+    return {**rotulo(t0, t1, texto, tam=tam, color=color, capsula=None, rot=-6, x=x, y=y), "_clave": True}
 
 
 def contexto(t0, t1, texto):
@@ -299,7 +299,7 @@ class Video:
         return tocado
 
     def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=320, grano=0.03, zona_segura=True,
-                  musica_viva=True, bucle=0.0):
+                  musica_viva=True, bucle=0.0, subtitulos="karaoke"):
         """Monta todos los planos y escribe salida/episodio.json. Devuelve la lista de avisos de lectura (vacía = bien).
         zona_segura=True recoloca solos los rótulos que la app taparía (míralos luego en la hoja de fotogramas:
         al subirlos pueden pisar al sujeto; en ese caso, colócalos tú dentro de y=240…1400)."""
@@ -330,9 +330,27 @@ class Video:
                 fx_espaciado("whoosh", ini, "whoosh", -24, 5, dur=0.35)
                 if self.FX and self.FX[-1]["tipo"] == "whoosh" and self.FX[-1]["t"] == round(ini, 3):
                     self.FX[-1]["t"] = round(max(0, ini - 0.12), 3)
+            if subtitulos == "palabra":
+                # el subtítulo ya enseña la palabra clave en grande y en amarillo: los rótulos de palabra sobran (redundancia)
+                p["hud"] = [h for h in p["hud"] if not h.get("_clave")]
             for h in p["hud"]:
+                h.pop("_clave", None)
                 if zona_segura and h.get("tipo") == "rotulo":
                     self._a_zona_segura(h, nombre)
+                if subtitulos == "palabra" and h.get("tipo") == "rotulo" and not h.get("fijo"):  # fijo=True: no se mueve
+                    from .calidad import _caja
+                    ysub = y_subtitulo if y_subtitulo > 600 else 1180
+                    x0, y0, x1, y1 = _caja(h)
+                    if y1 > ysub - 100 and y0 < ysub + 100:      # pisa la franja del subtítulo
+                        # primero se intenta DEBAJO (entre el subtítulo y el límite de la zona segura), para no tapar al
+                        # sujeto; si no cabe ni encogido, justo encima
+                        h["tam"] = min(h.get("tam", 120), 92)
+                        x0, y0, x1, y1 = _caja(h)
+                        if (y1 - y0) <= SEG_ABAJO - 8 - (ysub + 80):
+                            h["y"] = int(h.get("y", 960) + (ysub + 80 - y0)); donde = "debajo"
+                        else:
+                            h["y"] = int(h.get("y", 960) - (y1 - (ysub - 110))); donde = "encima"
+                        self.MOVIDOS.append(f"«{(h.get('texto') or '') or h.get('unidad', '')}» en «{nombre}» → y={h['y']} ({donde} del subtítulo)")
                 txt = ((h.get("texto") or "") + " " + (h.get("unidad") or "")).strip()
                 if h.get("contar"):
                     txt = (f"{h['contar'][1]} " + txt).strip()
@@ -369,6 +387,8 @@ class Video:
                 curva.append([round(c, 2), round(0.35 if c < 1.5 and k not in forzada else nivel, 2)])
             ep["musica"].setdefault("energia", curva)
             ep["musica"].setdefault("bucle", True)
+        if subtitulos == "palabra":
+            ep["estilo_subtitulos"] = {"modo": "palabra", "y": y_subtitulo if y_subtitulo > 600 else 1180, "tam": 104, "claves": list(claves)}
         if bucle:
             ep["bucle"] = bucle  # segundos finales que se funden con el primer fotograma (el Short enlaza al repetirse)
         if gancho:

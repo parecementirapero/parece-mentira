@@ -65,7 +65,7 @@ def _(d):
         luna(0, 0, 150, 0.45, keys=K(d, (0, {"x": 640, "y": 1400, "ease": "lineal"}), (0.8, {"x": 900, "y": 1310}))),
         {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 10, "relleno": "#ffd23f", "x": 540, "y": 962, "z": 0.6},
         flecha([[440, 1470], [800, 1345]], 0.2, d * 0.8, MAGENTA, 6, [16, 12])],
-        cam(1.0, 1.03), hud=[rotulo(0.3, d - 0.1, "=", tam=260, color="#ffd23f", capsula="#0d1330d8", x=540, y=960)])
+        cam(1.0, 1.03), hud=[rotulo(0.3, d - 0.1, "=", tam=260, color="#ffd23f", capsula="#0d1330d8", x=540, y=960, fijo=True)])
 
 
 @v.plano(17, "3,8 cm")
@@ -438,5 +438,7 @@ def _(d):
 
 
 # ================================================================== construir
-v.construir("prueba-luna-densa", version=5, bucle=0.35, musica={"generar": "curiosidad", "semilla": 3, "db": -13},
+# Variante del experimento H1 (motor/APRENDIZAJE.md): python3 gen.py DIR voz.mp3 alineacion.json palabra
+PALABRA = len(sys.argv) > 4 and sys.argv[4] == "palabra"
+v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else ""), version=5, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
             claves=["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"])

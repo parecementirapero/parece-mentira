@@ -127,8 +127,12 @@ def analizar(ruta_ep, mp4=None):
         av("❌", f"{len(cortos)} rótulos sin tiempo para leerse:\n      - " + "\n      - ".join(cortos[:8]), min(15, 3 * len(cortos)))
     est = ep.get("estilo_subtitulos", {})
     ysub, tsub = est.get("y", 350), est.get("tam", 60)
-    if ysub - tsub * 1.25 < SEG_ARRIBA: av("ℹ", f"El subtítulo (y={ysub}) roza la franja de arriba cuando ocupa dos líneas; y≈{int(SEG_ARRIBA + tsub * 1.35)} es más seguro.")
-    choque = sum(1 for e in S for h in e["elementos"] if h.get("tipo") == "rotulo" and h.get("hud") and abs(_caja(h)[1] - ysub) < tsub * 1.6 and _caja(h)[1] < ysub + tsub * 2.2 and _caja(h)[3] > ysub - tsub * 1.2)
+    if est.get("modo") != "palabra" and ysub - tsub * 1.25 < SEG_ARRIBA: av("ℹ", f"El subtítulo (y={ysub}) roza la franja de arriba cuando ocupa dos líneas; y≈{int(SEG_ARRIBA + tsub * 1.35)} es más seguro.")
+    if est.get("modo") == "palabra":
+        choque = sum(1 for e in S for h in e["elementos"] if h.get("tipo") == "rotulo" and h.get("hud") and not h.get("fijo")
+                     and _caja(h)[3] > ysub - 72 and _caja(h)[1] < ysub + 72)
+    else:
+        choque = sum(1 for e in S for h in e["elementos"] if h.get("tipo") == "rotulo" and h.get("hud") and abs(_caja(h)[1] - ysub) < tsub * 1.6 and _caja(h)[1] < ysub + tsub * 2.2 and _caja(h)[3] > ysub - tsub * 1.2)
     if choque: av("⚠", f"{choque} rótulos pisan la franja del subtítulo (y≈{ysub}).", min(8, 2 * choque))
 
     # ---------------------------------------------------------------- 4. gancho

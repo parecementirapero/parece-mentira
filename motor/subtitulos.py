@@ -211,3 +211,110 @@ class SubtitulosKaraoke:
             spr = Image.merge("RGBA", (r, g, b, a.point(lambda v: int(v * max(0.0, k)))))
         _, lh, nl = self._layout(i)
         lienzo.alpha_composite(spr, (0, int(self.y - (lh * nl + 60) / 2)))
+
+
+class SubtitulosPalabra:
+    """Subtítulo «palabra»: 1–2 palabras a la vez, enormes y centradas (hipótesis H1 de motor/APRENDIZAJE.md: es lo
+    que hacen 5 de 7 Shorts de referencia con millones de vistas). La palabra entra con un golpe de escala.
+
+    estilo_subtitulos: modo "palabra", y (1180: tercio inferior, dentro de la zona segura), tam (104),
+    claves (palabras en amarillo), color (#ffffff), color_clave (#ffd23f), max_letras (13: junta palabras cortas),
+    gancho: true → la primera frase entera, en dos o tres líneas, desde el fotograma 0 (igual que en karaoke)."""
+
+    def __init__(self, bloques, estilo):
+        self.e = estilo
+        self.tam = int(estilo.get("tam", 104))
+        self.y = estilo.get("y", 1180)
+        self.maxw = estilo.get("ancho_max", 900)
+        self.claves = {_norm(c) for c in estilo.get("claves", [])}
+        self.col = rgb(estilo.get("color", "#ffffff"))
+        self.col_clave = rgb(estilo.get("color_clave", "#ffd23f"))
+        maxl = int(estilo.get("max_letras", 13))
+        pal = []
+        for b in bloques:
+            if "palabras" in b:
+                pal += [dict(p) for p in b["palabras"]]
+            else:
+                ws = b["texto"].split(); tot = sum(len(p) + 1 for p in ws) or 1; t = b["inicio"]
+                for p in ws:
+                    d = (b["fin"] - b["inicio"]) * (len(p) + 1) / tot
+                    pal.append({"texto": p, "inicio": t, "fin": t + d}); t += d
+        f_med = ImageFont.truetype(F_BOLD, self.tam)
+        self.g = []          # grupos: {"texto", "inicio", "fin", "clave", "gancho"}
+        k = 0
+        if estilo.get("gancho") and pal:
+            n = 0
+            for p in pal:
+                n += 1
+                if p["texto"][-1] in ".?!…" or n >= 16:
+                    break
+            self.g.append({"palabras": pal[:n], "texto": " ".join(p["texto"] for p in pal[:n]), "inicio": 0.0, "fin": pal[n - 1]["fin"] + 0.1, "gancho": True})
+            k = n
+        while k < len(pal):
+            grupo = [pal[k]]; k += 1
+            # junta la palabra siguiente si entre las dos son cortas y no hay pausa ni signo de puntuación en medio
+            while (k < len(pal) and len(grupo) < 3 and grupo[-1]["texto"][-1] not in ".,;:?!…"
+                   and sum(len(p["texto"]) for p in grupo) + 1 + len(pal[k]["texto"]) <= maxl
+                   and f_med.getlength(" ".join(p["texto"] for p in grupo + [pal[k]]).upper()) <= self.maxw - 40
+                   and pal[k]["inicio"] - grupo[-1]["fin"] < 0.25):
+                grupo.append(pal[k]); k += 1
+            self.g.append({"palabras": grupo, "texto": " ".join(p["texto"] for p in grupo), "inicio": grupo[0]["inicio"], "fin": grupo[-1]["fin"],
+                           "clave": any(_norm(p["texto"]) in self.claves for p in grupo)})
+        for a, b in zip(self.g, self.g[1:]):   # cada grupo se queda hasta que entra el siguiente (máx. 0,6 s de cola)
+            a["fin"] = min(b["inicio"], a["fin"] + 0.6) if not a.get("gancho") else min(b["inicio"], a["fin"])
+        self._cache = {}
+
+    def _sprite(self, i):
+        if i in self._cache:
+            return self._cache[i]
+        g = self.g[i]
+        tam = int(self.tam * (0.74 if len(g["texto"]) > 28 else 0.92)) if g.get("gancho") else self.tam
+        f = ImageFont.truetype(F_BOLD, tam)
+        lineas, cur = [], ""
+        for p in g["texto"].upper().split():
+            if cur and f.getlength(cur + " " + p) > self.maxw:
+                lineas.append(cur); cur = p
+            else:
+                cur = (cur + " " + p).strip()
+        lineas.append(cur)
+        while max(f.getlength(l) for l in lineas) > self.maxw and tam > 40:   # una palabra larguísima: se encoge
+            tam = int(tam * 0.92); f = ImageFont.truetype(F_BOLD, tam)
+        asc, desc = f.getmetrics(); lh = int((asc + desc) * 1.05); borde = max(5, tam // 13)
+        alto = lh * len(lineas) + 80
+        txt = Image.new("RGBA", (W, alto), (0, 0, 0, 0)); d = ImageDraw.Draw(txt)
+        claves_g = {_norm(p["texto"]) for p in g["palabras"] if _norm(p["texto"]) in self.claves}
+        for n, l in enumerate(lineas):
+            x = (W - f.getlength(l)) / 2
+            for p in l.split():
+                col = self.col_clave if (_norm(p) in claves_g or (g.get("clave") and len(g["palabras"]) == 1)) else self.col
+                d.text((x, 40 + n * lh), p, font=f, fill=col, stroke_width=borde, stroke_fill=(8, 9, 20, 255))
+                x += f.getlength(p + " ")
+        sombra = Image.new("RGBA", (W, alto), (0, 0, 0, 0))
+        negro = Image.new("RGBA", (W, alto), (0, 0, 0, 255)); negro.putalpha(txt.split()[3].point(lambda v: int(v * 0.6)))
+        sombra.paste(negro, (0, 8)); sombra = sombra.filter(ImageFilter.GaussianBlur(10))
+        sombra.alpha_composite(txt)
+        self._cache[i] = sombra
+        return sombra
+
+    def cajas(self):
+        """[(inicio, fin, y_arriba, y_abajo)] de cada grupo: para que el control de calidad vea choques con rótulos."""
+        return [(g["inicio"], g["fin"], self.y - self._sprite(i).height / 2 + 30, self.y + self._sprite(i).height / 2 - 30) for i, g in enumerate(self.g)]
+
+    def dibujar(self, lienzo, t):
+        for i, g in enumerate(self.g):
+            if g["inicio"] - 0.04 <= t < g["fin"]:
+                break
+        else:
+            return
+        spr = self._sprite(i)
+        k = (t - (g["inicio"] - 0.04)) / 0.1
+        if k < 1 and not g.get("gancho"):          # golpe de entrada: de 78 % a 104 % y asienta en 100 %
+            e = 0.78 + 0.26 * k
+            spr = spr.resize((max(2, int(spr.width * e)), max(2, int(spr.height * e))), Image.BILINEAR)
+        elif k < 1.6 and not g.get("gancho"):
+            e = 1.04 - 0.04 * (k - 1) / 0.6
+            spr = spr.resize((int(spr.width * e), int(spr.height * e)), Image.BILINEAR)
+        x, y = int((W - spr.width) / 2), int(self.y - spr.height / 2)
+        if x < 0:
+            spr = spr.crop((-x, 0, -x + W, spr.height)); x = 0
+        lienzo.alpha_composite(spr, (x, max(0, y)))

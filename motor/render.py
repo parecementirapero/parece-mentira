@@ -21,7 +21,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from .core import W, H, FPS, rgb, lerp_arr, vineta, EASE
 from .elementos import crear
 from . import tiempos
-from .subtitulos import SubtitulosKaraoke
+from .subtitulos import SubtitulosKaraoke, SubtitulosPalabra
 from . import musica as musica_mod
 from . import sfx as sfx_mod
 
@@ -207,6 +207,8 @@ class Episodio:
         est = s.get("estilo_subtitulos", {})
         if est.get("modo", "karaoke") == "clasico":
             self.subs = Subtitulos(self._subtitulos(), est)
+        elif est.get("modo") == "palabra":
+            self.subs = SubtitulosPalabra(self._subtitulos(), est)
         else:
             self.subs = SubtitulosKaraoke(self._subtitulos(), est)
         self._vin = {}
