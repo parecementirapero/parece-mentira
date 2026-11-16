@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-16-tarde
 
-- **Estado**: en revisión (**v2, método denso**) — esperando «ok» en el chat del lote. La v1 no se publica.
+- **Estado**: **v2 aprobada** («ok» de Jorge 22:03) — publicando. La v1 no se publica.
 - **Agente**: Agente 20:00 (Jorge) · Mac de Jorge · carpeta local `Documents/Parece Mentira/lotes/2026-11-16-tarde`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf (3 MP4 y 3 portadas enviados)
 - **Correo de aviso**: enviado a parecementirapero.media@gmail.com, id `1a1e5cb7121de9d1`.
@@ -52,4 +52,5 @@ QC: 1080×1920/30 fps/h264/AAC; −19,2 / −19,0 / −19,3 LUFS; control de lec
 **Publicación por API en el Mac de Jorge**: no se puede todavía: en su `claves.txt` falta `YT_UPLOAD_REFRESH_TOKEN` (solo está en el Mac de Nico). Con «ok» se sube YouTube desde el navegador integrado (la persona elige los archivos).
 
 ## Publicación
-_(pendiente de «ok» a la v2)_
+- **«ok» de Jorge a la v2 (los 3 vídeos)**: 2026-11-16 22:03, en el chat del lote. Comprobado en Studio: ninguno publicado todavía. MP4 de la v1 movidos a `v1/` en la carpeta local para no confundirlos al elegir archivos.
+
