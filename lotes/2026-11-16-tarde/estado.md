@@ -53,5 +53,5 @@ QC: 1080×1920/30 fps/h264/AAC; −19,2 / −19,0 / −19,3 LUFS; control de lec
 
 ## Publicación
 - **«ok» de Jorge a la v2 (los 3 vídeos)**: 2026-11-16 22:03, en el chat del lote. Comprobado en Studio: ninguno publicado todavía. MP4 de la v1 movidos a `v1/` en la carpeta local para no confundirlos al elegir archivos.
-- Copias aprobadas (mismo SHA-256 que la v2) en `Documents/Parece Mentira/PARA PUBLICAR/2026-11-16-tarde/` («1 - Crujirse los nudillos.mp4», «2 - Las puertas te hacen olvidar.mp4», «3 - Tu móvil y el Apolo 11.mp4» y sus «N - portada.jpg»), a petición de Jorge.
+- Copias aprobadas (mismo SHA-256 que la v2) en `Documents/Parece Mentira/PARA PUBLICAR/2026-11-16-tarde/`: subcarpeta `Vídeos/` («1 - Crujirse los nudillos.mp4», «2 - Las puertas te hacen olvidar.mp4», «3 - Tu móvil y el Apolo 11.mp4») y subcarpeta `Portadas/` («N - portada.jpg»), a petición de Jorge.
 
