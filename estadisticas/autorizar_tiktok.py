@@ -7,7 +7,9 @@ te enseña el TIKTOK_REFRESH_TOKEN para pegarlo en los secretos de GitHub.
 Uso (ver README.md):
   python3 estadisticas/autorizar_tiktok.py CLIENT_KEY CLIENT_SECRET
 """
-import hashlib, http.server, json, secrets, sys, urllib.parse, urllib.request, webbrowser
+import hashlib, http.server, json, os, secrets, select, ssl, sys, threading, urllib.parse, urllib.request, webbrowser
+
+CTX = ssl.create_default_context(cafile="/etc/ssl/cert.pem") if os.path.exists("/etc/ssl/cert.pem") else ssl.create_default_context()
 
 SCOPES = "user.info.basic,user.info.stats,video.list"
 if len(sys.argv) != 3:
@@ -34,16 +36,33 @@ class H(http.server.BaseHTTPRequestHandler):
         pass
 
 
-srv = http.server.HTTPServer(("127.0.0.1", 0), H)
+srv = http.server.HTTPServer(("127.0.0.1", 8766), H)
 redir = f"http://127.0.0.1:{srv.server_port}/callback/"
 url = "https://www.tiktok.com/v2/auth/authorize/?" + urllib.parse.urlencode({
     "client_key": ck, "scope": SCOPES, "response_type": "code", "redirect_uri": redir, "state": estado,
     "code_challenge": reto, "code_challenge_method": "S256"})
 print("\nSe va a abrir el navegador. Entra con la cuenta de TikTok DEL CANAL y acepta.")
 print("Si no se abre solo, copia esta dirección en el navegador:\n\n" + url + "\n")
+print("Si al final el navegador muestra un error o una página en blanco, copia la dirección")
+print("de la barra (empieza por http://127.0.0.1:8766/callback/) y pégala aquí + Intro.\n")
 webbrowser.open(url)
+
+
+def escuchar():
+    while "code" not in resultado and "error" not in resultado:
+        srv.handle_request()
+
+
+threading.Thread(target=escuchar, daemon=True).start()
 while "code" not in resultado and "error" not in resultado:
-    srv.handle_request()
+    listo, _, _ = select.select([sys.stdin], [], [], 1)
+    if listo:
+        linea = sys.stdin.readline().strip()
+        q = urllib.parse.parse_qs(urllib.parse.urlparse(linea).query)
+        if "code" in q or "error" in q:
+            resultado.update({k: v[0] for k, v in q.items()})
+        elif linea:
+            print("Eso no parece la dirección buena (debe contener code=). Prueba otra vez.")
 
 if "error" in resultado:
     sys.exit(f"TikTok devolvió un error: {resultado['error']} — {resultado.get('error_description', '')}")
@@ -58,9 +77,13 @@ cuerpo = urllib.parse.urlencode({"client_key": ck, "client_secret": cs, "code": 
                                  "code_verifier": verificador}).encode()
 req = urllib.request.Request("https://open.tiktokapis.com/v2/oauth/token/", cuerpo,
                              {"Content-Type": "application/x-www-form-urlencoded"})
-tok = json.loads(urllib.request.urlopen(req).read())
+tok = json.loads(urllib.request.urlopen(req, context=CTX).read())
 if "refresh_token" not in tok:
     sys.exit(f"TikTok no devolvió refresh_token: {tok}")
 dias = tok.get("refresh_expires_in", 0) // 86400
 print(f"✅ Autorizado (válido unos {dias} días). Pega esto como secreto TIKTOK_REFRESH_TOKEN en GitHub:\n")
 print(tok["refresh_token"] + "\n")
+if os.path.exists("claves.txt"):
+    with open("claves.txt", "a", encoding="utf-8") as f:
+        f.write("\nTIKTOK_REFRESH_TOKEN=" + tok["refresh_token"] + "\n")
+    print("También lo he guardado al final de claves.txt (línea TIKTOK_REFRESH_TOKEN=).")

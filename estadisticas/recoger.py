@@ -288,7 +288,17 @@ def cargar_previo():
         return None
 
 
+def limpiar_secretos():
+    """Quita espacios y saltos de línea pegados por error en los secretos."""
+    for k in list(os.environ):
+        if k.startswith(("YT_", "TIKTOK_", "IG_")) or k == "GH_PAT":
+            v = os.environ[k]
+            v = v.split("=", 1)[1] if v.startswith(k + "=") else v  # por si se pegó «NOMBRE=valor»
+            os.environ[k] = v.strip()
+
+
 def recoger_todo():
+    limpiar_secretos()
     ahora = dt.datetime.now(MADRID)
     previo = cargar_previo() or {}
     datos, notas = {}, []
