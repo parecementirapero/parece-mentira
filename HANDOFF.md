@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 20:35 — Nico — rama `main` — chat en la nube (Mac de Nico)
+**Hecho**: a Nico le sonaba demasiado el «shhh» de los cambios de plano y poco la música. En `lotes/prueba-luna-densa/gen.py`: el whoosh automático de transición solo suena si han pasado ≥ 5 s desde el anterior y a −24 dB (antes en todas, a −15); fuera los whoosh pequeños repetidos; los demás 9 dB más bajos (29 → 14 en total). Música de −17 a −13 dB.
+**Pruebas**: render 54,9 s, −19,1 LUFS. No escuchado desde la nube.
+**Para el estándar**: regla «whoosh, pocos y bajos; la música se tiene que oír» cuando se pase el método a `AGENTE.md`.
+
 ## 2026-11-16 20:30 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-16-manana
 **Hecho**: lote `2026-11-16-manana`. La tarea programada de las 07:52 se disparó a las 19:48 hora de Madrid. Tres vídeos v1 en revisión:
 - 01 · Todos los planetas caben entre la Tierra y la Luna (Espacio, comparación, contraste).

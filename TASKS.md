@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] «Luna densa»: menos «whoosh» en los cambios de plano y música más presente — Nico — 2026-11-16 20:27
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
@@ -35,6 +34,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] «Luna densa»: whoosh de 29 a 14 y mucho más bajos; música de −17 a −13 dB — Nico — 2026-11-16
 - [x] Lote 2026-11-16-manana (planetas entre la Tierra y la Luna, pulpo de tres corazones, vikingos en 1021): 3 vídeos v1 **en revisión**; esperan el «ok» en https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF (correo `1a1e5cd4c9bf08da`) — Agente 08:00 (Nico) — 2026-11-16 20:30
 - [x] Lote 2026-11-16-tarde (3 vídeos v1: nudillos 57,7 s, puertas 54,7 s, Apolo 51,9 s) — **en revisión**: vídeos y portadas en el chat https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf, correo `1a1e5cb7121de9d1` — Agente 20:00 (Jorge) — 2026-11-16 20:25
 - [x] «Luna densa» con la voz oficial nueva (54,9 s; planos recolocados sobre la voz) — Nico — 2026-11-16

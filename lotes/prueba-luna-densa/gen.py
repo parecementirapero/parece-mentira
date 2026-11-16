@@ -591,8 +591,10 @@ for k, (ini, nombre, fn) in enumerate(PLANOS):
         els.append(e)
     p["els"] = els
     M.plano(ini, fin, p["fondo"], p["els"], p["cam"], entrada=p["entrada"], vineta=p["vineta"], dur=p["dur"] if p["entrada"] != "corte" else None)
-    if p["entrada"] in ("desenfoque", "zoom", "barrido"):
-        fx(max(0, ini - 0.12), "whoosh", -15, dur=0.4)
+    # «whoosh» de transición: solo de vez en cuando (≥ 5 s desde el anterior) y muy bajo, para que no tape la música
+    if p["entrada"] in ("desenfoque", "zoom", "barrido") and ini - _g.get("ULT_WHOOSH", -9) >= 5:
+        fx(max(0, ini - 0.12), "whoosh", -24, dur=0.35)
+        _g["ULT_WHOOSH"] = ini
     for h in p["hud"]:
         txt = ((h.get("texto") or "") + " " + (h.get("unidad") or "")).strip()
         if h.get("contar"):
@@ -604,6 +606,9 @@ for k, (ini, nombre, fn) in enumerate(PLANOS):
     M.add(*p["hud"])
     for s in p["sfx"]:
         t, tipo, db = s[:3]
+        if tipo == "whoosh":
+            if db <= -20: continue      # fuera los whoosh pequeños repetidos (hojas de calendario, etc.)
+            db -= 9                      # y los que quedan, bastante más bajos
         fx(ini + t, tipo, db, **(s[3] if len(s) > 3 else {}))
     informe.append((d, nombre))
 
@@ -619,7 +624,7 @@ for a, b in sorted(SAT_PLANOS):
             ultimo = T
 
 claves = ["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"]
-M.guardar("02", "luna-densa", FIN, claves, {"generar": "curiosidad", "semilla": 3})
+M.guardar("02", "luna-densa", FIN, claves, {"generar": "curiosidad", "semilla": 3, "db": -13})
 ruta = os.path.join(OUT, "episodio.json")
 ep = json.load(open(ruta))
 ep["id"], ep["audio"], ep["subtitulos"]["alineacion"] = "prueba-luna-densa", AUDIO, ALIN
