@@ -100,12 +100,12 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3» para algunos). Cualquier otro mensaje = cambios, no aprobación. La aprobación vale para **esa versión exacta**: si se toca algo, hay versión nueva y hace falta otro «ok».
 
 1. Antes de cada subida, comprueba en la red que ese vídeo no está ya publicado (evitar duplicados).
-2. **Subidas separadas** (ver `DECISIONS.md`): los vídeos aprobados no salen a la vez. El primero se publica ya y cada uno de los siguientes **1 hora después** del anterior.
+2. **Subidas separadas solo en YouTube** (ver `DECISIONS.md`): el primero se publica ya y cada uno de los siguientes **1 hora después** del anterior. En TikTok e Instagram se publican todos seguidos al dar el «ok».
 3. **YouTube, automático por la API** (`publicar/README.md`), desde `device_bash` en la carpeta local del turno:
    `python3 publicar/subir_youtube.py --claves claves.txt --metadatos <repo>/lotes/<lote>/metadatos.json --clave 01 --video lotes/<lote>/<archivo>.mp4` y, para los siguientes, `--publicar-en <hora con zona, +1 h, +2 h>`. Copia antes `publicar/subir_youtube.py` del repo a la carpeta local si falta o ha cambiado. Si el script dice que faltan claves o que la red no llega a Google, sube a YouTube desde el navegador como antes y avisa en el chat de qué falta.
 4. **TikTok e Instagram, desde el navegador integrado** del ordenador del turno, con las sesiones ya iniciadas. El selector de archivos no lo puede manejar Claude: pide en el chat que la persona elija el archivo (di cuál) y haz tú todo lo demás.
-   - TikTok: usa la opción de **programar** de TikTok Studio con las mismas horas que YouTube.
-   - Instagram @parecementiramedia (Reel, formato original 9:16): la web no programa; se publican seguidos.
+   - TikTok: todos seguidos, sin programar.
+   - Instagram @parecementiramedia (Reel, formato original 9:16): todos seguidos.
    Si el navegador integrado no deja elegir el archivo, usa Claude in Chrome si está disponible; si no, deja el vídeo listo, di exactamente qué paso falta y no insistas.
 5. Si una red falla, solo se reintenta esa red tras comprobar que no se publicó.
 6. Registra en `lotes/<lote>/estado.md` la URL de cada publicación (o el motivo del bloqueo), actualiza `HANDOFF.md` y push.
