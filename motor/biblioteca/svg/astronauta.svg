@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 760">
+  <defs>
+    <linearGradient id="t" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="0.7" stop-color="#dfe1e8"/><stop offset="1" stop-color="#aeb2bf"/></linearGradient>
+    <linearGradient id="v" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd36b"/><stop offset="0.5" stop-color="#d98b1f"/><stop offset="1" stop-color="#6b3a0a"/></linearGradient>
+  </defs>
+  <!-- mochila -->
+  <rect x="40" y="150" width="120" height="230" rx="22" fill="#c5c8d2"/>
+  <rect x="52" y="168" width="96" height="40" rx="10" fill="#9da1ae"/>
+  <!-- pierna de atrás -->
+  <path d="M170 450 L130 610 L120 680 L190 690 L200 620 L230 470 Z" fill="#c9ccd6"/>
+  <path d="M110 680 L200 680 L204 712 L100 712 Z" fill="#555865"/>
+  <!-- cuerpo -->
+  <path d="M140 170 C140 140 170 130 220 130 C280 130 300 160 300 200 L300 420 C300 470 270 480 220 480 C170 480 140 470 140 420 Z" fill="url(#t)"/>
+  <rect x="200" y="250" width="80" height="56" rx="8" fill="#c1c4ce"/>
+  <circle cx="222" cy="278" r="9" fill="#d9442f"/><circle cx="252" cy="278" r="9" fill="#2f5bd6"/>
+  <!-- bandera en el brazo -->
+  <g transform="translate(150 210)"><rect width="40" height="26" fill="#ffffff"/><rect width="40" height="4" y="4" fill="#d9442f"/><rect width="40" height="4" y="12" fill="#d9442f"/><rect width="40" height="4" y="20" fill="#d9442f"/><rect width="17" height="13" fill="#2f5bd6"/></g>
+  <!-- pierna de delante -->
+  <path d="M230 450 L280 600 L300 670 L230 690 L214 620 L180 470 Z" fill="url(#t)"/>
+  <path d="M220 680 L310 662 L318 696 L222 714 Z" fill="#555865"/>
+  <!-- brazo -->
+  <path d="M250 190 C300 210 320 280 330 340 L300 350 C288 300 272 260 240 240 Z" fill="url(#t)"/>
+  <circle cx="318" cy="356" r="22" fill="#c5c8d2"/>
+  <!-- casco -->
+  <circle cx="230" cy="90" r="88" fill="url(#t)"/>
+  <path d="M190 60 C230 30 300 40 312 90 C320 140 280 160 240 150 C200 140 176 96 190 60 Z" fill="url(#v)"/>
+  <path d="M206 66 C230 50 262 52 280 66" stroke="#fff7d6" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.8"/>
+</svg>

@@ -34,6 +34,8 @@ Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (
 
 - Prueba «Luna densa» (2026-11-16, Nico): 29 planos + efectos de sonido, sin voz todavía — `lotes/prueba-luna-densa/`.
 
+- Método denso (2026-11-16): estándar de los lotes desde el 2026-11-17-manana — `motor/DENSO.md`.
+
 ## Siguiente paso
 Ver los lotes 2026-11-16-manana (chat https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF) y 2026-11-16-tarde en sus chats y escribir «ok» (o cambios). El 2026-11-17 decidir si la mezcla de temas cotidianos se queda (TASKS).
 

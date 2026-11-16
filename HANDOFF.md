@@ -4,6 +4,16 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 21:20 — Nico — rama `main` — chat en la nube (Mac de Nico)
+**Hecho (método denso aplicado a los lotes)**:
+- `motor/denso.py`: clase `Video` (planos atados a palabras, control de lectura, halo neón, pop/whoosh/tic automáticos), `recorrido`, rótulos, piezas hechas, `provisional`. `python3 -m motor.denso guion.txt` lista los índices de palabra.
+- `motor/biblioteca/`: `svg/` (ilustraciones fijas del v4) + `ilus.py` (todas las generadas de la Luna y los ladrillos para dibujar nuevas).
+- `motor/DENSO.md`: guía con pasos, reglas y control. `AGENTE.md` §3/§5: método denso obligatorio, 150–160 palabras, «mejor 2 vídeos bien hechos que 3 flojos». README del motor actualizado.
+- `lotes/prueba-luna-densa/gen.py` reescrito sobre la biblioteca (ejemplo para copiar); `provisional.py` e `ilus_luna.py` del lote ya no hacen falta.
+**Pruebas**: el `episodio.json` de la Luna generado con la biblioteca es **idéntico** al anterior (comparación campo a campo); los 28 SVG generados son idénticos byte a byte; montaje sin voz (provisional) y hoja OK.
+**Ojo**: el primer lote automático con este método es el 2026-11-17-manana: revisar con lupa (ilustraciones de temas nuevos y tiempo del turno).
+**Publicación**: ver la entrada siguiente / `lotes/prueba-luna-densa/estado.md`.
+
 ## 2026-11-16 20:50 — Nico — rama `main` — chat en la nube (Mac de Nico)
 **Decisión**: Nico pide dejar en `DECISIONS.md` el método «denso» (prueba de la Luna) como estándar de los vídeos: planos atados a palabras, duración variable, micro escenas, tiempo de lectura, detalles de fondo que duran, figuras y fondos detallados, neones sobre oscuro, sonido de detalle bajo y música presente. Sustituye la regla de «un plano por frase» del v4.
 **Ojo**: `AGENTE.md` y el motor aún no lo aplican; los lotes automáticos siguen como antes hasta hacer la biblioteca y reescribir el manual. Falta que Jorge lo vea.

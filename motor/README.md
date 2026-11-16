@@ -70,6 +70,11 @@ Tiempo de render aproximado: 2,5–3 s de cálculo por segundo de vídeo.
 ## Portadas (2026-11-16, Nico)
 `python3 -m motor.portadas DIR/episodio.json --texto "NO SON SOLO CABEZAS" --clave cabezas --salida DIR/portadas` (o `--mp4 vídeo.mp4`) → 4 candidatas (fotogramas distintos sin rótulos del vídeo; texto arriba / centro / abajo / dato en cápsula amarilla, siempre dentro del recorte 3:4 de las cuadrículas de perfil), `hoja-portadas.jpg` y `portadas.json` con la puntuación. La puntuación (color, detalle, tamaño del sujeto, texto que no tapa el sujeto, legibilidad a 180 px) **solo ordena**: la elección final se hace mirando la hoja y se registra con `--elegir DIR/portadas N --motivo "…"` → `portada.jpg`. Criterios y flujo en `.claude/agents/portadas.md` (subagente que las crea y elige sin «ok», AGENTE §6b). ~20 s por vídeo.
 
+## Método denso (2026-11-16, Nico) — estándar de los vídeos
+- **`motor/DENSO.md`**: guía y reglas. **`motor/denso.py`**: `Video` (planos atados a palabras, control de lectura, halo neón, sonidos automáticos), `recorrido` (detalles de fondo persistentes), rótulos, `provisional` (montar sin voz). **`motor/biblioteca/`**: ilustraciones (`svg/` fijas + `ilus.py` generadas).
+- Índices de palabra de un guion: `python3 -m motor.denso guion.txt`. Ejemplo completo: `lotes/prueba-luna-densa/gen.py`.
+- `core.transformar`: `ex`/`ey` negativos = espejo. Sonidos nuevos en `sfx.py`: `senal`, `fugaz`, `trazo`, `mordisco`, `meteoro`, `tictac`, `agua`.
+
 ## Elementos (`tipo`)
 Propiedades comunes animables con `keys` (`[{"t": s, "x": .., "op": .., "ease": "suave|lineal|entrada|salida|rebote"}]`):
 `x, y, escala, ex, ey, rot, op, z` (z = paralaje: 0 fondo quieto, 1 primer plano).

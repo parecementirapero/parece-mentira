@@ -14,7 +14,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Estadísticas: tarea programada en la nube que republique cada mañana (≈9:15) la página de Claude «Parece Mentira · Estadísticas» (https://claude.ai/artifact/JMkrEuUZrAmq7yzqVao8ea) con `estadisticas/web/index.html`
 - [ ] Estadísticas: rellenar `estadisticas/etiquetas.json` (tema, voz, gancho) de los vídeos publicados para el Laboratorio
 - [ ] 2026-11-17 — Nico y Jorge: decidir si se prueba el lote de la mañana en la nube (tarea programada sin depender del Mac: voz por API, montaje y vídeos en el chat; publicar sigue necesitando un Mac encendido en el «ok»). Antes: decidir si la clave de ElevenLabs se guarda en la configuración del entorno en la nube (nunca en el repo) y copiar MP3/MP4 a la carpeta local al publicar. Si sale bien, pasar también el de las 20:00 — propuesto por Jorge 2026-11-16
-- [ ] Método «denso» (DECISIONS 2026-11-16): pasar a biblioteca del motor lo que hoy vive en `lotes/prueba-luna-densa/gen.py` e `ilus_luna.py` (planos por palabra, `recorrido`, control de lectura, sonidos automáticos, neón, fondos y animales) y reescribir `AGENTE.md` §5; que Jorge vea el vídeo de la Luna con voz
+- [ ] Revisar con lupa el primer lote automático con el método denso (2026-11-17-manana) y que Jorge vea el vídeo de la Luna
 - [ ] Nico y Jorge: tras ver el lote 2026-11-16-tarde (prueba de temas cotidianos), decidir el 2026-11-17 si la mezcla 2 cotidianos + 1 histórico se queda fija, pasa a todo cotidiano o se vuelve a lo de antes; apuntarlo en `DECISIONS.md`
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
@@ -34,6 +34,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Método denso en el motor (`motor/denso.py`, `motor/biblioteca/`, `motor/DENSO.md`) y en `AGENTE.md` — Nico — 2026-11-16
 - [x] «Luna densa»: whoosh de 29 a 14 y mucho más bajos; música de −17 a −13 dB — Nico — 2026-11-16
 - [x] Lote 2026-11-16-manana (planetas entre la Tierra y la Luna, pulpo de tres corazones, vikingos en 1021): 3 vídeos v1 **en revisión**; esperan el «ok» en https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF (correo `1a1e5cd4c9bf08da`) — Agente 08:00 (Nico) — 2026-11-16 20:30
 - [x] Lote 2026-11-16-tarde (3 vídeos v1: nudillos 57,7 s, puertas 54,7 s, Apolo 51,9 s) — **en revisión**: vídeos y portadas en el chat https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf, correo `1a1e5cb7121de9d1` — Agente 20:00 (Jorge) — 2026-11-16 20:25

@@ -1,138 +1,31 @@
-"""«La Luna se aleja» — versión DENSA v3 (2026-11-16, Nico).
+"""«La Luna se aleja» — ejemplo completo del MÉTODO DENSO (DECISIONS 2026-11-16). Guía: `motor/DENSO.md`.
 
-Cambios de la v3:
-- Cada plano empieza en una PALABRA del guion (índice en la alineación), no en un segundo fijo:
-  con la locución real los cortes se recolocan solos.
-- Duración variable a propósito: micro planos de ~0,45 s y planos largos de 2–2,7 s donde hay que entender algo.
-- Las animaciones se escalan a la duración real de cada plano (las claves se dan en fracción del plano).
-- Control de lectura: todo texto en pantalla tiene que verse al menos 0,25 s + 1 s por cada 17 letras;
-  si no, el script avisa.
-
-Uso: python3 gen.py DIR_SALIDA [audio.mp3 alineacion.json]
-Sin audio usa la locución/alineación PROVISIONALES de provisional.py (silencio + tiempos estimados a ritmo natural).
+Uso (desde cualquier sitio): python3 gen.py DIR_SALIDA [audio.mp3 alineacion.json]
+Sin audio monta con tiempos provisionales (silencio + alineación estimada) para ir viendo la hoja de fotogramas.
+Después:  python3 -m motor.render DIR_SALIDA/episodio.json --salida DIR_SALIDA/out
 """
-import json, os, random, shutil, sys
+import os, sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-RAIZ = os.path.abspath(os.path.join(AQUI, "..", ".."))
-sys.path.insert(0, os.path.join(AQUI, "..", "2026-11-15-tarde", "generadores", "v4"))
-sys.path.insert(0, RAIZ)
-from comun_v4 import IMG, BG, polvo, brillo, cam, Montaje  # noqa: E402
-from motor.tiempos import palabras_de_alineacion  # noqa: E402
+sys.path.insert(0, os.path.abspath(os.path.join(AQUI, "..", "..")))
+from motor.denso import *  # noqa: E402,F401,F403
+from motor import denso  # noqa: E402
 
-OUT = sys.argv[1]
-os.makedirs(OUT, exist_ok=True)
-if len(sys.argv) > 3:
-    AUDIO, ALIN = os.path.abspath(sys.argv[2]), os.path.abspath(sys.argv[3])
-else:
-    os.system(f"python3 {os.path.join(AQUI, 'provisional.py')} {OUT} >/dev/null")
-    AUDIO, ALIN = os.path.join(OUT, "locucion-provisional.mp3"), os.path.join(OUT, "alineacion-provisional.json")
-PAL = palabras_de_alineacion(ALIN)
-FIN = PAL[-1]["fin"] + 0.75
+v = Video(sys.argv[1], os.path.join(AQUI, "guion.txt"), *(sys.argv[2:4] if len(sys.argv) > 3 else ()))
 
-M = Montaje(OUT)
-nuevos = os.path.join(OUT, "svg-nuevos")
-os.system(f"python3 {os.path.join(AQUI, 'ilus_luna.py')} {nuevos} >/dev/null")
-for f in os.listdir(nuevos):
-    shutil.copy(os.path.join(nuevos, f), os.path.join(OUT, "svg", f))
-
-ESP = ["#02030a", "#0a1030"]
-FX, PLANOS, AVISOS = [], [], []
-
-
-def w(i, adelanto=0.06):
-    """Segundo en que empieza la palabra i del guion (el corte va un pelo antes)."""
-    return max(0.0, PAL[i]["inicio"] - adelanto) if i else 0.0
-
-
-def plano(i_palabra, nombre, mas=0.0):
-    """Decorador: registra un plano que empieza en la palabra i (+ `mas` segundos).
-    La función recibe d (duración) y devuelve el plano."""
-    def reg(fn):
-        PLANOS.append((w(i_palabra) + mas, nombre, fn))
-        return fn
-    return reg
-
-
-# ------------------------------------------------------------------ ayudantes
-def fx(t, tipo, db=-14, **k): FX.append({"t": round(t, 3), "tipo": tipo, "db": db, **k})
-
-
-def K(d, *pares):
-    """Claves en FRACCIÓN de la duración del plano: K(d, (0, {...}), (0.6, {...}))."""
-    return [{"t": round(f * d, 3), **v} for f, v in pares]
-
-
-def rotulo(t0, t1, texto="", **k):
-    ks = [{"t": t0, "escala": 0.0, "op": 0}, {"t": t0 + 0.05, "op": 1}, {"t": t0 + min(0.25, (t1 - t0) / 3), "escala": 1.0, "ease": "rebote"},
-          {"t": t1, "escala": 1.0, "op": 1}, {"t": t1 + 0.15, "op": 0}]
-    return {"tipo": "rotulo", "texto": texto, "hud": True, "z": 1, "keys": ks, **k}
-
-
-CIAN, MAGENTA, LIMA, AMBAR = "#2ff3ff", "#ff3df2", "#7dff3a", "#ffe93d"  # neones para fondos oscuros
-
-
-def amarillo(t0, t1, texto, y=1360, tam=96, color="#ffd23f"):
-    return rotulo(t0, t1, texto, tam=tam, color=color, capsula=None, rot=-6, x=540, y=y)
-
-
-def contexto(t0, t1, texto):
-    return rotulo(t0, t1, texto, tam=54, color="#ffffff", capsula="#c0392be6", borde="#ffffff30", x=540, y=470)
-
-
-def contador(t0, t1, desde, hasta, dur, unidad="", **k):
-    tam, x, y = k.pop("tam", 120), k.pop("x", 540), k.pop("y", 1450)
-    return {**rotulo(t0, t1, "", tam=tam, x=x, y=y, **k), "contar": [desde, hasta, dur], "contar_desde": t0, "unidad": unidad}
-
-
-def estrellas(n=40, sem=3): return polvo("#ffffff", n, (0, 0, 1080, 1920), sem, "estrellas")
-def tierra(x, y, ancho, z=0.4, giro=4, keys=None): return IMG("tierra_hd", ancho=ancho, x=x, y=y, z=z, anim={"girar": giro}, keys=keys or [])
-def luna(x, y, ancho, z=0.4, keys=None, **k): return IMG("luna_hd", ancho=ancho, x=x, y=y, z=z, keys=keys or [], **k)
-
-
-def flecha(pts, t0, t1, color="#ffffffcc", g=8, disc=None, punta=True, z=0.5):
-    f = {"tipo": "flecha", "puntos": pts, "grosor": g, "color": color, "punta": punta, "z": z,
-         "keys": [{"t": t0, "progreso": 0}, {"t": t1, "progreso": 1, "ease": "salida"}]}
-    if disc:
-        f["discontinua"] = disc
-        largo = sum(((pts[i + 1][0] - pts[i][0]) ** 2 + (pts[i + 1][1] - pts[i][1]) ** 2) ** 0.5 for i in range(len(pts) - 1))
-        n = int(min(8, max(3, largo / (disc[0] + disc[1]) / 2)))  # un tic blando por raya (máx. 8 para no saturar)
-        for i in range(n):
-            fx(INI + t0 + (t1 - t0) * (i / n) ** 1.4, "trazo", -27, f=820 + 55 * i)
-    return f
-
-
-def fugaz(t0, x0, y0, x1, y1, z=0.12):
-    fx(INI + t0, "fugaz", -25, pan=round((x0 + x1) / 1080 - 1, 2))
-    return {"tipo": "flecha", "puntos": [[x0, y0], [x1, y1]], "grosor": 3, "color": "#ffffffee", "punta": False, "z": z,
-            "keys": [{"t": t0, "progreso": 0, "op": 1}, {"t": t0 + 0.7, "progreso": 1}, {"t": t0 + 1.0, "op": 1}, {"t": t0 + 1.6, "op": 0}]}
-
-
-INI = 0.0  # inicio absoluto del plano que se está construyendo (lo fija el bucle de abajo)
-
-
-SAT_PLANOS = []  # (inicio, fin) de los planos donde se ve un satélite, para ponerle su señal
-
-
-def recorrido(T0, T1, p0, p1, d, esc=None):
-    """Claves de un objeto que cruza la pantalla entre los segundos ABSOLUTOS T0 y T1 (de p0 a p1).
-    Como depende del tiempo del vídeo y no del plano, sigue en el mismo sitio de un plano al siguiente."""
-    def en(T):
-        u = min(max((T - T0) / (T1 - T0), 0), 1)
-        k = {"x": p0[0] + (p1[0] - p0[0]) * u, "y": p0[1] + (p1[1] - p0[1]) * u, "op": 1 if T0 <= T <= T1 else 0}
-        if esc: k["escala"] = esc[0] + (esc[1] - esc[0]) * u
-        return k
-    return [{"t": 0, **en(INI), "ease": "lineal"}, {"t": d, **en(INI + d)}]
-
-
-# detalles de fondo que duran varios segundos (cruzan despacio y se ven en varios planos seguidos)
-# ventanas atadas a palabras del guion (no a segundos fijos): se recolocan con la voz real
-SAT = [(0.8, w(61), (-100, 1680), (1180, 1480)), (w(113), FIN, (1180, 260), (-100, 420))]
-T_DINO0, T_DINO1 = w(86) - 0.3, w(105) + 0.3  # tramo de los dinosaurios
+# ------------------------------------------------------------------ detalles de fondo que duran (atados a palabras)
+SAT = [(0.8, v.w(61), (-100, 1680), (1180, 1480)), (v.w(113), v.FIN, (1180, 260), (-100, 420))]  # dos satélites
+T_DINO0, T_DINO1 = v.w(86) - 0.3, v.w(105) + 0.3  # tramo de los dinosaurios
 
 
 def satelite(d, z=0.15):
-    SAT_PLANOS.append((INI, INI + d))
+    """Los dos satélites que cruzan despacio los planos de espacio. Señal suave al entrar en un plano donde se ven
+    (como mucho cada 2,6 s), con paneo según por dónde van."""
+    T = v.ini + 0.25
+    for T0, T1, p0, p1 in SAT:
+        if T0 + 0.3 <= T <= T1 - 0.5 and d >= 0.9:
+            x = p0[0] + (p1[0] - p0[0]) * (T - T0) / (T1 - T0)
+            fx_espaciado("satelite", T, "senal", -28, 2.6, pan=round(max(-0.8, min(0.8, x / 540 - 1)), 2))
     return [IMG("satelite", ancho=150, z=z, rot=-15, anim={"girar": 4}, keys=recorrido(*SAT[0], d)),
             IMG("satelite", ancho=120, z=z, rot=20, anim={"girar": -4}, keys=recorrido(*SAT[1], d))]
 
@@ -142,37 +35,8 @@ def pterosaurios(d):
             for i, (dx, y, ancho, z) in enumerate([(0, 430, 300, 0.3), (220, 360, 200, 0.22), (420, 500, 160, 0.18)])]
 
 
-def reloj(x, y, ancho, h0, m0, h1, m1, t0, t1, z=0.6):
-    k = ancho / 600; cx, cy = x, y + 20 * k
-    return [IMG("reloj_bolsillo", ancho=ancho, x=x, y=y, z=z),
-            IMG("aguja_hora", ancho=200 * k * 1.9, x=cx, y=cy, z=z + 0.01, keys=[{"t": t0, "rot": h0 * 30 + m0 * 0.5, "ease": "lineal"}, {"t": t1, "rot": h1 * 30 + m1 * 0.5}]),
-            IMG("aguja_min", ancho=200 * k * 2.2, x=cx, y=cy, z=z + 0.02, keys=[{"t": t0, "rot": m0 * 6, "ease": "lineal"}, {"t": t1, "rot": m1 * 6}])]
-
-
-def cronometro(rot0, rot1, t0, t1):
-    ag = {"tipo": "forma", "forma": "poligono", "puntos": [[-7, 0], [0, -190], [7, 0], [0, 26]], "relleno": "#d62f22", "x": 540, "y": 1060, "z": 0.62,
-          "keys": [{"t": t0, "rot": rot0, "ease": "lineal"}, {"t": t1, "rot": rot1}]}
-    return [IMG("cronometro", ancho=640, x=540, y=1040, z=0.6), ag,
-            {"tipo": "forma", "forma": "circulo", "radio": 16, "relleno": "#1b2233", "x": 540, "y": 1060, "z": 0.63}]
-
-
-def lineas_vel(x, y, sem=1, color="#7df9ffaa"):
-    r = random.Random(sem)
-    return [flecha([[x - r.uniform(80, 220), y + dy], [x - 40, y + dy]], 0.05 + i * 0.05, 0.4 + i * 0.05, color, 4, punta=False, z=0.45)
-            for i, dy in enumerate([-40, -10, 20, 50])]
-
-
-def sol(x, y, r=170, z=0.3):
-    return [brillo(x, y, r * 3.2, "#ffcf6a", 0.55, z - 0.01, pulso=[0.06, 2.0]),
-            {"tipo": "esfera", "radio": r, "textura": "sol", "color": "#fff3b0", "color2": "#ffb02e", "giro": 6, "x": x, "y": y, "z": z, "luz": [0, 0]}]
-
-
-def P(fondo, els, camara, entrada="corte", dur_entrada=0.3, vineta=0.55, hud=(), sfx=()):
-    return dict(fondo=fondo, els=els, cam=camara, entrada=entrada, dur=dur_entrada, vineta=vineta, hud=list(hud), sfx=list(sfx))
-
-
 # ================================================================== PLANOS (en orden de guion)
-@plano(0, "uñas: gancho")
+@v.plano(0, "uñas: gancho")
 def _(d):
     return P(["#2a1a14", "#120a08"], [brillo(540, 650, 700, "#ffcf9a", 0.5), estrellas(20, 9),
              luna(820, 420, 150, 0.2, keys=K(d, (0, {"x": 800, "y": 440, "escala": 1.1}), (1, {"x": 860, "y": 380, "escala": 0.85}))),
@@ -180,16 +44,16 @@ def _(d):
              cam(1.18, 1.3, (540, 1050), (540, 980)), vineta=0.7, sfx=[(0.02, "golpe", -12), (0.45, "brillo", -20)])
 
 
-@plano(3, "la Luna se aleja")
+@v.plano(3, "la Luna se aleja")
 def _(d):
-    return P(ESP, [BG("bg_esp_violeta"), estrellas(), tierra(260, 1250, 620, giro=6),
+    return P(ESPACIO, [BG("bg_esp_violeta"), estrellas(), tierra(260, 1250, 620, giro=6),
              luna(0, 0, 220, 0.5, keys=K(d, (0, {"x": 700, "y": 820}), (0.75, {"x": 900, "y": 515, "ease": "salida"}))),
              *lineas_vel(820, 700, 2), flecha([[560, 1040], [826, 633]], 0.15, d * 0.85, CIAN, 9, [20, 14]),
              fugaz(0.2, 900, 200, 620, 380), *satelite(d)],
              cam(1.0, 1.08, (500, 1000), (600, 880)), "desenfoque", sfx=[(0.1, "whoosh", -12, {"dur": 0.7})])
 
 
-@plano(9, "misma velocidad: uña = Luna")
+@v.plano(9, "misma velocidad: uña = Luna")
 def _(d):
     return P(["#120b1a", "#0a1030"], [
         {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 960, "relleno": ["#3a2418", "#1a0f0a"], "x": 540, "y": 480, "z": 0.05},
@@ -204,7 +68,7 @@ def _(d):
         cam(1.0, 1.03), hud=[rotulo(0.3, d - 0.1, "=", tam=260, color="#ffd23f", capsula="#0d1330d8", x=540, y=960)])
 
 
-@plano(17, "3,8 cm")
+@v.plano(17, "3,8 cm")
 def _(d):
     return P(["#1b2236", "#0b0f1c"], [brillo(540, 900, 700, "#9fb3ff", 0.3), polvo("#cfe0ff", 25, sem=5),
              IMG("regla", ancho=1000, x=540, y=1050, z=0.5, keys=K(d, (0, {"rot": -4}), (1, {"rot": -1}))),
@@ -215,16 +79,16 @@ def _(d):
              sfx=[(0.15 + i * 0.12, "tic", -24) for i in range(6)])
 
 
-@plano(21, "al año: hoja de calendario")
+@v.plano(21, "al año: hoja de calendario")
 def _(d):
     return P(["#3a2a1c", "#1a1410"], [brillo(540, 900, 700, "#ffcf8a", 0.35), IMG("calendario", ancho=640, x=540, y=1000, z=0.59),
              IMG("calendario", ancho=640, x=540, y=1000, z=0.6, keys=K(d, (0.15, {"y": 1000, "rot": 0, "op": 1}), (0.85, {"y": 380, "rot": -35, "op": 0, "ease": "entrada"})))],
              cam(1.0, 1.05, (540, 1000), (540, 1000)), sfx=[(0.15, "whoosh", -16, {"dur": 0.3})])
 
 
-@plano(23, "¿cómo lo sabemos?")
+@v.plano(23, "¿cómo lo sabemos?")
 def _(d):
-    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 6), luna(540, 960, 560, 0.5, anim={"girar": 3}),
+    return P(ESPACIO, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 6), luna(540, 960, 560, 0.5, anim={"girar": 3}),
              brillo(540, 960, 520, "#dfe6ff", 0.25, 0.45, pulso=[0.15, 0.6])], cam(1.0, 1.25, (540, 960), (540, 960)), "zoom",
              hud=[amarillo(0.05, d - 0.03, "¿CÓMO?", y=1520, tam=110, color=CIAN)])
 
@@ -241,12 +105,12 @@ def cuenta(n):
     return fn
 
 
-plano(26, "cuenta atrás 3")(cuenta(3))
-plano(26, "cuenta atrás 2", mas=0.32)(cuenta(2))
-plano(26, "cuenta atrás 1", mas=0.64)(cuenta(1))
+v.plano(26, "cuenta atrás 3")(cuenta(3))
+v.plano(26, "cuenta atrás 2", mas=0.32)(cuenta(2))
+v.plano(26, "cuenta atrás 1", mas=0.64)(cuenta(1))
 
 
-@plano(29, "despegue 1969")
+@v.plano(29, "despegue 1969")
 def _(d):
     humo = [brillo(540 + dx, 1640 + dy, 260, "#d9d2c8", 0.6, 0.55, keys=K(d, (0.05, {"op": 0, "escala": 0.5}), (0.6, {"op": 1, "escala": 1.4})))
             for dx, dy in [(-260, 30), (-120, 60), (0, 80), (140, 50), (270, 40)]]
@@ -258,7 +122,7 @@ def _(d):
              sfx=[(0, "golpe", -12), (0, "rumor", -9, {"dur": d + 0.3})])
 
 
-@plano(32, "Apolo 11 aluniza")
+@v.plano(32, "Apolo 11 aluniza")
 def _(d):
     return P(["#02030a", "#02030a"], [BG("bg_superficie_rica"), IMG("tierra_hd", ancho=220, x=840, y=380, z=0.1, anim={"girar": 3}),
              IMG("modulo_lunar", ancho=600, x=520, z=0.6, keys=K(d, (0, {"y": 700}), (0.8, {"y": 1180, "ease": "salida"}))),
@@ -267,14 +131,14 @@ def _(d):
              cam(1.0, 1.08, (540, 1100), (540, 1150)), "zoom", hud=[contexto(0.05, d - 0.05, "APOLO 11")], sfx=[(d * 0.8, "golpe", -11)])
 
 
-@plano(36, "micro: primera huella")
+@v.plano(36, "micro: primera huella")
 def _(d):
     return P(["#8d8a82", "#5d5a54"], [BG("bg_superficie_rica"), polvo("#dcd8cc", 25, (200, 800, 880, 1300), 30),
              {"tipo": "huella", "clase": "bota", "largo": 300, "x": 540, "y": 1150, "z": 0.6, "rot": 12, "keys": K(d, (0, {"marca": 0}), (0.5, {"marca": 1}))}],
              cam(1.6, 1.7, (540, 1150), (540, 1150)), sfx=[(0.02, "golpe", -20)])
 
 
-@plano(38, "espejos")
+@v.plano(38, "espejos")
 def _(d):
     return P(["#02030a", "#02030a"], [BG("bg_superficie_rica"), IMG("astronauta", ancho=360, x=300, y=1240, z=0.6, anim={"balanceo": [3, 0.8]}),
              IMG("retro", ancho=520, x=700, y=1380, z=0.65, keys=K(d, (0, {"y": 1300, "op": 0}), (0.3, {"y": 1380, "op": 1, "ease": "salida"}))),
@@ -282,7 +146,7 @@ def _(d):
              cam(1.15, 1.25, (560, 1280), (600, 1300)), hud=[amarillo(0.02, d - 0.02, "ESPEJOS", y=1720)], sfx=[(d * 0.4, "brillo", -13)])
 
 
-@plano(39, "micro: el láser se carga")
+@v.plano(39, "micro: el láser se carga")
 def _(d):
     return P(["#05070f", "#0b1430"], [BG("bg_esp_petroleo"), IMG("observatorio", ancho=1180, x=540, y=960, z=0.3),
              brillo(520, 1080, 220, "#5dff7a", 0.9, 0.5, keys=K(d, (0, {"op": 0.1, "escala": 0.3}), (0.9, {"op": 1, "escala": 1.2})), pulso=[0.25, 0.1]),
@@ -290,7 +154,7 @@ def _(d):
              cam(2.2, 2.4, (520, 1100), (520, 1080)), "desenfoque", 0.25, sfx=[(0.05, "rumor", -20, {"dur": d})])
 
 
-@plano(42, "se dispara un láser")
+@v.plano(42, "se dispara un láser")
 def _(d):
     return P(["#05070f", "#0b1430"], [BG("bg_esp_petroleo"), *satelite(d), luna(780, 260, 200), fugaz(d * 0.5, 160, 300, 420, 160),
              IMG("observatorio", ancho=1180, x=540, y=960, z=0.3),
@@ -299,16 +163,16 @@ def _(d):
              cam(1.1, 1.0, (540, 1050), (560, 900)), hud=[amarillo(0.2, d - 0.05, "LÁSER", y=1700, color=LIMA)], sfx=[(d * 0.3, "zap", -11)])
 
 
-@plano(46, "la luz rebota")
+@v.plano(46, "la luz rebota")
 def _(d):
-    return P(ESP, [BG("bg_esp_petroleo"), *satelite(d), estrellas(25, 10), tierra(240, 1420, 520), luna(820, 560, 260),
+    return P(ESPACIO, [BG("bg_esp_petroleo"), *satelite(d), estrellas(25, 10), tierra(240, 1420, 520), luna(820, 560, 260),
              flecha([[330, 1300], [800, 590]], 0.0, d * 0.4, LIMA, 9),
              flecha([[790, 640], [350, 1330]], d * 0.5, d * 0.95, MAGENTA, 9, [22, 14]),
              brillo(800, 590, 200, "#ffffff", 1.0, 0.55, keys=K(d, (0.35, {"op": 0, "escala": 0.3}), (0.48, {"op": 1, "escala": 1.4}), (0.9, {"op": 0})))],
              cam(1.05, 1.0, (560, 960), (540, 960)), sfx=[(d * 0.4, "ding", -16, {"f": 1320})])
 
 
-@plano(50, "vuelve en 2,5 s")
+@v.plano(50, "vuelve en 2,5 s")
 def _(d):
     return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#9fb3ff", 0.3), polvo("#cfe0ff", 20, sem=11), *cronometro(0, 900, 0.1, d * 0.75)],
              cam(1.0, 1.12, (540, 1050), (540, 1050)), "zoom", vineta=0.65,
@@ -317,14 +181,14 @@ def _(d):
              sfx=[(0.15 + i * 0.16, "tic", -22) for i in range(int(d / 0.16) - 1)])
 
 
-@plano(56, "¿y por qué se va?")
+@v.plano(56, "¿y por qué se va?")
 def _(d):
-    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 13), tierra(400, 1200, 600, giro=8),
+    return P(ESPACIO, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 13), tierra(400, 1200, 600, giro=8),
              luna(0, 0, 200, 0.55, keys=K(d, (0, {"x": 700, "y": 760}), (1, {"x": 1000, "y": 420, "ease": "entrada"}))), *lineas_vel(900, 520, 4)],
              cam(1.0, 1.06, (540, 960), (600, 900)), "desenfoque", hud=[amarillo(0.1, d - 0.05, "¿POR QUÉ?", y=1650, color=MAGENTA)])
 
 
-@plano(61, "mareas")
+@v.plano(61, "mareas")
 def _(d):
     return P(["#0e3a5c", "#05192b"], [brillo(540, 600, 700, "#9fd8ff", 0.35),
              {"tipo": "agua", "nivel": 1000, "lado": "abajo", "amplitud": 40, "colores": ["#2a8bd0", "#0b4a7a"], "z": 0.4,
@@ -334,9 +198,9 @@ def _(d):
              cam(1.0, 1.08, (540, 1000), (540, 1050)), "zoom", hud=[amarillo(0.1, d - 0.05, "MAREAS", y=1650, color=CIAN)], sfx=[(0.02, "agua", -11, {"dur": d + 0.3})])
 
 
-@plano(64, "el agua frena")
+@v.plano(64, "el agua frena")
 def _(d):
-    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(25, 15), IMG("marea", ancho=900, x=540, y=1050, z=0.35, rot=-10, anim={"pulso": [0.02, 1.0]}),
+    return P(ESPACIO, [BG("bg_esp_violeta"), *satelite(d), estrellas(25, 15), IMG("marea", ancho=900, x=540, y=1050, z=0.35, rot=-10, anim={"pulso": [0.02, 1.0]}),
              tierra(540, 1050, 560, giro=-4), luna(980, 880, 150),
              flecha([[300, 780], [540, 680], [780, 780]], 0.1, d * 0.7, AMBAR, 14, z=0.6),
              {"tipo": "forma", "forma": "poligono", "puntos": [[-60, -20], [60, -20], [60, 20], [-60, 20]], "relleno": "#d62f22", "x": 540, "y": 650, "z": 0.62,
@@ -344,7 +208,7 @@ def _(d):
              cam(1.0, 1.1, (540, 960), (540, 900)), "desenfoque", hud=[contexto(0.05, d - 0.05, "FRENA")], sfx=[(d * 0.6, "pop", -14)])
 
 
-@plano(67, "como una patinadora")
+@v.plano(67, "como una patinadora")
 def _(d):
     giros, t, per = [], 0.0, 0.06
     while t < d:
@@ -358,25 +222,25 @@ def _(d):
              cam(1.0, 1.05, (540, 1100), (540, 1100)), hud=[contexto(0.03, d - 0.03, "PATINADORA")], sfx=[(0.02, "whoosh", -18, {"dur": d})])
 
 
-@plano(72, "empuja a la Luna hacia fuera (plano largo)")
+@v.plano(72, "empuja a la Luna hacia fuera (plano largo)")
 def _(d):
     orb1 = {"tipo": "forma", "forma": "elipse", "ancho": 600, "alto": 600, "relleno": "#ffffff", "op_relleno": 0, "grosor": 3, "borde": CIAN + "aa", "x": 540, "y": 1000, "z": 0.3}
     orb2 = {"tipo": "forma", "forma": "elipse", "ancho": 880, "alto": 880, "relleno": "#ffffff", "op_relleno": 0, "grosor": 5, "borde": MAGENTA,
             "x": 540, "y": 1000, "z": 0.3, "keys": K(d, (0.15, {"op": 0, "escala": 0.68}), (0.8, {"op": 1, "escala": 1.0}))}
-    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 16), orb1, orb2, tierra(540, 1000, 280, giro=10),
+    return P(ESPACIO, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 16), orb1, orb2, tierra(540, 1000, 280, giro=10),
              luna(0, 0, 120, 0.5, keys=K(d, (0, {"x": 840, "y": 1000}), (0.35, {"x": 860, "y": 740}), (0.7, {"x": 820, "y": 640}), (1, {"x": 940, "y": 740}))),
              *[flecha([[540 + dx * 160, 1000 + dy * 160], [540 + dx * 400, 1000 + dy * 400]], d * (0.1 + i * 0.05), d * (0.35 + i * 0.05), AMBAR, 6, z=0.35)
                for i, (dx, dy) in enumerate([(0.7, -0.7), (-0.7, -0.7), (0.7, 0.7), (-0.7, 0.7)])], fugaz(d * 0.7, 120, 300, 380, 420)],
              cam(1.0, 0.94), "zoom", hud=[amarillo(d * 0.35, d - 0.05, "HACIA FUERA", y=1680, color=MAGENTA)], sfx=[(0.2, "whoosh", -13, {"dur": 1.2})])
 
 
-@plano(81, "resultado")
+@v.plano(81, "resultado")
 def _(d):
     return P(["#1a1410", "#3a2a1c"], [brillo(540, 1000, 650, "#ffcf8a", 0.3), *reloj(540, 1000, 700, 3, 0, 9, 0, 0.0, d)],
              cam(1.25, 1.35, (540, 960), (540, 960)), "zoom", 0.25, vineta=0.7, sfx=[(0.0, "tictac", -15, {"dur": d, "ritmo": 0.2})])
 
 
-@plano(82, "los días se alargan")
+@v.plano(82, "los días se alargan")
 def _(d):
     soles = [{**s, "keys": K(d, (0, {"x": 120, "y": 760, "ease": "lineal"}), (1, {"x": 960, "y": 500}))} for s in sol(0, 0, 90, 0.07)]
     return P(["#4f9be0", "#fbe8c2"], [BG("campo_dia"), *soles, *reloj(540, 1180, 520, 6, 0, 18, 0, 0.1, d), polvo("#ffffff", 20, sem=17)],
@@ -385,7 +249,7 @@ def _(d):
              sfx=[(0.05, "tictac", -17, {"dur": d - 0.1, "ritmo": 0.25})])
 
 
-T_MET = w(103)  # segundo en que cae el meteorito (micro plano antes de salir de los dinosaurios)
+T_MET = v.w(103)  # segundo en que cae el meteorito (micro plano antes de salir de los dinosaurios)
 BRAQ = (230, 1135, 620)  # braquiosaurio quieto junto a su rama (x, y, ancho); su cabeza queda en ≈(488, 958)
 
 
@@ -414,7 +278,7 @@ def meteoro_lejos(d):
             IMG("meteorito", ancho=420, z=0.12, ex=-1, rot=49, keys=recorrido(T_DINO0 + 0.2, T_MET, (90, 600), (230, 760), d, esc=(0.22, 0.62)))]
 
 
-@plano(86, "dinosaurios comiendo")
+@v.plano(86, "dinosaurios comiendo")
 def _(d):
     come, son = comer(d, [0.6], "rama_hojas", "rama_mordida1")
     f = 0.3  # el triceratops muerde su arbusto
@@ -429,7 +293,7 @@ def _(d):
              cam(1.0, 1.06, (540, 1200), (500, 1200)), "zoom", vineta=0.5, sfx=[(f * d, "mordisco", -16), *son, (0.1, "golpe", -19)])
 
 
-@plano(89, "23,5 horas (plano largo)")
+@v.plano(89, "23,5 horas (plano largo)")
 def _(d):
     come, son = comer(d, [0.3, 0.75], "rama_mordida1", "rama_mordida2")
     return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"), *meteoro_lejos(d), *pterosaurios(d), *come,
@@ -442,7 +306,7 @@ def _(d):
              sfx=[(0.1, "tictac", -19, {"dur": d * 0.8, "ritmo": 0.25})] + son + [(0.3, "golpe", -21), (1.2, "golpe", -21)])
 
 
-@plano(96, "372 días")
+@v.plano(96, "372 días")
 def _(d):
     n = 6
     come, son = comer(d, [0.45], "rama_mordida2", "rama_mordida2")
@@ -456,7 +320,7 @@ def _(d):
              sfx=[(0.17 + i * d * 0.1, "whoosh", -25, {"dur": 0.18}) for i in range(n)] + son + [(0.0, "meteoro", -24, {"dur": d})])
 
 
-@plano(103, "micro: cae el meteorito")
+@v.plano(103, "micro: cae el meteorito")
 def _(d):
     cae = K(d, (0, {"x": 80, "y": 330, "escala": 0.7}), (1, {"x": 660, "y": 960, "escala": 1.3, "ease": "entrada"}))
     return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"),
@@ -472,7 +336,7 @@ def _(d):
              sfx=[(-0.3, "meteoro", -9, {"dur": d + 0.3}), (d - 0.02, "golpe", -8), (d, "rumor", -14, {"dur": 1.3})])
 
 
-@plano(105, "rayas: lupa")
+@v.plano(105, "rayas: lupa")
 def _(d):
     return P(["#2a241c", "#120f0a"], [brillo(540, 900, 700, "#ffe2b0", 0.35), polvo("#ffe9c0", 20, sem=21),
              IMG("almeja_fosil", ancho=880, x=540, y=1050, z=0.6),
@@ -481,13 +345,13 @@ def _(d):
              cam(1.0, 1.08, (540, 1050), (540, 1000)), "corte", vineta=0.65, hud=[contexto(0.05, d - 0.05, "1 RAYA = 1 DÍA")], sfx=[(d * 0.6, "brillo", -16)])
 
 
-@plano(110, "almeja fósil de cerca")
+@v.plano(110, "almeja fósil de cerca")
 def _(d):
     return P(["#2a241c", "#120f0a"], [IMG("almeja_fosil", ancho=880, x=540, y=1050, z=0.6), polvo("#ffe9c0", 15, sem=22)],
              cam(1.6, 1.8, (540, 820), (520, 800)))
 
 
-@plano(113, "micro: un láser corta la concha")
+@v.plano(113, "micro: un láser corta la concha")
 def _(d):
     return P(["#2a241c", "#120f0a"], [IMG("almeja_fosil", ancho=880, x=540, y=1050, z=0.6),
              {"tipo": "forma", "forma": "rect", "ancho": 900, "alto": 6, "relleno": "#5dff7a", "x": 540, "z": 0.65, "keys": K(d, (0, {"y": 700, "ease": "lineal"}), (1, {"y": 1150}))},
@@ -496,51 +360,51 @@ def _(d):
              cam(1.3, 1.35, (540, 950), (540, 980)), sfx=[(0.02, "zap", -18, {"f0": 900, "f1": 600, "dur": d})])
 
 
-@plano(114, "micro: tiempo hacia atrás")
+@v.plano(114, "micro: tiempo hacia atrás")
 def _(d):
     return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#ff9a7a", 0.3), *cronometro(0, -1080, 0, d)],
              cam(1.1, 1.2, (540, 1050), (540, 1050)), "desenfoque", 0.2, vineta=0.7, sfx=[(0.0, "whoosh", -14, {"dur": d})])
 
 
-@plano(116, "1.400 millones de años: la Luna cerca")
+@v.plano(116, "1.400 millones de años: la Luna cerca")
 def _(d):
-    return P(ESP, [BG("bg_esp_ambar"), *satelite(d), estrellas(40, 22), tierra(380, 1250, 560, giro=40),
+    return P(ESPACIO, [BG("bg_esp_ambar"), *satelite(d), estrellas(40, 22), tierra(380, 1250, 560, giro=40),
              luna(0, 0, 330, 0.5, keys=K(d, (0, {"x": 880, "y": 600, "escala": 0.48}), (0.8, {"x": 720, "y": 820, "escala": 1.0, "ease": "salida"}))),
              flecha([[965, 470], [828, 664]], 0.1, d * 0.7, "#ff3d6e", 8, [18, 12])],
              cam(1.0, 1.05),
              hud=[{**contador(0.05, d - 0.05, 0, 1400, d * 0.55, "MILLONES DE AÑOS", tam=100, y=560), "capsula": "#c0392be6"}])
 
 
-@plano(120, "18 horas (plano largo)")
+@v.plano(120, "18 horas (plano largo)")
 def _(d):
-    return P(ESP, [BG("bg_esp_ambar"), *satelite(d), estrellas(30, 23), tierra(540, 1150, 620, giro=70), luna(900, 520, 300),
+    return P(ESPACIO, [BG("bg_esp_ambar"), *satelite(d), estrellas(30, 23), tierra(540, 1150, 620, giro=70), luna(900, 520, 300),
              *reloj(260, 520, 300, 0, 0, 18, 0, 0.1, d * 0.7, z=0.65), fugaz(d * 0.6, 700, 200, 980, 320)],
              cam(1.0, 1.06, (540, 1000), (540, 1000)), hud=[rotulo(d * 0.4, d - 0.05, "18", unidad="HORAS", tam=150, x=540, y=1620, borde=AMBAR)],
              sfx=[(0.1, "tictac", -16, {"dur": d * 0.7, "ritmo": 0.2})])
 
 
-@plano(126, "micro: avance rápido")
+@v.plano(126, "micro: avance rápido")
 def _(d):
     return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#7ad0ff", 0.3), *cronometro(0, 1440, 0, d)],
              cam(1.1, 1.2, (540, 1050), (540, 1050)), "desenfoque", 0.2, vineta=0.7, sfx=[(0.0, "whoosh", -14, {"dur": d})])
 
 
-@plano(129, "600 millones de años: la Luna lejos")
+@v.plano(129, "600 millones de años: la Luna lejos")
 def _(d):
-    return P(ESP, [BG("bg_esp_petroleo"), *satelite(d), estrellas(40, 24), tierra(300, 1350, 480, giro=3),
+    return P(ESPACIO, [BG("bg_esp_petroleo"), *satelite(d), estrellas(40, 24), tierra(300, 1350, 480, giro=3),
              luna(0, 0, 260, 0.5, keys=K(d, (0, {"x": 640, "y": 900, "escala": 1.0}), (0.9, {"x": 900, "y": 420, "escala": 0.35, "ease": "salida"}))),
              flecha([[560, 1030], [866, 481]], 0.1, d * 0.85, CIAN, 8, [18, 12])],
              cam(1.0, 1.04), hud=[{**contador(0.05, d - 0.05, 0, 600, d * 0.5, "MILLONES DE AÑOS", tam=110, y=560), "contar_prefijo": "+", "borde": CIAN}])
 
 
-@plano(134, "hoy / futuro")
+@v.plano(134, "hoy / futuro")
 def _(d):
-    return P(ESP, [BG("bg_esp_petroleo"), *satelite(d), estrellas(30, 34), luna(300, 980, 340, 0.4), fugaz(d * 0.3, 820, 300, 1040, 180),
+    return P(ESPACIO, [BG("bg_esp_petroleo"), *satelite(d), estrellas(30, 34), luna(300, 980, 340, 0.4), fugaz(d * 0.3, 820, 300, 1040, 180),
              luna(780, 980, 340, 0.4, keys=K(d, (0, {"escala": 1.0}), (0.6, {"escala": 0.55, "ease": "salida"})))],
              cam(1.0, 1.04), hud=[rotulo(0.05, d - 0.05, "HOY", tam=70, x=300, y=1260), rotulo(0.1, d - 0.05, "FUTURO", tam=70, x=780, y=1260)])
 
 
-@plano(139, "ya no tapa el Sol")
+@v.plano(139, "ya no tapa el Sol")
 def _(d):
     disco = {"tipo": "forma", "forma": "circulo", "radio": 140, "relleno": "#06070c", "z": 0.35, "keys": K(d, (0, {"x": 160, "y": 820}), (0.7, {"x": 540, "y": 900, "ease": "salida"}))}
     return P(["#020414", "#0d1638"], [BG("bg_eclipse"), *sol(540, 900, 175), disco, fugaz(d * 0.5, 150, 300, 420, 420),
@@ -548,7 +412,7 @@ def _(d):
              cam(1.0, 1.08, (540, 1000), (540, 940)), "zoom", hud=[contexto(0.02, d - 0.02, "NO LO TAPA")], sfx=[(0, "rumor", -18, {"dur": d})])
 
 
-@plano(142, "adiós eclipses totales (plano largo)")
+@v.plano(142, "adiós eclipses totales (plano largo)")
 def _(d):
     apaga = K(d, (0, {"op": 1}), (0.55, {"op": 1}), (0.85, {"op": 0}))
     return P(["#020414", "#020414"], [BG("bg_eclipse"),
@@ -559,7 +423,7 @@ def _(d):
              cam(1.1, 1.18, (540, 950), (540, 920)), hud=[amarillo(0.15, d - 0.05, "ADIÓS, ECLIPSES TOTALES", y=1380, tam=66)], sfx=[(0.02, "golpe", -12)])
 
 
-@plano(147, "no te lo pierdas (plano largo)")
+@v.plano(147, "no te lo pierdas (plano largo)")
 def _(d):
     flashes = [(240, 1570, 0.25), (800, 1560, 0.45), (370, 1600, 0.65), (900, 1620, 0.8)]
     return P(["#020414", "#0d1638"], [BG("bg_eclipse"),
@@ -573,68 +437,5 @@ def _(d):
 
 
 # ================================================================== construir
-PLANOS.sort(key=lambda p: p[0])
-_g = globals()
-LEER = lambda txt: 0.25 + len(txt) / 17  # segundos mínimos para leer un texto (una cifra suelta: ~0,3 s)
-informe = []
-for k, (ini, nombre, fn) in enumerate(PLANOS):
-    fin = PLANOS[k + 1][0] if k + 1 < len(PLANOS) else FIN
-    d = round(fin - ini, 3)
-    _g["INI"] = ini
-    p = fn(d)
-    els = []
-    for e in p["els"]:
-        if e.get("tipo") == "flecha" and e.get("grosor", 0) >= 6:
-            els.append({**e, "grosor": e["grosor"] * 3, "color": e["color"][:7] + "38", "punta": False})
-        if e.get("tipo") == "forma" and e.get("op_relleno") == 0 and e.get("borde"):
-            els.append({**e, "grosor": e["grosor"] * 4, "borde": e["borde"][:7] + "38"})
-        els.append(e)
-    p["els"] = els
-    M.plano(ini, fin, p["fondo"], p["els"], p["cam"], entrada=p["entrada"], vineta=p["vineta"], dur=p["dur"] if p["entrada"] != "corte" else None)
-    # «whoosh» de transición: solo de vez en cuando (≥ 5 s desde el anterior) y muy bajo, para que no tape la música
-    if p["entrada"] in ("desenfoque", "zoom", "barrido") and ini - _g.get("ULT_WHOOSH", -9) >= 5:
-        fx(max(0, ini - 0.12), "whoosh", -24, dur=0.35)
-        _g["ULT_WHOOSH"] = ini
-    for h in p["hud"]:
-        txt = ((h.get("texto") or "") + " " + (h.get("unidad") or "")).strip()
-        if h.get("contar"):
-            txt = (f"{h['contar'][1]} " + txt).strip()
-        visible = h["keys"][-2]["t"] - h["keys"][0]["t"]
-        if visible + 1e-3 < LEER(txt):
-            AVISOS.append(f"  ⚠ «{txt}» en «{nombre}»: {visible:.2f} s en pantalla, harían falta {LEER(txt):.2f} s")
-        fx(ini + h["keys"][0]["t"], "pop", -16)
-    M.add(*p["hud"])
-    for s in p["sfx"]:
-        t, tipo, db = s[:3]
-        if tipo == "whoosh":
-            if db <= -20: continue      # fuera los whoosh pequeños repetidos (hojas de calendario, etc.)
-            db -= 9                      # y los que quedan, bastante más bajos
-        fx(ini + t, tipo, db, **(s[3] if len(s) > 3 else {}))
-    informe.append((d, nombre))
-
-# señal suave de los satélites: un par de pitidos al entrar en un plano donde se ven (como mucho cada 2,6 s),
-# con paneo según por dónde van
-ultimo = -9
-for a, b in sorted(SAT_PLANOS):
-    T = a + 0.25
-    for T0, T1, p0, p1 in SAT:
-        if T0 + 0.3 <= T <= T1 - 0.5 and b - a >= 0.9 and T - ultimo >= 2.6:
-            x = p0[0] + (p1[0] - p0[0]) * (T - T0) / (T1 - T0)
-            fx(T, "senal", -28, pan=round(max(-0.8, min(0.8, x / 540 - 1)), 2))
-            ultimo = T
-
-claves = ["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"]
-M.guardar("02", "luna-densa", FIN, claves, {"generar": "curiosidad", "semilla": 3, "db": -13})
-ruta = os.path.join(OUT, "episodio.json")
-ep = json.load(open(ruta))
-ep["id"], ep["audio"], ep["subtitulos"]["alineacion"] = "prueba-luna-densa", AUDIO, ALIN
-ep["sfx"] = sorted(FX, key=lambda e: e["t"])
-ep["estilo_subtitulos"]["gancho"] = True  # DECISIONS 2026-11-16: gancho entero en el fotograma 0
-json.dump(ep, open(ruta, "w"), ensure_ascii=False, indent=1)
-
-ds = [d for d, _ in informe]
-print(f"{len(ds)} planos · {len(FX)} efectos · {FIN:.1f} s · plano más corto {min(ds):.2f} s · más largo {max(ds):.2f} s")
-print("  < 0,7 s:", sum(d < 0.7 for d in ds), "· 0,7–1,5 s:", sum(0.7 <= d < 1.5 for d in ds), "· ≥ 1,5 s:", sum(d >= 1.5 for d in ds))
-for d, n in informe:
-    print(f"  {d:5.2f} s {'█' * int(d * 10)} {n}")
-print("\n".join(AVISOS) if AVISOS else "  ✓ todos los textos se pueden leer")
+v.construir("prueba-luna-densa", version=4, musica={"generar": "curiosidad", "semilla": 3, "db": -13},
+            claves=["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"])
