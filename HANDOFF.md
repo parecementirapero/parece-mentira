@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 20:10 — Nico — rama `main` — chat en la nube (Mac de Nico)
+**Hecho**: «Luna densa» montada con la **voz oficial nueva** («Archivo Oculto — Narración (clon)», `eleven_v4`, 0.5/0.75). Locución por API desde el Mac de Nico (`with-timestamps`, 822 caracteres; contador de la cuenta antes: 7.804 / 40.000). MP3 y alineación en `~/Documents/Parece Mentira/lotes/prueba-luna-densa/` (`luna-densa-locucion.mp3`, `luna-densa-alineacion.json`), y el vídeo final ahí también.
+- La voz dura **54,4 s** (el provisional estimaba 47): los 40 planos se recolocaron solos sobre las palabras. `gen.py`: las ventanas de los satélites, los pterosaurios y el meteorito lejano ahora también van atadas a palabras (`SAT`, `T_DINO0/1`), no a segundos fijos; activado `"gancho": true`.
+**Pruebas**: hoja de fotogramas cada 1,3 s revisada; 54,9 s, −19,1 LUFS, pico −4,4 dBFS; control de lectura OK. No escuchado (en la nube no se puede): falta el oído de Nico/Jorge para voz, ritmo y volumen de efectos.
+**Siguiente paso**: «ok» o cambios; si gusta, pasar el método a `AGENTE.md` y hacer biblioteca.
+
 ## 2026-11-16 19:55 — Nico — rama `main` — chat en la nube (Mac de Nico)
 **Hecho**: voz oficial cambiada. La voz «Archivo Oculto — Narración» de la cuenta antigua de ElevenLabs (plan Free, Voice Design: no se puede compartir ni copiar) se ha clonado (clon instantáneo) en la cuenta nueva con las 9 locuciones originales que había en Descargas del Mac de Nico (unidas en `VOZ_ARCHIVO_OCULTO_para_clonar.mp3`, 4 min 53 s) → «Archivo Oculto — Narración (clon)», voice_id `op8soO9fvP07F3mjbJuB`. Borrada la v1 «Narrador PM - Curiosidades v1» (`EuJOG4WNDCMcwTFrXKUc`) a petición de Nico. A la clave «Parece Mentira - Nico» (…076b) se le dio el permiso Voces → Escribir. `claves.txt` del Mac de Nico actualizado (copia anterior en `claves.txt.bak`). AGENTE §4, DECISIONS y PROJECT_STATE actualizados: modelo `eleven_v4`, estabilidad 0.5, similitud 0.75 (antes los lotes usaban `eleven_multilingual_v2`).
 **Pruebas**: TTS con el clon y `eleven_v4` → HTTP 200 (`Downloads/PRUEBA_clon_archivo_oculto.mp3`); `with-timestamps` con `eleven_v4` → audio + alineación OK.

@@ -5,4 +5,5 @@
 - Render de prueba sin voz: enviado al chat de Nico (no está en git).
 - v4: detalles de fondo persistentes, 5 dinosaurios detallados, fondos con más tonos.
 - v5: sonidos de satélite/fugaces/rayas, dinosaurios comiendo, meteorito.
+- Con voz oficial nueva (clon, eleven_v4): 54,9 s. Audio y vídeo en la carpeta local del Mac de Nico.
 - Estado: **en revisión**.

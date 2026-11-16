@@ -35,6 +35,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] «Luna densa» con la voz oficial nueva (54,9 s; planos recolocados sobre la voz) — Nico — 2026-11-16
 - [x] Mac de Jorge: `ELEVENLABS_VOICE_ID` cambiado a `op8soO9fvP07F3mjbJuB` en `~/Documents/Parece Mentira/claves.txt`; tarea programada «lote tarde (20:00, Jorge)» apunta a la voz «Archivo Oculto — Narración (clon)» (eleven_v4, 0.5/0.75); prueba TTS «Prueba de voz.» con la clave de claves.txt: HTTP 200, MP3 OK (no hizo falta añadir permisos) — Jorge (con Claude) — 2026-11-16
 - [x] Subida automática a YouTube en el Mac de Nico: scripts copiados (`publicar/`, `motor/`, `estadisticas/autorizar.py`, commit f47be02) y `autorizar.py --subir` ejecutado por Nico en su Mac (token de subida en su `claves.txt`); `--prueba` OK contra la API — Nico — 2026-11-16
 - [x] «Luna densa» v6: Luna por delante de la punta de la flecha, neones con brillo sobre fondos oscuros, tic-tac de reloj, agua y mordisco de hoja nuevos — Nico — 2026-11-16

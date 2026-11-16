@@ -126,17 +126,19 @@ def recorrido(T0, T1, p0, p1, d, esc=None):
 
 
 # detalles de fondo que duran varios segundos (cruzan despacio y se ven en varios planos seguidos)
-SAT = [(0.8, 19.0, (-100, 1680), (1180, 1480)), (33.0, 47.5, (1180, 260), (-100, 420))]
+# ventanas atadas a palabras del guion (no a segundos fijos): se recolocan con la voz real
+SAT = [(0.8, w(61), (-100, 1680), (1180, 1480)), (w(113), FIN, (1180, 260), (-100, 420))]
+T_DINO0, T_DINO1 = w(86) - 0.3, w(105) + 0.3  # tramo de los dinosaurios
 
 
 def satelite(d, z=0.15):
     SAT_PLANOS.append((INI, INI + d))
-    return [IMG("satelite", ancho=150, z=z, rot=-15, anim={"girar": 4}, keys=recorrido(0.8, 19.0, (-100, 1680), (1180, 1480), d)),
-            IMG("satelite", ancho=120, z=z, rot=20, anim={"girar": -4}, keys=recorrido(33.0, 47.5, (1180, 260), (-100, 420), d))]
+    return [IMG("satelite", ancho=150, z=z, rot=-15, anim={"girar": 4}, keys=recorrido(*SAT[0], d)),
+            IMG("satelite", ancho=120, z=z, rot=20, anim={"girar": -4}, keys=recorrido(*SAT[1], d))]
 
 
 def pterosaurios(d):
-    return [IMG("pterosaurio", ancho=ancho, z=z, ex=-1, anim={"flotar": [14, 0.9 + i * 0.2]}, keys=recorrido(25.5, 32.0, (1200 + dx, y), (-250 + dx, y + 60), d))
+    return [IMG("pterosaurio", ancho=ancho, z=z, ex=-1, anim={"flotar": [14, 0.9 + i * 0.2]}, keys=recorrido(T_DINO0, T_DINO1, (1200 + dx, y), (-250 + dx, y + 60), d))
             for i, (dx, y, ancho, z) in enumerate([(0, 430, 300, 0.3), (220, 360, 200, 0.22), (420, 500, 160, 0.18)])]
 
 
@@ -408,8 +410,8 @@ def comer(d, mordiscos, rama_antes, rama_despues, t_cambio=None):
 
 def meteoro_lejos(d):
     """El meteorito, pequeño y lejano, que se acerca por el cielo durante todos los planos de dinosaurios."""
-    return [brillo(0, 0, 150, "#ffb060", 0.5, 0.11, keys=recorrido(25.7, T_MET, (90, 600), (230, 760), d, esc=(0.4, 1.2))),
-            IMG("meteorito", ancho=420, z=0.12, ex=-1, rot=49, keys=recorrido(25.7, T_MET, (90, 600), (230, 760), d, esc=(0.22, 0.62)))]
+    return [brillo(0, 0, 150, "#ffb060", 0.5, 0.11, keys=recorrido(T_DINO0 + 0.2, T_MET, (90, 600), (230, 760), d, esc=(0.4, 1.2))),
+            IMG("meteorito", ancho=420, z=0.12, ex=-1, rot=49, keys=recorrido(T_DINO0 + 0.2, T_MET, (90, 600), (230, 760), d, esc=(0.22, 0.62)))]
 
 
 @plano(86, "dinosaurios comiendo")
@@ -622,6 +624,7 @@ ruta = os.path.join(OUT, "episodio.json")
 ep = json.load(open(ruta))
 ep["id"], ep["audio"], ep["subtitulos"]["alineacion"] = "prueba-luna-densa", AUDIO, ALIN
 ep["sfx"] = sorted(FX, key=lambda e: e["t"])
+ep["estilo_subtitulos"]["gancho"] = True  # DECISIONS 2026-11-16: gancho entero en el fotograma 0
 json.dump(ep, open(ruta, "w"), ensure_ascii=False, indent=1)
 
 ds = [d for d, _ in informe]
