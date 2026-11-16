@@ -29,6 +29,8 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 ## Presupuesto
 Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (pendiente de contratar). Ver `DECISIONS.md`.
 
+- Prueba «Luna densa» (2026-11-16, Nico): 29 planos + efectos de sonido, sin voz todavía — `lotes/prueba-luna-densa/`.
+
 ## Siguiente paso
 Revisar el lote 2026-11-15-tarde (vídeos en el Mac de Jorge) y escribir «ok» o cambios en su chat.
 

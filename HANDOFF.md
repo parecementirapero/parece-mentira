@@ -4,6 +4,14 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 13:10 — Nico — rama `main` — chat en la nube (sin acceso a los Macs)
+**Hecho**: prueba «La Luna se aleja» **densa, desde cero** (`lotes/prueba-luna-densa/`): guion nuevo de 169 palabras con datos nuevos (Apolo 11, láser 2,5 s, dinosaurios 23,5 h y 372 días por una almeja fósil, 18 h hace 1.400 millones de años, fin de los eclipses totales dentro de ~600 millones), **29 planos en 46,6 s** (v4: 18), una acción por plano y capas extra. Ilustraciones nuevas en `ilus_luna.py` (cohete, módulo lunar, jungla, dinosaurios, almeja fósil, calendario, cielo de eclipse, personas mirando). Motor: `motor/sfx.py` (efectos de sonido generados por código) + `sfx` en episodio.json; `rotulo` con `decimales`, `contar_prefijo` y `miles`.
+**Voz**: no hay. Se montó con `provisional.py` (silencio + alineación estimada con pausas en la puntuación) para que el karaoke y los planos tengan tiempos. Con la locución real: `python3 gen.py DIR audio.mp3 alineacion.json`.
+**Fuentes**: UW–Madison/PNAS 2018 (18 h hace 1.400 Ma; 3,82 cm/año); de Winter et al. 2020, Paleoceanography and Paleoclimatology (almeja *Torreites sanchezi*, 23,5 h y 372 días hace 70 Ma); Sky & Telescope (eclipses totales irregulares desde ~620 Ma, último hacia ~1.200 Ma).
+**Pruebas**: hojas de fotogramas cada 1 s (corregidos: año «1.969», rótulo cortado, dinosaurios invisibles); render 1080×1920, 47,1 s, h264/AAC, −19,9 LUFS, 47 MB; render en ~3 min.
+**Pendientes**: que Nico/Jorge lo vean; locución real; el `"="` del plano 3 se ve pequeño; comprobar `ejemplos/005` con el motor cambiado (la mezcla sin efectos no cambia).
+**Siguiente paso**: si el ritmo gusta, pasarlo a `AGENTE.md`/`DECISIONS.md` como estándar (≈1 plano cada 1,5–2 s y efectos de sonido).
+
 ## 2026-11-16 12:58 — Nico — rama `main`
 **Decisión**: tras ver la prueba de acabado, Nico prefiere el v4 tal cual. No se integra `motor/acabado.py` (queda en el repo sin usar). Apuntado en DECISIONS y TASKS.
 **Siguiente paso**: si se quiere más carga visual, trabajarla en las ilustraciones (más capas y acciones por plano), no en el post-proceso.

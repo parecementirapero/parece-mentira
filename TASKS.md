@@ -4,11 +4,11 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Luna desde cero «denso»: guion nuevo más cargado en ~46 s, un plano cada 1,5–2 s, más capas/acciones y efectos de sonido — Nico — 2026-11-16 13:00 — en el workspace en la nube; voz pendiente (texto para ElevenLabs)
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
 - [ ] 2026-11-17 — Nico y Jorge: decidir si se prueba el lote de la mañana en la nube (tarea programada sin depender del Mac: voz por API, montaje y vídeos en el chat; publicar sigue necesitando un Mac encendido en el «ok»). Antes: decidir si la clave de ElevenLabs se guarda en la configuración del entorno en la nube (nunca en el repo) y copiar MP3/MP4 a la carpeta local al publicar. Si sale bien, pasar también el de las 20:00 — propuesto por Jorge 2026-11-16
+- [ ] Revisar la prueba «Luna densa» (29 planos, efectos de sonido; vídeo en el chat de Nico) y decidir si ese ritmo pasa a ser el estándar; si gusta, generar la locución con el texto de `lotes/prueba-luna-densa/guion.txt` (velocidad ≈1,1 para que quepa en ~47 s) y volver a montarlo con `gen.py DIR audio.mp3 alineacion.json`
 - [ ] Nico y Jorge: tras ver el lote 2026-11-16-tarde (prueba de temas cotidianos), decidir el 2026-11-17 si la mezcla 2 cotidianos + 1 histórico se queda fija, pasa a todo cotidiano o se vuelve a lo de antes; apuntarlo en `DECISIONS.md`
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
@@ -28,6 +28,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Prueba «Luna densa» desde cero: guion de 169 palabras, 29 planos en 46,6 s, 7 ilustraciones nuevas, 110 efectos de sonido; motor con `sfx` y rótulos con decimales — Nico — 2026-11-16
 - [x] Nivel de acabado decidido: ninguno, se queda como el v4 (Nico) — 2026-11-16
 - [x] Prueba de acabado visual antes/después del 02 v4 (Luna) con `motor/acabado.py`: bloom, LUT documental, papel, partículas en primer plano, parpadeo, grano animado — Nico — 2026-11-16
 - [x] Se deja Drive: la revisión se hace en el chat de Claude (AGENTE §7, DECISIONS) — Jorge — 2026-11-16

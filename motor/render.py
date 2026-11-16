@@ -23,6 +23,7 @@ from .elementos import crear
 from . import tiempos
 from .subtitulos import SubtitulosKaraoke
 from . import musica as musica_mod
+from . import sfx as sfx_mod
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 FUENTE = os.path.join(AQUI, "fuentes", "Poppins-Bold.ttf")
@@ -320,21 +321,25 @@ class Episodio:
         return mp4
 
     def _audio_final(self, salida):
-        """Voz sola (normalizada) o voz + música de fondo, a -19 LUFS (DECISIONS.md)."""
+        """Voz (+ música de fondo) (+ efectos de sonido), a -19 LUFS (DECISIONS.md)."""
         m = self.s.get("musica")
         lufs = self.s.get("lufs", -19.0)
         mix = os.path.join(salida, self.nombre() + "_mezcla.wav")
-        if not m:
+        fx = None
+        if self.s.get("sfx"):
+            fx = sfx_mod.pista(self.s["sfx"], self.duracion + 0.2, os.path.join(salida, self.nombre() + "_sfx.wav"))
+        if not m and not fx:
             subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", self.audio, "-af",
                                    f"loudnorm=I={lufs}:TP=-1.5:LRA=11,aresample=48000", "-ac", "2", mix])
             return mix
-        if m.get("archivo"):
+        pista = None
+        if m and m.get("archivo"):
             pista = self._abs(m["archivo"])
-        else:
+        elif m:
             pista = os.path.join(salida, self.nombre() + "_musica.wav")
             musica_mod.generar(pista, self.duracion + 0.2, m.get("generar", "curiosidad"), m.get("semilla", 1))
         self.musica_usada = pista
-        return musica_mod.mezclar(self.audio, pista, mix, self.duracion, m.get("db", -17.0), lufs)
+        return musica_mod.mezclar(self.audio, pista, mix, self.duracion, (m or {}).get("db", -17.0), lufs, sfx=fx)
 
     def _manifiesto(self, salida, mp4, srt, n):
         def sha(p):

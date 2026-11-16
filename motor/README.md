@@ -54,6 +54,11 @@ Tiempo de render aproximado: 2,5–3 s de cálculo por segundo de vídeo.
 - **Elementos HUD**: cualquier elemento con `"hud": true` se pinta después de la cámara (etiquetas, palabras clave, cifras): no se recorta ni se agranda al acercar el plano.
 - **Planos dentro de una escena**: se trocea una escena en planos con `"entrada": "corte"` y los `keys` desplazados (ver `lotes/2026-11-15-tarde/generadores/a_v3.py`).
 
+## Novedades v2.2 (2026-11-16, Nico — prueba «Luna densa»)
+- **Efectos de sonido por código** (`motor/sfx.py`, sin licencias): `"sfx": [{"t": 1.2, "tipo": "whoosh|pop|tic|golpe|zap|brillo|ding|rumor|ola", "db": -14}]`. `db` = pico del efecto. Se mezclan con voz y música y no se atenúan bajo la voz. Demo: `python3 -m motor.sfx demo.wav`.
+- **Rótulo que cuenta**: `"decimales": 1` (coma decimal: 3,8 · 23,5), `"contar_prefijo": "+"` y `"miles": false` (años: 1969).
+- `motor/acabado.py`: post-proceso de prueba (grano, LUT, papel, bokeh). **No se usa** (DECISIONS 2026-11-16).
+
 ## Elementos (`tipo`)
 Propiedades comunes animables con `keys` (`[{"t": s, "x": .., "op": .., "ease": "suave|lineal|entrada|salida|rebote"}]`):
 `x, y, escala, ex, ey, rot, op, z` (z = paralaje: 0 fondo quieto, 1 primer plano).

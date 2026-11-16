@@ -882,7 +882,8 @@ class Imagen(Elemento):
 class Rotulo(Elemento):
     """Rótulo de dato integrado en la escena (DECISIONS 2026-11-15): cifra grande + unidad pequeña.
     texto, unidad, tam (120), color, color_unidad, capsula (color de fondo o null), borde,
-    contar: [desde, hasta, segundos] → la cifra corre desde `desde` hasta `hasta` (separador de miles «.»).
+    contar: [desde, hasta, segundos] → la cifra corre desde `desde` hasta `hasta` (separador de miles «.»);
+    decimales (coma decimal) y contar_prefijo opcionales.
     Animable: x, y, escala, op, rot."""
     dinamico = True
 
@@ -903,8 +904,14 @@ class Rotulo(Elemento):
         a, b, dur = c
         u = min(max(t - self.s.get("contar_desde", 0), 0) / max(dur, 1e-3), 1)
         u = 1 - (1 - u) ** 3
-        v = int(round(a + (b - a) * u))
-        return f"{v:,}".replace(",", ".")
+        dec = int(self.s.get("decimales", 0))
+        v = a + (b - a) * u
+        if dec:
+            ent, fr = f"{v:,.{dec}f}".split(".")
+            txt = ent.replace(",", ".") + "," + fr  # 3,8 · 23,5 (coma decimal)
+        else:
+            txt = f"{int(round(v)):,}".replace(",", ".") if self.s.get("miles", True) else str(int(round(v)))
+        return self.s.get("contar_prefijo", "") + txt
 
     def sprite(self, t, st):
         txt = self._texto(t)
