@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 22:35 — Agente 20:00 (Jorge) — rama `main` — chat del lote (Mac de Jorge)
+**Hecho**: «ok» de Jorge a la v2 → publicado desde el navegador integrado (Jorge eligió cada archivo; copias aprobadas en `PARA PUBLICAR/2026-11-16-tarde/Vídeos` y `/Portadas`).
+- YouTube: 01 https://youtube.com/shorts/7PoER_sR6R0 (público 22:12) · 02 cTRgkuY21mw (programado 23:15) · 03 hfRveipHIdk (programado 00:15). Miniatura: fotograma elegido en Studio (subir imagen no le funcionó a Jorge).
+- TikTok: 7708881722745703702 · 7708882083015413014 · 7708882489892179222. Instagram: Df0UCk8RMdf · Df0UQzOxS49 · Df0Uzrsxo0A (el 03 hubo que repetirlo: el primer «compartido» no llegó al perfil).
+- **Decisión de Jorge**: sin fuentes en las descripciones de ninguna red (DECISIONS/AGENTE actualizados; quitadas también de los 3 de YouTube). En TikTok los enlaces hacían saltar «Content may be restricted».
+- `estadisticas/etiquetas.json` con los 3 (YouTube + TikTok + Instagram).
+**Pendiente**: fijar comentarios en YouTube requiere verificar el canal (teléfono) → TASKS. Comentarios de TikTok 02/03 e Instagram: aviso en este chat a las 00:20.
+**Siguiente paso**: lote 2026-11-17-manana (Nico) ya con «sin fuentes» en las descripciones.
+
 ## 2026-11-16 21:45 — Agente 20:00 (Jorge) — rama `main` — chat del lote (Mac de Jorge)
 **Hecho**: Jorge dio «ok» a la v1 y enseguida pidió no subirla y rehacerla con el método «denso» (DECISIONS de Nico). No se publicó nada (comprobado en Studio). v2 de los 3 vídeos con el mismo audio: `lotes/2026-11-16-tarde/generadores/denso.py` (módulo reutilizable del método de la Luna: planos por palabra, control de lectura, detalles persistentes, neón, sonido bajo, música −13 dB) + `gen_0N_v2.py` + `ilus_extra.py`. 37/34/33 planos. Vídeos y portadas v2 en el chat y en el Mac.
 **Pruebas**: ffprobe y LUFS OK; control de lectura OK; hojas cada 1 s revisadas.

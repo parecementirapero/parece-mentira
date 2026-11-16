@@ -7,6 +7,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Verificar el canal de YouTube (teléfono, en Studio) para poder fijar comentarios — Nico/Jorge
 - [ ] Luna densa publicada: falta decidir el reel antiguo de Instagram `Dfx5sljx4kO` (borrar o archivar desde el móvil) y poner el comentario fijado en YouTube y TikTok
 - [ ] Mac de Jorge: ejecutar `estadisticas/autorizar.py --subir` (o copiar las 3 líneas YT_* de subida del Mac de Nico) para que el agente de las 20:00 suba a YouTube por API — Jorge
 - [ ] Actualizar el texto de la tarea programada de las 08:00 (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`): sigue nombrando la voz v1, ya borrada, y la carpeta de Drive. Lo correcto es la voz de `DECISIONS.md` y la revisión en el chat. Además, hoy se disparó a las 19:48 en vez de a las 07:52 — Nico
@@ -40,7 +41,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [x] Método denso en el motor (`motor/denso.py`, `motor/biblioteca/`, `motor/DENSO.md`) y en `AGENTE.md` — Nico — 2026-11-16
 - [x] «Luna densa»: whoosh de 29 a 14 y mucho más bajos; música de −17 a −13 dB — Nico — 2026-11-16
 - [x] Lote 2026-11-16-manana (planetas entre la Tierra y la Luna, pulpo de tres corazones, vikingos en 1021): 3 vídeos v1 **en revisión**; esperan el «ok» en https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF (correo `1a1e5cd4c9bf08da`) — Agente 08:00 (Nico) — 2026-11-16 20:30
-- [x] Lote 2026-11-16-tarde — **v2 con método denso en revisión** (Jorge pidió rehacer la v1 antes de publicar; 37/34/33 planos) · v1: nudillos 57,7 s, puertas 54,7 s, Apolo 51,9 s: vídeos y portadas en el chat https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf, correo `1a1e5cb7121de9d1` — Agente 20:00 (Jorge) — 2026-11-16 20:25
+- [x] Lote 2026-11-16-tarde — **publicado** v2 (YouTube 7PoER_sR6R0 · cTRgkuY21mw 23:15 · hfRveipHIdk 00:15; TikTok e Instagram los 3) · v2 método denso (Jorge pidió rehacer la v1 antes de publicar; 37/34/33 planos) · v1: nudillos 57,7 s, puertas 54,7 s, Apolo 51,9 s: vídeos y portadas en el chat https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf, correo `1a1e5cb7121de9d1` — Agente 20:00 (Jorge) — 2026-11-16 20:25
 - [x] «Luna densa» con la voz oficial nueva (54,9 s; planos recolocados sobre la voz) — Nico — 2026-11-16
 - [x] Mac de Jorge: `ELEVENLABS_VOICE_ID` cambiado a `op8soO9fvP07F3mjbJuB` en `~/Documents/Parece Mentira/claves.txt`; tarea programada «lote tarde (20:00, Jorge)» apunta a la voz «Archivo Oculto — Narración (clon)» (eleven_v4, 0.5/0.75); prueba TTS «Prueba de voz.» con la clave de claves.txt: HTTP 200, MP3 OK (no hizo falta añadir permisos) — Jorge (con Claude) — 2026-11-16
 - [x] Subida automática a YouTube en el Mac de Nico: scripts copiados (`publicar/`, `motor/`, `estadisticas/autorizar.py`, commit f47be02) y `autorizar.py --subir` ejecutado por Nico en su Mac (token de subida en su `claves.txt`); `--prueba` OK contra la API — Nico — 2026-11-16

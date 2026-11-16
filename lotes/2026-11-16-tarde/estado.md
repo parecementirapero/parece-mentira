@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-16-tarde
 
-- **Estado**: **v2 aprobada** («ok» de Jorge 22:03) — publicando. La v1 no se publica.
+- **Estado**: **publicado** en YouTube (01 público; 02 y 03 programados 23:15 y 00:15), TikTok e Instagram. La v1 no se publica.
 - **Agente**: Agente 20:00 (Jorge) · Mac de Jorge · carpeta local `Documents/Parece Mentira/lotes/2026-11-16-tarde`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf (3 MP4 y 3 portadas enviados)
 - **Correo de aviso**: enviado a parecementirapero.media@gmail.com, id `1a1e5cb7121de9d1`.
@@ -63,3 +63,4 @@ QC: 1080×1920/30 fps/h264/AAC; −19,2 / −19,0 / −19,3 LUFS; control de lec
 - **TikTok** (TikTok Studio, Jorge eligió cada MP4): 01, 02 y 03 publicados seguidos ~22:25–22:35, portada por defecto (fotograma 0 con el gancho). A petición de Jorge, **texto sin fuentes** (gancho + resumen + hashtags); con los enlaces TikTok avisaba «Content may be restricted». URLs: 01 https://www.tiktok.com/@parece.mentira85/video/7708881722745703702 · 02 https://www.tiktok.com/@parece.mentira85/video/7708882083015413014 · 03 https://www.tiktok.com/@parece.mentira85/video/7708882489892179222
 - **Instagram** (formato original 9:16, portada = fotograma 0 con el gancho, texto sin fuentes): 01 https://www.instagram.com/reel/Df0UCk8RMdf/ · 02 https://www.instagram.com/reel/Df0UQzOxS49/ · 03 https://www.instagram.com/reel/Df0Uzrsxo0A/ (el primer intento del 03 dijo «compartido» pero no apareció en el perfil; se repitió tras comprobar que no estaba).
 - **Sin fuentes en las descripciones** desde ahora (Jorge, DECISIONS 2026-11-16): `metadatos.json` actualizado; en YouTube quitadas de las 3 descripciones (guardado en Studio).
+- **Comentarios**: YouTube 01 escrito sin fijar (falta verificar el canal); TikTok 01 escrito (la web no muestra «Fijar»); TikTok 02/03 e Instagram 01–03 no se pudieron escribir desde el navegador integrado esta noche → aviso programado en este chat a las 00:20 para reintentar y para los comentarios de YouTube 02/03.
