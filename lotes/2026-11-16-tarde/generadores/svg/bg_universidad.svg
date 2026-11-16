@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920"><defs>
+<filter id="grano" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 0.10"/></feComponentTransfer>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+<filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="10" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+</filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<linearGradient id="cie" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a4a8a"/><stop offset="0.6" stop-color="#e8a070"/><stop offset="1" stop-color="#ffd8a0"/></linearGradient><linearGradient id="pie2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d8c8a8"/><stop offset="1" stop-color="#a8946e"/></linearGradient></defs><rect width="1080" height="1920" fill="url(#cie)"/><path d="M0 1350 C300 1320 700 1360 1080 1330 L1080 1920 L0 1920 Z" fill="#3f6a3a"/><rect x="140" y="900" width="800" height="460" fill="url(#pie2)"/><path d="M120 900 L540 700 L960 900 Z" fill="#8a5a3a"/><rect x="470" y="420" width="140" height="480" fill="url(#pie2)"/><path d="M455 420 L540 250 L625 420 Z" fill="#c9a040"/><circle cx="540" cy="520" r="44" fill="#fff6d8" stroke="#8a6a3a" stroke-width="6"/><path d="M190 1060 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M190 1230 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M315 1060 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M315 1230 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M440 1060 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M440 1230 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M565 1060 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M565 1230 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M690 1060 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M690 1230 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M815 1060 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M815 1230 v-60 a30 30 0 0 1 60 0 v60 Z" fill="#ffd27a" opacity="0.85"/><path d="M60 1340 v-200" stroke="#2a1a12" stroke-width="16"/><circle cx="60" cy="1110" r="110" fill="#2f5a2a"/><path d="M1010 1340 v-200" stroke="#2a1a12" stroke-width="16"/><circle cx="1010" cy="1110" r="110" fill="#2f5a2a"/><rect width="1080" height="1920" fill="#888" filter="url(#grano)"/></svg>

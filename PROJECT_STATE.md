@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-15 17:50 — Nico_
+_Última actualización: 2026-11-16 20:25 — Agente 20:00 (Jorge)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,7 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 ## Contenido
 - Publicado: prueba v2 «Huellas en la Luna» (2026-11-15) en YouTube, Instagram y TikTok — ver `lotes/prueba-v2-huellas-luna/estado.md`.
 - Publicado: lote 2026-11-15-tarde v4 (Zanzíbar, Luna, moáis) el 2026-11-16 en las 3 redes — ver `lotes/2026-11-15-tarde/estado.md`. Vídeos con «ok» en `~/Documents/Parece Mentira/PARA PUBLICAR/` (Mac de Jorge).
-- Lotes producidos en el sistema nuevo: `2026-11-15-tarde` (3 vídeos v1, en revisión; MP4 en el Mac de Jorge, SRT en Drive).
+- Lotes producidos en el sistema nuevo: `2026-11-15-tarde` (publicado) y **`2026-11-16-tarde`** (prueba de temas cotidianos: nudillos, puertas, Apolo 11; v1 **en revisión** en el chat https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf; MP4 en el Mac de Jorge). Primer lote con la voz clonada y `eleven_v4`.
 - Vídeos antiguos (001–007 + piloto Venus): retirados de las redes; ver `DECISIONS.md`.
 
 ## Presupuesto
@@ -34,6 +34,6 @@ Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (
 - Prueba «Luna densa» (2026-11-16, Nico): 29 planos + efectos de sonido, sin voz todavía — `lotes/prueba-luna-densa/`.
 
 ## Siguiente paso
-Revisar el lote 2026-11-15-tarde (vídeos en el Mac de Jorge) y escribir «ok» o cambios en su chat.
+Ver el lote 2026-11-16-tarde en su chat y escribir «ok» (o cambios). El 2026-11-17 decidir si la mezcla de temas cotidianos se queda (TASKS).
 
 _Anterior:_ Los dos Macs ya tienen clave de ElevenLabs y sesiones. Revisar el primer lote de la tarde (Jorge) y la prueba del motor (Nico); primera ejecución de la mañana el 2026-11-16 a las 07:52.

@@ -4,14 +4,13 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-16-tarde — Agente 20:00 (Jorge) — 2026-11-16 20:02 — temas reservados (prueba cotidianos)
 - [ ] Lote 2026-11-16-manana — Agente 08:00 (Nico) — 2026-11-16 19:49 — la ejecución de las 07:52 arrancó tarde (19:48 Madrid)
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
 - [ ] Decidir si se cambian las portadas de los 3 vídeos ya publicados (lote 2026-11-15-tarde; elegidas en `metadatos.json` → `portada`): YouTube con `subir_youtube.py --solo-portada <id> --portada …` desde el Mac de Jorge (si el canal lo permite) e Instagram desde la app del móvil (Editar → portada); TikTok no deja cambiarla después — Nico/Jorge
 - [ ] Estadísticas: conectar Instagram siguiendo `estadisticas/README.md` — APLAZADO por Nico (2026-11-16: «eso ya lo haremos en un futuro»); no recordarlo salvo que lo pidan. Notas: se usa el Facebook personal de Jorge (la cuenta nueva de Nico quedó suspendida en revisión: no crear más cuentas nuevas). Registro en Meta for Developers a medias: falta verificar el móvil (el SMS no llega; probar desde la app de Facebook del móvil → Centro de cuentas → Información de contacto, o por WhatsApp/llamada). Después: crear app, «API setup with Instagram login», añadir @parecementiramedia (debe ser cuenta profesional), generar token → secreto `IG_TOKEN`
-- [ ] Créditos de ElevenLabs: quedan 33.180 de 40.000 (≈9 lotes, se acaban hacia el 21-11; se renuevan el 15-12). Decidir Nico/Jorge: ampliar plan o bajar a un lote al día — Nico/Jorge
+- [ ] Créditos de ElevenLabs: quedan ≈29.400 de 40.000 tras el lote 2026-11-16-tarde (≈11 lotes; se renuevan el 15-12). Decidir Nico/Jorge: ampliar plan o bajar a un lote al día — Nico/Jorge
 - [ ] Estadísticas: tarea programada en la nube que republique cada mañana (≈9:15) la página de Claude «Parece Mentira · Estadísticas» (https://claude.ai/artifact/JMkrEuUZrAmq7yzqVao8ea) con `estadisticas/web/index.html`
 - [ ] Estadísticas: rellenar `estadisticas/etiquetas.json` (tema, voz, gancho) de los vídeos publicados para el Laboratorio
 - [ ] 2026-11-17 — Nico y Jorge: decidir si se prueba el lote de la mañana en la nube (tarea programada sin depender del Mac: voz por API, montaje y vídeos en el chat; publicar sigue necesitando un Mac encendido en el «ok»). Antes: decidir si la clave de ElevenLabs se guarda en la configuración del entorno en la nube (nunca en el repo) y copiar MP3/MP4 a la carpeta local al publicar. Si sale bien, pasar también el de las 20:00 — propuesto por Jorge 2026-11-16
@@ -35,6 +34,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-16-tarde (3 vídeos v1: nudillos 57,7 s, puertas 54,7 s, Apolo 51,9 s) — **en revisión**: vídeos y portadas en el chat https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf, correo `1a1e5cb7121de9d1` — Agente 20:00 (Jorge) — 2026-11-16 20:25
 - [x] «Luna densa» con la voz oficial nueva (54,9 s; planos recolocados sobre la voz) — Nico — 2026-11-16
 - [x] Mac de Jorge: `ELEVENLABS_VOICE_ID` cambiado a `op8soO9fvP07F3mjbJuB` en `~/Documents/Parece Mentira/claves.txt`; tarea programada «lote tarde (20:00, Jorge)» apunta a la voz «Archivo Oculto — Narración (clon)» (eleven_v4, 0.5/0.75); prueba TTS «Prueba de voz.» con la clave de claves.txt: HTTP 200, MP3 OK (no hizo falta añadir permisos) — Jorge (con Claude) — 2026-11-16
 - [x] Subida automática a YouTube en el Mac de Nico: scripts copiados (`publicar/`, `motor/`, `estadisticas/autorizar.py`, commit f47be02) y `autorizar.py --subir` ejecutado por Nico en su Mac (token de subida en su `claves.txt`); `--prueba` OK contra la API — Nico — 2026-11-16
