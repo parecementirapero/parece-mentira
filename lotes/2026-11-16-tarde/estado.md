@@ -59,3 +59,5 @@ QC: 1080×1920/30 fps/h264/AAC; −19,2 / −19,0 / −19,3 LUFS; control de lec
   - 01 https://youtube.com/shorts/7PoER_sR6R0 — público 2026-11-16 22:12 (miniatura: fotograma «60 años después»)
   - 02 https://youtube.com/shorts/cTRgkuY21mw — programado 2026-11-16 23:15 (Madrid)
   - 03 https://youtube.com/shorts/hfRveipHIdk — programado 2026-11-17 00:15 (Madrid)
+- **YouTube**: comentario escrito en el 01 («¿Tú te crujes los dedos? ¿Con qué mano?») pero **sin fijar**: YouTube pide verificar el canal (teléfono) para fijar comentarios — lo tiene que hacer Nico o Jorge en Studio.
+- **TikTok** (TikTok Studio, Jorge eligió cada MP4): 01, 02 y 03 publicados seguidos ~22:25–22:35, portada por defecto (fotograma 0 con el gancho). A petición de Jorge, **texto sin fuentes** (gancho + resumen + hashtags); con los enlaces TikTok avisaba «Content may be restricted». URLs: pendientes (aún procesando).
