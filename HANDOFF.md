@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 19:40 — Nico — rama `main` — chat en la nube (Mac de Nico)
+**Hecho**: el Mac de Nico no tenía código del repo (solo `claves.txt`, `lotes/`, `renders/`, `referencias-objetivo/`). Copiados a `/Users/nico/Documents/Parece Mentira/` los scripts que tienen que correr en el Mac del turno de las 08:00: `publicar/` (subir_youtube.py), `motor/` (openverse.py, portadas.py…) y `estadisticas/autorizar.py`, desde `main` commit `f47be02` (anotado en `VERSION_COPIA.txt`). El .tgz usado quedó en `_to_delete/` (borrar a mano).
+**Pruebas**: `subir_youtube.py --prueba` corre en el Mac de Nico y dice que faltan `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_UPLOAD_REFRESH_TOKEN` (esperado).
+**Pendiente**: pegar esas 3 líneas desde el `claves.txt` del Mac de Jorge (TASKS). Hasta entonces, el lote de las 08:00 sube YouTube por el navegador (AGENTE §8 ya lo prevé).
+**Siguiente paso**: con las claves pegadas, repetir `--prueba` con un título ya publicado → `yaEstaba`.
+
 ## 2026-11-16 19:35 — Nico — rama `main` — chat en la nube
 **Hecho**: «Luna densa» v6 (correcciones de Nico).
 - **Flechas hacia la Luna**: la Luna va siempre por delante y la punta acaba antes de su borde (planos «la Luna se aleja», pantalla partida, 1.400 y 600 millones de años). Regla para el futuro: una flecha nunca termina dentro del objeto al que sigue.
