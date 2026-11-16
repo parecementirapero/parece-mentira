@@ -8,7 +8,6 @@ Regla: no repetir temas de «Usados». Las continuaciones valen si aportan infor
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
 - El bostezo contagioso (cotidiano)
 _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)_
-- Los pulpos tienen tres corazones y sangre azul (ciencia, metáfora visual)
 - El día de la Tierra hace ~1.400 millones de años duraba unas 18 horas (continuación de la Luna)
 
 ## Usados
@@ -33,6 +32,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - Crujirse los nudillos: Donald Unger (60 años, una sola mano, Ig Nobel 2009) y la burbuja de gas vista con resonancia (2015) — lote 2026-11-16-tarde
 - Cruzar una puerta te hace olvidar a qué ibas (Radvansky, Notre Dame, 2011) — lote 2026-11-16-tarde
 - El móvil y el ordenador del Apolo 11 (memoria, reloj, memoria de cuerda tejida a mano) — lote 2026-11-16-tarde
+- Todos los planetas caben entre la Tierra y la Luna (distancia media) — lote 2026-11-16-manana
+- El pulpo: tres corazones, sangre azul (hemocianina) y neuronas en los brazos — lote 2026-11-16-manana
+- Los vikingos en América en 1021 (L'Anse aux Meadows, tormenta solar en los anillos) — lote 2026-11-16-manana
 
 ## Continuaciones prometidas
 

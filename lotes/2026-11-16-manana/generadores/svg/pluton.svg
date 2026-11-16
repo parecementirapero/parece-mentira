@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300"><defs>
+<filter id="grano" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+  <feColorMatrix type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="table" tableValues="0 0.10"/></feComponentTransfer>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="papel" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" seed="9"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0 0.12  0 0 0 0.55 0"/>
+  <feComposite operator="in" in2="SourceGraphic"/>
+</filter>
+<filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="blur20"><feGaussianBlur stdDeviation="20"/></filter>
+<filter id="blur40"><feGaussianBlur stdDeviation="40"/></filter>
+<filter id="sombra" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="10" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+</filter>
+<radialGradient id="vpluton" cx="0.35" cy="0.32" r="0.75"><stop offset="0" stop-color="#f2e2cc" stop-opacity="1"/><stop offset="0.55" stop-color="#c9a98a" stop-opacity="1"/><stop offset="1" stop-color="#5a4636" stop-opacity="1"/></radialGradient><radialGradient id="spluton" cx="0.28" cy="0.25" r="0.95"><stop offset="0.5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.75"/></radialGradient><clipPath id="cpluton"><circle cx="150.0" cy="150.0" r="138.0"/></clipPath></defs><circle cx="150.0" cy="150.0" r="138.0" fill="url(#vpluton)"/><g clip-path="url(#cpluton)"><ellipse cx="62" cy="195" rx="19" ry="10" fill="#f5ece0" opacity="0.45" transform="rotate(-0 62 195)"/><ellipse cx="144" cy="138" rx="17" ry="10" fill="#f5ece0" opacity="0.51" transform="rotate(-11 144 138)"/><ellipse cx="198" cy="229" rx="31" ry="20" fill="#f5ece0" opacity="0.37" transform="rotate(-16 198 229)"/><circle cx="181" cy="45" r="8.2" fill="#5a4636" opacity="0.45"/><circle cx="179" cy="43" r="6.1" fill="#f2e2cc" opacity="0.25"/><circle cx="89" cy="202" r="12.1" fill="#5a4636" opacity="0.45"/><circle cx="86" cy="200" r="9.0" fill="#f2e2cc" opacity="0.25"/><circle cx="237" cy="59" r="9.6" fill="#5a4636" opacity="0.45"/><circle cx="235" cy="57" r="7.2" fill="#f2e2cc" opacity="0.25"/><circle cx="46" cy="88" r="10.4" fill="#5a4636" opacity="0.45"/><circle cx="44" cy="86" r="7.8" fill="#f2e2cc" opacity="0.25"/><circle cx="45" cy="84" r="11.8" fill="#5a4636" opacity="0.45"/><circle cx="43" cy="81" r="8.8" fill="#f2e2cc" opacity="0.25"/><circle cx="160" cy="88" r="11.2" fill="#5a4636" opacity="0.45"/><circle cx="158" cy="86" r="8.4" fill="#f2e2cc" opacity="0.25"/><circle cx="150.0" cy="150.0" r="138.0" fill="url(#spluton)"/></g><ellipse cx="101.7" cy="92.03999999999999" rx="44.160000000000004" ry="22.080000000000002" fill="#fff" opacity="0.16" transform="rotate(-30 101.7 92.03999999999999)"/></svg>

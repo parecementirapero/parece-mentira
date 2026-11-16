@@ -4,6 +4,18 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 20:30 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-16-manana
+**Hecho**: lote `2026-11-16-manana`. La tarea programada de las 07:52 se disparó a las 19:48 hora de Madrid. Tres vídeos v1 en revisión:
+- 01 · Todos los planetas caben entre la Tierra y la Luna (Espacio, comparación, contraste).
+- 02 · El pulpo tiene tres corazones y sangre azul (Ciencia, metáfora visual; **experimento: gancho de negación**).
+- 03 · Los vikingos llegaron a América en 1021 (Histórico, reconstrucción, contraste).
+Cada tema contrastado con dos fuentes. Guiones de 133–139 palabras con cifras en letra (`lotes/2026-11-16-manana/guiones.md`), metadatos con comentario fijado, portada y etiquetas. Ilustraciones SVG nuevas en el estilo v4 (`generadores/ilus_m.py`) y montaje por planos (`gen_0N.py`) con gancho en el fotograma 0. Portadas elegidas sin «ok» (§6b, hecho a mano en lugar del subagente). Vídeos enviados al chat y copiados al Mac de Nico (el SHA coincide). Correo único `1a1e5cd4c9bf08da`.
+**Voz**: la v1 dio 404 porque se borró hoy (`d377b17`, llegó a mitad del turno). Se usó la voz oficial nueva de DECISIONS (clon `op8soO9fvP07F3mjbJuB`, `eleven_v4`). ≈2.330 caracteres; quedan ≈30.800.
+**Pruebas**: ffprobe (1080×1920, 30 fps, h264/AAC 48 kHz), −19,1 a −19,3 LUFS, hojas de fotogramas del MP4 revisadas. Correcciones antes de entregar en `estado.md`.
+**No hecho**: datos de Studio (studio.json ya tenía los de hoy). Sin publicar: falta el «ok».
+**Pendiente**: actualizar el texto de la tarea programada de las 08:00 (voz v1 y Drive; TASKS). Con «ok», publicar según AGENTE §8 desde el Mac de Nico.
+**Siguiente paso**: esperar el «ok» en https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF
+
 ## 2026-11-16 20:10 — Nico — rama `main` — chat en la nube (Mac de Nico)
 **Hecho**: «Luna densa» montada con la **voz oficial nueva** («Archivo Oculto — Narración (clon)», `eleven_v4`, 0.5/0.75). Locución por API desde el Mac de Nico (`with-timestamps`, 822 caracteres; contador de la cuenta antes: 7.804 / 40.000). MP3 y alineación en `~/Documents/Parece Mentira/lotes/prueba-luna-densa/` (`luna-densa-locucion.mp3`, `luna-densa-alineacion.json`), y el vídeo final ahí también.
 - La voz dura **54,4 s** (el provisional estimaba 47): los 40 planos se recolocaron solos sobre las palabras. `gen.py`: las ventanas de los satélites, los pterosaurios y el meteorito lejano ahora también van atadas a palabras (`SAT`, `T_DINO0/1`), no a segundos fijos; activado `"gancho": true`.

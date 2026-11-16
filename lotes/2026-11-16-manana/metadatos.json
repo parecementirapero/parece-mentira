@@ -1,0 +1,164 @@
+{
+ "01": {
+  "archivo": "01-planetas-entre-tierra-y-luna_v1.mp4",
+  "titulo": "Todos los planetas caben entre la Tierra y la Luna",
+  "youtube": {
+   "titulo": "Todos los planetas caben entre la Tierra y la Luna #Shorts",
+   "descripcion": "Pon en fila Mercurio, Venus, Marte, Júpiter, Saturno, Urano y Neptuno: suman unos 380.000 km. La Luna está, de media, a 384.400 km. Caben… y sobra sitio para Plutón (aunque cuando la Luna se acerca, ya no).\n\nFuentes:\n- Universe Today — You Could Fit All the Planets Between the Earth and the Moon: https://www.universetoday.com/113566/you-could-fit-all-the-planets-between-the-earth-and-the-moon\n- BBC Sky at Night Magazine — You could fit every planet in the Solar System between Earth and the Moon: https://www.skyatnightmagazine.com/space-science/fit-every-planet-in-solar-system-between-earth-and-moon\n\n#Shorts #espacio #planetas #luna #ciencia #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "Pon en fila Mercurio, Venus, Marte, Júpiter, Saturno, Urano y Neptuno: suman unos 380.000 km. La Luna está, de media, a 384.400 km. Caben… y sobra sitio para Plutón (aunque cuando la Luna se acerca, ya no).\n\nFuentes:\n- Universe Today — You Could Fit All the Planets Between the Earth and the Moon: https://www.universetoday.com/113566/you-could-fit-all-the-planets-between-the-earth-and-the-moon\n- BBC Sky at Night Magazine — You could fit every planet in the Solar System between Earth and the Moon: https://www.skyatnightmagazine.com/space-science/fit-every-planet-in-solar-system-between-earth-and-moon\n\n#espacio #planetas #luna #ciencia #curiosidades #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "Pon en fila Mercurio, Venus, Marte, Júpiter, Saturno, Urano y Neptuno: suman unos 380.000 km. La Luna está, de media, a 384.400 km. Caben… y sobra sitio para Plutón (aunque cuando la Luna se acerca, ya no). Fuentes: https://www.universetoday.com/113566/you-could-fit-all-the-planets-between-the-earth-and-the-moon https://www.skyatnightmagazine.com/space-science/fit-every-planet-in-solar-system-between-earth-and-moon #espacio #planetas #luna #ciencia #curiosidades #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "Universe Today — You Could Fit All the Planets Between the Earth and the Moon",
+    "url": "https://www.universetoday.com/113566/you-could-fit-all-the-planets-between-the-earth-and-the-moon"
+   },
+   {
+    "titulo": "BBC Sky at Night Magazine — You could fit every planet in the Solar System between Earth and the Moon",
+    "url": "https://www.skyatnightmagazine.com/space-science/fit-every-planet-in-solar-system-between-earth-and-moon"
+   }
+  ],
+  "comentario": "¿Cuál te parecía más grande de lo que es? Te leo 👇",
+  "locucion": "Todos los demás planetas caben entre la Tierra y la Luna. Parece imposible, pero haz la cuenta. La Luna está, de media, a trescientos ochenta y cuatro mil kilómetros. Ahora ponemos los planetas en fila, tocándose. Mercurio: casi cinco mil kilómetros. Venus y Marte: otros diecinueve mil. Llega Júpiter, el gigante: ciento cuarenta mil kilómetros él solo. Saturno: ciento dieciséis mil más. Y cerramos con Urano y Neptuno, unos cincuenta mil cada uno. Total: unos trescientos ochenta mil kilómetros. Caben, y aún sobran unos cuatro mil, justo para meter a Plutón. Eso sí: solo funciona con la distancia media. Cuando la Luna se acerca, ya no entran. Así que esta noche, cuando mires la Luna, piensa en todo el espacio que hay entre tú y ella. ¿A que ya no parece tan cerca?",
+  "palabras": 133,
+  "voz": {
+   "voice_id": "op8soO9fvP07F3mjbJuB",
+   "nombre": "Archivo Oculto — Narración (clon)",
+   "modelo": "eleven_v4",
+   "stability": 0.5,
+   "similarity_boost": 0.75
+  },
+  "portada": {
+   "texto": "CABEN TODOS LOS PLANETAS",
+   "clave": "PLANETAS",
+   "archivo": "01-portadas/portada.jpg",
+   "t": 41.8,
+   "diseno": "dato",
+   "motivo": "la columna de planetas (Saturno y Júpiter) que promete el texto, igual que el fotograma 0; palabra clave en cápsula legible en la cuadrícula"
+  },
+  "etiquetas": {
+   "tema": "Espacio",
+   "gancho": "contraste",
+   "estructura": "comparación",
+   "experimento": "no",
+   "portada": "dato"
+  },
+  "version": 1,
+  "duracion_s": 54.47,
+  "sha256": "806797a00e06ca51102178ab871b1edb580489e2105cad036b98008471f8110b"
+ },
+ "02": {
+  "archivo": "02-pulpo-tres-corazones_v1.mp4",
+  "titulo": "El pulpo tiene tres corazones y sangre azul",
+  "youtube": {
+   "titulo": "El pulpo tiene tres corazones y sangre azul #Shorts",
+   "descripcion": "Dos corazones empujan la sangre por las branquias y el tercero la reparte por el cuerpo (y se para un momento cuando nada). Su sangre usa cobre (hemocianina) en vez de hierro: por eso es azul. Y dos tercios de sus neuronas están en los brazos.\n\nFuentes:\n- Smithsonian Magazine — Ten Wild Facts About Octopuses: https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/\n- Live Science — How many hearts does an octopus have?: https://www.livescience.com/how-many-hearts-does-an-octopus-have\n\n#Shorts #pulpo #animales #ciencia #naturaleza #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "Dos corazones empujan la sangre por las branquias y el tercero la reparte por el cuerpo (y se para un momento cuando nada). Su sangre usa cobre (hemocianina) en vez de hierro: por eso es azul. Y dos tercios de sus neuronas están en los brazos.\n\nFuentes:\n- Smithsonian Magazine — Ten Wild Facts About Octopuses: https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/\n- Live Science — How many hearts does an octopus have?: https://www.livescience.com/how-many-hearts-does-an-octopus-have\n\n#pulpo #animales #ciencia #naturaleza #curiosidades #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "Dos corazones empujan la sangre por las branquias y el tercero la reparte por el cuerpo (y se para un momento cuando nada). Su sangre usa cobre (hemocianina) en vez de hierro: por eso es azul. Y dos tercios de sus neuronas están en los brazos. Fuentes: https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/ https://www.livescience.com/how-many-hearts-does-an-octopus-have #pulpo #animales #ciencia #naturaleza #curiosidades #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "Smithsonian Magazine — Ten Wild Facts About Octopuses",
+    "url": "https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/"
+   },
+   {
+    "titulo": "Live Science — How many hearts does an octopus have?",
+    "url": "https://www.livescience.com/how-many-hearts-does-an-octopus-have"
+   }
+  ],
+  "comentario": "¿Qué animal te parece más «de otro planeta»? 👇",
+  "locucion": "No tiene un corazón: el pulpo tiene tres. Y su sangre no es roja: es azul. Imagina su cuerpo como una casa con tres bombas de agua. Dos bombas pequeñas, una junto a cada branquia, empujan la sangre para que coja oxígeno. La tercera, la grande, la reparte por todo el cuerpo. ¿Y por qué azul? Nuestra sangre usa hierro. La del pulpo usa cobre, dentro de una proteína llamada hemocianina. Cuando se carga de oxígeno, se vuelve azul. Pero hay un detalle rarísimo: cuando el pulpo nada, el corazón grande se para un momento. Por eso prefiere arrastrarse por el fondo: nadar le agota. Y aún hay más: dos tercios de sus neuronas no están en la cabeza, sino en los brazos. Tres corazones, sangre azul y brazos que casi piensan solos. ¿Seguro que es de este planeta?",
+  "palabras": 139,
+  "voz": {
+   "voice_id": "op8soO9fvP07F3mjbJuB",
+   "nombre": "Archivo Oculto — Narración (clon)",
+   "modelo": "eleven_v4",
+   "stability": 0.5,
+   "similarity_boost": 0.75
+  },
+  "portada": {
+   "texto": "NO TIENE UN CORAZÓN",
+   "clave": "CORAZÓN",
+   "archivo": "02-portadas/portada.jpg",
+   "t": 47.3,
+   "diseno": "dato",
+   "motivo": "pulpo entero con los tres corazones encendidos, sujeto grande y reconocible; texto de negación arriba que no lo tapa; coincide con el fotograma 0"
+  },
+  "etiquetas": {
+   "tema": "Ciencia",
+   "gancho": "negacion",
+   "estructura": "metáfora visual",
+   "experimento": "gancho de negación en pantalla desde el fotograma 0",
+   "portada": "dato"
+  },
+  "version": 1,
+  "duracion_s": 53.58,
+  "sha256": "a18027bd6c2945dc1e8002f8022405735b10466b082d26f04b9d4effb36c79fa"
+ },
+ "03": {
+  "archivo": "03-vikingos-america-1021_v1.mp4",
+  "titulo": "Los vikingos llegaron a América 471 años antes que Colón",
+  "youtube": {
+   "titulo": "Los vikingos llegaron a América 471 años antes que Colón #Shorts",
+   "descripcion": "En L'Anse aux Meadows (Terranova, Canadá) hay madera cortada con herramientas de metal. Una tormenta solar de poco antes del año 1000 dejó una marca en los anillos de los árboles de todo el planeta; contando los anillos desde esa marca hasta la corteza sale el año exacto de la tala: 1021.\n\nFuentes:\n- National Geographic — Ancient solar storm pinpoints Viking settlement in the Americas exactly 1,000 years ago: https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago\n- Phys.org — Europeans in the Americas 1,000 years ago (Kuitems et al., Nature 2021): https://phys.org/news/2021-10-europeans-americas-years.pdf\n\n#Shorts #historia #vikingos #colon #curiosidades #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "En L'Anse aux Meadows (Terranova, Canadá) hay madera cortada con herramientas de metal. Una tormenta solar de poco antes del año 1000 dejó una marca en los anillos de los árboles de todo el planeta; contando los anillos desde esa marca hasta la corteza sale el año exacto de la tala: 1021.\n\nFuentes:\n- National Geographic — Ancient solar storm pinpoints Viking settlement in the Americas exactly 1,000 years ago: https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago\n- Phys.org — Europeans in the Americas 1,000 years ago (Kuitems et al., Nature 2021): https://phys.org/news/2021-10-europeans-americas-years.pdf\n\n#historia #vikingos #colon #curiosidades #curiosidades #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "En L'Anse aux Meadows (Terranova, Canadá) hay madera cortada con herramientas de metal. Una tormenta solar de poco antes del año 1000 dejó una marca en los anillos de los árboles de todo el planeta; contando los anillos desde esa marca hasta la corteza sale el año exacto de la tala: 1021. Fuentes: https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago https://phys.org/news/2021-10-europeans-americas-years.pdf #historia #vikingos #colon #curiosidades #curiosidades #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "National Geographic — Ancient solar storm pinpoints Viking settlement in the Americas exactly 1,000 years ago",
+    "url": "https://www.nationalgeographic.com/history/article/ancient-solar-storm-pinpoints-viking-settlement-americas-exactly-1000-years-ago"
+   },
+   {
+    "titulo": "Phys.org — Europeans in the Americas 1,000 years ago (Kuitems et al., Nature 2021)",
+    "url": "https://phys.org/news/2021-10-europeans-americas-years.pdf"
+   }
+  ],
+  "comentario": "¿Te lo enseñaron así en el colegio? Te leo 👇",
+  "locucion": "Colón llegó tarde: los vikingos ya habían estado en América. Y sabemos el año exacto: mil veintiuno. Viajamos a Terranova, en Canadá. Allí, en un lugar llamado L'Anse aux Meadows, aparecieron restos de casas vikingas y trozos de madera cortados con herramientas de metal, algo que en esa época nadie más usaba allí. ¿Pero cómo se le pone fecha a un tronco? Con una tormenta solar. Poco antes del año mil, el Sol lanzó una tormenta tan fuerte que dejó una marca química en los anillos de los árboles de todo el planeta. Los investigadores encontraron esa marca en la madera vikinga y contaron los anillos que crecieron después, uno por año, hasta la corteza. Resultado: esos árboles se talaron en mil veintiuno. Cuatrocientos setenta y un años antes de que llegara Colón. Y lo dejó escrito un árbol.",
+  "palabras": 139,
+  "voz": {
+   "voice_id": "op8soO9fvP07F3mjbJuB",
+   "nombre": "Archivo Oculto — Narración (clon)",
+   "modelo": "eleven_v4",
+   "stability": 0.5,
+   "similarity_boost": 0.75
+  },
+  "portada": {
+   "texto": "COLÓN LLEGÓ TARDE",
+   "clave": "TARDE",
+   "archivo": "03-portadas/portada.jpg",
+   "t": 3.3,
+   "diseno": "arriba",
+   "motivo": "barco vikingo grande en primer plano y la carabela de Colón al fondo: enseña el contraste que promete el texto; diseño «arriba», el menos usado"
+  },
+  "etiquetas": {
+   "tema": "Histórico",
+   "gancho": "contraste",
+   "estructura": "reconstrucción",
+   "experimento": "no",
+   "portada": "arriba"
+  },
+  "version": 1,
+  "duracion_s": 53.43,
+  "sha256": "4c3e99317d5aea1217467658117d5bb00904b3610d3f414f87952e16d5964b74"
+ }
+}

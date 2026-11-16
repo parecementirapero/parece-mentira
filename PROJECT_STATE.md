@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-16 20:25 — Agente 20:00 (Jorge)_
+_Última actualización: 2026-11-16 20:30 — Agente 08:00 (Nico)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -23,6 +23,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- En revisión: lote 2026-11-16-manana v1 (planetas, pulpo, vikingos; 53–54 s, voz clon nueva). Vídeos en el chat https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF y en `Documents/Parece Mentira/lotes/2026-11-16-manana/`, en el Mac de Nico.
 - Publicado: prueba v2 «Huellas en la Luna» (2026-11-15) en YouTube, Instagram y TikTok — ver `lotes/prueba-v2-huellas-luna/estado.md`.
 - Publicado: lote 2026-11-15-tarde v4 (Zanzíbar, Luna, moáis) el 2026-11-16 en las 3 redes — ver `lotes/2026-11-15-tarde/estado.md`. Vídeos con «ok» en `~/Documents/Parece Mentira/PARA PUBLICAR/` (Mac de Jorge).
 - Lotes producidos en el sistema nuevo: `2026-11-15-tarde` (publicado) y **`2026-11-16-tarde`** (prueba de temas cotidianos: nudillos, puertas, Apolo 11; v1 **en revisión** en el chat https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf; MP4 en el Mac de Jorge). Primer lote con la voz clonada y `eleven_v4`.
@@ -34,6 +35,6 @@ Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (
 - Prueba «Luna densa» (2026-11-16, Nico): 29 planos + efectos de sonido, sin voz todavía — `lotes/prueba-luna-densa/`.
 
 ## Siguiente paso
-Ver el lote 2026-11-16-tarde en su chat y escribir «ok» (o cambios). El 2026-11-17 decidir si la mezcla de temas cotidianos se queda (TASKS).
+Ver los lotes 2026-11-16-manana (chat https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF) y 2026-11-16-tarde en sus chats y escribir «ok» (o cambios). El 2026-11-17 decidir si la mezcla de temas cotidianos se queda (TASKS).
 
 _Anterior:_ Los dos Macs ya tienen clave de ElevenLabs y sesiones. Revisar el primer lote de la tarde (Jorge) y la prueba del motor (Nico); primera ejecución de la mañana el 2026-11-16 a las 07:52.
