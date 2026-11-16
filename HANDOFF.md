@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 17:45 — Nico — rama `main`
+**Hecho**: rediseño de `estadisticas/plantilla.html` («observatorio»): tema oscuro espacial (Unbounded + Instrument Sans), portada con mapa orbital (Nova en el centro con el total; un planeta por red, tamaño según vistas; Instagram punteado si no está conectado) y tarjeta por red con mini gráfico. Rutas `#inicio`, `#youtube`, `#tiktok`, `#instagram`, `#comparativa`, `#laboratorio`, `#horas`. Vista de red: cifras clave, vistas por día, destacados (p. ej. «funciona mejor aquí que en YouTube»), lista ordenable y ficha (en YouTube con curva de retención y fuentes; enlaces al mismo vídeo en las otras redes). Títulos de TikTok limpiados (usa el de YouTube si está unido).
+**Pruebas**: Chromium con datos reales y de ejemplo (7 vistas + ficha + móvil 390 px), sin errores de consola.
+
 ## 2026-11-16 17:26 — Nico (en el Mac de Jorge) — rama `main` — en pausa
 **Instagram**: Meta exige una cuenta personal real de Facebook para Meta for Developers. La cuenta nueva creada por Nico quedó suspendida en revisión (apelación enviada). Se entró con el Facebook de Jorge en el navegador integrado; registro de desarrollador a medias porque el SMS de verificación del móvil no llega. Retomar: verificar móvil desde la app de Facebook del móvil y seguir el README (sección Instagram).
 
