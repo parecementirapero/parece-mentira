@@ -290,7 +290,7 @@ class Video:
         return self.AVISOS
 
 
-__all__ = [n for n in dir() if not n.startswith("_") and n not in ("json", "os", "random", "shutil", "subprocess")]
+__all__ = [n for n in dir() if not n.startswith("_") and n not in ("json", "os", "random", "shutil", "subprocess", "AQUI", "palabras_de_alineacion")]
 
 if __name__ == "__main__":
     import sys, tempfile
