@@ -113,9 +113,9 @@ def rotulo(t0, t1, texto="", **k):
     return {"tipo": "rotulo", "texto": texto, "hud": True, "z": 1, "keys": ks, **k}
 
 
-def amarillo(t0, t1, texto, y=1360, tam=96, color="#ffd23f"):
+def amarillo(t0, t1, texto, y=1360, tam=96, color="#ffd23f", x=540):
     """Palabra clave grande e inclinada, sin cápsula. Sobre fondos oscuros, pásale un neón (CIAN, MAGENTA, LIMA)."""
-    return rotulo(t0, t1, texto, tam=tam, color=color, capsula=None, rot=-6, x=540, y=y)
+    return rotulo(t0, t1, texto, tam=tam, color=color, capsula=None, rot=-6, x=x, y=y)
 
 
 def contexto(t0, t1, texto):
@@ -276,24 +276,30 @@ class Video:
         """Recoloca un rótulo que se sale de la zona segura: lo sube si baja de y=1400, lo encoge si no cabe a lo ancho
         y lo aparta de la columna de botones de la derecha. Devuelve True si lo ha tocado."""
         from .calidad import _caja
-        tocado = False
-        for _ in range(6):
+        tocado, M = False, 10  # M = margen para no quedarse justo en el borde
+        for _ in range(10):
             x0, y0, x1, y1 = _caja(h)
-            if x1 - x0 > 900 and h.get("tam", 120) > 44:
-                h["tam"] = int(h.get("tam", 120) * 0.9); tocado = True; continue
+            if x1 - x0 > 900 - M and h.get("tam", 120) > 44:
+                h["tam"] = int(h.get("tam", 120) * 0.92); tocado = True; continue
+            if y1 > SEG_ABAJO - M:
+                h["y"] = int(h.get("y", 960) - (y1 - SEG_ABAJO + M)) - 1; tocado = True; continue
+            if x1 > SEG_DER - M and y1 > 800:
+                x_min = (x1 - x0) / 2 + 70  # sin salirse por la izquierda
+                x_nuevo = int(h.get("x", 540) - (x1 - SEG_DER + M)) - 1
+                if x_nuevo >= x_min:
+                    h["x"] = x_nuevo
+                elif h.get("tam", 120) > 44:      # no cabe a la izquierda de los botones: se encoge
+                    h["x"] = int(max(x_nuevo, x_min)); h["tam"] = int(h.get("tam", 120) * 0.92)
+                else:
+                    break
+                tocado = True; continue
             break
-        x0, y0, x1, y1 = _caja(h)
-        if y1 > SEG_ABAJO:
-            h["y"] = round(h.get("y", 960) - (y1 - SEG_ABAJO)); tocado = True
-        x0, y0, x1, y1 = _caja(h)
-        if x1 > SEG_DER and y1 > 800:
-            h["x"] = round(max(h.get("x", 540) - (x1 - SEG_DER), (x1 - x0) / 2 + 60)); tocado = True
         if tocado:
             self.MOVIDOS.append(f"«{(h.get('texto') or '') or h.get('unidad', '')}» en «{nombre}» → x={h.get('x', 540)}, y={h.get('y', 960)}, tam={h.get('tam', 120)}")
         return tocado
 
     def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=320, grano=0.03, zona_segura=True,
-                  musica_viva=True):
+                  musica_viva=True, bucle=0.0):
         """Monta todos los planos y escribe salida/episodio.json. Devuelve la lista de avisos de lectura (vacía = bien).
         zona_segura=True recoloca solos los rótulos que la app taparía (míralos luego en la hoja de fotogramas:
         al subirlos pueden pisar al sujeto; en ese caso, colócalos tú dentro de y=240…1400)."""
@@ -333,7 +339,8 @@ class Video:
                 visible = h["keys"][-2]["t"] - h["keys"][0]["t"]
                 if visible + 1e-3 < LEER(txt):
                     self.AVISOS.append(f"  ⚠ «{txt}» en «{nombre}»: {visible:.2f} s en pantalla, harían falta {LEER(txt):.2f} s")
-                fx(ini + h["keys"][0]["t"], "pop", -16)
+                if not h.pop("sin_pop", False):  # sin_pop=True: el rótulo ya trae su propio sonido
+                    fx(ini + h["keys"][0]["t"], "pop", -16)
             esc["elementos"].extend(json.loads(json.dumps(p["hud"])))
             for s in p["sfx"]:
                 t, tipo, db = s[:3]
@@ -362,6 +369,8 @@ class Video:
                 curva.append([round(c, 2), round(0.35 if c < 1.5 and k not in forzada else nivel, 2)])
             ep["musica"].setdefault("energia", curva)
             ep["musica"].setdefault("bucle", True)
+        if bucle:
+            ep["bucle"] = bucle  # segundos finales que se funden con el primer fotograma (el Short enlaza al repetirse)
         if gancho:
             ep["estilo_subtitulos"]["gancho"] = True  # DECISIONS 2026-11-16: gancho entero en el fotograma 0
         json.dump(ep, open(os.path.join(self.out, "episodio.json"), "w"), ensure_ascii=False, indent=1)

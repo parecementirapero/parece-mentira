@@ -253,7 +253,15 @@ class Episodio:
                 img = _zoom_paso(prev, img, u)
             else:
                 img = Image.blend(prev, img, u)
-        self.subs.dibujar(img, t)
+        b = float(self.s.get("bucle") or 0)
+        if b > 0 and t > self.duracion - b and i > 0:
+            # cierre en bucle: los últimos `bucle` segundos se funden con el primer fotograma, para que al repetirse
+            # el Short el final enlace con el principio sin salto (GUIA_CALIDAD §8)
+            if getattr(self, "_primero", None) is None:
+                self._primero = self.escenas[0].frame(self.escenas[0].ini, self._vin)
+            img = Image.blend(img, self._primero, EASE["suave"](min(1.0, (t - (self.duracion - b)) / b)))
+        else:
+            self.subs.dibujar(img, t)
         out = img.convert("RGB")
         if self.grano > 0:
             out = self._con_grano(out, t)

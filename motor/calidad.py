@@ -149,6 +149,9 @@ def analizar(ruta_ep, mp4=None):
 
     # ---------------------------------------------------------------- 5–6. densidad y variedad
     n_el = [len(e["elementos"]) for e in S]
+    alejados = [f"plano {i + 1} ({e['inicio']:.1f} s)" for i, e in enumerate(S) if min(e.get("camara", {}).get("zoom", [1, 1])) < 0.999]
+    if alejados:
+        av("❌", "Cámara con zoom menor que 1 (se ven bordes negros alrededor): " + ", ".join(alejados) + ". Usa p. ej. cam(1.07, 1.0).", 6 * len(alejados))
     quietos = [i + 1 for i, e in enumerate(S) if sum(_animado(x) for x in e["elementos"]) == 0 and e.get("camara", {}).get("zoom", [1, 1])[0] == e.get("camara", {}).get("zoom", [1, 1])[1]]
     pobres = [i + 1 for i, e in enumerate(S) if len(e["elementos"]) < 3 and e["fin"] - e["inicio"] > 1.0]
     fondos = [next((x["archivo"] for x in e["elementos"] if x.get("tipo") == "imagen" and x.get("ancho", 0) >= 1080), "|".join(e["fondo"]["colores"])) for e in S]
@@ -168,7 +171,8 @@ def analizar(ruta_ep, mp4=None):
     fx = ep.get("sfx") or []
     tipos = {}
     for e in fx: tipos[e["tipo"]] = tipos.get(e["tipo"], 0) + 1
-    ts = np.array(sorted(e["t"] for e in fx)) if fx else np.array([])
+    # saturación: solo cuentan los efectos que se oyen de verdad (los de −22 dB o menos son textura: rayas, tics)
+    ts = np.array(sorted(e["t"] for e in fx if e.get("db", -14) > -22))
     pico_dens = int(max((np.sum((ts >= t) & (ts < t + 1)) for t in ts), default=0))
     silencios = []
     if len(ts):
@@ -179,7 +183,7 @@ def analizar(ruta_ep, mp4=None):
                            max_en_1s=pico_dens, musica_db=(ep.get("musica") or {}).get("db", -17))
     if not fx: av("⚠", "Sin efectos de sonido: lo que pasa en pantalla no suena.", 8)
     if tipos.get("whoosh", 0) / dur * 60 > 18: av("⚠", f"Demasiados «whoosh» ({tipos['whoosh']}): tapan la música y cansan.", 5)
-    if pico_dens > 9: av("⚠", f"Hasta {pico_dens} efectos en un mismo segundo: satura.", 3)
+    if pico_dens > 6: av("⚠", f"Hasta {pico_dens} efectos audibles (más fuertes que −22 dB) en un mismo segundo: satura.", 3)
     if len(tipos) < 5 and fx: av("ℹ", f"Solo {len(tipos)} tipos de efecto: más variedad (cada acción, su sonido).")
     if silencios: av("ℹ", "Tramos de más de 4 s sin ningún efecto: " + ", ".join(f"{a} s ({b} s)" for a, b in silencios[:5]))
     if len(fuertes) > 6: av("ℹ", f"{len(fuertes)} efectos a más de −9 dB: que los fuertes sean pocos (golpes y remates).")
