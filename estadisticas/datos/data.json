@@ -1,6 +1,211 @@
 {
- "generado": "2026-11-16T17:07:18+01:00",
+ "generado": "2026-11-16T17:45:10+01:00",
  "ejemplo": false,
+ "youtubeExtra": {
+  "desde": "2026-11-01",
+  "paises": [
+   [
+    "MX",
+    569,
+    107
+   ],
+   [
+    "ES",
+    373,
+    58
+   ],
+   [
+    "AR",
+    308,
+    55
+   ],
+   [
+    "CO",
+    189,
+    43
+   ],
+   [
+    "CL",
+    165,
+    34
+   ],
+   [
+    "PE",
+    132,
+    25
+   ],
+   [
+    "VE",
+    102,
+    20
+   ],
+   [
+    "BO",
+    67,
+    9
+   ],
+   [
+    "US",
+    55,
+    11
+   ],
+   [
+    "EC",
+    44,
+    8
+   ]
+  ],
+  "dispositivos": [
+   [
+    "MOBILE",
+    1866
+   ],
+   [
+    "TV",
+    220
+   ],
+   [
+    "TABLET",
+    206
+   ],
+   [
+    "DESKTOP",
+    63
+   ]
+  ],
+  "suscritos": [
+   [
+    "SUBSCRIBED",
+    0,
+    0
+   ],
+   [
+    "UNSUBSCRIBED",
+    2355,
+    62.74000000000001
+   ]
+  ],
+  "edadGenero": [
+   [
+    "age13-17",
+    "female",
+    2
+   ],
+   [
+    "age13-17",
+    "male",
+    5.8
+   ],
+   [
+    "age18-24",
+    "female",
+    2.5
+   ],
+   [
+    "age18-24",
+    "male",
+    9.6
+   ],
+   [
+    "age25-34",
+    "female",
+    9
+   ],
+   [
+    "age25-34",
+    "male",
+    22.5
+   ],
+   [
+    "age35-44",
+    "female",
+    10.9
+   ],
+   [
+    "age35-44",
+    "male",
+    11.6
+   ],
+   [
+    "age45-54",
+    "female",
+    4.4
+   ],
+   [
+    "age45-54",
+    "male",
+    8
+   ],
+   [
+    "age55-64",
+    "female",
+    1.8
+   ],
+   [
+    "age55-64",
+    "male",
+    4.7
+   ],
+   [
+    "age65-",
+    "female",
+    2.1
+   ],
+   [
+    "age65-",
+    "male",
+    5.1
+   ]
+  ],
+  "fuentes": [
+   [
+    "Feed de Shorts",
+    2285
+   ],
+   [
+    "Búsqueda",
+    53
+   ],
+   [
+    "Otras páginas de YouTube",
+    9
+   ],
+   [
+    "Página del canal",
+    8
+   ],
+   [
+    "Directo / otros",
+    0
+   ]
+  ],
+  "sistemas": [
+   [
+    "ANDROID",
+    2003
+   ],
+   [
+    "IOS",
+    155
+   ],
+   [
+    "WINDOWS",
+    57
+   ],
+   [
+    "SMART_TV",
+    49
+   ],
+   [
+    "WEBOS",
+    28
+   ],
+   [
+    "ROKUOS",
+    25
+   ]
+  ]
+ },
  "canal": "Parece Mentira",
  "canalTotales": {
   "suscriptores": 7,
@@ -15,8 +220,8 @@
    "fecha": "2026-11-15",
    "hora": "17:38",
    "duracion": 48,
-   "vistas": 3209,
-   "likes": 61,
+   "vistas": 3481,
+   "likes": 62,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -28,7 +233,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 23.5,
+   "horasPublicado": 24.1,
    "lote": "prueba-v2-huellas-luna",
    "etiquetas": {
     "tema": "Espacio",
@@ -57,7 +262,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 17.3,
+   "horasPublicado": 18.0,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Histórico",
@@ -72,8 +277,8 @@
    "fecha": "2026-11-15",
    "hora": "23:48",
    "duracion": 47,
-   "vistas": 1683,
-   "likes": 35,
+   "vistas": 1711,
+   "likes": 36,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -85,7 +290,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 17.3,
+   "horasPublicado": 17.9,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Ciencia",
@@ -113,7 +318,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 17.3,
+   "horasPublicado": 17.9,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Misterio",
@@ -230,7 +435,7 @@
     "fecha": "2026-11-15",
     "hora": "17:46",
     "duracion": 47,
-    "vistas": 609,
+    "vistas": 613,
     "likes": 20,
     "comentarios": 0,
     "compartidos": 0
@@ -242,7 +447,7 @@
     "fecha": "2026-11-16",
     "hora": "00:02",
     "duracion": 46,
-    "vistas": 380,
+    "vistas": 382,
     "likes": 22,
     "comentarios": 0,
     "compartidos": 0
@@ -254,7 +459,7 @@
     "fecha": "2026-11-16",
     "hora": "00:02",
     "duracion": 46,
-    "vistas": 436,
+    "vistas": 441,
     "likes": 20,
     "comentarios": 0,
     "compartidos": 2
@@ -266,7 +471,7 @@
     "fecha": "2026-11-16",
     "hora": "00:01",
     "duracion": 52,
-    "vistas": 405,
+    "vistas": 408,
     "likes": 25,
     "comentarios": 0,
     "compartidos": 6
@@ -307,17 +512,22 @@
  ],
  "historico": {
   "2026-11-16": {
+   "seguidores": {
+    "youtube": 7,
+    "tiktok": 2,
+    "instagram": null
+   },
    "youtube": {
-    "D_2cV1qhmfA": 3209,
+    "D_2cV1qhmfA": 3481,
     "bS6AUPYxr7s": 1270,
-    "oZSuHN-46FI": 1683,
+    "oZSuHN-46FI": 1711,
     "XGf1wOPygU8": 5
    },
    "tiktok": {
-    "7708440623040269590": 609,
-    "7708537566387113238": 380,
-    "7708537356684512534": 436,
-    "7708537122914979094": 405
+    "7708440623040269590": 613,
+    "7708537566387113238": 382,
+    "7708537356684512534": 441,
+    "7708537122914979094": 408
    },
    "instagram": {}
   }
