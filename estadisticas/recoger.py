@@ -325,7 +325,7 @@ def recoger_todo():
                 datos[nombre], n = r; notas += n
         except Exception as e:
             print(f"::error::{nombre}: {e}")
-            notas.append(f"{nombre.capitalize()} falló hoy ({str(e)[:140]}); se muestran los datos anteriores.")
+            notas.append(f"{ {'tiktok': 'TikTok', 'instagram': 'Instagram'}[nombre]} falló hoy ({str(e)[:140]}); se muestran los datos anteriores.")
             datos[nombre] = previo.get(nombre)
 
     datos["contenidos"] = construir_contenidos(datos, cargar_etiquetas())

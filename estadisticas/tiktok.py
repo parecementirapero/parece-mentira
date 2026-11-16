@@ -32,8 +32,13 @@ def recoger(madrid):
         return None
     token, caduca_s, guardado = refrescar()
     h = {"Authorization": f"Bearer {token}"}
-    u = http(f"{API}/user/info/?fields=open_id,display_name,username,follower_count,likes_count,video_count", headers=h)
-    user = u.get("data", {}).get("user", {})
+    user, notas_perfil = {}, []
+    for campos in ("open_id,display_name,follower_count,likes_count,video_count", "open_id,display_name"):
+        try:
+            user = http(f"{API}/user/info/?fields={campos}", headers=h).get("data", {}).get("user", {})
+            break
+        except RuntimeError as e:
+            notas_perfil = [f"TikTok: sin datos de perfil ({str(e)[:80]})."]
     videos, cursor = [], None
     for _ in range(50):  # tope de seguridad: 1.000 vídeos
         cuerpo = {"max_count": 20}
@@ -51,12 +56,12 @@ def recoger(madrid):
             "url": v.get("share_url"), "fecha": pub.date().isoformat(), "hora": pub.strftime("%H:%M"),
             "duracion": v.get("duration"), "vistas": v.get("view_count", 0), "likes": v.get("like_count", 0),
             "comentarios": v.get("comment_count", 0), "compartidos": v.get("share_count", 0)})
-    notas = []
+    notas = [] if user.get("follower_count") is not None else notas_perfil
     if caduca_s is not None and caduca_s < 20 * 86400:
         notas.append(f"El permiso de TikTok caduca en {caduca_s // 86400} días: vuelve a ejecutar autorizar_tiktok.py.")
     if not guardado:
         notas.append("TikTok: no se pudo guardar el token renovado (revisa el secreto GH_PAT).")
-    return {"cuenta": user.get("username") or user.get("display_name"),
+    return {"cuenta": user.get("display_name"),
             "totales": {"seguidores": user.get("follower_count"), "likes": user.get("likes_count"),
                         "videos": user.get("video_count")},
             "videos": sorted(salida, key=lambda x: x["fecha"]),
