@@ -4,6 +4,14 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 19:35 — Nico — rama `main` — chat en la nube
+**Hecho**: «Luna densa» v6 (correcciones de Nico).
+- **Flechas hacia la Luna**: la Luna va siempre por delante y la punta acaba antes de su borde (planos «la Luna se aleja», pantalla partida, 1.400 y 600 millones de años). Regla para el futuro: una flecha nunca termina dentro del objeto al que sigue.
+- **Contraste sobre fondos oscuros**: paleta neón en `gen.py` (`CIAN`, `MAGENTA`, `LIMA`, `AMBAR`) para flechas, órbitas, rótulos y bordes en los planos de espacio; el bucle de montaje añade solo un halo (copia ancha y translúcida) a cada flecha y órbita.
+- **Sonidos** (`motor/sfx.py`): `tictac` (tic agudo / tac grave alternos, para los relojes), `agua` (ola + espuma + burbujas, sustituye a `ola` en las mareas) y `mordisco` rehecho (chasquido, rasgado de hoja y dos masticadas, más agudo y crujiente).
+**Pruebas**: 12 fotogramas revisados; render 48,3 s; niveles medidos (no escuchado: en la nube no hay forma de oírlo).
+**Pendiente**: que Nico confirme de oído tictac, agua y mordisco.
+
 ## 2026-11-16 19:10 — Nico — rama `main` — chat en la nube
 **Hecho**: «Luna densa» v5 (ideas de Nico).
 - **Sonidos nuevos en `motor/sfx.py`**: `senal` (pitidos de satélite con eco), `fugaz` (soplo de estrella fugaz), `trazo` (tic blando por raya), `mordisco`, `meteoro` (rugido tipo cohete que crece). En `gen.py` son automáticos y bajos: `flecha(..., disc=...)` pone un tic por raya mientras se dibuja (máx. 8, tono que sube, −27 dB); `fugaz()` pone su sonido (−25 dB, con paneo); los satélites suenan al entrar en un plano donde se ven, como mucho cada 2,6 s (−28 dB).

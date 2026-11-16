@@ -1,5 +1,5 @@
 """Efectos de sonido generados por código (sin licencias): whoosh, pop, tic, golpe, zap, brillo, ding, rumor, ola,
-senal (satélite), fugaz (estrella fugaz), trazo (raya de línea discontinua), mordisco, meteoro.
+senal (satélite), fugaz (estrella fugaz), trazo (raya de línea discontinua), mordisco, meteoro, tictac (reloj), agua.
 
 En episodio.json:  "sfx": [{"t": 1.2, "tipo": "whoosh", "db": -10, "dur": 0.45}, ...]
 `t` en segundos absolutos. El motor los mezcla con la voz y la música (no se atenúan bajo la voz).
@@ -142,16 +142,57 @@ def trazo(dur=0.045, f=900):
     return np.sin(2 * np.pi * f * t) * np.clip(t / 0.002, 0, 1) * np.exp(-t / 0.012)
 
 
-def mordisco(dur=0.22, rng=None):
-    """Mordisco a una hoja: crujido corto (varios chasquidos de ruido filtrado)."""
+def mordisco(dur=0.5, rng=None):
+    """Mordisco a una hoja: chasquido seco al arrancarla, rasgado fibroso y dos masticadas suaves (hoja = agudo y crujiente)."""
     rng = rng or np.random.default_rng(7)
     n = int(dur * SR)
+    t = np.arange(n) / SR
+    r = rng.normal(0, 1, n)
+    hoja = r - _paso_bajo(r, 1800)                       # solo agudos: papel/hoja
+    hoja = _paso_bajo(hoja, 7500)
+    grano = (rng.random(n) > 0.93).astype(float)          # rasgado: granitos irregulares
+    grano = _paso_bajo(grano, 900) * 9
+    chasq = np.exp(-t / 0.006)                            # chasquido inicial
+    rasga = np.clip((t - 0.015) / 0.01, 0, 1) * np.exp(-np.clip(t - 0.015, 0, None) / 0.05) * grano
+    mast = sum(np.clip((t - t0) / 0.008, 0, 1) * np.exp(-np.clip(t - t0, 0, None) / 0.03) * (t >= t0) * a * (0.5 + grano)
+               for t0, a in [(0.2, 0.45), (0.34, 0.3)])
+    tallo = np.sin(2 * np.pi * 320 * t) * np.exp(-t / 0.012) * 0.5   # golpecito del tallo al partirse
+    return hoja * (chasq * 1.2 + rasga + mast) + tallo
+
+
+def tictac(dur=1.5, ritmo=0.25, rng=None):
+    """Reloj: tic (agudo) y tac (grave) alternos, con cuerpo de madera/metal. ritmo = segundos entre golpes."""
+    rng = rng or np.random.default_rng(9)
+    n = int(dur * SR)
     x = np.zeros(n)
-    for t0, a in [(0.0, 1.0), (0.035, 0.7), (0.075, 0.85), (0.12, 0.45)]:
-        i0 = int(t0 * SR); m = min(n - i0, int(0.03 * SR))
-        r = rng.normal(0, 1, m)
-        r = _paso_bajo(r, 3800) - _paso_bajo(r, 500)
-        x[i0:i0 + m] += a * r * np.exp(-np.arange(m) / SR / 0.007)
+    k = 0
+    while k * ritmo < dur - 0.05:
+        i0 = int(k * ritmo * SR); m = min(n - i0, int(0.09 * SR))
+        tt = np.arange(m) / SR
+        f, a = ((2100, 1.0) if k % 2 == 0 else (1350, 0.85))
+        clic = rng.normal(0, 1, m); clic = (clic - _paso_bajo(clic, 3000)) * np.exp(-tt / 0.002) * 0.6
+        cuerpo = (np.sin(2 * np.pi * f * tt) + 0.5 * np.sin(2 * np.pi * f * 2.7 * tt)) * np.exp(-tt / 0.014)
+        caja = np.sin(2 * np.pi * 420 * tt) * np.exp(-tt / 0.03) * 0.25
+        x[i0:i0 + m] += a * (clic + cuerpo + caja)
+        k += 1
+    return x
+
+
+def agua(dur=1.4, rng=None):
+    """Agua: ola que rompe (ruido que sube y baja) + chapoteo y burbujas (gotas con tono que sube)."""
+    rng = rng or np.random.default_rng(10)
+    n = int(dur * SR)
+    u = np.linspace(0, 1, n)
+    r = rng.normal(0, 1, n)
+    ola_ = _paso_bajo(r, 500 + 2600 * np.sin(np.pi * u) ** 2) * np.sin(np.pi * u ** 0.6) ** 2 * 1.3
+    espuma = (r - _paso_bajo(r, 3500)) * np.clip(np.sin(np.pi * (u - 0.25) / 0.75), 0, 1) ** 2 * 0.35
+    x = ola_ + espuma
+    for _ in range(int(14 * dur)):                         # burbujas / gotas
+        t0 = rng.uniform(0.05, dur - 0.12); f0 = rng.uniform(350, 1100); m = int(rng.uniform(0.035, 0.08) * SR)
+        tt = np.arange(m) / SR
+        f = f0 * (1 + 1.6 * tt / (m / SR))
+        gota = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.sin(np.pi * tt / (m / SR)) ** 2 * rng.uniform(0.25, 0.6)
+        i0 = int(t0 * SR); x[i0:i0 + m] += gota[: n - i0]
     return x
 
 
@@ -170,7 +211,8 @@ def meteoro(dur=1.2, rng=None):
 
 
 TIPOS = {"whoosh": whoosh, "pop": pop, "tic": tic, "golpe": golpe, "zap": zap, "brillo": brillo, "ding": ding,
-         "rumor": rumor, "ola": ola, "senal": senal, "fugaz": fugaz, "trazo": trazo, "mordisco": mordisco, "meteoro": meteoro}
+         "rumor": rumor, "ola": ola, "senal": senal, "fugaz": fugaz, "trazo": trazo, "mordisco": mordisco, "meteoro": meteoro,
+         "tictac": tictac, "agua": agua}
 
 
 def pista(eventos, dur, ruta):
