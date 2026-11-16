@@ -4,6 +4,9 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 17:26 — Nico (en el Mac de Jorge) — rama `main` — en pausa
+**Instagram**: Meta exige una cuenta personal real de Facebook para Meta for Developers. La cuenta nueva creada por Nico quedó suspendida en revisión (apelación enviada). Se entró con el Facebook de Jorge en el navegador integrado; registro de desarrollador a medias porque el SMS de verificación del móvil no llega. Retomar: verificar móvil desde la app de Facebook del móvil y seguir el README (sección Instagram).
+
 ## 2026-11-16 17:08 — Nico (en el Mac de Jorge) — rama `main` — commit `6824722`
 **Hecho**: TikTok conectado a las estadísticas. App sandbox completada (icono subido por Nico, Desktop + Login Kit, scopes `user.info.basic/stats` + `video.list`, usuario de prueba parece.mentira85). `autorizar_tiktok.py` como el de YouTube (puerto 8766, pegar URL, certificados, sustituye el token en `claves.txt`) + `probar_tiktok.py` para comprobar el token. Secretos `TIKTOK_CLIENT_KEY/SECRET/REFRESH_TOKEN`. Arreglos: espacios pegados en secretos (`limpiar_secretos`), campo `username` quitado (pedía `user.info.profile`). Workflow OK: TikTok 4 vídeos públicos (5 en total), 2 seguidores, los 4 unidos con YouTube por `estado.md`. Página de Claude republicada.
 **Ojo**: el token de TikTok de `claves.txt` ya NO vale (TikTok lo rota y el workflow guarda el nuevo en GitHub con GH_PAT). Si hay que reautorizar: `autorizar_tiktok.py` y actualizar el secreto.
