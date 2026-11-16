@@ -27,4 +27,6 @@ Lo que ya existe está en `motor/biblioteca/svg/` (fijas) y `motor/biblioteca/il
 Para un tema nuevo, crea `ilus_tema.py` en la carpeta del lote usando los ladrillos de `ilus` (`guardar`, `lg`, `rg`, `grano`, `_animal`, `_neb`, `_estrellas_ricas`, `_hoja`…), escribe los SVG en una carpeta y pásala a `Video(..., svg_extra=carpeta)`. **Mira cada SVG rasterizado antes de montar** (`rsvg-convert -w 400`). Si una pieza es reutilizable (un animal, un fondo, un objeto común), añádela a `motor/biblioteca/ilus.py` y a `generar()` en el mismo commit.
 
 ## Control antes de entregar
+`python3 -m motor.calidad DIR/episodio.json --mp4 DIR/out/<id>.mp4` sin ❌ (ritmo, zona segura, lectura, gancho, sonido, movimiento, mezcla). El porqué de cada regla, los tipos de plano y de gancho, el movimiento (`aparece`, `cae`, `lanza`, `late`, `sigue`, `senala`), el sonido (`subida` + `impacto` antes y en la revelación) y el cierre en bucle (`v.construir(..., bucle=0.35)`) están en **`motor/GUIA_CALIDAD.md`**.
+
 `construir` sin ⚠ · hoja de fotogramas cada 1 s revisada · ningún rótulo tapa al sujeto ni choca con el subtítulo (y≈300) · detalles de fondo visibles varios planos · −19 LUFS.

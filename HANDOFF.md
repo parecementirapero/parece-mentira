@@ -4,6 +4,17 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 00:30 — Nico — rama `main` — chat en la nube «Luna densa» (trabajo nocturno, sin nadie delante)
+**Hecho** (commits `f39c380`, `2f9afeb`, `0f35102` y el de esta entrada):
+- `motor/GUIA_CALIDAD.md`: investigación con fuentes (métricas de Shorts, gancho y curiosidad, principios de Mayer, tipos de plano y de estructura, movimiento, zonas seguras, sonido, música, bucle, Python) convertida en reglas y lista de control. También como doc del Proyecto de Claude.
+- `motor/calidad.py`: nota 0–100 y avisos ❌/⚠/ℹ (ritmo, zona segura, lectura, gancho, sonido; con `--mp4`: movimiento, bucle, mezcla). Añadido a AGENTE §6 y DENSO.
+- Motor: caché en disco de SVG (`.raster/`, ignorada) + `--procesos` → el vídeo de 55 s se renderiza en ~2 min; easings `elastico/bote/anticipa/golpe/expo`; efectos `subida/impacto/roce/burbuja`; música con curva de energía y final que enlaza; `bucle=` en `construir`; zona segura automática; `sin_pop`; helpers `aparece/cae/lanza/late/sigue/senala`.
+- `lotes/prueba-luna-densa/gen.py` → v5 con todo eso (misma voz, sin gastar créditos).
+**Pruebas**: calidad v4 antiguo ≈23 · Luna publicada 71 · Luna v5 100/100 con MP4 (1,6 % de tiempo quieto, 0 rótulos fuera de zona). Paralelo frente a un proceso: mismos fotogramas (PSNR 47,7 dB).
+**No hecho a propósito**: no se ha publicado nada ni se ha gastado en voz. No he podido ver ni oír vídeos de terceros: la guía lo dice.
+**Pendiente**: decisiones de GUIA_CALIDAD §10 (TASKS); apuntar estadísticas de retención.
+**Siguiente paso**: lote 2026-11-17-manana con `motor.calidad` en el control; Nico ve la v5 con sonido y dice si la música y los efectos nuevos le gustan.
+
 ## 2026-11-16 22:35 — Agente 20:00 (Jorge) — rama `main` — chat del lote (Mac de Jorge)
 **Hecho**: «ok» de Jorge a la v2 → publicado desde el navegador integrado (Jorge eligió cada archivo; copias aprobadas en `PARA PUBLICAR/2026-11-16-tarde/Vídeos` y `/Portadas`).
 - YouTube: 01 https://youtube.com/shorts/7PoER_sR6R0 (público 22:12) · 02 cTRgkuY21mw (programado 23:15) · 03 hfRveipHIdk (programado 00:15). Miniatura: fotograma elegido en Studio (subir imagen no le funcionó a Jorge).

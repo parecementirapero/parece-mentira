@@ -4,10 +4,11 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Noche 16→17: investigación y mejoras de calidad audiovisual y persuasión (guía `motor/GUIA_CALIDAD.md`, control automático `motor/calidad.py`, mejoras de sonido/música/subtítulos/movimiento con ejemplos; sin publicar ni gastar créditos) — Nico (chat de la Luna densa) — 2026-11-16 23:45 — hay otro proceso de Nico con el mismo encargo: commits pequeños y `git pull --rebase` antes de cada uno
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Decidir tras leer `motor/GUIA_CALIDAD.md` §10: límite inferior de texto (1400 o 1250), volumen de la música (−13 dB), y si se republica la Luna con la v5 — Nico/Jorge
+- [ ] Apuntar en `estadisticas/` «vistos frente a deslizados» y «% medio visto» de cada vídeo a 48 h y 7 días (empezar por la Luna densa `jQmhf8o1PfY`) — Nico/Jorge
 - [ ] Verificar el canal de YouTube (teléfono, en Studio) para poder fijar comentarios — Nico/Jorge
 - [ ] Luna densa publicada: falta decidir el reel antiguo de Instagram `Dfx5sljx4kO` (borrar o archivar desde el móvil) y poner el comentario fijado en YouTube y TikTok
 - [ ] Mac de Jorge: ejecutar `estadisticas/autorizar.py --subir` (o copiar las 3 líneas YT_* de subida del Mac de Nico) para que el agente de las 20:00 suba a YouTube por API — Jorge
@@ -38,6 +39,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Noche 16→17: guía `motor/GUIA_CALIDAD.md` (investigación con fuentes), control automático `motor/calidad.py`, render 2× más rápido (caché de SVG), easings/efectos/música nuevos, cierre en bucle y Luna densa v5 de ejemplo (sin publicar, sin gastar créditos) — Nico — 2026-11-17 00:30
 - [x] «La Luna se nos va…» publicado en YouTube, TikTok e Instagram; antiguo en privado en YouTube y TikTok — Nico — 2026-11-16
 - [x] Método denso en el motor (`motor/denso.py`, `motor/biblioteca/`, `motor/DENSO.md`) y en `AGENTE.md` — Nico — 2026-11-16
 - [x] «Luna densa»: whoosh de 29 a 14 y mucho más bajos; música de −17 a −13 dB — Nico — 2026-11-16

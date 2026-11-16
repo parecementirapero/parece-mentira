@@ -98,7 +98,7 @@ def analizar(ruta_ep, mp4=None):
     if cm > 55: av("⚠", f"Demasiados cambios de plano ({cm:.0f}/min): por encima de 50 cansa.", 5)
 
     # ---------------------------------------------------------------- 2–3. rótulos: zona segura y lectura
-    fuera, cortos, n_rot = [], [], 0
+    fuera, cortos, n_rot, dudosos = [], [], 0, []
     for i, e in enumerate(S):
         for h in e["elementos"]:
             if h.get("tipo") != "rotulo" or not h.get("hud"):
@@ -111,12 +111,16 @@ def analizar(ruta_ep, mp4=None):
             if y0 < SEG_ARRIBA: donde.append(f"arriba (y={y0:.0f}; límite {SEG_ARRIBA})")
             if x1 > SEG_DER and y1 > 800: donde.append(f"derecha, donde van los botones (x={x1:.0f}; límite {SEG_DER} por debajo de y=800)")
             if x0 < SEG_IZQ - 40 or x1 > W - SEG_IZQ + 40: donde.append(f"se sale por los lados (x={x0:.0f}…{x1:.0f})")
+            if not donde and y1 > 1250: dudosos.append(f"«{txt}» ({e['inicio']:.1f} s, llega a y={y1:.0f})")
             if donde: fuera.append(f"«{txt}» (plano {i + 1}, {e['inicio']:.1f} s): " + ", ".join(donde))
             ks = h.get("keys") or []
             if len(ks) >= 2:
                 visible = ks[-2]["t"] - ks[0]["t"]
                 if visible + 1e-3 < LEER(txt): cortos.append(f"«{txt}» (plano {i + 1}): {visible:.2f} s, harían falta {LEER(txt):.2f} s")
-    datos["rotulos"] = dict(total=n_rot, fuera_de_zona=len(fuera), sin_tiempo=len(cortos))
+    datos["rotulos"] = dict(total=n_rot, fuera_de_zona=len(fuera), en_franja_dudosa=len(dudosos), sin_tiempo=len(cortos))
+    if dudosos:
+        av("ℹ", f"{len(dudosos)} rótulos entre y=1250 y y=1400: visibles en el feed normal, pero las guías de anuncios de las tres apps piden "
+                 "dejar libres ~660 px abajo (y≤1250). Si el texto es esencial, súbelo: " + "; ".join(dudosos[:8]))
     if fuera:
         av("❌", f"{len(fuera)} rótulos fuera de la zona segura (los tapan los botones y textos de la app):\n      - " + "\n      - ".join(fuera[:12]) + ("\n      - …" if len(fuera) > 12 else ""), min(20, 2.5 * len(fuera)))
     if cortos:

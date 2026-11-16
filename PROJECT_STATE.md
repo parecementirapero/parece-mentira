@@ -38,6 +38,8 @@ Ampliado el 2026-11-15 (importe por concretar). Gasto decidido: ElevenLabs Pro (
 
 - Publicado (2026-11-16): «La Luna se nos va…» (método denso) en las 3 redes — `lotes/prueba-luna-densa/estado.md`.
 
+- Calidad (2026-11-17): control automático `python3 -m motor.calidad` obligatorio antes de entregar (AGENTE §6) y guía `motor/GUIA_CALIDAD.md`. Luna densa v5 (ejemplo con las mejoras, **no publicada**) en `lotes/prueba-luna-densa/gen.py`.
+
 ## Siguiente paso
 Ver los lotes 2026-11-16-manana (chat https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF) y 2026-11-16-tarde en sus chats y escribir «ok» (o cambios). El 2026-11-17 decidir si la mezcla de temas cotidianos se queda (TASKS).
 

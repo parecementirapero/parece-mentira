@@ -101,6 +101,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 - `ffprobe`: resolución, fps, códecs, que haya audio y que dure lo que la locución.
 - Hoja de fotogramas (1 cada 2 s) y **mirarla**: texto legible, nada cortado, sin panel en medio, sin título, sin Nova, flechas bien orientadas, algo en movimiento en cada plano.
+- **Control automático**: `python3 -m motor.calidad DIR/episodio.json --mp4 DIR/out/<id>.mp4 --md DIR/calidad.md`. **Ningún ❌** (rótulos tapados por la app, textos sin tiempo de lectura, bordes negros por zoom < 1…); los ⚠ se arreglan o se justifican en `estado.md`. Qué mide y por qué: `motor/GUIA_CALIDAD.md`.
 - Revisar cifras y nombres contra el guion y las fuentes.
 - Si un vídeo no pasa, se corrige y se sube a `_v2`; nunca se entrega uno roto.
 
