@@ -8,7 +8,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
-- [ ] Mac de Jorge: en `~/Documents/Parece Mentira/claves.txt` cambiar `ELEVENLABS_VOICE_ID` a `op8soO9fvP07F3mjbJuB` (la v1 `EuJOG4WNDCMcwTFrXKUc` ya no existe) y dar a la clave «Parece Mentira» (…a810) el permiso Voces → Leído si hace falta — Jorge
 - [ ] Decidir si se cambian las portadas de los 3 vídeos ya publicados (lote 2026-11-15-tarde; elegidas en `metadatos.json` → `portada`): YouTube con `subir_youtube.py --solo-portada <id> --portada …` desde el Mac de Jorge (si el canal lo permite) e Instagram desde la app del móvil (Editar → portada); TikTok no deja cambiarla después — Nico/Jorge
 - [ ] Estadísticas: conectar Instagram siguiendo `estadisticas/README.md` — APLAZADO por Nico (2026-11-16: «eso ya lo haremos en un futuro»); no recordarlo salvo que lo pidan. Notas: se usa el Facebook personal de Jorge (la cuenta nueva de Nico quedó suspendida en revisión: no crear más cuentas nuevas). Registro en Meta for Developers a medias: falta verificar el móvil (el SMS no llega; probar desde la app de Facebook del móvil → Centro de cuentas → Información de contacto, o por WhatsApp/llamada). Después: crear app, «API setup with Instagram login», añadir @parecementiramedia (debe ser cuenta profesional), generar token → secreto `IG_TOKEN`
 - [ ] Créditos de ElevenLabs: quedan 33.180 de 40.000 (≈9 lotes, se acaban hacia el 21-11; se renuevan el 15-12). Decidir Nico/Jorge: ampliar plan o bajar a un lote al día — Nico/Jorge
@@ -35,6 +34,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Mac de Jorge: `ELEVENLABS_VOICE_ID` cambiado a `op8soO9fvP07F3mjbJuB` en `~/Documents/Parece Mentira/claves.txt`; tarea programada «lote tarde (20:00, Jorge)» apunta a la voz «Archivo Oculto — Narración (clon)» (eleven_v4, 0.5/0.75); prueba TTS «Prueba de voz.» con la clave de claves.txt: HTTP 200, MP3 OK (no hizo falta añadir permisos) — Jorge (con Claude) — 2026-11-16
 - [x] Subida automática a YouTube en el Mac de Nico: scripts copiados (`publicar/`, `motor/`, `estadisticas/autorizar.py`, commit f47be02) y `autorizar.py --subir` ejecutado por Nico en su Mac (token de subida en su `claves.txt`); `--prueba` OK contra la API — Nico — 2026-11-16
 - [x] «Luna densa» v6: Luna por delante de la punta de la flecha, neones con brillo sobre fondos oscuros, tic-tac de reloj, agua y mordisco de hoja nuevos — Nico — 2026-11-16
 - [x] Openverse: dominios permitidos (Nico) y prueba real en el Mac de Jorge: búsqueda, comprobación en Commons (moái CC0), descarga, `creditos.json` y crédito corto; arreglos: máx. 20 por página sin cuenta, enlaces `?curid=`, reintentos ante 429, versión escalada, regla de obras modernas — Nico — 2026-11-16
