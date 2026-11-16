@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-16T17:02:33+01:00",
+ "generado": "2026-11-16T17:06:34+01:00",
  "ejemplo": false,
  "canal": "Parece Mentira",
  "canalTotales": {
@@ -15,8 +15,8 @@
    "fecha": "2026-11-15",
    "hora": "17:38",
    "duracion": 48,
-   "vistas": 3197,
-   "likes": 60,
+   "vistas": 3209,
+   "likes": 61,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -28,7 +28,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 23.4,
+   "horasPublicado": 23.5,
    "lote": "prueba-v2-huellas-luna",
    "etiquetas": {
     "tema": "Espacio",
@@ -72,7 +72,7 @@
    "fecha": "2026-11-15",
    "hora": "23:48",
    "duracion": 47,
-   "vistas": 1678,
+   "vistas": 1683,
    "likes": 35,
    "comentarios": 0,
    "compartidos": null,
@@ -85,7 +85,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 17.2,
+   "horasPublicado": 17.3,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Ciencia",
@@ -113,7 +113,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 17.2,
+   "horasPublicado": 17.3,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Misterio",
@@ -246,9 +246,9 @@
  "historico": {
   "2026-11-16": {
    "youtube": {
-    "D_2cV1qhmfA": 3197,
+    "D_2cV1qhmfA": 3209,
     "bS6AUPYxr7s": 1262,
-    "oZSuHN-46FI": 1678,
+    "oZSuHN-46FI": 1683,
     "XGf1wOPygU8": 5
    },
    "tiktok": {},
@@ -256,7 +256,7 @@
   }
  },
  "notas": [
-  "Tiktok falló hoy (TikTok no devolvió token (invalid_grant: Refresh token is invalid or expired.). Vuelve a ejecutar autorizar_tiktok.py y actualiza TIKTOK_REF); se muestran los datos anteriores.",
+  "Tiktok falló hoy (HTTP 401 en https://open.tiktokapis.com/v2/user/info/: {\"data\":{},\"error\":{\"code\":\"scope_not_authorized\",\"message\":\"The user did not authori); se muestran los datos anteriores.",
   "Instagram sin conectar."
  ]
 }
