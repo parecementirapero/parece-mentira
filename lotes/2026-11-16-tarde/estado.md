@@ -61,3 +61,5 @@ QC: 1080×1920/30 fps/h264/AAC; −19,2 / −19,0 / −19,3 LUFS; control de lec
   - 03 https://youtube.com/shorts/hfRveipHIdk — programado 2026-11-17 00:15 (Madrid)
 - **YouTube**: comentario escrito en el 01 («¿Tú te crujes los dedos? ¿Con qué mano?») pero **sin fijar**: YouTube pide verificar el canal (teléfono) para fijar comentarios — lo tiene que hacer Nico o Jorge en Studio.
 - **TikTok** (TikTok Studio, Jorge eligió cada MP4): 01, 02 y 03 publicados seguidos ~22:25–22:35, portada por defecto (fotograma 0 con el gancho). A petición de Jorge, **texto sin fuentes** (gancho + resumen + hashtags); con los enlaces TikTok avisaba «Content may be restricted». URLs: pendientes (aún procesando).
+- **Instagram**: Reel 01 publicado (formato original 9:16, portada = fotograma 0 con el gancho, texto sin fuentes).
+- **Sin fuentes en las descripciones** desde ahora (Jorge, DECISIONS 2026-11-16): `metadatos.json` actualizado; en YouTube se quitan de los 3.
