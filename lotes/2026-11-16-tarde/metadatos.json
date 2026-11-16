@@ -1,6 +1,6 @@
 {
  "01": {
-  "archivo": "01-crujir-nudillos_v1.mp4",
+  "archivo": "01-crujir-nudillos_v2.mp4",
   "titulo": "Se crujió solo una mano durante 60 años 🤯",
   "youtube": {
    "titulo": "Se crujió solo una mano durante 60 años 🤯 #Shorts",
@@ -34,20 +34,22 @@
    "gancho": "dato",
    "estructura": "experimento",
    "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
-   "portada": "arriba"
+   "portada": "arriba",
+   "montaje": "denso"
   },
   "portada": {
    "texto": "60 años crujiendo una mano",
    "clave": "60 años",
    "variante": "¿Crujirse da artritis?",
    "archivo": "01-portadas/portada.jpg",
-   "t": 54.3,
+   "t": 52.3,
    "diseno": "arriba",
-   "motivo": "la burbuja de gas entre los huesos (la sorpresa del vídeo) se ve entera bajo el texto y la cifra 60 años se lee en la cuadrícula"
-  }
+   "motivo": "la burbuja de gas entre los huesos (la sorpresa del vídeo) se ve entera bajo el texto; la cifra se lee en la cuadrícula"
+  },
+  "version": 2
  },
  "02": {
-  "archivo": "02-puertas-olvidar_v1.mp4",
+  "archivo": "02-puertas-olvidar_v2.mp4",
   "titulo": "Por qué olvidas a qué ibas al entrar en una habitación 🚪",
   "youtube": {
    "titulo": "Por qué olvidas a qué ibas al entrar en una habitación 🚪 #Shorts",
@@ -77,20 +79,22 @@
    "gancho": "pregunta",
    "estructura": "metáfora visual",
    "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
-   "portada": "arriba"
+   "portada": "arriba",
+   "montaje": "denso"
   },
   "portada": {
    "texto": "La puerta te borra",
    "clave": "puerta",
    "variante": "¿A qué venías?",
    "archivo": "02-portadas/portada.jpg",
-   "t": 2.3,
+   "t": 53.3,
    "diseno": "arriba",
-   "motivo": "cara de despiste en el umbral de la puerta con el bocadillo de duda: es el primer segundo del vídeo y el texto no tapa la cara"
-  }
+   "motivo": "cara de despiste en el umbral de la puerta, igual que el primer segundo; el texto no tapa la cara"
+  },
+  "version": 2
  },
  "03": {
-  "archivo": "03-movil-apolo-11_v1.mp4",
+  "archivo": "03-movil-apolo-11_v2.mp4",
   "titulo": "Tu móvil tiene un millón de veces más memoria que el Apolo 11 🚀",
   "youtube": {
    "titulo": "Tu móvil tiene un millón de veces más memoria que el Apolo 11 🚀 #Shorts",
@@ -124,16 +128,18 @@
    "gancho": "contraste",
    "estructura": "comparación",
    "experimento": "tema cotidiano (prueba del lote: histórico contado desde hoy)",
-   "portada": "dato"
+   "portada": "dato",
+   "montaje": "denso"
   },
   "portada": {
    "texto": "Tu móvil vs el Apolo",
    "clave": "Apolo",
    "variante": "Un millón de veces más",
    "archivo": "03-portadas/portada.jpg",
-   "t": 14.3,
+   "t": 15.3,
    "diseno": "dato",
-   "motivo": "el ordenador del Apolo grande y reconocible con su teclado verde; texto arriba sin taparlo y coherente con el primer segundo"
-  }
+   "motivo": "el ordenador del Apolo grande y reconocible con su teclado verde delante de la sala de control; texto arriba sin taparlo"
+  },
+  "version": 2
  }
 }

@@ -19,6 +19,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 **Pruebas**: el `episodio.json` de la Luna generado con la biblioteca es **idéntico** al anterior (comparación campo a campo); los 28 SVG generados son idénticos byte a byte; montaje sin voz (provisional) y hoja OK.
 **Ojo**: el primer lote automático con este método es el 2026-11-17-manana: revisar con lupa (ilustraciones de temas nuevos y tiempo del turno).
 **Publicación**: ver la entrada siguiente / `lotes/prueba-luna-densa/estado.md`.
+## 2026-11-16 21:45 — Agente 20:00 (Jorge) — rama `main` — chat del lote (Mac de Jorge)
+**Hecho**: Jorge dio «ok» a la v1 y enseguida pidió no subirla y rehacerla con el método «denso» (DECISIONS de Nico). No se publicó nada (comprobado en Studio). v2 de los 3 vídeos con el mismo audio: `lotes/2026-11-16-tarde/generadores/denso.py` (módulo reutilizable del método de la Luna: planos por palabra, control de lectura, detalles persistentes, neón, sonido bajo, música −13 dB) + `gen_0N_v2.py` + `ilus_extra.py`. 37/34/33 planos. Vídeos y portadas v2 en el chat y en el Mac.
+**Pruebas**: ffprobe y LUFS OK; control de lectura OK; hojas cada 1 s revisadas.
+**Bloqueo para publicar**: el Mac de Jorge no tiene `YT_UPLOAD_REFRESH_TOKEN` → YouTube por navegador (tarea nueva en TASKS).
+**Siguiente paso**: «ok» a la v2 → publicar (AGENTE §8). `denso.py` puede servir de base para la biblioteca del motor que Nico tiene pendiente.
 
 ## 2026-11-16 20:50 — Nico — rama `main` — chat en la nube (Mac de Nico)
 **Decisión**: Nico pide dejar en `DECISIONS.md` el método «denso» (prueba de la Luna) como estándar de los vídeos: planos atados a palabras, duración variable, micro escenas, tiempo de lectura, detalles de fondo que duran, figuras y fondos detallados, neones sobre oscuro, sonido de detalle bajo y música presente. Sustituye la regla de «un plano por frase» del v4.
