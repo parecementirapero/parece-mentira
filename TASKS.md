@@ -4,10 +4,11 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Noche 17 (2.ª ronda, más exigente): ver Shorts reales del nicho fotograma a fotograma, cruzar calidad con estadísticas («aprender a aprender»), crítica plano a plano y Luna v6, control de calidad por píxeles; sin publicar ni gastar créditos — Nico (chat de la Luna densa) — 2026-11-17 00:25
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Decidir experimentos de `motor/APRENDIZAJE.md`: H1 subtítulo «palabra» en 1 de 3 vídeos; H2 un vídeo de 30–38 s por lote (cambia la regla de 150–160 palabras) — Nico/Jorge
+- [ ] 2026-11-19: leer en Studio el % medio visto de la Luna densa (`jQmhf8o1PfY`) y cerrar H0 en `motor/APRENDIZAJE.md` — Nico/Jorge
 - [ ] Decidir tras leer `motor/GUIA_CALIDAD.md` §10: límite inferior de texto (1400 o 1250), volumen de la música (−13 dB), y si se republica la Luna con la v5 — Nico/Jorge
 - [ ] Apuntar en `estadisticas/` «vistos frente a deslizados» y «% medio visto» de cada vídeo a 48 h y 7 días (empezar por la Luna densa `jQmhf8o1PfY`) — Nico/Jorge
 - [ ] Verificar el canal de YouTube (teléfono, en Studio) para poder fijar comentarios — Nico/Jorge
@@ -40,6 +41,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Noche 17, 2.ª ronda: `motor/APRENDIZAJE.md` (datos de Studio de 7 vídeos, 7 Shorts de referencia vistos, hipótesis H0–H5), subtítulo modo «palabra», control de calidad por píxeles (planos pobres, calcados, encuadre repetido, contraste), Luna v6 (karaoke y palabra); sin publicar ni gastar créditos — Nico — 2026-11-17 01:00
 - [x] Noche 16→17: guía `motor/GUIA_CALIDAD.md` (investigación con fuentes), control automático `motor/calidad.py`, render 2× más rápido (caché de SVG), easings/efectos/música nuevos, cierre en bucle y Luna densa v5 de ejemplo (sin publicar, sin gastar créditos) — Nico — 2026-11-17 00:30
 - [x] «La Luna se nos va…» publicado en YouTube, TikTok e Instagram; antiguo en privado en YouTube y TikTok — Nico — 2026-11-16
 - [x] Método denso en el motor (`motor/denso.py`, `motor/biblioteca/`, `motor/DENSO.md`) y en `AGENTE.md` — Nico — 2026-11-16

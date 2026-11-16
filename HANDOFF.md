@@ -4,6 +4,19 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 01:00 — Nico — rama `main` — chat en la nube «Luna densa» (2.ª ronda nocturna, pedida por Nico: «más tiempo, más exigente, aprende a aprender»)
+**Hecho**:
+- `motor/APRENDIZAJE.md`: rutina de aprendizaje + datos reales de Studio (se quedaron viendo / vistas / s por vista de 7 vídeos) + 7 Shorts del nicho con hasta 15 M de vistas mirados fotograma a fotograma (`herramientas/hoja_short.js`) + hipótesis H0–H5. `estadisticas/studio.json` actualizado. AGENTE §1 lo manda leer.
+- Hallazgos (pistas): las vistas siguen a «se quedaron viendo»; Luna densa 73,3 % frente a 65,3 % del v4; nadie ve más de ~28 s de media; los referentes usan subtítulo de 1–2 palabras enormes y duran 18–35 s.
+- Motor: subtítulo modo «palabra» (`subtitulos="palabra"`), rótulos que se apartan del subtítulo, `fijo=True`.
+- `motor/calidad.py` más exigente con el MP4: planos pobres, planos calcados, mismo encuadre > 4,5 s, contraste de rótulos. Publicado 54 · v5 83 · v6 100.
+- Luna v6 (`lotes/prueba-luna-densa/gen.py`): 6 planos flojos rehechos. Variante palabra: añadir `palabra` como 4.º argumento.
+- DECISIONS: control de calidad y montaje tipo v5/v6 obligatorios desde el lote 2026-11-17-manana.
+**Pruebas**: render completo de v6 y v6-palabra (1080×1920, 30 fps, 54,9 s), `motor.calidad --mp4` 100/100 en los dos, hojas revisadas.
+**No hecho a propósito**: nada publicado, ningún crédito de voz gastado. Los referentes se miraron sin sonido.
+**Pendiente**: que Nico/Jorge decidan H1 y H2 (TASKS); % medio visto de la Luna el 2026-11-19.
+**Siguiente paso**: lote 2026-11-17-manana con AGENTE §1 (aprender) y §6 (calidad).
+
 ## 2026-11-17 00:30 — Nico — rama `main` — chat en la nube «Luna densa» (trabajo nocturno, sin nadie delante)
 **Hecho** (commits `f39c380`, `2f9afeb`, `0f35102` y el de esta entrada):
 - `motor/GUIA_CALIDAD.md`: investigación con fuentes (métricas de Shorts, gancho y curiosidad, principios de Mayer, tipos de plano y de estructura, movimiento, zonas seguras, sonido, música, bucle, Python) convertida en reglas y lista de control. También como doc del Proyecto de Claude.

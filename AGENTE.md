@@ -24,6 +24,8 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 1. Arranque (idempotente: nunca duplicar un lote)
 
+- **Aprender antes de producir** (2026-11-17, Nico): lee `motor/APRENDIZAJE.md` y `estadisticas/datos/aprendizajes.md`; apunta en `estadisticas/studio.json` «Se quedaron viendo», vistas y horas de los vídeos con 24 h o más (`herramientas/studio_shorts.js`); y, si hay un experimento aprobado en la tabla, aplícalo a **uno** de los tres vídeos y etiquétalo en `estadisticas/etiquetas.json`.
+
 1. Clona `https://github.com/parecementirapero/parece-mentira` y sigue `CLAUDE.md` (pull, leer `PROJECT_STATE.md`, `TASKS.md`, `HANDOFF.md`, `DECISIONS.md`).
 2. Calcula el lote: fecha de hoy en Europe/Madrid + turno → `AAAA-MM-DD-manana|tarde`.
 3. Si `lotes/<lote>/estado.md` ya existe: **retoma** desde el último paso registrado; no empieces otro.

@@ -25,8 +25,13 @@ Noche del 16 al 17 de noviembre de 2026 (Nico, chat «Luna densa»). Complementa
 | Música | Sigue al montaje (se recoge en el gancho, aprieta en las ráfagas) y enlaza al repetirse | automático en `denso` |
 | Final | Remate + pregunta para comentar + último fotograma que enlaza con el primero | `bucle=0.35` |
 
-Nota del vídeo de la Luna con el control automático: **v4 antiguo 23 → Luna densa publicada 71 → Luna densa v5 100**.
-(La nota mide errores evitables, no si el vídeo gusta: un 100 significa «sin fallos técnicos conocidos».)
+Nota del vídeo de la Luna con el control automático (versión exigente, con el MP4): **Luna densa publicada 54 →
+v5 83 → v6 100**. La nota mide errores evitables, no si el vídeo gusta: un 100 significa «sin fallos técnicos
+conocidos». Cuando todo saca 100 es que al control le falta exigencia: se le añaden comprobaciones (así se pasó de la
+primera versión, que daba 100 a la v5, a esta, que le encontró 3 planos pobres y 2 tramos con el mismo encuadre).
+
+**Cómo aprendemos de un lote al siguiente:** `motor/APRENDIZAJE.md` (datos de Studio, Shorts de referencia vistos
+fotograma a fotograma, hipótesis y experimentos).
 
 ---
 
@@ -311,10 +316,31 @@ Qué sí podría merecer la pena más adelante (sin coste):
 
 ---
 
+## 9b. Qué mira el control con el MP4 (además del montaje)
+
+| Comprobación | Cómo | Aviso |
+|---|---|---|
+| Planos pobres | Cantidad de dibujo (bordes) en el fotograma central de cada plano | ⚠ si es un fondo liso con un objeto pequeño |
+| Planos calcados | Parecido entre el fotograma central de un plano y el del siguiente | ⚠ si el corte no trae nada nuevo |
+| Mismo encuadre demasiado tiempo | Varios planos seguidos parecidos durante más de 4,5 s | ⚠ cambia de escala o de punto de vista |
+| Contraste de rótulos sin cápsula | Color del texto frente a los píxeles que tiene debajo en el MP4 | ⚠ por debajo de 3:1 |
+| Tramos quietos | Diferencia entre fotogramas a 10 por segundo | ⚠ más de 0,8 s sin que se mueva nada |
+| Bucle | Primer fotograma frente al último | ℹ si no enlaza |
+| Mezcla | Música y efectos frente a la voz, en ventanas de 0,25 s | ⚠ si tapan la voz |
+
+Lo que el control **no** ve: si un rótulo tapa justo la parte importante del sujeto, si el vídeo aburre, si un
+chiste funciona, cómo suena. Eso sigue siendo la hoja de fotogramas y una persona con sonido.
+
+---
+
 ## 10. Qué queda por decidir o probar
 
-1. **Medir.** Apuntar «vistos frente a deslizados» y «% medio visto» de la Luna densa (publicada el 16) a 48 h y 7
-   días, y compararlo con el v4 antiguo. Es la única forma de saber si el método denso funciona de verdad.
+0. **Subtítulo «palabra» (H1) y vídeo corto (H2).** Son las dos diferencias más claras entre nuestros vídeos y
+   los 7 Shorts de referencia mirados (`motor/APRENDIZAJE.md`). El modo palabra ya está en el motor
+   (`v.construir(..., subtitulos="palabra")`) y hay una Luna v6 de muestra con él. El vídeo corto cambia la regla
+   de 150–160 palabras: lo deciden Nico y Jorge.
+1. **Medir.** Primera lectura hecha el 2026-11-17 00:25 (`motor/APRENDIZAJE.md`): la Luna densa retiene al 73,3 %
+   en el primer segundo frente al 65,3 % del v4 antiguo. Falta el % medio visto a las 72 h.
 2. **Prueba A/B barata:** mismo vídeo, dos ganchos distintos, en días distintos (o uno en TikTok y otro en Shorts).
 3. Límite inferior de texto: ¿1400 o 1250? (§4.4)
 4. Volumen de la música: ¿se queda en −13 dB? (§6.1). Hace falta oído humano.

@@ -336,7 +336,7 @@ def _(d):
     return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"), *meteoro_lejos(d), *pterosaurios(d), *come,
              {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 1920, "relleno": "#000000", "x": 540, "y": 960, "z": 0.4, "op": 0.25},
              IMG("calendario", ancho=400, x=770, y=900, z=0.59), *reversed(hojas)],
-             cam(1.0, 1.05, (540, 1000), (540, 980)), vineta=0.55,
+             cam(1.32, 1.42, (620, 960), (660, 930)), "zoom", 0.2, vineta=0.55,   # más cerca: otro encuadre que el plano anterior
              hud=[contador(0.1, d - 0.05, 365, 372, d * 0.6, "DÍAS", tam=110, x=770, y=1230)],
              sfx=[(0.17 + i * d * 0.1, "whoosh", -25, {"dur": 0.18}) for i in range(n)] + son + [(0.0, "meteoro", -24, {"dur": d})])
 

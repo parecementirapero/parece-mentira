@@ -208,11 +208,53 @@ def analizar(ruta_ep, mp4=None):
             if (not q or i == len(quieto) - 1) and ini is not None:
                 if (i - ini) / 10 >= 0.8: tramos.append((round(ini / 10, 1), round((i - ini) / 10, 1)))
                 ini = None
-        bucle = float(np.abs(f[2] - f[-3]).mean())
+        bucle = float(np.abs(f[0] - f[-1]).mean())
         datos["movimiento"] = dict(quieto_pct=round(float(quieto.mean() * 100), 1), tramos_quietos=tramos, movimiento_medio=round(float(dif.mean()), 2),
                                    bucle_diferencia=round(bucle, 1))
         if tramos: av("⚠", "Tramos casi quietos de más de 0,8 s: " + ", ".join(f"{a} s ({b} s)" for a, b in tramos[:6]), min(8, 2 * len(tramos)))
-        if bucle > 45: av("ℹ", f"El último fotograma no se parece al primero (diferencia {bucle:.0f}/255): el vídeo no enlaza en bucle. Los bucles suben el % visto.")
+        if bucle > 25: av("ℹ", f"El último fotograma no se parece al primero (diferencia {bucle:.0f}/255): el vídeo no enlaza en bucle. Los bucles suben el % visto.")
+        # ---- riqueza de cada plano y parecido con el anterior (sobre el fotograma central, sin la franja del subtítulo)
+        det, mids = [], []
+        for e in S:
+            i = min(len(f) - 1, int((e["inicio"] + e["fin"]) / 2 * 10)); g = f[i][35:, :]
+            det.append(float((np.abs(np.diff(g, axis=0)).mean() + np.abs(np.diff(g, axis=1)).mean()) / 2)); mids.append(f[i])
+        pobres = [f"plano {k + 1} ({S[k]['inicio']:.1f} s, detalle {x:.1f})" for k, x in enumerate(det) if x < 2.8]
+        sim = [float(np.abs(mids[k] - mids[k + 1]).mean()) for k in range(len(mids) - 1)]
+        calcados = [f"planos {k + 1}→{k + 2} ({S[k + 1]['inicio']:.1f} s)" for k, x in enumerate(sim)
+                    if x < 10 and max(S[k]["fin"] - S[k]["inicio"], S[k + 1]["fin"] - S[k + 1]["inicio"]) >= 0.7]
+        rachas, k = [], 0
+        while k < len(sim):
+            j = k
+            while j < len(sim) and sim[j] < 22: j += 1
+            if j > k and S[j]["fin"] - S[k]["inicio"] > 4.5: rachas.append(f"{S[k]['inicio']:.1f}–{S[j]['fin']:.1f} s ({j - k + 1} planos)")
+            k = max(j, k + 1)
+        datos["imagen_real"] = dict(detalle_medio=round(float(np.mean(det)), 1), detalle_min=round(min(det), 1), planos_pobres=len(pobres),
+                                    planos_calcados=len(calcados), rachas_mismo_encuadre=len(rachas), primer_fotograma_detalle=round(det[0], 1))
+        if pobres: av("⚠", "Planos pobres (casi sin dibujo: fondo liso con un objeto pequeño): " + ", ".join(pobres[:8]) + ". Añade contexto o un sujeto más grande.", min(12, 3 * len(pobres)))
+        if calcados: av("⚠", "Planos casi iguales que el anterior (el corte no aporta nada nuevo): " + ", ".join(calcados[:8]), min(8, 2 * len(calcados)))
+        if rachas: av("⚠", "Mismo encuadre demasiado tiempo: " + ", ".join(rachas) + ". Cambia de escala o de punto de vista.", min(8, 4 * len(rachas)))
+        # ---- contraste real de los rótulos sin cápsula (color del texto frente al fondo que tienen debajo en el MP4)
+        flojos = []
+        for e in S:
+            for h in e["elementos"]:
+                if h.get("tipo") != "rotulo" or not h.get("hud") or h.get("capsula", "x") is not None or not h.get("keys"):
+                    continue
+                ks = h["keys"]; tm = e["inicio"] + (ks[0]["t"] + ks[-2]["t"]) / 2
+                x0, y0, x1, y1 = [int(v) for v in _caja(h)]
+                x0, y0, x1, y1 = max(0, x0), max(0, y0), min(W, x1), min(H, y1)
+                if x1 - x0 < 20 or y1 - y0 < 20: continue
+                raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{tm:.2f}", "-i", mp4, "-frames:v", "1", "-vf", f"crop={x1 - x0}:{y1 - y0}:{x0}:{y0},scale=160:-2",
+                                      "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True).stdout
+                if not raw: continue
+                px = np.frombuffer(raw, np.uint8).reshape(-1, 3).astype(np.float32)
+                c = h.get("color", "#ffffff").lstrip("#"); tc = np.array([int(c[i:i + 2], 16) for i in (0, 2, 4)], np.float32)
+                fondo = px[np.abs(px - tc).sum(1) > 150]
+                if len(fondo) < 50: continue
+                lum = lambda v: float((0.2126 * (v[..., 0] / 255) ** 2.2 + 0.7152 * (v[..., 1] / 255) ** 2.2 + 0.0722 * (v[..., 2] / 255) ** 2.2).mean())
+                a, b = lum(tc), lum(fondo); r = (max(a, b) + 0.05) / (min(a, b) + 0.05)
+                if r < 3.0: flojos.append(f"«{_texto(h)}» ({e['inicio']:.1f} s, contraste {r:.1f}:1)")
+        datos["imagen_real"]["rotulos_poco_contraste"] = len(flojos)
+        if flojos: av("⚠", "Rótulos sin cápsula con poco contraste sobre su fondo (mínimo 3:1): " + ", ".join(flojos[:8]) + ". Cambia el color o ponles cápsula.", min(8, 2 * len(flojos)))
         d_out = os.path.dirname(mp4)
         mus = glob.glob(os.path.join(d_out, "*_musica.wav")); sf = glob.glob(os.path.join(d_out, "*_sfx.wav"))
         voz = ep.get("audio")
@@ -255,7 +297,7 @@ def analizar(ruta_ep, mp4=None):
 
 def informe(datos, titulo=""):
     L = [f"# Control de calidad{' — ' + titulo if titulo else ''}", "", f"**Nota: {datos['nota']}/100**", ""]
-    for k in ("ritmo", "rotulos", "gancho", "imagen", "sonido", "movimiento", "mezcla"):
+    for k in ("ritmo", "rotulos", "gancho", "imagen", "imagen_real", "sonido", "movimiento", "mezcla"):
         if k in datos:
             L.append(f"- **{k}**: " + " · ".join(f"{a}={b}" for a, b in datos[k].items() if a != "tramos_quietos"))
     L.append("")
