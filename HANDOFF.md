@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 17:50 — Nico — rama `main` — commits `eafdd11`, `f614cec`
+**Hecho**: navegación suave en la web de estadísticas (View Transitions: al entrar hace zoom desde donde pulsas, al volver se aleja, el cambio 7/28 días funde; barras que crecen y líneas que se dibujan; respeta «reducir movimiento»). `recoger.py` ahora pide a YouTube Analytics la audiencia de 28 días (`youtubeExtra`: países, dispositivos, suscritos/no suscritos, edad y género, fuentes, sistema) y guarda los seguidores de cada red en `historico`. Gráficas nuevas: portada con calendario de publicaciones de 28 días y reparto de vistas/seguidores entre redes; YouTube con minutos vistos, dispersión vistas vs % visto («joyas ocultas»), curvas de retención de los 5 más vistos, el canal día a día (4 minigráficas), pirámide de edad, países con bandera, barras partidas de dispositivo/suscritos/sistema y fuentes de tráfico; TikTok/Instagram con likes por 1.000 vistas, seguidores en el tiempo, reparto de interacciones por vídeo y dispersión frente a YouTube; comparativa con dispersión TikTok vs YouTube y seguidores en el tiempo. Paleta categórica validada con el script de dataviz.
+**Pruebas**: Chromium con datos de ejemplo y reales (todas las vistas + ficha + móvil), sin errores; workflow lanzado a mano (run 43910923712, éxito) y ya trae `youtubeExtra` real. Artefacto republicado (versión 1794847664-454c).
+**Pendiente**: Instagram (verificación de móvil en Meta). La retención y la dispersión de YouTube aparecen cuando YouTube publique la retención (48–72 h).
+**Siguiente paso**: revisar la web mañana tras la actualización de las 9:00.
+
 ## 2026-11-16 17:45 — Nico — rama `main`
 **Hecho**: rediseño de `estadisticas/plantilla.html` («observatorio»): tema oscuro espacial (Unbounded + Instrument Sans), portada con mapa orbital (Nova en el centro con el total; un planeta por red, tamaño según vistas; Instagram punteado si no está conectado) y tarjeta por red con mini gráfico. Rutas `#inicio`, `#youtube`, `#tiktok`, `#instagram`, `#comparativa`, `#laboratorio`, `#horas`. Vista de red: cifras clave, vistas por día, destacados (p. ej. «funciona mejor aquí que en YouTube»), lista ordenable y ficha (en YouTube con curva de retención y fuentes; enlaces al mismo vídeo en las otras redes). Títulos de TikTok limpiados (usa el de YouTube si está unido).
 **Pruebas**: Chromium con datos reales y de ejemplo (7 vistas + ficha + móvil 390 px), sin errores de consola.
