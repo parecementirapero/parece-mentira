@@ -4,10 +4,10 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Agente de portadas autónomo: crea las candidatas, elige la mejor y la manda, sin «ok» para la portada — Nico — 2026-11-16 19:00
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Openverse (imágenes y audio con licencia abierta): decidir si se usa para fotos reales/grabados en vídeos y portadas y para música; `api.openverse.org` no está permitido en la red de Claude (Settings → Capabilities) — Nico/Jorge
 - [ ] Decidir si se cambian las portadas de los 3 vídeos ya publicados (lote 2026-11-15-tarde; elegidas en `metadatos.json` → `portada`): YouTube con `subir_youtube.py --solo-portada <id> --portada …` desde el Mac de Jorge (si el canal lo permite) e Instagram desde la app del móvil (Editar → portada); TikTok no deja cambiarla después — Nico/Jorge
 - [ ] Estadísticas: conectar Instagram siguiendo `estadisticas/README.md` — APLAZADO por Nico (2026-11-16: «eso ya lo haremos en un futuro»); no recordarlo salvo que lo pidan. Notas: se usa el Facebook personal de Jorge (la cuenta nueva de Nico quedó suspendida en revisión: no crear más cuentas nuevas). Registro en Meta for Developers a medias: falta verificar el móvil (el SMS no llega; probar desde la app de Facebook del móvil → Centro de cuentas → Información de contacto, o por WhatsApp/llamada). Después: crear app, «API setup with Instagram login», añadir @parecementiramedia (debe ser cuenta profesional), generar token → secreto `IG_TOKEN`
 - [ ] Créditos de ElevenLabs: quedan 33.180 de 40.000 (≈9 lotes, se acaban hacia el 21-11; se renuevan el 15-12). Decidir Nico/Jorge: ampliar plan o bajar a un lote al día — Nico/Jorge
@@ -35,6 +35,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Agente de portadas autónomo (`.claude/agents/portadas.md`): texto + variante, 8 candidatas, elige sin «ok», manda la elegida al chat y al correo; AGENTE §6b/§7 y DECISIONS actualizados — Nico — 2026-11-16
 - [x] Portadas: `motor/portadas.py` (4 candidatas por vídeo + hoja con vista 3:4, elección por revisión visual con motivo), AGENTE §6b y publicación (YouTube por API si se deja, Instagram imagen, TikTok imagen o fotograma), etiqueta `portada` en las estadísticas; portadas hechas para el lote 2026-11-15-tarde — Nico — 2026-11-16
 - [x] Motor v2.3: gancho legible en el fotograma 0 (`"gancho": true`), reglas de gancho en AGENTE (negación, POV, paradoja) a partir del análisis de Reels virales del nicho — Nico — 2026-11-16
 - [x] Mejoras de crecimiento: moáis revisado («se quedaron viendo» 55,6 %), `studio.json` + análisis «Primer segundo», comentario fijado, series/parte 2, créditos de ElevenLabs al arrancar, avisos por correo (tarea de las 9:14) y resumen semanal los lunes 9:41 — Nico — 2026-11-16
