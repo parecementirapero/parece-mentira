@@ -1,0 +1,60 @@
+name: Estadísticas del canal
+
+# Cada mañana antes de las 9:00 (hora de Madrid) recoge las estadísticas de YouTube,
+# reconstruye la web y lo guarda en el repo. Dos horarios en UTC para cubrir
+# horario de invierno y de verano; recoger.py --si-toca evita repetir el mismo día.
+on:
+  schedule:
+    - cron: "5 7 * * *"
+    - cron: "5 8 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: estadisticas
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Recoger datos de YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          if [ -z "$YT_REFRESH_TOKEN" ]; then
+            echo "::warning::Faltan los secretos de Google (ver estadisticas/README.md). No se recoge nada."
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python3 estadisticas/recoger.py
+          else
+            python3 estadisticas/recoger.py --si-toca
+          fi
+
+      - name: Construir la web
+        run: python3 estadisticas/construir.py
+
+      - name: Guardar en el repo
+        run: |
+          git config user.name "estadisticas-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add estadisticas/datos estadisticas/web
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -m "estadísticas: actualización $(TZ=Europe/Madrid date +%F)"
+          for i in 1 2 3; do
+            git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep 5
+          done
+          exit 1

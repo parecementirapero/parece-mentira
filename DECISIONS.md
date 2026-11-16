@@ -13,6 +13,8 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 - Carpeta local de trabajo en cada Mac: `~/Documents/Parece Mentira/` con `claves.txt` (ELEVENLABS_API_KEY, ELEVENLABS_VOICE_ID; nunca al repo), `lotes/` y `renders/`. — 2026-11-15 — Jorge
 - `api.elevenlabs.io` añadido a los dominios permitidos de la cuenta de Claude. — 2026-11-15 — Jorge
 
+- Estadísticas del canal: web propia en `estadisticas/` actualizada cada mañana antes de las 9:00 por GitHub Actions (nube, 0 €), en vez de un correo diario. Credenciales de Google solo en los secretos de GitHub (`YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`), nunca en el repo; acceso de solo lectura (youtube.readonly + yt-analytics.readonly) — 2026-11-16 — Nico — motivo: ver histórico y comparar vídeos sin depender de un Mac encendido
+
 ## Flujo diario
 - Dos lotes al día: 08:00 en el ordenador de Nico y 20:00 en el de Jorge (una sola notificación por turno). — 2026-11-15 — Jorge
 - Cada lote: ideas sin repetir temas (se admiten continuaciones con información nueva) → guiones → voz → montaje 9:16 → vídeos en el chat del agente → correo de aviso con el enlace al chat a parecementirapero.media@gmail.com. — 2026-11-15 — Jorge

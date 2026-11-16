@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parece Mentira · Estadísticas</title>
+<meta name="robots" content="noindex">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f4f3f0; --surface-1:#fcfcfb; --border:#e4e2dc; --grid:#ecebe7;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#8a8984;
+  --series-1:#2a78d6; --series-2:#eb6834; --ref:#a9a8a2;
+  --good:#006300; --bad:#c03030; --chip:#ecebe7; --accent-soft:#cde2fb;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme: dark;
+    --bg:#121211; --surface-1:#1a1a19; --border:#2e2e2b; --grid:#272725;
+    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8d8c86;
+    --series-1:#3987e5; --series-2:#d95926; --ref:#6b6a65;
+    --good:#3fbf3f; --bad:#e66767; --chip:#272725; --accent-soft:#184f95;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text-primary);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 20px 60px}
+header{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.logo{width:38px;height:38px;border-radius:50%;background:conic-gradient(from 30deg,#eb6834,#eda100,#e87ba4,#6250d6,#2a78d6,#1baf7a,#eb6834);box-shadow:inset 0 0 0 4px var(--surface-1)}
+h1{font-size:20px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--text-secondary);font-size:13px}
+.badge{font-size:12px;padding:3px 9px;border-radius:99px;background:#fab21933;color:var(--text-primary);border:1px solid #fab21966}
+nav.tabs{display:flex;gap:4px;margin:16px 0 12px;border-bottom:1px solid var(--border);overflow-x:auto}
+nav.tabs a{padding:9px 14px;color:var(--text-secondary);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap;font-weight:500}
+nav.tabs a.on{color:var(--text-primary);border-color:var(--series-1)}
+.filters{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.seg{display:inline-flex;background:var(--chip);border-radius:8px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--text-secondary);padding:5px 11px;border-radius:6px;font:inherit;cursor:pointer}
+.seg button.on{background:var(--surface-1);color:var(--text-primary);box-shadow:0 1px 2px #0002}
+select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--border);background:var(--surface-1);color:var(--text-primary)}
+.grid{display:grid;gap:14px}
+.kpis{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.card{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px}
+.card h2{font-size:14px;margin:0 0 2px;font-weight:600}
+.card .hint{color:var(--text-muted);font-size:12px;margin-bottom:10px}
+.kpi .lbl{color:var(--text-secondary);font-size:13px}
+.kpi .val{font-size:28px;font-weight:650;letter-spacing:-.02em;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.delta{font-size:12.5px;font-variant-numeric:tabular-nums}
+.delta.up{color:var(--good)} .delta.down{color:var(--bad)} .delta span{color:var(--text-muted)}
+.two{grid-template-columns:2fr 1fr} @media (max-width:860px){.two{grid-template-columns:1fr}}
+.half{grid-template-columns:1fr 1fr} @media (max-width:760px){.half{grid-template-columns:1fr}}
+svg text{fill:var(--text-muted);font-size:11px;font-family:inherit}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--text-secondary);margin-bottom:6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:6px;border-radius:2px}
+.legend i.dash{background:repeating-linear-gradient(90deg,var(--ref) 0 4px,transparent 4px 7px)!important}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:9px 8px;text-align:right;border-bottom:1px solid var(--grid);white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal}
+th{font-size:12px;color:var(--text-secondary);font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0;background:var(--surface-1)}
+th.sorted::after{content:" ↓"} th.sorted.asc::after{content:" ↑"}
+tbody tr{cursor:pointer} tbody tr:hover{background:var(--chip)}
+.tt{font-weight:550}
+.meta{color:var(--text-muted);font-size:12px}
+.tag{font-size:11.5px;padding:2px 7px;border-radius:99px;background:var(--chip);color:var(--text-secondary)}
+.pend{color:var(--text-muted);font-style:italic}
+.bar-in{display:inline-block;height:6px;border-radius:3px;background:var(--series-1);vertical-align:middle;margin-left:6px;opacity:.85}
+.scroll{overflow-x:auto}
+#tip{position:fixed;pointer-events:none;background:var(--text-primary);color:var(--surface-1);padding:7px 10px;border-radius:8px;font-size:12.5px;line-height:1.4;opacity:0;transition:opacity .08s;z-index:10;max-width:260px}
+#tip b{font-weight:650}
+.back{background:none;border:0;color:var(--series-1);font:inherit;cursor:pointer;padding:0;margin-bottom:10px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:12px 0 4px}
+.facts div{background:var(--chip);border-radius:8px;padding:8px 10px}
+.facts b{display:block;font-size:18px;font-variant-numeric:tabular-nums}
+.facts span{font-size:12px;color:var(--text-secondary)}
+.insight{border-left:3px solid var(--series-1);padding:6px 12px;margin:8px 0;color:var(--text-secondary)}
+.insight b{color:var(--text-primary)}
+footer{margin-top:22px;color:var(--text-muted);font-size:12px}
+.view{display:none}.view.on{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo" aria-hidden="true"></div>
+  <div><h1>Parece Mentira · Estadísticas</h1><div class="sub" id="upd"></div></div>
+  <span class="badge" id="badge" hidden>Datos de ejemplo (inventados)</span>
+</header>
+
+<nav class="tabs" id="tabs">
+  <a href="#resumen" data-v="resumen">Resumen</a>
+  <a href="#videos" data-v="videos">Vídeos</a>
+  <a href="#laboratorio" data-v="laboratorio">Laboratorio</a>
+  <a href="#horas" data-v="horas">Mejores horas</a>
+</nav>
+
+<div class="filters">
+  <div class="seg" id="rango">
+    <button data-d="7" class="on">7 días</button><button data-d="28">28 días</button>
+  </div>
+  <select id="tema" aria-label="Filtrar por tema"><option value="">Todos los temas</option></select>
+</div>
+
+<!-- RESUMEN -->
+<section class="view" id="v-resumen">
+  <div class="grid kpis" id="kpis"></div>
+  <div class="grid two" style="margin-top:14px">
+    <div class="card">
+      <h2>Vistas por día</h2><div class="hint">Comparado con el periodo anterior</div>
+      <div class="legend"><span><i style="background:var(--series-1)"></i>Este periodo</span><span><i class="dash"></i>Periodo anterior</span></div>
+      <div id="chart-diario"></div>
+    </div>
+    <div class="card">
+      <h2>Lo destacado</h2><div class="hint">Calculado automáticamente cada mañana</div>
+      <div id="destacado"></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="view" id="v-videos">
+  <div class="card" id="tabla-card">
+    <h2>Todos los vídeos del periodo</h2><div class="hint">Pulsa en una columna para ordenar y en un vídeo para ver su ficha. La retención tarda 48–72 h en llegar.</div>
+    <div class="scroll"><table id="tabla"></table></div>
+  </div>
+  <div class="card" id="ficha" style="display:none"></div>
+</section>
+
+<!-- LABORATORIO -->
+<section class="view" id="v-laboratorio">
+  <div class="filters"><label class="sub" for="labkey">Comparar por</label><select id="labkey"></select></div>
+  <div class="grid half">
+    <div class="card"><h2 id="lab-t1">% medio visto</h2><div class="hint">Lo que más empuja el algoritmo en Shorts. Más de 100 % = la gente lo vuelve a ver.</div><div id="lab-pct"></div></div>
+    <div class="card"><h2 id="lab-t2">Vistas medias por vídeo</h2><div class="hint">Cuántas vistas saca de media cada vídeo de cada grupo</div><div id="lab-vistas"></div></div>
+  </div>
+  <div class="card" style="margin-top:14px"><h2>Conclusión</h2><div class="hint">Todo el histórico de vídeos públicos</div><div id="lab-txt"></div></div>
+</section>
+
+<!-- HORAS -->
+<section class="view" id="v-horas">
+  <div class="card"><h2>Vistas medias en los 2 primeros días según la hora de publicación</h2><div class="hint">Para decidir si el lote de las 8:00 o el de las 20:00 rinde más</div><div id="chart-horas"></div></div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+<div id="tip" role="tooltip"></div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const HOY = new Date(D.generado.slice(0,10)+'T00:00:00');
+const NF=(()=>{try{return new Intl.NumberFormat('es-ES',{useGrouping:'always'})}catch(e){return new Intl.NumberFormat('es-ES')}})();
+const fmt = n => n==null ? '—' : NF.format(n);
+const fmtK = n => n>=1000 ? (n/1000).toLocaleString('es-ES',{maximumFractionDigits:1})+' k' : String(n);
+const pct = n => n==null ? '—' : n.toLocaleString('es-ES',{maximumFractionDigits:1})+' %';
+const fecha = s => new Date(s+'T00:00:00').toLocaleDateString('es-ES',{day:'numeric',month:'short'});
+const diasDesde = s => Math.round((HOY - new Date(s+'T00:00:00'))/864e5);
+let state = {dias:7, tema:'', sort:'vistas', asc:false, video:null};
+
+document.getElementById('upd').textContent = 'Actualizado el ' + new Date(D.generado).toLocaleString('es-ES',{dateStyle:'long',timeStyle:'short',timeZone:'Europe/Madrid'}) + (D.canalTotales? ' · '+NF.format(D.canalTotales.suscriptores)+' suscriptores · '+D.canalTotales.videos+' vídeos públicos':'');
+if(D.ejemplo)document.getElementById('badge').hidden=false;
+document.getElementById('foot').textContent = 'Vistas, likes y comentarios: al momento (YouTube Data API). Retención, compartidos, suscriptores y fuentes: YouTube Analytics, con 1–3 días de retraso. Se actualiza solo cada mañana antes de las 9:00 (GitHub Actions).'+(D.notas&&D.notas.length?' '+D.notas.join(' '):'');
+[...new Set(D.videos.map(v=>v.tema))].forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;document.getElementById('tema').append(o)});
+
+/* ---------- tooltip ---------- */
+const tip = document.getElementById('tip');
+function showTip(e, html){tip.innerHTML=html;tip.style.opacity=1;const x=Math.min(e.clientX+14, innerWidth-tip.offsetWidth-8);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'}
+function hideTip(){tip.style.opacity=0}
+
+/* ---------- helpers ---------- */
+const NS='http://www.w3.org/2000/svg';
+function el(tag, attrs={}, parent){const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);if(parent)parent.append(n);return n}
+function niceStep(v){const p=Math.pow(10,Math.floor(Math.log10(v)));const m=v/p;return (m<=1?1:m<=2?2:m<=2.5?2.5:m<=5?5:10)*p}
+function niceMax(v){const st=niceStep(v/4);return st*Math.ceil(v/st)}
+function videosPeriodo(){return D.videos.filter(v=>diasDesde(v.fecha)<state.dias && (!state.tema||v.tema===state.tema))}
+function videosPrev(){return D.videos.filter(v=>{const d=diasDesde(v.fecha);return d>=state.dias&&d<2*state.dias&&(!state.tema||v.tema===state.tema)})}
+const avg = a => a.length ? a.reduce((s,x)=>s+x,0)/a.length : null;
+
+/* ---------- line chart ---------- */
+function lineChart(host, xs, series, opts={}){
+  host.innerHTML='';
+  const W=host.clientWidth||640, H=opts.h||240, m={t:10,r:24,b:26,l:44};
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H,role:'img','aria-label':opts.label||''},host);
+  const all=series.flatMap(s=>s.values.filter(v=>v!=null));
+  const ymax=opts.ymax||niceMax(Math.max(...all)*1.05), ymin=opts.ymin||0;
+  const x=i=>m.l+(W-m.l-m.r)*(xs.length<2?0.5:i/(xs.length-1));
+  const y=v=>H-m.b-(H-m.t-m.b)*(v-ymin)/(ymax-ymin);
+  const ys=opts.ystep||niceStep((ymax-ymin)/4);for(let v=ymin;v<=ymax+1e-9;v+=ys){el('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:'var(--grid)'},svg);const t=el('text',{x:m.l-8,y:y(v)+4,'text-anchor':'end'},svg);t.textContent=opts.yfmt?opts.yfmt(v):fmtK(Math.round(v))}
+  const step=Math.max(1,Math.ceil(xs.length/7));
+  xs.forEach((l,i)=>{if(i%step===0||i===xs.length-1){const t=el('text',{x:x(i),y:H-8,'text-anchor':'middle'},svg);t.textContent=l}});
+  series.forEach(s=>{let d='';s.values.forEach((v,i)=>{if(v==null)return;d+=(d?'L':'M')+x(i).toFixed(1)+','+y(v).toFixed(1)});
+    el('path',{d,fill:'none',stroke:s.color,'stroke-width':2,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':s.dash?'4 3':''},svg)});
+  const cross=el('line',{y1:m.t,y2:H-m.b,stroke:'var(--text-muted)','stroke-width':1,opacity:0},svg);
+  const dots=series.map(s=>el('circle',{r:4.5,fill:s.color,stroke:'var(--surface-1)','stroke-width':2,opacity:0},svg));
+  const hit=el('rect',{x:m.l,y:m.t,width:W-m.l-m.r,height:H-m.t-m.b,fill:'transparent'},svg);
+  hit.addEventListener('mousemove',e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)*W/r.width;
+    const i=Math.max(0,Math.min(xs.length-1,Math.round((px-m.l)/(W-m.l-m.r)*(xs.length-1))));
+    cross.setAttribute('x1',x(i));cross.setAttribute('x2',x(i));cross.setAttribute('opacity',.5);
+    series.forEach((s,k)=>{const v=s.values[i];if(v==null){dots[k].setAttribute('opacity',0);return}dots[k].setAttribute('cx',x(i));dots[k].setAttribute('cy',y(v));dots[k].setAttribute('opacity',1)});
+    showTip(e,`<b>${opts.tipTitle?opts.tipTitle(i):xs[i]}</b><br>`+series.map(s=>`${s.name}: <b>${s.values[i]==null?'—':(opts.vfmt||fmt)(s.values[i])}</b>`).join('<br>'))});
+  hit.addEventListener('mouseleave',()=>{cross.setAttribute('opacity',0);dots.forEach(d=>d.setAttribute('opacity',0));hideTip()});
+}
+
+/* ---------- bar chart (horizontal) ---------- */
+function hbar(host, rows, opts={}){
+  host.innerHTML='';
+  const top=opts.ref!=null?18:0, W=host.clientWidth||400, rh=34, m={l:opts.ml||110,r:56}, H=rows.length*rh+6+top;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H},host);
+  const max=opts.max||Math.max(...rows.map(r=>r.v))*1.05;
+  rows.forEach((r,i)=>{
+    const y=i*rh+6+top, w=Math.max(2,(W-m.l-m.r)*r.v/max);
+    const lab=el('text',{x:m.l-10,y:y+15,'text-anchor':'end',style:'fill:var(--text-secondary);font-size:12px'},svg);lab.textContent=r.k;
+    el('rect',{x:m.l,y:y+4,width:w,height:16,rx:4,fill:r.color||'var(--series-1)'},svg);
+    const val=el('text',{x:m.l+w+6,y:y+16,style:'fill:var(--text-primary);font-size:12px'},svg);val.textContent=(opts.fmt||fmt)(r.v);
+    const hit=el('rect',{x:0,y,width:W,height:rh,fill:'transparent'},svg);
+    hit.addEventListener('mousemove',e=>showTip(e,`<b>${r.k}</b><br>${opts.name||''}: <b>${(opts.fmt||fmt)(r.v)}</b>${r.extra?'<br>'+r.extra:''}`));
+    hit.addEventListener('mouseleave',hideTip);
+  });
+  if(opts.ref!=null){const x=m.l+(W-m.l-m.r)*opts.ref/max;el('line',{x1:x,x2:x,y1:0,y2:H,stroke:'var(--text-muted)','stroke-dasharray':'3 3'},svg);
+    const t=el('text',{x,y:11,'text-anchor':'middle'},svg);t.textContent=opts.refLabel||''}
+}
+
+/* ---------- vertical bars ---------- */
+function vbar(host, rows, opts={}){
+  host.innerHTML='';
+  const W=host.clientWidth||600,H=240,m={t:14,r:10,b:28,l:44};
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H},host);
+  const max=niceMax(Math.max(...rows.map(r=>r.v))*1.1);
+  const y=v=>H-m.b-(H-m.t-m.b)*v/max;
+  const st=niceStep(max/4);for(let v=0;v<=max+1e-9;v+=st){el('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:'var(--grid)'},svg);const t=el('text',{x:m.l-8,y:y(v)+4,'text-anchor':'end'},svg);t.textContent=fmtK(Math.round(v))}
+  const bw=(W-m.l-m.r)/rows.length;
+  rows.forEach((r,i)=>{const x=m.l+i*bw+bw*.25,w=bw*.5,h=H-m.b-y(r.v);
+    el('path',{d:`M${x},${H-m.b}V${y(r.v)+4}q0,-4 4,-4h${w-8}q4,0 4,4V${H-m.b}Z`,fill:'var(--series-1)'},svg);
+    const t=el('text',{x:x+w/2,y:H-9,'text-anchor':'middle',style:'fill:var(--text-secondary);font-size:12px'},svg);t.textContent=r.k;
+    const v=el('text',{x:x+w/2,y:y(r.v)-6,'text-anchor':'middle',style:'fill:var(--text-primary);font-size:12px'},svg);v.textContent=fmt(Math.round(r.v));
+    const hit=el('rect',{x:m.l+i*bw,y:m.t,width:bw,height:H-m.t-m.b,fill:'transparent'},svg);
+    hit.addEventListener('mousemove',e=>showTip(e,`<b>Publicados a las ${r.k}</b><br>Vistas medias en 2 días: <b>${fmt(Math.round(r.v))}</b><br>${r.n} vídeos`));
+    hit.addEventListener('mouseleave',hideTip)});
+}
+
+/* ---------- RESUMEN ---------- */
+function renderResumen(){
+  const dias=state.dias, all=D.diario, cur=all.slice(-dias), prev=all.slice(-2*dias,-dias);
+  const vp=videosPeriodo(), vprev=videosPrev();
+  const sum=(a,k)=>a.reduce((s,x)=>s+(x[k]||0),0);
+  const filt=!!state.tema;
+  const vistas=filt?sum(vp,'vistas'):sum(cur,'vistas'), vistasP=filt?sum(vprev,'vistas'):sum(prev,'vistas');
+  const subs=filt?sum(vp,'subs'):sum(cur,'subs'), subsP=filt?sum(vprev,'subs'):sum(prev,'subs');
+  const pv=avg(vp.filter(v=>v.pctVisto!=null).map(v=>v.pctVisto)), pvP=avg(vprev.filter(v=>v.pctVisto!=null).map(v=>v.pctVisto));
+  const lk=sum(vp,'likes')/Math.max(1,sum(vp,'vistas'))*1000, lkP=sum(vprev,'likes')/Math.max(1,sum(vprev,'vistas'))*1000;
+  const k=[
+    ['Visualizaciones',fmt(vistas),vistas,vistasP,false],
+    ['Suscriptores ganados',fmt(subs),subs,subsP,false],
+    ['% medio visto',pct(pv),pv,pvP,true],
+    ['Likes por 1.000 vistas',lk.toLocaleString('es-ES',{maximumFractionDigits:1}),lk,lkP,true],
+    ['Vídeos publicados',String(vp.length),vp.length,vprev.length,false],
+  ];
+  document.getElementById('kpis').innerHTML=k.map(([l,v,a,b,pts])=>{
+    let d='<span>sin datos previos</span>';
+    if(a!=null&&b){const diff=pts?a-b:(a-b)/b*100;const up=diff>=0;
+      d=`<span class="${up?'up':'down'}" style="color:var(--${up?'good':'bad'})">${up?'▲':'▼'} ${Math.abs(diff).toLocaleString('es-ES',{maximumFractionDigits:1})}${pts?' pts':' %'}</span> <span>vs ${dias} días antes</span>`}
+    return `<div class="card kpi"><div class="lbl">${l}</div><div class="val">${v}</div><div class="delta">${d}</div></div>`}).join('');
+  if(!cur.length){document.getElementById('chart-diario').innerHTML='<p class="pend">Aún no hay datos diarios.</p>'} else lineChart(document.getElementById('chart-diario'), cur.map(d=>fecha(d.fecha)),[
+    {name:'Este periodo',values:cur.map(d=>d.vistas),color:'var(--series-1)'},
+    {name:'Periodo anterior',values:prev.map(d=>d.vistas),color:'var(--ref)',dash:true}],{label:'Vistas por día',tipTitle:i=>fecha(cur[i].fecha)});
+  const conRet=vp.filter(v=>v.pctVisto!=null);
+  const top=[...vp].sort((a,b)=>b.vistas-a.vistas)[0];
+  const mejorRet=[...conRet].sort((a,b)=>b.pctVisto-a.pctVisto)[0];
+  const peorHook=[...conRet].filter(v=>conRet.length<2||v!==mejorRet).sort((a,b)=>a.retencion3s-b.retencion3s)[0];
+  const pend=vp.filter(v=>v.pctVisto==null);
+  let h='';
+  if(top)h+=`<div class="insight">🏆 <b>Más visto:</b> ${top.titulo} — ${fmt(top.vistas)} vistas</div>`;
+  if(mejorRet)h+=`<div class="insight">🔁 <b>Mejor retención:</b> ${mejorRet.titulo} — ${pct(mejorRet.pctVisto)} visto de media</div>`;
+  if(peorHook)h+=`<div class="insight" style="border-color:var(--series-2)">⚠️ <b>Gancho más flojo:</b> ${peorHook.titulo} — solo el ${pct(peorHook.retencion3s)} sigue a los 3 s. Revisar la primera frase.</div>`;
+  if(pend.length)h+=`<div class="insight" style="border-color:var(--ref)">⏳ <b>${pend.length} vídeo${pend.length>1?'s':''} con retención pendiente</b> (publicado${pend.length>1?'s':''} hace menos de 72 h)</div>`;
+  document.getElementById('destacado').innerHTML=h||'<div class="meta">No hay vídeos en este periodo.</div>';
+}
+
+/* ---------- VIDEOS ---------- */
+const cols=[
+  ['titulo','Vídeo'],['fecha','Publicado'],['vistas','Vistas'],['pctVisto','% visto'],['retencion3s','Siguen a los 3 s'],
+  ['likesK','Likes / 1.000'],['comentarios','Coment.'],['compartidos','Compartidos'],['subs','Subs']];
+function renderVideos(){
+  const vp=videosPeriodo().map(v=>({...v,likesK:v.vistas?v.likes/v.vistas*1000:0}));
+  const s=state.sort;vp.sort((a,b)=>{const A=a[s],B=b[s];if(A==null)return 1;if(B==null)return -1;return (A>B?1:A<B?-1:0)*(state.asc?1:-1)});
+  const maxV=Math.max(...vp.map(v=>v.vistas),1);
+  const t=document.getElementById('tabla');
+  t.innerHTML='<thead><tr>'+cols.map(([k,l])=>`<th data-k="${k}" class="${state.sort===k?'sorted'+(state.asc?' asc':''):''}">${l}</th>`).join('')+'</tr></thead><tbody>'+
+   vp.map(v=>`<tr data-id="${v.id}"><td><div class="tt">${v.titulo}</div><span class="tag">${v.tema}</span> <span class="meta">${v.duracion} s</span></td>
+   <td>${fecha(v.fecha)} <span class="meta">${v.hora}</span></td>
+   <td>${fmt(v.vistas)}<span class="bar-in" style="width:${Math.round(40*v.vistas/maxV)}px"></span></td>
+   <td>${v.pctVisto==null?'<span class="pend">pendiente</span>':pct(v.pctVisto)}</td>
+   <td>${v.retencion3s==null?'<span class="pend">pendiente</span>':pct(v.retencion3s)}</td>
+   <td>${v.likesK.toLocaleString('es-ES',{maximumFractionDigits:1})}</td><td>${fmt(v.comentarios)}</td><td>${fmt(v.compartidos)}</td><td>${v.subs==null?'—':(v.subs>=0?'+':'')+fmt(v.subs)}</td></tr>`).join('')+'</tbody>';
+  if(!vp.length)t.innerHTML+='<tr><td colspan="9" class="meta">No hay vídeos en este periodo.</td></tr>';
+  t.querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;if(state.sort===k)state.asc=!state.asc;else{state.sort=k;state.asc=k==='titulo'}renderVideos()});
+  t.querySelectorAll('tbody tr[data-id]').forEach(tr=>tr.onclick=()=>{state.video=tr.dataset.id;renderFicha()});
+  if(state.video)renderFicha(); else {document.getElementById('ficha').style.display='none';document.getElementById('tabla-card').style.display=''}
+}
+function curvaMedia(){
+  const cs=D.videos.filter(x=>x.curva&&x.curva.length);if(!cs.length)return null;
+  const n=Math.min(...cs.map(c=>c.curva.length));
+  return cs[0].curva.slice(0,n).map((p,i)=>[p[0],Math.round(avg(cs.map(c=>c.curva[i][1]))*10)/10]);
+}
+function renderFicha(){
+  const v=D.videos.find(x=>x.id===state.video), f=document.getElementById('ficha');
+  if(!v){state.video=null;return}
+  document.getElementById('tabla-card').style.display='none';f.style.display='';
+  const extra=[];
+  if(v.vistasEnganchadas!=null)extra.push(`<div><b>${fmt(v.vistasEnganchadas)}</b><span>vistas enganchadas</span></div>`);
+  if(v.duracionMedia!=null)extra.push(`<div><b>${v.duracionMedia} s</b><span>tiempo medio visto</span></div>`);
+  const et=Object.entries(v.etiquetas||{}).map(([k,x])=>`<span class="tag">${k}: ${x}</span>`).join(' ');
+  f.innerHTML=`<button class="back" id="back">← Volver a todos los vídeos</button>
+   <h2 style="font-size:18px">${v.titulo}</h2><div class="meta">${v.duracion??'?'} s · publicado el ${fecha(v.fecha)} a las ${v.hora} · <a href="${v.url}" target="_blank" rel="noopener" style="color:var(--series-1)">ver en YouTube ↗</a></div>
+   <div style="margin-top:6px">${et}</div>
+   <div class="facts">
+    <div><b>${fmt(v.vistas)}</b><span>vistas</span></div><div><b>${pct(v.pctVisto)}</b><span>% medio visto</span></div>
+    <div><b>${pct(v.retencion3s)}</b><span>siguen a los 3 s</span></div>${extra.join('')}
+    <div><b>${fmt(v.likes)}</b><span>likes</span></div><div><b>${fmt(v.comentarios)}</b><span>comentarios</span></div>
+    <div><b>${fmt(v.compartidos)}</b><span>compartidos</span></div><div><b>${v.subs==null?'—':(v.subs>=0?'+':'')+fmt(v.subs)}</b><span>suscriptores</span></div></div>
+   <div class="grid two" style="margin-top:12px">
+    <div><h2>Curva de retención</h2><div class="hint">% de espectadores que siguen viendo en cada momento (más de 100 % = lo vuelven a ver)</div>
+      <div class="legend"><span><i style="background:var(--series-1)"></i>Este vídeo</span><span><i class="dash"></i>Media del canal</span></div><div id="curva"></div></div>
+    <div><h2>De dónde vienen las vistas</h2><div class="hint">% del total</div><div id="fuentes"></div></div></div>
+   <div style="margin-top:12px"><h2>Vistas por día desde que se publicó</h2><div class="hint">Las de los 2 últimos días pueden estar incompletas</div><div id="vdia"></div></div>`;
+  document.getElementById('back').onclick=()=>{state.video=null;renderVideos()};
+  if(v.vistasDia&&v.vistasDia.length>1) lineChart(document.getElementById('vdia'),v.vistasDia.map(d=>fecha(d[0])),[{name:'Vistas',values:v.vistasDia.map(d=>d[1]),color:'var(--series-1)'}],{h:180});
+  else document.getElementById('vdia').innerHTML='<p class="pend">Todavía no hay datos por día.</p>';
+  if(!v.curva){document.getElementById('curva').innerHTML='<p class="pend">Retención pendiente: YouTube la publica 48–72 h después de subir el vídeo.</p>';document.getElementById('fuentes').innerHTML='<p class="pend">Pendiente.</p>';return}
+  const media=curvaMedia()||[];
+  const dur=v.duracion||1, xs=v.curva.map(p=>Math.round(p[0]*dur)+' s');
+  const ymax=Math.max(120,Math.ceil(Math.max(...v.curva.map(p=>p[1]))/20)*20);
+  lineChart(document.getElementById('curva'),xs,[{name:'Este vídeo',values:v.curva.map(p=>p[1]),color:'var(--series-1)'},{name:'Media del canal',values:v.curva.map((_,i)=>media[i]?media[i][1]:null),color:'var(--ref)',dash:true}],
+    {ymax,ystep:20,yfmt:x=>x+' %',vfmt:x=>pct(x),tipTitle:i=>'Segundo '+(v.curva[i][0]*dur).toLocaleString('es-ES',{maximumFractionDigits:1}),h:230});
+  const fu=Object.entries(v.fuentes||{}).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  if(fu.length)hbar(document.getElementById('fuentes'),fu.map(([k,x])=>({k,v:x})),{fmt:pct,name:'Vistas',max:100,ml:130});
+  else document.getElementById('fuentes').innerHTML='<p class="pend">Sin datos.</p>';
+}
+
+/* ---------- LABORATORIO ---------- */
+const NOMBRE_ETQ={tema:'Tema',lote:'Lote',voz:'Voz',gancho:'Tipo de gancho'};
+function renderLab(){
+  const sel=document.getElementById('labkey');
+  const keys=[...new Set(D.videos.flatMap(v=>Object.keys(v.etiquetas||{})))];
+  if(!sel.options.length){keys.forEach(k=>{const o=document.createElement('option');o.value=k;o.textContent=NOMBRE_ETQ[k]||k;sel.append(o)});sel.onchange=renderLab}
+  const key=sel.value||'tema', nom=(NOMBRE_ETQ[key]||key).toLowerCase();
+  document.getElementById('lab-t1').textContent='% medio visto por '+nom;
+  document.getElementById('lab-t2').textContent='Vistas medias por vídeo, por '+nom;
+  const grupo=v=>(v.etiquetas||{})[key]||'Sin etiquetar';
+  const gs=[...new Set(D.videos.map(grupo))];
+  const rowsP=gs.map(g=>{const a=D.videos.filter(v=>grupo(v)===g&&v.pctVisto!=null);return{k:g,v:avg(a.map(v=>v.pctVisto))||0,n:a.length,extra:a.length+' vídeos con datos'}}).filter(r=>r.v).sort((a,b)=>b.v-a.v);
+  const rowsV=gs.map(g=>{const a=D.videos.filter(v=>grupo(v)===g);return{k:g,v:Math.round(avg(a.map(v=>v.vistas))||0),n:a.length,extra:a.length+' vídeos'}}).filter(r=>r.v).sort((a,b)=>b.v-a.v);
+  const media=avg(D.videos.filter(v=>v.pctVisto!=null).map(v=>v.pctVisto));
+  const ml=Math.min(170,Math.max(80,...gs.map(g=>String(g).length*7+16)));
+  if(rowsP.length)hbar(document.getElementById('lab-pct'),rowsP,{fmt:pct,name:'% medio visto',ref:media,refLabel:'media '+pct(media),ml});else document.getElementById('lab-pct').innerHTML='<p class="pend">Aún no hay retención.</p>';
+  if(rowsV.length)hbar(document.getElementById('lab-vistas'),rowsV,{name:'Vistas medias',ml});else document.getElementById('lab-vistas').innerHTML='<p class="pend">Sin vídeos.</p>';
+  let t='';
+  if(rowsV.length>=2){const [a,b]=[rowsV[0],rowsV[rowsV.length-1]];
+    t+=`<div class="insight">Por vistas, <b>${a.k}</b> saca <b>${(a.v/b.v).toLocaleString('es-ES',{maximumFractionDigits:1})}×</b> lo que <b>${b.k}</b> (${a.n} y ${b.n} vídeos).</div>`;
+    const pocos=rowsV.some(r=>r.n<10);
+    if(pocos)t+='<p class="meta">Con menos de 10 vídeos por grupo es una tendencia, no una conclusión: un solo vídeo viral cambia la media.</p>'}
+  t+='<p class="meta">Las etiquetas salen solas (tema por los hashtags de la descripción, lote por <code>lotes/*/estado.md</code>) y se pueden corregir o ampliar en <code>estadisticas/etiquetas.json</code>.</p>';
+  document.getElementById('lab-txt').innerHTML=t;
+}
+
+/* ---------- HORAS ---------- */
+function renderHoras(){
+  const g={};D.videos.forEach(v=>{if(!v.vistasDia||!v.vistasDia.length||v.horasPublicado<48)return;const h=v.hora.slice(0,2)+':00';(g[h]=g[h]||[]).push(v.vistasDia.slice(0,2).reduce((s,d)=>s+d[1],0))});
+  const rows=Object.keys(g).sort().map(k=>({k,v:avg(g[k]),n:g[k].length}));
+  if(!rows.length){document.getElementById('chart-horas').innerHTML='<p class="pend">Hacen falta vídeos con al menos 2 días publicados.</p>';return}
+  vbar(document.getElementById('chart-horas'),rows);
+}
+
+/* ---------- routing ---------- */
+const views=['resumen','videos','laboratorio','horas'];
+function render(){
+  const v=views.includes(location.hash.slice(1))?location.hash.slice(1):'resumen';
+  document.querySelectorAll('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));
+  document.querySelectorAll('#tabs a').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
+  document.getElementById('tema').parentElement.style.display = (v==='horas'||v==='laboratorio')?'none':'';
+  ({resumen:renderResumen,videos:renderVideos,laboratorio:renderLab,horas:renderHoras})[v]();
+}
+document.querySelectorAll('#rango button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#rango button').forEach(x=>x.classList.toggle('on',x===b));state.dias=+b.dataset.d;render()});
+document.getElementById('tema').onchange=e=>{state.tema=e.target.value;render()};
+addEventListener('hashchange',render);
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(render,150)});
+render();
+</script>
+</body>
+</html>
