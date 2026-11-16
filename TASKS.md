@@ -8,6 +8,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] 2026-11-17 — Nico y Jorge: decidir si se prueba el lote de la mañana en la nube (tarea programada sin depender del Mac: voz por API, montaje y vídeos en el chat; publicar sigue necesitando un Mac encendido en el «ok»). Antes: decidir si la clave de ElevenLabs se guarda en la configuración del entorno en la nube (nunca en el repo) y copiar MP3/MP4 a la carpeta local al publicar. Si sale bien, pasar también el de las 20:00 — propuesto por Jorge 2026-11-16
 - [ ] Nico y Jorge: tras ver el lote 2026-11-16-tarde (prueba de temas cotidianos), decidir el 2026-11-17 si la mezcla 2 cotidianos + 1 histórico se queda fija, pasa a todo cotidiano o se vuelve a lo de antes; apuntarlo en `DECISIONS.md`
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
