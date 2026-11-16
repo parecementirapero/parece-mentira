@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 18:35 — Nico — rama `main`
+**Hecho**: (1) Moáis revisado: sin avisos ni restricciones (API y Studio); YouTube lo enseñó a ≈9 personas y solo el 55,6 % se quedó (pisada 76,5 % → 3.481 vistas, Luna 65,3 %, guerra 60,5 %): el primer segundo decide. Nuevo `estadisticas/studio.json` (datos que solo da Studio) unido a los vídeos en `construir.py`, sección «Primer segundo» en el análisis y comparación por gancho/estructura/tema con «se quedan» y retención a 3 s; dato en la ficha de la web. (2) `AGENTE.md`: créditos de ElevenLabs y datos de Studio al arrancar, regla del primer segundo, comentario fijado (en el correo de revisión; se fija tras publicar, con `send_later` para los programados), series/parte 2 y vídeo relacionado; sección «Continuaciones prometidas» en `lotes/IDEAS.md`. (3) Tarea de las 9:14 ampliada: correo «[AVISO]» si falla la recogida, hay errores en `notas` o el permiso de TikTok caduca en menos de 30 días. Nueva tarea «Parece Mentira: resumen semanal por correo» (lunes 9:41, nube, `trig_01Fio936VfVUNaM7HguqEF7g`).
+**Pruebas**: análisis y web con datos reales sin errores. ElevenLabs: 6.820 de 40.000 caracteres usados (plan starter, se renueva el 15-12).
+**Pendiente**: decidir créditos de ElevenLabs (al ritmo de 2 lotes al día se acaban hacia el 21-11). Clave de subida de YouTube en el Mac de Nico.
+**Siguiente paso**: ver que el lote de las 20:00 aplica las reglas nuevas.
+
 ## 2026-11-16 18:40 — Nico — rama `main`
 **Hecho**: dominios `oauth2.googleapis.com` y `www.googleapis.com` permitidos en Claude (Nico). Permiso de subida concedido desde el navegador integrado del Mac de Jorge (cuenta del canal, scopes `youtube.upload` + `youtube.readonly`); el token se canjeó en el propio Mac y está en su `claves.txt` como `YT_UPLOAD_REFRESH_TOKEN` (no se ha mostrado en ningún sitio). Navegador integrado: permitido `http://127.0.0.1:8765` para la vuelta de Google. `subir_youtube.py` compara títulos sin hashtags ni emojis para no duplicar.
 **Pruebas**: en el Mac de Jorge, `--prueba` con el título de un vídeo ya publicado → `yaEstaba` (bS6AUPYxr7s); con un título nuevo → listo para subir. No se ha subido nada.

@@ -30,6 +30,8 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 4. Si en `TASKS.md` el lote está «En curso» por otra persona/agente: no lo toques, registra el motivo en `HANDOFF.md` y termina.
 5. Reserva en `TASKS.md` → «En curso»: `Lote <lote> — Agente HH:00 (Nico|Jorge) — fecha hora`. Commit + push **antes** de seguir.
 6. Comprueba que la carpeta local del turno responde (`device_list_dir`). Si el ordenador no contesta: registra «ordenador no disponible», deja la tarea en «Pendiente» y termina.
+7. **Créditos de ElevenLabs**: `GET https://api.elevenlabs.io/v1/user/subscription` con la clave de `claves.txt` → quedan `character_limit − character_count`. Un lote gasta ≈3.500. Si quedan menos de 10.000, dilo en el chat y en el correo del turno con la cifra («quedan para N lotes»); si no llega para este lote, el lote sale «pendiente de voz» y el asunto del correo empieza por `[AVISO]`.
+8. **Datos de YouTube Studio** (no los da la API): en el navegador integrado, para cada Short de YouTube de los últimos 7 días, abre `https://studio.youtube.com/video/<id>/analytics/tab-overview/period-default` y copia el % de «Se quedaron viendo» (bloque «Cómo han interactuado los usuarios») en `estadisticas/studio.json` (`{"<id>": {"seQuedan": 65.3, "fecha": "AAAA-MM-DD"}}`). Commit en el mismo push de la reserva o del siguiente. Si Studio no carga, sigue sin ello.
 
 ## 2. Ideas (3 temas)
 
@@ -49,11 +51,14 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 ## 3. Guiones
 
 `lotes/<lote>/guiones.md`, por vídeo:
+- **Primer segundo**: es lo que decide si YouTube sigue enseñando el vídeo (ver «Primer segundo» en `aprendizajes.md`; objetivo: que más del 65 % se quede en vez de deslizar). El **fotograma 0** ya enseña lo más llamativo del vídeo (nada de fundidos, títulos ni planos de situación) y la primera frase dice el dato o la pregunta sin introducción.
 - **Gancho** en la primera frase (el primer plano tiene que entenderse sin sonido). Que se entienda igual en España y en Latinoamérica: nada de expresiones solo de España (vale «¿sabías que…?», no «flipar», «tío», «mola»), y referencias que funcionen en los dos lados. La voz sigue siendo de España.
 - **Locución**: 130–170 palabras (≈45–60 s; ver `DECISIONS.md`), español de España, tono cercano, **cifras escritas en letra**.
 - **Planos**: qué se ve en cada frase (acciones pequeñas que explican el dato).
 - **Fuentes** con enlace (van a la descripción).
 - Título (sin «| elevenlabs.io»), descripción y hashtags por red → `lotes/<lote>/metadatos.json`.
+- **Comentario fijado** → `metadatos.json` → `"comentario"`: una pregunta corta que invite a contestar, relacionada con el dato (p. ej. «¿Tú lo sabías? Te leo 👇» o «¿Qué otro misterio de la Isla de Pascua quieres?»). Va en el correo de revisión, así que el «ok» lo aprueba también.
+- **Series**: si un tema ya publicado tiene más del doble de la mediana de vistas en alguna red (ver `aprendizajes.md`), uno de los 3 vídeos puede ser su **parte 2** con información nueva que se entienda sola. En ese caso: título con «(parte 2)», la locución acaba con «Si te perdiste la primera parte, está en el canal», y en `metadatos.json` → `"relacionado": "<id de YouTube de la parte 1>"`. Al final de cualquier vídeo de un tema con potencial de continuación, la última frase puede invitar a seguir el canal para la parte 2 (solo si de verdad se va a hacer: apúntalo en `lotes/IDEAS.md` → «Continuaciones prometidas» y hazla en los 3 días siguientes).
 
 ## 4. Voz (ElevenLabs)
 
@@ -91,7 +96,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 1. **Vídeos en el chat (sin Drive)**: copia los 3 MP4 de la carpeta local al contenedor con `device_stage_files` y **envíalos con `SendUserFile`** (uno por vídeo, con un pie corto: «1/3 · título · duración»). Así se ven y se reproducen dentro del chat de Claude, desde el Mac o el móvil. Si un MP4 no se puede enviar, dilo en el chat y en el correo (el archivo sigue en la carpeta local).
 2. **Correo** (conector de Gmail) a `parecementirapero.media@gmail.com` — **una sola notificación por turno**:
    - Asunto: `[Parece Mentira] Lote <lote> — 3 vídeos para revisar`
-   - Cuerpo: **enlace a este chat** (la sesión de la ejecución, donde están los vídeos para verlos) y la instrucción: _«Abre el chat, mira los vídeos y escribe "ok" (o "ok 1 y 3" para solo esos). Para cambios, escríbelos ahí.»_; por vídeo: título, duración, versión y SHA-256 corto, fuentes; vídeos «pendiente de voz» si los hay. Sin enlaces a Drive.
+   - Cuerpo: **enlace a este chat** (la sesión de la ejecución, donde están los vídeos para verlos) y la instrucción: _«Abre el chat, mira los vídeos y escribe "ok" (o "ok 1 y 3" para solo esos). Para cambios, escríbelos ahí.»_; por vídeo: título, duración, versión y SHA-256 corto, fuentes, comentario fijado y, si lo hay, de qué vídeo es parte 2; vídeos «pendiente de voz» si los hay. Sin enlaces a Drive.
 3. **Registro** en el repo: `lotes/<lote>/estado.md` (estado «en revisión», enlace al chat, id del correo), `TASKS.md` (el lote pasa a «Hecho» con nota «en revisión»), `PROJECT_STATE.md`, entrada en `HANDOFF.md`. Commit + push y comprobar que entró.
 4. Responde en el chat con un resumen corto (los vídeos enviados arriba y qué falta) y **espera** el «ok».
 
@@ -109,7 +114,10 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
    Si el navegador integrado no deja elegir el archivo, usa Claude in Chrome si está disponible; si no, deja el vídeo listo, di exactamente qué paso falta y no insistas.
 5. Si una red falla, solo se reintenta esa red tras comprobar que no se publicó.
 6. Registra en `lotes/<lote>/estado.md` la URL de cada publicación (o el motivo del bloqueo), actualiza `HANDOFF.md` y push.
-7. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6.
+7. **Comentario fijado y vídeo relacionado** (sin pedir nada más: lo cubre el «ok»):
+   - YouTube: cuando cada vídeo ya sea público, abre `https://www.youtube.com/shorts/<id>` en el navegador integrado, escribe el `comentario` de `metadatos.json` y fíjalo (⋮ del comentario → Fijar). Para los programados (+1 h, +2 h), programa un aviso en este mismo chat con `send_later` a esa hora y hazlo entonces. Si el vídeo es una parte 2, en Studio → Detalles → «Vídeo relacionado» elige la parte 1.
+   - TikTok: en la página del vídeo, mismo comentario y fíjalo (⋯ → Fijar). Instagram: escribe el comentario (la web no siempre deja fijar; si no deja, se queda sin fijar).
+8. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6.
 
 ## 9. Límites
 

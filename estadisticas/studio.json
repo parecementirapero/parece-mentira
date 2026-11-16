@@ -1,0 +1,7 @@
+{
+ "_instrucciones": "Datos que solo da YouTube Studio (no la API). El agente de los lotes los apunta al arrancar: Studio → vídeo → Estadísticas → «Cómo han interactuado los usuarios» → % «Se quedaron viendo» (lo contrario de deslizar). Clave: id de YouTube.",
+ "XGf1wOPygU8": {"seQuedan": 55.6, "fecha": "2026-11-16"},
+ "bS6AUPYxr7s": {"seQuedan": 60.5, "fecha": "2026-11-16"},
+ "oZSuHN-46FI": {"seQuedan": 65.3, "fecha": "2026-11-16"},
+ "D_2cV1qhmfA": {"seQuedan": 76.5, "fecha": "2026-11-16"}
+}

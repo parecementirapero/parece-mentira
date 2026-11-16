@@ -10,6 +10,14 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 reales = os.path.join(AQUI, "datos", "data.json")
 fuente = reales if os.path.exists(reales) and "--ejemplo" not in sys.argv else os.path.join(AQUI, "ejemplo", "data.json")
 datos = json.load(open(fuente, encoding="utf-8"))
+# datos que solo da YouTube Studio (los apunta el agente de los lotes)
+try:
+    studio = json.load(open(os.path.join(AQUI, "studio.json"), encoding="utf-8"))
+    for v in datos.get("videos") or []:
+        if isinstance(studio.get(v.get("id")), dict) and studio[v["id"]].get("seQuedan") is not None:
+            v["seQuedan"] = studio[v["id"]]["seQuedan"]
+except (OSError, ValueError):
+    pass
 # conclusiones automáticas (y datos/aprendizajes.md para el agente de los lotes)
 sys.path.insert(0, AQUI)
 import analizar

@@ -4,10 +4,10 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Mejoras de crecimiento: revisar moáis, comentario fijado, series, ganchos, resumen semanal por correo y avisos — Nico — 2026-11-16 18:27
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Créditos de ElevenLabs: quedan 33.180 de 40.000 (≈9 lotes, se acaban hacia el 21-11; se renuevan el 15-12). Decidir Nico/Jorge: ampliar plan o bajar a un lote al día — Nico/Jorge
 - [ ] Subida automática a YouTube en el Mac de Nico: copiar `YT_UPLOAD_REFRESH_TOKEN` (y `YT_CLIENT_ID`/`YT_CLIENT_SECRET` si faltan) del `claves.txt` del Mac de Jorge al del Mac de Nico, y `publicar/subir_youtube.py` a su carpeta local. En el Mac de Jorge ya funciona — Nico
 - [ ] Estadísticas: conectar Instagram siguiendo `estadisticas/README.md` — Nico — 2026-11-16 17:26 — EN PAUSA: se usa el Facebook personal de Jorge (la cuenta nueva de Nico quedó suspendida en revisión: no crear más cuentas nuevas). Registro en Meta for Developers a medias: falta verificar el móvil (el SMS no llega; probar desde la app de Facebook del móvil → Centro de cuentas → Información de contacto, o por WhatsApp/llamada). Después: crear app, «API setup with Instagram login», añadir @parecementiramedia (debe ser cuenta profesional), generar token → secreto `IG_TOKEN`
 - [ ] Estadísticas: tarea programada en la nube que republique cada mañana (≈9:15) la página de Claude «Parece Mentira · Estadísticas» (https://claude.ai/artifact/JMkrEuUZrAmq7yzqVao8ea) con `estadisticas/web/index.html`
@@ -33,6 +33,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Mejoras de crecimiento: moáis revisado («se quedaron viendo» 55,6 %), `studio.json` + análisis «Primer segundo», comentario fijado, series/parte 2, créditos de ElevenLabs al arrancar, avisos por correo (tarea de las 9:14) y resumen semanal los lunes 9:41 — Nico — 2026-11-16
 - [x] Subida automática a YouTube tras «ok» (`publicar/subir_youtube.py`), subidas separadas cada 1 h y ganchos para España y Latinoamérica — Nico — 2026-11-16
 - [x] Análisis diario de estadísticas (`aprendizajes.md` + vista «Conclusiones») y el agente de lotes lo usa para decidir — Nico — 2026-11-16
 - [x] Estadísticas: transiciones suaves y muchas más gráficas (audiencia YouTube, calendario, reparto, dispersión, pirámide de edad) — Nico — 2026-11-16

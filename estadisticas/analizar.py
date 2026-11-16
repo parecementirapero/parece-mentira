@@ -207,10 +207,30 @@ def analizar(d):
     for etq in ETIQUETAS:
         r1 = comparar(etq, met_vistas[0], met_vistas[1], n0)
         comparar(etq, lambda v: v.get("pctVisto"), "% medio visto", lambda x: n1(x) + " %")
+        if etq in ("gancho", "estructura", "tema"):
+            comparar(etq, lambda v: v.get("seQuedan"), "% que se queda en vez de deslizar", lambda x: n1(x) + " %")
+            comparar(etq, lambda v: v.get("retencion3s"), "% que sigue a los 3 s", lambda x: n1(x) + " %")
         comparar(etq, lambda v: v.get("vistas"), "Vistas medias", n0, red="tiktok")
         if r1 and r1[6] >= 2 and etq in ("tema", "gancho", "estructura") and r1[2] and r1[3] and r1[2] > r1[3] * 1.5:
             reco(f"Prioriza {ETIQUETAS[etq]} «{r1[0]}» y reduce «{r1[1]}» ({n1(r1[2] / r1[3])} veces más vistas).", r1[4], r1[5],
                  motivo="comparación por " + ETIQUETAS[etq])
+
+    # ---------- 3b. «se quedaron viendo» frente a deslizar (YouTube Studio) ----------
+    sq = [v for v in vids["youtube"] if v.get("seQuedan") is not None and v.get("vistas") is not None]
+    if len(sq) >= 3:
+        sq.sort(key=lambda v: v["seQuedan"], reverse=True)
+        partes = ", ".join(f"«{corta(v['titulo'], 32)}» {n1(v['seQuedan'])} % → {n0(v['vistas'])} vistas" for v in sq)
+        add("Primer segundo", f"Cuantos más se quedan en vez de deslizar, más enseña YouTube el vídeo: {partes}.", len(sq))
+        try:
+            c = st.correlation([v["seQuedan"] for v in sq], [v["vistas"] for v in sq])
+            if c >= 0.5:
+                bajo = [v for v in sq if v["seQuedan"] < 62]
+                reco("El primer fotograma y la primera frase deciden si YouTube sigue enseñando el vídeo: apunta a que más del 65 % se quede "
+                     "(imagen llamativa desde el fotograma 0, el dato o la pregunta en la primera frase, sin introducción)."
+                     + (f" Por debajo de ≈60 % se quedaron {', '.join('«' + corta(v['titulo'], 30) + '»' for v in bajo)}." if bajo else ""),
+                     len(sq), motivo=f"correlación {n1(c)} entre «se quedaron viendo» y vistas")
+        except st.StatisticsError:
+            pass
 
     # ---------- 4. gancho y retención (YouTube) ----------
     yt = [v for v in vids["youtube"] if v.get("retencion3s") is not None]

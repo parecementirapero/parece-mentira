@@ -36,3 +36,7 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - La Luna se aleja ~3,8 cm al año (uñas, láser y retrorreflectores del Apolo, mareas) — lote 2026-11-15-tarde
 - Los moáis de la Isla de Pascua tienen cuerpo enterrado — lote 2026-11-15-tarde
 - Las huellas de los astronautas en la Luna (versión nueva, excepción) — prueba v2, 2026-11-15
+
+## Continuaciones prometidas
+
+_(el agente apunta aquí las «parte 2» anunciadas en un vídeo: tema, vídeo original, fecha límite)_
