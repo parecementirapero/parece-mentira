@@ -10,6 +10,12 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 reales = os.path.join(AQUI, "datos", "data.json")
 fuente = reales if os.path.exists(reales) and "--ejemplo" not in sys.argv else os.path.join(AQUI, "ejemplo", "data.json")
 datos = json.load(open(fuente, encoding="utf-8"))
+# conclusiones automáticas (y datos/aprendizajes.md para el agente de los lotes)
+sys.path.insert(0, AQUI)
+import analizar
+datos["analisis"] = analizar.analizar(datos)
+if fuente == reales:
+    open(os.path.join(AQUI, "datos", "aprendizajes.md"), "w", encoding="utf-8").write(analizar.a_markdown(datos["analisis"]))
 incrustado = json.dumps(datos, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 html = open(os.path.join(AQUI, "plantilla.html"), encoding="utf-8").read().replace("__DATA__", incrustado)
 os.makedirs(os.path.join(AQUI, "web"), exist_ok=True)

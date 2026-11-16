@@ -33,6 +33,14 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 2. Ideas (3 temas)
 
+**Antes de elegir, lee las estadísticas** (son la base de las decisiones del lote):
+- `estadisticas/datos/aprendizajes.md`: conclusiones y recomendaciones que se recalculan solas cada mañana (también en la web, vista «Conclusiones»). Cada una lleva su fuerza: **firme** (15+ vídeos) se aplica; **tendencia** (5–14) inclina la elección; **pista** (menos de 5) solo sirve para decidir qué probar.
+- Si hace falta más detalle, `estadisticas/datos/data.json` (vistas, % visto, retención a 3 s y curva por vídeo, audiencia, comparación entre redes).
+- Elige temas, gancho, estructura y duración apoyándote en lo que funciona. Si una recomendación choca con `DECISIONS.md` (por ejemplo, el horario o el idioma), **no la apliques**: proponla en el correo del turno para que Nico o Jorge decidan.
+- **Un experimento por lote**: cambia a propósito una sola cosa respecto a lo que mejor funciona (un tipo de gancho, una estructura, una duración…) y deja las otras dos variables como en los vídeos que mejor van, para poder atribuir el resultado.
+- Apunta en `lotes/<lote>/estado.md` una sección **«Decisiones según las estadísticas»**: qué conclusión aplicaste en cada vídeo, cuál es el experimento y qué esperas que pase. En el correo del turno, una línea por vídeo con eso.
+- Etiqueta cada vídeo en `metadatos.json` → `"etiquetas"`: `tema` (Cotidiano, Histórico, Espacio, Ciencia, Misterio, Humor), `gancho` (pregunta, dato, contraste, reto, orden, historia), `estructura` (comparación, experimento, reconstrucción, misterio por pistas, metáfora visual) y `experimento` (qué se prueba, o «no»).
+
 - Fuente de temas: `lotes/IDEAS.md`. **Si hay una sección «Reservados para el lote <lote>» con el lote de hoy, se usan esos temas** (y se quita la sección al pasarlos a «Usados»). Nunca repetir un tema de «Usados»; las continuaciones valen si aportan información nueva y se entienden solas.
 - Mezcla: historia, ciencia, misterio/curiosidad. Tres estructuras distintas por lote (comparación visible, experimento, reconstrucción con salto temporal, misterio por pistas, metáfora visual).
 - Cada dato central se contrasta con **al menos dos fuentes fiables** (WebSearch/WebFetch). Si no se puede verificar, se cambia de tema.
@@ -99,6 +107,7 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
    Si el navegador integrado no deja elegir el archivo, usa Claude in Chrome si está disponible; si no, deja el vídeo listo, di exactamente qué paso falta y no insistas.
 3. Si una red falla, solo se reintenta esa red tras comprobar que no se publicó.
 4. Registra en `lotes/<lote>/estado.md` la URL de cada publicación (o el motivo del bloqueo), actualiza `HANDOFF.md` y push.
+5. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 4.
 
 ## 9. Límites
 

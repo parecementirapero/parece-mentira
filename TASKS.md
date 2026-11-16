@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Análisis diario de estadísticas (aprendizajes.md) y que el agente de lotes lo use para decidir — Nico — 2026-11-16 17:57
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
@@ -32,6 +31,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Análisis diario de estadísticas (`aprendizajes.md` + vista «Conclusiones») y el agente de lotes lo usa para decidir — Nico — 2026-11-16
 - [x] Estadísticas: transiciones suaves y muchas más gráficas (audiencia YouTube, calendario, reparto, dispersión, pirámide de edad) — Nico — 2026-11-16
 - [x] Estadísticas: rediseño «observatorio» (fondo espacial, mapa orbital con un planeta por red según sus vistas; dentro de cada red: cifras, vistas por día, destacados, lista de vídeos y ficha; comparativa, laboratorio y horas como módulos) — Nico — 2026-11-16
 - [x] Estadísticas: TikTok conectado (app sandbox «Parece Mentira Stats», usuario de prueba parece.mentira85, secretos TIKTOK_* + GH_PAT; el token se renueva y se guarda solo); 4 vídeos unidos con YouTube — Nico (en el Mac de Jorge) — 2026-11-16

@@ -84,7 +84,7 @@ button{font:inherit;color:inherit}
 .red.apagada .cifra{font-size:18px;color:var(--polvo);font-family:var(--texto);font-weight:500;letter-spacing:0;line-height:1.4}
 .chispa{display:block;width:100%;height:36px;margin-top:8px}
 
-.modulos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.modulos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:16px}
 @media (max-width:860px){.modulos{grid-template-columns:1fr}}
 .modulo{text-align:left;background:transparent;border:1px solid var(--borde);border-radius:14px;padding:14px 16px;cursor:pointer}
 .modulo:hover{border-color:var(--polvo);background:var(--panel)}
@@ -145,6 +145,12 @@ svg text{fill:var(--polvo);font-size:11px;font-family:var(--texto)}
 .pie-pagina{margin-top:28px;color:var(--tenue);font-size:12.5px;max-width:80ch}
 .aviso{border-left:3px solid var(--acc);padding:6px 12px;margin:8px 0;color:var(--polvo)}
 .aviso b{color:var(--luz)}
+.fuerza{display:inline-flex;align-items:center;gap:3px;font-size:12px;color:var(--polvo);margin-right:8px;white-space:nowrap}
+.fuerza i{width:7px;height:7px;border-radius:50%;border:1px solid var(--polvo)}
+.fuerza i.on{background:var(--nova);border-color:var(--nova)}
+.conc{display:flex;gap:10px;align-items:baseline;padding:10px 0;border-top:1px solid var(--rejilla)}
+.conc:first-child{border-top:0}
+.conc .por{color:var(--polvo);font-size:12.5px}
 
 /* secciones y gráficos nuevos */
 .seccion{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;margin:34px 0 0}
@@ -220,6 +226,7 @@ html{background:var(--vacio)}
         <h3 style="margin-top:22px">Seguidores</h3><p class="nota">Total en cada red</p><div id="reparto-seg"></div></div>
     </div>
     <div class="modulos">
+      <button class="modulo" data-ir="conclusiones"><b>Conclusiones</b><span>Qué funciona, qué no y qué probar en el próximo lote</span></button>
       <button class="modulo" data-ir="comparativa"><b>Comparar las redes</b><span>El mismo vídeo en YouTube, TikTok e Instagram</span></button>
       <button class="modulo" data-ir="laboratorio"><b>Laboratorio</b><span>Qué temas, ganchos o voces funcionan mejor</span></button>
       <button class="modulo" data-ir="horas"><b>Mejores horas</b><span>Si rinde más el lote de las 8:00 o el de las 20:00</span></button>
@@ -245,6 +252,13 @@ html{background:var(--vacio)}
     <div class="dos"><div class="panel"><h3 id="lab-t1">% medio visto</h3><p class="nota">Lo que más empuja el algoritmo en Shorts; más de 100 % es que lo vuelven a ver</p><div id="lab-pct"></div></div>
     <div class="panel"><h3 id="lab-t2">Vistas medias por vídeo</h3><p class="nota">Media de cada grupo</p><div id="lab-vistas"></div></div></div>
     <div class="panel"><h3>Conclusión</h3><div id="lab-txt"></div></div>
+  </main>
+
+  <!-- CONCLUSIONES -->
+  <main class="vista" id="v-conclusiones">
+    <div class="cabeza-red" style="--acc:var(--nova)"><div class="globo"></div><div><h1>Conclusiones</h1><p>Se recalculan solas cada mañana; el agente de los lotes las lee antes de elegir temas, ganchos y horas</p></div></div>
+    <div class="panel"><h3>Qué probar en el próximo lote</h3><p class="nota" id="conc-nota"></p><div id="conc-recos"></div></div>
+    <div id="conc-areas"></div>
   </main>
 
   <!-- HORAS -->
@@ -737,8 +751,18 @@ function pintarHoras(){
   barrasV(document.getElementById('horas'),Object.keys(g).sort().map(k=>({k,v:avg(g[k]),n:g[k].length})));
 }
 
+/* ---------- CONCLUSIONES ---------- */
+function chipFuerza(f){const n={pista:1,tendencia:2,firme:3}[f]||1;return `<span class="fuerza" title="${f==='pista'?'menos de 5 vídeos: solo para decidir qué probar':f==='tendencia'?'5 a 14 vídeos':'15 vídeos o más'}">${[1,2,3].map(i=>`<i class="${i<=n?'on':''}"></i>`).join('')} ${f}</span>`}
+function pintarConclusiones(){
+  const A=D.analisis||{conclusiones:[],recomendaciones:[]};
+  document.getElementById('conc-nota').textContent=`${A.videos||0} vídeos analizados. Fuerza: pista (menos de 5 vídeos), tendencia (5–14), firme (15 o más).`;
+  document.getElementById('conc-recos').innerHTML=A.recomendaciones.length?A.recomendaciones.map(r=>`<div class="conc">${chipFuerza(r.fuerza)}<div>${esc(r.texto)}${r.motivo?`<div class="por">Por qué: ${esc(r.motivo)}</div>`:''}</div></div>`).join(''):'<p class="pend">Aún no hay datos suficientes.</p>';
+  const areas=[...new Set(A.conclusiones.map(c=>c.area))];
+  document.getElementById('conc-areas').innerHTML=areas.map(a=>`<div class="panel"><h3>${esc(a)}</h3><div style="margin-top:8px">${A.conclusiones.filter(c=>c.area===a).map(c=>`<div class="conc">${chipFuerza(c.fuerza)}<div>${esc(c.texto)}</div></div>`).join('')}</div></div>`).join('');
+}
+
 /* ---------- navegación ---------- */
-const VISTAS=['inicio','youtube','tiktok','instagram','comparativa','laboratorio','horas'];
+const VISTAS=['inicio','youtube','tiktok','instagram','comparativa','laboratorio','horas','conclusiones'];
 let profAnterior=null;
 function profundidad(){const v=location.hash.slice(1);return !VISTAS.includes(v)||v==='inicio'?0:(estado.video&&REDES[v]?2:1)}
 function ir(v,mantenerVideo){if(!mantenerVideo)estado.video=null;estado.orden='vistas';estado.asc=false;if(location.hash==='#'+v)pintar();else location.hash=v}
@@ -761,7 +785,7 @@ function pintarAhora(){
   document.getElementById('volver').onclick=()=>{if(estado.video&&REDES[v]){estado.video=null;pintar()}else ir('inicio')};
   if(REDES[v]){document.getElementById('v-red').classList.add('on');pintarRed(v);return}
   document.getElementById('v-'+v).classList.add('on');
-  ({comparativa:pintarComparativa,laboratorio:pintarLab,horas:pintarHoras})[v]();
+  ({comparativa:pintarComparativa,laboratorio:pintarLab,horas:pintarHoras,conclusiones:pintarConclusiones})[v]();
 }
 document.querySelectorAll('[data-ir]').forEach(b=>b.onclick=()=>ir(b.dataset.ir));
 document.querySelectorAll('.rango button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.rango button').forEach(x=>x.setAttribute('aria-pressed',x===b));estado.dias=+b.dataset.d;pintar()});
