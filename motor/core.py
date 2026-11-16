@@ -84,6 +84,10 @@ def opacidad(spr, op):
 
 def transformar(spr, escala=1.0, ex=1.0, ey=1.0, rot=0.0):
     sx, sy = escala * ex, escala * ey
+    if sx < 0:  # ex negativo = espejo horizontal (para darle la vuelta a un dibujo o simular un giro)
+        spr, sx = spr.transpose(Image.FLIP_LEFT_RIGHT), -sx
+    if sy < 0:
+        spr, sy = spr.transpose(Image.FLIP_TOP_BOTTOM), -sy
     if abs(sx - 1) > 1e-3 or abs(sy - 1) > 1e-3:
         nw, nh = max(1, int(spr.width * sx)), max(1, int(spr.height * sy))
         spr = spr.resize((nw, nh), Image.BICUBIC)

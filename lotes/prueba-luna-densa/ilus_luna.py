@@ -168,8 +168,66 @@ def personas_mirando():
     guardar("personas_mirando", "".join(b), w, h)
 
 
+def pterosaurio():
+    w, h = 700, 360
+    b = ['<path d="M350 190 C300 150 220 110 40 120 C140 150 220 180 300 210 Z" fill="#2a1d24"/>',
+         '<path d="M350 190 C400 150 480 110 660 120 C560 150 480 180 400 210 Z" fill="#2a1d24"/>',
+         '<path d="M300 205 C330 180 380 180 410 200 C430 205 470 200 520 215 C470 220 430 225 400 225 C360 235 320 230 300 205 Z" fill="#1f161b"/>',
+         '<path d="M410 196 C430 170 450 160 470 150" stroke="#1f161b" stroke-width="10" stroke-linecap="round"/>',
+         '<path d="M40 120 C140 150 220 180 300 210" stroke="#ffb45a" stroke-width="3" opacity="0.6" fill="none"/>']
+    guardar("pterosaurio", "".join(b), w, h)
+
+
+def satelite():
+    w, h = 420, 200
+    d = lg("pan", (0, "#2a4a8a"), (1, "#122244"))
+    b = [f'<rect x="10" y="70" width="140" height="60" fill="url(#pan)" stroke="#9fb8e8" stroke-width="3"/>',
+         f'<rect x="270" y="70" width="140" height="60" fill="url(#pan)" stroke="#9fb8e8" stroke-width="3"/>',
+         ''.join(f'<line x1="{10+i*28}" y1="70" x2="{10+i*28}" y2="130" stroke="#9fb8e8" stroke-width="1.5"/>' for i in range(1, 5)),
+         ''.join(f'<line x1="{270+i*28}" y1="70" x2="{270+i*28}" y2="130" stroke="#9fb8e8" stroke-width="1.5"/>' for i in range(1, 5)),
+         '<line x1="150" y1="100" x2="270" y2="100" stroke="#c9ccd2" stroke-width="5"/>',
+         '<rect x="175" y="55" width="70" height="90" rx="8" fill="#e2b13c"/>',
+         '<circle cx="210" cy="40" r="22" fill="none" stroke="#e8eaee" stroke-width="5"/>']
+    guardar("satelite", "".join(b), w, h, d)
+
+
+def patinadora(nombre, brazos):
+    """Silueta a contraluz; brazos: 'cerrados' (pegados al pecho) o 'abiertos' (en cruz)."""
+    w, h = 700, 900
+    d = lg("pt", (0, "#1a1030"), (1, "#0a0614"))
+    cx = 350
+    cuerpo = (f'<circle cx="{cx}" cy="150" r="52"/>'
+              f'<path d="M{cx-14} 200 L{cx+14} 200 L{cx+40} 300 L{cx+52} 470 C{cx+110} 520 {cx+130} 560 {cx+40} 560 '
+              f'L{cx+18} 560 L{cx+14} 800 L{cx+40} 830 L{cx-10} 830 L{cx-10} 560 L{cx-40} 560 C{cx-130} 560 {cx-110} 520 {cx-52} 470 L{cx-40} 300 Z"/>'
+              f'<path d="M{cx+10} 560 L{cx+150} 690 L{cx+170} 680" stroke="#0a0614" stroke-width="30" stroke-linecap="round" fill="none"/>')
+    if brazos == "abiertos":
+        br = (f'<path d="M{cx-30} 270 L{cx-300} 250" stroke="#0a0614" stroke-width="26" stroke-linecap="round"/>'
+              f'<path d="M{cx+30} 270 L{cx+300} 250" stroke="#0a0614" stroke-width="26" stroke-linecap="round"/>')
+    else:
+        br = (f'<path d="M{cx-34} 260 C{cx-90} 300 {cx-60} 340 {cx} 340" stroke="#0a0614" stroke-width="26" stroke-linecap="round" fill="none"/>'
+              f'<path d="M{cx+34} 260 C{cx+90} 300 {cx+60} 340 {cx} 340" stroke="#0a0614" stroke-width="26" stroke-linecap="round" fill="none"/>')
+    b = [f'<ellipse cx="{cx}" cy="840" rx="160" ry="22" fill="#000" opacity="0.35" filter="url(#blur8)"/>',
+         f'<g fill="url(#pt)">{cuerpo}</g>', br,
+         f'<g fill="none" stroke="#bfe6ff" stroke-width="5" opacity="0.8"><path d="M{cx+30} 120 A52 52 0 0 1 {cx+50} 170"/>'
+         f'<path d="M{cx+40} 300 L{cx+52} 470"/><path d="M{cx+14} 600 L{cx+14} 790"/></g>',
+         '<path d="M240 840 L470 840" stroke="#c9ccd2" stroke-width="6"/>']
+    guardar(nombre, "".join(b), w, h, d)
+
+
+def bg_pista():
+    d = lg("pi1", (0, "#0b1430"), (0.55, "#24407a"), (1, "#9fd0ff")) + rg("foco", (0, "#ffffff", 0.7), (1, "#ffffff", 0))
+    b = ['<rect width="1080" height="1920" fill="url(#pi1)"/>',
+         '<ellipse cx="540" cy="700" rx="520" ry="900" fill="url(#foco)" opacity="0.5"/>',
+         '<path d="M0 1350 L1080 1350 L1080 1920 L0 1920 Z" fill="#cfe8ff"/>',
+         '<path d="M0 1350 L1080 1350" stroke="#ffffff" stroke-width="6" opacity="0.7"/>',
+         ''.join(f'<path d="M{R.uniform(0,1080):.0f} {R.uniform(1380,1900):.0f} q{R.uniform(-200,200):.0f} {R.uniform(-30,30):.0f} {R.uniform(-300,300):.0f} 0" stroke="#ffffff" stroke-width="3" opacity="0.5" fill="none"/>' for _ in range(30)),
+         '<ellipse cx="540" cy="1500" rx="420" ry="80" fill="#ffffff" opacity="0.35" filter="url(#blur20)"/>', grano()]
+    guardar("bg_pista", "".join(b), defs=d)
+
+
 if __name__ == "__main__":
-    for f in (cohete, modulo_lunar, dinosaurio, bg_jungla, almeja_fosil, calendario, bg_eclipse, personas_mirando):
+    for f in (pterosaurio, satelite, cohete, modulo_lunar, dinosaurio, bg_jungla, almeja_fosil, calendario, bg_eclipse, personas_mirando):
         f()
     dinosaurio("dino_peq", "#4a6a38")
+    patinadora("patinadora_cerrada", "cerrados"); patinadora("patinadora_abierta", "abiertos"); bg_pista()
     print("ok", ilus.OUT)

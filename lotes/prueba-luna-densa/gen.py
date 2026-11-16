@@ -55,6 +55,14 @@ def lineas_vel(x, y, sem=1, color="#ffffff55"):
     import random; r = random.Random(sem)
     return [flecha([[x - r.uniform(80, 220), y + dy], [x - 40, y + dy]], 0.05 + i * 0.05, 0.45 + i * 0.05, color, 4, punta=False, z=0.45)
             for i, dy in enumerate([-40, -10, 20, 50])]
+def fugaz(t0, x0, y0, x1, y1, z=0.12):
+    """Estrella fugaz: trazo que se dibuja y se apaga."""
+    return {"tipo": "flecha", "puntos": [[x0, y0], [x1, y1]], "grosor": 3, "color": "#ffffffee", "punta": False, "z": z,
+            "keys": [{"t": t0, "progreso": 0, "op": 1}, {"t": t0 + 0.3, "progreso": 1}, {"t": t0 + 0.6, "op": 0}]}
+def satelite(t0, t1, y, z=0.15):
+    return IMG("satelite", ancho=150, y=y, z=z, rot=-15, keys=[{"t": t0, "x": -100}, {"t": t1, "x": 1180, "ease": "lineal"}], anim={"girar": 8})
+
+
 def sol(x, y, r=170, z=0.3, op=1.0):
     return [brillo(x, y, r * 3.2, "#ffcf6a", 0.55 * op, z - 0.01, pulso=[0.06, 2.0]),
             {"tipo": "esfera", "radio": r, "textura": "sol", "color": "#fff3b0", "color2": "#ffb02e", "giro": 6, "x": x, "y": y, "z": z, "luz": [0, 0]}]
@@ -70,7 +78,8 @@ fx(0.02, "golpe", -12); fx(0.45, "brillo", -20)
 # 2 · «La Luna se aleja de nosotros»
 P(1.22, 2.48, ESP, [BG("bg_espacio"), estrellas(), tierra(260, 1250, 620, giro=6),
   luna(0, 0, 220, 0.5, keys=[{"t": 0, "x": 640, "y": 900}, {"t": 1.2, "x": 860, "y": 600, "ease": "salida"}]),
-  *lineas_vel(780, 760, 2), flecha([[600, 980], [900, 560]], 0.1, 0.9, "#ffd23f", 9, [20, 14])],
+  *lineas_vel(780, 760, 2), flecha([[600, 980], [900, 560]], 0.1, 0.9, "#ffd23f", 9, [20, 14]),
+  fugaz(0.2, 900, 200, 620, 380), satelite(0, 1.3, 1650, 0.6)],
   cam(1.0, 1.08, (500, 1000), (600, 880)), entrada="desenfoque", dur=0.3)
 fx(1.35, "whoosh", -12, dur=0.7)
 
@@ -92,11 +101,17 @@ add(2.48, ROT(0.35, 1.8, "=", tam=200, color="#ffd23f", capsula=None, x=540, y=9
 P(4.36, 6.32, ["#1b2236", "#0b0f1c"], [brillo(540, 900, 700, "#9fb3ff", 0.3), polvo("#cfe0ff", 25, sem=5),
   IMG("regla", ancho=1000, x=540, y=1050, z=0.5, keys=[{"t": 0, "rot": -4}, {"t": 1.9, "rot": -1}]),
   {"tipo": "barra", "x": 540 - 480 + 18 + 182, "y": 920, "ancho": 365, "alto": 44, "color": "#ff5a4a", "fondo": "#ffffff15", "z": 0.55,
-   "keys": [{"t": 0.15, "progreso": 0}, {"t": 1.5, "progreso": 1, "ease": "salida"}]},
+   "keys": [{"t": 0.15, "progreso": 0}, {"t": 1.0, "progreso": 1, "ease": "salida"}]},
   IMG("calendario", ancho=260, x=880, y=560, z=0.6, rot=8, keys=[{"t": 0, "op": 0, "escala": 0.6}, {"t": 0.4, "op": 1, "escala": 1.0, "ease": "rebote"}])],
   cam(1.15, 1.3, (380, 1000), (420, 980)), entrada="zoom", dur=0.3, vineta=0.6)
-add(4.36, {**ROT(0.2, 1.9, "", tam=130, x=540, y=1450), "contar": [0, 3.8, 1.3], "contar_desde": 0.2, "unidad": "CM/AÑO", "decimales": 1})
-for i in range(9): fx(4.6 + i * 0.14, "tic", -24)
+add(4.36, {**ROT(0.2, 1.9, "", tam=130, x=540, y=1450), "contar": [0, 3.8, 0.85], "contar_desde": 0.2, "unidad": "CM/AÑO", "decimales": 1})
+for i in range(6): fx(4.6 + i * 0.14, "tic", -24)
+# 4b · micro: «cada año» — se arranca una hoja de calendario
+P(5.5, 6.32, ["#3a2a1c", "#1a1410"], [brillo(540, 900, 700, "#ffcf8a", 0.35), IMG("calendario", ancho=640, x=540, y=1000, z=0.59),
+  IMG("calendario", ancho=640, x=540, y=1000, z=0.6, keys=[{"t": 0.2, "y": 1000, "rot": 0, "op": 1}, {"t": 0.65, "y": 380, "rot": -35, "op": 0, "ease": "entrada"}])],
+  cam(1.0, 1.05, (540, 1000), (540, 1000)))
+add(5.5, CONTEXTO(0.1, 0.8, "CADA AÑO"))
+fx(5.7, "whoosh", -16, dur=0.3)
 
 # 5 · «¿Cómo lo sabemos?» — empujón a la Luna con interrogación
 P(6.32, 7.43, ESP, [BG("bg_espacio"), estrellas(30, 6), luna(540, 960, 560, 0.5, anim={"girar": 3}),
@@ -106,13 +121,21 @@ add(6.32, AMARILLO(0.15, 1.1, "¿CÓMO LO SABEMOS?", y=1520))
 # 6 · «En 1969» — despega el cohete, humo y contador de año
 humo_base = [brillo(540 + dx, 1640 + dy, 260, "#d9d2c8", 0.6, 0.55, keys=[{"t": 0.1, "op": 0, "escala": 0.5}, {"t": 0.8, "op": 1, "escala": 1.4}])
              for dx, dy in [(-260, 30), (-120, 60), (0, 80), (140, 50), (270, 40)]]
-P(7.43, 9.14, ["#0b1838", "#e88a4a"], [brillo(540, 1500, 900, "#ffb45a", 0.5),
+# 6a · micro: cuenta atrás
+luces = [{"tipo": "forma", "forma": "circulo", "radio": 18, "relleno": c, "x": 200 + i * 110, "y": 1320 + (i % 2) * 60, "z": 0.5,
+          "anim": {"parpadeo": [0.25, 0.3 + i * 0.07]}} for i, c in enumerate(["#ff5a4a", "#5dff7a", "#ffd23f", "#5dd0ff", "#ff5a4a", "#5dff7a", "#ffd23f"])]
+P(7.43, 8.0, ["#0b0f1c", "#1b2236"], [brillo(540, 900, 600, "#ff7a4a", 0.35, pulso=[0.2, 0.25]),
+  {"tipo": "forma", "forma": "redondeado", "ancho": 900, "alto": 360, "relleno": ["#2b3140", "#141822"], "esquinas": 30, "x": 540, "y": 1350, "z": 0.45}, *luces],
+  cam(1.0, 1.05), entrada="desenfoque", dur=0.25)
+add(7.43, {**ROT(0.0, 0.57, "", tam=200, x=540, y=820, color="#ff5a4a"), "contar": [3, 1, 0.45], "contar_desde": 0.0})
+for i in range(3): fx(7.45 + i * 0.18, "tic", -16)
+P(8.0, 9.14, ["#0b1838", "#e88a4a"], [brillo(540, 1500, 900, "#ffb45a", 0.5),
   polvo("#ffffff", 30, (0, 0, 1080, 900), 7, "estrellas"),
-  IMG("cohete", ancho=230, x=540, z=0.6, keys=[{"t": 0, "y": 1160}, {"t": 0.4, "y": 1150}, {"t": 1.7, "y": 520, "ease": "entrada"}]),
-  brillo(540, 0, 140, "#ffe9a0", 1.0, 0.59, keys=[{"t": 0, "y": 1640}, {"t": 0.4, "y": 1630}, {"t": 1.7, "y": 1010, "ease": "entrada"}], pulso=[0.3, 0.12]),
-  *humo_base], {"zoom": [1.0, 1.05], "foco": [[540, 1000], [540, 800]], "pan": [[0, 0], [0, 0]], "temblor": 6}, entrada="desenfoque", dur=0.3)
-add(7.43, {**ROT(0.1, 1.6, "", tam=120, x=540, y=560), "contar": [1960, 1969, 0.9], "contar_desde": 0.1, "miles": False, "capsula": "#c0392be6"})
-fx(7.45, "rumor", -9, dur=1.8)
+  IMG("cohete", ancho=230, x=540, z=0.6, keys=[{"t": 0, "y": 1150}, {"t": 1.14, "y": 600, "ease": "entrada"}]),
+  brillo(540, 0, 140, "#ffe9a0", 1.0, 0.59, keys=[{"t": 0, "y": 1630}, {"t": 1.14, "y": 1080, "ease": "entrada"}], pulso=[0.3, 0.12]),
+  *humo_base], {"zoom": [1.0, 1.05], "foco": [[540, 1000], [540, 800]], "pan": [[0, 0], [0, 0]], "temblor": 6}, entrada="corte")
+add(8.0, {**ROT(0.05, 1.1, "", tam=120, x=540, y=560), "contar": [1960, 1969, 0.6], "contar_desde": 0.05, "miles": False, "capsula": "#c0392be6"})
+fx(8.0, "golpe", -12); fx(8.0, "rumor", -9, dur=1.4)
 
 # 7 · «el Apolo once dejó allí arriba» — alunizaje con polvo
 P(9.14, 10.50, ["#02030a", "#02030a"], [BG("bg_superficie"), IMG("tierra_hd", ancho=220, x=840, y=380, z=0.1, anim={"girar": 3}),
@@ -121,8 +144,13 @@ P(9.14, 10.50, ["#02030a", "#02030a"], [BG("bg_superficie"), IMG("tierra_hd", an
     for dx in (-220, 0, 220)],
   polvo("#dcd8cc", 30, (200, 1250, 880, 1500), 8)],
   cam(1.0, 1.08, (540, 1100), (540, 1150)), entrada="zoom", dur=0.3)
-add(9.14, CONTEXTO(0.2, 1.3, "APOLO 11"))
+add(9.14, CONTEXTO(0.2, 0.85, "APOLO 11"))
 fx(9.95, "golpe", -11)
+# 7b · micro: la primera huella en el polvo
+P(10.05, 10.50, ["#8d8a82", "#5d5a54"], [BG("bg_superficie"), polvo("#dcd8cc", 25, (200, 800, 880, 1300), 30),
+  {"tipo": "huella", "clase": "bota", "largo": 300, "x": 540, "y": 1150, "z": 0.6, "rot": 12, "keys": [{"t": 0.0, "marca": 0}, {"t": 0.25, "marca": 1}]}],
+  cam(1.6, 1.7, (540, 1150), (540, 1150)))
+fx(10.07, "golpe", -20)
 
 # 8 · «unos espejos» — astronauta deja el retrorreflector y destella
 P(10.50, 11.45, ["#02030a", "#02030a"], [BG("bg_superficie"),
@@ -134,12 +162,18 @@ add(10.50, AMARILLO(0.25, 0.95, "ESPEJOS", y=1720))
 fx(10.85, "brillo", -13)
 
 # 9 · «Desde la Tierra se dispara un láser»
-P(11.45, 13.19, ["#05070f", "#0b1430"], [BG("bg_espacio"), luna(780, 260, 200),
+# 9a · micro: el láser se carga en la cúpula
+P(11.45, 11.95, ["#05070f", "#0b1430"], [BG("bg_espacio"), IMG("observatorio", ancho=1180, x=540, y=960, z=0.3),
+  brillo(520, 1080, 220, "#5dff7a", 0.9, 0.5, keys=[{"t": 0, "op": 0.1, "escala": 0.3}, {"t": 0.45, "op": 1, "escala": 1.2}], pulso=[0.25, 0.1]),
+  polvo("#9dffb0", 30, (420, 980, 620, 1180), 31, "chispas")],
+  cam(2.2, 2.4, (520, 1100), (520, 1080)), entrada="desenfoque", dur=0.25)
+fx(11.5, "rumor", -20, dur=0.5)
+P(11.95, 13.19, ["#05070f", "#0b1430"], [BG("bg_espacio"), luna(780, 260, 200), fugaz(0.6, 160, 300, 420, 160),
   IMG("observatorio", ancho=1180, x=540, y=960, z=0.3),
-  flecha([[520, 1080], [770, 290]], 0.7, 1.2, "#5dff7a", 10, punta=False),
-  brillo(520, 1080, 160, "#5dff7a", 0.9, 0.5, keys=[{"t": 0.6, "op": 0}, {"t": 0.75, "op": 1}], pulso=[0.3, 0.2])],
-  cam(1.1, 1.0, (540, 1050), (560, 900)), entrada="desenfoque", dur=0.3)
-add(11.45, AMARILLO(0.8, 1.7, "LÁSER", y=1700))
+  flecha([[520, 1080], [770, 290]], 0.2, 0.7, "#5dff7a", 10, punta=False),
+  brillo(520, 1080, 160, "#5dff7a", 0.9, 0.5, keys=[{"t": 0.1, "op": 0}, {"t": 0.25, "op": 1}], pulso=[0.3, 0.2])],
+  cam(1.1, 1.0, (540, 1050), (560, 900)))
+add(11.95, AMARILLO(0.3, 1.2, "LÁSER", y=1700))
 fx(12.15, "zap", -11)
 
 # 10 · «la luz rebota» — impacto en la Luna y vuelta
@@ -179,7 +213,8 @@ add(17.89, AMARILLO(0.15, 1.0, "¿POR QUÉ?", y=1650))
 P(18.97, 20.00, ["#0e3a5c", "#05192b"], [brillo(540, 600, 700, "#9fd8ff", 0.35),
   {"tipo": "agua", "nivel": 1000, "lado": "abajo", "amplitud": 40, "colores": ["#2a8bd0", "#0b4a7a"], "z": 0.4,
    "keys": [{"t": 0, "nivel": 1150}, {"t": 0.9, "nivel": 820, "ease": "suave"}]},
-  luna(860, 360, 220, 0.2), polvo("#e6f6ff", 30, (0, 900, 1080, 1700), 14, "burbujas")],
+  luna(860, 360, 220, 0.2), polvo("#e6f6ff", 30, (0, 900, 1080, 1700), 14, "burbujas"),
+  IMG("yate", ancho=420, x=330, z=0.45, anim={"flotar": [10, 1.2], "balanceo": [4, 1.4]}, keys=[{"t": 0, "y": 1110}, {"t": 0.9, "y": 790, "ease": "suave"}])],
   cam(1.0, 1.08, (540, 1000), (540, 1050)), entrada="zoom", dur=0.3)
 add(18.97, AMARILLO(0.2, 1.0, "MAREAS", y=1650))
 fx(19.0, "ola", -11)
@@ -191,8 +226,21 @@ P(20.00, 21.67, ESP, [BG("bg_espacio"), estrellas(25, 15), IMG("marea", ancho=90
   {"tipo": "forma", "forma": "poligono", "puntos": [[-60, -20], [60, -20], [60, 20], [-60, 20]], "relleno": "#d62f22", "x": 540, "y": 650, "z": 0.62, "rot": 0,
    "keys": [{"t": 0.9, "op": 0, "escala": 0.5}, {"t": 1.1, "op": 1, "escala": 1.0, "ease": "rebote"}]}],
   cam(1.0, 1.1, (540, 960), (540, 900)), entrada="desenfoque", dur=0.3)
-add(20.00, CONTEXTO(0.4, 1.6, "LA TIERRA GIRA MÁS DESPACIO"))
+add(20.00, CONTEXTO(0.2, 0.9, "LA TIERRA GIRA MÁS DESPACIO"))
 fx(20.9, "pop", -14)
+# 15b · micro: como una patinadora que abre los brazos y frena
+giros = []
+t, per = 0.0, 0.06
+while t < 0.72:
+    giros.append({"t": round(t, 3), "ex": 1.0 if len(giros) % 2 == 0 else -1.0, "ease": "lineal"})
+    t += per; per *= 1.0 if t < 0.3 else 1.35  # gira rápido con los brazos cerrados; al abrirlos, frena
+P(20.95, 21.67, ["#0b1430", "#9fd0ff"], [BG("bg_pista"),
+  IMG("patinadora_cerrada", ancho=620, x=540, y=1050, z=0.6, keys=[{"t": 0, "op": 1}, {"t": 0.28, "op": 1}, {"t": 0.3, "op": 0}] + [{**g, "ease": "lineal"} for g in giros if g["t"] < 0.3]),
+  IMG("patinadora_abierta", ancho=620, x=540, y=1050, z=0.61, keys=[{"t": 0, "op": 0}, {"t": 0.28, "op": 0}, {"t": 0.3, "op": 1}] + [g for g in giros if g["t"] >= 0.28]),
+  polvo("#ffffff", 25, (150, 1300, 930, 1650), 32, "chispas")],
+  cam(1.0, 1.05, (540, 1100), (540, 1100)), entrada="corte")
+add(20.95, CONTEXTO(0.1, 0.7, "COMO UNA PATINADORA"))
+fx(21.0, "whoosh", -18, dur=0.6)
 
 # 16 · «y esa energía empuja a la Luna hacia fuera» — órbitas que crecen
 orb1 = {"tipo": "forma", "forma": "elipse", "ancho": 600, "alto": 600, "relleno": "#ffffff", "op_relleno": 0, "grosor": 3, "borde": "#ffffff55", "x": 540, "y": 1000, "z": 0.3}
@@ -211,14 +259,20 @@ P(23.91, 25.87, ["#4f9be0", "#fbe8c2"], [BG("campo_dia"),
   *[{**s, "keys": [{"t": 0, "x": 120, "y": 760}, {"t": 1.9, "x": 960, "y": 500, "ease": "lineal"}]} for s in sol(0, 0, 90, 0.07)],
   *reloj(540, 1180, 520, 6, 0, 18, 0, 0.1, 1.8), polvo("#ffffff", 20, sem=17)],
   cam(1.0, 1.06, (540, 1100), (540, 1100)), entrada="desenfoque", dur=0.3, vineta=0.4)
-add(23.91, CONTEXTO(0.2, 1.8, "DÍAS MÁS LARGOS"))
-for i in range(6): fx(24.05 + i * 0.3, "tic", -22)
+add(23.91, CONTEXTO(0.15, 1.1, "DÍAS MÁS LARGOS"))
+for i in range(4): fx(24.05 + i * 0.3, "tic", -22)
+# 17b · micro: cuánto se alarga hoy
+P(25.05, 25.87, ["#1a1410", "#3a2a1c"], [brillo(540, 1000, 650, "#ffcf8a", 0.3), *reloj(540, 1000, 700, 11, 58, 12, 0, 0.0, 0.8)],
+  cam(1.4, 1.5, (540, 900), (540, 900)), vineta=0.7)
+add(25.05, {**ROT(0.1, 0.82, "", tam=110, x=540, y=1560), "contar": [0, 1.8, 0.4], "contar_desde": 0.1, "decimales": 1, "contar_prefijo": "+", "unidad": "MS POR SIGLO"})
 
 # 18 · «Con los dinosaurios» — jungla con dinosaurios caminando
 P(25.87, 26.93, ["#2b1b3a", "#f6d08a"], [BG("bg_jungla"),
   IMG("dino_peq", ancho=380, y=1330, z=0.35, keys=[{"t": 0, "x": 900}, {"t": 1.1, "x": 780, "ease": "lineal"}], ex=-1),
   IMG("dino", ancho=880, y=1450, z=0.7, anim={"balanceo": [1.5, 0.7]}, keys=[{"t": 0, "x": 160}, {"t": 1.1, "x": 440, "ease": "lineal"}]),
-  polvo("#ffd9a0", 25, sem=18)],
+  polvo("#ffd9a0", 25, sem=18),
+  IMG("pterosaurio", ancho=260, z=0.25, anim={"flotar": [12, 0.5]}, keys=[{"t": 0, "x": 1150, "y": 520}, {"t": 1.1, "x": 620, "y": 600, "ease": "lineal"}], ex=-1),
+  {**brillo(300, 640, 200, "#6b5a5a", 0.5, 0.06), "anim": {"deriva": [10, -60]}}],
   cam(1.0, 1.06, (540, 1200), (500, 1200)), entrada="zoom", dur=0.3, vineta=0.5)
 fx(26.0, "golpe", -15); fx(26.5, "golpe", -17)
 
@@ -245,16 +299,30 @@ add(31.19, AMARILLO(0.2, 1.1, "ALMEJA FÓSIL", y=1650))
 P(32.35, 33.52, ["#2a241c", "#120f0a"], [IMG("almeja_fosil", ancho=880, x=540, y=1050, z=0.6),
   IMG("lupa", ancho=560, x=0, y=900, z=0.7, keys=[{"t": 0, "x": 860}, {"t": 0.6, "x": 520, "ease": "salida"}])],
   cam(1.6, 1.75, (540, 820), (520, 800)))
-add(32.35, CONTEXTO(0.3, 1.1, "1 RAYA = 1 DÍA"))
+add(32.35, CONTEXTO(0.1, 0.55, "1 RAYA = 1 DÍA"))
 fx(32.5, "brillo", -16)
+# 21b · micro: un láser corta la concha para medir cada raya
+P(32.9, 33.52, ["#2a241c", "#120f0a"], [IMG("almeja_fosil", ancho=880, x=540, y=1050, z=0.6),
+  {"tipo": "forma", "forma": "rect", "ancho": 900, "alto": 6, "relleno": "#5dff7a", "x": 540, "z": 0.65, "keys": [{"t": 0, "y": 700}, {"t": 0.6, "y": 1150, "ease": "lineal"}]},
+  brillo(540, 0, 300, "#5dff7a", 0.6, 0.64, keys=[{"t": 0, "y": 700}, {"t": 0.6, "y": 1150, "ease": "lineal"}]),
+  polvo("#b8ffc8", 25, (300, 700, 780, 1150), 33, "chispas")],
+  cam(1.3, 1.35, (540, 950), (540, 980)))
+fx(32.92, "zap", -18, f0=900, f1=600, dur=0.5)
 
 # 22 · «Hace 1.400 millones de años» — rebobinado: la Luna vuelve cerca
 P(33.52, 35.47, ESP, [BG("bg_espacio"), estrellas(40, 22), tierra(380, 1250, 560, giro=40),
   luna(0, 0, 330, 0.5, keys=[{"t": 0, "x": 880, "y": 600, "escala": 0.48}, {"t": 1.6, "x": 720, "y": 820, "escala": 1.0, "ease": "salida"}]),
   flecha([[900, 560], [740, 790]], 0.2, 1.4, "#ff5a4a", 8, [18, 12])],
   cam(1.0, 1.05), entrada="desenfoque", dur=0.3)
-add(33.52, {**ROT(0.15, 1.9, "", tam=100, x=540, y=560), "contar": [0, 1400, 1.2], "contar_desde": 0.15, "unidad": "MILLONES DE AÑOS ATRÁS", "capsula": "#c0392be6"})
+add(33.52, {**ROT(0.15, 1.9, "", tam=100, x=540, y=560), "contar": [0, 1400, 0.85], "contar_desde": 0.15, "unidad": "MILLONES DE AÑOS ATRÁS", "capsula": "#c0392be6"})
 fx(33.55, "whoosh", -12, dur=1.0)
+# 22b · micro: el tiempo hacia atrás
+aguja2 = {**aguja, "keys": [{"t": 0, "rot": 0, "ease": "lineal"}, {"t": 0.87, "rot": -1080}]}
+P(34.6, 35.47, ["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#ff9a7a", 0.3), IMG("cronometro", ancho=640, x=540, y=1040, z=0.6), aguja2,
+  {"tipo": "forma", "forma": "circulo", "radio": 16, "relleno": "#1b2233", "x": 540, "y": 1060, "z": 0.63}],
+  cam(1.1, 1.2, (540, 1050), (540, 1050)), entrada="corte", vineta=0.7)
+add(34.6, CONTEXTO(0.05, 0.8, "HACIA ATRÁS"))
+for i in range(5): fx(34.65 + i * 0.15, "tic", -20)
 
 # 23 · «el día duraba solo 18 horas» — Tierra girando rapidísimo y reloj
 P(35.47, 37.38, ESP, [BG("bg_espacio"), estrellas(30, 23), tierra(540, 1150, 620, giro=70), luna(900, 520, 300),
@@ -268,13 +336,18 @@ P(37.38, 39.58, ESP, [BG("bg_espacio"), estrellas(40, 24), tierra(300, 1350, 480
   luna(0, 0, 260, 0.5, keys=[{"t": 0, "x": 640, "y": 900, "escala": 1.0}, {"t": 2.0, "x": 900, "y": 420, "escala": 0.35, "ease": "salida"}]),
   flecha([[620, 920], [880, 450]], 0.2, 1.6, "#5dd0ff", 8, [18, 12])],
   cam(1.0, 1.04), entrada="desenfoque", dur=0.3)
-add(37.38, {**ROT(0.15, 2.1, "", tam=110, x=540, y=560), "contar": [0, 600, 1.3], "contar_desde": 0.15, "unidad": "MILLONES DE AÑOS", "contar_prefijo": "+"})
+add(37.38, {**ROT(0.15, 2.1, "", tam=110, x=540, y=560), "contar": [0, 600, 0.85], "contar_desde": 0.15, "unidad": "MILLONES DE AÑOS", "contar_prefijo": "+"})
 fx(37.4, "whoosh", -12, dur=1.0)
+# 24b · micro: la Luna de hoy y la del futuro
+P(38.6, 39.58, ESP, [BG("bg_espacio"), estrellas(30, 34), luna(300, 980, 340, 0.4), fugaz(0.3, 820, 300, 1040, 180),
+  luna(780, 980, 340, 0.4, keys=[{"t": 0, "escala": 1.0}, {"t": 0.6, "escala": 0.55, "ease": "salida"}])],
+  cam(1.0, 1.04), entrada="corte")
+add(38.6, ROT(0.05, 0.95, "HOY", tam=70, x=300, y=1260), ROT(0.15, 0.95, "FUTURO", tam=70, x=780, y=1260))
 
 # 25 · «la Luna se verá tan pequeña que ya no podrá tapar el Sol» — eclipse anular
 disco_peq = {"tipo": "forma", "forma": "circulo", "radio": 140, "relleno": "#06070c", "z": 0.35,
              "keys": [{"t": 0, "x": 160, "y": 820}, {"t": 2.2, "x": 540, "y": 900, "ease": "salida"}]}
-P(39.58, 42.40, ["#020414", "#0d1638"], [BG("bg_eclipse"), *sol(540, 900, 175), disco_peq,
+P(39.58, 42.40, ["#020414", "#0d1638"], [BG("bg_eclipse"), *sol(540, 900, 175), disco_peq, fugaz(1.6, 150, 300, 420, 420),
   IMG("personas_mirando", ancho=1080, x=540, y=1660, z=0.8)],
   cam(1.0, 1.08, (540, 1000), (540, 940)), entrada="zoom", dur=0.3)
 add(39.58, CONTEXTO(1.4, 2.7, "YA NO LO TAPA"))
@@ -297,8 +370,11 @@ P(44.24, 46.6, ["#020414", "#0d1638"], [BG("bg_eclipse"),
   brillo(540, 820, 340, "#eaf2ff", 0.8, 0.31, pulso=[0.1, 1.2]),
   {"tipo": "forma", "forma": "circulo", "radio": 170, "relleno": "#06070c", "x": 540, "y": 820, "z": 0.35},
   brillo(470, 760, 40, "#ffffff", 1.0, 0.36, keys=[{"t": 1.2, "op": 0}, {"t": 1.4, "op": 1}, {"t": 1.9, "op": 0.2}]),
-  IMG("personas_mirando", ancho=1180, x=540, y=1640, z=0.85)],
+  IMG("personas_mirando", ancho=1180, x=540, y=1640, z=0.85),
+  *[brillo(x, y, 90, "#ffffff", 1.0, 0.86, keys=[{"t": tt, "op": 0}, {"t": tt + 0.05, "op": 1}, {"t": tt + 0.25, "op": 0}])
+    for x, y, tt in [(240, 1570, 0.5), (800, 1560, 0.9), (370, 1600, 1.4), (900, 1620, 1.8)]]],
   cam(1.0, 1.12, (540, 1100), (540, 900)), entrada="desenfoque", dur=0.3)
+for tt in (0.5, 0.9, 1.4, 1.8): fx(44.24 + tt, "tic", -18)
 add(44.24, AMARILLO(0.3, 2.2, "NO TE LO PIERDAS", y=1380))
 fx(45.5, "brillo", -14)
 

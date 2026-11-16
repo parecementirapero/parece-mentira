@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 13:40 — Nico — rama `main` — chat en la nube
+**Hecho**: «Luna densa» v2 con **micro escenas** (0,5–0,9 s) de detalles secundarios: cuenta atrás antes del despegue, primera huella de bota, láser cargándose en la cúpula, patinadora que gira y frena al abrir los brazos (la comparación de Meyers, UW–Madison), +1,8 ms por siglo, láser que corta la concha, cronómetro hacia atrás, Luna de hoy frente a la del futuro, hoja de calendario que se arranca. Detalles de fondo: estrellas fugaces, satélite, barco que sube con la marea, pterosaurio, humo del volcán y flashes de móviles en el eclipse. **38 planos** (antes 29) y 130 efectos de sonido. Ilustraciones nuevas: pterosaurio, satélite, patinadora (dos siluetas), pista de hielo.
+**Motor**: `core.transformar` admite `ex`/`ey` negativos (espejo; antes el dibujo desaparecía: por eso no se veía el dinosaurio pequeño). Animar `ex` entre 1 y −1 simula un giro.
+**Pruebas**: fotogramas de cada micro escena revisados (corregidos: patinadora con aspecto infantil → silueta a contraluz; huella fuera de encuadre); render 47,1 s, −19,9 LUFS, 48 MB.
+**Siguiente paso**: que Nico/Jorge lo vean; locución real.
+
 ## 2026-11-16 13:10 — Nico — rama `main` — chat en la nube (sin acceso a los Macs)
 **Hecho**: prueba «La Luna se aleja» **densa, desde cero** (`lotes/prueba-luna-densa/`): guion nuevo de 169 palabras con datos nuevos (Apolo 11, láser 2,5 s, dinosaurios 23,5 h y 372 días por una almeja fósil, 18 h hace 1.400 millones de años, fin de los eclipses totales dentro de ~600 millones), **29 planos en 46,6 s** (v4: 18), una acción por plano y capas extra. Ilustraciones nuevas en `ilus_luna.py` (cohete, módulo lunar, jungla, dinosaurios, almeja fósil, calendario, cielo de eclipse, personas mirando). Motor: `motor/sfx.py` (efectos de sonido generados por código) + `sfx` en episodio.json; `rotulo` con `decimales`, `contar_prefijo` y `miles`.
 **Voz**: no hay. Se montó con `provisional.py` (silencio + alineación estimada con pausas en la puntuación) para que el karaoke y los planos tengan tiempos. Con la locución real: `python3 gen.py DIR audio.mp3 alineacion.json`.
