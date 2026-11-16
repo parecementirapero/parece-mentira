@@ -63,9 +63,9 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 4. Voz (ElevenLabs)
 
-- Voz oficial: **«Narrador PM - Curiosidades v1»**, voice_id `EuJOG4WNDCMcwTFrXKUc` (ver `DECISIONS.md`).
+- Voz oficial: **«Archivo Oculto — Narración (clon)»**, voice_id `op8soO9fvP07F3mjbJuB` (ver `DECISIONS.md`). Modelo **`eleven_v4`**, `voice_settings`: `stability` 0.5, `similarity_boost` 0.75 (probado con `with-timestamps`: devuelve audio y alineación).
 - Orden de intentos:
-  1. **API**: clave `ELEVENLABS_API_KEY` de `claves.txt` en la carpeta local del turno (en los dos Macs; nunca en el repo ni en el chat). Llamada `POST https://api.elevenlabs.io/v1/text-to-speech/EuJOG4WNDCMcwTFrXKUc/with-timestamps` desde `device_bash` o desde el workspace (`api.elevenlabs.io` está permitido). Guarda el MP3 y el JSON de alineación: el motor lo usa para sincronizar los subtítulos.
+  1. **API**: clave `ELEVENLABS_API_KEY` de `claves.txt` en la carpeta local del turno (en los dos Macs; nunca en el repo ni en el chat). Llamada `POST https://api.elevenlabs.io/v1/text-to-speech/op8soO9fvP07F3mjbJuB/with-timestamps` desde `device_bash` o desde el workspace (`api.elevenlabs.io` está permitido). Guarda el MP3 y el JSON de alineación: el motor lo usa para sincronizar los subtítulos.
   2. **Navegador integrado** (sesión de ElevenLabs ya iniciada en ese ordenador): Text to Speech con esa voz, descargar el MP3.
 - Antes de generar, mira los créditos que quedan. Un lote gasta ≈2.500 caracteres. **Si no llegan, no se compra nada**: lote «pendiente de voz».
 - Si la voz falla por cualquier motivo: el vídeo queda **«pendiente de voz»**. Prohibido usar otra voz (ni del sistema ni de otra cuenta).

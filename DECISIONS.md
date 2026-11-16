@@ -47,7 +47,8 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 
 ## Voz
 - ~~Voz ElevenLabs «Archivo Oculto — Narración», Eleven v4, estabilidad 50 %, similitud 75 %.~~
-- Voz oficial: ElevenLabs «Narrador PM - Curiosidades v1» (voice_id `EuJOG4WNDCMcwTFrXKUc`), hombre ~30 años, acento de España, ritmo ágil. Cuenta nueva de ElevenLabs, plan Starter (licencia comercial). Si falla la voz, el vídeo se marca «pendiente de voz»; no se genera voz alternativa. — 2026-11-15 — Jorge
+- ~~Voz oficial: ElevenLabs «Narrador PM - Curiosidades v1» (voice_id `EuJOG4WNDCMcwTFrXKUc`), hombre ~30 años, acento de España, ritmo ágil. Cuenta nueva de ElevenLabs, plan Starter (licencia comercial). Si falla la voz, el vídeo se marca «pendiente de voz»; no se genera voz alternativa. — 2026-11-15 — Jorge~~
+- Voz oficial: ElevenLabs «Archivo Oculto — Narración (clon)» (voice_id `op8soO9fvP07F3mjbJuB`), clon instantáneo en la cuenta nueva (Starter) de la voz «Archivo Oculto — Narración» de la cuenta antigua (Free, Voice Design, no se podía compartir), hecho con 9 locuciones originales (≈4 min 53 s). Modelo `eleven_v4`, estabilidad 0.5, similitud 0.75. Motivo: la v1 sonaba robótica; la antigua era la que gustaba. La v1 se ha borrado de ElevenLabs. — 2026-11-16 — Nico
 
 ## Presupuesto y gastos
 - ~~Presupuesto 50–150 €/mes entre ambos proyectos.~~

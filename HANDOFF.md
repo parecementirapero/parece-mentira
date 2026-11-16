@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 19:55 — Nico — rama `main` — chat en la nube (Mac de Nico)
+**Hecho**: voz oficial cambiada. La voz «Archivo Oculto — Narración» de la cuenta antigua de ElevenLabs (plan Free, Voice Design: no se puede compartir ni copiar) se ha clonado (clon instantáneo) en la cuenta nueva con las 9 locuciones originales que había en Descargas del Mac de Nico (unidas en `VOZ_ARCHIVO_OCULTO_para_clonar.mp3`, 4 min 53 s) → «Archivo Oculto — Narración (clon)», voice_id `op8soO9fvP07F3mjbJuB`. Borrada la v1 «Narrador PM - Curiosidades v1» (`EuJOG4WNDCMcwTFrXKUc`) a petición de Nico. A la clave «Parece Mentira - Nico» (…076b) se le dio el permiso Voces → Escribir. `claves.txt` del Mac de Nico actualizado (copia anterior en `claves.txt.bak`). AGENTE §4, DECISIONS y PROJECT_STATE actualizados: modelo `eleven_v4`, estabilidad 0.5, similitud 0.75 (antes los lotes usaban `eleven_multilingual_v2`).
+**Pruebas**: TTS con el clon y `eleven_v4` → HTTP 200 (`Downloads/PRUEBA_clon_archivo_oculto.mp3`); `with-timestamps` con `eleven_v4` → audio + alineación OK.
+**Pendiente**: Jorge debe cambiar `ELEVENLABS_VOICE_ID` en el `claves.txt` de su Mac (TASKS).
+**Siguiente paso**: lote 2026-11-17-manana ya con la voz nueva.
+
 ## 2026-11-16 19:45 — Nico — rama `main` — chat en la nube (Mac de Nico)
 **Hecho**: Nico ejecutó en su Terminal `estadisticas/autorizar.py --subir` → `YT_UPLOAD_REFRESH_TOKEN`, `YT_CLIENT_ID` y `YT_CLIENT_SECRET` en `/Users/nico/Documents/Parece Mentira/claves.txt`. El Mac de Nico ya puede subir a YouTube por API en el lote de las 08:00.
 **Pruebas**: `subir_youtube.py --prueba` desde el Mac de Nico (metadatos del lote 2026-11-15-tarde, vídeo 02, archivo vacío): token canjeado y canal consultado sin errores, no se subió nada. Ojo: no detectó como «yaEstaba» el título de la Luna; puede que el título publicado sea distinto. Revisar en la primera subida real que no duplica.
