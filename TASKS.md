@@ -4,6 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] «Luna densa» v6: Luna por delante de la flecha, neones sobre fondos oscuros, tic-tac de reloj, sonido de agua y mordisco de hoja nuevos — Nico — 2026-11-16 19:24
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
