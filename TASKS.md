@@ -4,6 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Noche 17 (2.ª ronda, más exigente): ver Shorts reales del nicho fotograma a fotograma, cruzar calidad con estadísticas («aprender a aprender»), crítica plano a plano y Luna v6, control de calidad por píxeles; sin publicar ni gastar créditos — Nico (chat de la Luna densa) — 2026-11-17 00:25
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
