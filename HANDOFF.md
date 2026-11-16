@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 12:58 — Nico — rama `main`
+**Decisión**: tras ver la prueba de acabado, Nico prefiere el v4 tal cual. No se integra `motor/acabado.py` (queda en el repo sin usar). Apuntado en DECISIONS y TASKS.
+**Siguiente paso**: si se quiere más carga visual, trabajarla en las ilustraciones (más capas y acciones por plano), no en el post-proceso.
+
 ## 2026-11-16 13:00 — Jorge (vía Claude) — rama main
 - Qué: prueba de temas cotidianos para el lote de esta tarde. Jorge propone que las ideas conecten con la vida cotidiana y no solo datos del pasado. Se prueba solo en el lote 2026-11-16-tarde con 2 temas cotidianos + 1 histórico conectado con hoy (nudillos, efecto puerta, móvil vs. Apolo 11), reservados en `lotes/IDEAS.md`. `AGENTE.md` §2: el agente usa los temas reservados para su lote.
 - Pruebas: ninguna (solo texto).

@@ -8,7 +8,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## Pendiente
 - [ ] Nico y Jorge: tras ver el lote 2026-11-16-tarde (prueba de temas cotidianos), decidir el 2026-11-17 si la mezcla 2 cotidianos + 1 histórico se queda fija, pasa a todo cotidiano o se vuelve a lo de antes; apuntarlo en `DECISIONS.md`
-- [ ] Nico y Jorge: elegir nivel de acabado (ninguno / normal / intenso) tras ver la prueba del 02; si se aprueba, integrar `motor/acabado.py` en `render.py` (opción `"acabado"` en episodio.json) y bajar la aberración cromática a 1 px
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
 - [ ] Decidir si se activan en TikTok las «revisiones automáticas de contenido» (ajuste de cuenta que ofrece TikTok al subir)
@@ -27,6 +26,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Nivel de acabado decidido: ninguno, se queda como el v4 (Nico) — 2026-11-16
 - [x] Prueba de acabado visual antes/después del 02 v4 (Luna) con `motor/acabado.py`: bloom, LUT documental, papel, partículas en primer plano, parpadeo, grano animado — Nico — 2026-11-16
 - [x] Se deja Drive: la revisión se hace en el chat de Claude (AGENTE §7, DECISIONS) — Jorge — 2026-11-16
 - [x] Publicar lote 2026-11-15-tarde v4 (01 v4c, 02 v4, 03 v4) en YouTube, Instagram y TikTok (aprobado por Jorge: «súbelos») — Jorge — 2026-11-15 23:42 → hecho 2026-11-16 00:05: 3 redes, enlaces en `lotes/2026-11-15-tarde/estado.md`
