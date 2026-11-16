@@ -104,6 +104,34 @@ def cargar_etiquetas():
 
 
 # ---------------------------------------------------------------- recogida
+def audiencia_youtube(yt, hoy):
+    """Datos de audiencia del canal (últimos 28 días). Cada consulta es opcional:
+    YouTube no da algunos datos si hay pocas vistas (umbral de privacidad)."""
+    ini = max(INICIO_CANAL, (hoy - dt.timedelta(days=28)).isoformat())
+    fin = hoy.isoformat()
+    def q(**p):
+        try:
+            return yt.analytics(startDate=ini, endDate=fin, **p)
+        except Exception as e:
+            print("  (aviso) Analytics sin", p.get("dimensions"), "->", str(e)[:120])
+            return []
+    paises = q(dimensions="country", metrics="views,estimatedMinutesWatched", sort="-views", maxResults=10)
+    disp = q(dimensions="deviceType", metrics="views", sort="-views")
+    subs = q(dimensions="subscribedStatus", metrics="views,averageViewPercentage")
+    edad = q(dimensions="ageGroup,gender", metrics="viewerPercentage")
+    fuentes = q(dimensions="insightTrafficSourceType", metrics="views", sort="-views")
+    sistema = q(dimensions="operatingSystem", metrics="views", sort="-views", maxResults=6)
+    return {
+        "desde": ini,
+        "paises": [[f["country"], f["views"], f["estimatedMinutesWatched"]] for f in paises],
+        "dispositivos": [[f["deviceType"], f["views"]] for f in disp],
+        "suscritos": [[f["subscribedStatus"], f["views"], f.get("averageViewPercentage")] for f in subs],
+        "edadGenero": [[f["ageGroup"], f["gender"], f["viewerPercentage"]] for f in edad],
+        "fuentes": [[FUENTES.get(f["insightTrafficSourceType"], f["insightTrafficSourceType"]), f["views"]] for f in fuentes],
+        "sistemas": [[f["operatingSystem"], f["views"]] for f in sistema],
+    }
+
+
 def recoger_youtube():
     yt = YouTube(token_de_acceso())
     ahora = dt.datetime.now(MADRID)
@@ -196,7 +224,9 @@ def recoger_youtube():
     diario = [{"fecha": d["day"], "vistas": d["views"], "minutos": d["estimatedMinutesWatched"],
                "subs": d["subscribersGained"] - d["subscribersLost"], "likes": d["likes"]} for d in diario]
 
+    extra = audiencia_youtube(yt, hoy)
     return {
+        "youtubeExtra": extra,
         "canal": canal["snippet"]["title"],
         "canalTotales": {"suscriptores": int(canal["statistics"].get("subscriberCount", 0)),
                          "vistas": int(canal["statistics"].get("viewCount", 0)),
@@ -274,7 +304,10 @@ def construir_contenidos(datos, etiquetas):
 def foto_del_dia(datos, previo, hoy):
     """Guarda cada día las vistas de cada vídeo: así hay vistas por día también en TikTok e Instagram."""
     hist = dict((previo or {}).get("historico") or {})
-    hist[hoy] = {"youtube": {v["id"]: v["vistas"] for v in datos.get("videos", [])},
+    hist[hoy] = {"seguidores": {"youtube": (datos.get("canalTotales") or {}).get("suscriptores"),
+                                "tiktok": ((datos.get("tiktok") or {}).get("totales") or {}).get("seguidores"),
+                                "instagram": ((datos.get("instagram") or {}).get("totales") or {}).get("seguidores")},
+                 "youtube": {v["id"]: v["vistas"] for v in datos.get("videos", [])},
                  "tiktok": {v["id"]: v["vistas"] for v in (datos.get("tiktok") or {}).get("videos", [])},
                  "instagram": {v["codigo"]: v["vistas"] for v in (datos.get("instagram") or {}).get("videos", []) if v.get("vistas") is not None}}
     return {k: hist[k] for k in sorted(hist)[-120:]}
@@ -305,13 +338,13 @@ def recoger_todo():
 
     if faltan("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"):
         notas.append("YouTube sin conectar.")
-        yt = {k: previo[k] for k in ("canal", "canalTotales", "videos", "diario") if k in previo}
+        yt = {k: previo[k] for k in ("canal", "canalTotales", "videos", "diario", "youtubeExtra") if k in previo}
     else:
         try:
             yt = recoger_youtube(); notas += yt.pop("notas", [])
         except Exception as e:
             print(f"::error::YouTube: {e}"); notas.append(f"YouTube falló hoy ({str(e)[:140]}); se muestran los datos anteriores.")
-            yt = {k: previo[k] for k in ("canal", "canalTotales", "videos", "diario") if k in previo}
+            yt = {k: previo[k] for k in ("canal", "canalTotales", "videos", "diario", "youtubeExtra") if k in previo}
     datos.update(yt)
     datos.setdefault("videos", []); datos.setdefault("diario", [])
 

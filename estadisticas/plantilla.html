@@ -145,6 +145,52 @@ svg text{fill:var(--polvo);font-size:11px;font-family:var(--texto)}
 .pie-pagina{margin-top:28px;color:var(--tenue);font-size:12.5px;max-width:80ch}
 .aviso{border-left:3px solid var(--acc);padding:6px 12px;margin:8px 0;color:var(--polvo)}
 .aviso b{color:var(--luz)}
+
+/* secciones y gráficos nuevos */
+.seccion{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;margin:34px 0 0}
+.seccion + .nota{color:var(--polvo);font-size:13px;margin:4px 0 0}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tres > .panel{margin-top:14px}
+@media (max-width:860px){.tres{grid-template-columns:1fr}}
+.partida{display:flex;gap:2px;height:16px}
+.partida span{min-width:3px;cursor:default}
+.partida span:first-child{border-radius:4px 0 0 4px}.partida span:last-child{border-radius:0 4px 4px 0}.partida span:only-child{border-radius:4px}
+.partida + .leyenda b{color:var(--luz);font-weight:600}
+.mezcla{display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:6px 14px;align-items:center}
+.mezcla .t{font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:600px){.mezcla{grid-template-columns:1fr}.mezcla .t{margin-top:8px}}
+.minis{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 18px}
+@media (max-width:700px){.minis{grid-template-columns:1fr}}
+.mini h4{margin:8px 0 0;font-size:13px;font-weight:500;color:var(--polvo)}
+.mini h4 b{display:block;font-family:var(--display);font-weight:600;font-size:20px;color:var(--luz)}
+.dato-grande{font-family:var(--display);font-weight:600;font-size:15px}
+
+/* transiciones suaves */
+html{background:var(--vacio)}
+.cabecera{view-transition-name:cabecera}
+@media (prefers-reduced-motion:no-preference){
+  html[data-dir=dentro]::view-transition-old(root){animation:vt-sale-dentro .3s cubic-bezier(.4,0,1,1) both;transform-origin:var(--ox,50%) var(--oy,30%)}
+  html[data-dir=dentro]::view-transition-new(root){animation:vt-entra-dentro .5s cubic-bezier(.16,1,.3,1) both;transform-origin:var(--ox,50%) var(--oy,30%)}
+  html[data-dir=fuera]::view-transition-old(root){animation:vt-sale-fuera .28s cubic-bezier(.4,0,1,1) both}
+  html[data-dir=fuera]::view-transition-new(root){animation:vt-entra-fuera .48s cubic-bezier(.16,1,.3,1) both}
+  html[data-dir=lado]::view-transition-old(root){animation:vt-funde-sale .18s ease-in both}
+  html[data-dir=lado]::view-transition-new(root){animation:vt-funde-entra .32s ease-out both}
+  @keyframes vt-sale-dentro{to{opacity:0;transform:scale(1.07);filter:blur(5px)}}
+  @keyframes vt-entra-dentro{from{opacity:0;transform:scale(.93);filter:blur(5px)}}
+  @keyframes vt-sale-fuera{to{opacity:0;transform:scale(.95);filter:blur(5px)}}
+  @keyframes vt-entra-fuera{from{opacity:0;transform:scale(1.05);filter:blur(5px)}}
+  @keyframes vt-funde-sale{to{opacity:0}}
+  @keyframes vt-funde-entra{from{opacity:0;transform:translateY(6px)}}
+  .vista.entra{animation:vt-entra-dentro .45s cubic-bezier(.16,1,.3,1)}
+  .crece{transform-box:fill-box;transform-origin:left center;animation:crecer .7s cubic-bezier(.16,1,.3,1) both}
+  .crece-y{transform-box:fill-box;transform-origin:center bottom;animation:crecerY .7s cubic-bezier(.16,1,.3,1) both}
+  .partida span{transform-origin:left center;animation:crecer .7s cubic-bezier(.16,1,.3,1) both}
+  .traza{stroke-dasharray:1;stroke-dashoffset:1;animation:trazar 1.1s cubic-bezier(.3,0,.2,1) forwards}
+  .aparece{animation:vt-funde-entra .6s ease-out both}
+  @keyframes crecer{from{transform:scaleX(0)}}
+  @keyframes crecerY{from{transform:scaleY(0)}}
+  @keyframes trazar{to{stroke-dashoffset:0}}
+}
 </style>
 </head>
 <body>
@@ -168,6 +214,11 @@ svg text{fill:var(--polvo);font-size:11px;font-family:var(--texto)}
     <div class="observatorio"><svg id="mapa" viewBox="0 0 1000 560" role="img" aria-label="Mapa de las redes"></svg></div>
     <p class="leyenda-mapa">Cada planeta es una red; su tamaño es proporcional a las vistas del periodo. Pulsa uno para entrar.</p>
     <div class="redes" id="tarjetas"></div>
+    <div class="dos">
+      <div class="panel"><h3>Calendario de publicaciones</h3><p class="nota">Últimos 28 días; cada punto es un vídeo y su tamaño, las vistas que lleva</p><div id="calendario"></div></div>
+      <div class="panel"><h3>Reparto entre redes</h3><p class="nota">Vistas de los vídeos publicados en el periodo</p><div id="reparto"></div>
+        <h3 style="margin-top:22px">Seguidores</h3><p class="nota">Total en cada red</p><div id="reparto-seg"></div></div>
+    </div>
     <div class="modulos">
       <button class="modulo" data-ir="comparativa"><b>Comparar las redes</b><span>El mismo vídeo en YouTube, TikTok e Instagram</span></button>
       <button class="modulo" data-ir="laboratorio"><b>Laboratorio</b><span>Qué temas, ganchos o voces funcionan mejor</span></button>
@@ -183,6 +234,8 @@ svg text{fill:var(--polvo);font-size:11px;font-family:var(--texto)}
     <div class="cabeza-red" style="--acc:var(--nova)"><div class="globo"></div><div><h1>Las tres redes</h1><p>Cada vídeo, sumando sus vistas en todas las redes</p></div></div>
     <div class="panel"><h3>Vistas de cada vídeo por red</h3><p class="nota">Vídeos publicados en el periodo</p><div class="leyenda" id="ley-comp"></div><div id="comp-barras"></div></div>
     <div class="panel"><h3>Vistas por día en cada red</h3><p class="nota">YouTube viene de Analytics; TikTok e Instagram, de la foto diaria (empieza el día en que se conecta cada red)</p><div class="leyenda" id="ley-comp2"></div><div id="comp-diario"></div></div>
+    <div class="dos"><div class="panel"><h3>TikTok frente a YouTube</h3><p class="nota">Cada punto es un vídeo publicado en las dos. Por encima de la diagonal, funciona mejor en TikTok</p><div id="comp-vs-tiktok"></div></div>
+    <div class="panel"><h3>Seguidores en el tiempo</h3><p class="nota">Desde que se guarda la foto diaria de cada red</p><div class="leyenda" id="ley-comp3"></div><div id="comp-seg"></div></div></div>
   </main>
 
   <!-- LABORATORIO -->
@@ -261,7 +314,7 @@ function ocultarTip(){tip.style.opacity=0}
 
 /* ---------- gráficos ---------- */
 const NS='http://www.w3.org/2000/svg';
-function el(t,a={},p){const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);if(p)p.append(n);return n}
+function el(t,a={},p){const n=document.createElementNS(NS,t);for(const k in a)if(a[k]!==''&&a[k]!=null)n.setAttribute(k,a[k]);if(p)p.append(n);return n}
 function paso(v){const p=Math.pow(10,Math.floor(Math.log10(v||1)));const m=v/p;return (m<=1?1:m<=2?2:m<=2.5?2.5:m<=5?5:10)*p}
 function maxBonito(v){const s=paso(v/4);return s*Math.ceil((v||1)/s)}
 function lineas(host, xs, series, o={}){
@@ -274,12 +327,12 @@ function lineas(host, xs, series, o={}){
   const x=i=>m.l+(W-m.l-m.r)*i/(xs.length-1), y=v=>H-m.b-(H-m.t-m.b)*v/ymax;
   for(let v=0;v<=ymax+1e-9;v+=st){el('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:'var(--rejilla)'},svg);el('text',{x:m.l-8,y:y(v)+4,'text-anchor':'end'},svg).textContent=o.yfmt?o.yfmt(v):fmtK(v)}
   const cada=Math.max(1,Math.ceil(xs.length/7));
-  xs.forEach((l,i)=>{if(i%cada===0||i===xs.length-1)el('text',{x:x(i),y:H-8,'text-anchor':'middle'},svg).textContent=l});
+  xs.forEach((l,i)=>{if((i%cada===0&&xs.length-1-i>=cada/2)||i===xs.length-1)el('text',{x:x(i),y:H-8,'text-anchor':'middle'},svg).textContent=l});
   series.forEach(s=>{
     let d='';s.values.forEach((v,i)=>{if(v==null)return;d+=(d&&s.values[i-1]!=null?'L':'M')+x(i).toFixed(1)+','+y(v).toFixed(1)});
     if(o.area&&!s.punteada){let a='',pts=s.values.map((v,i)=>v==null?null:[x(i),y(v)]).filter(Boolean);if(pts.length>1){a=`M${pts[0][0]},${H-m.b}`+pts.map(p=>`L${p[0]},${p[1]}`).join('')+`L${pts[pts.length-1][0]},${H-m.b}Z`;
-      const gid='g'+Math.random().toString(36).slice(2);const g=el('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1},el('defs',{},svg));el('stop',{offset:0,'stop-color':s.hex||'#fff','stop-opacity':.28},g);el('stop',{offset:1,'stop-color':s.hex||'#fff','stop-opacity':0},g);el('path',{d:a,fill:`url(#${gid})`},svg)}}
-    el('path',{d,fill:'none',stroke:s.color,'stroke-width':2,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':s.punteada?'4 4':'',style:s.punteada?'':`filter:drop-shadow(0 0 4px ${s.hex||'transparent'})`},svg);
+      const gid='g'+Math.random().toString(36).slice(2);const g=el('linearGradient',{id:gid,x1:0,y1:0,x2:0,y2:1},el('defs',{},svg));el('stop',{offset:0,'stop-color':s.hex||'#fff','stop-opacity':.28},g);el('stop',{offset:1,'stop-color':s.hex||'#fff','stop-opacity':0},g);el('path',{d:a,fill:`url(#${gid})`,class:'aparece'},svg)}}
+    el('path',{d,fill:'none',stroke:s.color,'stroke-width':2,class:s.punteada?'':'traza',pathLength:s.punteada?'':1,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':s.punteada?'4 4':'',style:s.punteada?'':`filter:drop-shadow(0 0 4px ${s.hex||'transparent'})`},svg);
     s.values.forEach((v,i)=>{if(v!=null&&(s.values[i-1]==null)&&(s.values[i+1]==null))el('circle',{cx:x(i),cy:y(v),r:3,fill:s.color},svg)});
   });
   const cruz=el('line',{y1:m.t,y2:H-m.b,stroke:'var(--polvo)','stroke-width':1,opacity:0},svg);
@@ -299,7 +352,7 @@ function barrasH(host, filas, o={}){
   const max=o.max||Math.max(...filas.map(f=>f.v))*1.05;
   filas.forEach((f,i)=>{const y=i*rh+6+arriba, w=Math.max(2,(W-ml-mr)*f.v/max);
     el('text',{x:ml-10,y:y+15,'text-anchor':'end',style:'fill:var(--luz);font-size:12.5px'},svg).textContent=f.k;
-    el('rect',{x:ml,y:y+4,width:w,height:14,rx:4,fill:f.color||'var(--acc)'},svg);
+    el('rect',{x:ml,y:y+4,width:w,height:14,rx:4,fill:f.color||'var(--acc)',class:'crece',style:`animation-delay:${i*40}ms`},svg);
     el('text',{x:ml+w+7,y:y+15,style:'fill:var(--luz);font-size:12px'},svg).textContent=(o.fmt||fmt)(f.v);
     const h=el('rect',{x:0,y,width:W,height:rh,fill:'transparent'},svg);
     h.addEventListener('mousemove',e=>verTip(e,`<b>${esc(f.k)}</b><br>${o.nombre||''}: <b>${(o.fmt||fmt)(f.v)}</b>${f.extra?'<br>'+f.extra:''}`));h.addEventListener('mouseleave',ocultarTip)});
@@ -314,7 +367,7 @@ function barrasV(host, filas){
   for(let v=0;v<=max+1e-9;v+=st){el('line',{x1:m.l,x2:W-m.r,y1:y(v),y2:y(v),stroke:'var(--rejilla)'},svg);el('text',{x:m.l-8,y:y(v)+4,'text-anchor':'end'},svg).textContent=fmtK(v)}
   const bw=(W-m.l-m.r)/filas.length;
   filas.forEach((f,i)=>{const x=m.l+i*bw+bw*.3,w=bw*.4;
-    el('path',{d:`M${x},${H-m.b}V${y(f.v)+4}q0,-4 4,-4h${w-8}q4,0 4,4V${H-m.b}Z`,fill:'var(--acc)',style:'filter:drop-shadow(0 0 6px var(--acc))'},svg);
+    el('path',{d:`M${x},${H-m.b}V${y(f.v)+4}q0,-4 4,-4h${w-8}q4,0 4,4V${H-m.b}Z`,fill:'var(--acc)',class:'crece-y',style:`filter:drop-shadow(0 0 6px var(--acc));animation-delay:${i*60}ms`},svg);
     el('text',{x:x+w/2,y:H-9,'text-anchor':'middle',style:'fill:var(--luz);font-size:12.5px'},svg).textContent=f.k;
     el('text',{x:x+w/2,y:y(f.v)-7,'text-anchor':'middle',style:'fill:var(--luz);font-size:12px'},svg).textContent=fmt(f.v);
     const h=el('rect',{x:m.l+i*bw,y:m.t,width:bw,height:H-m.t-m.b,fill:'transparent'},svg);
@@ -327,6 +380,100 @@ function chispa(svg, valores, color){
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.setAttribute('preserveAspectRatio','none');
   svg.innerHTML=`<path d="${d}" fill="none" stroke="${color}" stroke-width="2" vector-effect="non-scaling-stroke"/>`;
 }
+
+
+/* ---------- gráficos nuevos ---------- */
+const CAT=['#3987e5','#d95926','#199e70','#c98500','#d55181','#9085e9'];   // paleta validada (modo oscuro)
+const N1=n=>n.toLocaleString('es-ES',{maximumFractionDigits:1});
+const corta=(t,n)=>{t=String(t||'');return t.length>n?t.slice(0,n-1)+'…':t};
+const pend=(host,txt)=>{host.innerHTML=`<p class="pend">${txt}</p>`};
+/* barra partida al 100 % */
+function partida(host, partes, o={}){
+  partes=partes.filter(p=>p.v>0);const tot=partes.reduce((s,p)=>s+p.v,0);
+  if(!tot){pend(host,o.vacio||'Sin datos todavía.');return}
+  host.innerHTML=`<div class="partida">${partes.map((p,i)=>`<span data-i="${i}" style="flex:${p.v} 1 0;background:${p.color};animation-delay:${i*60}ms"></span>`).join('')}</div>
+    <div class="leyenda" style="margin-top:8px">${partes.map(p=>`<span><i style="background:${p.color}"></i>${esc(p.k)} <b>${Math.round(p.v/tot*100)} %</b></span>`).join('')}</div>`;
+  host.querySelectorAll('.partida span').forEach(sp=>{const p=partes[sp.dataset.i];sp.onmousemove=e=>verTip(e,`<b>${esc(p.k)}</b><br>${(o.fmt||fmt)(p.v)}${o.unidad?' '+o.unidad:''} · ${N1(p.v/tot*100)} %${p.extra?'<br>'+p.extra:''}`);sp.onmouseleave=ocultarTip});
+}
+/* pirámide de edad: hombres a la izquierda, mujeres a la derecha */
+function piramide(host, filas){
+  host.innerHTML='';if(!filas.length){pend(host,'YouTube aún no da edad y género: los muestra cuando hay suficientes espectadores con sesión iniciada.');return}
+  const W=host.clientWidth||500, rh=26, top=22, lab=58, H=filas.length*rh+top+4, mid=W/2;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H},host);
+  const max=Math.max(...filas.flatMap(f=>[f.h,f.m]),1), sc=(W/2-lab/2-44)/max;
+  el('text',{x:mid-lab/2-4,y:12,'text-anchor':'end',style:'fill:var(--luz);font-size:12px'},svg).textContent='Hombres';
+  el('text',{x:mid+lab/2+4,y:12,style:'fill:var(--luz);font-size:12px'},svg).textContent='Mujeres';
+  filas.forEach((f,i)=>{const y=top+i*rh;
+    el('text',{x:mid,y:y+14,'text-anchor':'middle',style:'fill:var(--luz);font-size:12px'},svg).textContent=f.k;
+    const wh=Math.max(f.h?2:0,f.h*sc), wm=Math.max(f.m?2:0,f.m*sc);
+    el('rect',{x:mid-lab/2-wh,y:y+3,width:wh,height:15,rx:4,fill:CAT[0],class:'crece',style:`transform-origin:right center;animation-delay:${i*50}ms`},svg);
+    el('rect',{x:mid+lab/2,y:y+3,width:wm,height:15,rx:4,fill:CAT[5],class:'crece',style:`animation-delay:${i*50}ms`},svg);
+    el('text',{x:mid-lab/2-wh-6,y:y+14,'text-anchor':'end'},svg).textContent=N1(f.h)+' %';
+    el('text',{x:mid+lab/2+wm+6,y:y+14},svg).textContent=N1(f.m)+' %';
+    const h=el('rect',{x:0,y,width:W,height:rh,fill:'transparent'},svg);
+    h.addEventListener('mousemove',e=>verTip(e,`<b>${f.k} años</b><br>Hombres: <b>${N1(f.h)} %</b><br>Mujeres: <b>${N1(f.m)} %</b>`));h.addEventListener('mouseleave',ocultarTip)});
+}
+/* dispersión: cada punto es un vídeo */
+function dispersion(host, pts, o={}){
+  host.innerHTML='';pts=pts.filter(p=>p.x!=null&&p.y!=null);
+  if(pts.length<2){pend(host,o.vacio||'Hacen falta al menos 2 vídeos con datos.');return}
+  const W=host.clientWidth||520,H=o.h||280,m={t:14,r:18,b:42,l:66};
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H},host);
+  const lg=v=>Math.log10(Math.max(1,v));
+  const esc2=(log,vals)=>{if(log){const lo=Math.floor(Math.min(...vals.map(lg))),hi=Math.max(lo+1,Math.ceil(Math.max(...vals.map(lg))));return{lo,hi,f:v=>(lg(v)-lo)/(hi-lo),ticks:Array.from({length:hi-lo+1},(_,i)=>Math.pow(10,lo+i))}}
+    const hi=maxBonito(Math.max(...vals)*1.08),st=paso(hi/4),ticks=[];for(let v=0;v<=hi+1e-9;v+=st)ticks.push(v);return{f:v=>v/hi,ticks}};
+  const ex=esc2(o.logx,o.mismoEje?pts.flatMap(p=>[p.x,p.y]):pts.map(p=>p.x)), ey=o.mismoEje?ex:esc2(o.logy,pts.map(p=>p.y));
+  const X=v=>m.l+(W-m.l-m.r)*ex.f(v), Y=v=>H-m.b-(H-m.t-m.b)*ey.f(v);
+  ey.ticks.forEach(v=>{el('line',{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),stroke:'var(--rejilla)'},svg);el('text',{x:m.l-8,y:Y(v)+4,'text-anchor':'end'},svg).textContent=(o.yfmt||fmtK)(v)});
+  ex.ticks.forEach(v=>el('text',{x:X(v),y:H-m.b+16,'text-anchor':'middle'},svg).textContent=(o.xfmt||fmtK)(v));
+  el('text',{x:(m.l+W-m.r)/2,y:H-6,'text-anchor':'middle',style:'fill:var(--luz);font-size:12px'},svg).textContent=o.xtit||'';
+  const ty=el('text',{x:12,y:(m.t+H-m.b)/2,'text-anchor':'middle',transform:`rotate(-90 12 ${(m.t+H-m.b)/2})`,style:'fill:var(--luz);font-size:12px'},svg);ty.textContent=o.ytit||'';
+  if(o.diagonal){const a=ex.ticks[0],b=ex.ticks[ex.ticks.length-1];el('line',{x1:X(a),y1:Y(a),x2:X(b),y2:Y(b),stroke:'var(--polvo)','stroke-dasharray':'4 4',opacity:.7},svg);
+    el('text',{x:X(b)-6,y:Y(b)+14,'text-anchor':'end'},svg).textContent='igual en las dos'}
+  if(o.medias){const mx=avg(pts.map(p=>p.x)),my=avg(pts.map(p=>p.y));
+    el('line',{x1:X(mx),x2:X(mx),y1:m.t,y2:H-m.b,stroke:'var(--polvo)','stroke-dasharray':'3 4',opacity:.6},svg);
+    el('line',{x1:m.l,x2:W-m.r,y1:Y(my),y2:Y(my),stroke:'var(--polvo)','stroke-dasharray':'3 4',opacity:.6},svg);
+    el('text',{x:m.l+6,y:m.t+12},svg).textContent=o.medias[0];el('text',{x:W-m.r-6,y:m.t+12,'text-anchor':'end'},svg).textContent=o.medias[1]}
+  pts.forEach((p,i)=>{const c=el('circle',{cx:X(p.x),cy:Y(p.y),r:7,fill:p.color||'var(--acc)',stroke:'var(--panel)','stroke-width':2,class:'aparece',style:`animation-delay:${i*50}ms;cursor:${o.click?'pointer':'default'}`},svg);
+    c.addEventListener('mousemove',e=>verTip(e,`<b>${esc(p.k)}</b><br>${p.tip||''}`));c.addEventListener('mouseleave',ocultarTip);if(o.click)c.addEventListener('click',()=>{ocultarTip();o.click(p)})});
+}
+/* calendario de publicaciones de 28 días */
+function calendario(host){
+  host.innerHTML='';const W=host.clientWidth||600, rs=Object.keys(REDES), ml=78, rh=34, top=20, H=rs.length*rh+top, n=28, cw=(W-ml-8)/n;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H},host);
+  const dia=i=>{const d=new Date(HOY);d.setDate(d.getDate()-(n-1-i));return d.toISOString().slice(0,10)};
+  const maxV=Math.max(1,...rs.flatMap(r=>VID[r].filter(v=>diasDesde(v.fecha)<n).map(v=>v.vistas||0)));
+  for(let i=0;i<n;i+=7)el('text',{x:ml+cw*i+cw/2,y:11,'text-anchor':'middle'},svg).textContent=fecha(dia(i));
+  el('text',{x:ml+cw*(n-1)+cw/2,y:11,'text-anchor':'middle'},svg).textContent='hoy';
+  rs.forEach((r,j)=>{const y=top+j*rh+rh/2;el('text',{x:0,y:y+4,style:`fill:var(--luz);font-size:12.5px`},svg).textContent=REDES[r].nombre;
+    for(let i=0;i<n;i++){const f=dia(i), vs=VID[r].filter(v=>v.fecha===f), cx=ml+cw*i+cw/2;
+      if(!vs.length){el('circle',{cx,cy:y,r:1.6,fill:'var(--tenue)'},svg);continue}
+      const tot=vs.reduce((s,v)=>s+(v.vistas||0),0), rad=Math.min(cw/2-1,4+Math.sqrt(tot/maxV)*11);
+      const c=el('circle',{cx,cy:y,r:rad,fill:REDES[r].hex,stroke:'var(--panel)','stroke-width':2,class:'aparece',style:`animation-delay:${i*15}ms;filter:drop-shadow(0 0 5px ${REDES[r].hex});cursor:pointer`},svg);
+      c.addEventListener('mousemove',e=>verTip(e,`<b>${REDES[r].nombre} · ${fecha(f)}</b><br>`+vs.map(v=>`${esc(corta(v.tituloLimpio,48))}: <b>${fmt(v.vistas)}</b>`).join('<br>')));c.addEventListener('mouseleave',ocultarTip);
+      c.addEventListener('click',()=>{ocultarTip();estado.video=idDe(r,vs[0]);ir(r,true)})}});
+}
+/* filas con barra partida (qué hace la gente con cada vídeo) */
+function mezcla(host, vids, claves){
+  if(!vids.length){pend(host,'Sin vídeos todavía.');return}
+  host.innerHTML='<div class="mezcla">'+vids.map((v,i)=>`<div class="t" title="${esc(v.tituloLimpio)}">${esc(v.tituloLimpio)}</div><div data-m="${i}"></div>`).join('')+'</div>';
+  vids.forEach((v,i)=>{const h=host.querySelector(`[data-m="${i}"]`);partida(h,claves.map(([k,l],j)=>({k:l,v:v[k]||0,color:CAT[j]})),{vacio:'Sin interacciones aún'});const ley=h.querySelector('.leyenda');if(ley&&i)ley.remove();else if(ley)ley.style.display='none'});
+}
+const leyendaClaves=claves=>claves.map(([k,l],j)=>`<span><i style="background:${CAT[j]}"></i>${l}</span>`).join('');
+/* seguidores guardados en la foto diaria */
+function serieSeguidores(r){const h=D.historico||{};return Object.keys(h).sort().map(f=>[f,((h[f]||{}).seguidores||{})[r]??null]).filter(d=>d[1]!=null)}
+/* red frente a YouTube */
+function pintarVs(host, r){
+  const pts=contenidos().map(c=>{const a=videoDe(c,r),y=videoDe(c,'youtube');return a&&y?{k:c.titulo,x:y.vistas||0,y:a.vistas||0,color:REDES[r].hex,id:c[r],tip:`YouTube: <b>${fmt(y.vistas)}</b><br>${REDES[r].nombre}: <b>${fmt(a.vistas)}</b>`}:null}).filter(Boolean);
+  dispersion(host,pts,{logx:true,logy:true,mismoEje:true,diagonal:true,xtit:'Vistas en YouTube',ytit:'Vistas en '+REDES[r].nombre,vacio:'Hace falta tener vídeos enlazados entre las dos redes (se enlazan solos desde lotes/*/estado.md).',click:p=>{estado.video=p.id;ir(r,true)}});
+}
+/* nombres bonitos de Analytics */
+const DISP={MOBILE:'Móvil',TABLET:'Tablet',DESKTOP:'Ordenador',TV:'Tele',GAME_CONSOLE:'Consola',UNKNOWN_PLATFORM:'Otros'};
+const SO={ANDROID:'Android',IOS:'iPhone (iOS)',WINDOWS:'Windows',MACINTOSH:'Mac',LINUX:'Linux',CHROMECAST:'Chromecast',SMART_TV:'Smart TV',PLAYSTATION:'PlayStation',XBOX:'Xbox',OTHER:'Otros'};
+const SUB={SUBSCRIBED:'Suscritos',UNSUBSCRIBED:'No suscritos'};
+const PAIS=(()=>{try{const d=new Intl.DisplayNames(['es'],{type:'region'});return c=>d.of(c)}catch(e){return c=>c}})();
+const BANDERA=c=>/^[A-Z]{2}$/.test(c)?String.fromCodePoint(...[...c].map(x=>127397+x.charCodeAt(0))):'';
+const EDAD=g=>String(g).replace('age','').replace(/-$/,'+').replace('-','–');
 
 /* ---------- cabecera ---------- */
 document.getElementById('actualizado').textContent='Estadísticas actualizadas el '+new Date(D.generado).toLocaleString('es-ES',{day:'numeric',month:'long',hour:'2-digit',minute:'2-digit',timeZone:'Europe/Madrid'});
@@ -381,6 +528,13 @@ function pintarTarjetas(){
   caja.querySelectorAll('[data-chispa]').forEach(s=>{const r=s.dataset.chispa;chispa(s,serieDiaria(r).slice(-estado.dias).map(d=>d[1]),REDES[r].hex)});
 }
 
+function pintarInicioExtra(){
+  calendario(document.getElementById('calendario'));
+  const rs=Object.keys(REDES).filter(conectada);
+  partida(document.getElementById('reparto'),rs.map(r=>({k:REDES[r].nombre,v:vistasPeriodo(r),color:REDES[r].hex})),{unidad:'vistas',vacio:'No hay vídeos publicados en este periodo.'});
+  partida(document.getElementById('reparto-seg'),rs.map(r=>({k:REDES[r].nombre,v:seguidores(r)||0,color:REDES[r].hex})),{unidad:'seguidores'});
+}
+
 /* ---------- VISTA DE RED ---------- */
 function kpi(l,n,d=''){return `<div class="kpi"><div class="l">${l}</div><div class="n">${n}</div>${d?`<div class="d">${d}</div>`:''}</div>`}
 function delta(a,b,puntos){if(a==null||!b)return 'sin periodo anterior';const x=puntos?a-b:(a-b)/b*100;return `<span class="${x>=0?'sube':'baja'}">${x>=0?'▲':'▼'} ${Math.abs(x).toLocaleString('es-ES',{maximumFractionDigits:1})}${puntos?' pts':' %'}</span> frente a los ${estado.dias} días anteriores`}
@@ -399,6 +553,7 @@ function pintarRed(r){
       kpi('Suscriptores',fmt(seguidores(r)),`+${fmt(suma(cur,'subs'))} en el periodo`)+
       kpi('% medio visto',pct(pv),delta(pv,pvP,true))+
       kpi('Likes por 1.000 vistas',suma(vp,'vistas')?(suma(vp,'likes')/suma(vp,'vistas')*1000).toLocaleString('es-ES',{maximumFractionDigits:1}):'—','de los vídeos del periodo')+
+      kpi('Minutos vistos',fmt(suma(cur,'minutos')),delta(suma(cur,'minutos'),suma(pr,'minutos')))+
       kpi('Vídeos publicados',vp.length,'');
   } else {
     const v=suma(vp,'vistas'), eng=v?(suma(vp,'likes')+suma(vp,'comentarios')+suma(vp,'compartidos'))/v*100:null;
@@ -415,7 +570,24 @@ function pintarRed(r){
       <div class="panel"><h3>Vistas por día</h3><p class="nota">${r==='youtube'?'Del canal, según YouTube Analytics':'Calculadas con la foto diaria; empiezan el día en que se conectó la red'}</p><div id="red-diario"></div></div>
       <div class="panel"><h3>Lo destacado</h3><p class="nota">Calculado cada mañana</p><div id="red-dest"></div></div>
     </div>
-    <div class="panel"><h3>Vídeos del periodo</h3><p class="nota">${r==='youtube'?'Pulsa un vídeo para ver su ficha y su curva de retención':'Pulsa un vídeo para ver su ficha'}</p><div class="lista" id="red-lista"></div></div>`;
+    <div class="panel"><h3>Vídeos del periodo</h3><p class="nota">${r==='youtube'?'Pulsa un vídeo para ver su ficha y su curva de retención':'Pulsa un vídeo para ver su ficha'}</p><div class="lista" id="red-lista"></div></div>
+    ${r==='youtube'?`
+    <h2 class="seccion">Cómo rinde cada vídeo</h2><p class="nota">Todos los vídeos del canal, no solo los del periodo</p>
+    <div class="dos"><div class="panel"><h3>Vistas frente a % visto</h3><p class="nota">Cada punto es un vídeo; las líneas son la media. Arriba a la izquierda están los que gustan pero aún no han despegado</p><div id="yt-disp"></div></div>
+      <div class="panel"><h3>Retención de los más vistos</h3><p class="nota">% que sigue viendo a lo largo del vídeo</p><div class="leyenda" id="yt-curvas-ley"></div><div id="yt-curvas"></div></div></div>
+    <div class="panel"><h3>El canal día a día</h3><p class="nota">Últimos ${estado.dias} días según YouTube Analytics</p><div class="minis" id="yt-minis"></div></div>
+    <h2 class="seccion">Quién te ve</h2><p class="nota" id="yt-desde">Últimos 28 días según YouTube Analytics</p>
+    <div class="dos"><div class="panel"><h3>Edad y género</h3><p class="nota">% de los espectadores con sesión iniciada</p><div id="yt-edad"></div></div>
+      <div class="panel"><h3>Países</h3><p class="nota">Vistas por país</p><div id="yt-paises"></div></div></div>
+    <div class="tres"><div class="panel"><h3>Dispositivo</h3><p class="nota">Desde dónde ven</p><div id="yt-disp2"></div></div>
+      <div class="panel"><h3>Suscritos</h3><p class="nota" id="yt-subs-nota">Vistas de suscritos y no suscritos</p><div id="yt-subs"></div></div>
+      <div class="panel"><h3>Sistema</h3><p class="nota">Móvil Android, iPhone u ordenador</p><div id="yt-so"></div></div></div>
+    <div class="panel"><h3>Cómo llegan a tus vídeos</h3><p class="nota">Vistas por fuente de tráfico, todo el canal</p><div id="yt-fuentes"></div></div>`:`
+    <h2 class="seccion">Más a fondo</h2><p class="nota">Los últimos 10 vídeos, publicados en cualquier fecha</p>
+    <div class="dos"><div class="panel"><h3>Likes por cada 1.000 vistas</h3><p class="nota">Cuánto gusta cada vídeo, sin importar cuántas vistas tenga</p><div id="r-ratio"></div></div>
+      <div class="panel"><h3>Seguidores</h3><p class="nota">Desde que se guarda la foto diaria</p><div id="r-seg"></div></div></div>
+    <div class="panel"><h3>Qué hace la gente con cada vídeo</h3><p class="nota">Reparto de las interacciones</p><div class="leyenda" id="r-mezcla-ley"></div><div id="r-mezcla"></div></div>
+    <div class="panel"><h3>${x.nombre} frente a YouTube</h3><p class="nota">Cada punto es un vídeo publicado en las dos. Por encima de la diagonal, funciona mejor en ${x.nombre}. Pulsa un punto para ver su ficha</p><div id="r-vs"></div></div>`}`;
   lineas(document.getElementById('red-diario'),serie.map(d=>fecha(d[0])),[{nombre:'Vistas',values:serie.map(d=>d[1]),color:x.color,hex:x.hex}],{area:true,titulo:i=>fecha(serie[i][0])});
   // destacados
   let h='';const top=[...vp].sort((a,b)=>(b.vistas||0)-(a.vistas||0))[0];
@@ -429,6 +601,49 @@ function pintarRed(r){
     if(mejor&&mejor.ratio>1)h+=`<div class="aviso"><b>Funciona mejor aquí que en YouTube:</b> ${esc(mejor.c.titulo)} — ${fmt(mejor.a.vistas)} frente a ${fmt(mejor.y.vistas)}</div>`}
   document.getElementById('red-dest').innerHTML=h||'<p class="pend">No hay vídeos en este periodo.</p>';
   pintarLista(r,vp);
+  if(r==='youtube')pintarYoutubeExtra();else pintarRedExtra(r);
+}
+function pintarYoutubeExtra(){
+  const V=VID.youtube, ver=v=>{estado.video=v.id;pintar()};
+  const conPct=V.filter(v=>v.pctVisto!=null);
+  dispersion(document.getElementById('yt-disp'),conPct.map(v=>({k:v.titulo,x:v.vistas||0,y:v.pctVisto,id:v.id,color:REDES.youtube.hex,tip:`${fmt(v.vistas)} vistas<br>${pct(v.pctVisto)} visto`})),
+    {logx:true,yfmt:n=>n+' %',xtit:'Vistas',ytit:'% medio visto',medias:['joyas ocultas','éxitos'],vacio:'La retención llega 48–72 h después de publicar; en cuanto haya 2 vídeos con datos aparece aquí.',click:p=>ver(p)});
+  const top=[...V].filter(v=>v.curva&&v.curva.length).sort((a,b)=>(b.vistas||0)-(a.vistas||0)).slice(0,5);
+  if(top.length){const n=Math.min(...top.map(v=>v.curva.length));const ymax=Math.max(120,Math.ceil(Math.max(...top.flatMap(v=>v.curva.slice(0,n).map(p=>p[1])))/20)*20);
+    document.getElementById('yt-curvas-ley').innerHTML=top.map((v,i)=>`<span><i style="background:${CAT[i]}"></i>${esc(corta(v.titulo,26))}</span>`).join('');
+    lineas(document.getElementById('yt-curvas'),top[0].curva.slice(0,n).map(p=>Math.round(p[0]*100)+' %'),top.map((v,i)=>({nombre:corta(v.titulo,30),values:v.curva.slice(0,n).map(p=>p[1]),color:CAT[i],hex:CAT[i]})),{ymax,ystep:20,yfmt:n=>n+' %',vfmt:pct,h:240,titulo:i=>'Al '+Math.round(top[0].curva[i][0]*100)+' % del vídeo'})}
+  else pend(document.getElementById('yt-curvas'),'Pendiente: YouTube publica la retención 48–72 h después de subir cada vídeo.');
+  const dd=(D.diario||[]).slice(-estado.dias), minis=document.getElementById('yt-minis');
+  const M=[['vistas','Vistas'],['minutos','Minutos vistos'],['subs','Suscriptores ganados'],['likes','Likes']];
+  minis.innerHTML=M.map(([k,l])=>`<div class="mini"><h4>${l}<b>${fmt(dd.reduce((s,d)=>s+(d[k]||0),0))}</b></h4><div data-mini="${k}"></div></div>`).join('');
+  M.forEach(([k,l])=>lineas(minis.querySelector(`[data-mini="${k}"]`),dd.map(d=>fecha(d.fecha)),[{nombre:l,values:dd.map(d=>d[k]??null),color:REDES.youtube.color,hex:REDES.youtube.hex}],{h:120,area:true,titulo:i=>fecha(dd[i].fecha)}));
+  const X=D.youtubeExtra;
+  const ids=['yt-edad','yt-paises','yt-disp2','yt-subs','yt-so','yt-fuentes'];
+  if(!X){ids.forEach(i=>pend(document.getElementById(i),'Llega con la próxima actualización de la mañana.'));return}
+  document.getElementById('yt-desde').textContent=`Desde el ${fecha(X.desde)} según YouTube Analytics`;
+  const eg={};(X.edadGenero||[]).forEach(([a,g,p])=>{const k=EDAD(a);eg[k]=eg[k]||{k,h:0,m:0};if(g==='male')eg[k].h+=p;else if(g==='female')eg[k].m+=p});
+  piramide(document.getElementById('yt-edad'),Object.values(eg).sort((a,b)=>a.k.localeCompare(b.k)));
+  const ps=X.paises||[];
+  if(ps.length)barrasH(document.getElementById('yt-paises'),ps.slice(0,8).map(([c,v,mn])=>({k:(BANDERA(c)+' '+PAIS(c)).trim(),v,extra:fmt(mn)+' minutos vistos'})),{nombre:'Vistas',ml:150});else pend(document.getElementById('yt-paises'),'Sin datos de países todavía.');
+  partida(document.getElementById('yt-disp2'),(X.dispositivos||[]).map(([k,v],i)=>({k:DISP[k]||k,v,color:CAT[i%6]})),{unidad:'vistas'});
+  const su=X.suscritos||[];partida(document.getElementById('yt-subs'),su.map(([k,v,p])=>({k:SUB[k]||k,v,color:k==='SUBSCRIBED'?CAT[2]:CAT[0],extra:p!=null?`Ven el ${pct(p)} de media`:''})),{unidad:'vistas'});
+  const sS=su.find(x=>x[0]==='SUBSCRIBED'),sN=su.find(x=>x[0]==='UNSUBSCRIBED');if(sS&&sN&&sS[2]!=null&&sN[2]!=null)document.getElementById('yt-subs-nota').textContent=`Los suscritos ven el ${pct(sS[2])} de media; el resto, el ${pct(sN[2])}`;
+  partida(document.getElementById('yt-so'),(X.sistemas||[]).map(([k,v],i)=>({k:SO[k]||k,v,color:CAT[i%6]})),{unidad:'vistas'});
+  const fu=X.fuentes||[], tf=fu.reduce((s,f)=>s+f[1],0);
+  if(fu.length)barrasH(document.getElementById('yt-fuentes'),fu.slice(0,7).map(([k,v])=>({k,v:v/tf*100,extra:fmt(v)+' vistas'})),{fmt:pct,nombre:'Vistas',max:100,ml:150});else pend(document.getElementById('yt-fuentes'),'Sin datos todavía.');
+}
+function pintarRedExtra(r){
+  const x=REDES[r], ult=[...VID[r]].sort((a,b)=>(b.fecha+b.hora).localeCompare(a.fecha+a.hora)).slice(0,10);
+  const ra=ult.filter(v=>v.vistas).map(v=>({k:corta(v.tituloLimpio,26),v:(v.likes||0)/v.vistas*1000,color:x.hex,extra:`${fmt(v.likes)} likes con ${fmt(v.vistas)} vistas`})).sort((a,b)=>b.v-a.v);
+  const media=ra.length?avg(ra.map(f=>f.v)):null;
+  if(ra.length)barrasH(document.getElementById('r-ratio'),ra,{fmt:N1,nombre:'Likes por 1.000 vistas',ml:190,ref:ra.length>1?media:null,refTxt:'media '+(media!=null?N1(media):'')});else pend(document.getElementById('r-ratio'),'Sin vídeos todavía.');
+  const sg=serieSeguidores(r);
+  if(sg.length>=2)lineas(document.getElementById('r-seg'),sg.map(d=>fecha(d[0])),[{nombre:'Seguidores',values:sg.map(d=>d[1]),color:x.color,hex:x.hex}],{h:200,area:true,titulo:i=>fecha(sg[i][0])});
+  else document.getElementById('r-seg').innerHTML=`<div class="vacio"><b>${fmt(seguidores(r))} seguidores hoy</b>La línea se dibuja a partir del segundo día de foto diaria.</div>`;
+  const cl=r==='instagram'?[['likes','Likes'],['comentarios','Comentarios'],['compartidos','Compartidos'],['guardados','Guardados']]:[['likes','Likes'],['comentarios','Comentarios'],['compartidos','Compartidos']];
+  document.getElementById('r-mezcla-ley').innerHTML=leyendaClaves(cl);
+  mezcla(document.getElementById('r-mezcla'),ult,cl);
+  pintarVs(document.getElementById('r-vs'),r);
 }
 function pintarLista(r,vp){
   const cols=r==='youtube'?[['vistas','Vistas'],['pctVisto','% visto'],['retencion3s','A los 3 s'],['likes','Likes']]:[['vistas','Vistas'],['likes','Likes'],['comentarios','Coment.'],['compartidos','Compart.']];
@@ -441,7 +656,7 @@ function pintarLista(r,vp){
   caja.innerHTML=`<div class="fila cab"><span>Vídeo</span>${cols.map(([k,l],i)=>`<button data-k="${k}" class="num ${i>1?'ocultable':''}" ${o===k?`aria-sort="${estado.asc?'ascending':'descending'}"`:''}>${l}${o===k?(estado.asc?' ↑':' ↓'):''}</button>`).join('')}</div>`+
     lista.map(v=>`<button class="fila" data-id="${esc(idDe(r,v))}"><span><div class="t">${esc(v.tituloLimpio)}</div><div class="sub">${fecha(v.fecha)} a las ${v.hora}${v.tema?' · '+esc(v.tema):''}</div><div class="barra" style="width:${Math.max(2,100*(v.vistas||0)/max)}%"></div></span>${cols.map(([k],i)=>`<span class="num ${i>1?'ocultable':''}">${celda(v,k)}</span>`).join('')}</button>`).join('');
   caja.querySelectorAll('.cab button').forEach(b=>b.onclick=()=>{const k=b.dataset.k;if(estado.orden===k)estado.asc=!estado.asc;else{estado.orden=k;estado.asc=false}pintarLista(r,vp)});
-  caja.querySelectorAll('button.fila').forEach(b=>b.onclick=()=>{estado.video=b.dataset.id;pintarRed(r);scrollTo({top:0})});
+  caja.querySelectorAll('button.fila').forEach(b=>b.onclick=()=>{estado.video=b.dataset.id;pintar()});
 }
 function curvaMedia(){const cs=VID.youtube.filter(v=>v.curva&&v.curva.length);if(!cs.length)return [];const n=Math.min(...cs.map(c=>c.curva.length));return cs[0].curva.slice(0,n).map((p,i)=>avg(cs.map(c=>c.curva[i][1])))}
 function pintarFicha(r){
@@ -487,13 +702,18 @@ function pintarComparativa(){
     const orden=[...cs].sort((a,b)=>tot(b)-tot(a)), W=host.clientWidth||700, rh=34, ml=Math.min(280,Math.max(150,W*.34)), mr=64, H=orden.length*rh+4, max=Math.max(1,...orden.map(tot));
     const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,width:'100%',height:H},host);
     orden.forEach((c,i)=>{const y=i*rh+4;let x=ml;const n=Math.floor(ml/6.8);el('text',{x:ml-10,y:y+15,'text-anchor':'end',style:'fill:var(--luz);font-size:12.5px'},svg).textContent=c.titulo.length>n?c.titulo.slice(0,n-1)+'…':c.titulo;
-      rs.forEach(r=>{const v=(videoDe(c,r)||{}).vistas||0;if(!v)return;const w=(W-ml-mr)*v/max;const p=el('rect',{x,y:y+4,width:Math.max(1,w-2),height:14,rx:3,fill:REDES[r].color},svg);
+      rs.forEach(r=>{const v=(videoDe(c,r)||{}).vistas||0;if(!v)return;const w=(W-ml-mr)*v/max;const p=el('rect',{x,y:y+4,width:Math.max(1,w-2),height:14,rx:3,fill:REDES[r].color,class:'crece',style:`animation-delay:${i*40}ms`},svg);
         p.addEventListener('mousemove',e=>verTip(e,`<b>${esc(c.titulo)}</b><br>${REDES[r].nombre}: <b>${fmt(v)}</b> (${Math.round(v/tot(c)*100)} %)`));p.addEventListener('mouseleave',ocultarTip);x+=w});
       el('text',{x:x+6,y:y+15,style:'fill:var(--luz);font-size:12px'},svg).textContent=fmtK(tot(c))});
   }
   const dias=[...new Set(rs.flatMap(r=>serieDiaria(r).map(d=>d[0])))].sort().slice(-estado.dias);
   const ser=rs.filter(conectada).map(r=>{const m=Object.fromEntries(serieDiaria(r));return{nombre:REDES[r].nombre,values:dias.map(f=>m[f]??null),color:REDES[r].color,hex:REDES[r].hex}});
   lineas(document.getElementById('comp-diario'),dias.map(fecha),ser,{titulo:i=>fecha(dias[i])});
+  pintarVs(document.getElementById('comp-vs-tiktok'),'tiktok');
+  const fsg=[...new Set(rs.flatMap(r=>serieSeguidores(r).map(d=>d[0])))].sort();
+  const sseg=rs.filter(conectada).map(r=>{const m=Object.fromEntries(serieSeguidores(r));return{nombre:REDES[r].nombre,values:fsg.map(f=>m[f]??null),color:REDES[r].color,hex:REDES[r].hex}});
+  document.getElementById('ley-comp3').innerHTML=sseg.map(s=>`<span><i style="background:${s.color}"></i>${s.nombre}</span>`).join('');
+  if(fsg.length>=2)lineas(document.getElementById('comp-seg'),fsg.map(fecha),sseg,{h:220,titulo:i=>fecha(fsg[i])});else pend(document.getElementById('comp-seg'),'Se empieza a guardar hoy; la línea aparece a partir de mañana.');
 }
 
 /* ---------- LABORATORIO y HORAS ---------- */
@@ -519,13 +739,24 @@ function pintarHoras(){
 
 /* ---------- navegación ---------- */
 const VISTAS=['inicio','youtube','tiktok','instagram','comparativa','laboratorio','horas'];
+let profAnterior=null;
+function profundidad(){const v=location.hash.slice(1);return !VISTAS.includes(v)||v==='inicio'?0:(estado.video&&REDES[v]?2:1)}
 function ir(v,mantenerVideo){if(!mantenerVideo)estado.video=null;estado.orden='vistas';estado.asc=false;if(location.hash==='#'+v)pintar();else location.hash=v}
 function pintar(){
+  const p=profundidad(), dir=profAnterior==null?null:p>profAnterior?'dentro':p<profAnterior?'fuera':'lado', subir=dir&&dir!=='lado';profAnterior=p;
+  ocultarTip();
+  const hacer=()=>{pintarAhora();if(subir)scrollTo({top:0,behavior:'instant'})};
+  if(!dir||matchMedia('(prefers-reduced-motion: reduce)').matches){hacer();return}
+  document.documentElement.dataset.dir=dir;
+  if(document.startViewTransition){try{document.startViewTransition(hacer);return}catch(e){}}
+  hacer();const on=document.querySelector('.vista.on');if(on){on.classList.remove('entra');void on.offsetWidth;on.classList.add('entra')}
+}
+function pintarAhora(){
   let v=location.hash.slice(1);if(!VISTAS.includes(v))v='inicio';
   if(['youtube','tiktok','instagram'].includes(v)&&!conectada(v))v='inicio';
   document.querySelectorAll('.vista').forEach(s=>s.classList.remove('on'));
   const migas=document.getElementById('migas');
-  if(v==='inicio'){migas.innerHTML='';document.getElementById('v-inicio').classList.add('on');pintarMapa();pintarTarjetas();return}
+  if(v==='inicio'){migas.innerHTML='';document.getElementById('v-inicio').classList.add('on');pintarMapa();pintarTarjetas();pintarInicioExtra();return}
   migas.innerHTML=`<button class="volver" id="volver">${estado.video&&REDES[v]?'Volver a '+REDES[v].nombre:'Volver al observatorio'}</button>`;
   document.getElementById('volver').onclick=()=>{if(estado.video&&REDES[v]){estado.video=null;pintar()}else ir('inicio')};
   if(REDES[v]){document.getElementById('v-red').classList.add('on');pintarRed(v);return}
@@ -535,7 +766,8 @@ function pintar(){
 document.querySelectorAll('[data-ir]').forEach(b=>b.onclick=()=>ir(b.dataset.ir));
 document.querySelectorAll('.rango button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.rango button').forEach(x=>x.setAttribute('aria-pressed',x===b));estado.dias=+b.dataset.d;pintar()});
 addEventListener('hashchange',pintar);
-let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(pintar,150)});
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(pintarAhora,150)});
+addEventListener('pointerdown',e=>{const h=document.documentElement.style;h.setProperty('--ox',e.clientX+'px');h.setProperty('--oy',e.clientY+'px')},true);
 pintar();
 </script>
 </body>

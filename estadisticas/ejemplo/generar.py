@@ -67,7 +67,7 @@ for i, v in enumerate(videos):
     cont.append(c)
 for d in range(14):
     f = (fin - dt.timedelta(days=13 - d)).isoformat(); k = (d + 1) / 14
-    hist[f] = {"youtube": {v["id"]: int(v["vistas"] * k) for v in videos if v["fecha"] <= f},
+    hist[f] = {"seguidores": {"youtube": int(1284 * (0.5 + k / 2)), "tiktok": int(2310 * (0.4 + .6 * k)), "instagram": int(870 * (0.6 + .4 * k))},"youtube": {v["id"]: int(v["vistas"] * k) for v in videos if v["fecha"] <= f},
                "tiktok": {v["id"]: int(v["vistas"] * k) for v in tt_v if v["fecha"] <= f},
                "instagram": {v["codigo"]: int(v["vistas"] * k) for v in ig_v if v["fecha"] <= f}}
 
@@ -76,5 +76,12 @@ out = {"generado": "2026-11-16T09:00:00+01:00", "ejemplo": True, "canal": "Parec
        "videos": videos, "diario": diario, "notas": [],
        "tiktok": {"cuenta": "parece.mentira85", "totales": {"seguidores": 2310, "likes": 15400, "videos": len(tt_v)}, "videos": tt_v},
        "instagram": {"cuenta": "parecementiramedia", "totales": {"seguidores": 870, "videos": len(ig_v)}, "videos": ig_v},
-       "contenidos": cont, "historico": hist}
+       "contenidos": cont, "historico": hist,
+       "youtubeExtra": {"desde": "2026-10-19",
+          "paises": [["ES", 18400, 9200], ["MX", 6100, 2900], ["AR", 3900, 1800], ["CO", 3100, 1500], ["US", 1900, 800], ["CL", 1500, 700], ["PE", 1200, 500], ["VE", 700, 300]],
+          "dispositivos": [["MOBILE", 33100], ["TABLET", 1400], ["DESKTOP", 900], ["TV", 300]],
+          "suscritos": [["UNSUBSCRIBED", 34200, 79.5], ["SUBSCRIBED", 1500, 104.2]],
+          "edadGenero": [["age13-17", "male", 6.1], ["age13-17", "female", 4.0], ["age18-24", "male", 21.3], ["age18-24", "female", 12.4], ["age25-34", "male", 18.2], ["age25-34", "female", 10.1], ["age35-44", "male", 9.4], ["age35-44", "female", 6.2], ["age45-54", "male", 4.8], ["age45-54", "female", 3.6], ["age55-64", "male", 2.1], ["age55-64", "female", 1.3], ["age65-", "male", 0.3], ["age65-", "female", 0.2]],
+          "fuentes": [["Feed de Shorts", 30100], ["Búsqueda", 2100], ["Página del canal", 1500], ["Externo", 900], ["Directo / otros", 600]],
+          "sistemas": [["ANDROID", 21000], ["IOS", 12800], ["WINDOWS", 600], ["MACINTOSH", 300]]}}
 json.dump(out, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json"), "w"), ensure_ascii=False)
