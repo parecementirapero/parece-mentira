@@ -15,6 +15,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 **Pendiente**: decisiones de GUIA_CALIDAD §10 (TASKS); apuntar estadísticas de retención.
 **Siguiente paso**: lote 2026-11-17-manana con `motor.calidad` en el control; Nico ve la v5 con sonido y dice si la música y los efectos nuevos le gustan.
 
+## 2026-11-17 00:25 — Agente 20:00 (Jorge) — rama `main` — aviso programado en el chat del lote
+**Hecho**: YouTube 02 (cTRgkuY21mw) y 03 (hfRveipHIdk) públicos a su hora. Comentarios escritos en todas las publicaciones del lote 2026-11-16-tarde (YouTube 1–3, TikTok 1–3, Instagram 1–3), sin fijar. Antes (22:50) se añadieron las descripciones que faltaban en los 3 Reels de Instagram.
+**Pendiente**: verificar el canal de YouTube para poder fijar comentarios (TASKS).
+**Siguiente paso**: lote 2026-11-17-manana (Nico).
+
 ## 2026-11-16 22:35 — Agente 20:00 (Jorge) — rama `main` — chat del lote (Mac de Jorge)
 **Hecho**: «ok» de Jorge a la v2 → publicado desde el navegador integrado (Jorge eligió cada archivo; copias aprobadas en `PARA PUBLICAR/2026-11-16-tarde/Vídeos` y `/Portadas`).
 - YouTube: 01 https://youtube.com/shorts/7PoER_sR6R0 (público 22:12) · 02 cTRgkuY21mw (programado 23:15) · 03 hfRveipHIdk (programado 00:15). Miniatura: fotograma elegido en Studio (subir imagen no le funcionó a Jorge).
