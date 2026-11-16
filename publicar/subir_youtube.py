@@ -15,7 +15,7 @@ Uso:
 --prueba       comprueba claves, metadatos y archivo sin subir nada.
 Imprime una línea JSON con el resultado: {"ok": true, "id": ..., "url": ..., "publicaEn": ...}.
 """
-import argparse, json, os, ssl, sys, urllib.error, urllib.parse, urllib.request
+import argparse, json, os, re, ssl, sys, urllib.error, urllib.parse, urllib.request
 
 CTX = ssl.create_default_context(cafile="/etc/ssl/cert.pem") if os.path.exists("/etc/ssl/cert.pem") else ssl.create_default_context()
 API = "https://www.googleapis.com/youtube/v3"
@@ -37,6 +37,11 @@ def peticion(url, datos=None, cabeceras=None, metodo=None):
             return r.status, dict(r.headers), r.read()
     except urllib.error.HTTPError as e:
         return e.code, dict(e.headers), e.read()
+
+
+def norma(t):
+    """Compara títulos sin hashtags, emojis, mayúsculas ni signos (para no duplicar)."""
+    return re.sub(r"[^\w]+", "", re.sub(r"#\w+", "", t or "").lower())
 
 
 def salir(msg, **extra):
@@ -80,7 +85,7 @@ def main():
         subidas = json.loads(cuerpo)["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
         st, _, cuerpo = peticion(f"{API}/playlistItems?part=snippet&maxResults=50&playlistId={subidas}", cabeceras=auth)
         for it in json.loads(cuerpo).get("items", []) if st == 200 else []:
-            if it["snippet"]["title"].strip().lower() == titulo.strip().lower():
+            if norma(it["snippet"]["title"]) == norma(titulo):
                 vid = it["snippet"]["resourceId"]["videoId"]
                 print(json.dumps({"ok": True, "yaEstaba": True, "id": vid, "url": f"https://youtube.com/shorts/{vid}"}, ensure_ascii=False))
                 return

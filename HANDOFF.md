@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 18:40 — Nico — rama `main`
+**Hecho**: dominios `oauth2.googleapis.com` y `www.googleapis.com` permitidos en Claude (Nico). Permiso de subida concedido desde el navegador integrado del Mac de Jorge (cuenta del canal, scopes `youtube.upload` + `youtube.readonly`); el token se canjeó en el propio Mac y está en su `claves.txt` como `YT_UPLOAD_REFRESH_TOKEN` (no se ha mostrado en ningún sitio). Navegador integrado: permitido `http://127.0.0.1:8765` para la vuelta de Google. `subir_youtube.py` compara títulos sin hashtags ni emojis para no duplicar.
+**Pruebas**: en el Mac de Jorge, `--prueba` con el título de un vídeo ya publicado → `yaEstaba` (bS6AUPYxr7s); con un título nuevo → listo para subir. No se ha subido nada.
+**Pendiente**: llevar la clave y el script al Mac de Nico (lote de las 08:00).
+**Siguiente paso**: primera subida real con el próximo «ok» del lote de las 20:00.
+
 ## 2026-11-16 18:30 — Nico — rama `main`
 **Hecho**: Nico aprueba las dos propuestas del análisis → `DECISIONS.md`: subidas separadas cada 2 h y ganchos que se entiendan en España y Latinoamérica (voz de España). `publicar/subir_youtube.py`: sube a YouTube por la API oficial (subida reanudable, no duplica por título, `--publicar-en` para programar, `--prueba`). La documentación de `videos.insert` (actualizada el 2026-10-15) dice que los proyectos sin verificar ya no quedan forzados a privado. `estadisticas/autorizar.py --subir` saca un permiso aparte (`youtube.upload` + `youtube.readonly`) y lo guarda en `claves.txt`. `AGENTE.md` punto 8 reescrito (YouTube por API, TikTok programado en TikTok Studio, Instagram seguido; la persona solo elige el archivo en TikTok/Instagram). Scripts copiados al Mac de Jorge (`estadisticas/autorizar.py`, `publicar/subir_youtube.py`).
 **Pruebas**: el script falla bien sin claves; ni el workspace ni el Mac llegan todavía a `oauth2.googleapis.com` (dominio no permitido en la cuenta de Claude).
