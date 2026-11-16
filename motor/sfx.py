@@ -1,4 +1,5 @@
-"""Efectos de sonido generados por código (sin licencias): whoosh, pop, tic, golpe, zap, brillo, ding, rumor, ola.
+"""Efectos de sonido generados por código (sin licencias): whoosh, pop, tic, golpe, zap, brillo, ding, rumor, ola,
+senal (satélite), fugaz (estrella fugaz), trazo (raya de línea discontinua), mordisco, meteoro.
 
 En episodio.json:  "sfx": [{"t": 1.2, "tipo": "whoosh", "db": -10, "dur": 0.45}, ...]
 `t` en segundos absolutos. El motor los mezcla con la voz y la música (no se atenúan bajo la voz).
@@ -107,8 +108,69 @@ def ola(dur=1.4, rng=None):
     return x * np.sin(np.pi * u ** 0.7) ** 2 * 1.4
 
 
+def senal(dur=0.9, f=1500):
+    """Señal de satélite: dos pitidos suaves con eco (telemetría lejana)."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    x = np.zeros(n)
+    for t0, a, ff in [(0.0, 1.0, f), (0.16, 0.8, f * 1.25), (0.42, 0.3, f), (0.58, 0.22, f * 1.25)]:
+        i0 = int(t0 * SR); m = n - i0
+        if m <= 0: continue
+        tt = np.arange(m) / SR
+        x[i0:] += a * np.sin(2 * np.pi * ff * tt) * np.clip(tt / 0.008, 0, 1) * np.exp(-tt / 0.05)
+    return x * (0.85 + 0.15 * np.sin(2 * np.pi * 9 * t))
+
+
+def fugaz(dur=0.9, rng=None):
+    """Estrella fugaz: soplo fino que cae de tono, con un brillo muy leve."""
+    rng = rng or np.random.default_rng(6)
+    n = int(dur * SR)
+    u = np.linspace(0, 1, n)
+    t = np.arange(n) / SR
+    aire = rng.normal(0, 1, n)
+    aire = _paso_bajo(aire, 6000 - 4200 * u) - _paso_bajo(aire, 1200)
+    f = 3200 * np.exp(-u * 1.6)
+    tono = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.25
+    env = np.sin(np.pi * u ** 0.45) ** 2
+    return (aire * 0.9 + tono) * env
+
+
+def trazo(dur=0.045, f=900):
+    """Tic blando para cada raya de una línea discontinua que se dibuja."""
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    return np.sin(2 * np.pi * f * t) * np.clip(t / 0.002, 0, 1) * np.exp(-t / 0.012)
+
+
+def mordisco(dur=0.22, rng=None):
+    """Mordisco a una hoja: crujido corto (varios chasquidos de ruido filtrado)."""
+    rng = rng or np.random.default_rng(7)
+    n = int(dur * SR)
+    x = np.zeros(n)
+    for t0, a in [(0.0, 1.0), (0.035, 0.7), (0.075, 0.85), (0.12, 0.45)]:
+        i0 = int(t0 * SR); m = min(n - i0, int(0.03 * SR))
+        r = rng.normal(0, 1, m)
+        r = _paso_bajo(r, 3800) - _paso_bajo(r, 500)
+        x[i0:i0 + m] += a * r * np.exp(-np.arange(m) / SR / 0.007)
+    return x
+
+
+def meteoro(dur=1.2, rng=None):
+    """Meteorito que se acerca: rugido tipo cohete que crece, con crepitar."""
+    rng = rng or np.random.default_rng(8)
+    n = int(dur * SR)
+    u = np.linspace(0, 1, n)
+    r = rng.normal(0, 1, n)
+    rugido = _paso_bajo(r, 250 + 2600 * u ** 2) * 2.2
+    grave = np.sin(2 * np.pi * np.cumsum(55 + 50 * u) / SR) * 0.8
+    crep = (rng.random(n) > 0.9985) * rng.normal(0, 6, n)
+    crep = _paso_bajo(crep, 5000)
+    env = (0.08 + 0.92 * u ** 2.2) * np.clip((1 - u) / 0.03, 0, 1)
+    return np.tanh((rugido + grave + crep) * 1.2) * env
+
+
 TIPOS = {"whoosh": whoosh, "pop": pop, "tic": tic, "golpe": golpe, "zap": zap, "brillo": brillo, "ding": ding,
-         "rumor": rumor, "ola": ola}
+         "rumor": rumor, "ola": ola, "senal": senal, "fugaz": fugaz, "trazo": trazo, "mordisco": mordisco, "meteoro": meteoro}
 
 
 def pista(eventos, dur, ruta):

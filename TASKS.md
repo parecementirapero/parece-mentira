@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] «Luna densa» v5: sonidos de satélite, estrellas fugaces y líneas discontinuas; dinosaurios comiendo hojas (mordisco); meteorito detallado con sonido antes del cambio de escena — Nico — 2026-11-16 19:02
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
@@ -16,7 +15,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Estadísticas: tarea programada en la nube que republique cada mañana (≈9:15) la página de Claude «Parece Mentira · Estadísticas» (https://claude.ai/artifact/JMkrEuUZrAmq7yzqVao8ea) con `estadisticas/web/index.html`
 - [ ] Estadísticas: rellenar `estadisticas/etiquetas.json` (tema, voz, gancho) de los vídeos publicados para el Laboratorio
 - [ ] 2026-11-17 — Nico y Jorge: decidir si se prueba el lote de la mañana en la nube (tarea programada sin depender del Mac: voz por API, montaje y vídeos en el chat; publicar sigue necesitando un Mac encendido en el «ok»). Antes: decidir si la clave de ElevenLabs se guarda en la configuración del entorno en la nube (nunca en el repo) y copiar MP3/MP4 a la carpeta local al publicar. Si sale bien, pasar también el de las 20:00 — propuesto por Jorge 2026-11-16
-- [ ] Revisar la prueba «Luna densa» v4 (39 planos de 0,3 a 2,7 s, dinosaurios y fondos nuevos, efectos de sonido; vídeo en el chat de Nico) y decidir si ese ritmo pasa a ser el estándar; si gusta, generar la locución con el texto de `lotes/prueba-luna-densa/guion.txt` (155 palabras, velocidad normal) y volver a montarlo con `gen.py DIR audio.mp3 alineacion.json`
+- [ ] Revisar la prueba «Luna densa» v5 (39 planos de 0,3 a 2,7 s, dinosaurios y fondos nuevos, efectos de sonido; vídeo en el chat de Nico) y decidir si ese ritmo pasa a ser el estándar; si gusta, generar la locución con el texto de `lotes/prueba-luna-densa/guion.txt` (155 palabras, velocidad normal) y volver a montarlo con `gen.py DIR audio.mp3 alineacion.json`
 - [ ] Nico y Jorge: tras ver el lote 2026-11-16-tarde (prueba de temas cotidianos), decidir el 2026-11-17 si la mezcla 2 cotidianos + 1 histórico se queda fija, pasa a todo cotidiano o se vuelve a lo de antes; apuntarlo en `DECISIONS.md`
 - [ ] Motor: etiqueta con línea hacia el objeto (callout) y planos en sección reutilizables (REFERENCIAS_2 §2 y §4)
 - [ ] Mejorar el encuadre automático de `a_v3.py` (algunos detalles cortan personajes): focos a mano por escena
@@ -36,6 +35,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] «Luna densa» v5: sonidos de satélite, estrellas fugaces y rayas de líneas discontinuas; dinosaurios comiendo hojas con mordisco; meteorito detallado que se acerca y cae antes del cambio de escena — Nico — 2026-11-16
 - [x] Agente de portadas autónomo (`.claude/agents/portadas.md`): texto + variante, 8 candidatas, elige sin «ok», manda la elegida al chat y al correo; AGENTE §6b/§7 y DECISIONS actualizados — Nico — 2026-11-16
 - [x] Portadas: `motor/portadas.py` (4 candidatas por vídeo + hoja con vista 3:4, elección por revisión visual con motivo), AGENTE §6b y publicación (YouTube por API si se deja, Instagram imagen, TikTok imagen o fotograma), etiqueta `portada` en las estadísticas; portadas hechas para el lote 2026-11-15-tarde — Nico — 2026-11-16
 - [x] Motor v2.3: gancho legible en el fotograma 0 (`"gancho": true`), reglas de gancho en AGENTE (negación, POV, paradoja) a partir del análisis de Reels virales del nicho — Nico — 2026-11-16

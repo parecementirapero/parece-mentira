@@ -4,6 +4,14 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 19:10 — Nico — rama `main` — chat en la nube
+**Hecho**: «Luna densa» v5 (ideas de Nico).
+- **Sonidos nuevos en `motor/sfx.py`**: `senal` (pitidos de satélite con eco), `fugaz` (soplo de estrella fugaz), `trazo` (tic blando por raya), `mordisco`, `meteoro` (rugido tipo cohete que crece). En `gen.py` son automáticos y bajos: `flecha(..., disc=...)` pone un tic por raya mientras se dibuja (máx. 8, tono que sube, −27 dB); `fugaz()` pone su sonido (−25 dB, con paneo); los satélites suenan al entrar en un plano donde se ven, como mucho cada 2,6 s (−28 dB).
+- **Dinosaurios comiendo**: el braquiosaurio se queda quieto junto a una rama (`comer()`): cabecea, la rama pierde un bocado (`rama_hojas` → `rama_mordida1/2`), caen trocitos de hoja y suena el mordisco; el triceratops muerde un arbusto. Reloj y calendario más pequeños y a la derecha para que se vea la escena.
+- **Meteorito** (`meteorito.svg`: roca con cráteres y grietas incandescentes, frente al rojo blanco, cola de fuego en capas, chispas): se ve pequeño y lejano acercándose durante los tres planos de dinosaurios (`meteoro_lejos`, tiempo absoluto) y cae en un micro plano nuevo (palabra 103, 0,8 s) con temblor, cielo que se enciende, fogonazo blanco y fundido desde blanco a la almeja fósil. Sonido: `meteoro` + `golpe` + `rumor`.
+**Pruebas**: 12 fotogramas del tramo 26–32 s revisados; render 48,3 s, −19,5 LUFS, pico −1,1 dBFS; 40 planos, 176 efectos; control de lectura OK.
+**Pendiente**: el reloj tapa un poco la rama en el plano de las 23,5 h; oírlo con la voz real para ajustar volúmenes.
+
 ## 2026-11-16 19:05 — Nico — rama `main`
 **Hecho**: a petición de Nico, las portadas ya no necesitan «ok». Subagente nuevo `.claude/agents/portadas.md`: escribe el texto de portada (2–5 palabras) y una variante, genera 8 candidatas con `motor.portadas`, mira las hojas, elige con criterios fijos (sujeto grande y reconocible, texto que no lo tapa, legible en 3:4, coherente con el primer segundo; desempate hacia el diseño menos probado salvo que las estadísticas ya digan cuál va mejor), lo registra con motivo y lo apunta en `metadatos.json`. AGENTE §6b (lanzar el subagente para los 3 vídeos a la vez; si no está disponible, mismos pasos a mano), §7 (se manda `portada.jpg` al chat y la portada va en el correo como información). DECISIONS: tachado «el ok aprueba también las portadas». Los vídeos siguen necesitando «ok» (CLAUDE.md).
 **Pruebas**: solo documentación y flujo; el script ya estaba probado (entrada de las 19:10). Sin comprobar si la tarea programada carga los subagentes del repo (por eso el plan B a mano).

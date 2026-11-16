@@ -490,12 +490,91 @@ def bg_jungla_rica():
     guardar("bg_jungla", "".join(b), defs=d)
 
 
+# ======================================================================= METEORITO Y HOJAS (v5 densa)
+def meteorito():
+    """Meteorito detallado que viaja hacia la IZQUIERDA (la cola queda a la derecha): roca con cráteres y grietas
+    incandescentes, frente al rojo blanco, cola de fuego en capas y chispas."""
+    w, h = 1400, 520
+    r = random.Random(71)
+    cy = h / 2
+    d = (lg("mt_c1", (0, "#fff6d0"), (0.12, "#ffd24a"), (0.4, "#ff7a1a"), (0.75, "#c2281a"), (1, "#c2281a00"), x2=1, y2=0) +
+         lg("mt_c2", (0, "#ffffff"), (0.2, "#fff0a0"), (0.6, "#ffb030"), (1, "#ffb03000"), x2=1, y2=0) +
+         lg("mt_h", (0, "#6a6a72"), (0.5, "#3a3a44"), (1, "#3a3a4400"), x2=1, y2=0) +
+         rg("mt_r", (0, "#8a7462", 1), (0.6, "#4a3a32", 1), (1, "#1e1614", 1), cx=0.7, cy=0.35) +
+         rg("mt_f", (0, "#ffffff", 1), (0.35, "#fff0a0", 0.9), (0.7, "#ff8a1a", 0.5), (1, "#ff8a1a", 0), cx=0.5, cy=0.5) +
+         '<clipPath id="mt_cl"><path d="M150 260 C140 190 190 140 250 130 C310 118 370 150 385 205 C400 250 392 320 350 362 C300 400 220 398 180 360 C158 335 152 300 150 260 Z"/></clipPath>')
+    roca = "M150 260 C140 190 190 140 250 130 C310 118 370 150 385 205 C400 250 392 320 350 362 C300 400 220 398 180 360 C158 335 152 300 150 260 Z"
+    b = [  # humo exterior, llama exterior, llama interior
+        f'<path d="M260 {cy-150} C600 {cy-190} 1000 {cy-120} 1390 {cy-20} C1000 {cy+60} 600 {cy+185} 260 {cy+150} Z" fill="url(#mt_h)" opacity="0.55" filter="url(#blur20)"/>',
+        f'<path d="M230 {cy-135} C520 {cy-150} 900 {cy-80} 1300 {cy} C900 {cy+80} 520 {cy+150} 230 {cy+135} Z" fill="url(#mt_c1)" filter="url(#blur8)"/>',
+        f'<path d="M240 {cy-85} C460 {cy-90} 720 {cy-40} 980 {cy} C720 {cy+40} 460 {cy+90} 240 {cy+85} Z" fill="url(#mt_c2)"/>']
+    for _ in range(9):  # lenguas de fuego
+        x0, y0, L = r.uniform(300, 700), cy + r.uniform(-110, 110), r.uniform(200, 520)
+        b.append(f'<path d="M{x0:.0f} {y0-10:.0f} Q{x0+L*0.5:.0f} {y0+r.uniform(-30,30):.0f} {x0+L:.0f} {y0+(cy-y0)*0.5:.0f} Q{x0+L*0.5:.0f} {y0+14:.0f} {x0:.0f} {y0+10:.0f} Z" fill="#ffd24a" opacity="{r.uniform(0.35,0.7):.2f}"/>')
+    for _ in range(40):  # chispas
+        x0, y0 = r.uniform(380, 1350), cy + r.gauss(0, 70)
+        b.append(f'<circle cx="{x0:.0f}" cy="{y0:.0f}" r="{r.uniform(2,6):.1f}" fill="{r.choice(["#fff6d0","#ffd24a","#ff8a1a"])}" opacity="{r.uniform(0.5,1):.2f}"/>')
+    b += [f'<circle cx="250" cy="{cy}" r="230" fill="url(#mt_f)" opacity="0.9"/>',
+          f'<path d="{roca}" fill="url(#mt_r)"/>', '<g clip-path="url(#mt_cl)">']
+    for _ in range(9):  # cráteres de la roca
+        x0, y0, rr = r.uniform(190, 360), r.uniform(160, 360), r.uniform(10, 26)
+        b.append(f'<ellipse cx="{x0:.0f}" cy="{y0:.0f}" rx="{rr:.0f}" ry="{rr*0.8:.0f}" fill="#1e1614" opacity="0.55"/>'
+                 f'<path d="M{x0-rr:.0f} {y0:.0f} A{rr:.0f} {rr*0.8:.0f} 0 0 0 {x0+rr:.0f} {y0:.0f}" stroke="#b89a80" stroke-width="2.5" opacity="0.6" fill="none"/>')
+    for _ in range(7):  # grietas incandescentes
+        x0, y0 = r.uniform(170, 300), r.uniform(170, 350)
+        pts = " ".join(f"L{x0 + k*22 + r.uniform(-6,6):.0f} {y0 + r.uniform(-18,18):.0f}" for k in range(1, 5))
+        b.append(f'<path d="M{x0:.0f} {y0:.0f} {pts}" stroke="#ffb030" stroke-width="5" opacity="0.9" fill="none" stroke-linejoin="round"/>'
+                 f'<path d="M{x0:.0f} {y0:.0f} {pts}" stroke="#fff6d0" stroke-width="1.8" fill="none" stroke-linejoin="round"/>')
+    b += [f'<rect width="{w}" height="{h}" fill="#888" filter="url(#grano)"/>', '</g>',
+          # frente al rojo blanco (onda de choque) por delante de la roca
+          f'<path d="M190 130 C110 190 100 330 190 392" stroke="#fff6d0" stroke-width="16" opacity="0.9" fill="none" stroke-linecap="round" filter="url(#blur8)"/>',
+          f'<path d="M175 150 C112 205 108 318 175 372" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round"/>']
+    guardar("meteorito", "".join(b), w, h, d)
+
+
+def _hoja(x, y, L, ang, col, luz="#cfe58a"):
+    return (f'<g transform="translate({x:.0f} {y:.0f}) rotate({ang:.0f})"><path d="M0 0 C{L*0.3:.0f} {-L*0.32:.0f} {L*0.8:.0f} {-L*0.25:.0f} {L:.0f} 0 '
+            f'C{L*0.8:.0f} {L*0.25:.0f} {L*0.3:.0f} {L*0.32:.0f} 0 0 Z" fill="{col}"/>'
+            f'<path d="M0 0 L{L:.0f} 0" stroke="{luz}" stroke-width="2" opacity="0.6"/>'
+            + "".join(f'<path d="M{L*k:.0f} 0 l{L*0.12:.0f} {-L*0.12:.0f} M{L*k:.0f} 0 l{L*0.12:.0f} {L*0.12:.0f}" stroke="{luz}" stroke-width="1.2" opacity="0.45"/>' for k in (0.3, 0.5, 0.7)) + '</g>')
+
+
+def rama(nombre, mordida=0):
+    """Rama con hojas detalladas; `mordida` = número de bocados que le faltan (por la izquierda)."""
+    w, h = 520, 360
+    r = random.Random(81)
+    b = ['<path d="M520 200 C400 190 280 175 120 185" stroke="#3a2a1a" stroke-width="16" stroke-linecap="round" fill="none"/>',
+         '<path d="M520 196 C400 186 280 171 120 181" stroke="#8a6a44" stroke-width="4" opacity="0.6" stroke-linecap="round" fill="none"/>']
+    for i in range(22):
+        x = 110 + i * 18 + r.uniform(-6, 6); y = 184 + (x - 120) * 0.04
+        for sgn in (-1, 1):
+            b.append(_hoja(x, y, r.uniform(70, 120), sgn * r.uniform(40, 80) + 180 * (sgn < 0) * 0 + (0 if sgn > 0 else 0) - (0 if sgn > 0 else 0),
+                           r.choice(["#3f7a2a", "#4f9a34", "#2f6a22", "#62a83c"])))
+    cuerpo = "".join(b)
+    if mordida:
+        huecos = "".join(f'<circle cx="{95 + k*85}" cy="{150 + (k % 2)*70}" r="{70 - k*6}" fill="#000"/>' for k in range(mordida))
+        cuerpo = (f'<mask id="mk{mordida}" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="{h}"><rect width="{w}" height="{h}" fill="#fff"/>{huecos}</mask>'
+                  f'<g mask="url(#mk{mordida})">{cuerpo}</g>')
+    guardar(nombre, cuerpo, w, h)
+
+
+def arbusto():
+    w, h = 460, 300
+    r = random.Random(91)
+    b = ['<ellipse cx="230" cy="285" rx="200" ry="14" fill="#000" opacity="0.35" filter="url(#blur8)"/>']
+    for i in range(46):
+        a = r.uniform(-170, -10)
+        b.append(_hoja(230 + r.uniform(-90, 90), 280, r.uniform(90, 210), a, r.choice(["#2f6a22", "#3f7a2a", "#4f9a34", "#26521c"])))
+    guardar("arbusto", "".join(b), w, h)
+
+
 def todo_v4():
     bg_espacio_rico("bg_esp_violeta", "violeta", 3)
     bg_espacio_rico("bg_esp_petroleo", "petroleo", 5)
     bg_espacio_rico("bg_esp_ambar", "ambar", 8)
     bg_superficie_rica(); bg_eclipse_rico(); bg_jungla_rica()
     braquiosaurio(); tiranosaurio(); triceratops(); estegosaurio(); raptor(); pterosaurio_detalle()
+    meteorito(); rama("rama_hojas"); rama("rama_mordida1", 1); rama("rama_mordida2", 2); arbusto()
 
 
 if __name__ == "__main__":

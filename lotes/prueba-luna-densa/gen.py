@@ -90,11 +90,17 @@ def luna(x, y, ancho, z=0.4, keys=None, **k): return IMG("luna_hd", ancho=ancho,
 def flecha(pts, t0, t1, color="#ffffffcc", g=8, disc=None, punta=True, z=0.5):
     f = {"tipo": "flecha", "puntos": pts, "grosor": g, "color": color, "punta": punta, "z": z,
          "keys": [{"t": t0, "progreso": 0}, {"t": t1, "progreso": 1, "ease": "salida"}]}
-    if disc: f["discontinua"] = disc
+    if disc:
+        f["discontinua"] = disc
+        largo = sum(((pts[i + 1][0] - pts[i][0]) ** 2 + (pts[i + 1][1] - pts[i][1]) ** 2) ** 0.5 for i in range(len(pts) - 1))
+        n = int(min(8, max(3, largo / (disc[0] + disc[1]) / 2)))  # un tic blando por raya (máx. 8 para no saturar)
+        for i in range(n):
+            fx(INI + t0 + (t1 - t0) * (i / n) ** 1.4, "trazo", -27, f=820 + 55 * i)
     return f
 
 
 def fugaz(t0, x0, y0, x1, y1, z=0.12):
+    fx(INI + t0, "fugaz", -25, pan=round((x0 + x1) / 1080 - 1, 2))
     return {"tipo": "flecha", "puntos": [[x0, y0], [x1, y1]], "grosor": 3, "color": "#ffffffee", "punta": False, "z": z,
             "keys": [{"t": t0, "progreso": 0, "op": 1}, {"t": t0 + 0.7, "progreso": 1}, {"t": t0 + 1.0, "op": 1}, {"t": t0 + 1.6, "op": 0}]}
 
@@ -102,17 +108,26 @@ def fugaz(t0, x0, y0, x1, y1, z=0.12):
 INI = 0.0  # inicio absoluto del plano que se está construyendo (lo fija el bucle de abajo)
 
 
-def recorrido(T0, T1, p0, p1, d):
+SAT_PLANOS = []  # (inicio, fin) de los planos donde se ve un satélite, para ponerle su señal
+
+
+def recorrido(T0, T1, p0, p1, d, esc=None):
     """Claves de un objeto que cruza la pantalla entre los segundos ABSOLUTOS T0 y T1 (de p0 a p1).
     Como depende del tiempo del vídeo y no del plano, sigue en el mismo sitio de un plano al siguiente."""
     def en(T):
         u = min(max((T - T0) / (T1 - T0), 0), 1)
-        return {"x": p0[0] + (p1[0] - p0[0]) * u, "y": p0[1] + (p1[1] - p0[1]) * u, "op": 1 if T0 <= T <= T1 else 0}
+        k = {"x": p0[0] + (p1[0] - p0[0]) * u, "y": p0[1] + (p1[1] - p0[1]) * u, "op": 1 if T0 <= T <= T1 else 0}
+        if esc: k["escala"] = esc[0] + (esc[1] - esc[0]) * u
+        return k
     return [{"t": 0, **en(INI), "ease": "lineal"}, {"t": d, **en(INI + d)}]
 
 
 # detalles de fondo que duran varios segundos (cruzan despacio y se ven en varios planos seguidos)
+SAT = [(0.8, 19.0, (-100, 1680), (1180, 1480)), (33.0, 47.5, (1180, 260), (-100, 420))]
+
+
 def satelite(d, z=0.15):
+    SAT_PLANOS.append((INI, INI + d))
     return [IMG("satelite", ancho=150, z=z, rot=-15, anim={"girar": 4}, keys=recorrido(0.8, 19.0, (-100, 1680), (1180, 1480), d)),
             IMG("satelite", ancho=120, z=z, rot=20, anim={"girar": -4}, keys=recorrido(33.0, 47.5, (1180, 260), (-100, 420), d))]
 
@@ -364,49 +379,100 @@ def _(d):
              hud=[{**contador(0.05, d - 0.03, 0, 1.8, d * 0.35, "MS POR SIGLO", tam=96, y=1620, contar_prefijo="+"), "decimales": 1}])
 
 
-@plano(86, "dinosaurios")
+T_MET = w(103)  # segundo en que cae el meteorito (micro plano antes de salir de los dinosaurios)
+BRAQ = (230, 1135, 620)  # braquiosaurio quieto junto a su rama (x, y, ancho); su cabeza queda en ≈(488, 958)
+
+
+def comer(d, mordiscos, rama_antes, rama_despues, t_cambio=None):
+    """Braquiosaurio que come de una rama: cabecea en cada mordisco (fracciones del plano), caen trocitos de hoja
+    y suena el mordisco. La rama cambia de `rama_antes` a `rama_despues` en el primer mordisco."""
+    ks = [{"t": 0, "rot": 0}]
+    bits, son = [], []
+    for f in mordiscos:
+        t = f * d
+        ks += [{"t": round(t - 0.16, 3), "rot": 0}, {"t": round(t, 3), "rot": 4}, {"t": round(t + 0.2, 3), "rot": 0}]
+        son.append((t, "mordisco", -15))
+        for i in range(5):
+            bits.append({"tipo": "forma", "forma": "elipse", "ancho": 22, "alto": 10, "relleno": ["#62a83c", "#3f7a2a"], "z": 0.3, "rot": 30 * i,
+                         "keys": [{"t": t, "x": 500 + i * 8, "y": 975, "op": 0}, {"t": t + 0.03, "op": 1},
+                                  {"t": t + 0.55, "x": 470 + i * 26, "y": 1160 + i * 14, "rot": 200 + 40 * i, "op": 0, "ease": "entrada"}]})
+    tc = (t_cambio if t_cambio is not None else (mordiscos[0] * d if mordiscos else 0))
+    ramas = [IMG(rama_antes, ancho=300, x=600, y=950, z=0.24, keys=[{"t": 0, "op": 1}, {"t": tc, "op": 1}, {"t": tc + 0.02, "op": 0}]),
+             IMG(rama_despues, ancho=300, x=600, y=950, z=0.24, keys=[{"t": 0, "op": 0}, {"t": tc, "op": 0}, {"t": tc + 0.02, "op": 1}])]
+    return [*ramas, IMG("dino_braquio", ancho=BRAQ[2], x=BRAQ[0], y=BRAQ[1], z=0.25, keys=ks), *bits], son
+
+
+def meteoro_lejos(d):
+    """El meteorito, pequeño y lejano, que se acerca por el cielo durante todos los planos de dinosaurios."""
+    return [brillo(0, 0, 150, "#ffb060", 0.5, 0.11, keys=recorrido(25.7, T_MET, (90, 600), (230, 760), d, esc=(0.4, 1.2))),
+            IMG("meteorito", ancho=420, z=0.12, ex=-1, rot=49, keys=recorrido(25.7, T_MET, (90, 600), (230, 760), d, esc=(0.22, 0.62)))]
+
+
+@plano(86, "dinosaurios comiendo")
 def _(d):
-    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"),
-             IMG("dino_braquio", ancho=560, z=0.22, anim={"balanceo": [1, 1.4]}, keys=recorrido(25.5, 32.0, (760, 1170), (520, 1170), d)),
-             IMG("dino_trice", ancho=500, z=0.5, anim={"balanceo": [1.2, 0.9]}, keys=recorrido(25.5, 32.0, (1100, 1430), (600, 1430), d), ex=-1),
-             *pterosaurios(d), polvo("#ffd9a0", 25, sem=18),
-             *[IMG("dino_raptor", ancho=330, z=0.8, anim={"balanceo": [3, 0.35]}, keys=K(d, (0, {"x": -200 - i * 160, "y": 1640 + i * 40, "ease": "lineal"}), (1, {"x": 520 - i * 160, "y": 1640 + i * 40})))
+    come, son = comer(d, [0.6], "rama_hojas", "rama_mordida1")
+    f = 0.3  # el triceratops muerde su arbusto
+    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"), *meteoro_lejos(d), *pterosaurios(d), *come,
+             IMG("arbusto", ancho=250, x=540, y=1505, z=0.5),
+             IMG("dino_trice", ancho=500, x=790, y=1440, z=0.5, ex=-1,
+                 keys=[{"t": 0, "rot": 0}, {"t": f * d - 0.15, "rot": 0}, {"t": f * d, "rot": -5}, {"t": f * d + 0.2, "rot": 0}]),
+             polvo("#ffd9a0", 25, sem=18),
+             *[IMG("dino_raptor", ancho=330, z=0.8, anim={"balanceo": [3, 0.35]}, keys=K(d, (0, {"x": -200 - i * 160, "y": 1680 + i * 40, "ease": "lineal"}), (1, {"x": 520 - i * 160, "y": 1680 + i * 40})))
                for i in range(2)],
              {**brillo(300, 640, 200, "#6b5a5a", 0.5, 0.06), "anim": {"deriva": [10, -60]}}],
-             cam(1.0, 1.06, (540, 1200), (500, 1200)), "zoom", vineta=0.5, sfx=[(0.1, "golpe", -15), (0.6, "golpe", -17)])
+             cam(1.0, 1.06, (540, 1200), (500, 1200)), "zoom", vineta=0.5, sfx=[(f * d, "mordisco", -16), *son, (0.1, "golpe", -19)])
 
 
 @plano(89, "23,5 horas (plano largo)")
 def _(d):
-    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"),
-             IMG("dino_braquio", ancho=560, z=0.22, anim={"balanceo": [1, 1.4]}, keys=recorrido(25.5, 32.0, (760, 1170), (520, 1170), d)),
-             IMG("dino_trex", ancho=620, z=0.35, anim={"balanceo": [1.5, 1.0]}, keys=K(d, (0, {"x": 1300, "y": 1360, "ease": "lineal"}), (1, {"x": 780, "y": 1360})), ex=-1),
-             *pterosaurios(d),
-             {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 1920, "relleno": "#000000", "x": 540, "y": 960, "z": 0.4, "op": 0.4},
-             *reloj(540, 1000, 600, 0, 0, 23, 30, 0.1, d * 0.8),
-             IMG("dino_estego", ancho=430, z=0.8, keys=K(d, (0, {"x": -260, "y": 1640, "ease": "lineal"}), (1, {"x": 260, "y": 1640})))],
-             cam(1.0, 1.08, (540, 1000), (540, 1000)),
-             hud=[{**contador(0.15, d - 0.05, 24, 23.5, d * 0.5, "HORAS", y=1560), "decimales": 1}, contexto(0.1, d - 0.05, "HACE 70 MILLONES DE AÑOS")],
-             sfx=[(0.15 + i * 0.2, "tic", -22) for i in range(int(d * 0.8 / 0.2))] + [(0.3, "golpe", -20), (1.2, "golpe", -20)])
+    come, son = comer(d, [0.3, 0.75], "rama_mordida1", "rama_mordida2")
+    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"), *meteoro_lejos(d), *pterosaurios(d), *come,
+             IMG("dino_trex", ancho=560, z=0.35, anim={"balanceo": [1.5, 1.0]}, keys=K(d, (0, {"x": 1350, "y": 1400, "ease": "lineal"}), (1, {"x": 820, "y": 1400})), ex=-1),
+             {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 1920, "relleno": "#000000", "x": 540, "y": 960, "z": 0.4, "op": 0.22},
+             *reloj(800, 800, 380, 0, 0, 23, 30, 0.1, d * 0.8),
+             IMG("dino_estego", ancho=430, z=0.8, keys=K(d, (0, {"x": -260, "y": 1680, "ease": "lineal"}), (1, {"x": 260, "y": 1680})))],
+             cam(1.0, 1.05, (540, 1000), (540, 1000)),
+             hud=[{**contador(0.15, d - 0.05, 24, 23.5, d * 0.5, "HORAS", tam=96, x=800, y=1090), "decimales": 1}, contexto(0.1, d - 0.05, "HACE 70 MILLONES DE AÑOS")],
+             sfx=[(0.15 + i * 0.2, "tic", -24) for i in range(int(d * 0.8 / 0.2))] + son + [(0.3, "golpe", -21), (1.2, "golpe", -21)])
 
 
-@plano(96, "372 días (plano largo)")
+@plano(96, "372 días")
 def _(d):
-    n = 7
-    hojas = [IMG("calendario", ancho=520, x=540, y=1000, z=0.6 - i * 0.001,
-                 keys=[{"t": 0.15 + i * d * 0.09, "y": 1000, "rot": 0, "op": 1}, {"t": 0.45 + i * d * 0.09, "y": 300, "rot": -25 + i * 9, "op": 0, "ease": "entrada"}]) for i in range(n)]
-    return P(["#3a2a1c", "#1a1410"], [brillo(540, 900, 700, "#ffcf8a", 0.35), IMG("calendario", ancho=520, x=540, y=1000, z=0.59), *reversed(hojas)],
-             cam(1.0, 1.06, (540, 1000), (540, 980)), "desenfoque", vineta=0.65,
-             hud=[contador(0.1, d - 0.05, 365, 372, d * 0.65, "DÍAS", tam=130, y=1580)],
-             sfx=[(0.2 + i * d * 0.09, "whoosh", -24, {"dur": 0.18}) for i in range(n)])
+    n = 6
+    come, son = comer(d, [0.45], "rama_mordida2", "rama_mordida2")
+    hojas = [IMG("calendario", ancho=400, x=770, y=900, z=0.6 - i * 0.001,
+                 keys=[{"t": 0.12 + i * d * 0.1, "y": 900, "rot": 0, "op": 1}, {"t": 0.42 + i * d * 0.1, "y": 330, "rot": -25 + i * 9, "op": 0, "ease": "entrada"}]) for i in range(n)]
+    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"), *meteoro_lejos(d), *pterosaurios(d), *come,
+             {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 1920, "relleno": "#000000", "x": 540, "y": 960, "z": 0.4, "op": 0.25},
+             IMG("calendario", ancho=400, x=770, y=900, z=0.59), *reversed(hojas)],
+             cam(1.0, 1.05, (540, 1000), (540, 980)), vineta=0.55,
+             hud=[contador(0.1, d - 0.05, 365, 372, d * 0.6, "DÍAS", tam=110, x=770, y=1230)],
+             sfx=[(0.17 + i * d * 0.1, "whoosh", -25, {"dur": 0.18}) for i in range(n)] + son + [(0.0, "meteoro", -24, {"dur": d})])
+
+
+@plano(103, "micro: cae el meteorito")
+def _(d):
+    cae = K(d, (0, {"x": 80, "y": 330, "escala": 0.7}), (1, {"x": 660, "y": 960, "escala": 1.3, "ease": "entrada"}))
+    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"),
+             {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 1920, "relleno": "#ff7a1a", "x": 540, "y": 960, "z": 0.05, "keys": K(d, (0, {"op": 0.05}), (1, {"op": 0.4}))},
+             *pterosaurios(d), IMG("rama_mordida2", ancho=300, x=600, y=950, z=0.24),
+             IMG("dino_braquio", ancho=BRAQ[2], x=BRAQ[0], y=BRAQ[1], z=0.25, keys=K(d, (0, {"rot": 0}), (0.4, {"rot": -5}))),
+             IMG("dino_trice", ancho=500, x=790, y=1440, z=0.5, ex=-1),
+             brillo(0, 0, 520, "#ffb060", 0.9, 0.55, keys=cae),
+             IMG("meteorito", ancho=1150, z=0.6, ex=-1, rot=47, keys=cae),
+             polvo("#ffd24a", 40, (0, 200, 1080, 1300), 44, "chispas"),
+             {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#fff6e0", "x": 540, "y": 960, "hud": True, "z": 1, "keys": K(d, (0, {"op": 0}), (0.72, {"op": 0}), (1, {"op": 1}))}],
+             {"zoom": [1.0, 1.1], "foco": [[540, 1000], [560, 1000]], "pan": [[0, 0], [0, 0]], "temblor": 12},
+             sfx=[(-0.3, "meteoro", -9, {"dur": d + 0.3}), (d - 0.02, "golpe", -8), (d, "rumor", -14, {"dur": 1.3})])
 
 
 @plano(105, "rayas: lupa")
 def _(d):
     return P(["#2a241c", "#120f0a"], [brillo(540, 900, 700, "#ffe2b0", 0.35), polvo("#ffe9c0", 20, sem=21),
              IMG("almeja_fosil", ancho=880, x=540, y=1050, z=0.6),
-             IMG("lupa", ancho=520, x=0, y=900, z=0.7, keys=K(d, (0.2, {"x": 900}), (0.6, {"x": 540, "ease": "salida"})))],
-             cam(1.0, 1.08, (540, 1050), (540, 1000)), "zoom", vineta=0.65, hud=[contexto(0.05, d - 0.05, "1 RAYA = 1 DÍA")], sfx=[(d * 0.6, "brillo", -16)])
+             IMG("lupa", ancho=520, x=0, y=900, z=0.7, keys=K(d, (0.2, {"x": 900}), (0.6, {"x": 540, "ease": "salida"}))),
+             {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#fff6e0", "x": 540, "y": 960, "hud": True, "z": 1, "keys": [{"t": 0, "op": 1}, {"t": 0.4, "op": 0}]}],
+             cam(1.0, 1.08, (540, 1050), (540, 1000)), "corte", vineta=0.65, hud=[contexto(0.05, d - 0.05, "1 RAYA = 1 DÍA")], sfx=[(d * 0.6, "brillo", -16)])
 
 
 @plano(110, "almeja fósil de cerca")
@@ -526,6 +592,17 @@ for k, (ini, nombre, fn) in enumerate(PLANOS):
         t, tipo, db = s[:3]
         fx(ini + t, tipo, db, **(s[3] if len(s) > 3 else {}))
     informe.append((d, nombre))
+
+# señal suave de los satélites: un par de pitidos al entrar en un plano donde se ven (como mucho cada 2,6 s),
+# con paneo según por dónde van
+ultimo = -9
+for a, b in sorted(SAT_PLANOS):
+    T = a + 0.25
+    for T0, T1, p0, p1 in SAT:
+        if T0 + 0.3 <= T <= T1 - 0.5 and b - a >= 0.9 and T - ultimo >= 2.6:
+            x = p0[0] + (p1[0] - p0[0]) * (T - T0) / (T1 - T0)
+            fx(T, "senal", -28, pan=round(max(-0.8, min(0.8, x / 540 - 1)), 2))
+            ultimo = T
 
 claves = ["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"]
 M.guardar("02", "luna-densa", FIN, claves, {"generar": "curiosidad", "semilla": 3})

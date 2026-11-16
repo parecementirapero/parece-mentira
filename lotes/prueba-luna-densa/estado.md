@@ -4,4 +4,5 @@
 - Montaje: `gen.py` (v3: 39 planos atados a palabras, de 0,3 a 2,7 s, con control de lectura, efectos de sonido) + `ilus_luna.py` (ilustraciones nuevas) + `provisional.py` (tiempos sin voz).
 - Render de prueba sin voz: enviado al chat de Nico (no está en git).
 - v4: detalles de fondo persistentes, 5 dinosaurios detallados, fondos con más tonos.
+- v5: sonidos de satélite/fugaces/rayas, dinosaurios comiendo, meteorito.
 - Estado: **en revisión**.
