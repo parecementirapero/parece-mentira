@@ -26,6 +26,8 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 CIAN, MAGENTA, LIMA, AMBAR = "#2ff3ff", "#ff3df2", "#7dff3a", "#ffe93d"  # neones para fondos oscuros
 ESPACIO = ["#02030a", "#0a1030"]
 LEER = lambda txt: 0.25 + len(txt) / 17  # segundos mínimos para leer un texto (una cifra suelta: ~0,3 s)
+# Zona segura común a Shorts, Reels y TikTok (GUIA_CALIDAD §4): fuera de aquí, la app tapa el texto con sus botones.
+SEG_ARRIBA, SEG_ABAJO, SEG_DER = 240, 1400, 900
 
 _V = None  # vídeo que se está construyendo (lo usan flecha, fugaz, recorrido y fx)
 
@@ -228,8 +230,31 @@ class Video:
             return fn
         return reg
 
-    def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=300, grano=0.03):
-        """Monta todos los planos y escribe salida/episodio.json. Devuelve la lista de avisos de lectura (vacía = bien)."""
+    def _a_zona_segura(self, h, nombre):
+        """Recoloca un rótulo que se sale de la zona segura: lo sube si baja de y=1400, lo encoge si no cabe a lo ancho
+        y lo aparta de la columna de botones de la derecha. Devuelve True si lo ha tocado."""
+        from .calidad import _caja
+        tocado = False
+        for _ in range(6):
+            x0, y0, x1, y1 = _caja(h)
+            if x1 - x0 > 900 and h.get("tam", 120) > 44:
+                h["tam"] = int(h.get("tam", 120) * 0.9); tocado = True; continue
+            break
+        x0, y0, x1, y1 = _caja(h)
+        if y1 > SEG_ABAJO:
+            h["y"] = round(h.get("y", 960) - (y1 - SEG_ABAJO)); tocado = True
+        x0, y0, x1, y1 = _caja(h)
+        if x1 > SEG_DER and y1 > 800:
+            h["x"] = round(max(h.get("x", 540) - (x1 - SEG_DER), (x1 - x0) / 2 + 60)); tocado = True
+        if tocado:
+            self.MOVIDOS.append(f"«{(h.get('texto') or '') or h.get('unidad', '')}» en «{nombre}» → x={h.get('x', 540)}, y={h.get('y', 960)}, tam={h.get('tam', 120)}")
+        return tocado
+
+    def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=320, grano=0.03, zona_segura=True):
+        """Monta todos los planos y escribe salida/episodio.json. Devuelve la lista de avisos de lectura (vacía = bien).
+        zona_segura=True recoloca solos los rótulos que la app taparía (míralos luego en la hoja de fotogramas:
+        al subirlos pueden pisar al sujeto; en ese caso, colócalos tú dentro de y=240…1400)."""
+        self.MOVIDOS = []
         global _V
         _V = self
         self.PLANOS.sort(key=lambda p: p[0])
@@ -256,6 +281,8 @@ class Video:
                 if self.FX and self.FX[-1]["tipo"] == "whoosh" and self.FX[-1]["t"] == round(ini, 3):
                     self.FX[-1]["t"] = round(max(0, ini - 0.12), 3)
             for h in p["hud"]:
+                if zona_segura and h.get("tipo") == "rotulo":
+                    self._a_zona_segura(h, nombre)
                 txt = ((h.get("texto") or "") + " " + (h.get("unidad") or "")).strip()
                 if h.get("contar"):
                     txt = (f"{h['contar'][1]} " + txt).strip()
@@ -287,6 +314,9 @@ class Video:
         for d, n in informe:
             print(f"  {d:5.2f} s {'█' * int(d * 10)} {n}")
         print("\n".join(self.AVISOS) if self.AVISOS else "  ✓ todos los textos se pueden leer")
+        if self.MOVIDOS:
+            print(f"  ↥ {len(self.MOVIDOS)} rótulos recolocados dentro de la zona segura (compruébalos en la hoja):")
+            for m in self.MOVIDOS: print("     " + m)
         return self.AVISOS
 
 

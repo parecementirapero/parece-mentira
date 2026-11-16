@@ -116,22 +116,30 @@ def generar(salida, dur, estilo="curiosidad", semilla=1):
     return salida
 
 
-def mezclar(voz, musica, salida, dur, musica_db=-17.0, lufs=-19.0, sfx=None):
+def mezclar(voz, musica, salida, dur, musica_db=-17.0, lufs=-19.0, sfx=None, sfx_bajo_voz=True):
     """Voz + música (atenuada bajo la voz con sidechain) + efectos opcionales, normalizado a `lufs`.
-    `musica` puede ser None (solo voz + efectos). Los efectos no se atenúan bajo la voz."""
-    ins, f, n = ["-i", voz], [f"[0:a]aresample=48000,apad,atrim=0:{dur:.3f},asplit=2[v1][v2]"], 1
-    capas = ["[v1]"]
+    `musica` puede ser None (solo voz + efectos). Con `sfx_bajo_voz` (por defecto) los efectos también se
+    atenúan un poco mientras hay voz (compresión suave 3:1 con ataque rápido), para que ningún efecto la tape;
+    en las pausas suenan a su nivel."""
+    n_copias = 1 + bool(musica) + bool(sfx and sfx_bajo_voz)
+    et = [f"[v{i}]" for i in range(n_copias)]
+    ins, f, n = ["-i", voz], [f"[0:a]aresample=48000,apad,atrim=0:{dur:.3f},asplit={n_copias}{''.join(et)}" if n_copias > 1
+                             else f"[0:a]aresample=48000,apad,atrim=0:{dur:.3f}[v0]"], 1
+    capas, libre = ["[v0]"], 1
     if musica:
         ins += ["-i", musica]
         f.append(f"[{n}:a]aresample=48000,volume={musica_db}dB,apad,atrim=0:{dur:.3f}[m]")
-        f.append("[m][v2]sidechaincompress=threshold=0.04:ratio=6:attack=20:release=400[md]")
-        capas.append("[md]"); n += 1
-    else:
-        f.append("[v2]anullsink")
+        f.append(f"[m][v{libre}]sidechaincompress=threshold=0.04:ratio=6:attack=20:release=400[md]")
+        capas.append("[md]"); n += 1; libre += 1
     if sfx:
         ins += ["-i", sfx]
-        f.append(f"[{n}:a]aresample=48000,apad,atrim=0:{dur:.3f}[fx]")
-        capas.append("[fx]"); n += 1
+        f.append(f"[{n}:a]aresample=48000,apad,atrim=0:{dur:.3f}[fx0]")
+        if sfx_bajo_voz:
+            f.append(f"[fx0][v{libre}]sidechaincompress=threshold=0.05:ratio=3:attack=5:release=180[fx]")
+            capas.append("[fx]")
+        else:
+            capas.append("[fx0]")
+        n += 1
     f.append(f"{''.join(capas)}amix=inputs={len(capas)}:normalize=0,loudnorm=I={lufs}:TP=-1.5:LRA=11,aresample=48000[a]")
     subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", *ins, "-filter_complex", ";".join(f),
                            "-map", "[a]", "-ac", "2", "-ar", "48000", salida])

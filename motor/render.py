@@ -339,7 +339,8 @@ class Episodio:
             pista = os.path.join(salida, self.nombre() + "_musica.wav")
             musica_mod.generar(pista, self.duracion + 0.2, m.get("generar", "curiosidad"), m.get("semilla", 1))
         self.musica_usada = pista
-        return musica_mod.mezclar(self.audio, pista, mix, self.duracion, (m or {}).get("db", -17.0), lufs, sfx=fx)
+        return musica_mod.mezclar(self.audio, pista, mix, self.duracion, (m or {}).get("db", -17.0), lufs, sfx=fx,
+                                  sfx_bajo_voz=self.s.get("sfx_bajo_voz", True))
 
     def _manifiesto(self, salida, mp4, srt, n):
         def sha(p):
