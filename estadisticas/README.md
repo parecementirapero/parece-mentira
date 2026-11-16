@@ -50,13 +50,15 @@ Cada red es independiente. Si falta una o falla un día, se conservan sus últim
 ### 2. Pantalla de consentimiento
 1. Menú → **APIs y servicios → Pantalla de consentimiento de OAuth** (puede llamarse «Google Auth Platform») → Empezar.
 2. Nombre de la app: `Parece Mentira Stats`. Correo de asistencia: el del proyecto. Público: **Externo**. Contacto: el del proyecto. Crear.
-3. En **Público**, pulsa **Publicar app** para pasarla a **En producción**.
+3. En **Información de marca**: página principal `https://parecementirapero.github.io/`, privacidad `https://parecementirapero.github.io/privacidad.html` y dominio autorizado `parecementirapero.github.io`. Google lo exige para publicar. ✅ Hecho el 2026-11-16.
+4. En **Público**, pulsa **Publicar app** para pasarla a **En producción**. ✅ Hecho el 2026-11-16.
    ⚠️ Si se queda en «Prueba», el permiso caduca cada 7 días y la web deja de actualizarse.
    No hace falta la verificación de Google, porque solo la usáis vosotros.
 
 ### 3. Credencial
 1. **Clientes** (o «Credenciales») → **Crear cliente** → tipo **Aplicación de escritorio** → nombre `stats` → Crear.
-2. Copia el **ID de cliente** y el **Secreto de cliente**. No los pegues en el repo ni en el chat.
+2. Copia el **ID de cliente** y el **Secreto de cliente** en `~/Documents/Parece Mentira/claves.txt`. No los pegues en el repo ni en el chat.
+   ⚠️ Google solo enseña el secreto **una vez**, al crearlo. Si se pierde, se crea otro cliente.
 
 ### 4. Autorizar (en la terminal del Mac, dentro de la carpeta del repo)
 ```bash

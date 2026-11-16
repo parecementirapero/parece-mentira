@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 15:20 — Nico — rama `main`
+**Hecho (navegador integrado del Mac de Nico, con permiso de Nico)**: aceptada la Política de Datos de Usuario de las APIs de Google y creado Google Auth Platform («Parece Mentira Stats», externo). Google ya exige página principal + privacidad en dominio propio para publicar → creado el repo público `parecementirapero.github.io` (GitHub Pages) con `index.md` (portada: TikTok, Instagram, contacto) y `privacidad.md`; puestos en «Información de marca» + dominio autorizado; app **En producción**. La app de Claude no tiene acceso de escritura a ese repo (se editó desde la web de GitHub).
+**Siguiente paso**: en el Mac de Nico, pulsar «Crear» en el formulario del cliente «stats» ya preparado, copiar ID y secreto a `claves.txt` y seguir el README desde el paso 4.
+
 ## 2026-11-16 14:10 — Nico — rama `main` — en pausa
 **Hecho (navegador integrado del Mac de Nico)**: proyecto de Google Cloud `parece-mentira-stats` con la cuenta parecementirapero.media@gmail.com (condiciones aceptadas por Nico); activadas YouTube Data API v3 y YouTube Analytics API; Google Auth Platform a medias (pasos 1–3 rellenos, sin pulsar «Crear»: puede que haya que repetirlos).
 **Siguiente paso**: seguir `estadisticas/README.md` desde el paso 2 (consentimiento → «En producción» → credencial de escritorio → `autorizar.py` → secretos), después `GH_PAT`, TikTok e Instagram.
