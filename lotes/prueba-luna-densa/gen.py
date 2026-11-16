@@ -96,11 +96,30 @@ def flecha(pts, t0, t1, color="#ffffffcc", g=8, disc=None, punta=True, z=0.5):
 
 def fugaz(t0, x0, y0, x1, y1, z=0.12):
     return {"tipo": "flecha", "puntos": [[x0, y0], [x1, y1]], "grosor": 3, "color": "#ffffffee", "punta": False, "z": z,
-            "keys": [{"t": t0, "progreso": 0, "op": 1}, {"t": t0 + 0.3, "progreso": 1}, {"t": t0 + 0.6, "op": 0}]}
+            "keys": [{"t": t0, "progreso": 0, "op": 1}, {"t": t0 + 0.7, "progreso": 1}, {"t": t0 + 1.0, "op": 1}, {"t": t0 + 1.6, "op": 0}]}
 
 
-def satelite(t0, t1, y, z=0.15):
-    return IMG("satelite", ancho=150, y=y, z=z, rot=-15, keys=[{"t": t0, "x": -100}, {"t": t1, "x": 1180, "ease": "lineal"}], anim={"girar": 8})
+INI = 0.0  # inicio absoluto del plano que se está construyendo (lo fija el bucle de abajo)
+
+
+def recorrido(T0, T1, p0, p1, d):
+    """Claves de un objeto que cruza la pantalla entre los segundos ABSOLUTOS T0 y T1 (de p0 a p1).
+    Como depende del tiempo del vídeo y no del plano, sigue en el mismo sitio de un plano al siguiente."""
+    def en(T):
+        u = min(max((T - T0) / (T1 - T0), 0), 1)
+        return {"x": p0[0] + (p1[0] - p0[0]) * u, "y": p0[1] + (p1[1] - p0[1]) * u, "op": 1 if T0 <= T <= T1 else 0}
+    return [{"t": 0, **en(INI), "ease": "lineal"}, {"t": d, **en(INI + d)}]
+
+
+# detalles de fondo que duran varios segundos (cruzan despacio y se ven en varios planos seguidos)
+def satelite(d, z=0.15):
+    return [IMG("satelite", ancho=150, z=z, rot=-15, anim={"girar": 4}, keys=recorrido(0.8, 19.0, (-100, 1680), (1180, 1480), d)),
+            IMG("satelite", ancho=120, z=z, rot=20, anim={"girar": -4}, keys=recorrido(33.0, 47.5, (1180, 260), (-100, 420), d))]
+
+
+def pterosaurios(d):
+    return [IMG("pterosaurio", ancho=ancho, z=z, ex=-1, anim={"flotar": [14, 0.9 + i * 0.2]}, keys=recorrido(25.5, 32.0, (1200 + dx, y), (-250 + dx, y + 60), d))
+            for i, (dx, y, ancho, z) in enumerate([(0, 430, 300, 0.3), (220, 360, 200, 0.22), (420, 500, 160, 0.18)])]
 
 
 def reloj(x, y, ancho, h0, m0, h1, m1, t0, t1, z=0.6):
@@ -143,10 +162,10 @@ def _(d):
 
 @plano(3, "la Luna se aleja")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(), tierra(260, 1250, 620, giro=6),
+    return P(ESP, [BG("bg_esp_violeta"), estrellas(), tierra(260, 1250, 620, giro=6),
              luna(0, 0, 220, 0.5, keys=K(d, (0, {"x": 640, "y": 900}), (0.9, {"x": 860, "y": 600, "ease": "salida"}))),
              *lineas_vel(780, 760, 2), flecha([[600, 980], [900, 560]], 0.1, d * 0.7, "#ffd23f", 9, [20, 14]),
-             fugaz(0.2, 900, 200, 620, 380), satelite(0, d, 1650, 0.6)],
+             fugaz(0.2, 900, 200, 620, 380), *satelite(d)],
              cam(1.0, 1.08, (500, 1000), (600, 880)), "desenfoque", sfx=[(0.1, "whoosh", -12, {"dur": 0.7})])
 
 
@@ -185,7 +204,7 @@ def _(d):
 
 @plano(23, "¿cómo lo sabemos?")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(30, 6), luna(540, 960, 560, 0.5, anim={"girar": 3}),
+    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 6), luna(540, 960, 560, 0.5, anim={"girar": 3}),
              brillo(540, 960, 520, "#dfe6ff", 0.25, 0.45, pulso=[0.15, 0.6])], cam(1.0, 1.25, (540, 960), (540, 960)), "zoom",
              hud=[amarillo(0.05, d - 0.03, "¿CÓMO?", y=1520, tam=110)])
 
@@ -221,7 +240,7 @@ def _(d):
 
 @plano(32, "Apolo 11 aluniza")
 def _(d):
-    return P(["#02030a", "#02030a"], [BG("bg_superficie"), IMG("tierra_hd", ancho=220, x=840, y=380, z=0.1, anim={"girar": 3}),
+    return P(["#02030a", "#02030a"], [BG("bg_superficie_rica"), IMG("tierra_hd", ancho=220, x=840, y=380, z=0.1, anim={"girar": 3}),
              IMG("modulo_lunar", ancho=600, x=520, z=0.6, keys=K(d, (0, {"y": 700}), (0.8, {"y": 1180, "ease": "salida"}))),
              *[brillo(520 + dx, 1400, 200, "#c9c6bb", 0.7, 0.62, keys=K(d, (0.75, {"op": 0, "escala": 0.4}), (1, {"op": 1, "escala": 1.3}))) for dx in (-220, 0, 220)],
              polvo("#dcd8cc", 30, (200, 1250, 880, 1500), 8)],
@@ -230,14 +249,14 @@ def _(d):
 
 @plano(36, "micro: primera huella")
 def _(d):
-    return P(["#8d8a82", "#5d5a54"], [BG("bg_superficie"), polvo("#dcd8cc", 25, (200, 800, 880, 1300), 30),
+    return P(["#8d8a82", "#5d5a54"], [BG("bg_superficie_rica"), polvo("#dcd8cc", 25, (200, 800, 880, 1300), 30),
              {"tipo": "huella", "clase": "bota", "largo": 300, "x": 540, "y": 1150, "z": 0.6, "rot": 12, "keys": K(d, (0, {"marca": 0}), (0.5, {"marca": 1}))}],
              cam(1.6, 1.7, (540, 1150), (540, 1150)), sfx=[(0.02, "golpe", -20)])
 
 
 @plano(38, "espejos")
 def _(d):
-    return P(["#02030a", "#02030a"], [BG("bg_superficie"), IMG("astronauta", ancho=360, x=300, y=1240, z=0.6, anim={"balanceo": [3, 0.8]}),
+    return P(["#02030a", "#02030a"], [BG("bg_superficie_rica"), IMG("astronauta", ancho=360, x=300, y=1240, z=0.6, anim={"balanceo": [3, 0.8]}),
              IMG("retro", ancho=520, x=700, y=1380, z=0.65, keys=K(d, (0, {"y": 1300, "op": 0}), (0.3, {"y": 1380, "op": 1, "ease": "salida"}))),
              brillo(640, 1330, 160, "#ffffff", 1.0, 0.7, keys=K(d, (0.35, {"op": 0, "escala": 0.3}), (0.55, {"op": 1, "escala": 1.2}), (1, {"op": 0.4})))],
              cam(1.15, 1.25, (560, 1280), (600, 1300)), hud=[amarillo(0.02, d - 0.02, "ESPEJOS", y=1720)], sfx=[(d * 0.4, "brillo", -13)])
@@ -245,7 +264,7 @@ def _(d):
 
 @plano(39, "micro: el láser se carga")
 def _(d):
-    return P(["#05070f", "#0b1430"], [BG("bg_espacio"), IMG("observatorio", ancho=1180, x=540, y=960, z=0.3),
+    return P(["#05070f", "#0b1430"], [BG("bg_esp_petroleo"), IMG("observatorio", ancho=1180, x=540, y=960, z=0.3),
              brillo(520, 1080, 220, "#5dff7a", 0.9, 0.5, keys=K(d, (0, {"op": 0.1, "escala": 0.3}), (0.9, {"op": 1, "escala": 1.2})), pulso=[0.25, 0.1]),
              polvo("#9dffb0", 30, (420, 980, 620, 1180), 31, "chispas")],
              cam(2.2, 2.4, (520, 1100), (520, 1080)), "desenfoque", 0.25, sfx=[(0.05, "rumor", -20, {"dur": d})])
@@ -253,7 +272,7 @@ def _(d):
 
 @plano(42, "se dispara un láser")
 def _(d):
-    return P(["#05070f", "#0b1430"], [BG("bg_espacio"), luna(780, 260, 200), fugaz(d * 0.5, 160, 300, 420, 160),
+    return P(["#05070f", "#0b1430"], [BG("bg_esp_petroleo"), *satelite(d), luna(780, 260, 200), fugaz(d * 0.5, 160, 300, 420, 160),
              IMG("observatorio", ancho=1180, x=540, y=960, z=0.3),
              flecha([[520, 1080], [770, 290]], d * 0.3, d * 0.6, "#5dff7a", 10, punta=False),
              brillo(520, 1080, 160, "#5dff7a", 0.9, 0.5, keys=K(d, (0.25, {"op": 0}), (0.35, {"op": 1})), pulso=[0.3, 0.2])],
@@ -262,7 +281,7 @@ def _(d):
 
 @plano(46, "la luz rebota")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(25, 10), tierra(240, 1420, 520), luna(820, 560, 260),
+    return P(ESP, [BG("bg_esp_petroleo"), *satelite(d), estrellas(25, 10), tierra(240, 1420, 520), luna(820, 560, 260),
              flecha([[330, 1300], [800, 590]], 0.0, d * 0.4, "#5dff7a", 9),
              flecha([[790, 640], [350, 1330]], d * 0.5, d * 0.95, "#ff5a8a", 9, [22, 14]),
              brillo(800, 590, 200, "#ffffff", 1.0, 0.55, keys=K(d, (0.35, {"op": 0, "escala": 0.3}), (0.48, {"op": 1, "escala": 1.4}), (0.9, {"op": 0})))],
@@ -280,7 +299,7 @@ def _(d):
 
 @plano(56, "¿y por qué se va?")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(30, 13), tierra(400, 1200, 600, giro=8),
+    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 13), tierra(400, 1200, 600, giro=8),
              luna(0, 0, 200, 0.55, keys=K(d, (0, {"x": 700, "y": 760}), (1, {"x": 1000, "y": 420, "ease": "entrada"}))), *lineas_vel(900, 520, 4)],
              cam(1.0, 1.06, (540, 960), (600, 900)), "desenfoque", hud=[amarillo(0.1, d - 0.05, "¿POR QUÉ?", y=1650)])
 
@@ -297,7 +316,7 @@ def _(d):
 
 @plano(64, "el agua frena")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(25, 15), IMG("marea", ancho=900, x=540, y=1050, z=0.35, rot=-10, anim={"pulso": [0.02, 1.0]}),
+    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(25, 15), IMG("marea", ancho=900, x=540, y=1050, z=0.35, rot=-10, anim={"pulso": [0.02, 1.0]}),
              tierra(540, 1050, 560, giro=-4), luna(980, 880, 150),
              flecha([[300, 780], [540, 680], [780, 780]], 0.1, d * 0.7, "#ffd23f", 14, z=0.6),
              {"tipo": "forma", "forma": "poligono", "puntos": [[-60, -20], [60, -20], [60, 20], [-60, 20]], "relleno": "#d62f22", "x": 540, "y": 650, "z": 0.62,
@@ -324,7 +343,7 @@ def _(d):
     orb1 = {"tipo": "forma", "forma": "elipse", "ancho": 600, "alto": 600, "relleno": "#ffffff", "op_relleno": 0, "grosor": 3, "borde": "#ffffff55", "x": 540, "y": 1000, "z": 0.3}
     orb2 = {"tipo": "forma", "forma": "elipse", "ancho": 880, "alto": 880, "relleno": "#ffffff", "op_relleno": 0, "grosor": 5, "borde": "#ffd23f",
             "x": 540, "y": 1000, "z": 0.3, "keys": K(d, (0.15, {"op": 0, "escala": 0.68}), (0.8, {"op": 1, "escala": 1.0}))}
-    return P(ESP, [BG("bg_espacio"), estrellas(30, 16), orb1, orb2, tierra(540, 1000, 280, giro=10),
+    return P(ESP, [BG("bg_esp_violeta"), *satelite(d), estrellas(30, 16), orb1, orb2, tierra(540, 1000, 280, giro=10),
              luna(0, 0, 120, 0.5, keys=K(d, (0, {"x": 840, "y": 1000}), (0.35, {"x": 860, "y": 740}), (0.7, {"x": 820, "y": 640}), (1, {"x": 940, "y": 740}))),
              *[flecha([[540 + dx * 160, 1000 + dy * 160], [540 + dx * 400, 1000 + dy * 400]], d * (0.1 + i * 0.05), d * (0.35 + i * 0.05), "#ffd23faa", 6, z=0.35)
                for i, (dx, dy) in enumerate([(0.7, -0.7), (-0.7, -0.7), (0.7, 0.7), (-0.7, 0.7)])], fugaz(d * 0.7, 120, 300, 380, 420)],
@@ -348,21 +367,27 @@ def _(d):
 @plano(86, "dinosaurios")
 def _(d):
     return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"),
-             IMG("dino_peq", ancho=380, y=1330, z=0.35, keys=K(d, (0, {"x": 900, "ease": "lineal"}), (1, {"x": 780})), ex=-1),
-             IMG("dino", ancho=880, y=1450, z=0.7, anim={"balanceo": [1.5, 0.7]}, keys=K(d, (0, {"x": 160, "ease": "lineal"}), (1, {"x": 440}))),
-             polvo("#ffd9a0", 25, sem=18),
-             IMG("pterosaurio", ancho=260, z=0.25, anim={"flotar": [12, 0.5]}, keys=K(d, (0, {"x": 1150, "y": 520, "ease": "lineal"}), (1, {"x": 620, "y": 600})), ex=-1),
+             IMG("dino_braquio", ancho=560, z=0.22, anim={"balanceo": [1, 1.4]}, keys=recorrido(25.5, 32.0, (760, 1170), (520, 1170), d)),
+             IMG("dino_trice", ancho=500, z=0.5, anim={"balanceo": [1.2, 0.9]}, keys=recorrido(25.5, 32.0, (1100, 1430), (600, 1430), d), ex=-1),
+             *pterosaurios(d), polvo("#ffd9a0", 25, sem=18),
+             *[IMG("dino_raptor", ancho=330, z=0.8, anim={"balanceo": [3, 0.35]}, keys=K(d, (0, {"x": -200 - i * 160, "y": 1640 + i * 40, "ease": "lineal"}), (1, {"x": 520 - i * 160, "y": 1640 + i * 40})))
+               for i in range(2)],
              {**brillo(300, 640, 200, "#6b5a5a", 0.5, 0.06), "anim": {"deriva": [10, -60]}}],
              cam(1.0, 1.06, (540, 1200), (500, 1200)), "zoom", vineta=0.5, sfx=[(0.1, "golpe", -15), (0.6, "golpe", -17)])
 
 
 @plano(89, "23,5 horas (plano largo)")
 def _(d):
-    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"), {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 1920, "relleno": "#000000", "x": 540, "y": 960, "z": 0.2, "op": 0.45},
-             *reloj(540, 1000, 600, 0, 0, 23, 30, 0.1, d * 0.8), IMG("dino_peq", ancho=300, y=1600, z=0.75, keys=K(d, (0, {"x": 1200, "ease": "lineal"}), (1, {"x": 760})), ex=-1)],
+    return P(["#2b1b3a", "#f6d08a"], [BG("bg_jungla"),
+             IMG("dino_braquio", ancho=560, z=0.22, anim={"balanceo": [1, 1.4]}, keys=recorrido(25.5, 32.0, (760, 1170), (520, 1170), d)),
+             IMG("dino_trex", ancho=620, z=0.35, anim={"balanceo": [1.5, 1.0]}, keys=K(d, (0, {"x": 1300, "y": 1360, "ease": "lineal"}), (1, {"x": 780, "y": 1360})), ex=-1),
+             *pterosaurios(d),
+             {"tipo": "forma", "forma": "rect", "ancho": 1080, "alto": 1920, "relleno": "#000000", "x": 540, "y": 960, "z": 0.4, "op": 0.4},
+             *reloj(540, 1000, 600, 0, 0, 23, 30, 0.1, d * 0.8),
+             IMG("dino_estego", ancho=430, z=0.8, keys=K(d, (0, {"x": -260, "y": 1640, "ease": "lineal"}), (1, {"x": 260, "y": 1640})))],
              cam(1.0, 1.08, (540, 1000), (540, 1000)),
              hud=[{**contador(0.15, d - 0.05, 24, 23.5, d * 0.5, "HORAS", y=1560), "decimales": 1}, contexto(0.1, d - 0.05, "HACE 70 MILLONES DE AÑOS")],
-             sfx=[(0.15 + i * 0.2, "tic", -22) for i in range(int(d * 0.8 / 0.2))])
+             sfx=[(0.15 + i * 0.2, "tic", -22) for i in range(int(d * 0.8 / 0.2))] + [(0.3, "golpe", -20), (1.2, "golpe", -20)])
 
 
 @plano(96, "372 días (plano largo)")
@@ -407,7 +432,7 @@ def _(d):
 
 @plano(116, "1.400 millones de años: la Luna cerca")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(40, 22), tierra(380, 1250, 560, giro=40),
+    return P(ESP, [BG("bg_esp_ambar"), *satelite(d), estrellas(40, 22), tierra(380, 1250, 560, giro=40),
              luna(0, 0, 330, 0.5, keys=K(d, (0, {"x": 880, "y": 600, "escala": 0.48}), (0.8, {"x": 720, "y": 820, "escala": 1.0, "ease": "salida"}))),
              flecha([[900, 560], [740, 790]], 0.1, d * 0.7, "#ff5a4a", 8, [18, 12])],
              cam(1.0, 1.05),
@@ -416,7 +441,7 @@ def _(d):
 
 @plano(120, "18 horas (plano largo)")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(30, 23), tierra(540, 1150, 620, giro=70), luna(900, 520, 300),
+    return P(ESP, [BG("bg_esp_ambar"), *satelite(d), estrellas(30, 23), tierra(540, 1150, 620, giro=70), luna(900, 520, 300),
              *reloj(260, 520, 300, 0, 0, 18, 0, 0.1, d * 0.7, z=0.65), fugaz(d * 0.6, 700, 200, 980, 320)],
              cam(1.0, 1.06, (540, 1000), (540, 1000)), hud=[rotulo(d * 0.4, d - 0.05, "18", unidad="HORAS", tam=150, x=540, y=1620)],
              sfx=[(0.1 + i * 0.16, "tic", -22) for i in range(int(d * 0.7 / 0.16))])
@@ -430,7 +455,7 @@ def _(d):
 
 @plano(129, "600 millones de años: la Luna lejos")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(40, 24), tierra(300, 1350, 480, giro=3),
+    return P(ESP, [BG("bg_esp_petroleo"), *satelite(d), estrellas(40, 24), tierra(300, 1350, 480, giro=3),
              luna(0, 0, 260, 0.5, keys=K(d, (0, {"x": 640, "y": 900, "escala": 1.0}), (0.9, {"x": 900, "y": 420, "escala": 0.35, "ease": "salida"}))),
              flecha([[620, 920], [880, 450]], 0.1, d * 0.7, "#5dd0ff", 8, [18, 12])],
              cam(1.0, 1.04), hud=[{**contador(0.05, d - 0.05, 0, 600, d * 0.5, "MILLONES DE AÑOS", tam=110, y=560), "contar_prefijo": "+"}])
@@ -438,7 +463,7 @@ def _(d):
 
 @plano(134, "hoy / futuro")
 def _(d):
-    return P(ESP, [BG("bg_espacio"), estrellas(30, 34), luna(300, 980, 340, 0.4), fugaz(d * 0.3, 820, 300, 1040, 180),
+    return P(ESP, [BG("bg_esp_petroleo"), *satelite(d), estrellas(30, 34), luna(300, 980, 340, 0.4), fugaz(d * 0.3, 820, 300, 1040, 180),
              luna(780, 980, 340, 0.4, keys=K(d, (0, {"escala": 1.0}), (0.6, {"escala": 0.55, "ease": "salida"})))],
              cam(1.0, 1.04), hud=[rotulo(0.05, d - 0.05, "HOY", tam=70, x=300, y=1260), rotulo(0.1, d - 0.05, "FUTURO", tam=70, x=780, y=1260)])
 
@@ -477,11 +502,13 @@ def _(d):
 
 # ================================================================== construir
 PLANOS.sort(key=lambda p: p[0])
+_g = globals()
 LEER = lambda txt: 0.25 + len(txt) / 17  # segundos mínimos para leer un texto (una cifra suelta: ~0,3 s)
 informe = []
 for k, (ini, nombre, fn) in enumerate(PLANOS):
     fin = PLANOS[k + 1][0] if k + 1 < len(PLANOS) else FIN
     d = round(fin - ini, 3)
+    _g["INI"] = ini
     p = fn(d)
     M.plano(ini, fin, p["fondo"], p["els"], p["cam"], entrada=p["entrada"], vineta=p["vineta"], dur=p["dur"] if p["entrada"] != "corte" else None)
     if p["entrada"] in ("desenfoque", "zoom", "barrido"):

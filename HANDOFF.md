@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 17:05 — Nico — rama `main` — chat en la nube
+**Hecho**: «Luna densa» v4 a petición de Nico.
+- **Detalles de fondo que duran**: `recorrido(T0, T1, …)` en `gen.py` mueve los objetos según el tiempo ABSOLUTO del vídeo, así siguen en el mismo sitio al cambiar de plano. Dos satélites cruzan despacio todos los planos de espacio (0,8–19 s y 33–47,5 s); bandada de 3 pterosaurios en los dos planos de dinosaurios (25,5–32 s); estrellas fugaces más lentas (se dibujan en 0,7 s y se apagan en 1,6 s).
+- **Dinosaurios detallados y variados** (`ilus_luna.py`, `_animal`): volumen con degradado lomo→panza, manchas, textura de piel recortada a la silueta, luz de borde, ojo con brillo, patas lejanas más oscuras y sombra. Especies: braquiosaurio, tiranosaurio, triceratops (gola con puntos y tres cuernos), estegosaurio (placas iluminadas) y raptores; pterosaurio rehecho (membrana con dedos y cresta).
+- **Fondos con más tonos**: `bg_espacio_rico` con 3 paletas (violeta, petróleo, ámbar) — nebulosas en 3 capas de ruido de color con máscaras, filamentos de polvo oscuro, banda de la Vía Láctea, estrellas de varios colores y tamaños con brillo, galaxias lejanas; Luna con cordillera lejana azulada, textura de regolito, cráteres con borde iluminado y piedras con sombra; eclipse con crepúsculo de 6 tonos y colinas por capas; jungla con rayos de sol, bruma entre capas y volcán con lava.
+- Arreglado: los SVG de objetos llevaban un rectángulo de grano que se veía sobre el fondo.
+**Pruebas**: fotogramas revisados (12 instantes); render 48,3 s, 49 MB.
+**Siguiente paso**: que Nico/Jorge lo vean; si gusta, convertir fondos y animales en biblioteca reutilizable para los lotes.
+
 ## 2026-11-16 15:58 — Nico (en el Mac de Jorge) — rama `main` — en pausa
 **Hecho**: tarea programada «Estadísticas Parece Mentira: republicar página» (9:14 Madrid, nube, modo automático, `trig_01M865HVYsaR3X7rTzNwALEt`). Secreto `GH_PAT` creado (token fine-grained sin caducidad, solo repo `parece-mentira`, solo Secrets lectura/escritura; copia en `claves.txt`). Página `condiciones.md` añadida a parecementirapero.github.io. TikTok for Developers: cuenta creada por Nico, app «Parece Mentira Stats» y sandbox «estadisticas» a medio configurar (ver TASKS).
 **Siguiente paso**: terminar la app de TikTok (icono, scopes, target user, Apply changes) → `autorizar_tiktok.py` → secretos → Instagram.
