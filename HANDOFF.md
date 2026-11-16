@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-16 17:08 — Nico (en el Mac de Jorge) — rama `main` — commit `6824722`
+**Hecho**: TikTok conectado a las estadísticas. App sandbox completada (icono subido por Nico, Desktop + Login Kit, scopes `user.info.basic/stats` + `video.list`, usuario de prueba parece.mentira85). `autorizar_tiktok.py` como el de YouTube (puerto 8766, pegar URL, certificados, sustituye el token en `claves.txt`) + `probar_tiktok.py` para comprobar el token. Secretos `TIKTOK_CLIENT_KEY/SECRET/REFRESH_TOKEN`. Arreglos: espacios pegados en secretos (`limpiar_secretos`), campo `username` quitado (pedía `user.info.profile`). Workflow OK: TikTok 4 vídeos públicos (5 en total), 2 seguidores, los 4 unidos con YouTube por `estado.md`. Página de Claude republicada.
+**Ojo**: el token de TikTok de `claves.txt` ya NO vale (TikTok lo rota y el workflow guarda el nuevo en GitHub con GH_PAT). Si hay que reautorizar: `autorizar_tiktok.py` y actualizar el secreto.
+**Siguiente paso**: Instagram.
+
 ## 2026-11-16 17:05 — Nico — rama `main` — chat en la nube
 **Hecho**: «Luna densa» v4 a petición de Nico.
 - **Detalles de fondo que duran**: `recorrido(T0, T1, …)` en `gen.py` mueve los objetos según el tiempo ABSOLUTO del vídeo, así siguen en el mismo sitio al cambiar de plano. Dos satélites cruzan despacio todos los planos de espacio (0,8–19 s y 33–47,5 s); bandada de 3 pterosaurios en los dos planos de dinosaurios (25,5–32 s); estrellas fugaces más lentas (se dibujan en 0,7 s y se apagan en 1,6 s).
