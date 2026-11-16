@@ -7,6 +7,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Luna densa publicada: falta decidir el reel antiguo de Instagram `Dfx5sljx4kO` (borrar o archivar desde el móvil) y poner el comentario fijado en YouTube y TikTok
 - [ ] Actualizar el texto de la tarea programada de las 08:00 (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`): sigue nombrando la voz v1, ya borrada, y la carpeta de Drive. Lo correcto es la voz de `DECISIONS.md` y la revisión en el chat. Además, hoy se disparó a las 19:48 en vez de a las 07:52 — Nico
 - [ ] Decidir si se cambian las portadas de los 3 vídeos ya publicados (lote 2026-11-15-tarde; elegidas en `metadatos.json` → `portada`): YouTube con `subir_youtube.py --solo-portada <id> --portada …` desde el Mac de Jorge (si el canal lo permite) e Instagram desde la app del móvil (Editar → portada); TikTok no deja cambiarla después — Nico/Jorge
 - [ ] Estadísticas: conectar Instagram siguiendo `estadisticas/README.md` — APLAZADO por Nico (2026-11-16: «eso ya lo haremos en un futuro»); no recordarlo salvo que lo pidan. Notas: se usa el Facebook personal de Jorge (la cuenta nueva de Nico quedó suspendida en revisión: no crear más cuentas nuevas). Registro en Meta for Developers a medias: falta verificar el móvil (el SMS no llega; probar desde la app de Facebook del móvil → Centro de cuentas → Información de contacto, o por WhatsApp/llamada). Después: crear app, «API setup with Instagram login», añadir @parecementiramedia (debe ser cuenta profesional), generar token → secreto `IG_TOKEN`
@@ -34,6 +35,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] «La Luna se nos va…» publicado en YouTube, TikTok e Instagram; antiguo en privado en YouTube y TikTok — Nico — 2026-11-16
 - [x] Método denso en el motor (`motor/denso.py`, `motor/biblioteca/`, `motor/DENSO.md`) y en `AGENTE.md` — Nico — 2026-11-16
 - [x] «Luna densa»: whoosh de 29 a 14 y mucho más bajos; música de −17 a −13 dB — Nico — 2026-11-16
 - [x] Lote 2026-11-16-manana (planetas entre la Tierra y la Luna, pulpo de tres corazones, vikingos en 1021): 3 vídeos v1 **en revisión**; esperan el «ok» en https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF (correo `1a1e5cd4c9bf08da`) — Agente 08:00 (Nico) — 2026-11-16 20:30
