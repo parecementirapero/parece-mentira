@@ -5,9 +5,9 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
+- [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05
 
 ## Pendiente
-- [ ] Publicar el lote 2026-11-17-tarde (01 v3, 02 v3, 03 v2) en YouTube y TikTok: los MP4 están en el Mac de Jorge y descargados del chat en el de Nico; desde el chat del Mac de Jorge no se pudo (sin permiso de subida de YouTube y el selector de archivos necesita a alguien delante) — Nico/Jorge
 - [ ] **Estudio — decidir el público objetivo** (edades y países) y apuntarlo en `estadisticas/estudio/objetivo.json` y `DECISIONS.md`. Dato para decidir: en YouTube el 49 % de la audiencia tiene 35 años o más y solo el 42 % está en 18–34; 67 % hombres; España 25 %, Latinoamérica 72 % (`estadisticas/datos/estudio.md` §5) — Nico/Jorge
 - [ ] **Estudio — confirmar la ficha de variables en AGENTE §6** (está «en prueba»): cada vídeo lleva su ficha antes de entregar. Si no convence, se quita el punto de AGENTE §6 y §8 — Nico/Jorge
 - [ ] **Estudio — abrir el primer experimento con ficha previa** (`python3 estadisticas/estudio experimento nuevo …`, ver `estadisticas/estudio/README.md` §4). Propuesta: H3, gancho en segunda persona, 18 vídeos por brazo para ver 15 puntos (9 días a 2 parejas al día) — Nico/Jorge
