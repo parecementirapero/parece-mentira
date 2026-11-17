@@ -283,6 +283,7 @@ class Video:
                 p["inicio"], p["fin"] = round(nuevo(P0[i]["inicio"]), 3), round(nuevo(P0[i]["fin"]), 3)
         # audio: tramos que se quedan, con 15 ms de fundido en cada empalme para que no haga «clic»
         dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", self.audio]))
+        cortes = [(c0, min(c1, dur)) for c0, c1 in cortes]
         tramos, t = [], 0.0
         for c0, c1 in cortes:
             if c0 > t: tramos.append((t, c0))

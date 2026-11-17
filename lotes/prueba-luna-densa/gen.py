@@ -13,8 +13,11 @@ from motor import denso  # noqa: E402
 
 # Variantes (motor/APRENDIZAJE.md):  python3 gen.py DIR voz.mp3 alineacion.json [palabra] [corta]
 #   palabra → subtítulo de 1–2 palabras enormes (H1)     corta → versión de ~35 s con la misma locución (H2)
+#   micro → 8 s en bucle, solo gancho + dato (H8)
 OPC = set(sys.argv[4:])
-CORTA = [(23, 56), (105, 126)] if "corta" in OPC else ()   # fuera: «¿Cómo lo sabemos?…dos segundos y medio» y «almeja…dieciocho horas»
+CORTA = [(23, 56), (105, 126)] if "corta" in OPC else ()
+if "micro" in OPC:   # H8: micro-Short de ~8 s en bucle: solo el gancho y el dato («Mira tus uñas… tres coma ocho centímetros al año»)
+    CORTA = [(23, 155)]   # fuera: «¿Cómo lo sabemos?…dos segundos y medio» y «almeja…dieciocho horas»
 v = Video(sys.argv[1], os.path.join(AQUI, "guion.txt"), *(sys.argv[2:4] if len(sys.argv) > 3 else ()), omitir=CORTA)
 
 # ------------------------------------------------------------------ detalles de fondo que duran (atados a palabras)
@@ -471,5 +474,5 @@ def _(d):
 
 # ================================================================== construir
 PALABRA = "palabra" in OPC
-v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else "") + ("-corta" if CORTA else ""), version=7, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
+v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else "") + ("-micro" if "micro" in OPC else "-corta" if CORTA else ""), version=7, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
             claves=["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"])

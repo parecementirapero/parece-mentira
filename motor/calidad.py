@@ -87,10 +87,12 @@ def analizar(ruta_ep, mp4=None):
     cv = float(d.std() / d.mean())
     datos["ritmo"] = dict(planos=len(d), cortes_min=round(len(d) / dur * 60, 1), mediana=round(float(np.median(d)), 2), min=round(float(d.min()), 2),
                           max=round(float(d.max()), 2), variacion=round(cv, 2), micro=int((d < 0.7).sum()), largos=int((d >= 2).sum()))
-    if cv < 0.35: av("❌", f"Ritmo plano: casi todos los planos duran lo mismo (variación {cv:.2f}; hace falta ≥ 0,45). Mete micro planos de 0,3–0,7 s y alguno de 2–3 s.", 12)
+    micro = dur < 15   # micro-Short en bucle (H8): las reglas de ritmo de un vídeo de 35–55 s no le aplican
+    if micro: pass
+    elif cv < 0.35: av("❌", f"Ritmo plano: casi todos los planos duran lo mismo (variación {cv:.2f}; hace falta ≥ 0,45). Mete micro planos de 0,3–0,7 s y alguno de 2–3 s.", 12)
     elif cv < 0.45: av("⚠", f"Ritmo poco variado (variación {cv:.2f}; mejor ≥ 0,45).", 5)
-    if (d < 0.7).sum() < 3: av("⚠", "Menos de 3 micro planos (< 0,7 s): faltan golpes rápidos de detalle.", 4)
-    if (d >= 2).sum() < 3: av("⚠", "Menos de 3 planos largos (≥ 2 s): no hay sitios donde respirar y entender.", 4)
+    if not micro and (d < 0.7).sum() < 3: av("⚠", "Menos de 3 micro planos (< 0,7 s): faltan golpes rápidos de detalle.", 4)
+    if not micro and (d >= 2).sum() < 3: av("⚠", "Menos de 3 planos largos (≥ 2 s): no hay sitios donde respirar y entender.", 4)
     if d.max() > 4.5: av("⚠", f"Un plano dura {d.max():.1f} s: pártelo o métele una micro escena.", 4)
     if d.min() < 0.25: av("❌", f"Un plano dura {d.min():.2f} s: no da tiempo a verlo (mínimo 0,3 s).", 6)
     cm = len(d) / dur * 60
@@ -192,7 +194,7 @@ def analizar(ruta_ep, mp4=None):
     datos["sonido"] = dict(efectos=len(fx), por_minuto=round(len(fx) / dur * 60), tipos=len(tipos), whoosh_min=round(tipos.get("whoosh", 0) / dur * 60, 1),
                            max_en_1s=pico_dens, musica_db=(ep.get("musica") or {}).get("db", -17))
     if not fx: av("⚠", "Sin efectos de sonido: lo que pasa en pantalla no suena.", 8)
-    if tipos.get("whoosh", 0) / dur * 60 > 18: av("⚠", f"Demasiados «whoosh» ({tipos['whoosh']}): tapan la música y cansan.", 5)
+    if dur >= 15 and tipos.get("whoosh", 0) / dur * 60 > 18: av("⚠", f"Demasiados «whoosh» ({tipos['whoosh']}): tapan la música y cansan.", 5)
     if pico_dens > 6: av("⚠", f"Hasta {pico_dens} efectos audibles (más fuertes que −22 dB) en un mismo segundo: satura.", 3)
     if len(tipos) < 5 and fx: av("ℹ", f"Solo {len(tipos)} tipos de efecto: más variedad (cada acción, su sonido).")
     if silencios: av("ℹ", "Tramos de más de 4 s sin ningún efecto: " + ", ".join(f"{a} s ({b} s)" for a, b in silencios[:5]))
