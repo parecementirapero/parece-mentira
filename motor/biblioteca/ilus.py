@@ -641,6 +641,77 @@ def todo_v4():
     meteorito(); rama("rama_hojas"); rama("rama_mordida1", 1); rama("rama_mordida2", 2); arbusto()
 
 
+# ------------------------------------------------------------------ personaje con expresiones (APRENDIZAJE.md, H6)
+EXPRESIONES = ("neutral", "sorpresa", "feliz", "pensando", "susto", "senala")
+
+
+def personaje(expr="neutral", piel=("#f2c9a0", "#d99a6c"), ropa=("#3d6fd6", "#24418f"), pelo="#3a2618", prefijo="pj"):
+    """Personaje sencillo con volumen y cara expresiva, para que en el plano haya ALGUIEN que reaccione al dato
+    (los Shorts ilustrados que mejor funcionan cuentan el dato a través de un personaje con emociones).
+    Una ilustración por expresión: pj_neutral, pj_sorpresa, pj_feliz, pj_pensando, pj_susto, pj_senala (600×900).
+    En el vídeo se cambia de una a otra con `denso.reaccion()`."""
+    w, h, cx = 600, 900, 300
+    defs = (lg("pj_piel", (0, piel[0]), (1, piel[1])) + lg("pj_ropa", (0, ropa[0]), (1, ropa[1]))
+            + rg("pj_luz", (0, "#ffffff", 0.35), (1, "#ffffff", 0), cx=0.32, cy=0.28, r=0.6))
+    b = [f'<ellipse cx="{cx}" cy="872" rx="190" ry="22" fill="#000" opacity="0.35" filter="url(#blur8)"/>']
+    # brazos (detrás del cuerpo salvo el que señala)
+    brazos = {
+        "neutral": [(196, 560, 150, 700, 168, 760), (404, 560, 450, 700, 432, 760)],
+        "feliz": [(196, 560, 120, 470, 96, 400), (404, 560, 480, 470, 504, 400)],
+        "sorpresa": [(196, 560, 130, 520, 150, 430), (404, 560, 470, 520, 450, 430)],
+        "susto": [(196, 560, 150, 470, 220, 410), (404, 560, 450, 470, 380, 410)],
+        "pensando": [(196, 560, 150, 700, 168, 760), (404, 560, 440, 600, 350, 500)],
+        "senala": [(196, 560, 150, 700, 168, 760), (404, 560, 500, 470, 560, 360)],
+    }[expr]
+    for x0, y0, x1, y1, x2, y2 in brazos:
+        b.append(f'<path d="M{x0} {y0} Q{x1} {y1} {x2} {y2}" stroke="url(#pj_ropa)" stroke-width="58" stroke-linecap="round" fill="none"/>'
+                 f'<circle cx="{x2}" cy="{y2}" r="34" fill="url(#pj_piel)"/>')
+    # cuerpo y piernas
+    b.append(f'<path d="M{cx-52} 800 L{cx-56} 868 M{cx+52} 800 L{cx+56} 868" stroke="#232a3d" stroke-width="56" stroke-linecap="round"/>')
+    b.append(f'<path d="M{cx-120} 840 C{cx-150} 640 {cx-130} 520 {cx} 510 C{cx+130} 520 {cx+150} 640 {cx+120} 840 Z" fill="url(#pj_ropa)"/>'
+             f'<path d="M{cx-120} 840 C{cx-150} 640 {cx-130} 520 {cx} 510" stroke="#ffffff" stroke-opacity="0.25" stroke-width="6" fill="none"/>'
+             f'<path d="M{cx-34} 512 L{cx} 560 L{cx+34} 512" fill="{piel[1]}"/>')
+    if expr in ("pensando",):   # la mano de pensar va por delante, en la barbilla
+        b.append(f'<circle cx="350" cy="500" r="34" fill="url(#pj_piel)"/>')
+    # cabeza
+    b.append(f'<circle cx="{cx}" cy="330" r="190" fill="url(#pj_piel)"/><circle cx="{cx}" cy="330" r="190" fill="url(#pj_luz)"/>'
+             f'<path d="M{cx-190} 320 C{cx-200} 150 {cx-80} 110 {cx+10} 120 C{cx+120} 110 {cx+200} 190 {cx+188} 300 C{cx+120} 220 {cx-40} 200 {cx-120} 250 C{cx-150} 270 {cx-170} 290 {cx-190} 320 Z" fill="{pelo}"/>'
+             f'<ellipse cx="{cx-112}" cy="392" rx="30" ry="18" fill="#ff7a6a" opacity="0.35"/><ellipse cx="{cx+112}" cy="392" rx="30" ry="18" fill="#ff7a6a" opacity="0.35"/>')
+    # ojos: (radio blanco, radio pupila, desplazamiento de la pupila)
+    ojos = {"neutral": (34, 16, 0, 0), "feliz": (0, 0, 0, 0), "sorpresa": (46, 15, 0, -2), "susto": (48, 11, 0, 0),
+            "pensando": (34, 16, 9, -9), "senala": (36, 16, 9, -8)}[expr]
+    for sx in (-68, 68):
+        ex, ey = cx + sx, 330
+        if expr == "feliz":
+            b.append(f'<path d="M{ex-30} {ey+6} Q{ex} {ey-30} {ex+30} {ey+6}" stroke="#20160f" stroke-width="12" stroke-linecap="round" fill="none"/>')
+        else:
+            rb, rp, dx, dy = ojos
+            b.append(f'<ellipse cx="{ex}" cy="{ey}" rx="{rb}" ry="{rb * 1.08:.0f}" fill="#ffffff"/><circle cx="{ex+dx}" cy="{ey+dy}" r="{rp}" fill="#20160f"/>'
+                     f'<circle cx="{ex+dx-5}" cy="{ey+dy-6}" r="{max(3, rp // 3)}" fill="#ffffff"/>')
+    cejas = {"neutral": [(-100, 268, -36, 262), (36, 262, 100, 268)], "feliz": [(-100, 262, -36, 250), (36, 250, 100, 262)],
+             "sorpresa": [(-104, 238, -36, 226), (36, 226, 104, 238)], "susto": [(-104, 232, -36, 250), (36, 250, 104, 232)],
+             "pensando": [(-100, 262, -36, 270), (36, 236, 100, 248)], "senala": [(-100, 250, -36, 244), (36, 240, 100, 250)]}[expr]
+    for x0, y0, x1, y1 in cejas:
+        b.append(f'<path d="M{cx+x0} {y0} L{cx+x1} {y1}" stroke="{pelo}" stroke-width="14" stroke-linecap="round"/>')
+    boca = {"neutral": f'<path d="M{cx-36} 430 Q{cx} 448 {cx+36} 430" stroke="#7a2e22" stroke-width="10" stroke-linecap="round" fill="none"/>',
+            "feliz": f'<path d="M{cx-58} 418 Q{cx} 500 {cx+58} 418 Z" fill="#7a2e22"/><path d="M{cx-40} 426 Q{cx} 444 {cx+40} 426 L{cx+46} 420 L{cx-46} 420 Z" fill="#ffffff"/>',
+            "sorpresa": f'<ellipse cx="{cx}" cy="444" rx="30" ry="40" fill="#5a1f18"/><ellipse cx="{cx}" cy="462" rx="18" ry="14" fill="#c2564a"/>',
+            "susto": f'<path d="M{cx-52} 456 Q{cx-26} 416 {cx} 440 Q{cx+26} 416 {cx+52} 456 Q{cx} 486 {cx-52} 456 Z" fill="#5a1f18"/><rect x="{cx-34}" y="432" width="68" height="12" rx="4" fill="#ffffff"/>',
+            "pensando": f'<path d="M{cx-30} 440 Q{cx+4} 432 {cx+38} 446" stroke="#7a2e22" stroke-width="10" stroke-linecap="round" fill="none"/>',
+            "senala": f'<path d="M{cx-44} 424 Q{cx} 476 {cx+44} 424 Z" fill="#7a2e22"/>'}[expr]
+    b.append(boca)
+    if expr == "susto":   # gotas de sudor
+        b.append(f'<path d="M{cx+170} 210 q16 26 0 40 q-16 -14 0 -40Z" fill="#9fdcff"/><path d="M{cx+205} 270 q11 18 0 28 q-11 -10 0 -28Z" fill="#9fdcff"/>')
+    if expr == "senala":
+        b.append(f'<path d="M548 372 L592 300" stroke="url(#pj_piel)" stroke-width="22" stroke-linecap="round"/>')
+    guardar(f"{prefijo}_{expr}", "".join(b), w, h, defs)
+
+
+def personajes():
+    for e in EXPRESIONES:
+        personaje(e)
+
+
 def generar(directorio):
     """Escribe todas las ilustraciones generadas en `directorio` (siempre iguales: semillas fijas)."""
     global OUT, R, _RP
@@ -650,6 +721,7 @@ def generar(directorio):
     dinosaurio("dino_peq", "#4a6a38")
     patinadora("patinadora_cerrada", "cerrados"); patinadora("patinadora_abierta", "abiertos"); bg_pista()
     todo_v4()
+    personajes()
     return directorio
 
 

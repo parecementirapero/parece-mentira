@@ -106,6 +106,22 @@ def senala(x, y, t0, t1, radio=110, color=AMBAR, z=0.85):
                      {"t": t1, "escala": 1.06, "op": 1}, {"t": t1 + 0.2, "op": 0}]}
 
 
+def reaccion(x, y, ancho, pasos, z=0.7, prefijo="pj", espejo=False):
+    """Personaje que cambia de cara según lo que oye (motor/APRENDIZAJE.md, H6).
+    pasos = [(t, "neutral"), (t, "pensando"), (t, "sorpresa")…] con t en segundos del plano; expresiones:
+    neutral, sorpresa, feliz, pensando, susto, senala. Cada cambio entra con un pequeño salto."""
+    els = []
+    for k, (t, expr) in enumerate(pasos):
+        fin = pasos[k + 1][0] if k + 1 < len(pasos) else None
+        ks = [{"t": 0, "op": 1 if t <= 0 else 0, "escala": 1.0}]
+        if t > 0:
+            ks += [{"t": max(0, t - 0.01), "op": 0}, {"t": t, "op": 1, "escala": 0.9}, {"t": t + 0.22, "escala": 1.0, "ease": "elastico"}]
+        if fin is not None:
+            ks += [{"t": max(t + 0.23, fin - 0.01), "op": 1}, {"t": fin, "op": 0}]
+        els.append(IMG(f"{prefijo}_{expr}", ancho=ancho, x=x, y=y, z=z + k * 0.001, keys=ks, **({"ex": -1} if espejo else {})))
+    return els
+
+
 # ------------------------------------------------------------------ rótulos
 def rotulo(t0, t1, texto="", **k):
     ks = [{"t": t0, "escala": 0.0, "op": 0}, {"t": t0 + 0.05, "op": 1}, {"t": t0 + min(0.25, (t1 - t0) / 3), "escala": 1.0, "ease": "rebote"},
