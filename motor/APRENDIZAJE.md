@@ -17,6 +17,7 @@ lote, y solo pasa a `DECISIONS.md` cuando los datos (1) la apoyan. Con menos de 
 |---|---|---|
 | Al arrancar cada lote | Leer `estadisticas/datos/aprendizajes.md` y la tabla de experimentos de abajo | — |
 | Al arrancar cada lote | Apuntar «Se quedaron viendo», vistas y horas de los vídeos con 24 h o más | `herramientas/studio_shorts.js` → `estadisticas/studio.json` |
+| Al arrancar cada lote | Tiempo medio, % que lo ve entero y curva de retención en TikTok Studio de los vídeos con 24 h o más | `herramientas/tiktok_retencion.js` → `estadisticas/tiktok_studio.json` |
 | Una vez por semana (lunes) | Mirar 6 Shorts del nicho con muchas vistas y apuntar lo que se repite | `herramientas/hoja_short.js` → tabla de referentes |
 | Antes de entregar | `python3 -m motor.calidad` y guardar `calidad.md` en el lote | — |
 | Al publicar | Etiquetar el vídeo en `estadisticas/etiquetas.json` (tema, gancho, estructura, **experimento**) | — |
@@ -91,6 +92,33 @@ texto y más cosas quietas hay en el primer fotograma, menos gente se queda. El 
 Puesto en práctica: `python3 -m motor.guion guion.txt` revisa el guion **antes de gastar voz** (gancho, duración, cadena de preguntas, tramos sin dato, cifras en letra, palabras solo de España); `motor.calidad` da ❌ si la primera frase pasa de 9 palabras y ⚠ si pasa de 5, y avisa si el
 primer segundo del MP4 casi no se mueve; AGENTE §3 pide primera frase de 5 palabras o menos y un solo objeto grande
 en acción. El gancho de la Luna v7 se rehízo con eso (el aviso saltó en mi propia v6).
+
+### TikTok Studio: las primeras curvas de retención reales (2026-11-17, 02:20)
+
+YouTube aún no da curvas, pero TikTok sí (`herramientas/tiktok_retencion.js` → `estadisticas/tiktok_studio.json`).
+
+| Vídeo | Vistas | Tiempo medio | Lo ven entero | Siguen a los 3 s | A los 10 s | A los 20 s |
+|---|---|---|---|---|---|---|
+| **Luna densa** (54 s) | 266 | **22,4 s** | 21,4 % | 60 % | 42 % | 34 % |
+| Nudillos (58 s) | 263 | 20,7 s | 18,6 % | — | — | — |
+| Huellas en la Luna (47 s) | 617 | 19,8 s | 21,7 % | 63 % | 45 % | 34 % |
+| Guerra de 38 minutos (52 s) | 424 | 16,5 s | 13,0 % | — | — | — |
+| Moáis (46 s) | 407 | 13,7 s | 16,1 % | 41 % | 26 % | 21 % |
+| Puertas (55 s) | 229 | 9,3 s | 6,1 % | — | — | 14 % (a los 16 s) |
+
+7. **TikTok ordena los vídeos casi igual que YouTube.** Tiempo medio en TikTok: Luna densa, Nudillos, Huellas,
+   Guerra, Moáis, Puertas. «Se quedaron viendo» en YouTube: Huellas, Luna densa, Nudillos, Guerra, Moáis, Puertas.
+   Dos redes distintas dicen lo mismo, así que no es ruido: Puertas es flojo de verdad y los dos de la Luna, fuertes.
+8. **El método denso tiene el mejor tiempo medio del canal** (22,4 s), aunque sea solo con 266 vistas.
+9. **La pérdida está al principio, no en medio.** Hasta los dos mejores pierden el 40 % en los 3 primeros segundos
+   y la mitad antes del segundo 10. Después la curva cae muy despacio (medio punto por segundo). Mejorar el
+   segundo 0–3 vale mucho más que pulir el segundo 30.
+10. **Dentro de la Luna densa:** el mayor escalón intermedio está en el segundo 9–10 (46 → 42 %), justo en la
+    cuenta atrás «3, 2, 1», que eran los tres planos casi vacíos que detectó el control y que la v6 rehízo. Los
+    dinosaurios (30–38 s) son el tramo que mejor aguanta: no se va casi nadie (26 → 24 %). El siguiente escalón
+    es al pasar a la almeja (38–39 s).
+11. **Esto apoya la versión corta (H2):** casi el 80 % ya se ha ido en el segundo 40; un vídeo de 35 s deja fuera
+    sobre todo tramo que casi nadie ve.
 
 ---
 
