@@ -18,7 +18,7 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 | Bostezo | «No bosteces. Ya es tarde.» | Una boca enorme abriéndose |
 | Día de 18 horas | «Un día duraba dieciocho horas.» | La Tierra girando muy deprisa con un reloj que corre |
 
-### Candidatos nuevos que pasan la «prueba del segundo» (AGENTE §2). **Sin verificar: cada dato necesita sus dos fuentes antes de usarse**
+### Candidatos nuevos con objeto claro para el fotograma 0 (AGENTE §2). **Sin verificar: cada dato necesita sus dos fuentes antes de usarse**
 - Los plátanos son un poco radiactivos (potasio-40) — «Este plátano es radiactivo.» — un plátano con un contador que hace clic (cotidiano/ciencia, alcance universal)
 - La luz del Sol que ves salió hace unos ocho minutos — «Ese Sol ya es pasado.» — el Sol con un rayo viajando hacia un ojo (espacio)
 - Un rayo calienta el aire varias veces más que la superficie del Sol — «Un rayo quema más que el Sol.» — un rayo cayendo con un termómetro que revienta (ciencia)

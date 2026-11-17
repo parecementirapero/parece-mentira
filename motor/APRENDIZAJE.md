@@ -166,7 +166,8 @@ búsquedas con 0,1–1,4 M de vistas con los de 7 que se quedaron en ~2.000.
 3. **Lo que sí cambia entre un grupo y otro es el tema:** los que suben hablan de algo que **cualquiera reconoce en
    un segundo** (una persona famosa, la Tierra, tu cuerpo, un perro en el espacio); los que no, de historia local o
    de un detalle erudito. Cuadra con nuestros datos: la Luna y las huellas en la Luna, arriba; Zanzíbar y los
-   moáis, abajo. → hipótesis H9.
+   moáis, abajo. → hipótesis H9. **Comprobado después con los 383 títulos y no se sostiene** (ver la tabla de
+   experimentos): era una impresión sacada de 15 vídeos.
 4. **Existe otro formato: el micro-Short.** El de 1,4 M dura **5 segundos**: un fondo de meme con una lista de
    texto que no da tiempo a leer, así que la gente lo repite. Otro de 0,7 M dura 15 s. Ahí el «muro de texto» es el
    truco, no el fallo. Mi regla del gancho corto vale para vídeos narrados de 35–55 s, no para ese formato. →
@@ -215,7 +216,7 @@ Una hipótesis = un vídeo del lote con ese cambio y los otros dos sin él. Se e
 | H6 | Un personaje con cara que reacciona al dato retiene más que objetos y cifras solos | — | — | **Descartado por Nico el 2026-11-17** («no me mola lo de poner el personaje») antes de probarlo. El código y la muestra se han quitado del repo. No volver a proponerlo |
 | H7 | Gancho de 5 palabras o menos + un solo objeto grande en acción en el fotograma 0 sube «se quedan» por encima del 70 % | Regla ya en AGENTE §3 y en `motor.calidad`; comparar los lotes desde el 2026-11-17 con los anteriores | Se quedan | **En marcha** (es regla desde hoy). Datos previos: 80/74 frente a 60/47/32 |
 | H8 | Un micro-Short de 6–9 s en bucle (gancho + un dato) consigue más del 100 % de media vista y sirve de anzuelo hacia el vídeo largo | Uno a la semana, sacado de un vídeo ya hecho con `omitir=` (sin gastar voz). Muestra: Luna micro de 8 s | % medio visto, vistas, suscriptores | Preparado; pendiente del «sí» de Nico/Jorge |
-| H9 | Los temas que cualquiera reconoce en un segundo (persona famosa, el cuerpo, la Tierra, animales, el espacio) superan a los de historia local o detalle erudito | Etiquetar cada vídeo como `alcance: universal` o `nicho` en `etiquetas.json` y comparar cuando haya 5 de cada | Se quedan, vistas a 48 h | Abierto. Hoy: Luna y huellas arriba; Zanzíbar y moáis abajo |
+| H9 | Los temas que cualquiera reconoce en un segundo superan a los de historia local o detalle erudito | Etiquetar cada vídeo como `alcance: universal` o `nicho` en `etiquetas.json` y comparar cuando haya 5 de cada | Se quedan, vistas a 48 h | **Sin apoyo por ahora.** Me lo sugirieron 15 vídeos mirados, pero al comprobarlo con los 383 títulos no se sostiene: dentro de la misma búsqueda de historia, los títulos «locales» (reyes, batallas, España) tienen mediana 6.500 frente a 1.500 del resto. Se queda como etiqueta para medir, no como regla |
 | H5 | Temas de espacio con objeto físico en el primer fotograma superan a «por qué te pasa X» | Comparar por etiqueta `tema` cuando haya 5 de cada | Se quedan | Abierto; hoy 79/73/65 frente a 61/39 |
 
 Cuando un experimento se cierra, se escribe aquí el resultado con fecha y, si cambia cómo hacemos los vídeos, pasa a
