@@ -59,4 +59,4 @@ Base: `aprendizajes.md` (8 vídeos: todo tendencia/pista) y `estudio.md` (nada p
 `generadores/`: `NN-guion.txt`, `ilus_tarde.py` (≈40 SVG nuevos: rayo ×3, nube, tormenta con ciudad, campo de noche, termómetros, onda, oreja, refugio, silueta contando; Sol cortado, fotón, ojo, ojo lloroso, cara, interruptor, neandertal en silueta, hoguera, cueva, multitud; cebolla ×2, media cebolla, cuchillo afilado y romo, tabla, gotitas, gas, células, enzima, molécula con azufre, cámara, guepardo, gafas, piedra de afilar; reutiliza `ilus_lote.py` de la mañana) y `gen_0N.py DIR [locucion.mp3 alineacion.json]`. Render en la nube; resultados copiados al Mac.
 
 ## Publicación
-- Pendiente del «ok» en el chat del lote.
+- ≈21:20: en el chat piden «súbelos a TikTok e YT» (01 v3, 02 v3, 03 v2; Instagram no). **Bloqueado**: el Mac de Jorge no responde (bridge desconectado), así que no se pueden copiar los MP4 a la carpeta local, ni usar `subir_youtube.py` (el token está en `claves.txt` del Mac), ni el navegador integrado para TikTok. Además el protocolo pide escribir «ok» tal cual para publicar. Nada publicado.
