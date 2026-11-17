@@ -6,6 +6,11 @@ Cómo mejora el canal de un lote al siguiente sin depender de opiniones. Tres fu
 2. **Referentes vistos fotograma a fotograma**: qué hacen los Shorts del nicho con millones de vistas.
 3. **Investigación publicada** (`motor/GUIA_CALIDAD.md`): por qué podría funcionar.
 
+> **Desde el 2026-11-17 el nivel de cada conclusión lo pone el estudio** (`estadisticas/datos/estudio.md`, método en
+> `estadisticas/estudio/README.md`): pista, indicio o regla, con vídeos comparados a la misma edad. Todo lo de este
+> cuaderno es, hoy, **pista**: solo 3 vídeos tienen lecturas con 24 h o más. Los experimentos de la tabla de abajo se
+> abren con ficha previa (`python3 estadisticas/estudio experimento nuevo …`), no con «1 vídeo de 3».
+
 Regla: una idea sale de 2 o 3, se convierte en **hipótesis**, se prueba cambiando **una sola cosa** en un vídeo del
 lote, y solo pasa a `DECISIONS.md` cuando los datos (1) la apoyan. Con menos de 5 vídeos por grupo todo es «pista».
 

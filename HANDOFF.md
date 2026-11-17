@@ -4,6 +4,24 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 16:30 — Nico — rama `main` — chat en la nube (móvil) «Framework de estudio»
+**Encargo**: «un framework para un estudio súper minucioso, analítico y científico de la audiencia (edad, género, target) y de qué vídeos funcionan y por qué» y después «trabaja en el framework un rato largo».
+**Hecho** (commit `f2dbc18` + el de esta entrada):
+- `estadisticas/estudio/` (solo librería estándar): `ficha.py` (diccionario de 28 variables; 7 se calculan solas del guion y 4 de `calidad-NN.md`), `mediciones.py` (24 h, 48 h, 7 d, 28 d; lo guardado no se reescribe), `estadistica.py` (medianas, intervalo por remuestreo, Mann-Whitney por permutación, Spearman, tamaño de muestra, niveles), `analisis.py` (`datos/estudio.md`), `autopsia.py` (`datos/autopsias.md`), `experimento.py` (ficha previa, calendario, cierre), `informe.py` (semanal), `comentarios.py`, `recogida_extra.py` (audiencia por vídeo y comentarios), `README.md`.
+- `estadisticas/fichas.json`: los 10 vídeos públicos. Tema, gancho y estructura copiados de `etiquetas.json` (se pusieron al publicar); el resto de subjetivas las puse yo **sabiendo ya los resultados** (marcadas `retrospectivo`).
+- `recoger.py`: llama a `recogida_extra` dentro de un `try`. Workflow diario: paso nuevo `python3 estadisticas/estudio todo` (si falla, avisa y sigue).
+- `AGENTE.md` §1 (leer `estudio.md`), §6 (ficha antes de entregar, **en prueba**) y §8 (unir la ficha con el id). `DECISIONS.md`, `TASKS.md`, `PROJECT_STATE.md`, aviso arriba en `motor/APRENDIZAJE.md`.
+**Lo que dicen los datos hoy**:
+- Solo 3 de 10 vídeos tienen lectura con 24 h o más y ninguno la de 48 h: **ninguna comparación pasa de «pista»**. Las «tendencias» de `aprendizajes.md` por tema, gancho o estructura salen de grupos de 1 o 2 vídeos.
+- Audiencia de YouTube: 49 % con 35 años o más, 42 % en 18–34, 8 % en 13–17; 67 % hombres. España es el país que menos segundos ve por vista (10,6 s; Argentina 14,7 s). Es un dato del canal entero, sin controlar por vídeo: pista.
+- Ejemplo de por qué hace falta el método: mezclando edades, «palabras del guion» correlaciona 0,97 con «se quedaron viendo» en 5 vídeos (p 0,03). No es que más palabras retengan: los guiones largos son los del método nuevo.
+**Corrección a lo que dije en el chat**: los niveles que propuse primero (indicio = 5 por grupo y mismo sentido en dos redes) eran demasiado blandos. Simulando 90 vídeos sin ningún efecto real, la mitad de las comparaciones salían «indicio» y 7 de cada 10 estudios daban alguna «regla» falsa. Los actuales exigen p: 0 reglas falsas en 100 estudios simulados, 5 % de indicios falsos; un efecto real de 15 puntos llega a regla 8 de cada 10 veces con 90 vídeos.
+**Pruebas**: `python3 estadisticas/estudio/prueba.py` → 113 de 113 (incluye simulaciones con y sin efecto, YouTube simulado y los datos reales). `python3 -m motor.prueba` → TODO BIEN (no se tocó `motor/` salvo el aviso en APRENDIZAJE.md). `recoger_youtube()` ejecutado entero con un YouTube simulado. **Sin probar**: `recogida_extra` contra la API real (puede que el permiso de solo lectura no deje leer comentarios; avisa y sigue) y el paso nuevo del workflow en GitHub Actions (primera vez: mañana ≈9:20).
+**Pendiente** (en `TASKS.md`): público objetivo, confirmar la ficha en AGENTE, primer experimento, segundo codificador, mirar el registro del workflow de mañana, TikTok Studio «Espectadores», y si `analizar.py` adopta estos niveles.
+**Siguiente paso**: que Nico y Jorge digan sí o no a la ficha en AGENTE §6 y elijan el primer experimento.
+
+---
+
 ## 2026-11-17 11:30 — Jorge (chat del Mac de Jorge) — rama `main`
 **Hecho**: lote 2026-11-17-manana («ok» de Jorge a los 3 en este chat) publicado en **TikTok** (7709083847450807574 · 7709084200636255510 · 7709084597069401366) e **Instagram** (Df1twcSx6JN · Df1uAQJxhjZ · Df1uQs9xjyt) desde el navegador integrado del Mac de Jorge; YouTube ya estaba (bja3TleMy94 · aA9ji1Y1EPA · 0LBq1SkOWz4). Los MP4 llegaron desde el chat de Nico por https://claude.ai/artifact/FSpWCbNW59fpYPe46bZ2CH (partes unidas, SHA-256 igual al de `estado.md`). Comentarios en TikTok e Instagram (sin fijar). `estadisticas/etiquetas.json` con los 3.
 **Aprendido**: en Instagram web, pulsar «Compartir» con clic real conserva el texto (por script se perdía) → AGENTE §8.

@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-17 08:55 — Agente 08:00 (Nico)_
+_Última actualización: 2026-11-17 16:30 — Nico (chat móvil en la nube, estudio de audiencia)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -16,6 +16,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | ElevenLabs | ✅ voz «Archivo Oculto — Narración (clon)» (`op8soO9fvP07F3mjbJuB`, `eleven_v4`, 0.5/0.75), clave API en el Mac de Jorge («Parece Mentira») y en el de Nico («Parece Mentira - Nico»), prueba OK en los dos |
 | Carpeta local de trabajo | ✅ Nico: `/Users/nico/Documents/Parece Mentira` (referencias en `Documents/Codex/Parece Mentira/referencias`) · ✅ Jorge: `/Users/jorgegomez/Documents/Parece Mentira` |
 | Web de estadísticas (`estadisticas/`) — YouTube, TikTok e Instagram | 🟢 YouTube y TikTok conectados: se actualiza solo cada mañana (GitHub Actions) y la página «Parece Mentira · Estadísticas» de Claude se republica a las 9:14. Navegación suave y audiencia de YouTube (edad, países, dispositivos, fuentes) con gráficas. Conclusiones automáticas diarias (`estadisticas/datos/aprendizajes.md`) que el agente de lotes usa para decidir. 🟡 Falta Instagram |
+| Estudio de audiencia y rendimiento (`estadisticas/estudio/`) | 🟢 en marcha desde 2026-11-17: cada mañana, tras las estadísticas, se generan `estadisticas/datos/estudio.md` (qué se sabe y con qué nivel: pista / indicio / regla), `autopsias.md` y `mediciones.json` (24 h, 48 h, 7 d, 28 d); los lunes, informe semanal. 10 vídeos con ficha (todas retrospectivas). 🟡 Hoy solo 3 vídeos tienen lectura con 24 h o más: **nada pasa de «pista»**. 🟡 Audiencia por vídeo y comentarios: código listo, sin probar contra la API real. Pendiente de Nico y Jorge: público objetivo, primer experimento, confirmar la ficha en AGENTE |
 | Publicación por API de Instagram y TikTok (`publicar/`) | 🟡 código listo y probado en simulación (2026-11-17), **sin activar**: falta la puesta en marcha de `publicar/README.md`. Instagram publicará el Reel entero; TikTok solo puede dejar un borrador en la bandeja (se termina en el móvil) y depende de una prueba real. Hasta entonces, navegador |
 | Agente diario | ✅ manual en `AGENTE.md` (desde 2026-11-16: gancho en el fotograma 0, portadas elegidas por el agente sin «ok» §6b, imágenes reales de Openverse en prueba §5b) |
 | Openverse (`motor/openverse.py`) | 🟡 en el Mac de Nico falla la descarga: `thumb.wikimedia.org` da 403 (2026-11-17). Antes: ✅ probado de verdad en el Mac de Jorge (moái CC0 de Commons); desde la nube Wikimedia da 429 → se ejecuta en los Macs. Experimento «plano real» desde el lote 2026-11-17-manana |
