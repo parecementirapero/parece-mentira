@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-17-tarde
 
-- **Estado**: **en revisión** (v1). Esperando «ok» en el chat.
+- **Estado**: **01 v3 y 02 v3 publicados en YouTube** (2026-11-17, Nico); TikTok pendiente; 03 v2 sin publicar.
 - **Agente**: Agente 20:00 (Jorge) · Mac de Jorge (`jorges-macbook-air-2`) · carpeta local `Documents/Parece Mentira/lotes/2026-11-17-tarde`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dHf6SfJ6MbfA5kmnCP (3 MP4 y 3 portadas enviados)
 - **Correo de aviso**: enviado a parecementirapero.media@gmail.com, id `1a1eaf34810f56dd`.
@@ -13,6 +13,16 @@
 | 3 | `03-cebolla_v1.mp4` | 56,7 s | 35 | `5cad744e7ec55cd16eee6655f3fc6f0aaa911fa0f1a283be626b70d283764c3e` | 93/100 | «Por qué lloras» · dato · 55,25 s |
 
 SHA en el Mac = SHA del render (comprobado con `shasum`). En la carpeta local: MP4, SRT, manifiestos, locuciones, alineaciones, `NN-portadas/portada.jpg`.
+
+## Publicación (2026-11-17, chat del Mac de Nico)
+Aprobación: Nico, «sube los vídeos que me he descargado del lote de Jorge» (en su Mac: 01 v3 y 02 v3, SHA-256 iguales a los de abajo). El 03 v2 no estaba descargado: sin publicar.
+| # | YouTube | TikTok |
+|---|---|---|
+| 01 v3 | https://youtube.com/shorts/dOdQj9QyoBI — público, 23:00 | pendiente |
+| 02 v3 | https://youtube.com/shorts/cjSc0D_gOaI — programado 2026-11-17 23:59 (hora de Madrid) | pendiente |
+- YouTube por API (`subir_youtube.py`) desde el Mac de Nico. Sin `--portada` (los `NN-portadas/portada.jpg` no están en ese Mac): falta elegir en Studio el fotograma `portada.t` (0,75 s y 31,75 s).
+- Instagram: no se publica (DECISIONS, cuenta cerrada).
+- Falta: TikTok (navegador; la persona elige el archivo), comentarios fijados.
 
 ## v3 de 01 y 02 (≈21:10): menos relojes
 Pedido: «que no salgan tantos relojes, alguno que otro está bien pero muchos no, y que si una escena acaba con un reloj no salga al principio de la siguiente; guarda todo lo demás y esto también».

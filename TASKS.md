@@ -5,7 +5,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
-- [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **a medias (23:15)**: se lanzó la subida a YouTube por API (01 ya, 02 programado +1 h) y el Mac de Nico se desconectó antes de responder: NO se sabe si entraron. Antes de reintentar, `subir_youtube.py … --prueba` (dice `yaEstaba` si ya está). TikTok sin empezar
+- [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **YouTube hecho** (01 público `dOdQj9QyoBI`; 02 programado 23:59 `cjSc0D_gOaI`). Falta: TikTok de los dos (Nico tiene que elegir el archivo en el navegador integrado), portada por fotograma en Studio, comentarios fijados
 
 ## Pendiente
 - [ ] **Estudio — decidir el público objetivo** (edades y países) y apuntarlo en `estadisticas/estudio/objetivo.json` y `DECISIONS.md`. Dato para decidir: en YouTube el 49 % de la audiencia tiene 35 años o más y solo el 42 % está en 18–34; 67 % hombres; España 25 %, Latinoamérica 72 % (`estadisticas/datos/estudio.md` §5) — Nico/Jorge
