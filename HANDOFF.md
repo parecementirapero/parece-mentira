@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 23:15 — Nico (chat del Mac de Nico) — rama `main` — publicar lote 2026-11-17-tarde, A MEDIAS
+**Hecho**: Nico pidió subir los vídeos descargados del lote de Jorge: en su Mac están 01 v3 y 02 v3 (SHA-256 iguales a `estado.md`); el 03 v2 no está descargado. Copiados a `~/Documents/Parece Mentira/lotes/2026-11-17-tarde/` junto con `metadatos.json`; `publicar/subir_youtube.py` del Mac actualizado al del repo. `--prueba` ✓ en los dos (claves de subida válidas, sin duplicados). Lanzada la subida a YouTube (01 público ya, 02 con `--publicar-en` +1 h) y **el Mac se desconectó antes de responder**.
+**Pruebas**: SHA-256, ffprobe 1080×1920 h264/AAC, `--prueba` ×2.
+**Pendiente**: comprobar si 01 y 02 entraron en YouTube (repetir el comando con `--prueba`: `yaEstaba` = ya está; mirar en Studio que el 02 quedó programado y no público). Sin portada propia (los `NN-portadas/portada.jpg` no están en el Mac de Nico): elegir fotograma `portada.t` en Studio. TikTok sin empezar (navegador integrado; la persona elige el archivo). Comentarios fijados, `estado.md`, `etiquetas.json` y ficha, sin hacer. 03 v2: bajarlo del chat del lote si se quiere publicar.
+**Siguiente paso**: con el Mac de Nico conectado, comprobar YouTube y seguir con TikTok.
+
 ## 2026-11-17 21:10 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-17-tarde v3 + reglas
 **Hecho**: 01 y 02 en v3 con menos relojes (2 y 1; nunca dos planos seguidos con reloj). Reglas nuevas guardadas como pidió la persona en el chat: `DECISIONS.md` → «Variedad y claridad en los planos» (pocos relojes, no repetir objeto ni animación, lo que se explica se ve pasar, estelas, caras bien dibujadas y coherentes) y resumen en `motor/DENSO.md`. `motor.calidad` 79/87 sin ❌. Vídeos en el chat.
 **Pendiente**: «ok» para 01 v3, 02 v3 y 03 v2. Los MP4 v2/v3 no están en el Mac: bajarlos del chat antes de publicar.
