@@ -69,6 +69,8 @@ Lo que se ve (todo **pista**: 7 vídeos, edades distintas, vistas redondeadas po
    horas YouTube reparte vistas de prueba a todos; el porcentaje decide **si sigue repartiendo después** (Huellas,
    con 80 %, sigue creciendo a las 32 h; Nudillos, con 60 %, ya está parado a las 3 h). Por eso los vídeos se
    comparan a las 48 h, no la primera noche.
+   Tercera lectura (02:41): Huellas va por 8.500 vistas a las 33 h y sigue sumando unas 500 por hora en la tarde
+   de Latinoamérica.
 6. **El gancho «tu móvil frente al Apolo 11» es el peor hasta ahora (32 %)** y el que menos segundos retiene (8 s).
    A revisar su primer fotograma cuando tenga 24 h.
 
@@ -249,6 +251,11 @@ Oficial:
 - Señales que YouTube nombra: la proporción que elige ver, la duración media, el % medio visto, los «me gusta» y
   las encuestas de satisfacción. No hay preferencia por un formato, ni frecuencia mínima de publicación, ni
   umbral oficial de retención ([resumen con las fuentes de la ayuda de YouTube](https://www.truefuturemedia.com/articles/youtube-shorts-algorithm-data-backed-guide)).
+
+- Publicar cuando la audiencia está activa puede ayudar a las primeras vistas, pero no se sabe que cambie las
+  vistas a largo plazo ([ayuda de YouTube: rendimiento y preguntas frecuentes](https://support.google.com/youtube/answer/141805)).
+- Definiciones oficiales de «Se mostró en el feed» y «Vistos (frente a deslizados)»:
+  [ayuda de YouTube: alcance](https://support.google.com/youtube/answer/9314355?hl=en).
 
 Folclore (lo repiten muchos blogs, YouTube no lo ha confirmado): que todos los Shorts pasan por «lotes de prueba»
 fijos en la primera hora, que hay que publicar a una hora concreta, que publicar más da ventaja, que el algoritmo
