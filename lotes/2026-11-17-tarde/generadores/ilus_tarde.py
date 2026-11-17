@@ -154,6 +154,140 @@ def persona_cuenta():
     guardar("persona_cuenta", "".join(b), w, h)
 
 
+# ---------------------------------------------------------------- v2 del 01: más tipos de rayo (petición de cambios, 2026-11-17)
+def _trazo(r, p0, p1, pasos, amp):
+    (x0, y0), (x1, y1) = p0, p1
+    pts = [(x0, y0)]
+    for k in range(1, pasos):
+        u = k / pasos
+        nx, ny = -(y1 - y0), (x1 - x0)
+        L = math.hypot(nx, ny) or 1
+        o = r.uniform(-amp, amp)
+        pts.append((x0 + (x1 - x0) * u + nx / L * o, y0 + (y1 - y0) * u + ny / L * o))
+    pts.append((x1, y1))
+    return pts
+
+
+def _dibuja_rayo(caminos, color="#bfe9ff", nucleo="#ffffff", g=12):
+    b = []
+    for pts, peso in caminos:
+        d = "M" + " L".join(f"{x:.0f} {y:.0f}" for x, y in pts)
+        b.append(f'<path d="{d}" stroke="{color}" stroke-width="{g*5*peso:.0f}" fill="none" opacity="0.3" filter="url(#blur40)"/>')
+        b.append(f'<path d="{d}" stroke="{color}" stroke-width="{g*2.2*peso:.0f}" fill="none" opacity="0.65" filter="url(#blur8)"/>')
+    for pts, peso in caminos:
+        d = "M" + " L".join(f"{x:.0f} {y:.0f}" for x, y in pts)
+        b.append(f'<path d="{d}" stroke="{nucleo}" stroke-width="{max(2, g*peso):.1f}" fill="none" stroke-linejoin="round" stroke-linecap="round"/>')
+    return "".join(b)
+
+
+def rayo_horizontal(nombre="rayo_horizontal", sem=31, w=1600, h=700, color="#d8b8ff"):
+    """Rayo entre nubes (intranube): avanza de lado con muchas ramas finas."""
+    r = random.Random(sem)
+    tronco = _trazo(r, (0, h * 0.45), (w, h * 0.5), 26, 70)
+    cam = [(tronco, 1.0)]
+    for _ in range(9):
+        i = r.randint(2, 22); x, y = tronco[i]
+        fin = (x + r.uniform(80, 260), y + r.choice([-1, 1]) * r.uniform(100, 280))
+        cam.append((_trazo(r, (x, y), fin, 7, 30), 0.4))
+    guardar(nombre, _dibuja_rayo(cam, color, g=9), w, h)
+
+
+def rayo_ramificado(nombre="rayo_ramificado", sem=44, w=1080, h=1600, color="#ffb8f0"):
+    """Rayo en árbol: varias ramas grandes que bajan abiertas en abanico (tono violeta)."""
+    r = random.Random(sem)
+    tronco = _trazo(r, (w * 0.45, 0), (w * 0.55, h), 20, 80)
+    cam = [(tronco, 1.0)]
+    for _ in range(7):
+        i = r.randint(3, 13); x, y = tronco[i]
+        lado = r.choice([-1, 1])
+        fin = (x + lado * r.uniform(200, 420), y + r.uniform(250, 600))
+        rama = _trazo(r, (x, y), fin, 10, 40)
+        cam.append((rama, 0.55))
+        j = r.randint(2, 7); xx, yy = rama[j]
+        cam.append((_trazo(r, (xx, yy), (xx + lado * r.uniform(60, 180), yy + r.uniform(80, 200)), 5, 20), 0.3))
+    guardar(nombre, _dibuja_rayo(cam, color, "#fff6ff", 11), w, h)
+
+
+def rayo_doble(nombre="rayo_doble", sem=52, w=1080, h=1600):
+    """Dos descargas a la vez que bajan separadas (una ámbar y otra blanca)."""
+    r = random.Random(sem)
+    a = _trazo(r, (260, 0), (330, h), 18, 60)
+    b = _trazo(r, (800, 120), (720, h), 16, 55)
+    cuerpo = _dibuja_rayo([(a, 0.9)], "#ffd27a", "#fffbe8", 10) + _dibuja_rayo([(b, 0.8)], "#bfe9ff", "#ffffff", 10)
+    guardar(nombre, cuerpo, w, h)
+
+
+def canal_plasma():
+    """Primer plano del canal del rayo: tubo de aire incandescente de pocos centímetros, con capas de calor."""
+    w, h = 1080, 1920
+    r = random.Random(61)
+    pts = _trazo(r, (540, 0), (550, 1920), 14, 60)
+    d = "M" + " L".join(f"{x:.0f} {y:.0f}" for x, y in pts)
+    b = [f'<path d="{d}" stroke="#ff5a1a" stroke-width="320" fill="none" opacity="0.25" filter="url(#blur40)"/>',
+         f'<path d="{d}" stroke="#ffb02e" stroke-width="160" fill="none" opacity="0.45" filter="url(#blur20)"/>',
+         f'<path d="{d}" stroke="#fff3c0" stroke-width="70" fill="none" opacity="0.9" filter="url(#blur8)"/>',
+         f'<path d="{d}" stroke="#ffffff" stroke-width="30" fill="none"/>']
+    guardar("canal_plasma", "".join(b), w, h)
+
+
+def arbol_tormenta(nombre="arbol", quemado=False):
+    """Árbol solitario en silueta (el rayo le cae encima)."""
+    w, h = 800, 1000
+    r = random.Random(71)
+    col = "#1a120c" if not quemado else "#2a1206"
+    b = ['<ellipse cx="400" cy="985" rx="300" ry="16" fill="#000" opacity="0.5" filter="url(#blur8)"/>',
+         f'<path d="M370 990 C380 800 360 650 390 520 L410 520 C440 650 420 800 430 990 Z" fill="{col}"/>']
+    def rama(x, y, ang, L, g, n):
+        if n == 0 or L < 20: return
+        x2, y2 = x + L * math.cos(ang), y + L * math.sin(ang)
+        b.append(f'<path d="M{x:.0f} {y:.0f} L{x2:.0f} {y2:.0f}" stroke="{col}" stroke-width="{g:.0f}" stroke-linecap="round"/>')
+        for da in (-0.45, 0.4):
+            rama(x2, y2, ang + da + r.uniform(-0.15, 0.15), L * 0.72, g * 0.65, n - 1)
+    rama(400, 540, -math.pi / 2, 170, 30, 6)
+    if quemado:
+        b.append('<path d="M400 520 L405 990" stroke="#ff8a1a" stroke-width="10" opacity="0.9"/>')
+        b.append('<ellipse cx="400" cy="400" rx="260" ry="200" fill="#ff8a1a" opacity="0.25" filter="url(#blur40)"/>')
+    guardar(nombre, "".join(b), w, h)
+
+
+def bg_mar_tormenta():
+    """Mar de noche bajo tormenta, con olas y reflejos."""
+    r = random.Random(81)
+    d = lg("mt_c", (0, "#05060f"), (0.45, "#22183c"), (0.62, "#3a2a5a"), (1, "#05060f")) + lg("mt_m", (0, "#1a2240"), (1, "#03050c")) + _neb("mt_n", "#4a3a8a", 6, 0.0035, 2.2, 0.9)
+    b = ['<rect width="1080" height="1920" fill="url(#mt_c)"/>', '<rect width="1080" height="1200" filter="url(#mt_n)" opacity="0.6"/>',
+         '<rect y="1180" width="1080" height="740" fill="url(#mt_m)"/>']
+    for k in range(60):
+        y = 1190 + (k ** 1.35) * 2.2
+        if y > 1920: break
+        x = r.uniform(-100, 1080)
+        b.append(f'<path d="M{x:.0f} {y:.0f} q{40+k:.0f} -{6+k*0.2:.0f} {80+k*2:.0f} 0" stroke="#8aa0d8" stroke-width="{2+k*0.08:.1f}" fill="none" opacity="{r.uniform(0.15,0.4):.2f}"/>')
+    b.append('<path d="M0 1180 L1080 1180" stroke="#9fb8ff" stroke-width="3" opacity="0.4"/>')
+    b.append('<path d="M760 1180 l20 0 l40 600 l-100 0 Z" fill="#bfe9ff" opacity="0.12" filter="url(#blur20)"/>')  # reflejo del rayo
+    b.append(grano())
+    guardar("bg_mar_tormenta", "".join(b), defs=d)
+
+
+def yunque():
+    """Nube de tormenta en yunque (cumulonimbo) vista de lejos: el rayo puede salir por un lado, a cielo despejado."""
+    w, h = 1080, 900
+    r = random.Random(91)
+    d = lg("yu_g", (0, "#d8d0f0"), (0.5, "#7a6aa0"), (1, "#2a2244"))
+    b = ['<path d="M80 260 C200 160 420 130 540 140 C700 120 900 170 1040 250 C960 290 760 300 640 310 L620 760 L420 760 L420 310 C300 300 180 300 80 260 Z" fill="url(#yu_g)"/>']
+    for _ in range(30):
+        b.append(f'<circle cx="{r.uniform(430,620):.0f}" cy="{r.uniform(320,760):.0f}" r="{r.uniform(50,110):.0f}" fill="url(#yu_g)" opacity="0.9"/>')
+    b.append('<rect x="380" y="760" width="300" height="140" fill="#1a1630" opacity="0.6" filter="url(#blur20)"/>')
+    guardar("yunque", '<g filter="url(#blur8)">' + "".join(b) + '</g>', w, h, d)
+
+
+def bg_cielo_despejado():
+    r = random.Random(95)
+    d = lg("cd_c", (0, "#0a0f2a"), (0.6, "#24305a"), (1, "#0a0c18"))
+    b = ['<rect width="1080" height="1920" fill="url(#cd_c)"/>',
+         *[f'<circle cx="{r.uniform(0,1080):.0f}" cy="{r.uniform(0,1300):.0f}" r="{r.uniform(1,2.6):.1f}" fill="#fff" opacity="{r.uniform(0.3,0.9):.2f}"/>' for _ in range(160)],
+         '<path d="M0 1500 C300 1460 700 1520 1080 1480 L1080 1920 L0 1920 Z" fill="#0c1410"/>', grano()]
+    guardar("bg_cielo_despejado", "".join(b), defs=d)
+
+
 # ====================================================================== 02 · Sol
 def sol_corte():
     """Sol cortado: núcleo, zona radiativa (donde la luz rebota) y zona convectiva."""
@@ -212,6 +346,44 @@ def cara_sol():
          '<path d="M520 60 C380 40 250 120 230 260 C220 330 160 380 170 420" stroke="#ffe6b0" stroke-width="12" fill="none" opacity="0.8" filter="url(#blur8)"/>',
          grano(w, h)]
     guardar("cara_sol", "".join(b), w, h, d)
+
+
+def cara_perfil():
+    """v2 del 02 (petición de cambios): perfil de una cara mirando a la izquierda, ojos cerrados al sol,
+    con pelo, oreja, ceja, pestañas, labios, mejilla y luz dorada de borde."""
+    w, h = 900, 1300
+    d = (lg("cp_piel", (0, "#f6c49a"), (0.45, "#e2a074"), (1, "#9a5a38"), x2=1, y2=0.2) +
+         lg("cp_pelo", (0, "#5a3420"), (0.5, "#3a2014"), (1, "#1a0c06"), x2=1, y2=0.4) +
+         rg("cp_mej", (0, "#ff8a7a", 0.55), (1, "#ff8a7a", 0)) + rg("cp_luz", (0, "#fff0b0", 0.9), (1, "#fff0b0", 0)))
+    perfil = ("M470 150 C360 150 290 230 275 330 C268 380 262 420 250 450 C230 495 190 540 205 575 C215 600 250 600 262 612 "
+              "C250 640 252 660 268 672 C255 690 258 712 278 722 C270 760 285 800 330 812 C380 826 410 840 420 900 "
+              "L430 1300 L900 1300 L900 760 C880 420 780 150 470 150 Z")
+    b = [f'<path d="{perfil}" fill="url(#cp_piel)"/>',
+         # pelo: masa redonda desde la frente por la coronilla hasta la nuca
+         '<path d="M290 360 C285 200 420 95 580 95 C770 95 890 250 885 470 C880 640 830 760 790 860 L700 860 C735 760 745 640 720 560 C690 470 600 400 480 370 C400 352 330 360 290 360 Z" fill="url(#cp_pelo)"/>',
+         *[f'<path d="M{x} {y} C{x+80} {y-50} {x+200} {y-20} {x+270} {y+60}" stroke="#8a5a34" stroke-width="5" fill="none" opacity="0.45"/>' for x, y in [(340, 260), (400, 200), (480, 160), (560, 150), (640, 180)]],
+         '<path d="M320 300 C380 200 480 150 580 140" stroke="#fff0b0" stroke-width="8" fill="none" opacity="0.6" filter="url(#blur8)"/>',
+         # oreja
+         '<path d="M640 470 C700 440 750 480 745 550 C740 620 700 660 660 650 C640 645 635 620 650 600" fill="#d8946a"/>',
+         '<path d="M662 500 C700 490 722 520 718 560 C714 600 690 615 672 605" stroke="#9a5a38" stroke-width="10" fill="none"/>',
+         # ceja, ojo cerrado y pestañas
+         '<path d="M300 405 C330 385 375 385 405 400" stroke="#4a2a18" stroke-width="12" fill="none" stroke-linecap="round"/>',
+         '<path d="M310 455 C335 470 365 472 390 460" stroke="#3a1a10" stroke-width="7" fill="none" stroke-linecap="round"/>',
+         *[f'<path d="M{x} {y} l{dx} 16" stroke="#2a120a" stroke-width="4" stroke-linecap="round"/>' for x, y, dx in [(318, 462, -8), (334, 468, -6), (350, 471, -4), (366, 470, -2), (380, 466, 0)]],
+         # nariz, labios
+         '<path d="M262 470 C246 520 212 560 214 578 C220 594 246 596 262 592" stroke="#b06a44" stroke-width="5" fill="none" opacity="0.6"/>',
+         '<path d="M262 612 C280 618 300 622 315 616 C300 640 280 650 262 640" fill="#c9604e"/>',
+         '<path d="M268 672 C285 664 305 666 318 672 C305 690 285 696 268 690" fill="#b8503e"/>',
+         # mejilla rosada y luz de sol
+         '<ellipse cx="380" cy="560" rx="90" ry="60" fill="url(#cp_mej)"/>',
+         '<ellipse cx="300" cy="460" rx="260" ry="320" fill="url(#cp_luz)" opacity="0.55"/>',
+         f'<path d="{perfil}" fill="none" stroke="#fff3b0" stroke-width="10" opacity="0.85" filter="url(#blur8)"/>',
+         f'<path d="{perfil}" fill="none" stroke="#fff8d8" stroke-width="3" opacity="0.9"/>',
+         # cuello y hombro
+         '<path d="M430 900 C520 960 700 980 900 1000 L900 1300 L430 1300 Z" fill="#c07a50" opacity="0.5"/>',
+         '<path d="M380 1120 C480 1060 700 1050 900 1080 L900 1300 L340 1300 Z" fill="#2a4a7a"/>',
+         ]
+    guardar("cara_perfil", "".join(b), w, h, d)
 
 
 def interruptor(nombre, encendido):
@@ -416,16 +588,17 @@ def guepardo():
 
 
 def gafas():
+    """Gafas de protección cerradas (tipo laboratorio): montura de goma, cristales transparentes que dejan ver los ojos, cinta."""
     w, h = 900, 400
-    d = lg("ga_v", (0, "#bfe9ffaa"), (1, "#7ac8ff55"))
-    b = ['<path d="M60 180 C60 100 140 80 230 80 L380 80 C420 80 440 110 450 140 C460 110 480 80 520 80 L670 80 C760 80 840 100 840 180 '
-         'C840 280 760 320 670 320 L560 320 C500 320 470 270 450 240 C430 270 400 320 340 320 L230 320 C140 320 60 280 60 180 Z" fill="#1a2a3a"/>',
-         '<path d="M100 180 C100 130 150 115 230 115 L370 115 C410 115 420 160 410 200 C400 250 380 285 330 285 L230 285 C150 285 100 250 100 180 Z" fill="url(#ga_v)"/>',
-         '<path d="M800 180 C800 130 750 115 670 115 L530 115 C490 115 480 160 490 200 C500 250 520 285 570 285 L670 285 C750 285 800 250 800 180 Z" fill="url(#ga_v)"/>',
-         '<path d="M140 150 L260 140 M560 140 L680 150" stroke="#ffffff" stroke-width="10" opacity="0.6" stroke-linecap="round"/>',
-         '<path d="M60 180 L0 170 M840 180 L900 170" stroke="#1a2a3a" stroke-width="30"/>']
-    guardar("gafas", "".join(b), w, h, d)
-
+    izq = "M100 180 C100 130 150 115 230 115 L370 115 C410 115 420 160 410 200 C400 250 380 285 330 285 L230 285 C150 285 100 250 100 180 Z"
+    der = "M800 180 C800 130 750 115 670 115 L530 115 C490 115 480 160 490 200 C500 250 520 285 570 285 L670 285 C750 285 800 250 800 180 Z"
+    b = ['<path d="M60 175 L0 165 M840 175 L900 165" stroke="#1a2a3a" stroke-width="34" stroke-linecap="round"/>',
+         f'<path d="{izq}" fill="#bfe9ff" fill-opacity="0.18" stroke="#1a2a3a" stroke-width="34" stroke-linejoin="round"/>',
+         f'<path d="{der}" fill="#bfe9ff" fill-opacity="0.18" stroke="#1a2a3a" stroke-width="34" stroke-linejoin="round"/>',
+         f'<path d="{izq}" fill="none" stroke="#4a6a8a" stroke-width="8"/>', f'<path d="{der}" fill="none" stroke="#4a6a8a" stroke-width="8"/>',
+         '<path d="M410 170 C435 150 465 150 490 170" stroke="#1a2a3a" stroke-width="30" fill="none" stroke-linecap="round"/>',
+         '<path d="M140 150 L260 140 M560 140 L680 150" stroke="#ffffff" stroke-width="10" opacity="0.55" stroke-linecap="round"/>']
+    guardar("gafas", "".join(b), w, h)
 
 def piedra_afilar():
     w, h = 900, 260
@@ -436,16 +609,58 @@ def piedra_afilar():
     guardar("piedra", "".join(b), w, h, d)
 
 
+# ---------------------------------------------------------------- v2 del 03 (petición de cambios): cebolla que se parte y enzima más clara
+def cebolla_partida(lado):
+    """Media cebolla vista de frente tras el corte vertical: piel por fuera y capas a la vista en la cara del corte."""
+    w, h = 400, 820
+    izq = lado == "izq"
+    d = (rg(f"cpt_{lado}_p", (0, "#f2b860", 1), (0.6, "#c87a2a", 1), (1, "#6a3410", 1), cx=0.6 if izq else 0.4, cy=0.45) +
+         lg(f"cpt_{lado}_c", (0, "#fffbe8"), (1, "#efe0b8"), x2=1, y2=0))
+    if izq:
+        cuerpo = "M380 140 C230 160 70 330 60 520 C50 700 200 790 380 790 Z"
+        cara = "M380 140 L400 140 L400 790 L380 790 Z"
+        capas = "".join(f'<path d="M398 {200+k*28} C{398-(300-k*36)} {260+k*24} {398-(300-k*36)} {720-k*24} 398 {760-k*28}" stroke="#d8c08a" stroke-width="6" fill="none"/>' for k in range(8))
+    else:
+        cuerpo = "M20 140 C170 160 330 330 340 520 C350 700 200 790 20 790 Z"
+        cara = "M0 140 L20 140 L20 790 L0 790 Z"
+        capas = "".join(f'<path d="M2 {200+k*28} C{2+(300-k*36)} {260+k*24} {2+(300-k*36)} {720-k*24} 2 {760-k*28}" stroke="#d8c08a" stroke-width="6" fill="none"/>' for k in range(8))
+    corte = (f'<path d="M{400 if izq else 0} 140 C{400 - 330 if izq else 330} 300 {400 - 330 if izq else 330} 700 {400 if izq else 0} 790 Z" fill="url(#cpt_{lado}_c)"/>')
+    b = ['<ellipse cx="200" cy="805" rx="170" ry="14" fill="#000" opacity="0.4" filter="url(#blur8)"/>',
+         f'<path d="{cuerpo}" fill="url(#cpt_{lado}_p)"/>', corte, capas,
+         f'<path d="{cara}" fill="#ffffff" opacity="0.6"/>',
+         f'<ellipse cx="{360 if izq else 40}" cy="460" rx="18" ry="200" fill="#ffffff" opacity="0.35"/>']
+    guardar(f"cebolla_{lado}", "".join(b), w, h, d)
+
+
+def enzima_v2():
+    """Enzima (aliinasa) como proteína: ovillo de hélices con un hueco activo que brilla."""
+    w, h = 700, 700
+    r = random.Random(33)
+    d = rg("ez_c", (0, "#ffb8e8", 1), (0.6, "#d84aa8", 1), (1, "#7a1a5a", 1), cx=0.4, cy=0.35) + rg("ez_h", (0, "#7df9ff", 1), (1, "#7df9ff", 0))
+    b = ['<ellipse cx="350" cy="360" rx="300" ry="280" fill="#ff3df2" opacity="0.18" filter="url(#blur40)"/>',
+         '<path d="M350 70 C520 70 640 180 640 340 C640 520 520 640 350 640 C190 640 70 530 70 360 C70 260 110 190 170 140 L300 300 L250 90 C280 76 314 70 350 70 Z" fill="url(#ez_c)"/>']
+    for k in range(9):  # hélices (cintas en espiral) por encima
+        x, y = r.uniform(170, 560), r.uniform(330, 580)
+        L = r.uniform(80, 150); a = r.uniform(-0.6, 0.6)
+        pts = " ".join(f"{x + t*L*math.cos(a) + 14*math.sin(t*12):.0f},{y + t*L*math.sin(a) + 14*math.cos(t*12):.0f}" for t in [i / 24 for i in range(25)])
+        b.append(f'<polyline points="{pts}" stroke="#ffe0f6" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.8"/>')
+        b.append(f'<polyline points="{pts}" stroke="#a0207a" stroke-width="3" fill="none" opacity="0.6"/>')
+    b += ['<circle cx="255" cy="215" r="70" fill="url(#ez_h)" opacity="0.8"/>',  # hueco activo
+          '<path d="M120 380 C140 500 230 590 340 600" stroke="#ffe0f6" stroke-width="10" fill="none" opacity="0.5"/>']
+    guardar("enzima_v2", "".join(b), w, h, d)
+
+
 def generar(dirsvg):
     ilus_lote.generar(dirsvg)          # piezas del lote de la mañana (cocina, laboratorio, casa, edificio, átomo…)
     ilus.OUT = dirsvg
     rayo(); rayo("rayo_b", 9, ramas=6); rayo("rayo_c", 17, 500, 1200, 3)
     nube_tormenta(); nube_tormenta("nube_b", 7, tono="#1e1e36"); bg_tormenta(); campo_noche()
+    rayo_horizontal(); rayo_horizontal("rayo_horizontal_b", 37, color="#bfe9ff"); rayo_ramificado(); rayo_doble(); canal_plasma(); arbol_tormenta(); arbol_tormenta("arbol_quemado", True); bg_mar_tormenta(); yunque(); bg_cielo_despejado()
     termometro("termo_sol", 0.32, "#ffb02e"); termometro("termo_rayo", 1.0, "#ff2d55"); onda(); oreja(); refugio(); persona_cuenta()
-    sol_corte(); foton(); ojo(); ojo("ojo_lloroso", "#5a3a1a", True); cara_sol(); interruptor("interruptor_on", True); interruptor("interruptor_off", False)
+    sol_corte(); foton(); ojo(); ojo("ojo_lloroso", "#5a3a1a", True); cara_sol(); cara_perfil(); interruptor("interruptor_on", True); interruptor("interruptor_off", False)
     neandertal(); hoguera(); bg_cueva(); gente_estadio()
     cebolla(); cebolla("cebolla_roja", "#8a2a5a"); cebolla_mitad(); cuchillo(); cuchillo("cuchillo_romo", False); tabla(); gotitas(); gotitas("gotitas_b", 8, 160)
-    gas_nube(); celulas(); enzima(); molecula_azufre(); camara_rapida(); guepardo(); gafas(); piedra_afilar()
+    gas_nube(); celulas(); enzima(); enzima_v2(); cebolla_partida("izq"); cebolla_partida("der"); molecula_azufre(); camara_rapida(); guepardo(); gafas(); piedra_afilar()
     return dirsvg
 
 

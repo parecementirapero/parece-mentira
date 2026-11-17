@@ -33,13 +33,19 @@ def chorro(t, x=540, y=900, ancho=700, nombre="gotitas_b", dur=0.7, z=0.65):
 
 
 # ================================================================== PLANOS
-@v.plano(0, "gancho: el cuchillo cae sobre una cebolla enorme y salta el chorro")
+@v.plano(0, "gancho: el cuchillo parte la cebolla en dos y salta el chorro")
 def _(d):
+    tc = 0.38  # instante del corte
     return P(COCINA, [BG("bg_cocina"), IMG("tabla", ancho=1080, x=540, y=1480, z=0.3),
-             IMG("cebolla", ancho=820, x=540, y=1150, z=0.5, keys=arranque(540, 1150, d, "abajo", 160, 20)),
-             IMG("cuchillo", ancho=1000, x=600, z=0.7, rot=-4, keys=[{"t": 0, "y": 520}, {"t": 0.35, "y": 880, "ease": "entrada"}, {"t": d, "y": 860}]),
-             chorro(0.36, 520, 640, 800, dur=0.9), IMG("gas", ancho=700, x=540, y=600, z=0.6, keys=[{"t": 0.3, "op": 0, "escala": 0.5}, {"t": d, "op": 0.8, "escala": 1.3}])],
-             cam(1.1, 1.0, (540, 1000), (540, 980)), vineta=0.65, sfx=[(0.33, "golpe", -12), (0.38, "agua", -18, {"dur": 0.8})])
+             IMG("cebolla", ancho=820, x=540, y=1150, z=0.5, keys=arranque(540, 1150, d, "abajo", 160, 0)[:2] + [{"t": tc - 0.01, "op": 1}, {"t": tc, "op": 0}]),
+             IMG("cebolla_izq", ancho=470, x=306, y=1150, z=0.5, keys=[{"t": 0, "op": 0}, {"t": tc - 0.01, "op": 0, "x": 306, "rot": 0}, {"t": tc, "op": 1},
+                                                                   {"t": tc + 0.45, "x": 200, "rot": -9, "ease": "salida"}, {"t": d, "x": 186, "rot": -10}]),
+             IMG("cebolla_der", ancho=470, x=774, y=1150, z=0.5, keys=[{"t": 0, "op": 0}, {"t": tc - 0.01, "op": 0, "x": 774, "rot": 0}, {"t": tc, "op": 1},
+                                                                   {"t": tc + 0.45, "x": 880, "rot": 9, "ease": "salida"}, {"t": d, "x": 894, "rot": 10}]),
+             IMG("cuchillo", ancho=1000, x=540, z=0.7, rot=-90, keys=[{"t": 0, "y": 280}, {"t": tc, "y": 1100, "ease": "entrada"}, {"t": tc + 0.3, "y": 1110}, {"t": d, "y": 640, "ease": "suave"}]),
+             chorro(tc, 540, 760, 900, dur=0.9),
+             IMG("gas", ancho=700, x=540, y=800, z=0.6, keys=[{"t": tc, "op": 0, "escala": 0.4}, {"t": d, "op": 0.8, "escala": 1.3, "y": 650}])],
+             cam(1.1, 1.0, (540, 1050), (540, 1000)), vineta=0.65, sfx=[(tc - 0.03, "roce", -14), (tc, "golpe", -12), (tc + 0.02, "agua", -18, {"dur": 0.8})])
 
 
 @v.plano(3, "lloras por un gas invisible")
@@ -58,11 +64,11 @@ def _(d):
 
 @v.plano(13, "dos cosas separadas se mezclan")
 def _(d):
-    return P(MICRO, [BG("celulas"), brillo(540, 1000, 500, "#000000", 0.0),
-             {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#06100a", "x": 540, "y": 960, "z": 0.2, "op": 0.55},
-             IMG("molecula_s", ancho=360, x=260, y=1000, z=0.6, keys=[{"t": 0, "x": 200}, {"t": d, "x": 430, "ease": "suave"}], anim={"balanceo": [6, 0.8]}),
-             IMG("enzima", ancho=340, x=820, y=1000, z=0.6, keys=[{"t": 0, "x": 880}, {"t": d, "x": 650, "ease": "suave"}], anim={"balanceo": [8, 0.6]}),
-             flecha([[300, 1250], [480, 1250]], 0.1, d * 0.6, CIAN, 7), flecha([[780, 1250], [600, 1250]], 0.1, d * 0.6, MAGENTA, 7)],
+    return P(MICRO, [BG("celulas"), {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#06100a", "x": 540, "y": 960, "z": 0.2, "op": 0.82},
+             IMG("molecula_s", ancho=380, x=220, y=1000, z=0.6, keys=[{"t": 0, "x": 190}, {"t": d, "x": 380, "ease": "suave"}], anim={"balanceo": [6, 0.8]}),
+             IMG("enzima_v2", ancho=520, x=780, y=1000, z=0.6, keys=[{"t": 0, "x": 860}, {"t": d, "x": 700, "ease": "suave"}], anim={"balanceo": [4, 0.7]}),
+             brillo(780, 1000, 320, "#ff3df2", 0.35, 0.55),
+             flecha([[260, 1300], [460, 1300]], 0.1, d * 0.6, CIAN, 8), flecha([[820, 1300], [620, 1300]], 0.1, d * 0.6, MAGENTA, 8)],
              cam(1.0, 1.06), "desenfoque", hud=[amarillo(0.1, d - 0.05, "SE MEZCLAN", y=560, color=AMBAR)])
 
 
@@ -73,21 +79,25 @@ def _(d):
              cam(1.3, 1.45, (540, 1000), (520, 1000)), hud=[rotulo(0.1, d - 0.05, "AZUFRE", tam=110, color="#141414", capsula="#ffd23fe6", y=560)], sfx=[(0.05, "pop", -18)])
 
 
-@v.plano(25, "y una enzima")
+@v.plano(25, "y una enzima (proteína con su hueco activo)")
 def _(d):
-    return P(MICRO, [BG("celulas"), {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#06100a", "x": 540, "y": 960, "z": 0.2, "op": 0.6},
-             brillo(540, 1000, 400, "#ff3df2", 0.45), IMG("enzima", ancho=560, x=540, y=1000, z=0.6, keys=aparece(0.0, 0.4) + late(0.5, 2, 0.08, 0.3))],
-             cam(1.0, 1.08), "corte", hud=[rotulo(0.1, d - 0.05, "ENZIMA", tam=110, color="#ffffff", capsula="#0d1330d8", borde=MAGENTA, y=560)], sfx=[(0.05, "mordisco", -18)])
+    return P(MICRO, [BG("celulas"), {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#06100a", "x": 540, "y": 960, "z": 0.2, "op": 0.82},
+             brillo(540, 1000, 520, "#ff3df2", 0.5), IMG("enzima_v2", ancho=860, x=540, y=1020, z=0.6, keys=aparece(0.0, 0.4) + late(0.5, 2, 0.06, 0.35), anim={"balanceo": [3, 0.9]}),
+             senala(540 - 860 * 0.5 + 860 * 255 / 700, 1020 - 860 * 0.5 + 860 * 215 / 700, 0.35, d - 0.05, 90, CIAN)],
+             cam(1.0, 1.08), "corte", hud=[rotulo(0.1, d - 0.05, "ENZIMA", tam=110, color="#ffffff", capsula="#0d1330d8", borde=MAGENTA, y=560)], sfx=[(0.05, "pop", -18), (0.35, "brillo", -20)])
 
 
-@v.plano(28, "juntas fabrican ese gas")
+@v.plano(28, "juntas fabrican ese gas: la molécula entra en la enzima y sale el gas")
 def _(d):
-    return P(MICRO, [BG("celulas"), {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#06100a", "x": 540, "y": 960, "z": 0.2, "op": 0.7},
-             IMG("molecula_s", ancho=300, x=420, y=1150, z=0.6, keys=[{"t": 0, "op": 1}, {"t": d * 0.5, "op": 0, "escala": 0.6}]),
-             IMG("enzima", ancho=300, x=640, y=1150, z=0.61, keys=[{"t": 0, "x": 700}, {"t": d * 0.5, "x": 470, "ease": "entrada"}]),
-             IMG("gas", ancho=600, x=540, y=1000, z=0.5, keys=[{"t": d * 0.4, "op": 0, "escala": 0.4, "y": 1150}, {"t": d, "op": 1, "escala": 1.4, "y": 900, "ease": "salida"}]),
-             polvo("#d8ff9a", 40, (200, 600, 880, 1300), 4, "chispas")],
-             cam(1.0, 1.08), sfx=[(d * 0.45, "burbuja", -16), (d * 0.6, "burbuja", -18)])
+    ex, ey = 640, 1080  # centro de la enzima; su hueco activo queda arriba a la izquierda
+    hx, hy = ex - 300 + 600 * 255 / 700, ey - 300 + 600 * 215 / 700
+    return P(MICRO, [BG("celulas"), {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": "#06100a", "x": 540, "y": 960, "z": 0.2, "op": 0.82},
+             IMG("enzima_v2", ancho=600, x=ex, y=ey, z=0.55, keys=[{"t": d * 0.35, "escala": 1.0}, {"t": d * 0.42, "escala": 1.08, "ease": "salida"}, {"t": d * 0.55, "escala": 1.0}]),
+             IMG("molecula_s", ancho=240, z=0.6, keys=[{"t": 0, "x": 160, "y": 700, "op": 1}, {"t": d * 0.38, "x": hx, "y": hy, "ease": "entrada"}, {"t": d * 0.42, "op": 0, "escala": 0.5}]),
+             IMG("chispa", ancho=260, x=hx, y=hy, z=0.7, keys=[{"t": d * 0.38, "op": 0}, {"t": d * 0.42, "op": 1}, {"t": d * 0.7, "op": 0}]),
+             IMG("gas", ancho=600, x=hx, y=hy, z=0.65, keys=[{"t": d * 0.4, "op": 0, "escala": 0.3}, {"t": d, "op": 1, "escala": 1.4, "y": hy - 300, "ease": "salida"}]),
+             polvo("#d8ff9a", 40, (200, 500, 880, 1300), 4, "chispas")],
+             cam(1.0, 1.08, (540, 1000), (520, 960)), sfx=[(d * 0.4, "zap", -18), (d * 0.5, "burbuja", -16), (d * 0.65, "burbuja", -18)])
 
 
 @v.plano(32, "el factor lacrimógeno")
@@ -257,18 +267,21 @@ def _(d):
              sfx=[(0.0, "tictac", -22, {"dur": d, "ritmo": 0.5})], energia=0.4)
 
 
-@v.plano(138, "si quieres ir a lo seguro")
+@v.plano(138, "si quieres ir a lo seguro (los dos ojos)")
 def _(d):
-    return P(PIEL, [IMG("ojo", ancho=1150, x=540, y=1000, z=0.5), brillo(540, 1000, 500, "#bfe9ff", 0.2)],
-             cam(1.0, 1.05), "desenfoque", hud=[amarillo(0.1, d - 0.05, "A LO SEGURO", y=560, color="#141414", tam=86)])
+    return P(PIEL, [IMG("ojo", ancho=540, x=270, y=1000, z=0.5), IMG("ojo", ancho=540, x=810, y=1000, z=0.5),
+             IMG("gas", ancho=900, x=540, y=1450, z=0.6, keys=[{"t": 0, "op": 0.3, "y": 1500}, {"t": d, "op": 0.7, "y": 1250}]),
+             brillo(540, 1000, 500, "#bfe9ff", 0.15)],
+             cam(1.0, 1.05), "desenfoque", hud=[rotulo(0.1, d - 0.05, "A LO SEGURO", tam=96, color="#ffffff", capsula="#0d1330d8", borde=CIAN, y=560)])
 
 
-@v.plano(145, "unas gafas que cierren bien")
+@v.plano(145, "unas gafas que cierren bien (sobre los dos ojos)")
 def _(d):
-    return P(PIEL, [IMG("ojo", ancho=1150, x=540, y=1000, z=0.4),
-             IMG("gafas", ancho=1300, x=540, z=0.6, keys=[{"t": 0, "y": 300, "op": 0}, {"t": 0.4, "y": 990, "op": 1, "ease": "elastico"}]),
-             IMG("gas", ancho=900, x=540, y=1500, z=0.5, keys=[{"t": 0, "op": 0.6}, {"t": d, "op": 0.0}])],
-             cam(1.0, 1.06), sfx=[(0.4, "pop", -16)])
+    return P(PIEL, [IMG("ojo", ancho=540, x=270, y=1000, z=0.4), IMG("ojo", ancho=540, x=810, y=1000, z=0.4),
+             IMG("gafas", ancho=1246, x=540, z=0.6, keys=[{"t": 0, "y": 300, "op": 0}, {"t": 0.4, "y": 1000, "op": 1, "ease": "elastico"}]),
+             IMG("gas", ancho=900, x=540, y=1400, z=0.5, keys=[{"t": 0, "op": 0.6}, {"t": d, "op": 0.0, "y": 1600}]),
+             *[IMG("chispa", ancho=120, x=x, y=1000, z=0.7, keys=[{"t": 0.45, "op": 0}, {"t": 0.5, "op": 1}, {"t": 0.9, "op": 0}]) for x in (170, 910)]],
+             cam(1.0, 1.06), sfx=[(0.4, "pop", -16), (0.5, "brillo", -20)])
 
 
 @v.plano(150, "¿cuál es tu truco? (bucle hacia el gancho)")
@@ -305,5 +318,5 @@ def _(d):
     return P(["#1a1e26", "#0a0c10"], [IMG("cuchillo_romo", ancho=2400, x=900, y=900, z=0.5), senala(420, 1040, 0.05, d - 0.05, 140, MAGENTA),
              brillo(420, 1040, 300, "#ff3df2", 0.3)], cam(1.0, 1.08, (500, 1000), (480, 1000)), "corte", sfx=[(0.05, "roce", -18)])
 
-v.construir("2026-11-17-tarde-03-cebolla", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 23, "db": -13},
+v.construir("2026-11-17-tarde-03-cebolla", version=2, bucle=0.35, musica={"generar": "curiosidad", "semilla": 23, "db": -13},
             claves=["cebolla", "gas", "células", "azufre", "enzima", "lacrimógeno", "córnea", "Cornell", "cuarenta", "guepardo", "afilado", "despacio"])

@@ -56,13 +56,14 @@ def _(d):
              cam(1.0, 1.05, (540, 960), (560, 960)), "desenfoque", hud=[amarillo(0.1, d - 0.05, "CON RETRASO", y=1360, color=AMBAR)])
 
 
-@v.plano(9, "la luz que te da en la cara")
+@v.plano(9, "la luz que te da en la cara (perfil con los ojos cerrados al sol)")
 def _(d):
-    return P(["#3a2a10", "#120a04"], [brillo(200, 500, 700, "#ffcf6a", 0.6, pulso=[0.08, 2.0]),
-             IMG("cara_sol", ancho=780, x=680, y=1150, z=0.5, keys=[{"t": 0, "x": 700}, {"t": d, "x": 660, "ease": "suave"}]),
-             *[flecha([[60 + k * 40, 300 + k * 90], [420 + k * 30, 800 + k * 70]], 0.05 + k * 0.1, d * 0.8, "#ffe08acc", 5, punta=False) for k in range(4)],
-             polvo("#ffe08a", 40, (0, 300, 900, 1500), 3)],
-             cam(1.0, 1.08, (600, 1000), (620, 1000)), sfx=[(0.1, "brillo", -18)])
+    return P(["#3a2a10", "#120a04"], [brillo(120, 520, 650, "#ffcf6a", 0.7, pulso=[0.08, 2.0]), *sol(60, 500, 110),
+             IMG("cara_perfil", ancho=900, x=640, y=1180, z=0.5, keys=[{"t": 0, "x": 680, "escala": 1.0}, {"t": d, "x": 640, "escala": 1.04, "ease": "suave"}]),
+             *[flecha([[120, 520 + k * 40], [330, 760 + k * 35]], 0.05 + k * 0.12, d * 0.7, "#ffe08acc", 6) for k in range(4)],
+             brillo(330, 800, 260, "#fff3b0", 0.0, 0.6, keys=[{"t": 0, "intensidad": 0.0}, {"t": d * 0.6, "intensidad": 0.6}]),
+             polvo("#ffe08a", 40, (0, 300, 700, 1300), 3)],
+             cam(1.0, 1.06, (560, 1000), (520, 980)), sfx=[(0.1, "brillo", -18)])
 
 
 @v.plano(17, "salió de allí")
@@ -80,12 +81,15 @@ def _(d):
              sfx=[(0.0, "tictac", -16, {"dur": d, "ritmo": 0.2})])
 
 
-@v.plano(27, "trescientos mil km por segundo")
+@v.plano(27, "trescientos mil km por segundo (el fotón deja estela desde el Sol)")
 def _(d):
-    return P(ESPACIO, [BG("bg_esp_violeta"), estrellas(50, 6),
-             foton(540, 1000, ancho=260, keys=[{"t": 0, "x": -100}, {"t": d, "x": 1200, "ease": "lineal"}]),
-             *lineas_vel(540, 1000, 2, "#ffe08aaa")],
-             cam(1.0, 1.04), "barrido", hud=[contador(0.05, d - 0.05, 0, 300000, d * 0.6, "KM/S", tam=110, y=560, borde=AMBAR)],
+    t1 = d * 0.85
+    return P(ESPACIO, [BG("bg_esp_violeta"), estrellas(50, 6), *sol(-40, 1000, 160),
+             flecha([[80, 1000], [1180, 1000]], 0.0, t1, "#ffe08a", 10, punta=False, z=0.5),
+             flecha([[80, 1000], [1180, 1000]], 0.0, t1, "#ffffff", 3, punta=False, z=0.51),
+             brillo(80, 1000, 120, "#ffe08a", 0.0, 0.52, keys=[{"t": 0, "x": 80, "intensidad": 0.9}, {"t": t1, "x": 1180, "intensidad": 0.9, "ease": "salida"}]),
+             foton(80, 1000, ancho=220, keys=[{"t": 0, "x": 80}, {"t": t1, "x": 1180, "ease": "salida"}])],
+             cam(1.0, 1.04), hud=[contador(0.05, d - 0.05, 0, 300000, d * 0.6, "KM/S", tam=110, y=560, borde=AMBAR)],
              sfx=[(0.05, "whoosh", -14, {"dur": 0.6})], energia=0.7)
 
 
@@ -259,5 +263,5 @@ def _(d):
              cam(1.0, 1.08, (540, 1000), (540, 1050)), "desenfoque", sfx=[(0.1, "tictac", -22, {"dur": d})])
 
 
-v.construir("2026-11-17-tarde-02-sol-pasado", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 22, "db": -13},
+v.construir("2026-11-17-tarde-02-sol-pasado", version=2, bucle=0.35, musica={"generar": "curiosidad", "semilla": 22, "db": -13},
             claves=["pasado", "retraso", "ocho", "veinte", "trescientos", "ciento", "cincuenta", "millones", "quince", "NASA", "setenta", "neandertales"])

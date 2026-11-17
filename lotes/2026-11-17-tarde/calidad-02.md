@@ -1,14 +1,14 @@
-# Control de calidad — v02
+# Control de calidad — v02b
 
 **Nota: 87/100**
 
 - **ritmo**: planos=28 · cortes_min=30.6 · mediana=1.84 · min=0.64 · max=3.85 · variacion=0.41 · micro=1 · largos=10
 - **rotulos**: total=20 · fuera_de_zona=0 · en_franja_dudosa=7 · sin_tiempo=0
 - **gancho**: palabras_primera_frase=5 · voz_empieza=0.0 · fin_primera_frase=1.8 · palabras=156 · palabras_s=2.88 · acciones_primer_plano=3
-- **imagen**: elementos_por_plano=5.6 · ilustraciones=21 · fondos_distintos=12 · mismo_fondo_max_s=8.4
-- **imagen_real**: detalle_medio=6.1 · detalle_min=2.9 · planos_pobres=0 · planos_calcados=0 · rachas_mismo_encuadre=1 · primer_fotograma_detalle=5.1 · rotulos_poco_contraste=0 · movimiento_primer_segundo=4.39
-- **sonido**: efectos=82 · por_minuto=90 · tipos=12 · whoosh_min=9.8 · max_en_1s=2 · musica_db=-13
-- **movimiento**: quieto_pct=1.8 · movimiento_medio=5.33 · bucle_diferencia=40.9
+- **imagen**: elementos_por_plano=6.0 · ilustraciones=21 · fondos_distintos=12 · mismo_fondo_max_s=8.4
+- **imagen_real**: detalle_medio=6.2 · detalle_min=2.9 · planos_pobres=0 · planos_calcados=0 · rachas_mismo_encuadre=1 · primer_fotograma_detalle=5.1 · rotulos_poco_contraste=0 · movimiento_primer_segundo=4.39
+- **sonido**: efectos=81 · por_minuto=89 · tipos=12 · whoosh_min=8.7 · max_en_1s=2 · musica_db=-13
+- **movimiento**: quieto_pct=2.4 · movimiento_medio=5.26 · bucle_diferencia=40.9
 - **mezcla**: voz_rms=-20.4 · musica_bajo_voz_db=-8.0 · sfx_pico_frente_a_voz_db=-5.3 · sfx_rms_bajo_voz_db=-11.3 · efectos_que_tapan_voz=5
 
 - ⚠ Ritmo poco variado (variación 0.41; mejor ≥ 0,45).
