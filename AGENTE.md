@@ -24,7 +24,7 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 
 ## 1. Arranque (idempotente: nunca duplicar un lote)
 
-- **Aprender antes de producir** (2026-11-17, Nico): lee `motor/APRENDIZAJE.md` y `estadisticas/datos/aprendizajes.md`; apunta en `estadisticas/studio.json` «Se quedaron viendo», vistas y horas de los vídeos con 24 h o más (`herramientas/studio_shorts.js`); y, si hay un experimento aprobado en la tabla, aplícalo a **uno** de los tres vídeos y etiquétalo en `estadisticas/etiquetas.json`.
+- **Aprender antes de producir** (2026-11-17, Nico): lee `motor/APRENDIZAJE.md`, `estadisticas/datos/aprendizajes.md` y `estadisticas/datos/estudio.md` (este último dice cuánto se puede confiar en cada cosa: una «pista» no es motivo para cambiar nada, solo para probar); apunta en `estadisticas/studio.json` «Se quedaron viendo», vistas y horas de los vídeos con 24 h o más (`herramientas/studio_shorts.js`); y, si hay un experimento aprobado en la tabla, aplícalo a **uno** de los tres vídeos y etiquétalo en `estadisticas/etiquetas.json`.
 
 1. Clona `https://github.com/parecementirapero/parece-mentira` y sigue `CLAUDE.md` (pull, leer `PROJECT_STATE.md`, `TASKS.md`, `HANDOFF.md`, `DECISIONS.md`).
 2. Calcula el lote: fecha de hoy en Europe/Madrid + turno → `AAAA-MM-DD-manana|tarde`.
@@ -109,6 +109,9 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 - **Control automático**: `python3 -m motor.calidad DIR/episodio.json --mp4 DIR/out/<id>.mp4 --md DIR/calidad.md`. **Ningún ❌** (rótulos tapados por la app, textos sin tiempo de lectura, bordes negros por zoom < 1…); los ⚠ se arreglan o se justifican en `estado.md`. Qué mide y por qué: `motor/GUIA_CALIDAD.md`.
 - Revisar cifras y nombres contra el guion y las fuentes.
 - Si un vídeo no pasa, se corrige y se sube a `_v2`; nunca se entrega uno roto.
+- **Ficha de variables** (2026-11-17, Nico; en prueba hasta que Nico y Jorge lo confirmen): antes de entregar, una ficha por vídeo para el estudio de audiencia y rendimiento (`estadisticas/estudio/README.md`). Se rellena **antes de publicar** y no se cambia al ver los resultados:
+  `python3 estadisticas/estudio ficha nueva <lote> <NN> --guion <locución.txt> --calidad <calidad-NN.md> --quien "Agente HH:00" tema=… alcance=… epoca=… gancho=… f0_palabras=… f0_sujeto=… f0_literal=sí|no estructura=… remate=… duracion_s=… montaje=denso subtitulo=karaoke voz=clon reciclado=no experimento=no brazo=-`
+  Lo demás (palabras del gancho, persona, cifra, preguntas, cortes, nota, movimiento del primer segundo) lo calcula solo. Valores permitidos: `python3 estadisticas/estudio ficha diccionario`. Comprobar: `python3 estadisticas/estudio ficha comprobar`. Si hay un experimento abierto en `estadisticas/experimentos/`, el vídeo que le toque lleva `experimento=<id>` y `brazo=A` (con el cambio) o `brazo=B` (sin él), con el orden de salida del calendario del experimento. Si la orden falla, se sigue con el lote y se apunta en `estado.md`.
 
 ## 6b. Portadas (las elige el agente, sin «ok»)
 
@@ -147,7 +150,7 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
 7. **Comentario fijado y vídeo relacionado** (sin pedir nada más: lo cubre el «ok»):
    - YouTube: cuando cada vídeo ya sea público, abre `https://www.youtube.com/shorts/<id>` en el navegador integrado, escribe el `comentario` de `metadatos.json` y fíjalo (⋮ del comentario → Fijar). Para los programados (+1 h, +2 h), programa un aviso en este mismo chat con `send_later` a esa hora y hazlo entonces. Si el vídeo es una parte 2, en Studio → Detalles → «Vídeo relacionado» elige la parte 1.
    - TikTok: en la página del vídeo, mismo comentario y fíjalo (⋯ → Fijar). Instagram: escribe el comentario (la web no siempre deja fijar; si no deja, se queda sin fijar).
-8. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`, `portada`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6.
+8. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`, `portada`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6. Y une la ficha con el vídeo: `python3 estadisticas/estudio ficha publicar <lote> <NN> <id de YouTube> tiktok=<número> instagram=<código>`.
 
 ## 9. Límites
 

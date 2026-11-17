@@ -224,6 +224,15 @@ def recoger_youtube():
     diario = [{"fecha": d["day"], "vistas": d["views"], "minutos": d["estimatedMinutesWatched"],
                "subs": d["subscribersGained"] - d["subscribersLost"], "likes": d["likes"]} for d in diario]
 
+    # Estudio de audiencia (estadisticas/estudio): audiencia por vídeo y comentarios. Nunca rompe la recogida.
+    try:
+        sys.path.insert(0, os.path.join(AQUI, "estudio"))
+        import recogida_extra
+        r = recogida_extra.completar(yt, videos, INICIO_CANAL, hoy.isoformat(), previo=(cargar_previo() or {}).get("videos"))
+        print(f"  estudio: {r['audiencias_pedidas']} audiencias por vídeo pedidas, {r['comentarios']} comentarios guardados")
+    except Exception as e:
+        print("  (aviso) estudio: no se pudo completar ->", str(e)[:160])
+
     extra = audiencia_youtube(yt, hoy)
     return {
         "youtubeExtra": extra,

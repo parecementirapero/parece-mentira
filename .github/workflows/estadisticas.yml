@@ -52,6 +52,10 @@ jobs:
       - name: Construir la web
         run: python3 estadisticas/construir.py
 
+      - name: Estudio de audiencia y rendimiento (mediciones a edad fija, niveles de evidencia, autopsias)
+        # Si falla, la web y los datos del día se guardan igual.
+        run: python3 estadisticas/estudio todo || echo "::warning::El estudio no se pudo generar (ver estadisticas/estudio/README.md)"
+
       - name: Guardar en el repo
         run: |
           git config user.name "estadisticas-bot"

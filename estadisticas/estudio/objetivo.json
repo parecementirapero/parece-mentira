@@ -1,0 +1,6 @@
+{
+ "estado": "propuesta de Claude, sin confirmar por Nico y Jorge",
+ "edades": ["age18-24", "age25-34"],
+ "paises": ["ES", "MX", "AR", "CO"],
+ "nota": "Cuando Nico y Jorge decidan el público objetivo, se cambia aquí y se apunta en DECISIONS.md."
+}
