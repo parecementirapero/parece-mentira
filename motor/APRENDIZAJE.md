@@ -88,7 +88,7 @@ Con solo 5 vídeos y temas distintos es una **pista**, pero es monótona y coinc
 texto y más cosas quietas hay en el primer fotograma, menos gente se queda. El «gancho entero en el fotograma 0»
 (DECISIONS 2026-11-16) funciona con frases de 3 palabras y se vuelve un muro de texto con frases de 13.
 
-Puesto en práctica: `motor.calidad` da ❌ si la primera frase pasa de 9 palabras y ⚠ si pasa de 5, y avisa si el
+Puesto en práctica: `python3 -m motor.guion guion.txt` revisa el guion **antes de gastar voz** (gancho, duración, cadena de preguntas, tramos sin dato, cifras en letra, palabras solo de España); `motor.calidad` da ❌ si la primera frase pasa de 9 palabras y ⚠ si pasa de 5, y avisa si el
 primer segundo del MP4 casi no se mueve; AGENTE §3 pide primera frase de 5 palabras o menos y un solo objeto grande
 en acción. El gancho de la Luna v7 se rehízo con eso (el aviso saltó en mi propia v6).
 

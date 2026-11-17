@@ -63,6 +63,8 @@ Cada lote = **3 vídeos** 9:16. Dos lotes al día = 6 vídeos.
 - **Comentario fijado** → `metadatos.json` → `"comentario"`: una pregunta corta que invite a contestar, relacionada con el dato (p. ej. «¿Tú lo sabías? Te leo 👇» o «¿Qué otro misterio de la Isla de Pascua quieres?»). Va en el correo de revisión, así que el «ok» lo aprueba también.
 - **Series**: si un tema ya publicado tiene más del doble de la mediana de vistas en alguna red (ver `aprendizajes.md`), uno de los 3 vídeos puede ser su **parte 2** con información nueva que se entienda sola. En ese caso: título con «(parte 2)», la locución acaba con «Si te perdiste la primera parte, está en el canal», y en `metadatos.json` → `"relacionado": "<id de YouTube de la parte 1>"`. Al final de cualquier vídeo de un tema con potencial de continuación, la última frase puede invitar a seguir el canal para la parte 2 (solo si de verdad se va a hacer: apúntalo en `lotes/IDEAS.md` → «Continuaciones prometidas» y hazla en los 3 días siguientes).
 
+- **Antes de generar la voz**: `python3 -m motor.guion <guion.txt>` (un archivo por vídeo, solo la locución). Ningún ❌ (gancho de 10 o más palabras, cifras en números, más de 165 palabras) y los ⚠ arreglados o justificados: rehacer un guion después de la voz gasta créditos. Pasado sobre el lote 2026-11-16-tarde, marca los tres ganchos (10, 11 y 13 palabras), que son los tres peores «se quedaron viendo» del canal.
+
 ## 4. Voz (ElevenLabs)
 
 - Voz oficial: **«Archivo Oculto — Narración (clon)»**, voice_id `op8soO9fvP07F3mjbJuB` (ver `DECISIONS.md`). Modelo **`eleven_v4`**, `voice_settings`: `stability` 0.5, `similarity_boost` 0.75 (probado con `with-timestamps`: devuelve audio y alineación).
