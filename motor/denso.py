@@ -238,7 +238,7 @@ def provisional(guion, salida, palabras_por_s=2.85):
 
 # ------------------------------------------------------------------ el vídeo
 class Video:
-    def __init__(self, salida, guion, audio=None, alineacion=None, svg_extra=None, palabras_por_s=2.85):
+    def __init__(self, salida, guion, audio=None, alineacion=None, svg_extra=None, palabras_por_s=2.85, omitir=()):
         """salida: carpeta del episodio. guion: ruta del .txt. Sin audio/alineacion → tiempos provisionales.
         svg_extra: carpeta con SVG propios de este vídeo (se copian a salida/svg, por encima de la biblioteca)."""
         global _V
@@ -250,7 +250,10 @@ class Video:
             audio, alineacion = provisional(guion, salida, palabras_por_s)
         self.audio, self.alineacion = os.path.abspath(audio), os.path.abspath(alineacion)
         self.PAL = palabras_de_alineacion(self.alineacion)
-        self.FIN = self.PAL[-1]["fin"] + 0.75
+        self.OMITIDAS = set()
+        if omitir:
+            self._recortar(omitir)
+        self.FIN = max(p["fin"] for p in self.PAL) + 0.75
         from .biblioteca import ilus
         for f in os.listdir(os.path.join(AQUI, "biblioteca", "svg")):
             shutil.copy(os.path.join(AQUI, "biblioteca", "svg", f), os.path.join(salida, "svg", f))
@@ -260,6 +263,49 @@ class Video:
                 shutil.copy(os.path.join(svg_extra, f), os.path.join(salida, "svg", f))
         self.FX, self.PLANOS, self.AVISOS, self.ultimo, self.ini = [], [], [], {}, 0.0
 
+    def _recortar(self, rangos, g=0.12):
+        """VERSIÓN CORTA con la misma locución (experimento H2 de APRENDIZAJE.md): quita frases enteras.
+        rangos = [(i0, i1), ...] en índices de palabra: se quitan las palabras i0…i1-1 (i1 = primera que se queda).
+        Corta el audio un pelo antes de cada frase (conserva la pausa natural), lo guarda en salida/locucion-corta.mp3
+        con su alineación, y mantiene los ÍNDICES ORIGINALES: `v.w(i)` y `@v.plano(i)` siguen valiendo, y los planos
+        que empiezan en una palabra quitada se saltan solos. Hay que oír los empalmes antes de publicar."""
+        P0 = [dict(p) for p in self.PAL]
+        cortes = sorted((max(0.0, P0[a]["inicio"] - g), (P0[b]["inicio"] - g) if b < len(P0) else P0[-1]["fin"] + 0.3) for a, b in rangos)
+        for a, b in rangos:
+            self.OMITIDAS.update(range(a, b))
+        def nuevo(t):   # tiempo original → tiempo en la versión corta
+            return t - sum(min(t, c1) - c0 for c0, c1 in cortes if t > c0)
+        for i, p in enumerate(self.PAL):
+            if i in self.OMITIDAS:
+                c0 = next(c0 for c0, c1 in cortes if c0 <= P0[i]["inicio"] + 1e-6 < c1 + g + 1e-6)
+                p["inicio"] = p["fin"] = round(nuevo(c0), 3)
+            else:
+                p["inicio"], p["fin"] = round(nuevo(P0[i]["inicio"]), 3), round(nuevo(P0[i]["fin"]), 3)
+        # audio: tramos que se quedan, con 15 ms de fundido en cada empalme para que no haga «clic»
+        dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", self.audio]))
+        tramos, t = [], 0.0
+        for c0, c1 in cortes:
+            if c0 > t: tramos.append((t, c0))
+            t = c1
+        if t < dur: tramos.append((t, dur))
+        filtro = ";".join(f"[0:a]atrim={a:.3f}:{b:.3f},asetpts=PTS-STARTPTS,afade=t=in:d=0.015,afade=t=out:st={b - a - 0.015:.3f}:d=0.015[a{k}]" for k, (a, b) in enumerate(tramos))
+        filtro += ";" + "".join(f"[a{k}]" for k in range(len(tramos))) + f"concat=n={len(tramos)}:v=0:a=1[o]"
+        mp3 = os.path.join(self.out, "locucion-corta.mp3")
+        subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", self.audio, "-filter_complex", filtro, "-map", "[o]", "-c:a", "libmp3lame", "-q:a", "2", mp3])
+        ch, ini, fin = [], [], []
+        vivas = [p for i, p in enumerate(self.PAL) if i not in self.OMITIDAS]
+        for k, p in enumerate(vivas):
+            n = len(p["texto"]); paso = (p["fin"] - p["inicio"]) / n
+            for j, c in enumerate(p["texto"]):
+                ch.append(c); ini.append(round(p["inicio"] + j * paso, 3)); fin.append(round(p["inicio"] + (j + 1) * paso, 3))
+            if k < len(vivas) - 1:
+                ch.append(" "); ini.append(p["fin"]); fin.append(vivas[k + 1]["inicio"])
+        al = os.path.join(self.out, "alineacion-corta.json")
+        json.dump({"characters": ch, "character_start_times_seconds": ini, "character_end_times_seconds": fin}, open(al, "w"), ensure_ascii=False)
+        self.audio, self.alineacion = os.path.abspath(mp3), os.path.abspath(al)
+        print(f"versión corta: {len(vivas)} palabras de {len(self.PAL)} · {dur:.1f} s → {dur - sum(c1 - c0 for c0, c1 in cortes):.1f} s · empalmes en "
+              + ", ".join(f"{nuevo(c0):.1f} s" for c0, _ in cortes))
+
     def w(self, i, adelanto=0.06):
         """Segundo en que empieza la palabra i del guion (el corte va un pelo antes).
         Para ver los índices: `python3 -m motor.denso guion.txt`."""
@@ -268,7 +314,8 @@ class Video:
     def plano(self, i_palabra, nombre, mas=0.0):
         """Decorador: registra un plano que empieza en la palabra i (+ `mas` s). La función recibe d y devuelve P(...)."""
         def reg(fn):
-            self.PLANOS.append((self.w(i_palabra) + mas, nombre, fn))
+            if i_palabra not in self.OMITIDAS:      # versión corta: los planos de las frases quitadas no existen
+                self.PLANOS.append((self.w(i_palabra) + mas, nombre, fn))
             return fn
         return reg
 

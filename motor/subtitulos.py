@@ -222,6 +222,7 @@ class SubtitulosPalabra:
     gancho: true → la primera frase entera, en dos o tres líneas, desde el fotograma 0 (igual que en karaoke)."""
 
     def __init__(self, bloques, estilo):
+        self.l = [dict(b) for b in bloques]   # bloques originales: los usa el render para escribir el .srt
         self.e = estilo
         self.tam = int(estilo.get("tam", 104))
         self.y = estilo.get("y", 1180)

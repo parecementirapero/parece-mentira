@@ -11,7 +11,11 @@ sys.path.insert(0, os.path.abspath(os.path.join(AQUI, "..", "..")))
 from motor.denso import *  # noqa: E402,F401,F403
 from motor import denso  # noqa: E402
 
-v = Video(sys.argv[1], os.path.join(AQUI, "guion.txt"), *(sys.argv[2:4] if len(sys.argv) > 3 else ()))
+# Variantes (motor/APRENDIZAJE.md):  python3 gen.py DIR voz.mp3 alineacion.json [palabra] [corta]
+#   palabra → subtítulo de 1–2 palabras enormes (H1)     corta → versión de ~35 s con la misma locución (H2)
+OPC = set(sys.argv[4:])
+CORTA = [(23, 56), (105, 126)] if "corta" in OPC else ()   # fuera: «¿Cómo lo sabemos?…dos segundos y medio» y «almeja…dieciocho horas»
+v = Video(sys.argv[1], os.path.join(AQUI, "guion.txt"), *(sys.argv[2:4] if len(sys.argv) > 3 else ()), omitir=CORTA)
 
 # ------------------------------------------------------------------ detalles de fondo que duran (atados a palabras)
 SAT = [(0.8, v.w(61), (-100, 1680), (1180, 1480)), (v.w(113), v.FIN, (1180, 260), (-100, 420))]  # dos satélites
@@ -406,8 +410,9 @@ def _(d):
 
 @v.plano(126, "micro: avance rápido")
 def _(d):
-    return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#7ad0ff", 0.3), *cronometro(0, 1440, 0, d)],
-             cam(1.1, 1.2, (540, 1050), (540, 1050)), "desenfoque", 0.2, vineta=0.7, sfx=[(0.0, "whoosh", -14, {"dur": d})])
+    blanco = [fundido_blanco([{"t": 0, "op": 1}, {"t": 0.35, "op": 0}])] if CORTA else []   # en la versión corta viene del fogonazo del meteorito
+    return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#7ad0ff", 0.3), *cronometro(0, 1440, 0, d), *blanco],
+             cam(1.1, 1.2, (540, 1050), (540, 1050)), "corte" if CORTA else "desenfoque", 0.2, vineta=0.7, sfx=[(0.0, "whoosh", -14, {"dur": d})])
 
 
 @v.plano(129, "600 millones de años: la Luna lejos")
@@ -461,7 +466,6 @@ def _(d):
 
 
 # ================================================================== construir
-# Variante del experimento H1 (motor/APRENDIZAJE.md): python3 gen.py DIR voz.mp3 alineacion.json palabra
-PALABRA = len(sys.argv) > 4 and sys.argv[4] == "palabra"
-v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else ""), version=6, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
+PALABRA = "palabra" in OPC
+v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else "") + ("-corta" if CORTA else ""), version=6, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
             claves=["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"])
