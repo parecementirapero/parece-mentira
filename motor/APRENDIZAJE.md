@@ -117,8 +117,14 @@ YouTube aún no da curvas, pero TikTok sí (`herramientas/tiktok_retencion.js` �
     cuenta atrás «3, 2, 1», que eran los tres planos casi vacíos que detectó el control y que la v6 rehízo. Los
     dinosaurios (30–38 s) son el tramo que mejor aguanta: no se va casi nadie (26 → 24 %). El siguiente escalón
     es al pasar a la almeja (38–39 s).
-11. **Esto apoya la versión corta (H2):** casi el 80 % ya se ha ido en el segundo 40; un vídeo de 35 s deja fuera
-    sobre todo tramo que casi nadie ve.
+11. **Sobre la versión corta (H2), la evidencia está dividida.** A favor: casi el 80 % ya se ha ido en el segundo
+    40, y varios referentes duran menos de 35 s. En contra: el mayor estudio público que conozco (Paddy Galloway
+    y Chris Gileta, 2023: 5.400 Shorts de 33 canales, 3.300 millones de vistas) encontró que los Shorts de
+    **50–60 s tenían más vistas de media** y que lo que mejor acompaña a las vistas es la duración media vista en
+    segundos ([resumen](https://nowbam.com/decoding-the-youtube-shorts-algorithm/),
+    [hilo original](https://threadreaderapp.com/thread/1646898356419981315.html)). Un vídeo de 35 s difícilmente
+    superará los 28 s de media que ya consiguen los nuestros de 55. **Conclusión: se mantienen los 55 s como
+    norma**; la versión corta queda como prueba suelta, no como recomendación.
 
 ---
 
@@ -238,7 +244,7 @@ Una hipótesis = un vídeo del lote con ese cambio y los otros dos sin él. Se e
 |---|---|---|---|---|
 | H0 | El método denso retiene mejor que el v4 | Luna densa frente a Luna v4 (mismo tema) | Se quedan: 73,3 % frente a 65,3 % | **A favor (pista).** Revisar % medio visto a las 72 h |
 | H1 | Subtítulo de 1–2 palabras, grande y centrado, sube «se quedan» y la retención | `v.construir(..., subtitulos="palabra")` en 1 de 3 vídeos | Se quedan, s por vista | Preparado en el motor. **Rebajado el 2026-11-17:** lo usan casi todos, también los Shorts con 2.000 vistas, así que no hay señal de que ayude; probarlo sigue siendo barato. Pendiente del «sí» de Nico/Jorge |
-| H2 | Un vídeo de 30–38 s (95–110 palabras) consigue más % visto y más vistas que uno de 55 s | 1 de 3 vídeos corto, mismo nivel de montaje. Para probar sin gastar voz: `Video(..., omitir=[(i0, i1)])` quita frases enteras de una locución ya hecha | % medio visto, vistas a 48 h | Preparado (Luna v6 corta de 35 s); pendiente: cambia la regla de 150–160 palabras, deciden Nico/Jorge |
+| H2 | Un vídeo de 30–38 s (95–110 palabras) consigue más % visto y más vistas que uno de 55 s | 1 de 3 vídeos corto, mismo nivel de montaje. Para probar sin gastar voz: `Video(..., omitir=[(i0, i1)])` quita frases enteras de una locución ya hecha | % medio visto, vistas a 48 h | Preparado (Luna corta de 35 s). **Rebajado el 2026-11-17:** un estudio de 5.400 Shorts dice lo contrario (los de 50–60 s tienen más vistas). No lo recomiendo como cambio de norma; como mucho, una prueba suelta |
 | H3 | Gancho en segunda persona («Si mañana…», «Mira tu…») supera al gancho de dato | 1 de 3 vídeos | Se quedan | Pendiente. La Luna («Mira tus uñas») ya apunta a favor |
 | H4 | Remate con giro (el último dato rompe el patrón) sube repeticiones y comentarios | 1 de 3 vídeos | % visto > 100 %, comentarios | Pendiente |
 | H6 | Un personaje con cara que reacciona al dato retiene más que objetos y cifras solos | — | — | **Descartado por Nico el 2026-11-17** («no me mola lo de poner el personaje») antes de probarlo. El código y la muestra se han quitado del repo. No volver a proponerlo |
