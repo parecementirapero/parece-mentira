@@ -335,10 +335,9 @@ chiste funciona, cómo suena. Eso sigue siendo la hoja de fotogramas y una perso
 
 ## 10. Qué queda por decidir o probar
 
-0. **Subtítulo «palabra» (H1) y vídeo corto (H2).** Son las dos diferencias más claras entre nuestros vídeos y
-   los 7 Shorts de referencia mirados (`motor/APRENDIZAJE.md`). El modo palabra ya está en el motor
-   (`v.construir(..., subtitulos="palabra")`) y hay una Luna v6 de muestra con él. El vídeo corto cambia la regla
-   de 150–160 palabras: lo deciden Nico y Jorge.
+0. **El primer segundo.** Es donde más se pierde (40 % en 3 s, según TikTok Studio) y donde nuestros vídeos se
+   mueven menos que los del nicho. Ya es regla y lo comprueba el control. El subtítulo «palabra» (H1) y el vídeo
+   corto (H2) quedaron **rebajados** al comprobarlos con más datos: ver `motor/APRENDIZAJE.md`.
 1. **Medir.** Primera lectura hecha el 2026-11-17 00:25 (`motor/APRENDIZAJE.md`): la Luna densa retiene al 73,3 %
    en el primer segundo frente al 65,3 % del v4 antiguo. Falta el % medio visto a las 72 h.
 2. **Prueba A/B barata:** mismo vídeo, dos ganchos distintos, en días distintos (o uno en TikTok y otro en Shorts).
