@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-17-manana
 
-- **Estado**: **en revisión** (v1). Esperando «ok» en el chat del lote.
+- **Estado**: **publicado** en YouTube, TikTok e Instagram (2026-11-17).
 - **Agente**: Agente 08:00 (Nico) · MacBook Air de Nico · carpeta local `Documents/Parece Mentira/lotes/2026-11-17-manana`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dJfghaKYErZsy5CyPu (3 MP4 y 3 portadas enviados)
 - **Correo de aviso**: enviado a parecementirapero.media@gmail.com, id `1a1e86caf2a125ea`.
@@ -53,4 +53,10 @@ Base: `estadisticas/datos/aprendizajes.md` (4 vídeos: todo **pista**) y H7 (pri
 `generadores/`: `NN-guion.txt` (locución), `ilus_lote.py` (37 SVG nuevos: plátano, racimo, contador Geiger con aguja, átomos, chispa, cocina, laboratorio, silueta en rayos X, escáner; Saturno con anillos, bañera, agua, cubitos, casa, hielo, edificio, nube de gas; huellas dactilares, koala, mano de koala, microscopio, detective, canguro, wombat, rama de eucalipto, bosque, árbol de dos ramas, cinta policial) y `gen_0N.py DIR [locucion.mp3 alineacion.json]`. Render en la nube; resultados copiados al Mac.
 
 ## Publicación
-Pendiente del «ok».
+- **«ok»** a los 3: escrito en el chat del Mac de Jorge (https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf) el 2026-11-17 (persona sin confirmar: Nico o Jorge).
+- **YouTube** (subido desde el chat de Nico): 01 bja3TleMy94 · 02 aA9ji1Y1EPA · 03 0LBq1SkOWz4.
+- Los MP4 pasaron del chat de Nico al Mac de Jorge por la página «artifact» https://claude.ai/artifact/FSpWCbNW59fpYPe46bZ2CH (partes de 14 MB); unidos y comprobados por SHA-256 (iguales a la tabla) en `Documents/Parece Mentira/PARA PUBLICAR/2026-11-17-manana/Vídeos` (+ `Portadas/` y `textos.txt`).
+- **TikTok** (TikTok Studio desde el navegador integrado del Mac de Jorge; la persona eligió cada MP4): 01 https://www.tiktok.com/@parece.mentira85/video/7709083847450807574 · 02 …/7709084200636255510 · 03 …/7709084597069401366. Texto de `textos.txt` (sin fuentes), portada por defecto (fotograma 0).
+- **Instagram** (Reel, formato original 9:16): 01 https://www.instagram.com/reel/Df1twcSx6JN/ · 02 https://www.instagram.com/reel/Df1uAQJxhjZ/ · 03 https://www.instagram.com/reel/Df1uQs9xjyt/. Texto comprobado abriendo cada Reel (esta vez sí se guardó: «Share» pulsado con clic real, no por script).
+- **Comentarios** (de `textos.txt`) escritos en TikTok 1–3 e Instagram 1–3, sin fijar. YouTube: los pone quien lo subió (no se hizo desde aquí).
+

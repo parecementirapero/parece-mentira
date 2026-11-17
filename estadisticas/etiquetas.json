@@ -78,5 +78,44 @@
   "tiktok": "7708882489892179222",
   "instagram": "Df0Uzrsxo0A",
   "fuentes_en_descripcion": "no"
+ },
+ "bja3TleMy94": {
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "dato",
+  "lote": "2026-11-17-manana",
+  "tiktok": "7709083847450807574",
+  "instagram": "Df1twcSx6JN",
+  "fuentes_en_descripcion": "no"
+ },
+ "aA9ji1Y1EPA": {
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "comparación",
+  "experimento": "no (el «plano real» de la NASA no se pudo descargar: thumb.wikimedia.org bloqueado)",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "arriba",
+  "lote": "2026-11-17-manana",
+  "tiktok": "7709084200636255510",
+  "instagram": "Df1uAQJxhjZ",
+  "fuentes_en_descripcion": "no"
+ },
+ "0LBq1SkOWz4": {
+  "tema": "Misterio",
+  "gancho": "negacion",
+  "estructura": "misterio por pistas",
+  "experimento": "gancho de negación (2.º dato tras el pulpo del 2026-11-16-manana)",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "dato",
+  "lote": "2026-11-17-manana",
+  "tiktok": "7709084597069401366",
+  "instagram": "Df1uQs9xjyt",
+  "fuentes_en_descripcion": "no"
  }
 }

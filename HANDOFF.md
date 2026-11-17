@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 11:30 — chat del Mac de Jorge (persona sin confirmar) — rama `main`
+**Hecho**: lote 2026-11-17-manana («ok» a los 3 en este chat) publicado en **TikTok** (7709083847450807574 · 7709084200636255510 · 7709084597069401366) e **Instagram** (Df1twcSx6JN · Df1uAQJxhjZ · Df1uQs9xjyt) desde el navegador integrado del Mac de Jorge; YouTube ya estaba (bja3TleMy94 · aA9ji1Y1EPA · 0LBq1SkOWz4). Los MP4 llegaron desde el chat de Nico por https://claude.ai/artifact/FSpWCbNW59fpYPe46bZ2CH (partes unidas, SHA-256 igual al de `estado.md`). Comentarios en TikTok e Instagram (sin fijar). `estadisticas/etiquetas.json` con los 3.
+**Aprendido**: en Instagram web, pulsar «Compartir» con clic real conserva el texto (por script se perdía) → AGENTE §8.
+**Pendiente**: comentarios de YouTube de este lote (no se hicieron desde aquí).
+
 ## 2026-11-17 10:30 — Nico — rama `main` — chat en la nube «API de TikTok e Instagram» (Nico en el trabajo, sin nadie delante)
 **Encargo**: «vamos a hacerlo, porque si no no podemos subirlo» → publicar en TikTok e Instagram por sus API oficiales (gratis).
 **Hecho** (commit `6cae883` + el de esta entrada):
