@@ -1,0 +1,156 @@
+{
+ "01": {
+  "archivo": "01-rayo-sol_v1.mp4",
+  "titulo": "Un rayo es 5 veces más caliente que el Sol ⚡☀️",
+  "youtube": {
+   "titulo": "Un rayo es 5 veces más caliente que el Sol ⚡☀️ #Shorts",
+   "descripcion": "Un rayo calienta el aire hasta unos 30.000 °C; la superficie del Sol está a unos 5.500 °C. El aire se expande de golpe y se encoge: ese empujón es el trueno. Truco: cuenta los segundos entre el destello y el trueno y divide entre 3 para saber a cuántos km cayó. Si oyes el trueno, estás a su alcance: busca un refugio cerrado.\n\n#Shorts #ciencia #curiosidades #rayos #tormenta #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "Un rayo es 5 veces más caliente que el Sol ⚡☀️ Un rayo calienta el aire hasta unos 30.000 °C; la superficie del Sol está a unos 5.500 °C. El aire se expande de golpe y se encoge: ese empujón es el trueno. Truco: cuenta los segundos entre el destello y el trueno y divide entre 3 para saber a cuántos km cayó. Si oyes el trueno, estás a su alcance: busca un refugio cerrado. #ciencia #curiosidades #rayos #tormenta #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "Un rayo es 5 veces más caliente que el Sol ⚡☀️ Un rayo calienta el aire hasta unos 30.000 °C; la superficie del Sol está a unos 5.500 °C. El aire se expande de golpe y se encoge: ese empujón es el trueno. Truco: cuenta los segundos entre el destello y el trueno y divide entre 3 para saber a cuántos km cayó. Si oyes el trueno, estás a su alcance: busca un refugio cerrado. #ciencia #curiosidades #rayos #tormenta #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "NOAA / National Weather Service — How Hot Is Lightning? (≈50.000 °F, unas cinco veces la superficie del Sol)",
+    "url": "https://www.weather.gov/safety/lightning-temperature"
+   },
+   {
+    "titulo": "NOAA / National Weather Service — Understanding Lightning: Thunder (expansión y contracción del aire; se oye hasta ≈10 millas; 5 s por milla)",
+    "url": "https://www.weather.gov/safety/lightning-science-thunder"
+   },
+   {
+    "titulo": "BBC Science Focus — 5 times hotter than the Sun (≈30.000 °C)",
+    "url": "https://www.sciencefocus.com/planet-earth/why-lightning-is-so-powerful"
+   },
+   {
+    "titulo": "NASA Science — Sun: Facts (fotosfera ≈5.500 °C)",
+    "url": "https://science.nasa.gov/sun/facts/"
+   }
+  ],
+  "comentario": "¿Tú cuentas los segundos cuando hay tormenta? ⚡ Te leo 👇",
+  "etiquetas": {
+   "tema": "Ciencia",
+   "gancho": "contraste",
+   "estructura": "comparación",
+   "experimento": "no",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "centro"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "Más caliente que el Sol",
+   "clave": "Sol",
+   "variante": "5 veces el Sol",
+   "t": 0.75,
+   "diseno": "centro",
+   "motivo": "el rayo y el termómetro al rojo son el primer segundo del vídeo y enseñan la sorpresa; el texto no tapa el sujeto y se lee en la cuadrícula 3:4",
+   "archivo": "01-portadas/portada.jpg"
+  }
+ },
+ "02": {
+  "archivo": "02-sol-pasado_v1.mp4",
+  "titulo": "El Sol que ves ya es pasado ☀️⏳",
+  "youtube": {
+   "titulo": "El Sol que ves ya es pasado ☀️⏳ #Shorts",
+   "descripcion": "La luz del Sol tarda unos 8 minutos y 20 segundos en llegar a la Tierra: si se apagara, lo seguirías viendo 8 minutos más. Y antes, su energía tarda unos 170.000 años en salir del núcleo, rebotando una y otra vez. Cuando empezó ese viaje aún vivían los neandertales.\n\n#Shorts #espacio #ciencia #curiosidades #sol #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "El Sol que ves ya es pasado ☀️⏳ La luz del Sol tarda unos 8 minutos y 20 segundos en llegar a la Tierra: si se apagara, lo seguirías viendo 8 minutos más. Y antes, su energía tarda unos 170.000 años en salir del núcleo, rebotando una y otra vez. Cuando empezó ese viaje aún vivían los neandertales. #espacio #ciencia #curiosidades #sol #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "El Sol que ves ya es pasado ☀️⏳ La luz del Sol tarda unos 8 minutos y 20 segundos en llegar a la Tierra: si se apagara, lo seguirías viendo 8 minutos más. Y antes, su energía tarda unos 170.000 años en salir del núcleo, rebotando una y otra vez. Cuando empezó ese viaje aún vivían los neandertales. #espacio #ciencia #curiosidades #sol #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "NASA Science — Sun: Facts (150 millones de km; fotosfera 5.500 °C; núcleo 15 millones °C; la energía tarda unos 170.000 años en salir por la zona radiativa)",
+    "url": "https://science.nasa.gov/sun/facts/"
+   },
+   {
+    "titulo": "BBC Sky at Night — How long does it take light from the Sun to reach Earth? (8 min 20 s de media; ≈300.000 km/s)",
+    "url": "https://skyatnightmagazine.com/space-science/how-take-light-from-sun-reach-earth"
+   },
+   {
+    "titulo": "IFLScience — The sunlight reaching us now is thousands of years old (8 min 20 s; estimación media de 170.000 años; parte de esa luz se produjo cuando aún vivían los neandertales)",
+    "url": "https://www.iflscience.com/the-sunlight-that-is-reaching-us-now-is-thousands-of-years-old-if-not-a-lot-older-but-took-under-9-minutes-to-travel-to-earth-83564"
+   }
+  ],
+  "comentario": "¿Lo sabías? Nunca has visto el Sol de ahora ☀️ ¿Qué otro dato del espacio quieres? 👇",
+  "etiquetas": {
+   "tema": "Espacio",
+   "gancho": "dato",
+   "estructura": "reconstrucción",
+   "experimento": "no",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "abajo"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "Ese Sol ya es pasado",
+   "clave": "pasado",
+   "variante": "Luz de hace 170.000 años (descartada: lo que tarda es la energía)",
+   "t": 31.75,
+   "diseno": "abajo",
+   "motivo": "el Sol por dentro llena el encuadre y el texto (el gancho del vídeo) se lee limpio abajo sin tapar nada",
+   "archivo": "02-portadas/portada.jpg"
+  }
+ },
+ "03": {
+  "archivo": "03-cebolla_v1.mp4",
+  "titulo": "Por qué lloras al cortar cebolla (y el truco que funciona) 🧅😢",
+  "youtube": {
+   "titulo": "Por qué lloras al cortar cebolla (y el truco que funciona) 🧅😢 #Shorts",
+   "descripcion": "Al cortar una cebolla mezclas moléculas con azufre y una enzima: fabrican un gas, el factor lacrimógeno, que irrita la córnea. Y en 2025, en Cornell, vieron con cámaras de alta velocidad que cada corte lanza gotitas a hasta 40 m/s. Con un cuchillo sin filo y cortando rápido salen muchas más. El truco: cuchillo bien afilado, cortar despacio y, si quieres ir a lo seguro, gafas que cierren bien.\n\n#Shorts #ciencia #curiosidades #cocina #cebolla #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "Por qué lloras al cortar cebolla (y el truco que funciona) 🧅😢 Al cortar una cebolla mezclas moléculas con azufre y una enzima: fabrican un gas, el factor lacrimógeno, que irrita la córnea. Y en 2025, en Cornell, vieron con cámaras de alta velocidad que cada corte lanza gotitas a hasta 40 m/s. Con un cuchillo sin filo y cortando rápido salen muchas más. El truco: cuchillo bien afilado, cortar despacio y, si quieres ir a lo seguro, gafas que cierren bien. #ciencia #curiosidades #cocina #cebolla #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "Por qué lloras al cortar cebolla (y el truco que funciona) 🧅😢 Al cortar una cebolla mezclas moléculas con azufre y una enzima: fabrican un gas, el factor lacrimógeno, que irrita la córnea. Y en 2025, en Cornell, vieron con cámaras de alta velocidad que cada corte lanza gotitas a hasta 40 m/s. Con un cuchillo sin filo y cortando rápido salen muchas más. El truco: cuchillo bien afilado, cortar despacio y, si quieres ir a lo seguro, gafas que cierren bien. #ciencia #curiosidades #cocina #cebolla #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "Live Science — Why does slicing onions make you cry? (alliinasa, factor lacrimógeno, córnea; consejo del estudio PNAS 2025: cuchillo afilado y cortar suave; gafas)",
+    "url": "https://www.livescience.com/32299-why-does-slicing-onions-make-me-cry.html"
+   },
+   {
+    "titulo": "Discover Magazine — Why onions make us cry (PNAS 2025, Sunghwan Jung, Cornell; gotitas a 5–40 m/s; afilado y despacio)",
+    "url": "https://www.discovermagazine.com/why-onions-make-us-cry-and-how-to-prevent-tears-with-this-chopping-technique-48128"
+   },
+   {
+    "titulo": "Wu, Hooshanginejad, Wang, Hui y Jung — «Droplet Outbursts from Onion Cutting» (arXiv 2505.06016; hasta 40 m/s; hoja más roma → hasta ≈40 veces más gotas; más velocidad → más gotas)",
+    "url": "https://arxiv.org/html/2505.06016v1"
+   }
+  ],
+  "comentario": "¿Cuál es tu truco para no llorar con la cebolla? 🧅 Te leo 👇",
+  "etiquetas": {
+   "tema": "Cotidiano",
+   "gancho": "orden",
+   "estructura": "experimento",
+   "experimento": "gancho de orden",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "dato"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "Por qué lloras",
+   "clave": "lloras",
+   "variante": "El truco de la cebolla",
+   "t": 55.25,
+   "diseno": "dato",
+   "motivo": "cebolla entera y grande en la tabla, igual que el primer segundo; «LLORAS» en cápsula amarilla se lee en la cuadrícula y no tapa la cebolla",
+   "archivo": "03-portadas/portada.jpg"
+  }
+ }
+}

@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-17-tarde — Agente 20:00 (Jorge) — 2026-11-17 19:55 — en producción
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
@@ -56,6 +55,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-17-tarde (rayo más caliente que el Sol, el Sol que ves ya es pasado, cebolla): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 84/87/93); esperan el «ok» en https://claude.ai/code/session_019BG1dHf6SfJ6MbfA5kmnCP (correo `1a1eaf34810f56dd`) — Agente 20:00 (Jorge) — 2026-11-17 20:25
 - [x] Framework de estudio de audiencia y rendimiento: `estadisticas/estudio/` (ficha de variables, mediciones a edad fija, niveles pista/indicio/regla comprobados con simulaciones, experimentos con ficha previa, autopsia por vídeo, informe semanal, comentarios, audiencia por vídeo), `estadisticas/fichas.json` con los 10 vídeos públicos, workflow diario y AGENTE §1/§6/§8; 113 pruebas; doc del Proyecto `claude/framework-estudio-audiencia-rendimiento.md` — Nico — 2026-11-17 16:30
 - [x] Lote 2026-11-17-manana publicado en TikTok e Instagram desde el Mac de Jorge (YouTube lo subió el chat de Nico); vídeos traídos por la página «artifact» y comprobados por SHA-256 — Jorge — 2026-11-17
 - [x] Publicación por API oficial de TikTok (borrador a la bandeja) e Instagram (Reel): `publicar/subir_tiktok.py`, `subir_instagram.py`, `autorizar_*.py`, `base.py`, guía en `publicar/README.md`, 31 pruebas simuladas (`publicar/prueba.py`), AGENTE §8 punto 3b y DECISIONS. Sin publicar nada ni tocar cuentas; **sin probar contra las API reales** (faltan las cuentas de desarrollador) — Nico — 2026-11-17 10:30

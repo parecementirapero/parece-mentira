@@ -3,7 +3,6 @@
 Regla: no repetir temas de «Usados». Las continuaciones valen si aportan información nueva y se entienden solas.
 
 ## Candidatos
-- Por qué la cebolla te hace llorar y qué trucos funcionan de verdad (cotidiano)
 - Darle a «posponer» en la alarma te deja peor: inercia del sueño (cotidiano)
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
 - El bostezo contagioso (cotidiano)
@@ -19,8 +18,6 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 | Día de 18 horas | «Un día duraba dieciocho horas.» | La Tierra girando muy deprisa con un reloj que corre |
 
 ### Candidatos nuevos con objeto claro para el fotograma 0 (AGENTE §2). **Sin verificar: cada dato necesita sus dos fuentes antes de usarse**
-- La luz del Sol que ves salió hace unos ocho minutos — «Ese Sol ya es pasado.» — el Sol con un rayo viajando hacia un ojo (espacio)
-- Un rayo calienta el aire varias veces más que la superficie del Sol — «Un rayo quema más que el Sol.» — un rayo cayendo con un termómetro que revienta (ciencia)
 - ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
 - El día de la Tierra hace ~1.400 millones de años duraba unas 18 horas (continuación de la Luna)
 
@@ -52,6 +49,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - Los plátanos son radiactivos (potasio-40, dosis plátano; tu cuerpo, ≈4.000 desintegraciones por segundo) — lote 2026-11-17-manana
 - Saturno flotaría en el agua (densidad 0,69; hidrógeno y helio; anillos de ~10 m de grosor) — lote 2026-11-17-manana
 - Las huellas dactilares de los koalas (Henneberg, evolución convergente) — lote 2026-11-17-manana
+- Un rayo es unas cinco veces más caliente que la superficie del Sol (≈30.000 °C; trueno = expansión del aire; regla de 3 s por km; 16 km) — lote 2026-11-17-tarde
+- La luz del Sol llega con 8 min 20 s de retraso y su energía tarda ≈170.000 años en salir del núcleo (neandertales) — lote 2026-11-17-tarde
+- Por qué lloras al cortar cebolla (factor lacrimógeno; Cornell 2025: gotitas a 40 m/s, cuchillo afilado y despacio) — lote 2026-11-17-tarde
 
 ## Continuaciones prometidas
 
