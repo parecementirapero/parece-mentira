@@ -3,7 +3,7 @@
     python3 -m motor.guion lotes/<lote>/guion.txt [--corto]
 
 Comprueba lo que los datos del canal y la guía dicen que importa (motor/APRENDIZAJE.md, motor/GUIA_CALIDAD.md):
-  - gancho: primera frase de 5 palabras o menos (❌ a partir de 10)
+  - gancho: primera frase de 5 palabras o menos (❌ a partir de 10) y la afirmación sorprendente dicha antes del segundo 3,5
   - duración: 150–160 palabras (≈53–56 s) o, con --corto, 95–110 (≈33–38 s); nunca más de 165
   - cadena de preguntas: una pregunta nueva cada 8–12 s (al menos 2 en un guion normal, 1 en uno corto)
   - frases que se puedan decir de un tirón (aviso por encima de 22 palabras)
@@ -34,6 +34,12 @@ def revisar(texto, corto=False):
     g = len(frases[0].split())
     if g > 9: av.append(("❌", f"Gancho de {g} palabras («{frases[0][:60]}…»): muro de texto en el fotograma 0. Máximo 5; el resto, en la segunda frase."))
     elif g > 5: av.append(("⚠", f"Gancho de {g} palabras: mejor 5 o menos («Mira tus uñas.», «Esta pisada sigue ahí.»)."))
+    # ¿cuándo queda dicha la afirmación sorprendente? (TikTok Studio, 2026-11-17: hasta nuestros mejores vídeos pierden el 40 %
+    # en los 3 primeros segundos; lo que no se haya prometido para entonces no lo oye casi la mitad)
+    n_promesa = g if g >= 6 or len(frases) < 2 else g + len(frases[1].split())
+    if n_promesa / VOZ > 4.2:
+        av.append(("⚠", f"La afirmación sorprendente no queda dicha hasta el segundo {n_promesa / VOZ:.1f} ({n_promesa} palabras entre las dos primeras frases). "
+                        "Objetivo: antes del segundo 3,5 (unas 10 palabras). Ejemplo: «Mira tus uñas. La Luna se aleja igual de rápido.»"))
     # duración
     lo, hi = (95, 110) if corto else (150, 160)
     if n > 165: av.append(("❌", f"{n} palabras ≈ {dur:.0f} s: el Short puede pasar de 60 s. Máximo 165."))
