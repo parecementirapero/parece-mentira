@@ -19,12 +19,9 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 | Día de 18 horas | «Un día duraba dieciocho horas.» | La Tierra girando muy deprisa con un reloj que corre |
 
 ### Candidatos nuevos con objeto claro para el fotograma 0 (AGENTE §2). **Sin verificar: cada dato necesita sus dos fuentes antes de usarse**
-- Los plátanos son un poco radiactivos (potasio-40) — «Este plátano es radiactivo.» — un plátano con un contador que hace clic (cotidiano/ciencia, alcance universal)
 - La luz del Sol que ves salió hace unos ocho minutos — «Ese Sol ya es pasado.» — el Sol con un rayo viajando hacia un ojo (espacio)
 - Un rayo calienta el aire varias veces más que la superficie del Sol — «Un rayo quema más que el Sol.» — un rayo cayendo con un termómetro que revienta (ciencia)
-- Saturno es menos denso que el agua — «Saturno flotaría en el agua.» — Saturno cayendo a una bañera gigante (espacio)
-- Los koalas tienen huellas dactilares casi iguales a las humanas — «Esta huella no es humana.» — una huella dactilar enorme con una lupa (animales/misterio)
-- La miel encontrada en tumbas egipcias seguía siendo comestible — «Esta miel tiene tres mil años.» — un tarro de miel saliendo de un sarcófago (historia con objeto cotidiano)
+- ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
 - El día de la Tierra hace ~1.400 millones de años duraba unas 18 horas (continuación de la Luna)
 
 ## Usados
@@ -52,6 +49,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - Todos los planetas caben entre la Tierra y la Luna (distancia media) — lote 2026-11-16-manana
 - El pulpo: tres corazones, sangre azul (hemocianina) y neuronas en los brazos — lote 2026-11-16-manana
 - Los vikingos en América en 1021 (L'Anse aux Meadows, tormenta solar en los anillos) — lote 2026-11-16-manana
+- Los plátanos son radiactivos (potasio-40, dosis plátano; tu cuerpo, ≈4.000 desintegraciones por segundo) — lote 2026-11-17-manana
+- Saturno flotaría en el agua (densidad 0,69; hidrógeno y helio; anillos de ~10 m de grosor) — lote 2026-11-17-manana
+- Las huellas dactilares de los koalas (Henneberg, evolución convergente) — lote 2026-11-17-manana
 
 ## Continuaciones prometidas
 

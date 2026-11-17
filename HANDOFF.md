@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 08:55 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-17-manana
+**Hecho**: lote `2026-11-17-manana`, 3 vídeos v1 en revisión, primer lote automático con el método denso: 01 «Este plátano es radiactivo» (Ciencia, experimento), 02 «Saturno flotaría en el agua» (Espacio, comparación, control), 03 «Esta huella no es humana» (koala; Misterio, misterio por pistas; **experimento: gancho de negación**). Cada dato con ≥ 2 fuentes (`guiones.md`); la miel egipcia se descartó por ser un mito. Voz oficial por API desde el Mac (eleven_v4, 0.5/0.75, sin fallos). 37 SVG nuevos (`generadores/ilus_lote.py`), montaje con `motor/denso.py` (38–39 planos por vídeo, 6–11 micro planos), render en la nube. Portadas elegidas sin «ok» (pasos de `.claude/agents/portadas.md` hechos a mano). Vídeos y portadas en el chat y en el Mac (SHA iguales). Correo `1a1e86caf2a125ea`.
+**Pruebas**: `motor.guion` ✓; `construir` sin ⚠ de lectura; `motor.calidad --mp4` 92/90/100 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; −19,1/−19,2/−19,1 LUFS; hojas cada 1 s revisadas y corregidas (2.ª vuelta de render).
+**No hecho**: experimento «plano real» (Openverse en el Mac → 403 en `thumb.wikimedia.org`; TASKS). Studio no se abrió (nada nuevo con ≥ 24 h desde la lectura de las 00:25). Sin publicar: falta el «ok».
+**Créditos ElevenLabs**: quedan 29.828 de 40.000.
+**Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dJfghaKYErZsy5CyPu → publicar según AGENTE §8 desde el Mac de Nico.
+
 ## 2026-11-17 02:45 — Nico — rama `main` — chat en la nube «Luna densa» (4.ª ronda nocturna)
 **Hecho**: comprobación de mis propias hipótesis con más datos (`motor/APRENDIZAJE.md`): H1 y H2 rebajadas, H9 sin apoyo, **H7 reforzada** (movimiento del primer segundo: 23,5 en Shorts con más de 100.000 vistas, 13,8 en los de ~2.000; los nuestros, 1,6–15,2). Curvas de retención reales de TikTok Studio (`estadisticas/tiktok_studio.json`, `herramientas/tiktok_retencion.js`): se pierde el 40 % en 3 s. Lo oficial del algoritmo con fuentes. H6 (personaje) descartada por Nico → quitada del motor y apuntada en DECISIONS.
 **Motor**: `calidad` ❌ si el primer segundo está quieto; `guion` avisa si la afirmación tarda más de 3,5 s; `denso.arranque()`; `omitir=` también para micro-Shorts; Luna v8 y micro de 8 s. AGENTE §2 «prueba del primer segundo»; `IDEAS.md` con ganchos propuestos.

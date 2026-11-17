@@ -1,0 +1,152 @@
+{
+ "01": {
+  "archivo": "01-platano-radiactivo_v1.mp4",
+  "titulo": "Este plátano es radiactivo (y tú también) 🍌☢️",
+  "youtube": {
+   "titulo": "Este plátano es radiactivo (y tú también) 🍌☢️ #Shorts",
+   "descripcion": "Un plátano lleva casi medio gramo de potasio, y una pizca es potasio-40, un átomo inestable: unos 15 se rompen cada segundo dentro de él. Comerse uno equivale a 0,1 microsieverts (la «dosis plátano»). Y tu cuerpo es todavía más radiactivo: unos 4.000 átomos por segundo. No pasa nada: el cuerpo expulsa el potasio que le sobra.\n\n#Shorts #ciencia #curiosidades #radiactividad #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "Este plátano es radiactivo (y tú también) 🍌☢️ Un plátano lleva casi medio gramo de potasio, y una pizca es potasio-40, un átomo inestable: unos 15 se rompen cada segundo dentro de él. Comerse uno equivale a 0,1 microsieverts (la «dosis plátano»). Y tu cuerpo es todavía más radiactivo: unos 4.000 átomos por segundo. No pasa nada: el cuerpo expulsa el potasio que le sobra. #ciencia #curiosidades #radiactividad #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "Este plátano es radiactivo (y tú también) 🍌☢️ Un plátano lleva casi medio gramo de potasio, y una pizca es potasio-40, un átomo inestable: unos 15 se rompen cada segundo dentro de él. Comerse uno equivale a 0,1 microsieverts (la «dosis plátano»). Y tu cuerpo es todavía más radiactivo: unos 4.000 átomos por segundo. No pasa nada: el cuerpo expulsa el potasio que le sobra. #ciencia #curiosidades #radiactividad #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "Wikipedia — Banana equivalent dose (≈15 Bq, ≈0,1 µSv, comparaciones en BED)",
+    "url": "https://en.wikipedia.org/wiki/Banana_equivalent_dose"
+   },
+   {
+    "titulo": "Ionactive — Radioactive bananas (15 Bq, 0,093 µSv con ICRP 119; homeostasis del potasio)",
+    "url": "https://ionactive.co.uk/resource-hub/guidance/radioactive-bananas-banana-equivalent-dose"
+   },
+   {
+    "titulo": "Universidad de Groningen — banana equivalent dose (≈0,1 µSv; el potasio sobrante se excreta)",
+    "url": "https://www.rug.nl/education/courses/other-education/radiation-protection/a-z/a-z-data/banana-equivalent-dose?lang=en"
+   },
+   {
+    "titulo": "Health Physics Society — Are our bodies naturally radioactive? (K-40 en una persona de 70 kg: ≈4.200–5.000 Bq)",
+    "url": "https://hps.org/ate_faq/faqradbods/"
+   }
+  ],
+  "comentario": "¿Te comerías uno ahora mismo? 🍌 Te leo 👇",
+  "etiquetas": {
+   "tema": "Ciencia",
+   "gancho": "dato",
+   "estructura": "experimento",
+   "experimento": "no",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "dato"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "Eres más radiactivo",
+   "clave": "radiactivo",
+   "variante": "Tu plátano es radiactivo",
+   "archivo": "01-portadas/portada.jpg",
+   "t": 50.75,
+   "diseno": "dato",
+   "motivo": "la silueta en rayos X con el plátano enseña la sorpresa del vídeo (tú eres más radiactivo) y el texto se lee en la cuadrícula"
+  }
+ },
+ "02": {
+  "archivo": "02-saturno-flotaria_v1.mp4",
+  "titulo": "Saturno flotaría en el agua 🪐🛁",
+  "youtube": {
+   "titulo": "Saturno flotaría en el agua 🪐🛁 #Shorts",
+   "descripcion": "Saturno es el único planeta menos denso que el agua: un cubito de 1 cm³ de Saturno pesaría de media 0,69 g. Y eso que es 9 veces más ancho que la Tierra y 95 veces más pesado: casi todo es hidrógeno y helio. Su día dura unas 10 horas y media, y sus anillos, de hielo y roca, tienen casi siempre unos 10 metros de grosor.\n\n#Shorts #espacio #saturno #astronomia #curiosidades #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "Saturno flotaría en el agua 🪐🛁 Saturno es el único planeta menos denso que el agua: un cubito de 1 cm³ de Saturno pesaría de media 0,69 g. Y eso que es 9 veces más ancho que la Tierra y 95 veces más pesado: casi todo es hidrógeno y helio. Su día dura unas 10 horas y media, y sus anillos, de hielo y roca, tienen casi siempre unos 10 metros de grosor. #espacio #saturno #astronomia #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "Saturno flotaría en el agua 🪐🛁 Saturno es el único planeta menos denso que el agua: un cubito de 1 cm³ de Saturno pesaría de media 0,69 g. Y eso que es 9 veces más ancho que la Tierra y 95 veces más pesado: casi todo es hidrógeno y helio. Su día dura unas 10 horas y media, y sus anillos, de hielo y roca, tienen casi siempre unos 10 metros de grosor. #espacio #saturno #astronomia #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "NASA Science — Saturn: Facts (menos denso que el agua, 9 veces más ancho, día de 10,7 h, anillos de ~10 m de grosor)",
+    "url": "https://science.nasa.gov/saturn/facts"
+   },
+   {
+    "titulo": "BBC Sky at Night — Saturn could float on water (0,687 g/cm³, 95 masas terrestres, bañera de ~120.000 km)",
+    "url": "https://www.skyatnightmagazine.com/space-science/saturn-could-float-on-water"
+   },
+   {
+    "titulo": "Live Science — Saturn: Facts about the ringed planet (96 % hidrógeno, 4 % helio; anillos de ~10 m)",
+    "url": "https://www.livescience.com/facts-about-saturn"
+   }
+  ],
+  "comentario": "¿Qué planeta comparamos en el próximo? 🪐 👇",
+  "etiquetas": {
+   "tema": "Espacio",
+   "gancho": "dato",
+   "estructura": "comparación",
+   "experimento": "no (el «plano real» de la NASA no se pudo descargar: thumb.wikimedia.org bloqueado)",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "arriba"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "Saturno flotaría",
+   "clave": "flotaría",
+   "variante": "¿Saturno en la bañera?",
+   "archivo": "02-portadas/portada.jpg",
+   "t": 1.75,
+   "diseno": "arriba",
+   "motivo": "Saturno flotando en la bañera es exactamente el primer segundo; sujeto grande y texto corto legible en 3:4"
+  }
+ },
+ "03": {
+  "archivo": "03-huella-koala_v1.mp4",
+  "titulo": "Esta huella no es humana: es de un koala 🐨",
+  "youtube": {
+   "titulo": "Esta huella no es humana: es de un koala 🐨 #Shorts",
+   "descripcion": "Los koalas tienen huellas dactilares con crestas, curvas y remolinos como las nuestras. A mediados de los 90, el antropólogo forense Maciej Henneberg vio que ni al microscopio era fácil distinguirlas. No somos parientes cercanos (antepasado común hace más de 100 millones de años) y canguros y wombats no tienen huellas: es evolución convergente, para agarrar y sentir las hojas de eucalipto.\n\n#Shorts #animales #koala #ciencia #curiosidades #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "instagram": {
+   "texto": "Esta huella no es humana: es de un koala 🐨 Los koalas tienen huellas dactilares con crestas, curvas y remolinos como las nuestras. A mediados de los 90, el antropólogo forense Maciej Henneberg vio que ni al microscopio era fácil distinguirlas. No somos parientes cercanos (antepasado común hace más de 100 millones de años) y canguros y wombats no tienen huellas: es evolución convergente, para agarrar y sentir las hojas de eucalipto. #animales #koala #ciencia #parecementira #reels"
+  },
+  "tiktok": {
+   "texto": "Esta huella no es humana: es de un koala 🐨 Los koalas tienen huellas dactilares con crestas, curvas y remolinos como las nuestras. A mediados de los 90, el antropólogo forense Maciej Henneberg vio que ni al microscopio era fácil distinguirlas. No somos parientes cercanos (antepasado común hace más de 100 millones de años) y canguros y wombats no tienen huellas: es evolución convergente, para agarrar y sentir las hojas de eucalipto. #animales #koala #ciencia #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "PBS NOVA — Koalas have fingerprints almost identical to ours (Henneberg, antepasado común >100 Ma, canguros y wombats sin huellas)",
+    "url": "https://www.pbs.org/wgbh/nova/article/koala-fingerprints"
+   },
+   {
+    "titulo": "Snopes — Koala fingerprints and crime scenes (similitud confirmada; confusión en crímenes sin pruebas)",
+    "url": "https://www.snopes.com/fact-check/koala-fingerprints-crime-scene/"
+   }
+  ],
+  "comentario": "¿Qué otro animal te sorprende? 🐨 Te leo 👇",
+  "etiquetas": {
+   "tema": "Misterio",
+   "gancho": "negacion",
+   "estructura": "misterio por pistas",
+   "experimento": "gancho de negación (2.º dato tras el pulpo del 2026-11-16-manana)",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "dato"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "Esta huella no es humana",
+   "clave": "no es humana",
+   "variante": "Huellas de koala",
+   "archivo": "03-portadas/portada.jpg",
+   "t": 58.25,
+   "diseno": "dato",
+   "motivo": "la huella enorme con la lupa es el primer segundo del vídeo; texto de negación con la clave en amarillo, legible en 3:4 y sin tapar la huella"
+  }
+ }
+}
