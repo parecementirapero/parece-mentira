@@ -54,6 +54,23 @@ Lo que se ve (todo **pista**: 7 vídeos, edades distintas, vistas redondeadas po
 4. **Espacio con un objeto físico en el primer fotograma** (huella, uña) queda por encima de los ganchos de «por
    qué te pasa X» (puertas 38,9 %, nudillos 60,6 %). Es pronto para los dos de la tarde; se revisa a las 48 h.
 
+**Segunda lectura (01:37, 70 minutos después)** — sirve para corregirme:
+
+| Vídeo | Se quedan | Vistas | s por vista | Cambio en 70 min |
+|---|---|---|---|---|
+| Huellas en la Luna | 80,1 % | 8.000 | 26,5 | +600 vistas (lleva 32 h y sigue creciendo) |
+| Luna densa | 74,1 % | 2.500 | 28,7 | +100 vistas (se ha frenado) |
+| Puertas | 47,4 % | 1.400 | 17,7 | +800 vistas |
+| Nudillos | 60,5 % | 1.700 | 21,8 | sin cambio |
+| Apolo 11 / móvil | 32,0 % | 533 | 8,1 | +480 vistas (primera hora) |
+
+5. **Matiz al punto 1:** «Puertas» sumó 800 vistas en una hora con solo un 47 % de «se quedan». En las primeras
+   horas YouTube reparte vistas de prueba a todos; el porcentaje decide **si sigue repartiendo después** (Huellas,
+   con 80 %, sigue creciendo a las 32 h; Nudillos, con 60 %, ya está parado a las 3 h). Por eso los vídeos se
+   comparan a las 48 h, no la primera noche.
+6. **El gancho «tu móvil frente al Apolo 11» es el peor hasta ahora (32 %)** y el que menos segundos retiene (8 s).
+   A revisar su primer fotograma cuando tenga 24 h.
+
 ---
 
 ## Referentes vistos (2026-11-17, YouTube, búsqueda «dato curioso del espacio #shorts»)
@@ -83,7 +100,32 @@ Lo que se repite (y en qué nos diferenciamos):
 | Remate | Patrón que se rompe, humor, personaje | Dato final + pregunta | **H4**: remate con giro |
 | Personaje | Dos de siete tienen personaje fijo | Nova no sale en los vídeos (DECISIONS 2026-11-14) | No se toca: decisión de Nico |
 
-Límites de esta muestra: 7 vídeos, un solo tema, elegidos por el buscador (los que fracasaron haciendo lo mismo no
+### Segunda tanda (2026-11-17, historia y curiosidades)
+
+| Short | Vistas | Dur. | Texto en pantalla | Imagen | Estructura |
+|---|---|---|---|---|---|
+| `Rs0WLQvh1A4` ¿Qué hay en el cerebro de Einstein? | 9,9 M | 38 s | **Una palabra** cada vez, centro, amarillo | Fotos reales a pantalla completa, siempre en movimiento | Pregunta sobre alguien conocido |
+| `yJPzlcG_cfY` El invento que predijo la destrucción del imperio | 5,2 M | 74 s | Subtítulo pequeño | **Ilustración** con fondos pintados y **personajes con cara** que se asustan, sudan, se sorprenden | Historia con protagonista |
+| `UIuWxBSEK0Y` Tres datos históricos alucinantes | 5,0 M | 39 s | **Una palabra** cada vez, centro | Imágenes pintadas, cálidas, con barridos | Tres datos |
+| `0ojg988okNQ` El invento azteca… | 0,7 M | 67 s | **Una palabra** cada vez, tercio inferior | Primeros planos de personas comiendo (vídeo generado) | La acción ya está pasando en el fotograma 0 |
+
+Con las dos tandas (11 vídeos): **8 de 11 usan subtítulo de 1–3 palabras enormes en el centro o tercio inferior**;
+ninguno lo lleva arriba como nosotros. El único ilustrado como los nuestros (5,2 M) cuenta el dato a través de
+**personajes con emociones**, no de objetos y cifras → hipótesis H6.
+
+### Títulos: 383 Shorts del nicho (9 búsquedas en YouTube, 2026-11-17)
+
+- **La mediana de vistas de un Short del nicho en el buscador es 73.** Solo 7 de 383 pasan del millón. Casi todo lo
+  que se publica no lo ve nadie: nuestros 1.000–7.000 por vídeo ya están muy por encima de lo normal.
+- **El título no explica las vistas.** Ningún rasgo (pregunta, mayúsculas, emoji, número, «sabías que», longitud)
+  separa de forma fiable a los que triunfan: las diferencias que salen dependen de la búsqueda de la que venga cada
+  vídeo. Cuadra con nuestro dato de que el 97 % de las vistas llega por el feed de Shorts.
+- Única pista utilizable: los títulos de **lista genérica** («5 datos curiosos de…», «3 curiosidades…») son los más
+  abundantes y tienen la mediana más baja (10 vistas frente a 148 del resto). Mejor un hecho concreto y raro en el
+  título («Escapó de Alcatraz con una cuchara») que una lista.
+- Conclusión práctica: **no gastar tiempo en optimizar títulos**; gastarlo en el primer segundo.
+
+Límites de estas muestras: 11 vídeos, pocos temas, elegidos por el buscador (los que fracasaron haciendo lo mismo no
 salen), y sin sonido. Vale para generar hipótesis, no para dar nada por demostrado.
 
 ---
@@ -96,10 +138,11 @@ Una hipótesis = un vídeo del lote con ese cambio y los otros dos sin él. Se e
 | Id | Hipótesis | Cómo se prueba | Se mide con | Estado |
 |---|---|---|---|---|
 | H0 | El método denso retiene mejor que el v4 | Luna densa frente a Luna v4 (mismo tema) | Se quedan: 73,3 % frente a 65,3 % | **A favor (pista).** Revisar % medio visto a las 72 h |
-| H1 | Subtítulo de 1–2 palabras, grande y centrado, sube «se quedan» y la retención | `estilo_subtitulos.modo = "palabra"` en 1 de 3 vídeos | Se quedan, s por vista | Preparado en el motor; pendiente del «sí» de Nico/Jorge |
-| H2 | Un vídeo de 30–38 s (95–110 palabras) consigue más % visto y más vistas que uno de 55 s | 1 de 3 vídeos corto, mismo nivel de montaje | % medio visto, vistas a 48 h | Pendiente (cambia la regla de 150–160 palabras: decide Nico/Jorge) |
+| H1 | Subtítulo de 1–2 palabras, grande y centrado, sube «se quedan» y la retención | `v.construir(..., subtitulos="palabra")` en 1 de 3 vídeos | Se quedan, s por vista | Preparado en el motor; **es el primero que probaría** (8 de 11 referentes); pendiente del «sí» de Nico/Jorge |
+| H2 | Un vídeo de 30–38 s (95–110 palabras) consigue más % visto y más vistas que uno de 55 s | 1 de 3 vídeos corto, mismo nivel de montaje. Para probar sin gastar voz: `Video(..., omitir=[(i0, i1)])` quita frases enteras de una locución ya hecha | % medio visto, vistas a 48 h | Preparado (Luna v6 corta de 35 s); pendiente: cambia la regla de 150–160 palabras, deciden Nico/Jorge |
 | H3 | Gancho en segunda persona («Si mañana…», «Mira tu…») supera al gancho de dato | 1 de 3 vídeos | Se quedan | Pendiente. La Luna («Mira tus uñas») ya apunta a favor |
 | H4 | Remate con giro (el último dato rompe el patrón) sube repeticiones y comentarios | 1 de 3 vídeos | % visto > 100 %, comentarios | Pendiente |
+| H6 | Un personaje con cara que reacciona al dato (sorpresa, susto, alegría) retiene más que objetos y cifras solos | 1 de 3 vídeos con `reaccion()` en 4–6 planos | Se quedan, s por vista | Preparado (`pj_*.svg`, `denso.reaccion`, `lotes/muestrario-movimiento/gen_personaje.py`). **Ojo:** el dibujo tira a infantil y Jorge rechazó ese aspecto el 2026-11-15; que lo vean antes de usarlo |
 | H5 | Temas de espacio con objeto físico en el primer fotograma superan a «por qué te pasa X» | Comparar por etiqueta `tema` cuando haya 5 de cada | Se quedan | Abierto; hoy 79/73/65 frente a 61/39 |
 
 Cuando un experimento se cierra, se escribe aquí el resultado con fecha y, si cambia cómo hacemos los vídeos, pasa a
