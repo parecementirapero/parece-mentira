@@ -24,6 +24,7 @@ Imprime una línea JSON: {"ok": true, "red": "tiktok", "estado": "en_bandeja", "
 """
 import argparse
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -170,11 +171,19 @@ def subir_archivo(url, ruta, tam, trozo, total):
                    "Content-Range": f"bytes {ini}-{fin}/{tam}"}
             r = base.pedir(url, metodo="PUT", datos=datos, cabeceras=cab, espera=900, intentos=4)
             esperado = 201 if n == total else 206
+            if r.estado == 416 and _ya_recibido(r) > fin:
+                continue   # el trozo llegó en un intento anterior cuya respuesta se perdió: no se repite
             if r.estado not in (esperado, 201):
                 pista = {400: "cabeceras o tamaño del trozo incorrectos", 403: "la dirección de subida ha caducado (dura 1 h)",
                          404: "TikTok no reconoce esta subida", 416: "el trozo no coincide con lo ya subido"}.get(r.estado, "")
                 base.salir(f"La subida a TikTok falló en el trozo {n} de {total}" + (f": {pista}" if pista else ""),
                            estado=r.estado, detalle=r.texto(300))
+
+
+def _ya_recibido(r):
+    """Bytes que TikTok dice tener ya (cabecera «Content-Range: bytes 0-N/TOTAL» de su respuesta)."""
+    m = re.match(r"bytes \d+-(\d+)/", r.cabeceras.get("content-range", ""))
+    return int(m.group(1)) + 1 if m else 0
 
 
 def enlace_publicado(datos, cuenta):
@@ -233,8 +242,9 @@ def main():
             base.listo(red="tiktok", clave=a.clave, yaEstaba=True, estado=nuevo, url=url, texto=texto,
                        publish_id=previo["publish_id"])
             return
-        if est == "PROCESSING_UPLOAD" and previo.get("estado") == "subido":
-            pass  # se subió entero y TikTok sigue procesando: abajo solo se espera, sin volver a subir
+        entero = previo.get("estado") == "subido" or (previo.get("bytes") and datos.get("uploaded_bytes") == previo.get("bytes"))
+        if est == "PROCESSING_UPLOAD" and entero:
+            previo = dict(previo, estado="subido")  # llegó entero y TikTok sigue procesando: abajo solo se espera, sin volver a subir
         elif est is None and codigo not in ("invalid_publish_id",):
             msg, extra = explicar(codigo, {})
             base.salir("No puedo comprobar el envío anterior a TikTok, así que no lo repito (para no duplicar). " + msg,

@@ -30,6 +30,7 @@ class Mundo:
         self.tt_estados = ["PROCESSING_UPLOAD", "SEND_TO_USER_INBOX"]
         self.tt_fallo, self.tt_post_ids = None, []
         self.tt_put_503 = 0
+        self.tt_put_pierde = 0
         self.ig_contenedores, self.ig_publicados, self.ig_subidas, self.ig_comentarios = {}, [], {}, []
         self.ig_estados = ["IN_PROGRESS", "FINISHED"]
         self.ig_medios, self.ig_cupo = [], 3
@@ -180,6 +181,9 @@ class Falso(http.server.BaseHTTPRequestHandler):
                 return self._tt_error(400, "invalid_publish_id")
             if not s["completo"]:
                 return self._fin(200, {"data": {"status": "PROCESSING_UPLOAD", "uploaded_bytes": s["recibido"]}, "error": {"code": "ok"}})
+            if s.get("lento", 0) > 0:
+                s["lento"] -= 1
+                return self._fin(200, {"data": {"status": "PROCESSING_UPLOAD", "uploaded_bytes": s["recibido"]}, "error": {"code": "ok"}})
             if M.tt_fallo:
                 return self._fin(200, {"data": {"status": "FAILED", "fail_reason": M.tt_fallo}, "error": {"code": "ok"}})
             s["consultas"] += 1
@@ -251,11 +255,14 @@ class Falso(http.server.BaseHTTPRequestHandler):
         if int(total) != s["tam"] or fin - ini + 1 != len(cuerpo) or self.headers.get("Content-Type") != "video/mp4":
             return self._fin(400, {})
         if ini != s["recibido"]:
-            return self._fin(416, {})
+            return self._fin(416, {}, {"Content-Range": f"bytes 0-{s['recibido'] - 1}/{s['tam']}"})
         s["recibido"] += len(cuerpo)
         s["hash"].update(cuerpo)
         s["trozos"] += 1
         s["completo"] = s["recibido"] == s["tam"]
+        if M.tt_put_pierde > 0:          # el trozo llega, pero la respuesta «se pierde»
+            M.tt_put_pierde -= 1
+            return self._fin(503, {})
         self._fin(201 if s["completo"] else 206, {}, {"Content-Range": f"bytes 0-{s['recibido'] - 1}/{s['tam']}"})
 
 
@@ -480,6 +487,28 @@ def tiktok_reintenta_el_trozo_si_tiktok_falla_un_momento(c):
     cod, r = c.lanzar("subir_tiktok.py")
     igual((cod, r["estado"], len(M.tt_inits)), (0, "en_bandeja", 1), "resultado")
     igual(M.tt_subidas[r["publish_id"]]["hash"].hexdigest(), h, "el archivo llega idéntico y una sola vez")
+
+
+@prueba
+def tiktok_respuesta_perdida_en_un_trozo_no_lo_manda_dos_veces(c):
+    c.poner_claves(CLAVES_TT); h = mp4_falso(c.video, 70 * MB); M.tt_put_pierde = 1
+    cod, r = c.lanzar("subir_tiktok.py")
+    igual((cod, r["estado"]), (0, "en_bandeja"), "resultado")
+    s = M.tt_subidas[r["publish_id"]]
+    igual((s["trozos"], s["hash"].hexdigest()), (2, h), "cada trozo llega una sola vez y el archivo es idéntico")
+
+
+@prueba
+def tiktok_si_se_corta_tras_subirlo_entero_no_manda_otro(c):
+    c.poner_claves(CLAVES_TT); mp4_falso(c.video, 3 * MB)
+    c.lanzar("subir_tiktok.py", "--prueba")
+    M.tt_inits.append({"id": "v_inbox_file~v2.1"})
+    M.tt_subidas["v_inbox_file~v2.1"] = {"recibido": 3 * MB, "tam": 3 * MB, "hash": hashlib.sha256(), "trozos": 1, "consultas": 0,
+                                         "completo": True, "lento": 1}
+    with open(c.registro, "w") as f:   # el script murió justo después de subir: el registro se quedó en «subiendo»
+        json.dump({"01": {"tiktok": {"publish_id": "v_inbox_file~v2.1", "estado": "subiendo", "bytes": 3 * MB}}}, f)
+    cod, r = c.lanzar("subir_tiktok.py")
+    igual((cod, r["estado"], r["publish_id"], len(M.tt_inits)), (0, "en_bandeja", "v_inbox_file~v2.1", 1), "espera al mismo envío")
 
 
 @prueba

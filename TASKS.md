@@ -4,10 +4,12 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Publicación por API oficial de TikTok (borrador a la bandeja) e Instagram (Reel) con scripts en `publicar/`, guía de puesta en marcha y pruebas simuladas — Nico — 2026-11-17 09:31 — trabajo en la nube mientras Nico está fuera; sin publicar nada ni tocar cuentas
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] **Instagram por API — puesta en marcha** (`publicar/README.md`, «Instagram», opción A; ~30 min): 1) terminar el registro en Meta for Developers (es lo que bloquea: móvil sin verificar en el Facebook de Jorge), 2) página de Facebook «Parece Mentira» enlazada a @parecementiramedia, 3) app de Meta, 4) `publicar/autorizar_instagram.py`, 5) `subir_instagram.py --prueba`. Después el agente publica los Reels solo tras el «ok» — Jorge (su Facebook) con Nico
+- [ ] **TikTok por API — puesta en marcha y prueba que decide** (`publicar/README.md`, «TikTok»; ~20 min por Mac): sandbox nuevo «Publicar Nico» con Content Posting API y permiso `video.upload`, `publicar/autorizar_tiktok.py`, y la prueba real del paso 9: ¿deja publicar en público un borrador llegado por API? Si sí, decidir Nico/Jorge si TikTok pasa a borrador + móvil o se queda en el navegador, y apuntarlo en `DECISIONS.md` — Nico
+- [ ] Añadir a los dominios permitidos de Claude (Ajustes → Capacidades): `open.tiktokapis.com`, `open-upload.tiktokapis.com`, `graph.facebook.com`, `rupload.facebook.com` — Nico/Jorge
 - [ ] Añadir `thumb.wikimedia.org` a los dominios permitidos (claude.ai → Settings → Capabilities) o cambiar `motor/openverse.py` para no usarlo: sin eso el experimento «plano real» falla en el Mac (403, lote 2026-11-17-manana) — Nico/Jorge
 - [ ] Copia de `motor/` del Mac de Nico desactualizada (commit f47be02, sin `denso.py`, `calidad.py`, `guion.py`): actualizarla si se quiere montar en el Mac; hoy se monta en la nube — Nico
 - [ ] Ver la Luna v8 (normal y palabra) y el micro-Short de 8 s; decidir H1 (subtítulo de palabra) y H8 (un micro-Short por semana). H2 (vídeo corto) ya no se recomienda. Ver `REPORTE_NOCHE_2026-11-17.md` §6 — Nico/Jorge
@@ -46,6 +48,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Publicación por API oficial de TikTok (borrador a la bandeja) e Instagram (Reel): `publicar/subir_tiktok.py`, `subir_instagram.py`, `autorizar_*.py`, `base.py`, guía en `publicar/README.md`, 31 pruebas simuladas (`publicar/prueba.py`), AGENTE §8 punto 3b y DECISIONS. Sin publicar nada ni tocar cuentas; **sin probar contra las API reales** (faltan las cuentas de desarrollador) — Nico — 2026-11-17 10:30
 - [x] Lote 2026-11-17-manana (plátano radiactivo, Saturno flotaría, huella de koala): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌); esperan el «ok» en https://claude.ai/code/session_019BG1dJfghaKYErZsy5CyPu (correo `1a1e86caf2a125ea`) — Agente 08:00 (Nico) — 2026-11-17 08:55
 - [x] Noche 17, 4.ª ronda: ganadores frente a perdedores (H1, H2 y H9 rebajadas; H7 reforzada con 32 Shorts), curvas de retención de TikTok Studio, lo oficial del algoritmo, micro-Short de 8 s (H8), `arranque()`, Luna v8, H6 descartada por Nico — Nico — 2026-11-17 02:45
 - [x] Noche 17, 3.ª ronda: 383 títulos del nicho analizados, 4 referentes más, primer fotograma de nuestros 5 vídeos frente a «se quedaron viendo» (H7), versión corta con la misma locución (`omitir=`), personaje con expresiones (H6), Luna v7 en 4 variantes; sin publicar ni gastar créditos — Nico — 2026-11-17 02:00

@@ -4,6 +4,23 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 10:30 — Nico — rama `main` — chat en la nube «API de TikTok e Instagram» (Nico en el trabajo, sin nadie delante)
+**Encargo**: «vamos a hacerlo, porque si no no podemos subirlo» → publicar en TikTok e Instagram por sus API oficiales (gratis).
+**Hecho** (commit `6cae883` + el de esta entrada):
+- `publicar/subir_instagram.py`: Reel por la API de Meta. Sube el archivo desde el Mac (Facebook Login, `rupload`) o por dirección pública (Instagram Login). Texto, portada por fotograma (`portada.t`), comentario opcional. Retoma envíos a medias y no duplica.
+- `publicar/subir_tiktok.py`: Content Posting API en modo Upload: deja el vídeo como borrador en la bandeja de entrada y devuelve el texto para pegarlo en el móvil. `--estado` da el enlace cuando la persona publica. Guarda en `claves.txt` el token que TikTok cambia en cada uso.
+- `publicar/autorizar_tiktok.py` y `autorizar_instagram.py` (permiso de una vez; no enseñan tokens), `publicar/base.py` (claves, HTTP, registro `publicado.json`, comprobación del MP4).
+- `publicar/README.md` reescrito: qué puede y qué no puede cada API, puesta en marcha paso a paso, uso por el agente. `AGENTE.md` §8 punto 3b (solo se usa la API si `--prueba` dice que la red está activada; si no, navegador como siempre: el lote de las 20:00 no cambia). `DECISIONS.md`, `TASKS.md`, `PROJECT_STATE.md`.
+**Lo importante que salió de la documentación oficial**:
+- TikTok no deja publicar del todo: sin auditoría solo en privado, y no audita herramientas internas. Lo máximo es el borrador + terminar en el móvil. Además, el texto no viaja con el borrador.
+- Instagram sí publica del todo y sin revisión de Meta para una cuenta propia. Valen cuentas de creador (corrijo lo que dije en el chat: no hace falta pasarla a empresa).
+- Con la app de las estadísticas (Instagram Login) el vídeo tendría que estar en una URL pública; con Facebook Login + página enlazada se sube el archivo. Por eso se recomienda esa.
+- El token de TikTok rota: hace falta un sandbox propio por Mac, aparte del de las estadísticas.
+**Pruebas**: `python3 publicar/prueba.py` → 31 de 31, en Python 3.13 y 3.9 (servidor falso en 127.0.0.1 con las reglas de las dos API: rotación de token, trozos, reintentos, respuestas perdidas, límites, no duplicar). Comprobador de MP4 probado con archivos reales de ffmpeg. Textos de todos los lotes dentro de los límites de Instagram.
+**No hecho / no verificado**: ninguna llamada a TikTok ni a Meta de verdad (sin cuentas de desarrollador y sin red hacia ellas desde la nube). No se sabe si TikTok deja publicar en público un borrador enviado desde un sandbox: lo decide la prueba del paso 9 del README. Nada publicado, ninguna cuenta tocada, ningún gasto.
+**Pendiente (personas)**: registro en Meta for Developers + página de Facebook + app (Instagram); sandbox «Publicar Nico» + prueba real (TikTok); dominios permitidos. Todo en `TASKS.md`.
+**Siguiente paso**: Instagram primero (es la que queda 100 % automática). Empezar por desbloquear el registro en Meta for Developers.
+
 ## 2026-11-17 08:55 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-17-manana
 **Hecho**: lote `2026-11-17-manana`, 3 vídeos v1 en revisión, primer lote automático con el método denso: 01 «Este plátano es radiactivo» (Ciencia, experimento), 02 «Saturno flotaría en el agua» (Espacio, comparación, control), 03 «Esta huella no es humana» (koala; Misterio, misterio por pistas; **experimento: gancho de negación**). Cada dato con ≥ 2 fuentes (`guiones.md`); la miel egipcia se descartó por ser un mito. Voz oficial por API desde el Mac (eleven_v4, 0.5/0.75, sin fallos). 37 SVG nuevos (`generadores/ilus_lote.py`), montaje con `motor/denso.py` (38–39 planos por vídeo, 6–11 micro planos), render en la nube. Portadas elegidas sin «ok» (pasos de `.claude/agents/portadas.md` hechos a mano). Vídeos y portadas en el chat y en el Mac (SHA iguales). Correo `1a1e86caf2a125ea`.
 **Pruebas**: `motor.guion` ✓; `construir` sin ⚠ de lectura; `motor.calidad --mp4` 92/90/100 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; −19,1/−19,2/−19,1 LUFS; hojas cada 1 s revisadas y corregidas (2.ª vuelta de render).
