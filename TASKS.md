@@ -48,7 +48,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
-- [x] Lote 2026-11-17-manana publicado en TikTok e Instagram desde el Mac de Jorge (YouTube lo subió el chat de Nico); vídeos traídos por la página «artifact» y comprobados por SHA-256 — 2026-11-17
+- [x] Lote 2026-11-17-manana publicado en TikTok e Instagram desde el Mac de Jorge (YouTube lo subió el chat de Nico); vídeos traídos por la página «artifact» y comprobados por SHA-256 — Jorge — 2026-11-17
 - [x] Publicación por API oficial de TikTok (borrador a la bandeja) e Instagram (Reel): `publicar/subir_tiktok.py`, `subir_instagram.py`, `autorizar_*.py`, `base.py`, guía en `publicar/README.md`, 31 pruebas simuladas (`publicar/prueba.py`), AGENTE §8 punto 3b y DECISIONS. Sin publicar nada ni tocar cuentas; **sin probar contra las API reales** (faltan las cuentas de desarrollador) — Nico — 2026-11-17 10:30
 - [x] Lote 2026-11-17-manana (plátano radiactivo, Saturno flotaría, huella de koala): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌); esperan el «ok» en https://claude.ai/code/session_019BG1dJfghaKYErZsy5CyPu (correo `1a1e86caf2a125ea`) — Agente 08:00 (Nico) — 2026-11-17 08:55
 - [x] Noche 17, 4.ª ronda: ganadores frente a perdedores (H1, H2 y H9 rebajadas; H7 reforzada con 32 Shorts), curvas de retención de TikTok Studio, lo oficial del algoritmo, micro-Short de 8 s (H8), `arranque()`, Luna v8, H6 descartada por Nico — Nico — 2026-11-17 02:45

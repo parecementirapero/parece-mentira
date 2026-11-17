@@ -53,7 +53,7 @@ Base: `estadisticas/datos/aprendizajes.md` (4 vídeos: todo **pista**) y H7 (pri
 `generadores/`: `NN-guion.txt` (locución), `ilus_lote.py` (37 SVG nuevos: plátano, racimo, contador Geiger con aguja, átomos, chispa, cocina, laboratorio, silueta en rayos X, escáner; Saturno con anillos, bañera, agua, cubitos, casa, hielo, edificio, nube de gas; huellas dactilares, koala, mano de koala, microscopio, detective, canguro, wombat, rama de eucalipto, bosque, árbol de dos ramas, cinta policial) y `gen_0N.py DIR [locucion.mp3 alineacion.json]`. Render en la nube; resultados copiados al Mac.
 
 ## Publicación
-- **«ok»** a los 3: escrito en el chat del Mac de Jorge (https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf) el 2026-11-17 (persona sin confirmar: Nico o Jorge).
+- **«ok»** a los 3: escrito en el chat del Mac de Jorge (https://claude.ai/code/session_019BG1dKP8Ze8noFARTZpfbf) el 2026-11-17 por **Jorge**.
 - **YouTube** (subido desde el chat de Nico): 01 bja3TleMy94 · 02 aA9ji1Y1EPA · 03 0LBq1SkOWz4.
 - Los MP4 pasaron del chat de Nico al Mac de Jorge por la página «artifact» https://claude.ai/artifact/FSpWCbNW59fpYPe46bZ2CH (partes de 14 MB); unidos y comprobados por SHA-256 (iguales a la tabla) en `Documents/Parece Mentira/PARA PUBLICAR/2026-11-17-manana/Vídeos` (+ `Portadas/` y `textos.txt`).
 - **TikTok** (TikTok Studio desde el navegador integrado del Mac de Jorge; la persona eligió cada MP4): 01 https://www.tiktok.com/@parece.mentira85/video/7709083847450807574 · 02 …/7709084200636255510 · 03 …/7709084597069401366. Texto de `textos.txt` (sin fuentes), portada por defecto (fotograma 0).
