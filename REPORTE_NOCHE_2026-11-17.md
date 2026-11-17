@@ -1,7 +1,7 @@
 # Reporte de la noche del 16 al 17 de noviembre de 2026
 
 Encargo de Nico: aprender a hacer mejores vídeos, aprender del nicho y del algoritmo, aplicar lo aprendido por mi
-cuenta y contarlo. Tres rondas (23:45 → 02:10). No se ha publicado nada ni se ha gastado ningún crédito de voz.
+cuenta y contarlo. Cuatro rondas (23:45 → 02:45). No se ha publicado nada ni se ha gastado ningún crédito de voz.
 
 ---
 
@@ -122,6 +122,55 @@ negros, tres planos casi vacíos y dos tramos con el mismo encuadre.
 - **18 de noviembre:** Studio de los tres vídeos de la tarde del 16, ya con 48 h.
 - **19 de noviembre:** % medio visto y curva de retención de la Luna densa, para confirmar si retiene mejor.
 - Los lotes desde hoy llevan gancho de 5 palabras: en una semana se podrá ver si «se quedan viendo» sube.
+
+## 6. Cuarta ronda (02:10 → 02:45): lo que cambió al seguir investigando
+
+Seguir mirando sirvió sobre todo para **corregirme**. Tres cosas que había dado por buenas no aguantaron la
+comprobación, y una salió reforzada.
+
+| Idea | Cómo la comprobé | Resultado |
+|---|---|---|
+| El subtítulo de palabra ayuda (H1) | Miré también Shorts con ~2.000 vistas | **Rebajada.** Lo llevan casi todos, también los que nadie ve |
+| Un vídeo de 35 s rinde más (H2) | Estudio de 5.400 Shorts (Galloway, 2023) + duración de 32 Shorts | **Rebajada.** Los de 50–60 s tenían más vistas; ganadores y perdedores duran lo mismo (59 y 61 s) |
+| Los temas «universales» ganan (H9) | 383 títulos, dentro de la misma búsqueda | **Sin apoyo.** Los de historia local no rinden peor |
+| El primer segundo en movimiento retiene (H7) | Movimiento del primer segundo en 32 Shorts y en los 7 nuestros | **Reforzada.** Mediana 23,5 en los de más de 100.000 vistas frente a 13,8 en los de 300–3.000 |
+
+Lo nuevo que aprendí:
+
+- **Nuestros arranques son los más tranquilos del nicho.** En la misma escala: Huellas 15,2, Guerra 11,6, Luna
+  densa 7,6, Apolo 6,8, Puertas 4,1, Nudillos 2,7, Moáis 1,6. Solo nuestro mejor vídeo supera la mediana de los
+  Shorts sin éxito. Es donde más margen hay.
+- **Primeras curvas de retención reales (TikTok Studio).** Hasta nuestros dos mejores vídeos pierden el 40 % en
+  3 segundos y la mitad antes del segundo 10; después casi nadie se va. En la Luna densa, el mayor escalón
+  intermedio cae justo en la cuenta atrás «3, 2, 1» (los planos vacíos que rehíce en la v6) y los dinosaurios son
+  el tramo que mejor aguanta.
+- **TikTok y YouTube ordenan nuestros vídeos casi igual**, así que las diferencias entre vídeos son reales. La
+  Luna densa tiene el mejor tiempo medio del canal en TikTok (22,4 s).
+- **Lo oficial del algoritmo:** una vista de Short cuenta en cuanto empieza a reproducirse (desde marzo de 2025),
+  así que las vistas incluyen a los que deslizan; borrar y volver a subir se desaconseja; YouTube no publica
+  duración ideal, frecuencia mínima ni umbral de retención. Lo de los «lotes de prueba» y las horas mágicas es
+  folclore de blogs.
+- **Existe el micro-Short:** uno de 5 segundos tiene 1,4 M de vistas. Es otro formato, pensado para repetirse.
+
+Lo que puse en práctica:
+
+- Personaje (H6): **descartado por Nico** y quitado del repo; apuntado en DECISIONS.
+- Control de calidad: ❌ si el primer segundo está quieto y ⚠ si se mueve menos que nuestro mejor vídeo.
+- Revisión del guion: avisa si la afirmación sorprendente tarda más de 3,5 s en quedar dicha.
+- `arranque()` en el motor para que el sujeto del primer plano entre moviéndose.
+- Luna **v8**: primer segundo con el doble de movimiento que la v7 (5,5 frente a 3,0 en la escala del control).
+- Micro-Short de la Luna de 8 s en bucle (H8), hecho con la misma locución.
+- `IDEAS.md`: primera frase y fotograma 0 propuestos para los 5 temas candidatos, y 6 temas nuevos (sin verificar).
+- Herramientas guardadas para repetir todo esto: `herramientas/hoja_short.js`, `studio_shorts.js`,
+  `tiktok_retencion.js`.
+
+Cómo queda la lista de decisiones después de esta ronda:
+
+1. **Nada que cambiar en la duración:** se quedan los 55 s.
+2. Subtítulo de palabra (H1): prueba barata, sin prisa.
+3. Micro-Short de 8 s (H8): ¿probamos uno por semana, sacado de un vídeo ya hecho?
+4. ¿Republicar la Luna? YouTube lo desaconseja; mejor usar la v8 de modelo.
+5. Música y efectos: sigue haciendo falta que alguien los oiga.
 
 ## Dónde está todo
 

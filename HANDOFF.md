@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 02:45 — Nico — rama `main` — chat en la nube «Luna densa» (4.ª ronda nocturna)
+**Hecho**: comprobación de mis propias hipótesis con más datos (`motor/APRENDIZAJE.md`): H1 y H2 rebajadas, H9 sin apoyo, **H7 reforzada** (movimiento del primer segundo: 23,5 en Shorts con más de 100.000 vistas, 13,8 en los de ~2.000; los nuestros, 1,6–15,2). Curvas de retención reales de TikTok Studio (`estadisticas/tiktok_studio.json`, `herramientas/tiktok_retencion.js`): se pierde el 40 % en 3 s. Lo oficial del algoritmo con fuentes. H6 (personaje) descartada por Nico → quitada del motor y apuntada en DECISIONS.
+**Motor**: `calidad` ❌ si el primer segundo está quieto; `guion` avisa si la afirmación tarda más de 3,5 s; `denso.arranque()`; `omitir=` también para micro-Shorts; Luna v8 y micro de 8 s. AGENTE §2 «prueba del primer segundo»; `IDEAS.md` con ganchos propuestos.
+**Pruebas**: renders completos de v8, v8 palabra y micro; `motor.calidad --mp4` 100/100 los tres; primer segundo 5,5 (v7: 3,0).
+**No hecho a propósito**: nada publicado ni gastado.
+**Siguiente paso**: lote 2026-11-17-manana cuidando sobre todo el primer segundo. Reporte: `REPORTE_NOCHE_2026-11-17.md` §6.
+
 ## 2026-11-17 02:00 — Nico — rama `main` — chat en la nube «Luna densa» (3.ª ronda nocturna)
 **Hecho**:
 - **Hallazgo principal** (`motor/APRENDIZAJE.md`): en nuestros 5 vídeos, palabras del gancho en el fotograma 0 → «se quedaron viendo»: 1 → 80 %, 3 → 74 %, 10 → 60 %, 13 → 47 %, 14 → 32 %. Regla nueva en AGENTE §3 (primera frase ≤ 5 palabras, un objeto grande en acción) y en `motor.calidad` (❌ a partir de 10 palabras; ⚠ si el primer segundo no se mueve).
