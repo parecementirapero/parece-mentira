@@ -94,7 +94,7 @@ negros, tres planos casi vacíos y dos tramos con el mismo encuadre.
 | H1 | Subtítulo de 1–2 palabras enormes | `luna-densa_v7_palabra.mp4` |
 | H2 | Vídeo de 35 s | `luna-densa_v7_corta35s.mp4` |
 | H1 + H2 | Las dos cosas | `luna-densa_v7_corta35s_palabra.mp4` |
-| H6 | Personaje que reacciona al dato | `muestrario_personaje_H6.mp4` |
+| H6 | Personaje que reacciona al dato | **Descartado por Nico** (02:10); quitado del repo |
 
 **Errores míos de esta noche, ya corregidos:**
 
@@ -112,7 +112,7 @@ negros, tres planos casi vacíos y dos tramos con el mismo encuadre.
 1. **H1, subtítulo de palabra**, en uno de los tres vídeos del próximo lote. Es el primero que probaría: es la
    diferencia más repetida con los referentes y ya está hecho.
 2. **H2, un vídeo de 35 s por lote.** Cambia la regla de 150–160 palabras.
-3. **H6, personaje:** miradlo antes; si no convence el dibujo, se descarta o se rehace.
+3. ~~H6, personaje~~: descartado por Nico.
 4. ¿Republicar la Luna con la v7 o usarla solo de modelo?
 5. Volumen de la música (ahora unos 10 dB bajo la voz, más alta de lo habitual porque lo pediste) y los efectos
    nuevos: hace falta que alguien lo oiga.

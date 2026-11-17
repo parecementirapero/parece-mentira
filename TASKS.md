@@ -4,10 +4,11 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Noche 17 (4.ª ronda): muestra grande de primeros segundos de Shorts del nicho, qué dice YouTube del algoritmo (fuentes oficiales), y aplicar; sin publicar ni gastar créditos — Nico (chat de la Luna densa) — 2026-11-17 02:12
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
-- [ ] Ver las 4 variantes de la Luna v7 (normal, palabra, corta 35 s, corta+palabra) y el muestrario de personaje, y decidir H1, H2 y H6 (`motor/APRENDIZAJE.md`) — Nico/Jorge
+- [ ] Ver las 4 variantes de la Luna v7 (normal, palabra, corta 35 s, corta+palabra) y decidir H1 y H2 (H6, personaje, descartado por Nico) (`motor/APRENDIZAJE.md`) — Nico/Jorge
 - [ ] 2026-11-18: releer Studio de los 3 vídeos del 2026-11-16-tarde (a las 48 h) y mirar la curva de retención de Huellas y Luna densa cuando YouTube la dé («No hay suficientes datos» el 17) — Nico/Jorge
 - [ ] Decidir experimentos de `motor/APRENDIZAJE.md`: H1 subtítulo «palabra» en 1 de 3 vídeos; H2 un vídeo de 30–38 s por lote (cambia la regla de 150–160 palabras) — Nico/Jorge
 - [ ] 2026-11-19: leer en Studio el % medio visto de la Luna densa (`jQmhf8o1PfY`) y cerrar H0 en `motor/APRENDIZAJE.md` — Nico/Jorge
