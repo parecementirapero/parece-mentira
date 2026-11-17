@@ -51,8 +51,8 @@ def _(d):
              brillo(0, 0, 130, "#dfe6ff", 0.55, 0.19, keys=K(d, (0, {"x": 820, "y": 900}), (0.35, {"x": 835, "y": 880}), (1, {"x": 960, "y": 640, "ease": "entrada"}))),
              luna(0, 0, 190, 0.2, keys=K(d, (0, {"x": 820, "y": 900, "escala": 1.15}), (0.35, {"x": 835, "y": 880, "escala": 1.1}), (1, {"x": 960, "y": 640, "escala": 0.6, "ease": "entrada"}))),
              flecha([[850, 860], [940, 690]], d * 0.4, d * 0.95, CIAN, 7, [16, 12], z=0.18),
-             IMG("dedo", ancho=600, x=440, z=0.7, keys=K(d, (0, {"y": 1560, "rot": -7, "ey": 1.0}), (0.3, {"y": 1400, "rot": 0, "ease": "elastico"}), (1, {"y": 1350, "ey": 1.07, "ease": "suave"})))],
-             cam(1.12, 1.3, (540, 1080), (560, 960)), vineta=0.7, sfx=[(0.02, "golpe", -12), (d * 0.4, "brillo", -20)])
+             IMG("dedo", ancho=600, x=440, z=0.7, keys=K(d, (0, {"y": 2050, "rot": -10, "ey": 1.0}), (0.28, {"y": 1400, "rot": 0, "ease": "elastico"}), (0.62, {"y": 1380, "rot": 3, "ease": "suave"}), (1, {"y": 1330, "rot": -2, "ey": 1.08, "ease": "suave"})))],
+             {"zoom": [1.0, 1.32], "foco": [[540, 1200], [570, 940]], "pan": [[0, 0], [0, 0]], "temblor": 5}, vineta=0.7, sfx=[(0.02, "golpe", -12), (d * 0.4, "brillo", -20)])
 
 
 @v.plano(3, "la Luna se aleja")
@@ -474,5 +474,5 @@ def _(d):
 
 # ================================================================== construir
 PALABRA = "palabra" in OPC
-v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else "") + ("-micro" if "micro" in OPC else "-corta" if CORTA else ""), version=7, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
+v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else "") + ("-micro" if "micro" in OPC else "-corta" if CORTA else ""), version=8, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
             claves=["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"])

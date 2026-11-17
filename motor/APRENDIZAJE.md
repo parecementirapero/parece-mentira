@@ -98,6 +98,21 @@ Lectura (7 vídeos, sigue siendo **pista**), corregida al añadir los dos últim
 - El «gancho entero en el fotograma 0» (DECISIONS 2026-11-16) funciona con frases de 3 palabras y se vuelve un
   muro con frases de 13.
 
+**Comprobado fuera del canal (02:40):** medí cuánto cambia la imagen en el primer segundo de 32 Shorts del nicho
+sacados de las mismas búsquedas (diferencia media entre fotogramas cada 0,25 s, en miniatura):
+
+| Grupo | Movimiento en el primer segundo (mediana) | En los 3 primeros | Duración mediana |
+|---|---|---|---|
+| 16 con más de 100.000 vistas | **23,5** | 26,2 | 59 s |
+| 16 con 300–3.000 vistas | 13,8 | 18,3 | 61 s |
+| Nuestros 7 | Huellas 15,2 · Guerra 11,6 · Luna densa 7,6 · Apolo 6,8 · Puertas 4,1 · Nudillos 2,7 · Moáis 1,6 | | 47–58 s |
+
+- Los que triunfan se mueven casi el doble en el primer segundo que los que no (los grupos se solapan: es una
+  tendencia, no una ley). A diferencia de H9, esta hipótesis **sí aguanta** la comprobación externa.
+- **Nuestros arranques son mucho más tranquilos que los del nicho:** solo Huellas, nuestro mejor vídeo, supera la
+  mediana de los Shorts *sin éxito*. Es el sitio donde más margen tenemos.
+- La duración no separa a los dos grupos (59 frente a 61 s): otro motivo para no tocar los 55 s.
+
 Puesto en práctica: `python3 -m motor.guion guion.txt` revisa el guion **antes de gastar voz** (gancho, duración, cadena de preguntas, tramos sin dato, cifras en letra, palabras solo de España); `motor.calidad` da ❌ si la primera frase pasa de 9 palabras y ⚠ si pasa de 5, y avisa si el
 primer segundo del MP4 casi no se mueve; AGENTE §3 pide primera frase de 5 palabras o menos y un solo objeto grande
 en acción. El gancho de la Luna v7 se rehízo con eso (el aviso saltó en mi propia v6).

@@ -263,7 +263,7 @@ def analizar(ruta_ep, mp4=None):
         mov0 = float(dif[:10].mean()) if len(dif) >= 10 else 0.0
         datos["imagen_real"]["movimiento_primer_segundo"] = round(mov0, 2)
         if mov0 < 1.0: av("❌", f"El primer segundo está quieto (movimiento {mov0:.1f}). En nuestros datos es lo que más separa los vídeos que retienen (80 %) de los que no (52 %): algo grande tiene que moverse desde el fotograma 0.", 12)
-        elif mov0 < 2.0: av("⚠", f"El primer segundo casi no se mueve (movimiento {mov0:.1f}; el resto del vídeo, {float(dif.mean()):.1f}). Empieza con el sujeto ya en acción.", 6)
+        elif mov0 < 4.0: av("⚠", f"El primer segundo se mueve poco (movimiento {mov0:.1f}; nuestro mejor vídeo ronda 5,5 y los Shorts del nicho con más de 100.000 vistas, 8–9 en esta escala). Empieza con el sujeto ya en acción y un empujón de cámara.", 6)
         d_out = os.path.dirname(mp4)
         mus = glob.glob(os.path.join(d_out, "*_musica.wav")); sf = glob.glob(os.path.join(d_out, "*_sfx.wav"))
         voz = ep.get("audio")
