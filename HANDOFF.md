@@ -4,6 +4,17 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 02:00 — Nico — rama `main` — chat en la nube «Luna densa» (3.ª ronda nocturna)
+**Hecho**:
+- **Hallazgo principal** (`motor/APRENDIZAJE.md`): en nuestros 5 vídeos, palabras del gancho en el fotograma 0 → «se quedaron viendo»: 1 → 80 %, 3 → 74 %, 10 → 60 %, 13 → 47 %, 14 → 32 %. Regla nueva en AGENTE §3 (primera frase ≤ 5 palabras, un objeto grande en acción) y en `motor.calidad` (❌ a partir de 10 palabras; ⚠ si el primer segundo no se mueve).
+- 2.ª lectura de Studio (01:37), 4 Shorts de referencia más (8 de 11 con subtítulo de 1–3 palabras), 383 títulos del nicho (mediana 73 vistas; el título no explica las vistas).
+- Motor: `Video(..., omitir=[(i0, i1)])` hace una versión corta con la misma locución (H2); personaje con 6 expresiones `pj_*.svg` + `denso.reaccion()` (H6); arreglado un fallo mío de la 2.ª ronda (el modo «palabra» no escribía el `.srt` ni el manifiesto).
+- Luna v7: gancho rehecho; variantes `palabra`, `corta` y las dos juntas como 4.º/5.º argumento de `gen.py`.
+**Pruebas**: 4 renders completos (54,9 s y 35,3 s), `motor.calidad --mp4`: 100/100 las largas, 91/100 las cortas (al cortar se pierden micro planos). Empalmes de audio de la versión corta en silencio digital (−87 dB), **sin oír**.
+**No hecho a propósito**: nada publicado ni gastado. No he cambiado DECISIONS para H1/H2/H6: son de Nico y Jorge.
+**Pendiente**: curva de retención (YouTube aún no la da); decisiones en TASKS.
+**Siguiente paso**: lote 2026-11-17-manana con la regla del gancho de 5 palabras.
+
 ## 2026-11-17 01:00 — Nico — rama `main` — chat en la nube «Luna densa» (2.ª ronda nocturna, pedida por Nico: «más tiempo, más exigente, aprende a aprender»)
 **Hecho**:
 - `motor/APRENDIZAJE.md`: rutina de aprendizaje + datos reales de Studio (se quedaron viendo / vistas / s por vista de 7 vídeos) + 7 Shorts del nicho con hasta 15 M de vistas mirados fotograma a fotograma (`herramientas/hoja_short.js`) + hipótesis H0–H5. `estadisticas/studio.json` actualizado. AGENTE §1 lo manda leer.

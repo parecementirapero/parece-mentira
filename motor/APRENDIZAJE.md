@@ -71,6 +71,27 @@ Lo que se ve (todo **pista**: 7 vídeos, edades distintas, vistas redondeadas po
 6. **El gancho «tu móvil frente al Apolo 11» es el peor hasta ahora (32 %)** y el que menos segundos retiene (8 s).
    A revisar su primer fotograma cuando tenga 24 h.
 
+### El hallazgo más útil de la noche: el primer fotograma de NUESTROS vídeos
+
+Mirados los primeros 5 s de nuestros Shorts publicados (`herramientas/hoja_short.js`) al lado de su «se quedaron
+viendo»:
+
+| Vídeo | Se quedan | Palabras del gancho en pantalla | Qué hay en el fotograma 0 |
+|---|---|---|---|
+| Huellas en la Luna | 80 % | 1 («Esta») | Una bota grande **cayendo** sobre la Luna. Nada más |
+| Luna densa | 74 % | 3 («Mira tus uñas.») | Un dedo grande subiendo |
+| Nudillos | 60 % | 10 (tres líneas) | Dos manos quietas + dos rótulos |
+| Puertas | 47 % | 13 (tres líneas) | Personaje pequeño de pie, quieto, en un pasillo |
+| Apolo 11 / móvil | 32 % | 14 (cuatro líneas) | Un móvil con iconos, un fondo lleno de aparatos y un contador |
+
+Con solo 5 vídeos y temas distintos es una **pista**, pero es monótona y coincide con los referentes: cuanto más
+texto y más cosas quietas hay en el primer fotograma, menos gente se queda. El «gancho entero en el fotograma 0»
+(DECISIONS 2026-11-16) funciona con frases de 3 palabras y se vuelve un muro de texto con frases de 13.
+
+Puesto en práctica: `motor.calidad` da ❌ si la primera frase pasa de 9 palabras y ⚠ si pasa de 5, y avisa si el
+primer segundo del MP4 casi no se mueve; AGENTE §3 pide primera frase de 5 palabras o menos y un solo objeto grande
+en acción. El gancho de la Luna v7 se rehízo con eso (el aviso saltó en mi propia v6).
+
 ---
 
 ## Referentes vistos (2026-11-17, YouTube, búsqueda «dato curioso del espacio #shorts»)
@@ -143,6 +164,7 @@ Una hipótesis = un vídeo del lote con ese cambio y los otros dos sin él. Se e
 | H3 | Gancho en segunda persona («Si mañana…», «Mira tu…») supera al gancho de dato | 1 de 3 vídeos | Se quedan | Pendiente. La Luna («Mira tus uñas») ya apunta a favor |
 | H4 | Remate con giro (el último dato rompe el patrón) sube repeticiones y comentarios | 1 de 3 vídeos | % visto > 100 %, comentarios | Pendiente |
 | H6 | Un personaje con cara que reacciona al dato (sorpresa, susto, alegría) retiene más que objetos y cifras solos | 1 de 3 vídeos con `reaccion()` en 4–6 planos | Se quedan, s por vista | Preparado (`pj_*.svg`, `denso.reaccion`, `lotes/muestrario-movimiento/gen_personaje.py`). **Ojo:** el dibujo tira a infantil y Jorge rechazó ese aspecto el 2026-11-15; que lo vean antes de usarlo |
+| H7 | Gancho de 5 palabras o menos + un solo objeto grande en acción en el fotograma 0 sube «se quedan» por encima del 70 % | Regla ya en AGENTE §3 y en `motor.calidad`; comparar los lotes desde el 2026-11-17 con los anteriores | Se quedan | **En marcha** (es regla desde hoy). Datos previos: 80/74 frente a 60/47/32 |
 | H5 | Temas de espacio con objeto físico en el primer fotograma superan a «por qué te pasa X» | Comparar por etiqueta `tema` cuando haya 5 de cada | Se quedan | Abierto; hoy 79/73/65 frente a 61/39 |
 
 Cuando un experimento se cierra, se escribe aquí el resultado con fecha y, si cambia cómo hacemos los vídeos, pasa a

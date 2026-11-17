@@ -144,7 +144,9 @@ def analizar(ruta_ep, mp4=None):
         n1 = next((i + 1 for i, p in enumerate(pal) if re.search(r"[.?!…]$", p["texto"])), len(pal))
         g = dict(palabras_primera_frase=n1, voz_empieza=round(pal[0]["inicio"], 2), fin_primera_frase=round(pal[n1 - 1]["fin"], 2),
                  palabras=len(pal), palabras_s=round(len(pal) / (pal[-1]["fin"] - pal[0]["inicio"]), 2))
-        if n1 > 12: av("⚠", f"La primera frase tiene {n1} palabras: el gancho tiene que leerse de un vistazo (≤ 8 ideal, ≤ 12 máximo).", 5)
+        # Dato propio (APRENDIZAJE.md, 2026-11-17): palabras del gancho → «se quedaron viendo»: 1 → 80 %, 3 → 74 %, 10 → 60 %, 13 → 47 %, 14 → 32 %
+        if n1 > 9: av("❌", f"La primera frase tiene {n1} palabras: en el fotograma 0 es un muro de texto. En nuestros vídeos, los ganchos de 10 o más palabras retienen al 32–60 %; los de 1–3, al 74–80 %. Abre con una frase de 5 palabras o menos y deja el resto para la segunda.", 12)
+        elif n1 > 5: av("⚠", f"La primera frase tiene {n1} palabras: mejor 5 o menos (el gancho se lee en medio segundo).", 4)
         if pal[0]["inicio"] > 0.5: av("⚠", f"La voz empieza en el segundo {pal[0]['inicio']:.2f}: que arranque antes de 0,4 s.", 4)
         if g["palabras_s"] > 3.3: av("⚠", f"Narración muy rápida ({g['palabras_s']} palabras/s): suena acelerada.", 4)
         if pal[-1]["fin"] > 59.3: av("❌", f"La locución acaba en {pal[-1]['fin']:.1f} s: el Short no puede pasar de 60 s.", 15)
@@ -255,6 +257,10 @@ def analizar(ruta_ep, mp4=None):
                 if r < 3.0: flojos.append(f"«{_texto(h)}» ({e['inicio']:.1f} s, contraste {r:.1f}:1)")
         datos["imagen_real"]["rotulos_poco_contraste"] = len(flojos)
         if flojos: av("⚠", "Rótulos sin cápsula con poco contraste sobre su fondo (mínimo 3:1): " + ", ".join(flojos[:8]) + ". Cambia el color o ponles cápsula.", min(8, 2 * len(flojos)))
+        # ---- primer segundo: tiene que pasar algo YA (el vídeo con mejor «se quedaron viendo» arranca con una bota cayendo)
+        mov0 = float(dif[:10].mean()) if len(dif) >= 10 else 0.0
+        datos["imagen_real"]["movimiento_primer_segundo"] = round(mov0, 2)
+        if mov0 < 2.0: av("⚠", f"El primer segundo casi no se mueve (movimiento {mov0:.1f}; el resto del vídeo, {float(dif.mean()):.1f}). Empieza con el sujeto ya en acción.", 6)
         d_out = os.path.dirname(mp4)
         mus = glob.glob(os.path.join(d_out, "*_musica.wav")); sf = glob.glob(os.path.join(d_out, "*_sfx.wav"))
         voz = ep.get("audio")

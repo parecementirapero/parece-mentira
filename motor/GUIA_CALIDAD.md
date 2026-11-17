@@ -15,7 +15,7 @@ Noche del 16 al 17 de noviembre de 2026 (Nico, chat «Luna densa»). Complementa
 
 | Qué | Regla | Dónde se comprueba |
 |---|---|---|
-| Gancho | Frase de ≤ 8 palabras, voz desde el segundo 0, gancho escrito en el fotograma 0, algo moviéndose ya | `calidad`: gancho |
+| Gancho | Frase de **≤ 5 palabras**, voz desde el segundo 0, **un solo objeto grande ya en acción** en el fotograma 0 (dato propio: `APRENDIZAJE.md`) | `calidad`: gancho y primer segundo |
 | Promesa | El gancho abre una pregunta que el vídeo **sí** responde; se cierra al final, no antes | lectura del guion |
 | Ritmo | 28–55 cortes/min, duraciones **variadas** (0,3–3 s), micro planos y planos largos mezclados | `calidad`: ritmo |
 | Texto | Como mucho una idea por rótulo; tiempo de lectura garantizado; nunca tapado por la app | `calidad`: rótulos |
@@ -26,7 +26,7 @@ Noche del 16 al 17 de noviembre de 2026 (Nico, chat «Luna densa»). Complementa
 | Final | Remate + pregunta para comentar + último fotograma que enlaza con el primero | `bucle=0.35` |
 
 Nota del vídeo de la Luna con el control automático (versión exigente, con el MP4): **Luna densa publicada 54 →
-v5 83 → v6 100**. La nota mide errores evitables, no si el vídeo gusta: un 100 significa «sin fallos técnicos
+v5 83 → v6 94 → v7 100**. La nota mide errores evitables, no si el vídeo gusta: un 100 significa «sin fallos técnicos
 conocidos». Cuando todo saca 100 es que al control le falta exigencia: se le añaden comprobaciones (así se pasó de la
 primera versión, que daba 100 a la v5, a esta, que le encontró 3 planos pobres y 2 tramos con el mismo encuadre).
 

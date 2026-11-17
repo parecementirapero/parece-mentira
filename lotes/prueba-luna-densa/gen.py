@@ -42,10 +42,14 @@ def pterosaurios(d):
 # ================================================================== PLANOS (en orden de guion)
 @v.plano(0, "uñas: gancho")
 def _(d):
-    return P(["#2a1a14", "#120a08"], [brillo(540, 650, 700, "#ffcf9a", 0.5), estrellas(20, 9),
-             luna(820, 420, 150, 0.2, keys=K(d, (0, {"x": 800, "y": 440, "escala": 1.1}), (1, {"x": 860, "y": 380, "escala": 0.85}))),
-             IMG("dedo", ancho=560, x=520, z=0.7, keys=K(d, (0, {"y": 1560, "rot": -6}), (0.4, {"y": 1240, "rot": 0, "ease": "elastico"})))],
-             cam(1.18, 1.3, (540, 1050), (540, 980)), vineta=0.7, sfx=[(0.02, "golpe", -12), (0.45, "brillo", -20)])
+    # El primer segundo decide si se quedan (APRENDIZAJE.md): el dedo ya está subiendo en el fotograma 0, la uña «crece»
+    # y la Luna sale disparada a la vez. Nada quieto.
+    return P(["#2a1a14", "#120a08"], [brillo(540, 650, 700, "#ffcf9a", 0.5, pulso=[0.12, 0.7]), estrellas(20, 9),
+             brillo(0, 0, 130, "#dfe6ff", 0.55, 0.19, keys=K(d, (0, {"x": 820, "y": 900}), (0.35, {"x": 835, "y": 880}), (1, {"x": 960, "y": 640, "ease": "entrada"}))),
+             luna(0, 0, 190, 0.2, keys=K(d, (0, {"x": 820, "y": 900, "escala": 1.15}), (0.35, {"x": 835, "y": 880, "escala": 1.1}), (1, {"x": 960, "y": 640, "escala": 0.6, "ease": "entrada"}))),
+             flecha([[850, 860], [940, 690]], d * 0.4, d * 0.95, CIAN, 7, [16, 12], z=0.18),
+             IMG("dedo", ancho=600, x=440, z=0.7, keys=K(d, (0, {"y": 1560, "rot": -7, "ey": 1.0}), (0.3, {"y": 1400, "rot": 0, "ease": "elastico"}), (1, {"y": 1350, "ey": 1.07, "ease": "suave"})))],
+             cam(1.12, 1.3, (540, 1080), (560, 960)), vineta=0.7, sfx=[(0.02, "golpe", -12), (d * 0.4, "brillo", -20)])
 
 
 @v.plano(3, "la Luna se aleja")
@@ -467,5 +471,5 @@ def _(d):
 
 # ================================================================== construir
 PALABRA = "palabra" in OPC
-v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else "") + ("-corta" if CORTA else ""), version=6, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
+v.construir("prueba-luna-densa" + ("-palabra" if PALABRA else "") + ("-corta" if CORTA else ""), version=7, bucle=0.35, subtitulos="palabra" if PALABRA else "karaoke", musica={"generar": "curiosidad", "semilla": 3, "db": -13},
             claves=["uñas", "tres", "coma", "ocho", "centímetros", "espejos", "láser", "mareas", "dinosaurios", "almeja", "dieciocho", "eclipses"])
