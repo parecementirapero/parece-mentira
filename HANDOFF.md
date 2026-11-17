@@ -13,6 +13,7 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 **Pruebas**: 4 renders completos (54,9 s y 35,3 s), `motor.calidad --mp4`: 100/100 las largas, 91/100 las cortas (al cortar se pierden micro planos). Empalmes de audio de la versión corta en silencio digital (−87 dB), **sin oír**.
 **No hecho a propósito**: nada publicado ni gastado. No he cambiado DECISIONS para H1/H2/H6: son de Nico y Jorge.
 **Pendiente**: curva de retención (YouTube aún no la da); decisiones en TASKS.
+**Reporte completo de las tres rondas**: `REPORTE_NOCHE_2026-11-17.md` (raíz del repo). `python3 -m motor.guion` añadido a AGENTE §3.
 **Siguiente paso**: lote 2026-11-17-manana con la regla del gancho de 5 palabras.
 
 ## 2026-11-17 01:00 — Nico — rama `main` — chat en la nube «Luna densa» (2.ª ronda nocturna, pedida por Nico: «más tiempo, más exigente, aprende a aprender»)
