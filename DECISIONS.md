@@ -3,6 +3,7 @@
 Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se tacha la antigua y se añade la nueva debajo.
 
 ## Cuentas e infraestructura
+- **Instagram fuera** (2026-11-17, ≈23:00 — dicho en el chat del lote 2026-11-17-tarde desde el Mac de Nico: «lo de la cuenta es que nos la han tirado, así que ya no la usaremos»): la cuenta @parecementiramedia ya no existe; **se publica solo en YouTube y TikTok**. Las menciones a Instagram de este archivo, `AGENTE.md` §8 y `publicar/` quedan sin efecto mientras no se decida otra cosa.
 - Cuenta del proyecto: parecementirapero.media@gmail.com (Gmail, Drive, YouTube, TikTok). Instagram: @parecementiramedia. — 2026-11-15 — Jorge
 - Un solo repo: `parecementirapero/parece-mentira`, empezado de cero (no se copia el repo antiguo de NICCOCASPER, que no funcionaba bien). — 2026-11-15 — Jorge
 - Claude usa la cuenta de GitHub compartida `parecementirapero`, no la personal de Nico. — 2026-11-15 — Jorge
