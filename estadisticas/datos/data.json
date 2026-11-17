@@ -1,76 +1,76 @@
 {
- "generado": "2026-11-16T17:45:10+01:00",
+ "generado": "2026-11-17T09:21:52+01:00",
  "ejemplo": false,
  "youtubeExtra": {
   "desde": "2026-11-01",
   "paises": [
    [
-    "MX",
-    569,
-    107
+    "ES",
+    1561,
+    277
    ],
    [
-    "ES",
-    373,
-    58
+    "MX",
+    1236,
+    259
    ],
    [
     "AR",
-    308,
-    55
-   ],
-   [
-    "CO",
-    189,
-    43
+    908,
+    223
    ],
    [
     "CL",
-    165,
-    34
+    581,
+    123
+   ],
+   [
+    "CO",
+    537,
+    120
    ],
    [
     "PE",
-    132,
-    25
+    533,
+    109
    ],
    [
     "VE",
-    102,
-    20
+    289,
+    57
    ],
    [
     "BO",
-    67,
-    9
+    272,
+    51
    ],
    [
     "US",
-    55,
-    11
+    214,
+    50
    ],
    [
     "EC",
-    44,
-    8
+    169,
+    60
    ]
   ],
   "dispositivos": [
    [
     "MOBILE",
-    1866
+    5613
    ],
    [
     "TV",
-    220
+    850
    ],
    [
     "TABLET",
-    206
+    747
    ],
    [
     "DESKTOP",
-    63
+    137
    ]
   ],
   "suscritos": [
@@ -81,30 +81,30 @@
    ],
    [
     "UNSUBSCRIBED",
-    2355,
-    62.74000000000001
+    7352,
+    74.25
    ]
   ],
   "edadGenero": [
    [
     "age13-17",
     "female",
-    2
+    2.3
    ],
    [
     "age13-17",
     "male",
-    5.8
+    6
    ],
    [
     "age18-24",
     "female",
-    2.5
+    2
    ],
    [
     "age18-24",
     "male",
-    9.6
+    10
    ],
    [
     "age25-34",
@@ -114,103 +114,111 @@
    [
     "age25-34",
     "male",
-    22.5
+    21.2
    ],
    [
     "age35-44",
     "female",
-    10.9
+    11.1
    ],
    [
     "age35-44",
     "male",
-    11.6
+    12.8
    ],
    [
     "age45-54",
     "female",
-    4.4
+    5.2
    ],
    [
     "age45-54",
     "male",
-    8
+    9.4
    ],
    [
     "age55-64",
     "female",
-    1.8
+    1.7
    ],
    [
     "age55-64",
     "male",
-    4.7
+    4
    ],
    [
     "age65-",
     "female",
-    2.1
+    1.7
    ],
    [
     "age65-",
     "male",
-    5.1
+    3.5
    ]
   ],
   "fuentes": [
    [
     "Feed de Shorts",
-    2285
+    7122
    ],
    [
     "Búsqueda",
-    53
+    169
    ],
    [
     "Otras páginas de YouTube",
-    9
+    40
    ],
    [
     "Página del canal",
-    8
+    19
+   ],
+   [
+    "Listas",
+    2
    ],
    [
     "Directo / otros",
+    0
+   ],
+   [
+    "Suscripciones",
     0
    ]
   ],
   "sistemas": [
    [
     "ANDROID",
-    2003
+    6126
    ],
    [
     "IOS",
-    155
-   ],
-   [
-    "WINDOWS",
-    57
+    565
    ],
    [
     "SMART_TV",
-    49
+    189
    ],
    [
     "WEBOS",
-    28
+    128
+   ],
+   [
+    "WINDOWS",
+    123
    ],
    [
     "ROKUOS",
-    25
+    65
    ]
   ]
  },
  "canal": "Parece Mentira",
  "canalTotales": {
-  "suscriptores": 7,
-  "vistas": 1409,
-  "videos": 4
+  "suscriptores": 21,
+  "vistas": 10773,
+  "videos": 8
  },
  "videos": [
   {
@@ -220,8 +228,8 @@
    "fecha": "2026-11-15",
    "hora": "17:38",
    "duracion": 48,
-   "vistas": 3481,
-   "likes": 62,
+   "vistas": 10046,
+   "likes": 118,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -233,12 +241,15 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 24.1,
+   "horasPublicado": 39.7,
    "lote": "prueba-v2-huellas-luna",
    "etiquetas": {
     "tema": "Espacio",
     "lote": "prueba-v2-huellas-luna",
-    "voz": "v1"
+    "voz": "v1",
+    "gancho": "contraste",
+    "estructura": "comparación",
+    "experimento": "no"
    },
    "tema": "Espacio"
   },
@@ -249,8 +260,8 @@
    "fecha": "2026-11-15",
    "hora": "23:46",
    "duracion": 53,
-   "vistas": 1270,
-   "likes": 32,
+   "vistas": 1415,
+   "likes": 34,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -262,41 +273,16 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 18.0,
+   "horasPublicado": 33.6,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Histórico",
-    "lote": "2026-11-15-tarde"
+    "lote": "2026-11-15-tarde",
+    "gancho": "contraste",
+    "estructura": "reconstrucción",
+    "experimento": "no"
    },
    "tema": "Histórico"
-  },
-  {
-   "id": "oZSuHN-46FI",
-   "titulo": "La Luna se está alejando de la Tierra 🌙 y lo medimos con un láser",
-   "url": "https://youtube.com/shorts/oZSuHN-46FI",
-   "fecha": "2026-11-15",
-   "hora": "23:48",
-   "duracion": 47,
-   "vistas": 1711,
-   "likes": 36,
-   "comentarios": 0,
-   "compartidos": null,
-   "subs": null,
-   "vistasEnganchadas": null,
-   "minutosVistos": null,
-   "duracionMedia": null,
-   "pctVisto": null,
-   "retencion3s": null,
-   "curva": null,
-   "fuentes": null,
-   "vistasDia": null,
-   "horasPublicado": 17.9,
-   "lote": "2026-11-15-tarde",
-   "etiquetas": {
-    "tema": "Ciencia",
-    "lote": "2026-11-15-tarde"
-   },
-   "tema": "Ciencia"
   },
   {
    "id": "XGf1wOPygU8",
@@ -305,7 +291,176 @@
    "fecha": "2026-11-15",
    "hora": "23:49",
    "duracion": 47,
-   "vistas": 5,
+   "vistas": 1213,
+   "likes": 19,
+   "comentarios": 0,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 33.5,
+   "lote": "2026-11-15-tarde",
+   "etiquetas": {
+    "tema": "Misterio",
+    "lote": "2026-11-15-tarde",
+    "gancho": "reto",
+    "estructura": "misterio por pistas",
+    "experimento": "no"
+   },
+   "tema": "Misterio"
+  },
+  {
+   "id": "jQmhf8o1PfY",
+   "titulo": "La Luna se nos va… y se llevará los eclipses 🌑",
+   "url": "https://youtube.com/shorts/jQmhf8o1PfY",
+   "fecha": "2026-11-16",
+   "hora": "20:51",
+   "duracion": 55,
+   "vistas": 3158,
+   "likes": 34,
+   "comentarios": 0,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 12.5,
+   "lote": "prueba-luna-densa",
+   "etiquetas": {
+    "tema": "Ciencia",
+    "lote": "prueba-luna-densa",
+    "gancho": "orden + comparación cotidiana (uñas)",
+    "estructura": "cadena de datos",
+    "experimento": "método denso (40 planos, micro escenas, efectos de sonido); rehace el tema del 02 del lote 2026-11-15-tarde",
+    "portada": "centro",
+    "voz": "Archivo Oculto — Narración (clon)"
+   },
+   "tema": "Ciencia"
+  },
+  {
+   "id": "7PoER_sR6R0",
+   "titulo": "Se crujió solo una mano durante 60 años 🤯",
+   "url": "https://youtube.com/shorts/7PoER_sR6R0",
+   "fecha": "2026-11-16",
+   "hora": "22:11",
+   "duracion": 58,
+   "vistas": 1737,
+   "likes": 26,
+   "comentarios": 1,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 11.2,
+   "lote": "2026-11-16-tarde",
+   "etiquetas": {
+    "tema": "Cotidiano",
+    "lote": "2026-11-16-tarde",
+    "gancho": "dato",
+    "estructura": "experimento",
+    "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
+    "portada": "arriba",
+    "montaje": "denso",
+    "voz": "clon eleven_v4",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Cotidiano"
+  },
+  {
+   "id": "cTRgkuY21mw",
+   "titulo": "Por qué olvidas a qué ibas al entrar en una habitación 🚪",
+   "url": "https://youtube.com/shorts/cTRgkuY21mw",
+   "fecha": "2026-11-16",
+   "hora": "23:15",
+   "duracion": 55,
+   "vistas": 1448,
+   "likes": 32,
+   "comentarios": 2,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 10.1,
+   "lote": "2026-11-16-tarde",
+   "etiquetas": {
+    "tema": "Cotidiano",
+    "lote": "2026-11-16-tarde",
+    "gancho": "pregunta",
+    "estructura": "metáfora visual",
+    "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
+    "portada": "arriba",
+    "montaje": "denso",
+    "voz": "clon eleven_v4",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Cotidiano"
+  },
+  {
+   "id": "hfRveipHIdk",
+   "titulo": "Tu móvil tiene un millón de veces más memoria que el Apolo 11 🚀",
+   "url": "https://youtube.com/shorts/hfRveipHIdk",
+   "fecha": "2026-11-17",
+   "hora": "00:15",
+   "duracion": 52,
+   "vistas": 1124,
+   "likes": 11,
+   "comentarios": 1,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 9.1,
+   "lote": "2026-11-16-tarde",
+   "etiquetas": {
+    "tema": "Histórico",
+    "lote": "2026-11-16-tarde",
+    "gancho": "contraste",
+    "estructura": "comparación",
+    "experimento": "tema cotidiano (prueba del lote: histórico contado desde hoy)",
+    "portada": "dato",
+    "montaje": "denso",
+    "voz": "clon eleven_v4",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Histórico"
+  },
+  {
+   "id": "bja3TleMy94",
+   "titulo": "Este plátano es radiactivo (y tú también) 🍌☢️",
+   "url": "https://youtube.com/shorts/bja3TleMy94",
+   "fecha": "2026-11-17",
+   "hora": "09:04",
+   "duracion": 59,
+   "vistas": 43,
    "likes": 0,
    "comentarios": 0,
    "compartidos": null,
@@ -318,13 +473,12 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 17.9,
-   "lote": "2026-11-15-tarde",
+   "horasPublicado": 0.3,
+   "lote": null,
    "etiquetas": {
-    "tema": "Misterio",
-    "lote": "2026-11-15-tarde"
+    "tema": "Ciencia"
    },
-   "tema": "Misterio"
+   "tema": "Ciencia"
   }
  ],
  "diario": [
@@ -418,14 +572,21 @@
    "minutos": 439,
    "subs": 2,
    "likes": 60
+  },
+  {
+   "fecha": "2026-11-14",
+   "vistas": 4997,
+   "minutos": 1143,
+   "subs": 1,
+   "likes": 96
   }
  ],
  "tiktok": {
   "cuenta": "Parece Mentira",
   "totales": {
    "seguidores": 2,
-   "likes": 87,
-   "videos": 5
+   "likes": 128,
+   "videos": 8
   },
   "videos": [
    {
@@ -435,8 +596,56 @@
     "fecha": "2026-11-15",
     "hora": "17:46",
     "duracion": 47,
-    "vistas": 613,
+    "vistas": 617,
     "likes": 20,
+    "comentarios": 0,
+    "compartidos": 0
+   },
+   {
+    "id": "7708882489892179222",
+    "titulo": "Tu móvil tiene un millón de veces más memoria que el Apolo 11 🚀 El ordenador de guiado del Apolo 11 (1969) pesaba unos 32 kg, tenía 2.048 palabras de ",
+    "url": "https://www.tiktok.com/@parece.mentira85/video/7708882489892179222?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
+    "fecha": "2026-11-16",
+    "hora": "22:21",
+    "duracion": 51,
+    "vistas": 3,
+    "likes": 0,
+    "comentarios": 0,
+    "compartidos": 0
+   },
+   {
+    "id": "7708882083015413014",
+    "titulo": "Por qué olvidas a qué ibas al entrar en una habitación 🚪 Si entras en una habitación y se te olvida a qué ibas, la culpa puede ser de la puerta. Gabri",
+    "url": "https://www.tiktok.com/@parece.mentira85/video/7708882083015413014?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
+    "fecha": "2026-11-16",
+    "hora": "22:19",
+    "duracion": 54,
+    "vistas": 237,
+    "likes": 8,
+    "comentarios": 0,
+    "compartidos": 0
+   },
+   {
+    "id": "7708881722745703702",
+    "titulo": "Se crujió solo una mano durante 60 años 🤯 El médico Donald Unger se crujió los nudillos de la mano izquierda todos los días durante 60 años y nunca lo",
+    "url": "https://www.tiktok.com/@parece.mentira85/video/7708881722745703702?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
+    "fecha": "2026-11-16",
+    "hora": "22:18",
+    "duracion": 57,
+    "vistas": 268,
+    "likes": 19,
+    "comentarios": 1,
+    "compartidos": 3
+   },
+   {
+    "id": "7708861385387543830",
+    "titulo": "La Luna se nos va… y se llevará los eclipses 🌑 Se aleja de la Tierra 3,8 cm al año, lo que crecen tus uñas. Lo medimos con un láser y los espejos que ",
+    "url": "https://www.tiktok.com/@parece.mentira85/video/7708861385387543830?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
+    "fecha": "2026-11-16",
+    "hora": "20:59",
+    "duracion": 54,
+    "vistas": 273,
+    "likes": 10,
     "comentarios": 0,
     "compartidos": 0
    },
@@ -447,22 +656,10 @@
     "fecha": "2026-11-16",
     "hora": "00:02",
     "duracion": 46,
-    "vistas": 382,
+    "vistas": 408,
     "likes": 22,
     "comentarios": 0,
     "compartidos": 0
-   },
-   {
-    "id": "7708537356684512534",
-    "titulo": "La Luna se está alejando de la Tierra 🌙 Unos 3,8 cm al año, más o menos lo que crecen tus uñas. Lo sabemos porque los astronautas del Apolo dejaron es",
-    "url": "https://www.tiktok.com/@parece.mentira85/video/7708537356684512534?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
-    "fecha": "2026-11-16",
-    "hora": "00:02",
-    "duracion": 46,
-    "vistas": 441,
-    "likes": 20,
-    "comentarios": 0,
-    "compartidos": 2
    },
    {
     "id": "7708537122914979094",
@@ -471,7 +668,7 @@
     "fecha": "2026-11-16",
     "hora": "00:01",
     "duracion": 52,
-    "vistas": 408,
+    "vistas": 424,
     "likes": 25,
     "comentarios": 0,
     "compartidos": 6
@@ -489,13 +686,6 @@
    "tiktok": "7708537122914979094"
   },
   {
-   "clave": "oZSuHN-46FI",
-   "titulo": "La Luna se está alejando de la Tierra 🌙 y lo medimos con un láser",
-   "fecha": "2026-11-15",
-   "youtube": "oZSuHN-46FI",
-   "tiktok": "7708537356684512534"
-  },
-  {
    "clave": "XGf1wOPygU8",
    "titulo": "Los moáis de la Isla de Pascua tienen cuerpo 🗿 (y está enterrado)",
    "fecha": "2026-11-15",
@@ -508,6 +698,40 @@
    "fecha": "2026-11-15",
    "youtube": "D_2cV1qhmfA",
    "tiktok": "7708440623040269590"
+  },
+  {
+   "clave": "jQmhf8o1PfY",
+   "titulo": "La Luna se nos va… y se llevará los eclipses 🌑",
+   "fecha": "2026-11-16",
+   "youtube": "jQmhf8o1PfY",
+   "tiktok": "7708861385387543830"
+  },
+  {
+   "clave": "7PoER_sR6R0",
+   "titulo": "Se crujió solo una mano durante 60 años 🤯",
+   "fecha": "2026-11-16",
+   "youtube": "7PoER_sR6R0",
+   "tiktok": "7708881722745703702"
+  },
+  {
+   "clave": "cTRgkuY21mw",
+   "titulo": "Por qué olvidas a qué ibas al entrar en una habitación 🚪",
+   "fecha": "2026-11-16",
+   "youtube": "cTRgkuY21mw",
+   "tiktok": "7708882083015413014"
+  },
+  {
+   "clave": "hfRveipHIdk",
+   "titulo": "Tu móvil tiene un millón de veces más memoria que el Apolo 11 🚀",
+   "fecha": "2026-11-17",
+   "youtube": "hfRveipHIdk",
+   "tiktok": "7708882489892179222"
+  },
+  {
+   "clave": "bja3TleMy94",
+   "titulo": "Este plátano es radiactivo (y tú también) 🍌☢️",
+   "fecha": "2026-11-17",
+   "youtube": "bja3TleMy94"
   }
  ],
  "historico": {
@@ -528,6 +752,33 @@
     "7708537566387113238": 382,
     "7708537356684512534": 441,
     "7708537122914979094": 408
+   },
+   "instagram": {}
+  },
+  "2026-11-17": {
+   "seguidores": {
+    "youtube": 21,
+    "tiktok": 2,
+    "instagram": null
+   },
+   "youtube": {
+    "D_2cV1qhmfA": 10046,
+    "bS6AUPYxr7s": 1415,
+    "XGf1wOPygU8": 1213,
+    "jQmhf8o1PfY": 3158,
+    "7PoER_sR6R0": 1737,
+    "cTRgkuY21mw": 1448,
+    "hfRveipHIdk": 1124,
+    "bja3TleMy94": 43
+   },
+   "tiktok": {
+    "7708440623040269590": 617,
+    "7708882489892179222": 3,
+    "7708882083015413014": 237,
+    "7708881722745703702": 268,
+    "7708861385387543830": 273,
+    "7708537566387113238": 408,
+    "7708537122914979094": 424
    },
    "instagram": {}
   }
