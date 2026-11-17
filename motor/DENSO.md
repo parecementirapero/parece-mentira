@@ -20,6 +20,7 @@ Estándar desde el 2026-11-16 (`DECISIONS.md`). Ejemplo completo y modelo de cal
 - **Contraste**: sobre fondos oscuros, flechas, órbitas y palabras clave en `CIAN`, `MAGENTA`, `LIMA`, `AMBAR` (el halo lo pone `construir`).
 - **Flechas**: la punta nunca acaba dentro del objeto al que sigue; el objeto va por delante.
 - **Sonido**: un efecto bajo para lo que pasa en pantalla — `tictac` (relojes), `agua`, `mordisco`, `meteoro`, `zap`, `golpe`, `brillo`, `ding`, `senal`… (lista en `motor/sfx.py`). Automáticos: tic por raya, soplo de estrella fugaz, «pop» de rótulo y whoosh de transición (pocos y muy bajos). Niveles orientativos: detalles −28…−22 dB, acciones −18…−12, golpes fuertes −12…−8. **La música se tiene que oír** (`"db": -13`).
+- **Relojes, pocos** (DECISIONS 2026-11-17): 1–2 por vídeo como mucho y nunca en dos planos seguidos. **Sin repeticiones**: el objeto protagonista cambia de forma, escenario y animación en cada aparición. **Lo que se explica se ve pasar** (cortes, reacciones), lo que viaja deja estela desde su origen y las figuras son coherentes (dos cristales → dos ojos).
 - **Final**: un micro plano fuerte antes del cambio de bloque (el meteorito) y último plano largo con cierre.
 
 ## Ilustraciones nuevas para un tema

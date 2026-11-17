@@ -14,6 +14,13 @@
 
 SHA en el Mac = SHA del render (comprobado con `shasum`). En la carpeta local: MP4, SRT, manifiestos, locuciones, alineaciones, `NN-portadas/portada.jpg`.
 
+## v3 de 01 y 02 (≈21:10): menos relojes
+Pedido: «que no salgan tantos relojes, alguno que otro está bien pero muchos no, y que si una escena acaba con un reloj no salga al principio de la siguiente; guarda todo lo demás y esto también».
+- 01: de 5 relojes a 2 («¿cuánto dura?» y «nueve segundos»); «el sonido tarda tres segundos» = ondas que viajan hacia la oreja sobre el mar; «divide entre tres» = la silueta cuenta con los dedos. `01-rayo-sol_v3.mp4` · 54,9 s · `d222c71c3c548c068eef2976cace9ced5de862c64e0349c433ef8ce557b490fa` · 79/100 sin ❌.
+- 02: de 4 a 1 («8 min 20 s»); fuera el reloj del gancho y del cierre (el Sol sube con estrellas fugaces); «+8 min» = la última luz llegando a la Tierra con estela. `02-sol-pasado_v3.mp4` · 54,6 s · `2855b9726c7b21da89f8c98c63cd201b6d5805e22c4bc9321944016a131a1949` · 87/100 sin ❌.
+- 03: sin relojes; sigue la v2.
+- Reglas guardadas en `DECISIONS.md` («Variedad y claridad en los planos») y `motor/DENSO.md`. MP4 v3 solo en el chat (sin enlace con el Mac).
+
 ## Arranque
 - Studio (§1.8): **no se abrió** en este turno (se priorizó el lote); `studio.json` sin cambios.
 - No hay experimento aprobado en `motor/APRENDIZAJE.md` ni abierto en `estadisticas/experimentos/`.

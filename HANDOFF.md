@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-17 21:10 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-17-tarde v3 + reglas
+**Hecho**: 01 y 02 en v3 con menos relojes (2 y 1; nunca dos planos seguidos con reloj). Reglas nuevas guardadas como pidió la persona en el chat: `DECISIONS.md` → «Variedad y claridad en los planos» (pocos relojes, no repetir objeto ni animación, lo que se explica se ve pasar, estelas, caras bien dibujadas y coherentes) y resumen en `motor/DENSO.md`. `motor.calidad` 79/87 sin ❌. Vídeos en el chat.
+**Pendiente**: «ok» para 01 v3, 02 v3 y 03 v2. Los MP4 v2/v3 no están en el Mac: bajarlos del chat antes de publicar.
+
 ## 2026-11-17 20:25 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-17-tarde
 **Hecho**: lote `2026-11-17-tarde`, 3 vídeos v1 en revisión: 01 «Un rayo es 5 veces más caliente que el Sol» (Ciencia, comparación, gancho de contraste, control), 02 «El Sol que ves ya es pasado» (Espacio, reconstrucción, gancho de dato, control), 03 «Por qué lloras al cortar cebolla» (Cotidiano, experimento, **experimento: gancho de orden**). Cada dato con ≥ 2 fuentes (`guiones.md`). Voz oficial por API desde el Mac de Jorge (eleven_v4, 0.5/0.75, sin fallos). ≈40 SVG nuevos (`generadores/ilus_tarde.py`), montaje con `motor/denso.py` (28–35 planos), render en la nube. Portadas elegidas sin «ok» (pasos de `.claude/agents/portadas.md` hechos a mano). Fichas de variables creadas (en prueba). Vídeos y portadas en el chat y en el Mac (SHA iguales). Correo `1a1eaf34810f56dd`.
 **Pruebas**: `motor.guion` ✓ ×3; `construir` sin ⚠ de lectura; `motor.calidad --mp4` 84/87/93 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; hojas cada 1 s revisadas y corregidas (03 tenía ❌ de ritmo → micro planos). No se tocó `motor/`.

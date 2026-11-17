@@ -131,7 +131,7 @@ def _(d):
              IMG("rayo_c", ancho=420, x=230, y=900, z=0.5, keys=parpadeo(d * 0.1)),
              IMG("rayo_ramificado", ancho=700, x=760, y=1000, z=0.5, keys=parpadeo(d * 0.4)),
              IMG("rayo_horizontal_b", ancho=1200, x=540, y=420, z=0.5, keys=parpadeo(d * 0.7)),
-             destello(d * 0.4, 0.12, 0.5), *cronometro(0, 8, 0, d)],
+             destello(d * 0.4, 0.12, 0.5), lluvia_nube(260, 2)],
              cam(1.0, 1.05), hud=[rotulo(0.1, d - 0.05, "UN INSTANTE", tam=96, color="#ffffff", capsula="#0d1330d8", borde=CIAN, y=1250)],
              sfx=[(d * 0.1, "zap", -18), (d * 0.4, "zap", -16), (d * 0.7, "zap", -18)])
 
@@ -216,12 +216,13 @@ def _(d):
              cam(1.0, 1.05, (540, 1000), (520, 1020)), hud=[amarillo(0.1, d - 0.05, "LUZ: ANTES", y=560, color=CIAN)], sfx=[(0.05, "zap", -18)])
 
 
-@v.plano(78, "el sonido tarda tres segundos")
+@v.plano(78, "el sonido tarda tres segundos (la onda viaja hacia la oreja)")
 def _(d):
-    return P(["#1b2236", "#0b0f1c"], [brillo(540, 1000, 700, "#7ad0ff", 0.25), *cronometro(0, 18, 0, d),
-             IMG("oreja", ancho=220, x=880, y=1350, z=0.6, anim={"balanceo": [3, 1.0]})],
-             cam(1.0, 1.08, (540, 1050), (540, 1050)), hud=[contador(0.1, d - 0.05, 0, 3, d * 0.8, "SEGUNDOS", tam=110, y=560, borde=CIAN)],
-             sfx=[(0.0, "tictac", -18, {"dur": d, "ritmo": 0.5})])
+    return P(TOR, [BG("bg_mar_tormenta"), IMG("rayo_c", ancho=320, x=170, y=820, z=0.3, keys=parpadeo(0.0, dur=0.3)),
+             *[IMG("onda", ancho=200, z=0.5, keys=[{"t": k * 0.35, "x": 200, "y": 1000, "escala": 0.5, "op": 1}, {"t": k * 0.35 + d * 0.8, "x": 820, "y": 1250, "escala": 1.6, "op": 0.2}]) for k in range(3)],
+             IMG("oreja", ancho=260, x=880, y=1300, z=0.6, keys=late(d * 0.75, 2, 0.1, 0.3))],
+             cam(1.0, 1.06, (540, 1100), (600, 1100)), hud=[contador(0.1, d - 0.05, 0, 3, d * 0.8, "SEGUNDOS", tam=110, y=560, borde=CIAN)],
+             sfx=[(0.0, "rumor", -18, {"dur": d})])
 
 
 @v.plano(84, "en recorrer un kilómetro")
@@ -251,10 +252,10 @@ def _(d):
              cam(1.0, 1.06, temblor=10), "corte", sfx=[(0.0, "golpe", -12)])
 
 
-@v.plano(99, "divide entre tres")
+@v.plano(99, "divide entre tres (la silueta cuenta con los dedos)")
 def _(d):
-    return P(["#141a2e", "#0a0e1a"], [brillo(540, 1000, 600, "#ffd23f", 0.25), *cronometro(0, 60, 0, d)],
-             cam(1.0, 1.06), "desenfoque", hud=[rotulo(0.05, d - 0.05, "÷ 3", tam=170, color=AMBAR, capsula=None, y=560)], sfx=[(0.1, "pop", -16)])
+    return P(TOR, [BG("bg_tormenta"), lluvia_nube(260, 3), IMG("persona_cuenta", ancho=460, x=540, y=1300, z=0.6, keys=late(0.1, 2, 0.05, 0.3))],
+             cam(1.05, 1.12, (540, 1100), (540, 1080)), "desenfoque", hud=[rotulo(0.05, d - 0.05, "÷ 3", tam=170, color=AMBAR, capsula="#0d1330d8", y=560)], sfx=[(0.1, "pop", -16)])
 
 
 @v.plano(102, "a cuántos kilómetros cayó")
@@ -338,5 +339,5 @@ def _(d):
              polvo("#ffb84a", 40, (300, 600, 780, 1300), 14, "chispas")], cam(1.1, 1.2), "corte", sfx=[(0.02, "golpe", -16)])
 
 
-v.construir("2026-11-17-tarde-01-rayo-sol", version=2, bucle=0.35, musica={"generar": "curiosidad", "semilla": 21, "db": -13},
+v.construir("2026-11-17-tarde-01-rayo-sol", version=3, bucle=0.35, musica={"generar": "curiosidad", "semilla": 21, "db": -13},
             claves=["caliente", "Sol", "cinco", "treinta", "mil", "quinientos", "trueno", "tres", "kilómetro", "nueve", "dieciséis", "alcance"])

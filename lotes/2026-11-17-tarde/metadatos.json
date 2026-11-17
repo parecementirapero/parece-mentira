@@ -1,6 +1,6 @@
 {
  "01": {
-  "archivo": "01-rayo-sol_v1.mp4",
+  "archivo": "01-rayo-sol_v3.mp4",
   "titulo": "Un rayo es 5 veces más caliente que el Sol ⚡☀️",
   "youtube": {
    "titulo": "Un rayo es 5 veces más caliente que el Sol ⚡☀️ #Shorts",
@@ -42,7 +42,7 @@
    "montaje": "denso",
    "portada": "centro"
   },
-  "version": 1,
+  "version": 3,
   "portada": {
    "texto": "Más caliente que el Sol",
    "clave": "Sol",
@@ -54,7 +54,7 @@
   }
  },
  "02": {
-  "archivo": "02-sol-pasado_v1.mp4",
+  "archivo": "02-sol-pasado_v3.mp4",
   "titulo": "El Sol que ves ya es pasado ☀️⏳",
   "youtube": {
    "titulo": "El Sol que ves ya es pasado ☀️⏳ #Shorts",
@@ -92,7 +92,7 @@
    "montaje": "denso",
    "portada": "abajo"
   },
-  "version": 1,
+  "version": 3,
   "portada": {
    "texto": "Ese Sol ya es pasado",
    "clave": "pasado",

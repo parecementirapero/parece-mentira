@@ -44,9 +44,10 @@ def zigzag(cx, cy, r, n, sem):
 @v.plano(0, "gancho: el Sol sube con un reloj que va atrasado")
 def _(d):
     return P(ESPACIO, [BG("bg_esp_ambar"), estrellas(40, 4),
-             *sol_k(540, 1050, 380, keys=arranque(540, 1050, d, "abajo", 320, 40)),
-             *reloj(840, 1500, 300, 12, 0, 11, 52, 0, d, z=0.7), fugaz(0.2, 100, 300, 500, 520)],
-             cam(1.08, 1.0, (540, 1050), (540, 1000)), vineta=0.6, sfx=[(0.0, "subida", -14, {"dur": 0.6}), (0.4, "golpe", -16), (0.1, "tictac", -22, {"dur": d})])
+             *sol_k(540, 1050, 380, keys=arranque(540, 1050, d, "abajo", 700, 60)),
+             *[fugaz(0.05 + k * 0.3, 1080 - k * 150, 150 + k * 90, 600 - k * 150, 450 + k * 90) for k in range(3)],
+             fugaz(0.2, 100, 300, 500, 520), polvo("#ffcf6a", 30, (0, 500, 1080, 1700), 2, "chispas")],
+             cam(1.08, 1.0, (540, 1050), (540, 1000)), vineta=0.6, sfx=[(0.0, "subida", -14, {"dur": 0.6}), (0.4, "golpe", -16)])
 
 
 @v.plano(5, "lo ves con retraso")
@@ -126,11 +127,14 @@ def _(d):
              cam(1.0, 1.05), hud=[amarillo(0.1, d - 0.05, "SIGUE BRILLANDO", y=1360, color=AMBAR, tam=88)], sfx=[(0.1, "brillo", -20)])
 
 
-@v.plano(59, "ocho minutos más")
+@v.plano(59, "ocho minutos más (la última luz sigue llegando a la Tierra)")
 def _(d):
-    return P(["#1b2236", "#0b0f1c"], [*reloj(540, 1050, 640, 12, 0, 12, 8, 0, d)],
-             cam(1.05, 1.12, (540, 1050), (540, 1050)), hud=[contador(0.05, d - 0.05, 0, 8, d * 0.7, "MIN", tam=130, y=560, borde=AMBAR, contar_prefijo="+")],
-             sfx=[(0.0, "tictac", -16, {"dur": d})])
+    return P(ESPACIO, [BG("bg_esp_violeta"), estrellas(40, 8), tierra(820, 1050, 320, giro=10),
+             flecha([[-50, 1000], [640, 1040]], 0.0, d * 0.8, "#ffe08a", 8, punta=False),
+             foton(-50, 1000, ancho=150, keys=[{"t": 0, "x": -50, "y": 1000}, {"t": d * 0.8, "x": 660, "y": 1040, "ease": "lineal"}]),
+             brillo(700, 1040, 260, "#ffe08a", 0.0, 0.6, keys=[{"t": d * 0.75, "intensidad": 0}, {"t": d * 0.85, "intensidad": 0.8}, {"t": d, "intensidad": 0.3}])],
+             cam(1.0, 1.06, (540, 1000), (620, 1020)), hud=[contador(0.05, d - 0.05, 0, 8, d * 0.7, "MIN", tam=130, y=560, borde=AMBAR, contar_prefijo="+")],
+             sfx=[(0.05, "whoosh", -18, {"dur": 0.6}), (d * 0.8, "brillo", -18)])
 
 
 @v.plano(62, "pero lo más raro pasa antes")
@@ -259,9 +263,9 @@ def _(d):
 
 @v.plano(146, "¿nunca has visto el Sol de ahora? (bucle)")
 def _(d):
-    return P(ESPACIO, [BG("bg_esp_ambar"), estrellas(40, 4), *sol(540, 1050, 380), *reloj(840, 1500, 300, 11, 52, 12, 0, 0, d, z=0.7)],
-             cam(1.0, 1.08, (540, 1000), (540, 1050)), "desenfoque", sfx=[(0.1, "tictac", -22, {"dur": d})])
+    return P(ESPACIO, [BG("bg_esp_ambar"), estrellas(40, 4), *sol(540, 1050, 380), polvo("#ffcf6a", 30, (0, 500, 1080, 1700), 2, "chispas")],
+             cam(1.0, 1.08, (540, 1000), (540, 1050)), "desenfoque", sfx=[(0.1, "brillo", -22)])
 
 
-v.construir("2026-11-17-tarde-02-sol-pasado", version=2, bucle=0.35, musica={"generar": "curiosidad", "semilla": 22, "db": -13},
+v.construir("2026-11-17-tarde-02-sol-pasado", version=3, bucle=0.35, musica={"generar": "curiosidad", "semilla": 22, "db": -13},
             claves=["pasado", "retraso", "ocho", "veinte", "trescientos", "ciento", "cincuenta", "millones", "quince", "NASA", "setenta", "neandertales"])
