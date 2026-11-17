@@ -379,6 +379,11 @@ class Video:
                 if e.get("tipo") == "forma" and e.get("op_relleno") == 0 and e.get("borde"):
                     els.append({**e, "grosor": e["grosor"] * 4, "borde": e["borde"][:7] + "38"})
                 els.append(e)
+            if k == 0:   # primer plano: empujón de cámara garantizado (APRENDIZAJE.md H7: el primer segundo es donde más se pierde)
+                z = list(p["cam"].get("zoom", [1.0, 1.0]))
+                if abs(z[1] - z[0]) < 0.2:
+                    p["cam"] = {**p["cam"], "zoom": [z[0], round(z[0] + 0.25, 2)]}
+                    print(f"  ↗ primer plano: cámara reforzada a zoom {z[0]} → {z[0] + 0.25:.2f} (tenía {z[0]} → {z[1]})")
             esc = {"inicio": ini, "fin": fin, "fondo": {"colores": p["fondo"]}, "elementos": json.loads(json.dumps(els)), "camara": p["cam"],
                    "entrada": p["entrada"], "vineta": p["vineta"]}
             if p["entrada"] != "corte" and p["dur"]:

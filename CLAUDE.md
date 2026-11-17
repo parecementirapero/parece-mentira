@@ -20,6 +20,7 @@ Este repo es la **única fuente de verdad**: lo que no esté aquí, no está dec
 
 ### 3. Mientras trabajas
 - Una petición que contradiga `DECISIONS.md` **no se aplica en silencio**: se señala a la persona y, si confirma, se cambia `DECISIONS.md` con fecha, quién y motivo.
+- Si tocas algo de `motor/`, pasa `python3 -m motor.prueba` (1 minuto, sin voz ni créditos) antes del commit.
 - Commits pequeños y frecuentes. Nada de secretos en el repo (`.env` está ignorado).
 - Los vídeos y audios pesados **no** se suben a git: se quedan en la carpeta local del Mac y se revisan en el chat de Claude (ver `DECISIONS.md`). En `lotes/` solo texto: guiones, metadatos, enlaces.
 

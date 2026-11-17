@@ -18,7 +18,8 @@ OPC = set(sys.argv[4:])
 CORTA = [(23, 56), (105, 126)] if "corta" in OPC else ()
 if "micro" in OPC:   # H8: micro-Short de ~8 s en bucle: solo el gancho y el dato («Mira tus uñas… tres coma ocho centímetros al año»)
     CORTA = [(23, 155)]   # fuera: «¿Cómo lo sabemos?…dos segundos y medio» y «almeja…dieciocho horas»
-v = Video(sys.argv[1], os.path.join(AQUI, "guion.txt"), *(sys.argv[2:4] if len(sys.argv) > 3 else ()), omitir=CORTA)
+VOZ = [a for a in sys.argv[2:4] if a != "-"]   # «- -» en vez de la voz = tiempos provisionales (para probar variantes sin audio)
+v = Video(sys.argv[1], os.path.join(AQUI, "guion.txt"), *(VOZ if len(VOZ) == 2 else ()), omitir=CORTA if len(VOZ) == 2 else ())
 
 # ------------------------------------------------------------------ detalles de fondo que duran (atados a palabras)
 SAT = [(0.8, v.w(61), (-100, 1680), (1180, 1480)), (v.w(113), v.FIN, (1180, 260), (-100, 420))]  # dos satélites
