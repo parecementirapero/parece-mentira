@@ -26,6 +26,9 @@ Estándar desde el 2026-11-16 (`DECISIONS.md`). Ejemplo completo y modelo de cal
 Lo que ya existe está en `motor/biblioteca/svg/` (fijas) y `motor/biblioteca/ilus.py` (generadas: 3 espacios, superficie lunar, eclipse, jungla, pista de hielo, 5 dinosaurios, pterosaurio, cohete, módulo lunar, satélite, meteorito, almeja, calendario, ramas, arbusto, siluetas).
 Para un tema nuevo, crea `ilus_tema.py` en la carpeta del lote usando los ladrillos de `ilus` (`guardar`, `lg`, `rg`, `grano`, `_animal`, `_neb`, `_estrellas_ricas`, `_hoja`…), escribe los SVG en una carpeta y pásala a `Video(..., svg_extra=carpeta)`. **Mira cada SVG rasterizado antes de montar** (`rsvg-convert -w 400`). Si una pieza es reutilizable (un animal, un fondo, un objeto común), añádela a `motor/biblioteca/ilus.py` y a `generar()` en el mismo commit.
 
+## El primer segundo (lo que más pesa, según nuestros datos)
+Un solo objeto grande, **ya en pantalla y moviéndose en el fotograma 0**, que se entienda sin leer (la bota que cae sobre la Luna: 80 % se queda; una cabeza de moái quieta 3 s: 52 %). Sin metáforas en el primer plano. Primera frase de 5 palabras o menos y la afirmación sorprendente dicha antes del segundo 3,5. Para el sujeto: `keys=arranque(x, y, d)` (entra con muelle y no se queda quieto) y una segunda acción hacia la mitad del plano. `motor.calidad --mp4` da ❌ si el primer segundo está quieto.
+
 ## Control antes de entregar
 `python3 -m motor.calidad DIR/episodio.json --mp4 DIR/out/<id>.mp4` sin ❌ (ritmo, zona segura, lectura, gancho, sonido, movimiento, mezcla). El porqué de cada regla, los tipos de plano y de gancho, el movimiento (`aparece`, `cae`, `lanza`, `late`, `sigue`, `senala`), el sonido (`subida` + `impacto` antes y en la revelación) y el cierre en bucle (`v.construir(..., bucle=0.35)`) están en **`motor/GUIA_CALIDAD.md`**. Antes de empezar un lote, lee **`motor/APRENDIZAJE.md`** (qué dicen nuestros datos y qué experimento toca).
 

@@ -98,6 +98,16 @@ def sigue(keys, retraso=0.1):
     return [{**k, "t": round(k["t"] + retraso, 3)} for k in keys]
 
 
+def arranque(x, y, d, desde="abajo", recorrido_px=260, deriva=50):
+    """Claves para el SUJETO DEL PRIMER PLANO (APRENDIZAJE.md, H7): en el fotograma 0 ya está en pantalla y moviéndose,
+    se asienta con muelle en 0,4 s y sigue derivando despacio hasta el corte, para que no haya ni un instante quieto.
+    desde: "abajo" | "arriba" | "izquierda" | "derecha". Úsalo como keys=arranque(540, 1300, d)."""
+    dx, dy = {"abajo": (0, 1), "arriba": (0, -1), "izquierda": (-1, 0), "derecha": (1, 0)}[desde]
+    return [{"t": 0, "x": x + dx * recorrido_px, "y": y + dy * recorrido_px, "rot": -6 * (dx or dy), "escala": 0.94},
+            {"t": 0.4, "x": x, "y": y, "rot": 0, "escala": 1.0, "ease": "elastico"},
+            {"t": d, "x": x - dx * deriva, "y": y - dy * deriva, "escala": 1.06, "ease": "suave"}]
+
+
 def senala(x, y, t0, t1, radio=110, color=AMBAR, z=0.85):
     """Anillo que se dibuja alrededor de lo que se nombra (señalización: el ojo va donde va la voz)."""
     return {"tipo": "forma", "forma": "elipse", "ancho": radio * 2, "alto": radio * 2, "relleno": "#ffffff", "op_relleno": 0, "grosor": 7,
