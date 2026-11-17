@@ -8,6 +8,23 @@ Regla: no repetir temas de «Usados». Las continuaciones valen si aportan infor
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
 - El bostezo contagioso (cotidiano)
 _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)_
+
+### Ganchos propuestos para los candidatos de arriba (2026-11-17, Nico; regla de `motor/APRENDIZAJE.md` H7: primera frase ≤ 5 palabras + un objeto grande en acción en el fotograma 0)
+| Tema | Primera frase | Fotograma 0 |
+|---|---|---|
+| Cebolla | «Corta una cebolla.» | Un cuchillo bajando sobre una cebolla enorme; sale una nube hacia un ojo |
+| Posponer la alarma | «No le des a posponer.» | Un dedo a punto de tocar un despertador que vibra |
+| Canción pegadiza | «Esta canción no se va.» | Una nota musical dando vueltas dentro de una cabeza de perfil |
+| Bostezo | «No bosteces. Ya es tarde.» | Una boca enorme abriéndose |
+| Día de 18 horas | «Un día duraba dieciocho horas.» | La Tierra girando muy deprisa con un reloj que corre |
+
+### Candidatos nuevos que pasan la «prueba del segundo» (AGENTE §2). **Sin verificar: cada dato necesita sus dos fuentes antes de usarse**
+- Los plátanos son un poco radiactivos (potasio-40) — «Este plátano es radiactivo.» — un plátano con un contador que hace clic (cotidiano/ciencia, alcance universal)
+- La luz del Sol que ves salió hace unos ocho minutos — «Ese Sol ya es pasado.» — el Sol con un rayo viajando hacia un ojo (espacio)
+- Un rayo calienta el aire varias veces más que la superficie del Sol — «Un rayo quema más que el Sol.» — un rayo cayendo con un termómetro que revienta (ciencia)
+- Saturno es menos denso que el agua — «Saturno flotaría en el agua.» — Saturno cayendo a una bañera gigante (espacio)
+- Los koalas tienen huellas dactilares casi iguales a las humanas — «Esta huella no es humana.» — una huella dactilar enorme con una lupa (animales/misterio)
+- La miel encontrada en tumbas egipcias seguía siendo comestible — «Esta miel tiene tres mil años.» — un tarro de miel saliendo de un sarcófago (historia con objeto cotidiano)
 - El día de la Tierra hace ~1.400 millones de años duraba unas 18 horas (continuación de la Luna)
 
 ## Usados

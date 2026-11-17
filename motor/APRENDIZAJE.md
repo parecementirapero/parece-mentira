@@ -146,7 +146,56 @@ ninguno lo lleva arriba como nosotros. El único ilustrado como los nuestros (5,
   título («Escapó de Alcatraz con una cuchara») que una lista.
 - Conclusión práctica: **no gastar tiempo en optimizar títulos**; gastarlo en el primer segundo.
 
-Límites de estas muestras: 11 vídeos, pocos temas, elegidos por el buscador (los que fracasaron haciendo lo mismo no
+### Tercera tanda: ganadores frente a perdedores (2026-11-17, 02:15) — **me corrige**
+
+Hasta aquí solo había mirado vídeos con muchas vistas. Esta vez comparé los primeros 3 s de 8 Shorts de las mismas
+búsquedas con 0,1–1,4 M de vistas con los de 7 que se quedaron en ~2.000.
+
+| | Con muchas vistas | Con ~2.000 vistas |
+|---|---|---|
+| Subtítulo de 1–3 palabras enormes | Sí, la mayoría | **También** (5 de 7) |
+| Ilustración con personajes de dibujo | Alguno | **Varios** (3 de 7) |
+| Mapas, fotos, vídeo generado | De todo | De todo |
+| Tema | Einstein, la Tierra, Laika, «datos perturbadores», el cuerpo, el espacio | Un rey de España y Portugal, «zafarrancho de combate», una batalla desconocida, el primer semáforo |
+
+1. **El subtítulo de palabra NO distingue a los que triunfan:** lo llevan casi todos, también los que nadie ve. Es
+   una costumbre del nicho, no una ventaja demostrada. Rebajo H1: sigue mereciendo una prueba, pero ya no es «lo
+   primero que probaría».
+2. **Los personajes de dibujo tampoco:** aparecen igual entre los de 2.000 vistas. La decisión de Nico de no
+   usarlos no pierde nada según esta muestra.
+3. **Lo que sí cambia entre un grupo y otro es el tema:** los que suben hablan de algo que **cualquiera reconoce en
+   un segundo** (una persona famosa, la Tierra, tu cuerpo, un perro en el espacio); los que no, de historia local o
+   de un detalle erudito. Cuadra con nuestros datos: la Luna y las huellas en la Luna, arriba; Zanzíbar y los
+   moáis, abajo. → hipótesis H9.
+4. **Existe otro formato: el micro-Short.** El de 1,4 M dura **5 segundos**: un fondo de meme con una lista de
+   texto que no da tiempo a leer, así que la gente lo repite. Otro de 0,7 M dura 15 s. Ahí el «muro de texto» es el
+   truco, no el fallo. Mi regla del gancho corto vale para vídeos narrados de 35–55 s, no para ese formato. →
+   hipótesis H8.
+
+### Lo que YouTube ha dicho del algoritmo (oficial) y lo que es folclore
+
+Oficial:
+
+- Desde el 31 de marzo de 2025, una «vista» de Short cuenta en cuanto empieza a reproducirse o se repite, sin
+  tiempo mínimo; el recuento antiguo se llama ahora «vistas con interacción» (engaged views) y es el que vale para
+  monetizar ([Tubefilter](https://www.tubefilter.com/2025/03/26/youtube-shorts-views-counting-stats/),
+  [PPC Land](https://ppc.land/youtube-changes-how-shorts-views-are-counted-from-march-31/)). **Para nosotros:** las
+  vistas que apuntamos incluyen a los que deslizan; por eso «se quedaron viendo» y los segundos por vista dicen más.
+- El algoritmo busca una «audiencia semilla» para cada Short y, según cómo responda, le da mucho más tráfico o lo
+  deja caer; por eso muchos vídeos suben y se paran. No hay una duración que ayude: que dure lo que pida la
+  historia. Borrar y volver a subir un Short para que arranque se desaconseja, porque puede verse como spam (Todd
+  Sherman, responsable de producto de Shorts, 2023:
+  [TechCrunch](https://techcrunch.com/2023/08/25/youtube-demystifies-the-shorts-algorithm-views-and-answers-other-creator-questions/)).
+  **Para nosotros:** republicar la Luna con la v7 tiene ese riesgo; mejor usarla de modelo.
+- Señales que YouTube nombra: la proporción que elige ver, la duración media, el % medio visto, los «me gusta» y
+  las encuestas de satisfacción. No hay preferencia por un formato, ni frecuencia mínima de publicación, ni
+  umbral oficial de retención ([resumen con las fuentes de la ayuda de YouTube](https://www.truefuturemedia.com/articles/youtube-shorts-algorithm-data-backed-guide)).
+
+Folclore (lo repiten muchos blogs, YouTube no lo ha confirmado): que todos los Shorts pasan por «lotes de prueba»
+fijos en la primera hora, que hay que publicar a una hora concreta, que publicar más da ventaja, que el algoritmo
+castiga repetir formato, y cualquier porcentaje «mágico» (70 %, 75–80 %…).
+
+Límites de estas muestras: 26 vídeos en total, pocos temas, elegidos por el buscador (los que fracasaron haciendo lo mismo no
 salen), y sin sonido. Vale para generar hipótesis, no para dar nada por demostrado.
 
 ---
@@ -159,12 +208,14 @@ Una hipótesis = un vídeo del lote con ese cambio y los otros dos sin él. Se e
 | Id | Hipótesis | Cómo se prueba | Se mide con | Estado |
 |---|---|---|---|---|
 | H0 | El método denso retiene mejor que el v4 | Luna densa frente a Luna v4 (mismo tema) | Se quedan: 73,3 % frente a 65,3 % | **A favor (pista).** Revisar % medio visto a las 72 h |
-| H1 | Subtítulo de 1–2 palabras, grande y centrado, sube «se quedan» y la retención | `v.construir(..., subtitulos="palabra")` en 1 de 3 vídeos | Se quedan, s por vista | Preparado en el motor; **es el primero que probaría** (8 de 11 referentes); pendiente del «sí» de Nico/Jorge |
+| H1 | Subtítulo de 1–2 palabras, grande y centrado, sube «se quedan» y la retención | `v.construir(..., subtitulos="palabra")` en 1 de 3 vídeos | Se quedan, s por vista | Preparado en el motor. **Rebajado el 2026-11-17:** lo usan casi todos, también los Shorts con 2.000 vistas, así que no hay señal de que ayude; probarlo sigue siendo barato. Pendiente del «sí» de Nico/Jorge |
 | H2 | Un vídeo de 30–38 s (95–110 palabras) consigue más % visto y más vistas que uno de 55 s | 1 de 3 vídeos corto, mismo nivel de montaje. Para probar sin gastar voz: `Video(..., omitir=[(i0, i1)])` quita frases enteras de una locución ya hecha | % medio visto, vistas a 48 h | Preparado (Luna v6 corta de 35 s); pendiente: cambia la regla de 150–160 palabras, deciden Nico/Jorge |
 | H3 | Gancho en segunda persona («Si mañana…», «Mira tu…») supera al gancho de dato | 1 de 3 vídeos | Se quedan | Pendiente. La Luna («Mira tus uñas») ya apunta a favor |
 | H4 | Remate con giro (el último dato rompe el patrón) sube repeticiones y comentarios | 1 de 3 vídeos | % visto > 100 %, comentarios | Pendiente |
 | H6 | Un personaje con cara que reacciona al dato retiene más que objetos y cifras solos | — | — | **Descartado por Nico el 2026-11-17** («no me mola lo de poner el personaje») antes de probarlo. El código y la muestra se han quitado del repo. No volver a proponerlo |
 | H7 | Gancho de 5 palabras o menos + un solo objeto grande en acción en el fotograma 0 sube «se quedan» por encima del 70 % | Regla ya en AGENTE §3 y en `motor.calidad`; comparar los lotes desde el 2026-11-17 con los anteriores | Se quedan | **En marcha** (es regla desde hoy). Datos previos: 80/74 frente a 60/47/32 |
+| H8 | Un micro-Short de 6–9 s en bucle (gancho + un dato) consigue más del 100 % de media vista y sirve de anzuelo hacia el vídeo largo | Uno a la semana, sacado de un vídeo ya hecho con `omitir=` (sin gastar voz). Muestra: Luna micro de 8 s | % medio visto, vistas, suscriptores | Preparado; pendiente del «sí» de Nico/Jorge |
+| H9 | Los temas que cualquiera reconoce en un segundo (persona famosa, el cuerpo, la Tierra, animales, el espacio) superan a los de historia local o detalle erudito | Etiquetar cada vídeo como `alcance: universal` o `nicho` en `etiquetas.json` y comparar cuando haya 5 de cada | Se quedan, vistas a 48 h | Abierto. Hoy: Luna y huellas arriba; Zanzíbar y moáis abajo |
 | H5 | Temas de espacio con objeto físico en el primer fotograma superan a «por qué te pasa X» | Comparar por etiqueta `tema` cuando haya 5 de cada | Se quedan | Abierto; hoy 79/73/65 frente a 61/39 |
 
 Cuando un experimento se cierra, se escribe aquí el resultado con fecha y, si cambia cómo hacemos los vídeos, pasa a
