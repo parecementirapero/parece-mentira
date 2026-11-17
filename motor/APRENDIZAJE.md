@@ -77,17 +77,26 @@ Lo que se ve (todo **pista**: 7 vídeos, edades distintas, vistas redondeadas po
 Mirados los primeros 5 s de nuestros Shorts publicados (`herramientas/hoja_short.js`) al lado de su «se quedaron
 viendo»:
 
-| Vídeo | Se quedan | Palabras del gancho en pantalla | Qué hay en el fotograma 0 |
-|---|---|---|---|
-| Huellas en la Luna | 80 % | 1 («Esta») | Una bota grande **cayendo** sobre la Luna. Nada más |
-| Luna densa | 74 % | 3 («Mira tus uñas.») | Un dedo grande subiendo |
-| Nudillos | 60 % | 10 (tres líneas) | Dos manos quietas + dos rótulos |
-| Puertas | 47 % | 13 (tres líneas) | Personaje pequeño de pie, quieto, en un pasillo |
-| Apolo 11 / móvil | 32 % | 14 (cuatro líneas) | Un móvil con iconos, un fondo lleno de aparatos y un contador |
+| Vídeo | Se quedan (YouTube) | Siguen al segundo 1 (TikTok) | Palabras en pantalla al empezar | Qué pasa en los 3 primeros segundos |
+|---|---|---|---|---|
+| Huellas en la Luna | 80 % | 84 % | 1 | Una bota grande **cae** y pisa. Se entiende sin leer |
+| Luna densa | 74 % | 72 % | 3 | Un dedo grande sube; la Luna detrás |
+| Nudillos | 60 % | — | 10 (tres líneas) | Dos manos casi quietas + dos rótulos |
+| Guerra de 38 minutos | 60 % | — | 1–4 | Un marcador de fútbol en un estadio (metáfora: no se ve ninguna guerra) y un balón pequeño |
+| Moáis | 52 % | 55 % | 1 | Una cabeza de moái grande… **completamente quieta 3 segundos** |
+| Puertas | 47 % | — | 13 (tres líneas) | Personaje pequeño de pie, quieto, en un pasillo |
+| Apolo 11 / móvil | 32 % | — | 14 (cuatro líneas) | Un móvil con iconos, fondo lleno de aparatos y un contador |
 
-Con solo 5 vídeos y temas distintos es una **pista**, pero es monótona y coincide con los referentes: cuanto más
-texto y más cosas quietas hay en el primer fotograma, menos gente se queda. El «gancho entero en el fotograma 0»
-(DECISIONS 2026-11-16) funciona con frases de 3 palabras y se vuelve un muro de texto con frases de 13.
+Lectura (7 vídeos, sigue siendo **pista**), corregida al añadir los dos últimos que miré:
+
+- **Lo que mejor separa arriba de abajo es si algo grande se MUEVE en el primer segundo y se entiende sin leer.**
+  Los moáis tienen muy poco texto y un solo objeto grande, pero no se mueve nada durante 3 s: 52 %.
+- **El muro de texto empeora las cosas** (los tres peores tienen 10–14 palabras en pantalla), pero poco texto no
+  basta por sí solo.
+- **Las metáforas en el primer plano despistan:** un marcador de fútbol para hablar de una guerra obliga a esperar
+  a la voz para entender de qué va.
+- El «gancho entero en el fotograma 0» (DECISIONS 2026-11-16) funciona con frases de 3 palabras y se vuelve un
+  muro con frases de 13.
 
 Puesto en práctica: `python3 -m motor.guion guion.txt` revisa el guion **antes de gastar voz** (gancho, duración, cadena de preguntas, tramos sin dato, cifras en letra, palabras solo de España); `motor.calidad` da ❌ si la primera frase pasa de 9 palabras y ⚠ si pasa de 5, y avisa si el
 primer segundo del MP4 casi no se mueve; AGENTE §3 pide primera frase de 5 palabras o menos y un solo objeto grande
@@ -248,7 +257,7 @@ Una hipótesis = un vídeo del lote con ese cambio y los otros dos sin él. Se e
 | H3 | Gancho en segunda persona («Si mañana…», «Mira tu…») supera al gancho de dato | 1 de 3 vídeos | Se quedan | Pendiente. La Luna («Mira tus uñas») ya apunta a favor |
 | H4 | Remate con giro (el último dato rompe el patrón) sube repeticiones y comentarios | 1 de 3 vídeos | % visto > 100 %, comentarios | Pendiente |
 | H6 | Un personaje con cara que reacciona al dato retiene más que objetos y cifras solos | — | — | **Descartado por Nico el 2026-11-17** («no me mola lo de poner el personaje») antes de probarlo. El código y la muestra se han quitado del repo. No volver a proponerlo |
-| H7 | Gancho de 5 palabras o menos + un solo objeto grande en acción en el fotograma 0 sube «se quedan» por encima del 70 % | Regla ya en AGENTE §3 y en `motor.calidad`; comparar los lotes desde el 2026-11-17 con los anteriores | Se quedan | **En marcha** (es regla desde hoy). Datos previos: 80/74 frente a 60/47/32 |
+| H7 | Primer segundo con un solo objeto grande **en movimiento**, que se entiende sin leer, y gancho de 5 palabras o menos → «se quedan» por encima del 70 % | Regla ya en AGENTE §2–3, en `motor.guion` y en `motor.calidad` (❌ si el primer segundo está quieto); comparar los lotes desde el 2026-11-17 con los anteriores | Se quedan (YouTube), % al segundo 1 y 3 (TikTok) | **En marcha** (es regla desde hoy). Datos previos: 80/74 frente a 60/60/52/47/32 |
 | H8 | Un micro-Short de 6–9 s en bucle (gancho + un dato) consigue más del 100 % de media vista y sirve de anzuelo hacia el vídeo largo | Uno a la semana, sacado de un vídeo ya hecho con `omitir=` (sin gastar voz). Muestra: Luna micro de 8 s | % medio visto, vistas, suscriptores | Preparado; pendiente del «sí» de Nico/Jorge |
 | H9 | Los temas que cualquiera reconoce en un segundo superan a los de historia local o detalle erudito | Etiquetar cada vídeo como `alcance: universal` o `nicho` en `etiquetas.json` y comparar cuando haya 5 de cada | Se quedan, vistas a 48 h | **Sin apoyo por ahora.** Me lo sugirieron 15 vídeos mirados, pero al comprobarlo con los 383 títulos no se sostiene: dentro de la misma búsqueda de historia, los títulos «locales» (reyes, batallas, España) tienen mediana 6.500 frente a 1.500 del resto. Se queda como etiqueta para medir, no como regla |
 | H5 | Temas de espacio con objeto físico en el primer fotograma superan a «por qué te pasa X» | Comparar por etiqueta `tema` cuando haya 5 de cada | Se quedan | Abierto; hoy 79/73/65 frente a 61/39 |
