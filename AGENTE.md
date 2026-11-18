@@ -152,6 +152,15 @@ Solo cuando una persona escribe **«ok»** en el chat de ese lote (o «ok 1, 3»
    - TikTok: en la página del vídeo, mismo comentario y fíjalo (⋯ → Fijar). Instagram: escribe el comentario (la web no siempre deja fijar; si no deja, se queda sin fijar).
 8. **Etiquetas para las estadísticas**: añade cada vídeo publicado a `estadisticas/etiquetas.json` con su id de YouTube (las 11 letras de la URL del Short) y las etiquetas de `metadatos.json` (`tema`, `gancho`, `estructura`, `experimento`, `portada`). Sin esto, las conclusiones no pueden decir qué gancho o estructura funciona. Mismo commit que el punto 6. Y une la ficha con el vídeo: `python3 estadisticas/estudio ficha publicar <lote> <NN> <id de YouTube> tiktok=<número> instagram=<código>`.
 
+## 8b. Contestar comentarios (2026-11-19, petición en el chat del lote 2026-11-18-tarde: «quiero que tú contestes a comentarios de la gente, con cosas con sentido a lo que escriben»; confirmado «sí, sin preguntar»)
+
+En cada turno (08:00 y 20:00), después de la entrega y sin esperar «ok»:
+1. YouTube Studio → Comunidad → Comentarios, filtro «Sin responder» (navegador integrado del Mac del turno, vista de escritorio con `resize_window` 1280×900). TikTok Studio → Comments.
+2. Responder **a lo que dice cada persona**: corto (1–3 frases), español neutro (sin «tío», «mola», «hostia»…), cercano, con un dato correcto del vídeo o una pregunta que siga la conversación. Si el comentario se equivoca en un dato, corregir con amabilidad y con la fuente (como en `guiones.md`).
+3. **No contestar**: insultos, spam o texto sin sentido, política, salud o temas delicados de la persona, peticiones de datos personales o enlaces. Esos se saltan y se apuntan en el correo del turno.
+4. Nada de promesas («haremos parte 2») salvo que esté en `IDEAS.md` → «Continuaciones prometidas».
+5. Apuntar en `lotes/<lote>/estado.md` cuántas respuestas y en qué vídeos.
+
 ## 9. Límites
 
 - No publica ni programa sin «ok». No compra nada ni cambia de plan. No mete contraseñas ni códigos (si una sesión caducó, avisa).
