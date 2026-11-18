@@ -9,7 +9,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## Pendiente
 - [ ] **Publicar el 02 (terrón) y el 03 (mides menos) del lote 2026-11-18-tarde** el 2026-11-19, como pidió la persona (el 01 de GTA 6 ya está en YouTube y TikTok). MP4 en el chat del lote y en `Documents/Parece Mentira/lotes/2026-11-18-tarde/` (Mac de Jorge). Ya tienen «ok»? **No**: el «ok» fue solo para el 1; hace falta «ok 2 y 3» — Nico/Jorge
-- [ ] 01 GTA 6 (lote 2026-11-18-tarde): poner portada en YouTube Studio (fotograma 1,3 s) y escribir el comentario en YouTube y TikTok — Nico/Jorge
+- [ ] 01 GTA 6 (lote 2026-11-18-tarde): escribir y fijar el comentario en YouTube y TikTok (el canal ya está verificado: se puede fijar) — Nico/Jorge
 - [ ] Comprobar en Studio por qué «La Gran Muralla» (`rEiiPtGXz84`) y «Tu perro copia tus bostezos» (`tp7XFLAIkS0`) llevan 7 y 8 vistas tras 12 h (¿visibilidad?, ¿restricción?) — Nico/Jorge
 - [ ] **Jorge: publicar en TikTok el lote 2026-11-18-manana (01, 02 y 03 v1, con «ok»)** desde su ordenador. MP4 en el chat https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 (misma cuenta de Claude; también en el Mac de Nico, `Documents/Parece Mentira/lotes/2026-11-18-manana/`). Comprobar SHA-256 con `estado.md`. Textos en `lotes/2026-11-18-manana/metadatos.json` → `tiktok.texto`; portada = fotograma `portada.t`; comentario = `comentario`. Antes, mirar en TikTok Studio que no estén ya. Luego apuntar los enlaces en `estado.md` y `ficha publicar … tiktok=<número>` — pedido por Nico 2026-11-18 ≈09:00 — Jorge
 - [ ] **Estudio — decidir el público objetivo** (edades y países) y apuntarlo en `estadisticas/estudio/objetivo.json` y `DECISIONS.md`. Dato para decidir: en YouTube el 49 % de la audiencia tiene 35 años o más y solo el 42 % está en 18–34; 67 % hombres; España 25 %, Latinoamérica 72 % (`estadisticas/datos/estudio.md` §5) — Nico/Jorge
@@ -28,7 +28,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir experimentos de `motor/APRENDIZAJE.md`: H1 subtítulo «palabra» en 1 de 3 vídeos; H2 un vídeo de 30–38 s por lote (cambia la regla de 150–160 palabras) — Nico/Jorge
 - [ ] Decidir tras leer `motor/GUIA_CALIDAD.md` §10: límite inferior de texto (1400 o 1250), volumen de la música (−13 dB), y si se republica la Luna con la v5 — Nico/Jorge
 - [ ] Apuntar en `estadisticas/` «vistos frente a deslizados» y «% medio visto» de cada vídeo a 48 h y 7 días (empezar por la Luna densa `jQmhf8o1PfY`) — Nico/Jorge
-- [ ] Verificar el canal de YouTube (teléfono, en Studio) para poder fijar comentarios — Nico/Jorge
 - [ ] Luna densa publicada: falta decidir el reel antiguo de Instagram `Dfx5sljx4kO` (borrar o archivar desde el móvil) y poner el comentario fijado en YouTube y TikTok
 - [ ] Actualizar el texto de la tarea programada de las 08:00 (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`): sigue nombrando la voz v1, ya borrada, y la carpeta de Drive. Lo correcto es la voz de `DECISIONS.md` y la revisión en el chat. Además, hoy se disparó a las 19:48 en vez de a las 07:52 — Nico
 - [ ] Decidir si se cambian las portadas de los 3 vídeos ya publicados (lote 2026-11-15-tarde; elegidas en `metadatos.json` → `portada`): YouTube con `subir_youtube.py --solo-portada <id> --portada …` desde el Mac de Jorge (si el canal lo permite) e Instagram desde la app del móvil (Editar → portada); TikTok no deja cambiarla después — Nico/Jorge
@@ -57,6 +56,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Canal de YouTube verificado (miniaturas propias y comentarios fijados ya disponibles) — persona en el chat del lote 2026-11-18-tarde — 2026-11-19
 - [x] Lote 2026-11-18-tarde v1 (GTA 6, estrella de neutrones, mides menos) — Agente 20:00 (Jorge) — 2026-11-18 23:30 — **en revisión**: vídeos en el chat https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H, falta el «ok»
 - [x] Lectura a 48 h de YouTube Studio y TikTok Studio (16 vídeos) y estado de H0 y H7 en `motor/APRENDIZAJE.md` — Nico (tarea programada) — 2026-11-18 22:45
 - [x] Jorge: publicar en TikTok el lote 2026-11-18-manana — los 3 publicados (7709545960136920342 · 7709546579622923542 · 7709547350464662806), portada con texto y comentario (sin fijar: la web no deja) — Jorge — 2026-11-18 15:25

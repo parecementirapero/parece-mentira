@@ -58,3 +58,8 @@ Créditos de ElevenLabs tras el lote: ≈24.200 (se gastaron ≈3.550).
 - **TikTok**: comprobado en TikTok Studio que no estaba. Subido desde el navegador integrado del Mac de Jorge (la persona eligió el archivo; se copió a Descargas para encontrarlo fácil): https://www.tiktok.com/@parece.mentira85/video/7709657865832697110 (a las 00:35 en «Content under review», como siempre al principio). Portada: fotograma 0 (calendario 2013 con el gancho «GTA seis tardó trece años» ya escrito), sin texto añadido.
 - Pendiente: portada en YouTube Studio (fotograma 1,3 s) y comentarios («¿Lo vas a jugar mañana? 🎮 Te leo 👇») en YouTube y TikTok.
 - 02 y 03: sin publicar, para mañana (pedido de la persona).
+
+## Portada nueva del 01 (GTA 6) — pedida por la persona (2026-11-19 ≈00:50)
+- La persona pidió una portada «relacionada con GTA». Hecha a mano con nuestras ilustraciones (ciudad de neón, coche patrulla genérico, mando genérico, hojas 2013/2026) y el texto «GTA 6 · 13 AÑOS · ESPERÁNDOLO»: sin logo, letras ni arte de Rockstar. Archivo: `Documents/Parece Mentira/lotes/2026-11-18-tarde/01-portadas/portada_gta6.jpg` (y en Descargas).
+- **YouTube**: la persona verificó el canal → `subir_youtube.py --solo-portada _9znalXgInI` → «portada: puesta» (las miniaturas propias ya funcionan en este canal).
+- **TikTok**: la web no deja subir imagen de portada en un vídeo ya publicado (solo elegir fotograma). Con el «sí» de la persona se borró el TikTok 7709657865832697110 (0 vistas; comprobado que el resto de vídeos siguen) y se vuelve a subir con la portada nueva.
