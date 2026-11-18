@@ -184,7 +184,7 @@ def _(d):
              cam(1.0, 1.06, (540, 1300)), "desenfoque", hud=[contexto(0.05, d - 0.05, "1724 · JOSEPH WASSE")], sfx=[(0.1, "brillo", -20)])
 
 
-@v.plano(114, "midió también a su caballo después de galopar")
+@v.plano(115, "midió también a su caballo después de galopar")
 def _(d):
     return P(["#2a2050", "#ffc890"], [BG("bg_campo"), IMG("caballo", ancho=760, z=0.5, keys=[{"t": 0, "x": -400, "y": 1450}, {"t": d * 0.8, "x": 560, "y": 1450, "ease": "salida"}],
                                                        anim={"flotar": [18, 0.35]}),
@@ -192,7 +192,7 @@ def _(d):
              cam(1.0, 1.04, (540, 1400)), "corte", sfx=[(0.05 + k * 0.33, "golpe", -24) for k in range(int(d * 0.8 / 0.33))])
 
 
-@v.plano(127, "y el caballo no encogía")
+@v.plano(124, "y el caballo no encogía")
 def _(d):
     return P(["#2a2050", "#ffc890"], [BG("bg_campo"), IMG("caballo", ancho=760, x=520, y=1450, z=0.5), IMG("tallimetro", ancho=200, x=920, y=1300, z=0.45),
              marca(1170, 1170, 0, 0.01, 820, 300, LIMA)],
@@ -200,23 +200,23 @@ def _(d):
              sfx=[(0.1, "ding", -18)])
 
 
-@v.plano(132, "en el espacio, sin gravedad: astronauta flotando")
+@v.plano(127, "en el espacio, sin gravedad: astronauta flotando")
 def _(d):
     return P(["#02030a", "#0a1030"], [BG("bg_esp_violeta"), tierra(860, 1650, 700, 0.2, 3),
              IMG("astronauta", ancho=420, x=480, y=1000, z=0.5, anim={"flotar": [20, 2.2], "balanceo": [10, 3]}),
-             IMG("satelite", ancho=160, z=0.3, keys=recorrido(v.w(132), v.w(155), (1150, 400), (-150, 700), d), anim={"girar": 5})],
+             IMG("satelite", ancho=160, z=0.3, keys=recorrido(v.w(127), v.w(150), (1150, 400), (-150, 700), d), anim={"girar": 5})],
              cam(1.0, 1.06), "desenfoque", hud=[contexto(0.05, d - 0.05, "SIN GRAVEDAD")], sfx=[(0.1, "brillo", -20)])
 
 
-@v.plano(140, "los astronautas crecen hasta un tres por ciento")
+@v.plano(135, "los astronautas crecen hasta un tres por ciento")
 def _(d):
     return P(["#02030a", "#0a1030"], [BG("bg_esp_violeta"), *columna(540, 1600, 6, d, 0.1, d * 0.9, 1.0, 1.7, 260, 90, 40, 0.5),
-             IMG("satelite", ancho=160, z=0.3, keys=recorrido(v.w(132), v.w(155), (1150, 400), (-150, 700), d), anim={"girar": 5})],
+             IMG("satelite", ancho=160, z=0.3, keys=recorrido(v.w(127), v.w(150), (1150, 400), (-150, 700), d), anim={"girar": 5})],
              cam(1.0, 1.04), "corte", hud=[contador(0.05, d - 0.05, 0, 3, d * 0.6, "%", tam=150, y=560, borde=LIMA, miles=False, contar_prefijo="+")],
              sfx=[(0.1, "subida", -18, {"dur": d * 0.7})])
 
 
-@v.plano(148, "unos cinco centímetros")
+@v.plano(143, "unos cinco centímetros")
 def _(d):
     return P(["#02030a", "#0a1030"], [BG("bg_esp_petroleo"), IMG("astronauta", ancho=380, x=400, y=1050, z=0.5, keys=[{"t": 0, "ey": 1.0}, {"t": d * 0.7, "ey": 1.05}], anim={"flotar": [14, 2]}),
              IMG("regla", ancho=760, x=760, y=1050, z=0.45, rot=90)],
@@ -224,14 +224,14 @@ def _(d):
              sfx=[(0.1, "subida", -20, {"dur": d * 0.6})])
 
 
-@v.plano(151, "al volver, los pierden: la columna encoge de golpe")
+@v.plano(146, "al volver, los pierden: la columna encoge de golpe")
 def _(d):
     return P(["#2a2050", "#ffc890"], [BG("bg_campo"), *columna(540, 1600, 6, d, 0.1, d * 0.6, 1.7, 1.0, 260, 90, 40, 0.5),
              flecha([[540, 260], [540, 480]], 0.05, d * 0.5, MAGENTA, 12, z=0.7)],
              cam(1.0, 1.05, temblor=2), "corte", sfx=[(d * 0.6, "golpe", -14)])
 
 
-@v.plano(155, "mídete mañana nada más despertar (bucle al tallímetro)")
+@v.plano(150, "mídete mañana nada más despertar (bucle al tallímetro)")
 def _(d):
     return P(["#2a1a3a", "#ffb46a"], [BG("bg_dormitorio_dia"), IMG("tallimetro", ancho=300, x=760, y=1000, z=0.4),
              IMG("perfil", ancho=420, x=480, y=1020, z=0.5), IMG("despertador", ancho=220, x=240, y=1500, z=0.6, anim={"balanceo": [8, 0.1]}),
@@ -283,19 +283,19 @@ def _(d):
     return P(["#2a2050", "#ffc890"], [IMG("parroco", ancho=1500, x=200, y=1500, z=0.5)], cam(1.0, 1.1, (540, 1000), (540, 900)), "corte", sfx=[(0.02, "tic", -18)])
 
 
-@v.plano(125, "micro: cascos al galope", mas=0.05)
+@v.plano(122, "micro: cascos al galope", mas=0.05)
 def _(d):
     return P(["#2a2050", "#ffc890"], [IMG("caballo", ancho=2400, x=540, y=600, z=0.5, anim={"flotar": [30, 0.3]}), polvo("#c8a870", 60, (0, 1300, 1080, 1700), 19)],
              cam(1.0, 1.1, temblor=6), "corte", sfx=[(0.02, "golpe", -16), (0.25, "golpe", -18)])
 
 
-@v.plano(138, "micro: el casco del astronauta", mas=0.05)
+@v.plano(133, "micro: el casco del astronauta", mas=0.05)
 def _(d):
     return P(["#02030a", "#0a1030"], [BG("bg_esp_violeta"), IMG("astronauta", ancho=1700, x=540, y=1500, z=0.5, anim={"flotar": [20, 2]})],
              cam(1.0, 1.08), "corte", sfx=[(0.02, "senal", -22)])
 
 
-@v.plano(146, "micro: los discos se inflan", mas=0.05)
+@v.plano(141, "micro: los discos se inflan", mas=0.05)
 def _(d):
     return P(["#02030a", "#0a1030"], [*columna(540, 1400, 3, d, 0.0, d * 0.8, 0.8, 1.5, 700, 220, 120, 0.5)], cam(1.0, 1.06), "corte", sfx=[(0.02, "burbuja", -16)])
 

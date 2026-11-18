@@ -174,27 +174,27 @@ def _(d):
              sfx=[(d * 0.3, "golpe", -14), (d * 0.6, "ding", -18)])
 
 
-@v.plano(88, "¿y lo más loco? gira: haces del púlsar")
+@v.plano(84, "¿y lo más loco? gira: haces del púlsar")
 def _(d):
     return P(OSC, [BG("bg_esp_petroleo"), *estrella_n(540, 1050, 170, 0.45, t_haz=0.0)],
              cam(1.0, 1.08), "zoom", hud=[amarillo(0.05, d - 0.03, "GIRA", y=560, tam=140, color=LIMA)], sfx=[(0.05, "senal", -20), (d * 0.5, "senal", -22)])
 
 
-@v.plano(93, "setecientas dieciséis vueltas por segundo")
+@v.plano(89, "setecientas dieciséis vueltas por segundo")
 def _(d):
     return P(OSC, [BG("bg_esp_violeta"), *estrella_n(540, 1150, 150, 0.45, giro=900), *lineas_vel(540, 1150, 4, "#7df9ffaa")],
              cam(1.0, 1.06), "corte",
              hud=[contador(0.05, d - 0.05, 0, 716, d * 0.6, "VUELTAS/S", tam=140, y=560, borde=CIAN, miles=False)], sfx=[(0.05, "subida", -18, {"dur": d * 0.6})])
 
 
-@v.plano(104, "más deprisa que una batidora")
+@v.plano(100, "más deprisa que una batidora")
 def _(d):
     return P(COCINA, [brillo(540, 900, 600, "#ff7aa8", 0.3, 0.1), IMG("batidora", ancho=440, x=360, y=1150, z=0.5, anim={"balanceo": [2, 0.08]}),
              *estrella_n(820, 1000, 110, 0.5, giro=900, t_haz=0.0)],
              cam(1.0, 1.05), "corte", hud=[rotulo(0.05, d - 0.05, "MÁS RÁPIDO", tam=90, color="#141414", capsula="#7dff3ae6", y=560)], sfx=[(0.05, "rumor", -18)])
 
 
-@v.plano(109, "un malvavisco cae hacia la estrella")
+@v.plano(105, "un malvavisco cae hacia la estrella")
 def _(d):
     return P(OSC, [BG("bg_esp_petroleo"), *estrella_n(540, 1550, 260, 0.45, haces=False),
              IMG("malvavisco", ancho=220, z=0.6, keys=[{"t": 0, "x": 540, "y": 250, "rot": 0}, {"t": d, "x": 540, "y": 1180, "rot": 200, "ease": "entrada"}]),
@@ -202,7 +202,7 @@ def _(d):
              cam(1.0, 1.06, (540, 1100)), "corte", hud=[contexto(0.05, d - 0.05, "UN MALVAVISCO")], sfx=[(0.05, "fugaz", -18)])
 
 
-@v.plano(121, "golpe: mil bombas de hidrógeno")
+@v.plano(117, "golpe: mil bombas de hidrógeno")
 def _(d):
     return P(["#1a0505", "#02030a"], [IMG("bomba_flash", ancho=900, x=540, y=1200, z=0.5, keys=[{"t": 0, "escala": 0.3, "op": 0}, {"t": 0.25, "escala": 1.0, "op": 1, "ease": "salida"}]),
              polvo("#ffd06a", 70, (100, 700, 980, 1600), 19, "chispas"),
@@ -211,20 +211,20 @@ def _(d):
              hud=[contador(0.05, d - 0.05, 0, 1000, d * 0.5, "BOMBAS H", tam=130, y=560, borde=AMBAR)], sfx=[(0.02, "impacto", -12)])
 
 
-@v.plano(130, "1967: campo de antenas al amanecer")
+@v.plano(126, "1967: campo de antenas al amanecer")
 def _(d):
     return P(["#1a2a4a", "#6a7aa8"], [BG("bg_antenas"), fugaz(0.2, 100, 300, 500, 450), polvo("#ffffff", 20, (0, 200, 1080, 900), 5, "estrellas")],
              cam(1.0, 1.08, (540, 1200), (540, 1150)), "desenfoque", hud=[contexto(0.05, d - 0.05, "1967 · CAMBRIDGE")], sfx=[(0.1, "brillo", -20)])
 
 
-@v.plano(140, "Jocelyn Bell, una estudiante: la tira de papel")
+@v.plano(136, "Jocelyn Bell, una estudiante: la tira de papel")
 def _(d):
     return P(["#f4ecd8", "#c8b898"], [IMG("papel_registro", ancho=1600, z=0.5, y=1100, keys=[{"t": 0, "x": 900}, {"t": d, "x": 300, "ease": "lineal"}]),
              IMG("lupa", ancho=380, x=600, y=1150, z=0.6, anim={"flotar": [10, 1.5]})],
              cam(1.0, 1.04), "corte", hud=[rotulo(0.05, d - 0.05, "JOCELYN BELL", tam=90, color="#ffffff", capsula="#c0392be6", y=560)], sfx=[(0.1, "roce", -20)])
 
 
-@v.plano(144, "su señal era tan regular: pulsos que se repiten")
+@v.plano(140, "su señal era tan regular: pulsos que se repiten")
 def _(d):
     return P(["#0d1324", "#1f2b48"], [IMG("papel_registro", ancho=1900, z=0.5, y=1100, keys=[{"t": 0, "x": 700}, {"t": d, "x": 380, "ease": "lineal"}]),
              senala(540, 950, 0.1, d - 0.05, 90, CIAN)],
@@ -232,14 +232,14 @@ def _(d):
              sfx=[(0.05 + k * 0.45, "senal", -22) for k in range(int(d / 0.45))])
 
 
-@v.plano(151, "la apodaron hombrecillos verdes: LGM-1")
+@v.plano(147, "la apodaron hombrecillos verdes: LGM-1")
 def _(d):
     return P(OSC, [BG("bg_antenas"), brillo(540, 900, 600, "#7dff3a", 0.35, 0.3, pulso=[0.2, 0.45])],
              cam(1.0, 1.05), "corte", hud=[rotulo(0.05, d - 0.05, "LGM-1", tam=160, color="#141414", capsula="#7dff3ae6", y=700),
                                            amarillo(0.05, d - 0.03, "«LITTLE GREEN MEN»", y=1000, tam=70, color=LIMA)], sfx=[(0.1, "senal", -20)])
 
 
-@v.plano(154, "¿te comerías ese terrón? (bucle)")
+@v.plano(150, "¿te comerías ese terrón? (bucle)")
 def _(d):
     return P(COCINA, [brillo(540, 900, 700, "#2ff3ff", 0.25, 0.1), IMG("terron", ancho=460, x=540, y=1050, z=0.6, anim={"flotar": [14, 1.6], "balanceo": [6, 2]}),
              polvo("#bff6ff", 30, (300, 800, 780, 1300), 3, "chispas")],
@@ -275,32 +275,26 @@ def _(d):
              cam(1.0, 1.08), "corte", sfx=[(0.02, "whoosh", -16, {"dur": 0.4})])
 
 
-@v.plano(86, "micro: cumbre nevada", mas=0.05)
-def _(d):
-    return P(["#2a2050", "#8a7aa8"], [IMG("montana", ancho=3000, x=540, y=1600, z=0.4), polvo("#ffffff", 50, (0, 300, 1080, 1500), 13, "chispas")],
-             cam(1.0, 1.1, (540, 960)), "corte", sfx=[(0.02, "roce", -18)])
-
-
-@v.plano(102, "micro: haces que barren la pantalla", mas=0.05)
+@v.plano(98, "micro: haces que barren la pantalla", mas=0.05)
 def _(d):
     return P(OSC, [{"tipo": "rayos", "n": 2, "longitud": 1600, "apertura": 10, "color": "#bff6ffcc", "x": 540, "y": 960, "z": 0.4, "anim": {"girar": 600}},
                    brillo(540, 960, 200, "#ffffff", 0.9, 0.5)], cam(1.0, 1.1), "corte", sfx=[(0.02, "zap", -18)])
 
 
-@v.plano(107, "micro: cuchillas de la batidora", mas=0.05)
+@v.plano(103, "micro: cuchillas de la batidora", mas=0.05)
 def _(d):
     return P(COCINA, [brillo(540, 1000, 500, "#ff7aa8", 0.4, 0.1), IMG("batidora", ancho=700, x=540, y=1100, z=0.5, anim={"balanceo": [3, 0.06]}),
                       polvo("#ff9ac0", 50, (300, 700, 780, 1100), 31, "chispas")], cam(1.0, 1.12, (540, 1000), temblor=5), "corte",
              sfx=[(0.02, "rumor", -18)])
 
 
-@v.plano(119, "micro: el malvavisco a punto de tocar", mas=0.05)
+@v.plano(115, "micro: el malvavisco a punto de tocar", mas=0.05)
 def _(d):
     return P(OSC, [*estrella_n(540, 2100, 900, 0.4, haces=False), IMG("malvavisco", ancho=500, x=540, y=900, z=0.6, keys=[{"t": 0, "y": 700}, {"t": d, "y": 1000, "ease": "entrada"}])],
              cam(1.0, 1.1, temblor=3), "corte", sfx=[(0.02, "whoosh", -14, {"dur": 0.3})])
 
 
-@v.plano(137, "micro: un pulso en la tira", mas=0.05)
+@v.plano(133, "micro: un pulso en la tira", mas=0.05)
 def _(d):
     return P(["#f4ecd8", "#c8b898"], [IMG("papel_registro", ancho=3200, x=540, y=1000, z=0.5)], cam(1.0, 1.1), "corte", sfx=[(0.02, "senal", -20)])
 
