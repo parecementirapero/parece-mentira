@@ -112,5 +112,31 @@
    "vistas": 3,
    "nota": "sin datos todavía"
   }
+ },
+ "2026-11-18 22:40": {
+  "7708861385387543830": {
+   "titulo": "Luna densa",
+   "vistas": 288,
+   "medio_s": 22.37,
+   "completo_pct": 21.6
+  },
+  "7709083847450807574": {
+   "titulo": "Plátano radiactivo",
+   "vistas": 242,
+   "medio_s": 12.25,
+   "completo_pct": 5.4
+  },
+  "7709084200636255510": {
+   "titulo": "Saturno flotaría",
+   "vistas": 232,
+   "medio_s": 14.37,
+   "completo_pct": 8.5
+  },
+  "7709084597069401366": {
+   "titulo": "Huella de koala",
+   "vistas": 58,
+   "medio_s": 6.41,
+   "completo_pct": 1.5
+  }
  }
 }

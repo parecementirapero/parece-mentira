@@ -157,6 +157,38 @@ YouTube aún no da curvas, pero TikTok sí (`herramientas/tiktok_retencion.js` �
     superará los 28 s de media que ya consiguen los nuestros de 55. **Conclusión: se mantienen los 55 s como
     norma**; la versión corta queda como prueba suelta, no como recomendación.
 
+### Lectura a 48 h (2026-11-18, 22:35) — primera comprobación de las reglas nuevas
+
+| Vídeo | Publicado | Reglas del primer segundo | Se quedan (YouTube) | Vistas | s por vista | TikTok: tiempo medio |
+|---|---|---|---|---|---|---|
+| Huellas en la Luna | 15-11 | antes | **81,4 %** | 13.500 | 28,9 | 19,8 s |
+| Luna densa | 16-11 | antes (gancho de 3 palabras) | **80,3 %** | 6.700 | 29,4 | 22,4 s |
+| Nudillos | 16-11 | antes | 63,5 % | 2.200 | 23,6 | 20,7 s |
+| Guerra de 38 minutos | 15-11 | antes | 60,1 % | 1.400 | 17,7 | 16,5 s |
+| Moáis | 15-11 | antes | 52,0 % | 1.200 | 16,8 | 13,7 s |
+| Puertas | 16-11 | antes | 47,7 % | 1.400 | 19,8 | 9,3 s |
+| Apolo 11 / móvil | 17-11 (00:15) | antes | 35,2 % | 1.100 | 11,5 | — |
+| Huella de koala | 17-11 | **con reglas** | 71,3 % | 2.800 | 24,9 | 6,4 s (58 vistas) |
+| Saturno flotaría | 17-11 | **con reglas** | 67,4 % | 2.200 | 26,7 | 14,4 s |
+| Plátano radiactivo | 17-11 | **con reglas** | 64,8 % | 1.400 | 23,9 | 12,3 s |
+| El Sol que ves ya es pasado | 18-11 (7 h) | **con reglas** | 65,2 % | 373 | — | — |
+| Día de 18 horas | 18-11 (14 h) | **con reglas** | 64,3 % | 316 | — | — |
+| Cebolla | 18-11 (8 h) | **con reglas** | 60,8 % | 1.100 | 17,0 | — |
+| Un rayo, 5 veces más caliente | 17-11 (23:00) | **con reglas** | 56,9 % | 1.600 | 18,0 | — |
+
+- **H0 (método denso), a favor con claridad:** la Luna densa ha subido al 80,3 % (la antigua, 65,3 %), lleva 6.700
+  vistas y es el vídeo con más segundos por vista del canal (29,4). Sigue siendo un solo par de vídeos.
+- **H7 (primer segundo), a favor en YouTube, con matices:** los 7 vídeos hechos con las reglas están entre 57 y
+  71 % (media 64 %); los 5 anteriores que no son de la Luna, entre 35 y 64 % (media 52 %). Ha subido el suelo:
+  ya no hay ninguno por debajo del 55 %. Pero **ninguno llega al 80 %** de los dos de la Luna, así que el primer
+  segundo no lo explica todo (¿el tema?, ¿la Luna como objeto?).
+- **TikTok no lo confirma:** los tres del 17 por la mañana tienen un tiempo medio de 6–14 s, peor que los
+  anteriores (20–22 s). Con 58–242 vistas es poco dato, pero hay que mirarlo: en YouTube esos mismos vídeos
+  retienen 24–27 s.
+- **Aviso:** «La Gran Muralla» y «Tu perro copia tus bostezos» (18-11 por la mañana) llevan 7 y 8 vistas en
+  YouTube después de 12 horas. No es normal: comprobar en Studio que están en público y sin restricciones.
+- YouTube ya dibuja la curva de retención de los vídeos del 15 y 16; es un gráfico y no la he leído punto a punto.
+
 ---
 
 ## Referentes vistos (2026-11-17, YouTube, búsqueda «dato curioso del espacio #shorts»)
@@ -278,13 +310,13 @@ Una hipótesis = un vídeo del lote con ese cambio y los otros dos sin él. Se e
 
 | Id | Hipótesis | Cómo se prueba | Se mide con | Estado |
 |---|---|---|---|---|
-| H0 | El método denso retiene mejor que el v4 | Luna densa frente a Luna v4 (mismo tema) | Se quedan: 73,3 % frente a 65,3 % | **A favor (pista).** Revisar % medio visto a las 72 h |
+| H0 | El método denso retiene mejor que el v4 | Luna densa frente a Luna v4 (mismo tema) | Se quedan: 80,3 % frente a 65,3 %; 29,4 s por vista, el mejor del canal | **A favor** a las 48 h (2026-11-18). Un solo par de vídeos: se sigue como norma y se revisa con más temas |
 | H1 | Subtítulo de 1–2 palabras, grande y centrado, sube «se quedan» y la retención | `v.construir(..., subtitulos="palabra")` en 1 de 3 vídeos | Se quedan, s por vista | Preparado en el motor. **Rebajado el 2026-11-17:** lo usan casi todos, también los Shorts con 2.000 vistas, así que no hay señal de que ayude; probarlo sigue siendo barato. Pendiente del «sí» de Nico/Jorge |
 | H2 | Un vídeo de 30–38 s (95–110 palabras) consigue más % visto y más vistas que uno de 55 s | 1 de 3 vídeos corto, mismo nivel de montaje. Para probar sin gastar voz: `Video(..., omitir=[(i0, i1)])` quita frases enteras de una locución ya hecha | % medio visto, vistas a 48 h | Preparado (Luna corta de 35 s). **Rebajado el 2026-11-17:** un estudio de 5.400 Shorts dice lo contrario (los de 50–60 s tienen más vistas). No lo recomiendo como cambio de norma; como mucho, una prueba suelta |
 | H3 | Gancho en segunda persona («Si mañana…», «Mira tu…») supera al gancho de dato | 1 de 3 vídeos | Se quedan | Pendiente. La Luna («Mira tus uñas») ya apunta a favor |
 | H4 | Remate con giro (el último dato rompe el patrón) sube repeticiones y comentarios | 1 de 3 vídeos | % visto > 100 %, comentarios | Pendiente |
 | H6 | Un personaje con cara que reacciona al dato retiene más que objetos y cifras solos | — | — | **Descartado por Nico el 2026-11-17** («no me mola lo de poner el personaje») antes de probarlo. El código y la muestra se han quitado del repo. No volver a proponerlo |
-| H7 | Primer segundo con un solo objeto grande **en movimiento**, que se entiende sin leer, y gancho de 5 palabras o menos → «se quedan» por encima del 70 % | Regla ya en AGENTE §2–3, en `motor.guion` y en `motor.calidad` (❌ si el primer segundo está quieto); comparar los lotes desde el 2026-11-17 con los anteriores | Se quedan (YouTube), % al segundo 1 y 3 (TikTok) | **En marcha** (es regla desde hoy). Datos previos: 80/74 frente a 60/60/52/47/32 |
+| H7 | Primer segundo con un solo objeto grande **en movimiento**, que se entiende sin leer, y gancho de 5 palabras o menos → «se quedan» por encima del 70 % | Regla ya en AGENTE §2–3, en `motor.guion` y en `motor.calidad` (❌ si el primer segundo está quieto); comparar los lotes desde el 2026-11-17 con los anteriores | Se quedan (YouTube), % al segundo 1 y 3 (TikTok) | **A favor en YouTube (2026-11-18):** 7 vídeos con la regla, 57–71 % (media 64 %); antes, 35–64 % (media 52 %). Ninguno llega al 80 % de los de la Luna y TikTok no lo confirma. Se mantiene la regla |
 | H8 | Un micro-Short de 6–9 s en bucle (gancho + un dato) consigue más del 100 % de media vista y sirve de anzuelo hacia el vídeo largo | Uno a la semana, sacado de un vídeo ya hecho con `omitir=` (sin gastar voz). Muestra: Luna micro de 8 s | % medio visto, vistas, suscriptores | Preparado; pendiente del «sí» de Nico/Jorge |
 | H9 | Los temas que cualquiera reconoce en un segundo superan a los de historia local o detalle erudito | Etiquetar cada vídeo como `alcance: universal` o `nicho` en `etiquetas.json` y comparar cuando haya 5 de cada | Se quedan, vistas a 48 h | **Sin apoyo por ahora.** Me lo sugirieron 15 vídeos mirados, pero al comprobarlo con los 383 títulos no se sostiene: dentro de la misma búsqueda de historia, los títulos «locales» (reyes, batallas, España) tienen mediana 6.500 frente a 1.500 del resto. Se queda como etiqueta para medir, no como regla |
 | H5 | Temas de espacio con objeto físico en el primer fotograma superan a «por qué te pasa X» | Comparar por etiqueta `tema` cuando haya 5 de cada | Se quedan | Abierto; hoy 79/73/65 frente a 61/39 |

@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-18 22:45 — Nico (tarea programada del chat «Luna densa») — rama `main`
+**Hecho**: lectura a 48 h de YouTube Studio (16 vídeos) y TikTok Studio (4) → `estadisticas/studio.json`, `estadisticas/tiktok_studio.json` y tabla nueva en `motor/APRENDIZAJE.md`. H0 a favor (Luna densa 80,3 %, 6.700 vistas, 29,4 s por vista). H7 a favor en YouTube (vídeos con la regla: 57–71 %; antes: 35–64 %), sin confirmar en TikTok.
+**Aviso**: `rEiiPtGXz84` y `tp7XFLAIkS0` (18-11 mañana) con 7 y 8 vistas tras 12 h → TASKS.
+**Pruebas**: solo lectura en el navegador del Mac de Nico; nada publicado ni cambiado en las cuentas.
+**Siguiente paso**: mirar la visibilidad de esos dos vídeos; repetir la lectura cuando los del 18 tengan 48 h.
+
 ## 2026-11-18 21:10 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-18-tarde «pendiente de voz»
 **Qué pasó**: el Mac de Jorge contestó solo un momento (20:07–20:09: reserva y créditos, 27.748). Luego el puente se cayó y no volvió (comprobado cada 5 min hasta las 21:10).
 **Hecho sin el Mac**: 3 temas verificados (≥ 2 fuentes cada dato): 01 «GTA 6 tardó 13 años» (reservado por Jorge), 02 «Este terrón pesa una montaña» (estrella de neutrones), 03 «Ahora mides menos» (discos de la columna; **experimento: gancho en segunda persona**). `guiones.md`, `metadatos.json` (títulos, textos, comentario, etiquetas), temas a «Usados» en `IDEAS.md`. Generadores del método denso (`generadores/gen_0N.py`, 35–39 planos; `ilus_tarde.py`, 38 SVG nuevos sin logos ni personajes), hojas de fotogramas revisadas con tiempos provisionales y corregidas (relojes ≤ 2 en el 03, platos sin el dibujo de Zanzíbar, sin «→» que la fuente no tiene).

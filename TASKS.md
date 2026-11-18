@@ -9,7 +9,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **YouTube hecho** (01 público `dOdQj9QyoBI`; 02 programado 23:59 `cjSc0D_gOaI`). Falta: TikTok de los dos (Nico tiene que elegir el archivo en el navegador integrado), portada por fotograma en Studio, comentarios fijados
 
 ## Pendiente
-- [ ] Lectura a 48 h de YouTube Studio y TikTok Studio (vídeos del 16 y 17; curvas de Huellas y Luna densa; cerrar H0 y H7 en `motor/APRENDIZAJE.md`): **no se pudo hacer el 2026-11-18 a las 22:30**, el Mac de Nico no estaba conectado. Hacerla con `herramientas/studio_shorts.js` y `herramientas/tiktok_retencion.js` en cuanto haya un Mac encendido — Nico/Jorge
+- [ ] Comprobar en Studio por qué «La Gran Muralla» (`rEiiPtGXz84`) y «Tu perro copia tus bostezos» (`tp7XFLAIkS0`) llevan 7 y 8 vistas tras 12 h (¿visibilidad?, ¿restricción?) — Nico/Jorge
 - [ ] **Jorge: publicar en TikTok el lote 2026-11-18-manana (01, 02 y 03 v1, con «ok»)** desde su ordenador. MP4 en el chat https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 (misma cuenta de Claude; también en el Mac de Nico, `Documents/Parece Mentira/lotes/2026-11-18-manana/`). Comprobar SHA-256 con `estado.md`. Textos en `lotes/2026-11-18-manana/metadatos.json` → `tiktok.texto`; portada = fotograma `portada.t`; comentario = `comentario`. Antes, mirar en TikTok Studio que no estén ya. Luego apuntar los enlaces en `estado.md` y `ficha publicar … tiktok=<número>` — pedido por Nico 2026-11-18 ≈09:00 — Jorge
 - [ ] **Estudio — decidir el público objetivo** (edades y países) y apuntarlo en `estadisticas/estudio/objetivo.json` y `DECISIONS.md`. Dato para decidir: en YouTube el 49 % de la audiencia tiene 35 años o más y solo el 42 % está en 18–34; 67 % hombres; España 25 %, Latinoamérica 72 % (`estadisticas/datos/estudio.md` §5) — Nico/Jorge
 - [ ] **Estudio — confirmar la ficha de variables en AGENTE §6** (está «en prueba»): cada vídeo lleva su ficha antes de entregar. Si no convence, se quita el punto de AGENTE §6 y §8 — Nico/Jorge
@@ -24,9 +24,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Añadir `thumb.wikimedia.org` a los dominios permitidos (claude.ai → Settings → Capabilities) o cambiar `motor/openverse.py` para no usarlo: sin eso el experimento «plano real» falla en el Mac (403, lote 2026-11-17-manana) — Nico/Jorge
 - [ ] Copia de `motor/` del Mac de Nico desactualizada (commit f47be02, sin `denso.py`, `calidad.py`, `guion.py`): actualizarla si se quiere montar en el Mac; hoy se monta en la nube — Nico
 - [ ] Ver la Luna v8 (normal y palabra) y el micro-Short de 8 s; decidir H1 (subtítulo de palabra) y H8 (un micro-Short por semana). H2 (vídeo corto) ya no se recomienda. Ver `REPORTE_NOCHE_2026-11-17.md` §6 — Nico/Jorge
-- [ ] 2026-11-18: releer Studio de los 3 vídeos del 2026-11-16-tarde (a las 48 h) y mirar la curva de retención de Huellas y Luna densa cuando YouTube la dé («No hay suficientes datos» el 17) — Nico/Jorge
 - [ ] Decidir experimentos de `motor/APRENDIZAJE.md`: H1 subtítulo «palabra» en 1 de 3 vídeos; H2 un vídeo de 30–38 s por lote (cambia la regla de 150–160 palabras) — Nico/Jorge
-- [ ] 2026-11-19: leer en Studio el % medio visto de la Luna densa (`jQmhf8o1PfY`) y cerrar H0 en `motor/APRENDIZAJE.md` — Nico/Jorge
 - [ ] Decidir tras leer `motor/GUIA_CALIDAD.md` §10: límite inferior de texto (1400 o 1250), volumen de la música (−13 dB), y si se republica la Luna con la v5 — Nico/Jorge
 - [ ] Apuntar en `estadisticas/` «vistos frente a deslizados» y «% medio visto» de cada vídeo a 48 h y 7 días (empezar por la Luna densa `jQmhf8o1PfY`) — Nico/Jorge
 - [ ] Verificar el canal de YouTube (teléfono, en Studio) para poder fijar comentarios — Nico/Jorge
@@ -58,6 +56,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lectura a 48 h de YouTube Studio y TikTok Studio (16 vídeos) y estado de H0 y H7 en `motor/APRENDIZAJE.md` — Nico (tarea programada) — 2026-11-18 22:45
 - [x] Jorge: publicar en TikTok el lote 2026-11-18-manana — los 3 publicados (7709545960136920342 · 7709546579622923542 · 7709547350464662806), portada con texto y comentario (sin fijar: la web no deja) — Jorge — 2026-11-18 15:25
 - [x] Mac de Jorge con permiso de subida de YouTube (`YT_UPLOAD_REFRESH_TOKEN` en su claves.txt) y lote 2026-11-17-tarde en YouTube (cebolla dMcGHyKbeaA; Sol G_xEqU97krk programado 15:49; rayo dOdQj9QyoBI) — Agente 20:00 (Jorge) — 2026-11-18
 - [x] Lote 2026-11-18-manana (día de 18 horas, Gran Muralla no se ve, perro que copia bostezos): **«ok» y en YouTube** (5pSKNws_e-s público · rEiiPtGXz84 09:50 · tp7XFLAIkS0 10:50); TikTok lo sube Jorge (Pendiente). Antes: 3 vídeos v1 en revisión (método denso, `motor.calidad` sin ❌, 95/95/91; experimento: gancho de negación en el 02); esperan el «ok» en https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 (correo `1a1ed968a22c00b4`) — Agente 08:00 (Nico) — 2026-11-18 08:55

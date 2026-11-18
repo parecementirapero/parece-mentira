@@ -1,32 +1,46 @@
 {
  "_instrucciones": "Datos que solo da YouTube Studio (no la API). El agente de los lotes los apunta al arrancar: Studio → vídeo → Estadísticas → «Cómo han interactuado los usuarios» → % «Se quedaron viendo» (lo contrario de deslizar). Clave: id de YouTube. Desde el 2026-11-17 se apuntan también vistas, horas de visualización y hora de la lectura (herramientas/studio_shorts.js); seg_por_vista = horas×3600/vistas.",
  "XGf1wOPygU8": {
-  "seQuedan": 52.1,
-  "fecha": "2026-11-17",
-  "hora": "00:25",
-  "vistas": 1100,
-  "horas": 5.3,
+  "seQuedan": 52.0,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 1200,
+  "horas": 5.6,
   "duracion": 47,
-  "seg_por_vista": 17.3,
+  "seg_por_vista": 16.8,
   "antes": [
    {
     "seQuedan": 55.6,
     "fecha": "2026-11-16"
+   },
+   {
+    "seQuedan": 52.1,
+    "fecha": "2026-11-17",
+    "hora": "00:25",
+    "vistas": 1100,
+    "horas": 5.3
    }
   ]
  },
  "bS6AUPYxr7s": {
-  "seQuedan": 60.4,
-  "fecha": "2026-11-17",
-  "hora": "00:25",
-  "vistas": 1300,
-  "horas": 6.6,
+  "seQuedan": 60.1,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 1400,
+  "horas": 6.9,
   "duracion": 53,
-  "seg_por_vista": 18.3,
+  "seg_por_vista": 17.7,
   "antes": [
    {
     "seQuedan": 60.5,
     "fecha": "2026-11-16"
+   },
+   {
+    "seQuedan": 60.4,
+    "fecha": "2026-11-17",
+    "hora": "00:25",
+    "vistas": 1300,
+    "horas": 6.6
    }
   ]
  },
@@ -35,13 +49,13 @@
   "fecha": "2026-11-16"
  },
  "D_2cV1qhmfA": {
-  "seQuedan": 80.1,
-  "fecha": "2026-11-17",
-  "hora": "01:37",
-  "vistas": 8000,
-  "horas": 58.8,
+  "seQuedan": 81.4,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 13500,
+  "horas": 108.4,
   "duracion": 48,
-  "seg_por_vista": 26.5,
+  "seg_por_vista": 28.9,
   "antes": [
    {
     "seQuedan": 76.5,
@@ -53,17 +67,24 @@
     "hora": "00:25",
     "vistas": 7400,
     "horas": 54.4
+   },
+   {
+    "seQuedan": 80.1,
+    "fecha": "2026-11-17",
+    "hora": "01:37",
+    "vistas": 8000,
+    "horas": 58.8
    }
   ]
  },
  "7PoER_sR6R0": {
-  "seQuedan": 60.5,
-  "fecha": "2026-11-17",
-  "hora": "01:37",
-  "vistas": 1700,
-  "horas": 10.3,
+  "seQuedan": 63.5,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 2200,
+  "horas": 14.4,
   "duracion": 58,
-  "seg_por_vista": 21.8,
+  "seg_por_vista": 23.6,
   "antes": [
    {
     "seQuedan": 60.6,
@@ -71,17 +92,24 @@
     "hora": "00:25",
     "vistas": 1800,
     "horas": 10.3
+   },
+   {
+    "seQuedan": 60.5,
+    "fecha": "2026-11-17",
+    "hora": "01:37",
+    "vistas": 1700,
+    "horas": 10.3
    }
   ]
  },
  "cTRgkuY21mw": {
-  "seQuedan": 47.4,
-  "fecha": "2026-11-17",
-  "hora": "01:37",
+  "seQuedan": 47.7,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
   "vistas": 1400,
-  "horas": 6.9,
+  "horas": 7.7,
   "duracion": 55,
-  "seg_por_vista": 17.7,
+  "seg_por_vista": 19.8,
   "antes": [
    {
     "seQuedan": 38.9,
@@ -89,17 +117,24 @@
     "hora": "00:25",
     "vistas": 612,
     "horas": 3.1
+   },
+   {
+    "seQuedan": 47.4,
+    "fecha": "2026-11-17",
+    "hora": "01:37",
+    "vistas": 1400,
+    "horas": 6.9
    }
   ]
  },
  "hfRveipHIdk": {
-  "seQuedan": 32.0,
-  "fecha": "2026-11-17",
-  "hora": "01:37",
-  "vistas": 533,
-  "horas": 1.2,
+  "seQuedan": 35.2,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 1100,
+  "horas": 3.5,
   "duracion": 52,
-  "seg_por_vista": 8.1,
+  "seg_por_vista": 11.5,
   "antes": [
    {
     "seQuedan": 26.5,
@@ -107,17 +142,24 @@
     "hora": "00:25",
     "vistas": 55,
     "horas": 0.1
+   },
+   {
+    "seQuedan": 32.0,
+    "fecha": "2026-11-17",
+    "hora": "01:37",
+    "vistas": 533,
+    "horas": 1.2
    }
   ]
  },
  "jQmhf8o1PfY": {
-  "seQuedan": 74.1,
-  "fecha": "2026-11-17",
-  "hora": "01:37",
-  "vistas": 2500,
-  "horas": 19.9,
+  "seQuedan": 80.3,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 6700,
+  "horas": 54.8,
   "duracion": 55,
-  "seg_por_vista": 28.7,
+  "seg_por_vista": 29.4,
   "antes": [
    {
     "seQuedan": 73.3,
@@ -125,7 +167,95 @@
     "hora": "00:25",
     "vistas": 2400,
     "horas": 18.6
+   },
+   {
+    "seQuedan": 74.1,
+    "fecha": "2026-11-17",
+    "hora": "01:37",
+    "vistas": 2500,
+    "horas": 19.9
    }
   ]
+ },
+ "bja3TleMy94": {
+  "seQuedan": 64.8,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 1400,
+  "horas": 9.3,
+  "duracion": 59,
+  "seg_por_vista": 23.9
+ },
+ "aA9ji1Y1EPA": {
+  "seQuedan": 67.4,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 2200,
+  "horas": 16.3,
+  "duracion": 56,
+  "seg_por_vista": 26.7
+ },
+ "0LBq1SkOWz4": {
+  "seQuedan": 71.3,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 2800,
+  "horas": 19.4,
+  "duracion": 59,
+  "seg_por_vista": 24.9
+ },
+ "dOdQj9QyoBI": {
+  "seQuedan": 56.9,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 1600,
+  "horas": 8.0,
+  "duracion": 55,
+  "seg_por_vista": 18.0
+ },
+ "G_xEqU97krk": {
+  "seQuedan": 65.2,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 373,
+  "horas": 2.2,
+  "duracion": 55,
+  "seg_por_vista": 21.2
+ },
+ "dMcGHyKbeaA": {
+  "seQuedan": 60.8,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 1100,
+  "horas": 5.2,
+  "duracion": 57,
+  "seg_por_vista": 17.0
+ },
+ "5pSKNws_e-s": {
+  "seQuedan": 64.3,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 316,
+  "horas": 1.9,
+  "duracion": 60,
+  "seg_por_vista": 21.6
+ },
+ "rEiiPtGXz84": {
+  "seQuedan": 41.7,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 7,
+  "horas": 0.0,
+  "duracion": 59,
+  "seg_por_vista": null
+ },
+ "tp7XFLAIkS0": {
+  "seQuedan": 54.6,
+  "fecha": "2026-11-18",
+  "hora": "22:35",
+  "vistas": 8,
+  "horas": 0.0,
+  "duracion": 60,
+  "seg_por_vista": null
  }
 }
