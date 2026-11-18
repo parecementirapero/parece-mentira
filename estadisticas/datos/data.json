@@ -1,76 +1,76 @@
 {
- "generado": "2026-11-17T09:21:52+01:00",
+ "generado": "2026-11-18T09:19:09+01:00",
  "ejemplo": false,
  "youtubeExtra": {
   "desde": "2026-11-01",
   "paises": [
    [
     "ES",
-    1561,
-    277
+    3143,
+    740
    ],
    [
     "MX",
-    1236,
-    259
+    2382,
+    668
    ],
    [
     "AR",
-    908,
-    223
+    1422,
+    426
    ],
    [
     "CL",
-    581,
-    123
-   ],
-   [
-    "CO",
-    537,
-    120
+    866,
+    257
    ],
    [
     "PE",
-    533,
-    109
+    849,
+    270
+   ],
+   [
+    "CO",
+    814,
+    216
    ],
    [
     "VE",
-    289,
-    57
-   ],
-   [
-    "BO",
-    272,
-    51
+    401,
+    96
    ],
    [
     "US",
-    214,
-    50
+    375,
+    102
    ],
    [
-    "EC",
-    169,
-    60
+    "BO",
+    335,
+    74
+   ],
+   [
+    "DO",
+    269,
+    72
    ]
   ],
   "dispositivos": [
    [
     "MOBILE",
-    5613
+    9059
    ],
    [
     "TV",
-    850
+    2116
    ],
    [
     "TABLET",
-    747
+    1137
    ],
    [
     "DESKTOP",
-    137
+    256
    ]
   ],
   "suscritos": [
@@ -81,60 +81,60 @@
    ],
    [
     "UNSUBSCRIBED",
-    7352,
-    74.25
+    12581,
+    74.06
    ]
   ],
   "edadGenero": [
    [
     "age13-17",
     "female",
-    2.3
+    2.1
    ],
    [
     "age13-17",
     "male",
-    6
+    5.8
    ],
    [
     "age18-24",
     "female",
-    2
+    1.9
    ],
    [
     "age18-24",
     "male",
+    10.2
+   ],
+   [
+    "age25-34",
+    "female",
+    8.7
+   ],
+   [
+    "age25-34",
+    "male",
+    22.2
+   ],
+   [
+    "age35-44",
+    "female",
     10
    ],
    [
-    "age25-34",
-    "female",
-    9
-   ],
-   [
-    "age25-34",
-    "male",
-    21.2
-   ],
-   [
-    "age35-44",
-    "female",
-    11.1
-   ],
-   [
     "age35-44",
     "male",
-    12.8
+    13.7
    ],
    [
     "age45-54",
     "female",
-    5.2
+    5
    ],
    [
     "age45-54",
     "male",
-    9.4
+    9.6
    ],
    [
     "age55-64",
@@ -144,35 +144,35 @@
    [
     "age55-64",
     "male",
-    4
+    4.5
    ],
    [
     "age65-",
     "female",
-    1.7
+    1.5
    ],
    [
     "age65-",
     "male",
-    3.5
+    3.3
    ]
   ],
   "fuentes": [
    [
     "Feed de Shorts",
-    7122
+    12095
    ],
    [
     "Búsqueda",
-    169
+    334
    ],
    [
     "Otras páginas de YouTube",
-    40
+    100
    ],
    [
     "Página del canal",
-    19
+    50
    ],
    [
     "Listas",
@@ -185,40 +185,44 @@
    [
     "Suscripciones",
     0
+   ],
+   [
+    "Notificaciones",
+    0
    ]
   ],
   "sistemas": [
    [
     "ANDROID",
-    6126
+    9934
    ],
    [
     "IOS",
-    565
+    1085
    ],
    [
     "SMART_TV",
-    189
-   ],
-   [
-    "WEBOS",
-    128
-   ],
-   [
-    "WINDOWS",
-    123
+    399
    ],
    [
     "ROKUOS",
-    65
+    256
+   ],
+   [
+    "WEBOS",
+    240
+   ],
+   [
+    "WINDOWS",
+    217
    ]
   ]
  },
  "canal": "Parece Mentira",
  "canalTotales": {
-  "suscriptores": 21,
-  "vistas": 10773,
-  "videos": 8
+  "suscriptores": 34,
+  "vistas": 29360,
+  "videos": 13
  },
  "videos": [
   {
@@ -228,20 +232,431 @@
    "fecha": "2026-11-15",
    "hora": "17:38",
    "duracion": 48,
-   "vistas": 10046,
-   "likes": 118,
+   "vistas": 13480,
+   "likes": 131,
    "comentarios": 0,
-   "compartidos": null,
-   "subs": null,
-   "vistasEnganchadas": null,
-   "minutosVistos": null,
-   "duracionMedia": null,
-   "pctVisto": null,
-   "retencion3s": null,
-   "curva": null,
-   "fuentes": null,
-   "vistasDia": null,
-   "horasPublicado": 39.7,
+   "compartidos": 0,
+   "subs": 1,
+   "vistasEnganchadas": 1440,
+   "minutosVistos": 962,
+   "duracionMedia": 39,
+   "pctVisto": 82.2,
+   "retencion3s": 125.3,
+   "curva": [
+    [
+     0.01,
+     150.6
+    ],
+    [
+     0.02,
+     147.8
+    ],
+    [
+     0.03,
+     138.8
+    ],
+    [
+     0.04,
+     132.4
+    ],
+    [
+     0.05,
+     129.0
+    ],
+    [
+     0.06,
+     125.3
+    ],
+    [
+     0.07,
+     122.8
+    ],
+    [
+     0.08,
+     120.8
+    ],
+    [
+     0.09,
+     119.7
+    ],
+    [
+     0.1,
+     116.4
+    ],
+    [
+     0.11,
+     113.5
+    ],
+    [
+     0.12,
+     111.7
+    ],
+    [
+     0.13,
+     110.6
+    ],
+    [
+     0.14,
+     109.7
+    ],
+    [
+     0.15,
+     108.7
+    ],
+    [
+     0.16,
+     108.1
+    ],
+    [
+     0.17,
+     107.6
+    ],
+    [
+     0.18,
+     106.4
+    ],
+    [
+     0.19,
+     105.6
+    ],
+    [
+     0.2,
+     104.3
+    ],
+    [
+     0.21,
+     103.7
+    ],
+    [
+     0.22,
+     103.1
+    ],
+    [
+     0.23,
+     102.5
+    ],
+    [
+     0.24,
+     101.4
+    ],
+    [
+     0.25,
+     99.0
+    ],
+    [
+     0.26,
+     98.1
+    ],
+    [
+     0.27,
+     96.5
+    ],
+    [
+     0.28,
+     95.1
+    ],
+    [
+     0.29,
+     94.0
+    ],
+    [
+     0.3,
+     93.1
+    ],
+    [
+     0.31,
+     92.4
+    ],
+    [
+     0.32,
+     91.9
+    ],
+    [
+     0.33,
+     91.0
+    ],
+    [
+     0.34,
+     90.4
+    ],
+    [
+     0.35,
+     90.1
+    ],
+    [
+     0.36,
+     89.7
+    ],
+    [
+     0.37,
+     89.2
+    ],
+    [
+     0.38,
+     88.2
+    ],
+    [
+     0.39,
+     87.5
+    ],
+    [
+     0.4,
+     87.1
+    ],
+    [
+     0.41,
+     86.2
+    ],
+    [
+     0.42,
+     86.0
+    ],
+    [
+     0.43,
+     84.9
+    ],
+    [
+     0.44,
+     84.5
+    ],
+    [
+     0.45,
+     84.0
+    ],
+    [
+     0.46,
+     83.3
+    ],
+    [
+     0.47,
+     82.6
+    ],
+    [
+     0.48,
+     82.2
+    ],
+    [
+     0.49,
+     81.3
+    ],
+    [
+     0.5,
+     80.6
+    ],
+    [
+     0.51,
+     80.0
+    ],
+    [
+     0.52,
+     79.9
+    ],
+    [
+     0.53,
+     79.4
+    ],
+    [
+     0.54,
+     79.0
+    ],
+    [
+     0.55,
+     78.8
+    ],
+    [
+     0.56,
+     78.5
+    ],
+    [
+     0.57,
+     78.1
+    ],
+    [
+     0.58,
+     77.6
+    ],
+    [
+     0.59,
+     76.9
+    ],
+    [
+     0.6,
+     76.2
+    ],
+    [
+     0.61,
+     75.8
+    ],
+    [
+     0.62,
+     75.5
+    ],
+    [
+     0.63,
+     75.3
+    ],
+    [
+     0.64,
+     75.1
+    ],
+    [
+     0.65,
+     74.4
+    ],
+    [
+     0.66,
+     74.0
+    ],
+    [
+     0.67,
+     73.7
+    ],
+    [
+     0.68,
+     73.1
+    ],
+    [
+     0.69,
+     73.1
+    ],
+    [
+     0.7,
+     71.8
+    ],
+    [
+     0.71,
+     70.3
+    ],
+    [
+     0.72,
+     69.1
+    ],
+    [
+     0.73,
+     67.6
+    ],
+    [
+     0.74,
+     66.5
+    ],
+    [
+     0.75,
+     66.4
+    ],
+    [
+     0.76,
+     64.2
+    ],
+    [
+     0.77,
+     61.9
+    ],
+    [
+     0.78,
+     60.8
+    ],
+    [
+     0.79,
+     59.8
+    ],
+    [
+     0.8,
+     59.4
+    ],
+    [
+     0.81,
+     58.9
+    ],
+    [
+     0.82,
+     58.3
+    ],
+    [
+     0.83,
+     58.0
+    ],
+    [
+     0.84,
+     57.9
+    ],
+    [
+     0.85,
+     57.7
+    ],
+    [
+     0.86,
+     57.1
+    ],
+    [
+     0.87,
+     56.9
+    ],
+    [
+     0.88,
+     56.7
+    ],
+    [
+     0.89,
+     56.7
+    ],
+    [
+     0.9,
+     56.5
+    ],
+    [
+     0.91,
+     55.9
+    ],
+    [
+     0.92,
+     55.7
+    ],
+    [
+     0.93,
+     55.4
+    ],
+    [
+     0.94,
+     55.4
+    ],
+    [
+     0.95,
+     55.3
+    ],
+    [
+     0.96,
+     55.1
+    ],
+    [
+     0.97,
+     54.9
+    ],
+    [
+     0.98,
+     53.7
+    ],
+    [
+     0.99,
+     30.3
+    ],
+    [
+     1,
+     30.3
+    ]
+   ],
+   "fuentes": {
+    "Feed de Shorts": 95.5,
+    "Búsqueda": 3.0,
+    "Otras páginas de YouTube": 0.8,
+    "Página del canal": 0.7
+   },
+   "vistasDia": [
+    [
+     "2026-11-15",
+     2445
+    ]
+   ],
+   "horasPublicado": 63.7,
    "lote": "prueba-v2-huellas-luna",
    "etiquetas": {
     "tema": "Espacio",
@@ -251,7 +666,105 @@
     "estructura": "comparación",
     "experimento": "no"
    },
-   "tema": "Espacio"
+   "tema": "Espacio",
+   "audiencia": {
+    "hasta": "2026-11-18",
+    "vistas": 2155,
+    "edadGenero": [
+     [
+      "age13-17",
+      "male",
+      5.3
+     ],
+     [
+      "age18-24",
+      "male",
+      7.4
+     ],
+     [
+      "age25-34",
+      "female",
+      11
+     ],
+     [
+      "age25-34",
+      "male",
+      31.4
+     ],
+     [
+      "age35-44",
+      "female",
+      13.3
+     ],
+     [
+      "age35-44",
+      "male",
+      15.9
+     ],
+     [
+      "age45-54",
+      "female",
+      5.7
+     ],
+     [
+      "age45-54",
+      "male",
+      10
+     ]
+    ],
+    "paises": [
+     [
+      "MX",
+      725,
+      299
+     ],
+     [
+      "ES",
+      512,
+      160
+     ],
+     [
+      "AR",
+      208,
+      84
+     ],
+     [
+      "PE",
+      181,
+      116
+     ],
+     [
+      "CO",
+      150,
+      58
+     ],
+     [
+      "CL",
+      115,
+      33
+     ],
+     [
+      "US",
+      95,
+      34
+     ],
+     [
+      "VE",
+      67,
+      26
+     ],
+     [
+      "DO",
+      57,
+      20
+     ],
+     [
+      "HN",
+      45,
+      16
+     ]
+    ]
+   }
   },
   {
    "id": "bS6AUPYxr7s",
@@ -260,20 +773,431 @@
    "fecha": "2026-11-15",
    "hora": "23:46",
    "duracion": 53,
-   "vistas": 1415,
+   "vistas": 1436,
    "likes": 34,
    "comentarios": 0,
-   "compartidos": null,
-   "subs": null,
-   "vistasEnganchadas": null,
-   "minutosVistos": null,
-   "duracionMedia": null,
-   "pctVisto": null,
-   "retencion3s": null,
-   "curva": null,
-   "fuentes": null,
-   "vistasDia": null,
-   "horasPublicado": 33.6,
+   "compartidos": 0,
+   "subs": 2,
+   "vistasEnganchadas": 723,
+   "minutosVistos": 359,
+   "duracionMedia": 29,
+   "pctVisto": 54.8,
+   "retencion3s": 115.9,
+   "curva": [
+    [
+     0.01,
+     125.4
+    ],
+    [
+     0.02,
+     122.1
+    ],
+    [
+     0.03,
+     119.8
+    ],
+    [
+     0.04,
+     118.7
+    ],
+    [
+     0.05,
+     116.7
+    ],
+    [
+     0.06,
+     115.9
+    ],
+    [
+     0.07,
+     115.1
+    ],
+    [
+     0.08,
+     113.8
+    ],
+    [
+     0.09,
+     111.3
+    ],
+    [
+     0.1,
+     109.5
+    ],
+    [
+     0.11,
+     105.1
+    ],
+    [
+     0.12,
+     99.9
+    ],
+    [
+     0.13,
+     93.0
+    ],
+    [
+     0.14,
+     87.5
+    ],
+    [
+     0.15,
+     83.8
+    ],
+    [
+     0.16,
+     82.0
+    ],
+    [
+     0.17,
+     81.0
+    ],
+    [
+     0.18,
+     80.1
+    ],
+    [
+     0.19,
+     78.3
+    ],
+    [
+     0.2,
+     76.3
+    ],
+    [
+     0.21,
+     74.5
+    ],
+    [
+     0.22,
+     71.5
+    ],
+    [
+     0.23,
+     68.7
+    ],
+    [
+     0.24,
+     66.2
+    ],
+    [
+     0.25,
+     63.1
+    ],
+    [
+     0.26,
+     62.0
+    ],
+    [
+     0.27,
+     61.4
+    ],
+    [
+     0.28,
+     59.3
+    ],
+    [
+     0.29,
+     58.5
+    ],
+    [
+     0.3,
+     56.7
+    ],
+    [
+     0.31,
+     55.6
+    ],
+    [
+     0.32,
+     54.4
+    ],
+    [
+     0.33,
+     53.5
+    ],
+    [
+     0.34,
+     52.6
+    ],
+    [
+     0.35,
+     51.7
+    ],
+    [
+     0.36,
+     51.5
+    ],
+    [
+     0.37,
+     50.9
+    ],
+    [
+     0.38,
+     50.6
+    ],
+    [
+     0.39,
+     50.5
+    ],
+    [
+     0.4,
+     49.9
+    ],
+    [
+     0.41,
+     49.2
+    ],
+    [
+     0.42,
+     49.0
+    ],
+    [
+     0.43,
+     48.5
+    ],
+    [
+     0.44,
+     48.1
+    ],
+    [
+     0.45,
+     47.6
+    ],
+    [
+     0.46,
+     47.3
+    ],
+    [
+     0.47,
+     47.0
+    ],
+    [
+     0.48,
+     46.8
+    ],
+    [
+     0.49,
+     46.8
+    ],
+    [
+     0.5,
+     46.3
+    ],
+    [
+     0.51,
+     45.8
+    ],
+    [
+     0.52,
+     45.5
+    ],
+    [
+     0.53,
+     45.4
+    ],
+    [
+     0.54,
+     45.1
+    ],
+    [
+     0.55,
+     44.7
+    ],
+    [
+     0.56,
+     44.7
+    ],
+    [
+     0.57,
+     44.7
+    ],
+    [
+     0.58,
+     44.4
+    ],
+    [
+     0.59,
+     44.1
+    ],
+    [
+     0.6,
+     43.9
+    ],
+    [
+     0.61,
+     43.7
+    ],
+    [
+     0.62,
+     43.7
+    ],
+    [
+     0.63,
+     43.4
+    ],
+    [
+     0.64,
+     43.3
+    ],
+    [
+     0.65,
+     43.0
+    ],
+    [
+     0.66,
+     42.7
+    ],
+    [
+     0.67,
+     42.6
+    ],
+    [
+     0.68,
+     42.6
+    ],
+    [
+     0.69,
+     42.5
+    ],
+    [
+     0.7,
+     42.5
+    ],
+    [
+     0.71,
+     42.5
+    ],
+    [
+     0.72,
+     42.6
+    ],
+    [
+     0.73,
+     42.0
+    ],
+    [
+     0.74,
+     41.8
+    ],
+    [
+     0.75,
+     41.6
+    ],
+    [
+     0.76,
+     41.5
+    ],
+    [
+     0.77,
+     41.4
+    ],
+    [
+     0.78,
+     41.2
+    ],
+    [
+     0.79,
+     41.2
+    ],
+    [
+     0.8,
+     40.8
+    ],
+    [
+     0.81,
+     40.7
+    ],
+    [
+     0.82,
+     40.7
+    ],
+    [
+     0.83,
+     40.4
+    ],
+    [
+     0.84,
+     39.7
+    ],
+    [
+     0.85,
+     39.4
+    ],
+    [
+     0.86,
+     38.9
+    ],
+    [
+     0.87,
+     38.6
+    ],
+    [
+     0.88,
+     38.3
+    ],
+    [
+     0.89,
+     38.0
+    ],
+    [
+     0.9,
+     38.0
+    ],
+    [
+     0.91,
+     37.8
+    ],
+    [
+     0.92,
+     37.6
+    ],
+    [
+     0.93,
+     36.9
+    ],
+    [
+     0.94,
+     36.5
+    ],
+    [
+     0.95,
+     35.1
+    ],
+    [
+     0.96,
+     33.8
+    ],
+    [
+     0.97,
+     32.4
+    ],
+    [
+     0.98,
+     31.3
+    ],
+    [
+     0.99,
+     28.8
+    ],
+    [
+     1,
+     28.8
+    ]
+   ],
+   "fuentes": {
+    "Feed de Shorts": 96.9,
+    "Otras páginas de YouTube": 1.4,
+    "Búsqueda": 1.3,
+    "Página del canal": 0.5
+   },
+   "vistasDia": [
+    [
+     "2026-11-15",
+     1258
+    ]
+   ],
+   "horasPublicado": 57.5,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Histórico",
@@ -282,7 +1206,85 @@
     "estructura": "reconstrucción",
     "experimento": "no"
    },
-   "tema": "Histórico"
+   "tema": "Histórico",
+   "audiencia": {
+    "hasta": "2026-11-18",
+    "vistas": 1075,
+    "edadGenero": [
+     [
+      "age18-24",
+      "male",
+      20.1
+     ],
+     [
+      "age25-34",
+      "male",
+      45.6
+     ],
+     [
+      "age35-44",
+      "male",
+      22.1
+     ],
+     [
+      "age45-54",
+      "male",
+      12.2
+     ]
+    ],
+    "paises": [
+     [
+      "ES",
+      330,
+      119
+     ],
+     [
+      "MX",
+      201,
+      46
+     ],
+     [
+      "AR",
+      186,
+      50
+     ],
+     [
+      "CL",
+      111,
+      24
+     ],
+     [
+      "CO",
+      72,
+      22
+     ],
+     [
+      "PE",
+      69,
+      22
+     ],
+     [
+      "DO",
+      35,
+      11
+     ],
+     [
+      "PY",
+      24,
+      3
+     ],
+     [
+      "US",
+      24,
+      5
+     ],
+     [
+      "HN",
+      23,
+      5
+     ]
+    ]
+   }
   },
   {
    "id": "XGf1wOPygU8",
@@ -291,20 +1293,29 @@
    "fecha": "2026-11-15",
    "hora": "23:49",
    "duracion": 47,
-   "vistas": 1213,
+   "vistas": 1224,
    "likes": 19,
    "comentarios": 0,
-   "compartidos": null,
-   "subs": null,
-   "vistasEnganchadas": null,
-   "minutosVistos": null,
-   "duracionMedia": null,
-   "pctVisto": null,
+   "compartidos": 0,
+   "subs": 0,
+   "vistasEnganchadas": 4,
+   "minutosVistos": 1,
+   "duracionMedia": 24,
+   "pctVisto": 51.1,
    "retencion3s": null,
    "curva": null,
-   "fuentes": null,
-   "vistasDia": null,
-   "horasPublicado": 33.5,
+   "fuentes": {
+    "Página del canal": 50.0,
+    "Búsqueda": 25.0,
+    "Feed de Shorts": 25.0
+   },
+   "vistasDia": [
+    [
+     "2026-11-15",
+     4
+    ]
+   ],
+   "horasPublicado": 57.5,
    "lote": "2026-11-15-tarde",
    "etiquetas": {
     "tema": "Misterio",
@@ -313,7 +1324,8 @@
     "estructura": "misterio por pistas",
     "experimento": "no"
    },
-   "tema": "Misterio"
+   "tema": "Misterio",
+   "audiencia": null
   },
   {
    "id": "jQmhf8o1PfY",
@@ -322,8 +1334,8 @@
    "fecha": "2026-11-16",
    "hora": "20:51",
    "duracion": 55,
-   "vistas": 3158,
-   "likes": 34,
+   "vistas": 5080,
+   "likes": 51,
    "comentarios": 0,
    "compartidos": null,
    "subs": null,
@@ -335,7 +1347,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 12.5,
+   "horasPublicado": 36.5,
    "lote": "prueba-luna-densa",
    "etiquetas": {
     "tema": "Ciencia",
@@ -355,8 +1367,8 @@
    "fecha": "2026-11-16",
    "hora": "22:11",
    "duracion": 58,
-   "vistas": 1737,
-   "likes": 26,
+   "vistas": 2008,
+   "likes": 30,
    "comentarios": 1,
    "compartidos": null,
    "subs": null,
@@ -368,7 +1380,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 11.2,
+   "horasPublicado": 35.1,
    "lote": "2026-11-16-tarde",
    "etiquetas": {
     "tema": "Cotidiano",
@@ -390,7 +1402,7 @@
    "fecha": "2026-11-16",
    "hora": "23:15",
    "duracion": 55,
-   "vistas": 1448,
+   "vistas": 1486,
    "likes": 32,
    "comentarios": 2,
    "compartidos": null,
@@ -403,7 +1415,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 10.1,
+   "horasPublicado": 34.1,
    "lote": "2026-11-16-tarde",
    "etiquetas": {
     "tema": "Cotidiano",
@@ -425,7 +1437,7 @@
    "fecha": "2026-11-17",
    "hora": "00:15",
    "duracion": 52,
-   "vistas": 1124,
+   "vistas": 1187,
    "likes": 11,
    "comentarios": 1,
    "compartidos": null,
@@ -438,7 +1450,7 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 9.1,
+   "horasPublicado": 33.1,
    "lote": "2026-11-16-tarde",
    "etiquetas": {
     "tema": "Histórico",
@@ -460,7 +1472,112 @@
    "fecha": "2026-11-17",
    "hora": "09:04",
    "duracion": 59,
-   "vistas": 43,
+   "vistas": 1439,
+   "likes": 46,
+   "comentarios": 0,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 24.3,
+   "lote": null,
+   "etiquetas": {
+    "tema": "Ciencia",
+    "gancho": "dato",
+    "estructura": "experimento",
+    "experimento": "no",
+    "alcance": "universal",
+    "montaje": "denso",
+    "portada": "dato",
+    "lote": "2026-11-17-manana",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Ciencia"
+  },
+  {
+   "id": "aA9ji1Y1EPA",
+   "titulo": "Saturno flotaría en el agua 🪐🛁",
+   "url": "https://youtube.com/shorts/aA9ji1Y1EPA",
+   "fecha": "2026-11-17",
+   "hora": "10:05",
+   "duracion": 56,
+   "vistas": 2241,
+   "likes": 40,
+   "comentarios": 0,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 23.2,
+   "lote": null,
+   "etiquetas": {
+    "tema": "Espacio",
+    "gancho": "dato",
+    "estructura": "comparación",
+    "experimento": "no (el «plano real» de la NASA no se pudo descargar: thumb.wikimedia.org bloqueado)",
+    "alcance": "universal",
+    "montaje": "denso",
+    "portada": "arriba",
+    "lote": "2026-11-17-manana",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Espacio"
+  },
+  {
+   "id": "0LBq1SkOWz4",
+   "titulo": "Esta huella no es humana: es de un koala 🐨",
+   "url": "https://youtube.com/shorts/0LBq1SkOWz4",
+   "fecha": "2026-11-17",
+   "hora": "11:05",
+   "duracion": 59,
+   "vistas": 2232,
+   "likes": 52,
+   "comentarios": 0,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 22.2,
+   "lote": null,
+   "etiquetas": {
+    "tema": "Misterio",
+    "gancho": "negacion",
+    "estructura": "misterio por pistas",
+    "experimento": "gancho de negación (2.º dato tras el pulpo del 2026-11-16-manana)",
+    "alcance": "universal",
+    "montaje": "denso",
+    "portada": "dato",
+    "lote": "2026-11-17-manana",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Misterio"
+  },
+  {
+   "id": "cjSc0D_gOaI",
+   "titulo": "El Sol que ves ya es pasado ☀️⏳",
+   "url": "https://youtube.com/shorts/cjSc0D_gOaI",
+   "fecha": "2026-11-17",
+   "hora": "23:00",
+   "duracion": 0,
+   "vistas": 0,
    "likes": 0,
    "comentarios": 0,
    "compartidos": null,
@@ -473,12 +1590,90 @@
    "curva": null,
    "fuentes": null,
    "vistasDia": null,
-   "horasPublicado": 0.3,
-   "lote": null,
+   "horasPublicado": 10.3,
+   "lote": "2026-11-17-tarde",
    "etiquetas": {
-    "tema": "Ciencia"
+    "tema": "Espacio",
+    "lote": "2026-11-17-tarde",
+    "gancho": "dato",
+    "estructura": "reconstrucción",
+    "experimento": "no",
+    "alcance": "universal",
+    "montaje": "denso",
+    "portada": "abajo",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Espacio"
+  },
+  {
+   "id": "dOdQj9QyoBI",
+   "titulo": "Un rayo es 5 veces más caliente que el Sol ⚡☀️",
+   "url": "https://youtube.com/shorts/dOdQj9QyoBI",
+   "fecha": "2026-11-17",
+   "hora": "23:00",
+   "duracion": 55,
+   "vistas": 1457,
+   "likes": 32,
+   "comentarios": 1,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 10.3,
+   "lote": "2026-11-17-tarde",
+   "etiquetas": {
+    "tema": "Ciencia",
+    "lote": "2026-11-17-tarde",
+    "gancho": "contraste",
+    "estructura": "comparación",
+    "experimento": "no",
+    "alcance": "universal",
+    "montaje": "denso",
+    "portada": "centro",
+    "fuentes_en_descripcion": "no"
    },
    "tema": "Ciencia"
+  },
+  {
+   "id": "5pSKNws_e-s",
+   "titulo": "Hace 1.400 millones de años, un día duraba 18 horas 🌍🌙",
+   "url": "https://youtube.com/shorts/5pSKNws_e-s",
+   "fecha": "2026-11-18",
+   "hora": "08:43",
+   "duracion": 60,
+   "vistas": 102,
+   "likes": 0,
+   "comentarios": 1,
+   "compartidos": null,
+   "subs": null,
+   "vistasEnganchadas": null,
+   "minutosVistos": null,
+   "duracionMedia": null,
+   "pctVisto": null,
+   "retencion3s": null,
+   "curva": null,
+   "fuentes": null,
+   "vistasDia": null,
+   "horasPublicado": 0.6,
+   "lote": "2026-11-18-manana",
+   "etiquetas": {
+    "tema": "Espacio",
+    "lote": "2026-11-18-manana",
+    "gancho": "dato",
+    "estructura": "cadena de datos",
+    "experimento": "no",
+    "alcance": "universal",
+    "montaje": "denso",
+    "portada": "centro",
+    "fuentes_en_descripcion": "no"
+   },
+   "tema": "Espacio"
   }
  ],
  "diario": [
@@ -579,14 +1774,21 @@
    "minutos": 1143,
    "subs": 1,
    "likes": 96
+  },
+  {
+   "fecha": "2026-11-15",
+   "vistas": 5229,
+   "minutos": 1832,
+   "subs": 4,
+   "likes": 100
   }
  ],
  "tiktok": {
   "cuenta": "Parece Mentira",
   "totales": {
    "seguidores": 2,
-   "likes": 128,
-   "videos": 8
+   "likes": 162,
+   "videos": 10
   },
   "videos": [
    {
@@ -596,7 +1798,7 @@
     "fecha": "2026-11-15",
     "hora": "17:46",
     "duracion": 47,
-    "vistas": 617,
+    "vistas": 620,
     "likes": 20,
     "comentarios": 0,
     "compartidos": 0
@@ -608,7 +1810,7 @@
     "fecha": "2026-11-16",
     "hora": "22:21",
     "duracion": 51,
-    "vistas": 3,
+    "vistas": 4,
     "likes": 0,
     "comentarios": 0,
     "compartidos": 0
@@ -620,7 +1822,7 @@
     "fecha": "2026-11-16",
     "hora": "22:19",
     "duracion": 54,
-    "vistas": 237,
+    "vistas": 239,
     "likes": 8,
     "comentarios": 0,
     "compartidos": 0
@@ -632,7 +1834,7 @@
     "fecha": "2026-11-16",
     "hora": "22:18",
     "duracion": 57,
-    "vistas": 268,
+    "vistas": 273,
     "likes": 19,
     "comentarios": 1,
     "compartidos": 3
@@ -644,7 +1846,7 @@
     "fecha": "2026-11-16",
     "hora": "20:59",
     "duracion": 54,
-    "vistas": 273,
+    "vistas": 282,
     "likes": 10,
     "comentarios": 0,
     "compartidos": 0
@@ -656,7 +1858,7 @@
     "fecha": "2026-11-16",
     "hora": "00:02",
     "duracion": 46,
-    "vistas": 408,
+    "vistas": 409,
     "likes": 22,
     "comentarios": 0,
     "compartidos": 0
@@ -668,13 +1870,49 @@
     "fecha": "2026-11-16",
     "hora": "00:01",
     "duracion": 52,
-    "vistas": 424,
+    "vistas": 428,
     "likes": 25,
     "comentarios": 0,
     "compartidos": 6
+   },
+   {
+    "id": "7709084597069401366",
+    "titulo": "Esta huella no es humana: es de un koala 🐨 Los koalas tienen huellas dactilares con crestas, curvas y remolinos como las nuestras. A mediados de los 9",
+    "url": "https://www.tiktok.com/@parece.mentira85/video/7709084597069401366?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
+    "fecha": "2026-11-17",
+    "hora": "11:25",
+    "duracion": 58,
+    "vistas": 56,
+    "likes": 2,
+    "comentarios": 1,
+    "compartidos": 0
+   },
+   {
+    "id": "7709084200636255510",
+    "titulo": "Saturno flotaría en el agua 🪐🛁 Saturno es el único planeta menos denso que el agua: un cubito de 1 cm³ de Saturno pesaría de media 0,69 g. Y eso que e",
+    "url": "https://www.tiktok.com/@parece.mentira85/video/7709084200636255510?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
+    "fecha": "2026-11-17",
+    "hora": "11:24",
+    "duracion": 55,
+    "vistas": 231,
+    "likes": 21,
+    "comentarios": 0,
+    "compartidos": 0
+   },
+   {
+    "id": "7709083847450807574",
+    "titulo": "Este plátano es radiactivo (y tú también) 🍌☢️ Un plátano lleva casi medio gramo de potasio, y una pizca es potasio-40, un átomo inestable: unos 15 se ",
+    "url": "https://www.tiktok.com/@parece.mentira85/video/7709083847450807574?utm_campaign=tt4d_open_api&utm_source=sbawprrff18rhyxfns",
+    "fecha": "2026-11-17",
+    "hora": "11:22",
+    "duracion": 58,
+    "vistas": 241,
+    "likes": 11,
+    "comentarios": 1,
+    "compartidos": 1
    }
   ],
-  "permisoCaducaDias": 364
+  "permisoCaducaDias": 363
  },
  "instagram": null,
  "contenidos": [
@@ -731,7 +1969,40 @@
    "clave": "bja3TleMy94",
    "titulo": "Este plátano es radiactivo (y tú también) 🍌☢️",
    "fecha": "2026-11-17",
-   "youtube": "bja3TleMy94"
+   "youtube": "bja3TleMy94",
+   "tiktok": "7709083847450807574"
+  },
+  {
+   "clave": "aA9ji1Y1EPA",
+   "titulo": "Saturno flotaría en el agua 🪐🛁",
+   "fecha": "2026-11-17",
+   "youtube": "aA9ji1Y1EPA",
+   "tiktok": "7709084200636255510"
+  },
+  {
+   "clave": "0LBq1SkOWz4",
+   "titulo": "Esta huella no es humana: es de un koala 🐨",
+   "fecha": "2026-11-17",
+   "youtube": "0LBq1SkOWz4",
+   "tiktok": "7709084597069401366"
+  },
+  {
+   "clave": "cjSc0D_gOaI",
+   "titulo": "El Sol que ves ya es pasado ☀️⏳",
+   "fecha": "2026-11-17",
+   "youtube": "cjSc0D_gOaI"
+  },
+  {
+   "clave": "dOdQj9QyoBI",
+   "titulo": "Un rayo es 5 veces más caliente que el Sol ⚡☀️",
+   "fecha": "2026-11-17",
+   "youtube": "dOdQj9QyoBI"
+  },
+  {
+   "clave": "5pSKNws_e-s",
+   "titulo": "Hace 1.400 millones de años, un día duraba 18 horas 🌍🌙",
+   "fecha": "2026-11-18",
+   "youtube": "5pSKNws_e-s"
   }
  ],
  "historico": {
@@ -779,6 +2050,41 @@
     "7708861385387543830": 273,
     "7708537566387113238": 408,
     "7708537122914979094": 424
+   },
+   "instagram": {}
+  },
+  "2026-11-18": {
+   "seguidores": {
+    "youtube": 34,
+    "tiktok": 2,
+    "instagram": null
+   },
+   "youtube": {
+    "D_2cV1qhmfA": 13480,
+    "bS6AUPYxr7s": 1436,
+    "XGf1wOPygU8": 1224,
+    "jQmhf8o1PfY": 5080,
+    "7PoER_sR6R0": 2008,
+    "cTRgkuY21mw": 1486,
+    "hfRveipHIdk": 1187,
+    "bja3TleMy94": 1439,
+    "aA9ji1Y1EPA": 2241,
+    "0LBq1SkOWz4": 2232,
+    "cjSc0D_gOaI": 0,
+    "dOdQj9QyoBI": 1457,
+    "5pSKNws_e-s": 102
+   },
+   "tiktok": {
+    "7708440623040269590": 620,
+    "7708882489892179222": 4,
+    "7708882083015413014": 239,
+    "7708881722745703702": 273,
+    "7708861385387543830": 282,
+    "7708537566387113238": 409,
+    "7708537122914979094": 428,
+    "7709084597069401366": 56,
+    "7709084200636255510": 231,
+    "7709083847450807574": 241
    },
    "instagram": {}
   }

@@ -1,9 +1,9 @@
 {
- "generado": "2026-11-17T16:13+01:00",
+ "generado": "2026-11-18T09:19+01:00",
  "muestra": {
-  "videos": 10,
-  "con_ficha": 10,
-  "fichas_previas": 0,
+  "videos": 15,
+  "con_ficha": 15,
+  "fichas_previas": 5,
   "con_gancho_yt": 3,
   "definitivas_yt": 0,
   "con_retencion_tt": 3
@@ -37,9 +37,9 @@
   "yt_seg_por_vista": 18.3,
   "tt_medio_s": 16.52,
   "tt_completo": 16.1,
-  "yt_pct_visto": null,
-  "yt_vistas": 1299.0,
-  "tt_vistas": 418.0
+  "yt_pct_visto": 54.8,
+  "yt_vistas": 1449.0,
+  "tt_vistas": 277.0
  },
  "filas": [
   {
@@ -121,25 +121,25 @@
      "ultima_edad_h": 32.6
     },
     "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
+     "valor": 82.2,
+     "edad_h": 63.7,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 82.2,
+     "ultima_edad_h": 63.7
     },
     "yt_vistas": {
-     "valor": 5272,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 10046,
-     "ultima_edad_h": 39.7
+     "valor": 11122,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 13480,
+     "ultima_edad_h": 63.7
     },
     "tt_vistas": {
-     "valor": 614,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 617,
-     "ultima_edad_h": 39.6
+     "valor": 618,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 620,
+     "ultima_edad_h": 63.6
     }
    },
    "publicado": "2026-11-15T17:38+01:00"
@@ -224,25 +224,25 @@
      "ultima_edad_h": 26.3
     },
     "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
+     "valor": 54.8,
+     "edad_h": 57.6,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 54.8,
+     "ultima_edad_h": 57.6
     },
     "yt_vistas": {
-     "valor": 1299,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 1415,
-     "ultima_edad_h": 33.6
+     "valor": 1428,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 1436,
+     "ultima_edad_h": 57.6
     },
     "tt_vistas": {
-     "valor": 418,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 424,
-     "ultima_edad_h": 33.3
+     "valor": 426,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 428,
+     "ultima_edad_h": 57.3
     }
    },
    "publicado": "2026-11-15T23:46+01:00"
@@ -326,25 +326,25 @@
      "ultima_edad_h": 26.3
     },
     "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
+     "valor": 51.1,
+     "edad_h": 57.5,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 51.1,
+     "ultima_edad_h": 57.5
     },
     "yt_vistas": {
-     "valor": 888,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 1213,
-     "ultima_edad_h": 33.5
+     "valor": 1220,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 1224,
+     "ultima_edad_h": 57.5
     },
     "tt_vistas": {
-     "valor": 398,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 408,
-     "ultima_edad_h": 33.3
+     "valor": 409,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 409,
+     "ultima_edad_h": 57.3
     }
    },
    "publicado": "2026-11-15T23:49+01:00"
@@ -435,18 +435,18 @@
      "ultima_edad_h": null
     },
     "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 3158,
-     "ultima_edad_h": 12.5
+     "valor": 3968,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 5080,
+     "ultima_edad_h": 36.5
     },
     "tt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 273,
-     "ultima_edad_h": 12.4
+     "valor": 277,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 282,
+     "ultima_edad_h": 36.3
     }
    },
    "publicado": "2026-11-16T20:51+01:00"
@@ -537,18 +537,18 @@
      "ultima_edad_h": null
     },
     "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 1737,
-     "ultima_edad_h": 11.2
+     "valor": 1877,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 2008,
+     "ultima_edad_h": 35.1
     },
     "tt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 268,
-     "ultima_edad_h": 11.1
+     "valor": 271,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 273,
+     "ultima_edad_h": 35.0
     }
    },
    "publicado": "2026-11-16T22:11+01:00"
@@ -639,18 +639,18 @@
      "ultima_edad_h": null
     },
     "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 1448,
-     "ultima_edad_h": 10.1
+     "valor": 1470,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 1486,
+     "ultima_edad_h": 34.1
     },
     "tt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 237,
-     "ultima_edad_h": 11.0
+     "valor": 238,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 239,
+     "ultima_edad_h": 35.0
     }
    },
    "publicado": "2026-11-16T23:15+01:00"
@@ -741,18 +741,18 @@
      "ultima_edad_h": null
     },
     "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 1124,
-     "ultima_edad_h": 9.1
+     "valor": 1163,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 1187,
+     "ultima_edad_h": 33.1
     },
     "tt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 3,
-     "ultima_edad_h": 11.0
+     "valor": 4,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 4,
+     "ultima_edad_h": 35.0
     }
    },
    "publicado": "2026-11-17T00:15+01:00"
@@ -847,21 +847,127 @@
      "ultima_edad_h": null
     },
     "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 43,
-     "ultima_edad_h": 0.3
+     "valor": 1387,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 1439,
+     "ultima_edad_h": 24.3
     },
     "tt_vistas": {
      "valor": null,
      "edad_h": null,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 241,
+     "ultima_edad_h": 22.0
     }
    },
    "publicado": "2026-11-17T09:04+01:00"
+  },
+  {
+   "id": "aA9ji1Y1EPA",
+   "ficha": "2026-11-17-manana/02",
+   "titulo": "Saturno flotaría",
+   "variables": {
+    "lote": "2026-11-17-manana",
+    "numero": "02",
+    "momento": "retrospectivo",
+    "codificado": "2026-11-17",
+    "codificador": "Claude, 2026-11-17 (tema, gancho y estructura copiados de etiquetas.json, que se pusieron al publicar)",
+    "gancho_palabras": 5,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": false,
+    "gancho_negacion": false,
+    "gancho_pregunta": false,
+    "palabras": 155,
+    "preguntas": 2,
+    "nota_calidad": 90.0,
+    "cortes_min": 40.6,
+    "palabras_seg": 2.8,
+    "f0_movimiento": 6.45,
+    "youtube": "aA9ji1Y1EPA",
+    "tiktok": "7709084200636255510",
+    "instagram": "Df1uAQJxhjZ",
+    "tema": "Espacio",
+    "gancho": "dato",
+    "estructura": "comparación",
+    "reciclado": false,
+    "subtitulo": "karaoke",
+    "experimento": "no",
+    "brazo": "-",
+    "alcance": "universal",
+    "titulo": "Saturno flotaría",
+    "epoca": "sin época",
+    "f0_palabras": 5,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "remate": "pregunta",
+    "duracion_s": 56,
+    "montaje": "denso",
+    "voz": "clon",
+    "notas": "f0_palabras según el guion (gancho entero en pantalla), sin mirar el fotograma",
+    "hora": 10,
+    "dia_semana": "martes",
+    "turno": "mañana"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 2241,
+     "ultima_edad_h": 23.2
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 231,
+     "ultima_edad_h": 21.9
+    }
+   },
+   "publicado": "2026-11-17T10:05+01:00"
   },
   {
    "id": "0LBq1SkOWz4",
@@ -904,7 +1010,415 @@
     "duracion_s": 59,
     "montaje": "denso",
     "voz": "clon",
-    "notas": "f0_palabras según el guion (gancho entero en pantalla), sin mirar el fotograma"
+    "notas": "f0_palabras según el guion (gancho entero en pantalla), sin mirar el fotograma",
+    "hora": 11,
+    "dia_semana": "martes",
+    "turno": "mañana"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 2232,
+     "ultima_edad_h": 22.2
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 56,
+     "ultima_edad_h": 21.9
+    }
+   },
+   "publicado": "2026-11-17T11:05+01:00"
+  },
+  {
+   "id": "cjSc0D_gOaI",
+   "ficha": "2026-11-17-tarde/02",
+   "titulo": "cjSc0D_gOaI",
+   "variables": {
+    "lote": "2026-11-17-tarde",
+    "numero": "02",
+    "momento": "previo",
+    "codificado": "2026-11-17",
+    "codificador": "Agente 20:00 (Jorge)",
+    "gancho_palabras": 5,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": false,
+    "gancho_negacion": false,
+    "gancho_pregunta": false,
+    "palabras": 156,
+    "preguntas": 2,
+    "nota_calidad": 87.0,
+    "cortes_min": 30.6,
+    "palabras_seg": 2.88,
+    "f0_movimiento": 4.39,
+    "tema": "Espacio",
+    "alcance": "universal",
+    "epoca": "actual",
+    "gancho": "dato",
+    "f0_palabras": 5,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "estructura": "reconstrucción",
+    "remate": "pregunta",
+    "duracion_s": 54.6,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "cjSc0D_gOaI",
+    "hora": 23,
+    "dia_semana": "martes",
+    "turno": "tarde"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 0,
+     "ultima_edad_h": 10.3
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    }
+   },
+   "publicado": "2026-11-17T23:00+01:00"
+  },
+  {
+   "id": "dOdQj9QyoBI",
+   "ficha": "2026-11-17-tarde/01",
+   "titulo": "dOdQj9QyoBI",
+   "variables": {
+    "lote": "2026-11-17-tarde",
+    "numero": "01",
+    "momento": "previo",
+    "codificado": "2026-11-17",
+    "codificador": "Agente 20:00 (Jorge)",
+    "gancho_palabras": 5,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": false,
+    "gancho_negacion": false,
+    "gancho_pregunta": false,
+    "palabras": 150,
+    "preguntas": 2,
+    "nota_calidad": 84.0,
+    "cortes_min": 38.0,
+    "palabras_seg": 2.75,
+    "f0_movimiento": 25.63,
+    "tema": "Ciencia",
+    "alcance": "universal",
+    "epoca": "actual",
+    "gancho": "contraste",
+    "f0_palabras": 5,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "estructura": "comparación",
+    "remate": "pregunta",
+    "duracion_s": 54.9,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "dOdQj9QyoBI",
+    "hora": 23,
+    "dia_semana": "martes",
+    "turno": "tarde"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 1457,
+     "ultima_edad_h": 10.3
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    }
+   },
+   "publicado": "2026-11-17T23:00+01:00"
+  },
+  {
+   "id": "5pSKNws_e-s",
+   "ficha": "2026-11-18-manana/01",
+   "titulo": "5pSKNws_e-s",
+   "variables": {
+    "lote": "2026-11-18-manana",
+    "numero": "01",
+    "momento": "previo",
+    "codificado": "2026-11-18",
+    "codificador": "Agente 08:00",
+    "gancho_palabras": 5,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": true,
+    "gancho_negacion": false,
+    "gancho_pregunta": false,
+    "palabras": 160,
+    "preguntas": 3,
+    "nota_calidad": 95.0,
+    "cortes_min": 40.3,
+    "palabras_seg": 2.72,
+    "f0_movimiento": 11.07,
+    "tema": "Espacio",
+    "alcance": "universal",
+    "epoca": "prehistoria",
+    "gancho": "dato",
+    "f0_palabras": 5,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "estructura": "cadena de datos",
+    "remate": "pregunta",
+    "duracion_s": 59.2,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "5pSKNws_e-s",
+    "hora": 8,
+    "dia_semana": "miércoles",
+    "turno": "mañana"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 102,
+     "ultima_edad_h": 0.6
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    }
+   },
+   "publicado": "2026-11-18T08:43+01:00"
+  },
+  {
+   "id": "rEiiPtGXz84",
+   "ficha": "2026-11-18-manana/02",
+   "titulo": "rEiiPtGXz84",
+   "variables": {
+    "lote": "2026-11-18-manana",
+    "numero": "02",
+    "momento": "previo",
+    "codificado": "2026-11-18",
+    "codificador": "Agente 08:00",
+    "gancho_palabras": 5,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": false,
+    "gancho_negacion": true,
+    "gancho_pregunta": false,
+    "palabras": 158,
+    "preguntas": 4,
+    "nota_calidad": 95.0,
+    "cortes_min": 36.9,
+    "palabras_seg": 2.67,
+    "f0_movimiento": 5.84,
+    "tema": "Histórico",
+    "alcance": "universal",
+    "epoca": "actual",
+    "gancho": "negación",
+    "f0_palabras": 5,
+    "f0_sujeto": "lugar",
+    "f0_literal": true,
+    "estructura": "mito y realidad",
+    "remate": "dato",
+    "duracion_s": 58.2,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": true,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "rEiiPtGXz84"
    },
    "metricas": {
     "yt_se_quedan": {
@@ -966,47 +1480,43 @@
    }
   },
   {
-   "id": "aA9ji1Y1EPA",
-   "ficha": "2026-11-17-manana/02",
-   "titulo": "Saturno flotaría",
+   "id": "tp7XFLAIkS0",
+   "ficha": "2026-11-18-manana/03",
+   "titulo": "tp7XFLAIkS0",
    "variables": {
-    "lote": "2026-11-17-manana",
-    "numero": "02",
-    "momento": "retrospectivo",
-    "codificado": "2026-11-17",
-    "codificador": "Claude, 2026-11-17 (tema, gancho y estructura copiados de etiquetas.json, que se pusieron al publicar)",
+    "lote": "2026-11-18-manana",
+    "numero": "03",
+    "momento": "previo",
+    "codificado": "2026-11-18",
+    "codificador": "Agente 08:00",
     "gancho_palabras": 5,
-    "gancho_persona": "impersonal",
+    "gancho_persona": "tú",
     "gancho_cifra": false,
     "gancho_negacion": false,
     "gancho_pregunta": false,
-    "palabras": 155,
-    "preguntas": 2,
-    "nota_calidad": 90.0,
-    "cortes_min": 40.6,
-    "palabras_seg": 2.8,
-    "f0_movimiento": 6.45,
-    "youtube": "aA9ji1Y1EPA",
-    "tiktok": "7709084200636255510",
-    "instagram": "Df1uAQJxhjZ",
-    "tema": "Espacio",
+    "palabras": 159,
+    "preguntas": 4,
+    "nota_calidad": 91.0,
+    "cortes_min": 42.3,
+    "palabras_seg": 2.7,
+    "f0_movimiento": 5.87,
+    "tema": "Ciencia",
+    "alcance": "universal",
+    "epoca": "actual",
     "gancho": "dato",
-    "estructura": "comparación",
-    "reciclado": false,
+    "f0_palabras": 5,
+    "f0_sujeto": "animal",
+    "f0_literal": true,
+    "estructura": "experimento",
+    "remate": "pregunta",
+    "duracion_s": 59.2,
+    "montaje": "denso",
     "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
     "experimento": "no",
     "brazo": "-",
-    "alcance": "universal",
-    "titulo": "Saturno flotaría",
-    "epoca": "sin época",
-    "f0_palabras": 5,
-    "f0_sujeto": "objeto",
-    "f0_literal": true,
-    "remate": "pregunta",
-    "duracion_s": 56,
-    "montaje": "denso",
-    "voz": "clon",
-    "notas": "f0_palabras según el guion (gancho entero en pantalla), sin mirar el fotograma"
+    "youtube": "tp7XFLAIkS0"
    },
    "metricas": {
     "yt_se_quedan": {
@@ -1751,10 +2261,6 @@
  "numericas": [],
  "sin_variacion": [
   [
-   "reciclado",
-   "no"
-  ],
-  [
    "subtitulo",
    "karaoke"
   ]
@@ -1768,45 +2274,45 @@
  "audiencia": {
   "desde": "2026-11-01",
   "edad": {
-   "age13-17": 8.3,
-   "age18-24": 12,
-   "age25-34": 30.2,
-   "age35-44": 23.9,
-   "age45-54": 14.600000000000001,
-   "age55-64": 5.7,
-   "age65-": 5.2
+   "age13-17": 7.9,
+   "age18-24": 12.1,
+   "age25-34": 30.9,
+   "age35-44": 23.7,
+   "age45-54": 14.6,
+   "age55-64": 6.2,
+   "age65-": 4.8
   },
   "genero": {
-   "female": 33.0,
-   "male": 66.9
+   "female": 30.9,
+   "male": 69.3
   },
   "paises": {
-   "ES": 24.77777777777778,
-   "MX": 19.61904761904762,
-   "AR": 14.412698412698413,
-   "CL": 9.222222222222221,
-   "CO": 8.523809523809524,
-   "PE": 8.46031746031746,
-   "VE": 4.587301587301587,
-   "BO": 4.317460317460318,
-   "US": 3.3968253968253967,
-   "EC": 2.6825396825396823
+   "ES": 28.951731761238026,
+   "MX": 21.941783345615328,
+   "AR": 13.098747236551217,
+   "CL": 7.977155490051584,
+   "PE": 7.820560058953574,
+   "CO": 7.498157700810612,
+   "VE": 3.693809874723655,
+   "US": 3.454310980103169,
+   "BO": 3.0858511422254975,
+   "DO": 2.47789240972734
   },
   "seg_por_vista_pais": {
-   "ES": 10.647021140294683,
-   "MX": 12.572815533980583,
-   "AR": 14.73568281938326,
-   "CL": 12.70223752151463,
-   "CO": 13.40782122905028,
-   "PE": 12.27016885553471,
-   "VE": 11.833910034602075,
-   "BO": 11.25,
-   "US": 14.018691588785046,
-   "EC": 21.301775147928993
+   "ES": 14.12663060769965,
+   "MX": 16.826196473551637,
+   "AR": 17.974683544303797,
+   "CL": 17.806004618937646,
+   "PE": 19.081272084805654,
+   "CO": 15.92137592137592,
+   "VE": 14.364089775561098,
+   "US": 16.32,
+   "BO": 13.253731343283581,
+   "DO": 16.059479553903344
   },
-  "vistas_con_pais": 6300,
-  "latam": 71.82539682539682,
-  "espana": 24.77777777777778,
+  "vistas_con_pais": 10856,
+  "latam": 67.5939572586588,
+  "espana": 28.951731761238026,
   "suscritos": [
    [
     "SUBSCRIBED",
@@ -1815,60 +2321,60 @@
    ],
    [
     "UNSUBSCRIBED",
-    7352,
-    74.25
+    12581,
+    74.06
    ]
   ],
   "edad_genero": [
    [
     "age13-17",
     "female",
-    2.3
+    2.1
    ],
    [
     "age13-17",
     "male",
-    6
+    5.8
    ],
    [
     "age18-24",
     "female",
-    2
+    1.9
    ],
    [
     "age18-24",
     "male",
+    10.2
+   ],
+   [
+    "age25-34",
+    "female",
+    8.7
+   ],
+   [
+    "age25-34",
+    "male",
+    22.2
+   ],
+   [
+    "age35-44",
+    "female",
     10
    ],
    [
-    "age25-34",
-    "female",
-    9
-   ],
-   [
-    "age25-34",
-    "male",
-    21.2
-   ],
-   [
-    "age35-44",
-    "female",
-    11.1
-   ],
-   [
     "age35-44",
     "male",
-    12.8
+    13.7
    ],
    [
     "age45-54",
     "female",
-    5.2
+    5
    ],
    [
     "age45-54",
     "male",
-    9.4
+    9.6
    ],
    [
     "age55-64",
@@ -1878,17 +2384,17 @@
    [
     "age55-64",
     "male",
-    4
+    4.5
    ],
    [
     "age65-",
     "female",
-    1.7
+    1.5
    ],
    [
     "age65-",
     "male",
-    3.5
+    3.3
    ]
   ],
   "objetivo": {
@@ -1903,9 +2409,38 @@
     "AR",
     "CO"
    ],
-   "dentro_edad": 42.2,
-   "dentro_pais": 67.33333333333334
+   "dentro_edad": 43.0,
+   "dentro_pais": 71.49042004421518
   }
  },
- "audiencia_por_tema": {}
+ "audiencia_por_tema": {
+  "Espacio": {
+   "videos": 1,
+   "vistas": 2155,
+   "edad": {
+    "age13-17": 5.3,
+    "age18-24": 7.4,
+    "age25-34": 42.4,
+    "age35-44": 29.2,
+    "age45-54": 15.7
+   },
+   "genero": {
+    "male": 70.0,
+    "female": 30.0
+   }
+  },
+  "Histórico": {
+   "videos": 1,
+   "vistas": 1075,
+   "edad": {
+    "age18-24": 20.1,
+    "age25-34": 45.6,
+    "age35-44": 22.1,
+    "age45-54": 12.2
+   },
+   "genero": {
+    "male": 100.0
+   }
+  }
+ }
 }

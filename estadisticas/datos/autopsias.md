@@ -2,7 +2,7 @@
 
 Generado por `python3 estadisticas/estudio todo`. Una por vídeo con lecturas de 24 h o más, la más reciente arriba. El índice «frente al canal» es el valor dividido por la mediana del canal (1,00 = lo normal).
 
-Vídeos con autopsia: 3 de 10. Con menos de 5 vídeos la «mediana del canal» es muy inestable: los diagnósticos son orientativos.
+Vídeos con autopsia: 3 de 15. Con menos de 5 vídeos la «mediana del canal» es muy inestable: los diagnósticos son orientativos.
 
 ### Moáis (`XGf1wOPygU8`)
 
@@ -13,8 +13,8 @@ Vídeos con autopsia: 3 de 10. Con menos de 5 vídeos la «mediana del canal» e
 | segundos por vista (YouTube) | 17,3 s | 25 h (provisional) | 0,95 |
 | tiempo medio (TikTok) | 13,7 s | 26 h (provisional) | 0,83 |
 | lo ven entero (TikTok) | 16,1 % | 26 h (provisional) | 1,00 |
-| vistas (YouTube) | 888  | 24 h (provisional) | 0,68 |
-| vistas (TikTok) | 398  | 24 h (provisional) | 0,95 |
+| vistas (YouTube) | 1.220  | 48 h | 0,84 |
+| vistas (TikTok) | 409  | 48 h | 1,48 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
 Fuera de norma: primera frase de 18 palabras (norma: 9 como mucho).
@@ -36,10 +36,16 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 18,3 s | 25 h (provisional) | 1,00 |
 | tiempo medio (TikTok) | 16,5 s | 26 h (provisional) | 1,00 |
 | lo ven entero (TikTok) | 13,0 % | 26 h (provisional) | 0,81 |
-| vistas (YouTube) | 1.299  | 24 h (provisional) | 1,00 |
-| vistas (TikTok) | 418  | 24 h (provisional) | 1,00 |
+| vistas (YouTube) | 1.428  | 48 h | 0,99 |
+| vistas (TikTok) | 426  | 48 h | 1,54 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
+
+Curva de YouTube: se va el **-16 %** en los 3 primeros segundos; en el segundo 10 queda el 78 %.
+- Escalón en 6–7 s (100 → 93 %): «Fue en Zanzíbar, el veintisiete de agosto de mil ochocientos noventa y seis.»
+- Escalón en 7–7 s (93 → 88 %): «Fue en Zanzíbar, el veintisiete de agosto de mil ochocientos noventa y seis.»
+- Escalón en 5–6 s (110 → 105 %): «La guerra más corta de la historia duró menos que un partido de fútbol.»
+_Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Ninguna.
 
@@ -52,8 +58,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 26,5 s | 31 h (provisional) | 1,45 |
 | tiempo medio (TikTok) | 19,8 s | 33 h (provisional) | 1,20 |
 | lo ven entero (TikTok) | 21,7 % | 33 h (provisional) | 1,35 |
-| vistas (YouTube) | 5.272  | 24 h (provisional) | 4,06 |
-| vistas (TikTok) | 614  | 24 h (provisional) | 1,47 |
+| vistas (YouTube) | 11.122  | 48 h | 7,68 |
+| vistas (TikTok) | 618  | 48 h | 2,23 |
 
 **Diagnóstico: Acierto: gancho y retención claramente por encima de lo normal del canal.**
 
@@ -62,10 +68,15 @@ Curva de TikTok: se va el **37 %** en los 3 primeros segundos; en el segundo 10 
 - Aguanta en 22–25 s (31 → 30 %): «En dos mil once, la NASA bajó una de sus sondas hasta solo veintiún kilómetros de la superficie… y fotografió los senderos que dejaron al caminar.»
 - Aguanta en 28–31 s (27 → 26 %): «En dos mil once, la NASA bajó una de sus sondas hasta solo veintiún kilómetros de la superficie… y fotografió los senderos que dejaron al caminar.»
 - Aguanta en 37–40 s (18 → 18 %): «Diminutos meteoritos, más finos que un grano de arena, golpean la Luna sin parar y la van limando muy despacio.»
+
+Curva de YouTube: se va el **-23 %** en los 3 primeros segundos; en el segundo 10 queda el 104 %.
+- Escalón en 47–48 s (54 → 30 %): «Tan despacio que esta pisada podría seguir ahí dentro de millones de años.»
+- Escalón en 12–12 s (101 → 99 %): «Pero en la Luna casi no hay atmósfera:»
+- Escalón en 36–37 s (64 → 62 %): «Se ve el rastro, como una línea oscura sobre el gris.»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Apuntar qué tenía de distinto (ver variables) y repetirlo en otro tema para comprobar que no fue el tema.
 
 ## Aún sin lecturas de 24 h
 
-Plátano radiactivo, Apolo 11 / móvil, Puertas, Nudillos, Luna densa, Huella de koala, Saturno flotaría.
+5pSKNws_e-s, cjSc0D_gOaI, dOdQj9QyoBI, Huella de koala, Saturno flotaría, Plátano radiactivo, Apolo 11 / móvil, Puertas, Nudillos, Luna densa, rEiiPtGXz84, tp7XFLAIkS0.
