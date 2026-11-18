@@ -2,6 +2,20 @@
 
 Regla: no repetir temas de «Usados». Las continuaciones valen si aportan información nueva y se entienden solas.
 
+## Reservados para el lote 2026-11-18-tarde
+_Pedido por Jorge en el chat (2026-11-18 ≈15:45): uno de los 3 vídeos de las 20:00 sobre GTA 6, que sale el 19-11 (PS5 y Xbox Series), y que la **primera frase nombre GTA 6**. Los otros 2 temas los elige el agente como siempre._
+- **Lo que ha tardado GTA 6** (01 recomendado; tema `Histórico`, gancho `dato`, estructura `comparación`, alcance `universal`)
+  - Primera frase (≤ 5 palabras): «GTA 6 tardó trece años.» (o «GTA 6 llega trece años tarde.» si pasa `motor.guion`). Segunda frase con la sorpresa antes del s 3,5: «En ese tiempo llegamos a la Luna… y más».
+  - Fotograma 0: un calendario enorme arrancando hojas a toda velocidad (o un reloj de arena gigante que se vacía) **ya en movimiento**. Nada de logos, carátulas, personajes, capturas ni música de GTA/Rockstar (derechos y monetización): todo dibujado por nosotros (ciudad tropical genérica, coche de policía genérico, mando de consola genérico).
+  - Datos (verificar cada uno con 2 fuentes antes del guion):
+    - GTA V salió el 17-09-2013 → GTA 6 el 19-11-2026: unos **13 años y 2 meses** (comprobado: fecha final y retrasos en GamesRadar y gtaboom).
+    - Rockstar no confirmó que lo estaba haciendo hasta el 4-02-2022 (Game Informer, Fortune). Primer tráiler: 5-12-2023 (récord Guinness de vistas en 24 h).
+    - Dos retrasos: de 2025 al 26-05-2026 (anunciado el 2-05-2025) y de ahí al 19-11-2026 (anunciado el 6-11-2025).
+    - Comparaciones (elegir 3–4, verificar): del discurso de Kennedy (25-05-1961) a la llegada a la Luna (20-07-1969): ~8 años → «llegamos a la Luna y aún sobraban 5 años»; el Empire State se construyó en ~410 días (≈ 11–12 veces); un niño nacido el día que salió GTA V hoy tendría 13 años (sin dibujar niños reconocibles); de 2013 a 2026 han salido 13 iPhones distintos (comprobar).
+  - Cierre/bucle: «¿Cuánto vas a jugar mañana?» y vuelta al calendario.
+  - Título con «GTA 6» al principio (búsquedas del día); comentario fijado tipo «¿Lo vas a jugar mañana? 🎮 Te leo 👇».
+  - Fuentes de partida: https://www.gamesradar.com/games/grand-theft-auto/gta-6-delayed-6-more-months-as-rockstar-commits-to-november-2026-and-says-sorry · https://www.gtaboom.com/gta-6-release-date-and-delay-history-9f6b · https://gameinformer.com/2022/02/04/rockstar-confirms-the-next-grand-theft-auto-game-is-in-active-development · https://fortune.com/2022/02/04/grand-theft-auto-6-gta-rockstar-games/
+
 ## Candidatos
 - Darle a «posponer» en la alarma te deja peor: inercia del sueño (cotidiano)
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
