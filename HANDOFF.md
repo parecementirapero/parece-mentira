@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-19 00:40 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — 01 de GTA 6 publicado
+**Hecho**: «ok 1» de la persona (confirmado dos veces: antes y después de añadir hashtags de GTA). YouTube por API desde el Mac de Jorge: https://youtube.com/shorts/_9znalXgInI (15 hashtags en la descripción y 22 etiquetas ocultas; `subir_youtube.py` acepta ahora `youtube.tags`). TikTok desde el navegador integrado: https://www.tiktok.com/@parece.mentira85/video/7709657865832697110 (29 hashtags, portada = fotograma 0). Sin duplicados (comprobado antes en las dos redes). `etiquetas.json` actualizado.
+**Aprendido**: el panel del navegador integrado era tan estrecho (349 px) que los botones de TikTok quedaban fuera; con `resize_window` a 1280×900 se ve la versión de escritorio. En TikTok, al seleccionar el texto por script y escribir, a veces se queda el nombre del archivo delante: comprobar el texto y borrarlo.
+**Pendiente**: 02 y 03 mañana (pedido de la persona; necesitan su «ok»). Portada de YouTube en Studio y comentarios del 01. 
+**Siguiente paso**: «ok 2 y 3» el 19-11 → AGENTE §8.
+
 ## 2026-11-18 23:30 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-18-tarde v1 en revisión
 **Encargo** (en el chat del lote): «créame los vídeos que no has podido crear porque estaba apagado». El Mac de Jorge ya respondía.
 **Hecho**: voz oficial por API desde el Mac (sin fallos; en el 02 se omite «¿Y lo más loco?» para no pasar de 60 s), montaje denso con los tiempos reales, render en la nube, portadas elegidas, fichas de variables, MP4 en el chat y en el Mac. SHA cortos: 01 eb0ff4dd18f3 · 02 dfb4ed47de09 · 03 6a8c2e51fa19.
