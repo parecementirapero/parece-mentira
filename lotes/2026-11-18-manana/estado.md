@@ -69,4 +69,5 @@ Aprobación: «Están muy bien súbelos» y, al pedir confirmación literal, «O
 | 03 v1 | https://youtube.com/shorts/tp7XFLAIkS0 — programado 2026-11-18 10:50 (Madrid) | pendiente |
 - YouTube por API (`subir_youtube.py`, `--prueba` antes: sin duplicados). Portada por API: **no** (403, el canal no tiene miniaturas personalizadas) → en Studio elegir el fotograma `portada.t` (0,75 s · 3,8 s · 0,25 s).
 - TikTok: navegador integrado del Mac de Nico (sesión iniciada, comprobado que no estaban); la persona elige el archivo.
-- Falta: comentarios fijados.
+- Comentarios YouTube: 01 escrito (≈08:55, sin emojis); **fijar no se puede**: YouTube pide la verificación del canal en Studio (TASKS). 02 y 03: avisos programados en este chat a las 09:53 y 10:53.
+- TikTok: **bloqueado** de momento. La persona está en el móvil y el selector de archivos del navegador integrado solo se puede usar delante del Mac; computer use no puede manejar la app de Claude y no hay Chrome conectado. Opciones: elegir el archivo en el Mac al volver, o subirlo desde la app de TikTok del móvil con los MP4 del chat y los textos de `metadatos.json`.
