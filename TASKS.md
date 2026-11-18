@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Jorge: publicar en TikTok el lote 2026-11-18-manana — Jorge — 2026-11-18 15:10 — parado: los MP4 no están en `~/Documents/Parece Mentira/lotes/2026-11-18-manana/` del Mac de Jorge (la carpeta no existe)
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 - [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **YouTube hecho** (01 público `dOdQj9QyoBI`; 02 programado 23:59 `cjSc0D_gOaI`). Falta: TikTok de los dos (Nico tiene que elegir el archivo en el navegador integrado), portada por fotograma en Studio, comentarios fijados
 
@@ -57,6 +56,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Jorge: publicar en TikTok el lote 2026-11-18-manana — los 3 publicados (7709545960136920342 · 7709546579622923542 · 7709547350464662806), portada con texto y comentario (sin fijar: la web no deja) — Jorge — 2026-11-18 15:25
 - [x] Mac de Jorge con permiso de subida de YouTube (`YT_UPLOAD_REFRESH_TOKEN` en su claves.txt) y lote 2026-11-17-tarde en YouTube (cebolla dMcGHyKbeaA; Sol G_xEqU97krk programado 15:49; rayo dOdQj9QyoBI) — Agente 20:00 (Jorge) — 2026-11-18
 - [x] Lote 2026-11-18-manana (día de 18 horas, Gran Muralla no se ve, perro que copia bostezos): **«ok» y en YouTube** (5pSKNws_e-s público · rEiiPtGXz84 09:50 · tp7XFLAIkS0 10:50); TikTok lo sube Jorge (Pendiente). Antes: 3 vídeos v1 en revisión (método denso, `motor.calidad` sin ❌, 95/95/91; experimento: gancho de negación en el 02); esperan el «ok» en https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 (correo `1a1ed968a22c00b4`) — Agente 08:00 (Nico) — 2026-11-18 08:55
 - [x] Lote 2026-11-17-tarde (rayo más caliente que el Sol, el Sol que ves ya es pasado, cebolla): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 84/87/93); esperan el «ok» en https://claude.ai/code/session_019BG1dHf6SfJ6MbfA5kmnCP (correo `1a1eaf34810f56dd`) — Agente 20:00 (Jorge) — 2026-11-17 20:25

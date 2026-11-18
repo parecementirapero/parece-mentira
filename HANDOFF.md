@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-18 15:25 — Jorge (chat del Mac de Jorge) — rama `main` — TikTok del lote 2026-11-18-manana
+**Hecho**: tarea reservada con push. SHA-256 de los 3 MP4 (Descargas de Jorge) = `estado.md`; copiados a `lotes/2026-11-18-manana/` de su carpeta local. Comprobado en TikTok Studio que no estaban. Publicados los 3 seguidos desde el navegador integrado (Jorge eligió los archivos): 01 https://www.tiktok.com/@parece.mentira85/video/7709545960136920342 · 02 …/7709546579622923542 · 03 …/7709547350464662806. Texto de `metadatos.json` (`tiktok.texto`), portada = fotograma `portada.t` (el editor va por segundos: 0 s · ≈4 s · 0 s) + `portada.texto`. Comentarios de `metadatos.json` escritos en los 3. `estadisticas/estudio ficha publicar` hecho para 01–03 (con id de YouTube y TikTok).
+**No hecho**: fijar los comentarios (la web de TikTok solo ofrece «Delete» en el menú del comentario; se puede fijar desde la app del móvil). Instagram no (cuenta cerrada).
+**Aprendido**: en el editor de portada de TikTok, el texto (ProseMirror) pierde la primera letra si se escribe justo al crear el cuadro: comprobar el texto antes de guardar. El cuadro de descripción (Draft.js) se vacía bien seleccionando su contenido por script y pulsando Retroceso.
+**Siguiente paso**: fijar los comentarios desde la app de TikTok si se quiere; lotes 2026-11-17-tarde y 2026-11-18-manana completos en YouTube y TikTok.
+
 ## 2026-11-18 14:55 — Agente 20:00 (Jorge) — rama `main` — YouTube del lote 2026-11-17-tarde
 **Hecho**: permiso de subida de YouTube concedido en el Mac de Jorge (pedido y aprobado en el chat; token solo en `claves.txt`). Cebolla v2 publicada (dMcGHyKbeaA). El Sol tenía una subida rota del 17-11 (cjSc0D_gOaI, 0 s): borrada con aprobación y resubida la v3 (G_xEqU97krk, programada 15:49). Rayo ya estaba (dOdQj9QyoBI). `etiquetas.json` actualizado.
 **Pendiente**: TikTok de los lotes 2026-11-17-tarde y 2026-11-18-manana (6 vídeos; hace falta alguien delante del Mac para elegir cada archivo). Comentarios de YouTube sin poner (fijar no se puede hasta verificar el canal).
