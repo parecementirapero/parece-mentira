@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-18 21:10 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-18-tarde «pendiente de voz»
+**Qué pasó**: el Mac de Jorge contestó solo un momento (20:07–20:09: reserva y créditos, 27.748). Luego el puente se cayó y no volvió (comprobado cada 5 min hasta las 21:10).
+**Hecho sin el Mac**: 3 temas verificados (≥ 2 fuentes cada dato): 01 «GTA 6 tardó 13 años» (reservado por Jorge), 02 «Este terrón pesa una montaña» (estrella de neutrones), 03 «Ahora mides menos» (discos de la columna; **experimento: gancho en segunda persona**). `guiones.md`, `metadatos.json` (títulos, textos, comentario, etiquetas), temas a «Usados» en `IDEAS.md`. Generadores del método denso (`generadores/gen_0N.py`, 35–39 planos; `ilus_tarde.py`, 38 SVG nuevos sin logos ni personajes), hojas de fotogramas revisadas con tiempos provisionales y corregidas (relojes ≤ 2 en el 03, platos sin el dibujo de Zanzíbar, sin «→» que la fuente no tiene).
+**Pruebas**: `motor.guion` ✓ ×3 (153/154/155 palabras). Sin voz no hay render final, `motor.calidad --mp4` ni fichas.
+**No hecho**: voz, vídeos, portadas, fichas, Studio. Nada publicado ni gastado.
+**Siguiente paso**: con el Mac encendido y la app abierta, en este chat: voz por API (`with-timestamps`) → `python3 gen_0N.py DIR NN-locucion.mp3 NN-alineacion.json` → `motor.render` → `motor.calidad` (arreglar los ⚠ de lectura que salgan con los tiempos reales) → portadas → MP4 al chat → «ok». Commits: e19a2a8, 81f651e y el de esta entrada.
+
 ## 2026-11-18 20:00 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-18-tarde NO iniciado
 **Qué pasó**: el Mac de Jorge (`jorges-macbook-air-2`) no estaba conectado al puente de Claude: `device_list_dir` → «did not respond within 60s» y luego «not connected to the bridge» (4 intentos, 19:55–20:05). Sin el Mac no hay clave de ElevenLabs ni carpeta local → AGENTE §1.6: «ordenador no disponible», lote en «Pendiente», turno terminado.
 **Hecho**: `lotes/2026-11-18-tarde/estado.md` con la causa, tarea en `TASKS.md` → Pendiente, correo de aviso `[AVISO]`. Nada gastado (ni créditos ni investigación), nada publicado.
