@@ -29,3 +29,4 @@ Chat del lote: https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H
 ## Hecho / falta
 - Hecho: guiones (`motor.guion` ✓ ×3), metadatos, generadores con 35–39 planos (`generadores/gen_0N.py`, `ilus_tarde.py`), hojas de fotogramas con tiempos provisionales revisadas.
 - Falta (con el Mac): voz por API → `gen_0N.py DIR MP3 JSON` → `motor.render` → `motor.calidad` → portadas → fichas → MP4 al chat.
+- 22:00: reintento programado — el Mac de Jorge sigue sin conexión («not connected to the bridge»). Queda el reintento de las 23:00.
