@@ -104,6 +104,8 @@ def main():
         estado.update({"privacyStatus": "private", "publishAt": a.publicar_en})
     meta = {"snippet": {"title": titulo, "description": yt.get("descripcion", "")[:5000], "categoryId": "27",
                         "defaultLanguage": "es", "defaultAudioLanguage": "es"}, "status": estado}
+    if yt.get("tags"):  # etiquetas ocultas de YouTube (máx. 500 caracteres en total)
+        meta["snippet"]["tags"] = list(yt["tags"])
     tam = os.path.getsize(a.video)
     st, cab, cuerpo = peticion(f"https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
                                json.dumps(meta).encode(), {**auth, "Content-Type": "application/json; charset=UTF-8",

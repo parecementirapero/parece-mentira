@@ -50,3 +50,10 @@ Chat del lote: https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H
 
 Créditos de ElevenLabs tras el lote: ≈24.200 (se gastaron ≈3.550).
 **Siguiente paso**: «ok» (o «ok 1 y 3») en este chat → publicar según AGENTE §8 desde el Mac de Jorge. Ojo: GTA 6 sale el 19-11.
+
+## Publicación del 01 (GTA 6) — «ok 1» en el chat (2026-11-18 ≈23:45)
+- La persona: «vamos a subir solo el del gta en youtube y tiktok y mañana los demás». Confirmó «ok 1» y, tras pedir muchos hashtags de GTA (15 en la descripción de YouTube, 22 etiquetas ocultas, 29 hashtags en TikTok), volvió a confirmar «ok 1» con ese texto.
+- `publicar/subir_youtube.py` admite ahora `youtube.tags` (etiquetas ocultas) en `metadatos.json`.
+- **YouTube**: público https://youtube.com/shorts/_9znalXgInI (`--prueba` antes: sin duplicado). Portada por API: 403 (el canal no tiene miniaturas propias) → falta elegir en Studio el fotograma `portada.t` = 1,3 s.
+- **TikTok**: comprobado en TikTok Studio que no estaba; subida por el navegador integrado del Mac de Jorge (la persona elige el archivo).
+- 02 y 03: sin publicar, para mañana (pedido de la persona).
