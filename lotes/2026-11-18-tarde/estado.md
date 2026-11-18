@@ -1,6 +1,6 @@
 # Lote 2026-11-18-tarde — estado
 
-**Estado: pendiente de voz** (Mac de Jorge desconectado) — Agente 20:00 (Jorge)
+**Estado: en revisión** (v1 de los 3 vídeos en el chat) — Agente 20:00 (Jorge)
 
 Chat del lote: https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H
 
@@ -31,3 +31,22 @@ Chat del lote: https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H
 - Falta (con el Mac): voz por API → `gen_0N.py DIR MP3 JSON` → `motor.render` → `motor.calidad` → portadas → fichas → MP4 al chat.
 - 22:00: reintento programado — el Mac de Jorge sigue sin conexión («not connected to the bridge»). Queda el reintento de las 23:00.
 - 23:00: segundo reintento — el Mac de Jorge sigue sin conexión. No hay más reintentos automáticos: el lote sigue «pendiente de voz» (retomar en este chat con el Mac encendido, o que Nico/Jorge decidan si el 08:00 hace GTA 6).
+
+## Retomado a petición de la persona en el chat (≈23:20)
+- La persona escribió: «créame los vídeos que no has podido crear porque estaba apagado». El Mac de Jorge ya respondía.
+- Voz por API desde el Mac (eleven_v4, 0.5/0.75, `with-timestamps`), sin fallos: 01 56,2 s · 02 59,4 s · 03 58,2 s. En el 02 se quitó al montar «¿Y lo más loco?» (`omitir`, empalme a 31,3 s) para no pasar de 60 s.
+- Con los tiempos reales: quitados 2 micro planos del 01 (0,11 s y el que dejaba «NOV 2026» sin tiempo de lectura) y acortados 3 rótulos. `construir` sin ⚠ de lectura en los tres.
+- Render en la nube. ffprobe: 1080×1920, 30 fps, h264 + AAC 48 kHz. Hojas de fotogramas revisadas; en el 03 se rehízo el primer plano (la marca de altura quedaba bajo el subtítulo y el primer segundo salía quieto).
+- `motor.calidad --mp4`: **01 80/100 · 02 77/100 · 03 76/100, ningún ❌**. ⚠ que quedan, justificados: pocos micro planos (< 3) y densidad 4–5 elementos por plano (montaje hecho con prisa por la caída del Mac); en el 03, dos micro planos de la ventana marcados «pobres» (son zooms de un fondo, duran < 1 s); mismo encuadre 3–5 s en el tramo de la columna (01) y del párroco (03).
+- Portadas elegidas sin «ok»: 01 «GTA 6 TARDÓ 13 AÑOS» (arriba, t=1,3, hoja 2026) · 02 «PESA UNA MONTAÑA» (abajo, t=9,8, estrella gigante: ninguna candidata enseñaba el terrón) · 03 «AHORA MIDES MENOS» (abajo, t=57,3, silueta y tallímetro).
+- Fichas de variables creadas (`ficha comprobar`: 0 problemas). El experimento del 03 (gancho en segunda persona) va en `metadatos.json` → etiquetas; en la ficha, `experimento=no` porque no hay experimento abierto con id.
+- MP4, SRT, manifiestos y portadas en el chat y en `Documents/Parece Mentira/lotes/2026-11-18-tarde/` del Mac de Jorge.
+
+| Vídeo | Archivo | Duración | SHA-256 (corto) |
+|---|---|---|---|
+| 01 | 01-gta6-trece-anos_v1.mp4 | 56,7 s | eb0ff4dd18f3 |
+| 02 | 02-terron-estrella-neutrones_v1.mp4 | 58,9 s | dfb4ed47de09 |
+| 03 | 03-mides-menos_v1.mp4 | 58,7 s | 6a8c2e51fa19 |
+
+Créditos de ElevenLabs tras el lote: ≈24.200 (se gastaron ≈3.550).
+**Siguiente paso**: «ok» (o «ok 1 y 3») en este chat → publicar según AGENTE §8 desde el Mac de Jorge. Ojo: GTA 6 sale el 19-11.

@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-18 21:10 — Agente 20:00 (Jorge) (lote 2026-11-18-tarde pendiente de voz)_
+_Última actualización: 2026-11-18 23:30 — Agente 20:00 (Jorge) (lote 2026-11-18-tarde en revisión)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,7 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
-- **Pendiente de voz**: lote **2026-11-18-tarde** (GTA 6, estrella de neutrones, mides menos por la noche). Guiones y montaje listos; el Mac de Jorge se desconectó a las 20:09 y sin él no hay clave de ElevenLabs. Chat: https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H. ElevenLabs: quedan 27.748 caracteres.
+- En revisión: lote **2026-11-18-tarde** v1 (GTA 6 tardó 13 años, terrón de estrella de neutrones, ahora mides menos; 57–59 s; experimento: gancho en segunda persona en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H y en `Documents/Parece Mentira/lotes/2026-11-18-tarde/` (Mac de Jorge). ElevenLabs: quedan ≈24.200 caracteres.
 - En revisión: lote **2026-11-18-manana** v1 (día de 18 horas, la Gran Muralla no se ve desde el espacio, tu perro copia tus bostezos; 58–59 s; experimento: gancho de negación en el 02). Vídeos en el chat https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 y en `Documents/Parece Mentira/lotes/2026-11-18-manana/` (Mac de Nico). ElevenLabs: quedan 27.748 caracteres.
 - En revisión: lote **2026-11-17-tarde** v1 (rayo más caliente que el Sol, el Sol que ves ya es pasado, cebolla; 55–57 s; experimento: gancho de orden en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dHf6SfJ6MbfA5kmnCP y en `Documents/Parece Mentira/lotes/2026-11-17-tarde/` (Mac de Jorge). ElevenLabs: quedan 28.812 caracteres.
 - Publicado: lote **2026-11-17-manana** v1 (plátano radiactivo, Saturno flotaría, huella de koala; 56–59 s; primer lote automático con método denso y `motor.calidad`). Vídeos en el chat https://claude.ai/code/session_019BG1dJfghaKYErZsy5CyPu y en `Documents/Parece Mentira/lotes/2026-11-17-manana/` (Mac de Nico). ElevenLabs: quedan 29.828 caracteres.

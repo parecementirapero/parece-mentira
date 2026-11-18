@@ -10,7 +10,8 @@ import ilus_tarde  # noqa: E402
 
 SVG = ilus_tarde.generar(os.path.join(sys.argv[1], "_svg_lote"))
 VOZ = sys.argv[2:4]
-v = Video(sys.argv[1], os.path.join(AQUI, "02-guion.txt"), *(VOZ if len(VOZ) == 2 else ()), svg_extra=SVG)
+v = Video(sys.argv[1], os.path.join(AQUI, "02-guion.txt"), *(VOZ if len(VOZ) == 2 else ()), svg_extra=SVG,
+          omitir=[(84, 88)] if len(VOZ) == 2 else ())  # «¿Y lo más loco?» fuera: con la voz real el vídeo pasaba de 60 s
 
 OSC = ["#02030a", "#0a1030"]
 COCINA = ["#2a2d3a", "#14161e"]
@@ -85,7 +86,7 @@ def _(d):
 def _(d):
     return P(OSC, [BG("bg_esp_petroleo"), *estrella_n(540, 1050, 210, 0.45, t_haz=0.2),
              IMG("terron", ancho=200, z=0.6, keys=[{"t": 0, "x": 540, "y": 1050, "op": 0}, {"t": 0.2, "op": 1}, {"t": d, "x": 860, "y": 1500, "ease": "salida"}])],
-             cam(1.0, 1.08, (540, 1050)), "zoom", hud=[contexto(0.05, d - 0.05, "ESTRELLA DE NEUTRONES")], sfx=[(0.2, "brillo", -16)])
+             cam(1.0, 1.08, (540, 1050)), "zoom", hud=[contexto(0.05, d - 0.05, "NEUTRONES")], sfx=[(0.2, "brillo", -16)])
 
 
 @v.plano(15, "¿cómo puede pesar tanto? la balanza se vuelca")
@@ -174,7 +175,7 @@ def _(d):
              sfx=[(d * 0.3, "golpe", -14), (d * 0.6, "ding", -18)])
 
 
-@v.plano(84, "¿y lo más loco? gira: haces del púlsar")
+@v.plano(88, "gira: haces del púlsar")
 def _(d):
     return P(OSC, [BG("bg_esp_petroleo"), *estrella_n(540, 1050, 170, 0.45, t_haz=0.0)],
              cam(1.0, 1.08), "zoom", hud=[amarillo(0.05, d - 0.03, "GIRA", y=560, tam=140, color=LIMA)], sfx=[(0.05, "senal", -20), (d * 0.5, "senal", -22)])
@@ -191,7 +192,7 @@ def _(d):
 def _(d):
     return P(COCINA, [brillo(540, 900, 600, "#ff7aa8", 0.3, 0.1), IMG("batidora", ancho=440, x=360, y=1150, z=0.5, anim={"balanceo": [2, 0.08]}),
              *estrella_n(820, 1000, 110, 0.5, giro=900, t_haz=0.0)],
-             cam(1.0, 1.05), "corte", hud=[rotulo(0.05, d - 0.05, "MÁS RÁPIDO", tam=90, color="#141414", capsula="#7dff3ae6", y=560)], sfx=[(0.05, "rumor", -18)])
+             cam(1.0, 1.05), "corte", hud=[rotulo(0.05, d - 0.05, "+ RÁPIDO", tam=90, color="#141414", capsula="#7dff3ae6", y=560)], sfx=[(0.05, "rumor", -18)])
 
 
 @v.plano(105, "un malvavisco cae hacia la estrella")

@@ -68,9 +68,18 @@
    "estructura": "comparación",
    "experimento": "no",
    "alcance": "universal",
-   "montaje": "denso"
+   "montaje": "denso",
+   "portada": "arriba"
   },
-  "version": 1
+  "version": 1,
+  "portada": {
+   "texto": "GTA 6 TARDÓ 13 AÑOS",
+   "clave": "13 AÑOS",
+   "t": 1.3,
+   "diseno": "arriba",
+   "motivo": "la hoja 2026 del calendario del primer segundo, enorme; el texto se lee en la cuadrícula 3:4 y no tapa la cifra",
+   "archivo": "01-portadas/portada.jpg"
+  }
  },
  "02": {
   "archivo": "02-terron-estrella-neutrones_v1.mp4",
@@ -109,9 +118,18 @@
    "estructura": "comparación",
    "experimento": "no",
    "alcance": "universal",
-   "montaje": "denso"
+   "montaje": "denso",
+   "portada": "abajo"
   },
-  "version": 1
+  "version": 1,
+  "portada": {
+   "texto": "PESA UNA MONTAÑA",
+   "clave": "MONTAÑA",
+   "t": 9.8,
+   "diseno": "abajo",
+   "motivo": "sujeto grande y de color fuerte (la estrella gigante antes del colapso), texto legible en 3:4 sin taparla; las otras son una ciudad borrosa, papel o antenas, poco reconocibles",
+   "archivo": "02-portadas/portada.jpg"
+  }
  },
  "03": {
   "archivo": "03-mides-menos_v1.mp4",
@@ -150,8 +168,17 @@
    "estructura": "experimento",
    "experimento": "gancho en segunda persona",
    "alcance": "universal",
-   "montaje": "denso"
+   "montaje": "denso",
+   "portada": "abajo"
   },
-  "version": 1
+  "version": 1,
+  "portada": {
+   "texto": "AHORA MIDES MENOS",
+   "clave": "MENOS",
+   "t": 57.3,
+   "diseno": "abajo",
+   "motivo": "la silueta junto al tallímetro con la marca de altura: es el primer segundo del vídeo y se entiende sin leer; texto legible en 3:4",
+   "archivo": "03-portadas/portada.jpg"
+  }
  }
 }

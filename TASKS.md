@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-18-tarde — Agente 20:00 (Jorge) — 2026-11-18 20:08 — **pendiente de voz**: el Mac de Jorge se desconectó a las 20:09 y no volvió (comprobado hasta las 21:10). Guiones, metadatos y montaje listos en `lotes/2026-11-18-tarde/`; falta voz → render → calidad → portadas. Se retoma en el chat del lote (https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H) con el Mac encendido y la app abierta; el chat lo reintenta solo a las 22:00 y 23:00
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 - [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **YouTube hecho** (01 público `dOdQj9QyoBI`; 02 programado 23:59 `cjSc0D_gOaI`). Falta: TikTok de los dos (Nico tiene que elegir el archivo en el navegador integrado), portada por fotograma en Studio, comentarios fijados
 
@@ -56,6 +55,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-18-tarde v1 (GTA 6, estrella de neutrones, mides menos) — Agente 20:00 (Jorge) — 2026-11-18 23:30 — **en revisión**: vídeos en el chat https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H, falta el «ok»
 - [x] Lectura a 48 h de YouTube Studio y TikTok Studio (16 vídeos) y estado de H0 y H7 en `motor/APRENDIZAJE.md` — Nico (tarea programada) — 2026-11-18 22:45
 - [x] Jorge: publicar en TikTok el lote 2026-11-18-manana — los 3 publicados (7709545960136920342 · 7709546579622923542 · 7709547350464662806), portada con texto y comentario (sin fijar: la web no deja) — Jorge — 2026-11-18 15:25
 - [x] Mac de Jorge con permiso de subida de YouTube (`YT_UPLOAD_REFRESH_TOKEN` en su claves.txt) y lote 2026-11-17-tarde en YouTube (cebolla dMcGHyKbeaA; Sol G_xEqU97krk programado 15:49; rayo dOdQj9QyoBI) — Agente 20:00 (Jorge) — 2026-11-18

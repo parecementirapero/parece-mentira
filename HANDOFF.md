@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-18 23:30 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-18-tarde v1 en revisión
+**Encargo** (en el chat del lote): «créame los vídeos que no has podido crear porque estaba apagado». El Mac de Jorge ya respondía.
+**Hecho**: voz oficial por API desde el Mac (sin fallos; en el 02 se omite «¿Y lo más loco?» para no pasar de 60 s), montaje denso con los tiempos reales, render en la nube, portadas elegidas, fichas de variables, MP4 en el chat y en el Mac. SHA cortos: 01 eb0ff4dd18f3 · 02 dfb4ed47de09 · 03 6a8c2e51fa19.
+**Pruebas**: `construir` sin ⚠ de lectura; `motor.calidad --mp4` 80/77/76 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; hojas de fotogramas revisadas (03 rehecho el primer plano); `ficha comprobar` 0 problemas. No se tocó `motor/`.
+**No hecho**: Studio (sin lecturas nuevas). Nada publicado: falta el «ok».
+**Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H → AGENTE §8 desde el Mac de Jorge. El de GTA 6 conviene publicarlo cuanto antes (sale el 19-11).
+
 ## 2026-11-18 22:45 — Nico (tarea programada del chat «Luna densa») — rama `main`
 **Hecho**: lectura a 48 h de YouTube Studio (16 vídeos) y TikTok Studio (4) → `estadisticas/studio.json`, `estadisticas/tiktok_studio.json` y tabla nueva en `motor/APRENDIZAJE.md`. H0 a favor (Luna densa 80,3 %, 6.700 vistas, 29,4 s por vista). H7 a favor en YouTube (vídeos con la regla: 57–71 %; antes: 35–64 %), sin confirmar en TikTok.
 **Aviso**: `rEiiPtGXz84` y `tp7XFLAIkS0` (18-11 mañana) con 7 y 8 vistas tras 12 h → TASKS.

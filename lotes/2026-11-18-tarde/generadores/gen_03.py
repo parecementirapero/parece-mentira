@@ -57,19 +57,20 @@ def marca(y0, y1, t0, t1, x=540, ancho=520, color="#ff2d55", z=0.7):
 
 
 # ================================================================== PLANOS
-@v.plano(0, "gancho: la marca de altura baja por el tallímetro sobre la silueta")
+@v.plano(0, "gancho: la silueta encoge y la marca de altura cae por el tallímetro")
 def _(d):
-    return P(["#2a1a3a", "#ffb46a"], [BG("bg_dormitorio_dia"), IMG("tallimetro", ancho=300, x=760, y=1000, z=0.4),
-             IMG("perfil", ancho=420, x=480, z=0.5, keys=[{"t": 0, "y": 1020, "ey": 1.0}, {"t": d, "y": 1050, "ey": 0.97, "ease": "suave"}]),
-             marca(360, 470, 0.0, d * 0.8, 600, 600), flecha([[900, 300], [900, 470]], 0.0, d * 0.8, MAGENTA, 10, z=0.75)],
-             cam(1.0, 1.0, (540, 900), (540, 800)), vineta=0.6, sfx=[(0.05, "whoosh", -12, {"dur": 0.6}), (d * 0.7, "golpe", -16)])
+    return P(["#2a1a3a", "#ffb46a"], [BG("bg_dormitorio_dia"), IMG("tallimetro", ancho=320, x=780, y=1150, z=0.4),
+             IMG("perfil", ancho=520, x=470, z=0.5, keys=[{"t": 0, "y": 1250, "ey": 1.0}, {"t": d * 0.7, "y": 1310, "ey": 0.93, "ease": "salida"}, {"t": d, "y": 1312, "ey": 0.93}]),
+             marca(600, 720, 0.0, d * 0.7, 640, 620, "#ffffff70"), marca(600, 760, 0.0, d * 0.7, 640, 620),
+             flecha([[960, 560], [960, 760]], 0.0, d * 0.6, MAGENTA, 12, z=0.75), brillo(470, 700, 300, "#ff2d55", 0.25, 0.45, pulso=[0.2, 0.3])],
+             cam(1.0, 1.0, (540, 1000), (540, 900)), vineta=0.6, sfx=[(0.02, "whoosh", -12, {"dur": 0.6}), (d * 0.6, "golpe", -16)])
 
 
 @v.plano(3, "menos que esta mañana: el despertador suena junto a la cama")
 def _(d):
     return P(DIA, [BG("bg_dormitorio_dia"), IMG("cama", ancho=900, x=520, y=1500, z=0.4),
              IMG("despertador", ancho=300, x=820, y=1150, z=0.55, anim={"balanceo": [8, 0.1]}), polvo("#fff4c0", 30, (500, 800, 1000, 1500), 3)],
-             cam(1.0, 1.05, (600, 1300)), "corte", hud=[contexto(0.05, d - 0.05, "AL LEVANTARTE")], sfx=[(0.05, "tictac", -22, {"dur": 0.8})])
+             cam(1.0, 1.05, (600, 1300)), "corte", hud=[contexto(0.05, d - 0.05, "DE MAÑANA")], sfx=[(0.05, "tictac", -22, {"dur": 0.8})])
 
 
 @v.plano(9, "¿por qué? la lupa recorre la espalda")
@@ -95,7 +96,8 @@ def _(d):
 
 @v.plano(21, "como cojines llenos de agua")
 def _(d):
-    return P(["#0d1324", "#1f2b48"], [brillo(540, 1050, 600, "#4ac8e8", 0.35, 0.1),
+    return P(["#0d1324", "#1f2b48"], [BG("bg_esp_petroleo"), brillo(540, 1050, 600, "#4ac8e8", 0.35, 0.1), polvo("#bff6ff", 40, (100, 700, 980, 1500), 27, "chispas"),
+             IMG("gota", ancho=90, x=220, y=1350, z=0.55, anim={"flotar": [12, 1.1]}), IMG("gota", ancho=70, x=860, y=820, z=0.55, anim={"flotar": [10, 1.4]}),
              IMG("cojin", ancho=760, x=540, y=1100, z=0.5, keys=late(0.1, 2, 0.06, 0.4)),
              IMG("gota", ancho=110, x=540, z=0.6, keys=[{"t": 0, "y": 500, "op": 0}, {"t": 0.1, "op": 1}, {"t": d * 0.6, "y": 1050, "op": 0, "ease": "entrada"}])],
              cam(1.0, 1.05), "corte", sfx=[(d * 0.55, "agua", -20, {"dur": 0.6})])
@@ -127,7 +129,7 @@ def _(d):
 def _(d):
     per = [IMG("perfil", ancho=150, x=120 + k * 120, y=1150, z=0.5, keys=late(0.05 + k * 0.05, 1, 0.08, 0.25)) for k in range(8)]
     return P(DIA, [BG("bg_dormitorio_dia"), *per], cam(1.0, 1.05, (540, 1100)), "corte",
-             hud=[contador(0.05, d - 0.05, 0, 8, d * 0.5, "VOLUNTARIOS", tam=120, y=560, borde=AMBAR, miles=False)], sfx=[(0.1, "pop", -18)])
+             hud=[contador(0.05, d - 0.05, 0, 8, d * 0.5, "", tam=120, y=560, borde=AMBAR, miles=False)], sfx=[(0.1, "pop", -18)])
 
 
 @v.plano(52, "perdieron diecinueve milímetros: la regla de cerca")
@@ -166,7 +168,8 @@ def _(d):
     return P(OSC, [BG("bg_dormitorio"),
              {"tipo": "barra", "x": 540, "y": 1100, "ancho": 860, "alto": 80, "color": CIAN, "fondo": "#ffffff20", "z": 0.6,
               "keys": [{"t": 0.05, "progreso": 0}, {"t": d * 0.6, "progreso": 0.7, "ease": "salida"}]},
-             IMG("cojin", ancho=300, x=540, y=1450, z=0.55, keys=[{"t": 0, "ey": 0.6}, {"t": d * 0.6, "ey": 1.0, "ease": "rebote"}])],
+             IMG("cama", ancho=900, x=540, y=1600, z=0.4), IMG("cojin", ancho=520, x=540, y=1350, z=0.55, keys=[{"t": 0, "ey": 0.6}, {"t": d * 0.6, "ey": 1.0, "ease": "rebote"}]),
+             polvo("#bff6ff", 30, (200, 1200, 880, 1500), 29, "chispas")],
              cam(1.0, 1.04), "corte", hud=[contador(0.05, d - 0.05, 0, 7, d * 0.6, "DE 10", tam=140, y=560, borde=CIAN, miles=False)],
              sfx=[(0.05, "subida", -18, {"dur": d * 0.6})])
 
@@ -236,7 +239,7 @@ def _(d):
     return P(["#2a1a3a", "#ffb46a"], [BG("bg_dormitorio_dia"), IMG("tallimetro", ancho=300, x=760, y=1000, z=0.4),
              IMG("perfil", ancho=420, x=480, y=1020, z=0.5), IMG("despertador", ancho=220, x=240, y=1500, z=0.6, anim={"balanceo": [8, 0.1]}),
              marca(470, 360, 0.1, d * 0.7, 600, 600, LIMA)],
-             cam(1.0, 1.0, (540, 900), (540, 900)), "desenfoque", hud=[amarillo(0.05, d - 0.4, "MAÑANA", y=600, tam=110, color=LIMA)],
+             cam(1.0, 1.0, (540, 900), (540, 900)), "desenfoque", hud=[rotulo(0.05, d - 0.4, "MAÑANA", tam=110, color="#141414", capsula="#7dff3ae6", y=600)],
              sfx=[(0.1, "tictac", -22, {"dur": 0.8})])
 
 
@@ -258,8 +261,8 @@ def _(d):
 
 @v.plano(47, "micro: 1985 en el calendario", mas=0.05)
 def _(d):
-    return P(DIA, [IMG("calendario", ancho=600, x=540, y=1100, z=0.5, keys=late(0.0, 1, 0.08, 0.3))], cam(1.0, 1.1), "corte",
-             hud=[rotulo(0.0, d - 0.03, "1985", tam=180, color="#141414", capsula=None, y=1180, sin_pop=True)], sfx=[(0.02, "pop", -18)])
+    return P(DIA, [IMG("calendario", ancho=600, x=540, y=900, z=0.5, keys=late(0.0, 1, 0.08, 0.3))], cam(1.0, 1.1), "corte",
+             hud=[rotulo(0.0, d - 0.03, "1985", tam=180, color="#141414", capsula=None, y=980, sin_pop=True)], sfx=[(0.02, "pop", -18)])
 
 
 @v.plano(75, "micro: la marca cae de golpe", mas=0.05)

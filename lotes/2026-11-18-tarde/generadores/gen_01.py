@@ -293,12 +293,6 @@ def _(d):
              cam(1.4, 1.55, (540, 960)), "corte", sfx=[(0.02, "roce", -20)])
 
 
-@v.plano(45, "micro: los micrófonos del atril", mas=0.05)
-def _(d):
-    return P(["#0a1030", "#1a2a5a"], [IMG("atril", ancho=1400, x=540, y=1500, z=0.5), brillo(540, 700, 300, "#fff4d0", 0.5, 0.6, pulso=[0.3, 0.2])],
-             cam(1.3, 1.45, (540, 900)), "corte", sfx=[(0.02, "brillo", -20)])
-
-
 @v.plano(63, "micro: +5 que late", mas=0.05)
 def _(d):
     return P(OSC, [BG("bg_esp_violeta"), brillo(540, 1000, 500, "#ff3df2", 0.5, 0.3)], cam(1.0, 1.08), "corte",
@@ -334,12 +328,6 @@ def _(d):
 def _(d):
     return P(OSC, [BG("bg_ciudad_noche"), IMG("calendario", ancho=700, z=0.6, keys=lanza(0.0, d, (300, 1300), (900, 600)), anim={"girar": 120})],
              cam(1.0, 1.08), "corte", sfx=[(0.02, "whoosh", -16, {"dur": 0.4})])
-
-
-@v.plano(135, "micro: luces de sirena", mas=0.05)
-def _(d):
-    return P(OSC, [IMG("coche_policia", ancho=2200, x=540, y=1300, z=0.5), *sirena(450, 1000, d, 0.6)],
-             cam(1.1, 1.2, (540, 1100), temblor=3), "corte", sfx=[(0.02, "senal", -24)])
 
 
 @v.plano(145, "micro: botones del mando de cerca", mas=0.05)
