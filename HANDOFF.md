@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-18 09:00 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-18-manana publicado en YouTube
+**Hecho**: «ok» a los 3 en el chat del lote (la persona no dijo nombre; desde el móvil). YouTube por API desde el Mac de Nico: 01 público `5pSKNws_e-s` (08:45), 02 `rEiiPtGXz84` programado 09:50, 03 `tp7XFLAIkS0` programado 10:50 (`--prueba` antes: sin duplicados). `etiquetas.json` y fichas unidas a los ids. Comentario del 01 escrito (sin emojis); fijar no se puede hasta verificar el canal en Studio. Avisos `send_later` en el chat a las 09:53 y 10:53 para los comentarios del 02 y 03.
+**No hecho**: portada por API (403: el canal no tiene miniaturas personalizadas) → en Studio, fotograma `portada.t`. **TikTok**: la persona estaba en el móvil y el selector de archivos del navegador integrado necesita a alguien delante del Mac; Nico pide que **lo suba Jorge desde su ordenador** (tarea en TASKS → Pendiente, con dónde están los MP4 y los textos).
+**Siguiente paso**: Jorge publica los 3 en TikTok y apunta los enlaces en `estado.md`.
+
 ## 2026-11-18 08:55 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-18-manana
 **Hecho**: lote `2026-11-18-manana`, 3 vídeos v1 en revisión: 01 «Hace 1.400 millones de años, un día duraba 18 horas» (Espacio, cadena de datos, gancho de dato, control), 02 «La Gran Muralla China NO se ve desde el espacio» (Histórico, mito y realidad, **experimento: gancho de negación**), 03 «Tu perro copia tus bostezos» (Ciencia, experimento, gancho de dato, control). Cada dato con ≥ 2 fuentes (`guiones.md`). Voz oficial por API desde el Mac de Nico (sin fallos); en el 02 se quitó al montar «Nadie había subido nunca.» (`omitir`) porque la voz salía de 59,9 s. Ilustraciones nuevas en `generadores/ilus_0N.py`, montaje con `motor/denso.py` (36–42 planos), render en la nube (los 3 vídeos montados en paralelo). Portadas elegidas sin «ok». Fichas de variables creadas antes de publicar. Vídeos y portadas en el chat y en el Mac (SHA iguales). Correo `1a1ed968a22c00b4`.
 **Pruebas**: `motor.guion` ✓ ×3; `construir` sin ⚠ de lectura; `motor.calidad --mp4` 95/95/91 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; hojas de fotogramas revisadas; `ficha comprobar` 0 problemas. No se tocó `motor/`.
