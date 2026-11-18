@@ -9,7 +9,7 @@ Chat del lote: https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H
 - 20:07: el Mac vuelve a responder (`device_list_dir` OK) → se reserva y se produce el lote.
 - 20:10–20:20: a las 20:09 el puente volvió a caerse. Créditos de ElevenLabs leídos a las 20:08: **27.748** (da para el lote). Mientras el Mac no está: temas verificados, guiones (`motor.guion` ✓ ×3) y montaje con tiempos provisionales en la nube (`generadores/`). Falta la voz (necesita `claves.txt` del Mac).
 - 20:20–21:10: Mac sin puente en 12 comprobaciones (cada 5 min). Guiones 02 y 03 recortados a 154–155 palabras (la voz real va más lenta que 2,85 p/s: 155 palabras = 58,7 s en el lote de la mañana) y planos recolocados. Push al móvil a las 20:31.
-- 21:10: el lote queda **«pendiente de voz»** (AGENTE §4: sin voz alternativa). Correo `[AVISO]` enviado. Este chat vuelve a comprobar el Mac a las 22:00 y a las 23:00 (aviso programado en la sesión); si responde, sigue con voz → render → calidad → portadas → vídeos aquí.
+- 21:10: el lote queda **«pendiente de voz»** (AGENTE §4: sin voz alternativa). Correo `[AVISO]` enviado (`1a1f04558a8c0298`). Este chat vuelve a comprobar el Mac a las 22:00 y a las 23:00 (aviso programado en la sesión); si responde, sigue con voz → render → calidad → portadas → vídeos aquí.
 
 ## Temas (3, verificados con ≥ 2 fuentes; ver `guiones.md`)
 1. **GTA 6 tardó trece años** — Histórico · dato · comparación · universal · control. Reservado por Jorge.
