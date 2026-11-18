@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-18 14:55 — Agente 20:00 (Jorge) — rama `main` — YouTube del lote 2026-11-17-tarde
+**Hecho**: permiso de subida de YouTube concedido en el Mac de Jorge (pedido y aprobado en el chat; token solo en `claves.txt`). Cebolla v2 publicada (dMcGHyKbeaA). El Sol tenía una subida rota del 17-11 (cjSc0D_gOaI, 0 s): borrada con aprobación y resubida la v3 (G_xEqU97krk, programada 15:49). Rayo ya estaba (dOdQj9QyoBI). `etiquetas.json` actualizado.
+**Pendiente**: TikTok de los lotes 2026-11-17-tarde y 2026-11-18-manana (6 vídeos; hace falta alguien delante del Mac para elegir cada archivo). Comentarios de YouTube sin poner (fijar no se puede hasta verificar el canal).
+
 ## 2026-11-18 09:00 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-18-manana publicado en YouTube
 **Hecho**: «ok» a los 3 en el chat del lote (la persona no dijo nombre; desde el móvil). YouTube por API desde el Mac de Nico: 01 público `5pSKNws_e-s` (08:45), 02 `rEiiPtGXz84` programado 09:50, 03 `tp7XFLAIkS0` programado 10:50 (`--prueba` antes: sin duplicados). `etiquetas.json` y fichas unidas a los ids. Comentario del 01 escrito (sin emojis); fijar no se puede hasta verificar el canal en Studio. Avisos `send_later` en el chat a las 09:53 y 10:53 para los comentarios del 02 y 03.
 **No hecho**: portada por API (403: el canal no tiene miniaturas personalizadas) → en Studio, fotograma `portada.t`. **TikTok**: la persona estaba en el móvil y el selector de archivos del navegador integrado necesita a alguien delante del Mac; Nico pide que **lo suba Jorge desde su ordenador** (tarea en TASKS → Pendiente, con dónde están los MP4 y los textos).

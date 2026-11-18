@@ -172,5 +172,23 @@
   "portada": "arriba",
   "lote": "2026-11-18-manana",
   "fuentes_en_descripcion": "no"
+ },
+ "G_xEqU97krk": {
+  "titulo": "El Sol que ves ya es pasado ☀️⏳",
+  "lote": "2026-11-17-tarde",
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "reconstrucción",
+  "experimento": "no",
+  "portada": "abajo"
+ },
+ "dMcGHyKbeaA": {
+  "titulo": "Por qué lloras al cortar cebolla (y el truco que funciona) 🧅😢",
+  "lote": "2026-11-17-tarde",
+  "tema": "Cotidiano",
+  "gancho": "orden",
+  "estructura": "experimento",
+  "experimento": "gancho de orden",
+  "portada": "dato"
  }
 }
