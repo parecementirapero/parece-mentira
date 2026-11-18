@@ -9,6 +9,7 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 **Hecho**: `lotes/2026-11-18-tarde/estado.md` con la causa, tarea en `TASKS.md` → Pendiente, correo de aviso `[AVISO]`. Nada gastado (ni créditos ni investigación), nada publicado.
 **Pendiente**: el vídeo reservado de GTA 6 (sale el 19-11) sigue en `lotes/IDEAS.md`. Propuesta: que lo haga el lote 2026-11-19-manana (Nico) si el de esta tarde no se retoma esta noche — lo deciden Nico/Jorge.
 **Siguiente paso**: encender el Mac de Jorge con la app de Claude abierta y lanzar a mano la tarea de las 20:00.
+**Actualización 20:08**: el Mac volvió a conectar a las 20:07; el lote se produce en este mismo turno (ver la entrada de arriba cuando termine).
 
 ## 2026-11-18 15:25 — Jorge (chat del Mac de Jorge) — rama `main` — TikTok del lote 2026-11-18-manana
 **Hecho**: tarea reservada con push. SHA-256 de los 3 MP4 (Descargas de Jorge) = `estado.md`; copiados a `lotes/2026-11-18-manana/` de su carpeta local. Comprobado en TikTok Studio que no estaban. Publicados los 3 seguidos desde el navegador integrado (Jorge eligió los archivos): 01 https://www.tiktok.com/@parece.mentira85/video/7709545960136920342 · 02 …/7709546579622923542 · 03 …/7709547350464662806. Texto de `metadatos.json` (`tiktok.texto`), portada = fotograma `portada.t` (el editor va por segundos: 0 s · ≈4 s · 0 s) + `portada.texto`. Comentarios de `metadatos.json` escritos en los 3. `estadisticas/estudio ficha publicar` hecho para 01–03 (con id de YouTube y TikTok).
