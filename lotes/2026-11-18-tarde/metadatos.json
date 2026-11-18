@@ -93,16 +93,14 @@
    "experimento": "no",
    "alcance": "universal",
    "montaje": "denso",
-   "portada": "arriba"
+   "portada": "imagen propia"
   },
   "version": 1,
   "portada": {
-   "texto": "GTA 6 TARDÓ 13 AÑOS",
-   "clave": "13 AÑOS",
-   "t": 1.3,
-   "diseno": "arriba",
-   "motivo": "la hoja 2026 del calendario del primer segundo, enorme; el texto se lee en la cuadrícula 3:4 y no tapa la cifra",
-   "archivo": "01-portadas/portada.jpg"
+   "texto": "GTA 6 · 13 AÑOS · ESPERÁNDOLO",
+   "archivo": "01-portadas/portada_gta6.jpg",
+   "diseno": "imagen propia",
+   "motivo": "pedida por la persona: algo relacionado con GTA, dibujado por nosotros (sin logo ni arte de Rockstar)"
   }
  },
  "02": {

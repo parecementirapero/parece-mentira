@@ -67,4 +67,4 @@ Créditos de ElevenLabs tras el lote: ≈24.200 (se gastaron ≈3.550).
 ## Comentarios (2026-11-19 ≈01:00)
 - YouTube, respondidos con el visto bueno de la persona (3): Judith (GTA 6), Gabriel (rayo; se corrigió con amabilidad: sobreviven ~9 de cada 10, NWS), Rebeca (puertas). TikTok: solo uno de gente, «f8tf7fr7r5» (sin sentido), no se contesta.
 - Desde ahora es tarea del agente en cada turno (AGENTE §8b, DECISIONS).
-- TikTok del 01: borrado para cambiar la portada (la web no deja subir imagen en un vídeo publicado); pendiente de resubir cuando la persona elija el archivo.
+- TikTok del 01: borrado (7709657865832697110) y **resubido con la portada nueva** (imagen subida en «Upload cover»): https://www.tiktok.com/@parece.mentira85/video/7709660698535529750 — mismo texto y 29 hashtags.

@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-19 01:05 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — portada de GTA 6 y respuestas a comentarios
+**Hecho**: portada nueva del 01 hecha con nuestras ilustraciones («GTA 6 · 13 AÑOS · ESPERÁNDOLO», sin arte de Rockstar). YouTube: la persona verificó el canal → portada puesta por API (`--solo-portada`). TikTok: la web no deja subir imagen a un vídeo publicado → con su «sí» se borró el primero (0 vistas) y se resubió con la portada: https://www.tiktok.com/@parece.mentira85/video/7709660698535529750. 3 respuestas a comentarios en YouTube (con su visto bueno) y regla nueva AGENTE §8b + DECISIONS: el agente contesta comentarios en cada turno.
+**Aprendido**: canal verificado = miniaturas propias por API y comentarios fijables. En TikTok Studio, «Edit cover» de un vídeo ya publicado solo deja elegir fotograma; «Upload cover» solo existe al subir.
+**Pendiente**: comentario fijado del 01 en YouTube y TikTok; 02 y 03 mañana con «ok 2 y 3».
+
 ## 2026-11-19 00:40 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — 01 de GTA 6 publicado
 **Hecho**: «ok 1» de la persona (confirmado dos veces: antes y después de añadir hashtags de GTA). YouTube por API desde el Mac de Jorge: https://youtube.com/shorts/_9znalXgInI (15 hashtags en la descripción y 22 etiquetas ocultas; `subir_youtube.py` acepta ahora `youtube.tags`). TikTok desde el navegador integrado: https://www.tiktok.com/@parece.mentira85/video/7709657865832697110 (29 hashtags, portada = fotograma 0). Sin duplicados (comprobado antes en las dos redes). `etiquetas.json` actualizado.
 **Aprendido**: el panel del navegador integrado era tan estrecho (349 px) que los botones de TikTok quedaban fuera; con `resize_window` a 1280×900 se ve la versión de escritorio. En TikTok, al seleccionar el texto por script y escribir, a veces se queda el nombre del archivo delante: comprobar el texto y borrarlo.
