@@ -4,6 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
+- [ ] Lote 2026-11-18-manana — Agente 08:00 (Nico) — 2026-11-18 07:55 — arrancando
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 - [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **YouTube hecho** (01 público `dOdQj9QyoBI`; 02 programado 23:59 `cjSc0D_gOaI`). Falta: TikTok de los dos (Nico tiene que elegir el archivo en el navegador integrado), portada por fotograma en Studio, comentarios fijados
 
