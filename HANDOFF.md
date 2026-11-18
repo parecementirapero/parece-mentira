@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-18 08:55 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-18-manana
+**Hecho**: lote `2026-11-18-manana`, 3 vídeos v1 en revisión: 01 «Hace 1.400 millones de años, un día duraba 18 horas» (Espacio, cadena de datos, gancho de dato, control), 02 «La Gran Muralla China NO se ve desde el espacio» (Histórico, mito y realidad, **experimento: gancho de negación**), 03 «Tu perro copia tus bostezos» (Ciencia, experimento, gancho de dato, control). Cada dato con ≥ 2 fuentes (`guiones.md`). Voz oficial por API desde el Mac de Nico (sin fallos); en el 02 se quitó al montar «Nadie había subido nunca.» (`omitir`) porque la voz salía de 59,9 s. Ilustraciones nuevas en `generadores/ilus_0N.py`, montaje con `motor/denso.py` (36–42 planos), render en la nube (los 3 vídeos montados en paralelo). Portadas elegidas sin «ok». Fichas de variables creadas antes de publicar. Vídeos y portadas en el chat y en el Mac (SHA iguales). Correo `1a1ed968a22c00b4`.
+**Pruebas**: `motor.guion` ✓ ×3; `construir` sin ⚠ de lectura; `motor.calidad --mp4` 95/95/91 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; hojas de fotogramas revisadas; `ficha comprobar` 0 problemas. No se tocó `motor/`.
+**No hecho**: Studio no se abrió (sin lecturas nuevas en `studio.json`). Sin publicar: falta el «ok». Drive no se usa aunque lo pida el texto de la tarea programada (DECISIONS manda; tarea ya apuntada en TASKS).
+**Créditos ElevenLabs**: quedan 27.748 de 40.000 (≈7 lotes).
+**Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 → publicar según AGENTE §8 (YouTube por API desde el Mac de Nico, TikTok por navegador).
+
 ## 2026-11-17 23:10 — Nico (chat del Mac de Nico) — rama `main` — lote 2026-11-17-tarde: 01 y 02 en YouTube
 **Hecho**: Nico pidió subir los vídeos descargados del lote de Jorge: en su Mac están 01 v3 y 02 v3 (SHA-256 iguales a `estado.md`); el 03 v2 no está descargado. Copiados a `~/Documents/Parece Mentira/lotes/2026-11-17-tarde/` con `metadatos.json`; `publicar/subir_youtube.py` del Mac actualizado al del repo. YouTube por API: 01 público (`dOdQj9QyoBI`), 02 programado a las 23:59 (`cjSc0D_gOaI`). `estado.md`, `etiquetas.json` y fichas (`ficha publicar`) al día.
 **Pruebas**: SHA-256, ffprobe, `--prueba` ×2; tras un corte de conexión con el Mac, comprobado por la API (`videos.list`): 01 `public`/`processed`, 02 `private` con `publishAt` 22:59Z; sin duplicados.

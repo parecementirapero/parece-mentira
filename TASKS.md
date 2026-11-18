@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-18-manana — Agente 08:00 (Nico) — 2026-11-18 07:55 — arrancando
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 - [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **YouTube hecho** (01 público `dOdQj9QyoBI`; 02 programado 23:59 `cjSc0D_gOaI`). Falta: TikTok de los dos (Nico tiene que elegir el archivo en el navegador integrado), portada por fotograma en Studio, comentarios fijados
 
@@ -57,6 +56,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-18-manana (día de 18 horas, Gran Muralla no se ve, perro que copia bostezos): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 95/95/91; experimento: gancho de negación en el 02); esperan el «ok» en https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 (correo `1a1ed968a22c00b4`) — Agente 08:00 (Nico) — 2026-11-18 08:55
 - [x] Lote 2026-11-17-tarde (rayo más caliente que el Sol, el Sol que ves ya es pasado, cebolla): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 84/87/93); esperan el «ok» en https://claude.ai/code/session_019BG1dHf6SfJ6MbfA5kmnCP (correo `1a1eaf34810f56dd`) — Agente 20:00 (Jorge) — 2026-11-17 20:25
 - [x] Framework de estudio de audiencia y rendimiento: `estadisticas/estudio/` (ficha de variables, mediciones a edad fija, niveles pista/indicio/regla comprobados con simulaciones, experimentos con ficha previa, autopsia por vídeo, informe semanal, comentarios, audiencia por vídeo), `estadisticas/fichas.json` con los 10 vídeos públicos, workflow diario y AGENTE §1/§6/§8; 113 pruebas; doc del Proyecto `claude/framework-estudio-audiencia-rendimiento.md` — Nico — 2026-11-17 16:30
 - [x] Lote 2026-11-17-manana publicado en TikTok e Instagram desde el Mac de Jorge (YouTube lo subió el chat de Nico); vídeos traídos por la página «artifact» y comprobados por SHA-256 — Jorge — 2026-11-17

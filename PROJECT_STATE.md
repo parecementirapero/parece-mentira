@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-17 20:25 — Agente 20:00 (Jorge) (lote 2026-11-17-tarde)_
+_Última actualización: 2026-11-18 08:55 — Agente 08:00 (Nico) (lote 2026-11-18-manana)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,6 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- En revisión: lote **2026-11-18-manana** v1 (día de 18 horas, la Gran Muralla no se ve desde el espacio, tu perro copia tus bostezos; 58–59 s; experimento: gancho de negación en el 02). Vídeos en el chat https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 y en `Documents/Parece Mentira/lotes/2026-11-18-manana/` (Mac de Nico). ElevenLabs: quedan 27.748 caracteres.
 - En revisión: lote **2026-11-17-tarde** v1 (rayo más caliente que el Sol, el Sol que ves ya es pasado, cebolla; 55–57 s; experimento: gancho de orden en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dHf6SfJ6MbfA5kmnCP y en `Documents/Parece Mentira/lotes/2026-11-17-tarde/` (Mac de Jorge). ElevenLabs: quedan 28.812 caracteres.
 - Publicado: lote **2026-11-17-manana** v1 (plátano radiactivo, Saturno flotaría, huella de koala; 56–59 s; primer lote automático con método denso y `motor.calidad`). Vídeos en el chat https://claude.ai/code/session_019BG1dJfghaKYErZsy5CyPu y en `Documents/Parece Mentira/lotes/2026-11-17-manana/` (Mac de Nico). ElevenLabs: quedan 29.828 caracteres.
 - En revisión: lote 2026-11-16-manana v1 (planetas, pulpo, vikingos; 53–54 s, voz clon nueva). Vídeos en el chat https://claude.ai/code/session_019BG1dHPaoMtT9aEtopJ3JF y en `Documents/Parece Mentira/lotes/2026-11-16-manana/`, en el Mac de Nico.

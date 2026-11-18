@@ -5,7 +5,6 @@ Regla: no repetir temas de «Usados». Las continuaciones valen si aportan infor
 ## Candidatos
 - Darle a «posponer» en la alarma te deja peor: inercia del sueño (cotidiano)
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
-- El bostezo contagioso (cotidiano)
 _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)_
 
 ### Ganchos propuestos para los candidatos de arriba (2026-11-17, Nico; regla de `motor/APRENDIZAJE.md` H7: primera frase ≤ 5 palabras + un objeto grande en acción en el fotograma 0)
@@ -19,7 +18,6 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 
 ### Candidatos nuevos con objeto claro para el fotograma 0 (AGENTE §2). **Sin verificar: cada dato necesita sus dos fuentes antes de usarse**
 - ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
-- El día de la Tierra hace ~1.400 millones de años duraba unas 18 horas (continuación de la Luna)
 
 ## Usados
 Sistema antiguo (retirado de las redes el 2026-11-15, pero cuentan como usados):
@@ -52,6 +50,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - Un rayo es unas cinco veces más caliente que la superficie del Sol (≈30.000 °C; trueno = expansión del aire; regla de 3 s por km; 16 km) — lote 2026-11-17-tarde
 - La luz del Sol llega con 8 min 20 s de retraso y su energía tarda ≈170.000 años en salir del núcleo (neandertales) — lote 2026-11-17-tarde
 - Por qué lloras al cortar cebolla (factor lacrimógeno; Cornell 2025: gotitas a 40 m/s, cuchillo afilado y despacio) — lote 2026-11-17-tarde
+- El día de la Tierra duraba ≈18 h hace 1.400 millones de años (Xiamaling, corales de Wells, tablillas babilónicas; continuación de la Luna) — lote 2026-11-18-manana
+- La Gran Muralla China no se ve a simple vista desde el espacio (Stukeley 1754, 4–5 m de ancho, Yang Liwei 2003, Chiao 2004) — lote 2026-11-18-manana
+- El bostezo contagioso: los perros copian los nuestros (Birkbeck 2008, 21 de 29), enfriar el cerebro (Gallup 2007), familia > desconocidos — lote 2026-11-18-manana
 
 ## Continuaciones prometidas
 

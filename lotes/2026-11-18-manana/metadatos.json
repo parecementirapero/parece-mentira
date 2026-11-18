@@ -1,0 +1,180 @@
+{
+ "01": {
+  "archivo": "01-dia-18-horas_v1.mp4",
+  "titulo": "Hace 1.400 millones de años, un día duraba 18 horas 🌍🌙",
+  "youtube": {
+   "titulo": "Hace 1.400 millones de años, un día duraba 18 horas 🌍🌙 #Shorts",
+   "descripcion": "La Tierra giraba mucho más deprisa y un año tenía más de 450 días. Lo cuentan unas rocas del norte de China y los corales fósiles. ¿Quién nos frenó? La Luna: sus mareas rozan la Tierra como un freno, y el día sigue creciendo un poquito cada siglo.\n\n#Shorts #espacio #ciencia #curiosidades #luna #tierra #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "tiktok": {
+   "texto": "Hace 1.400 millones de años, un día duraba 18 horas 🌍🌙 La Tierra giraba mucho más deprisa y un año tenía más de 450 días. Lo cuentan unas rocas del norte de China y los corales fósiles. ¿Quién nos frenó? La Luna: sus mareas rozan la Tierra como un freno, y el día sigue creciendo un poquito cada siglo. #espacio #ciencia #curiosidades #luna #tierra #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "ScienceDaily (Univ. de Wisconsin-Madison, PNAS 2018, Meyers y Malinverno) — hace 1.400 millones de años el día duraba algo más de 18 horas; la Luna se aleja 3,82 cm/año",
+    "url": "https://www.sciencedaily.com/releases/2018/06/180604151200.htm"
+   },
+   {
+    "titulo": "Sci.News — 18,68 h; Luna a ≈340.900 km; Formación Xiamaling (norte de China); ciclos de Milankovitch",
+    "url": "https://www.sci.news/othersciences/geoscience/moon-making-earths-days-longer-06089.html"
+   },
+   {
+    "titulo": "EarthDate — días de 18,7 h y casi 500 días al año (Xiamaling); el día crece ≈1,8 ms por siglo; las mareas frenan la Tierra",
+    "url": "https://www.earthdate.org/the-days-getting-longer"
+   },
+   {
+    "titulo": "Paleontological Research Institution — John Wells (Nature, 1963): ≈400 líneas de crecimiento por año en corales del Devónico",
+    "url": "https://priweb.org/blog-post/john-wells-and-coral-geochronometry"
+   },
+   {
+    "titulo": "Live Science — Stephenson et al. 2016: eclipses en tablillas babilónicas (720 a. C.); el día crece ≈1,8 ms por siglo",
+    "url": "https://www.livescience.com/57118-earth-spin-slowdown-shown-in-ancient-tablets.html"
+   }
+  ],
+  "comentario": "¿En qué gastarías tú esas 6 horas de más? 🌍 Te leo 👇",
+  "etiquetas": {
+   "tema": "Espacio",
+   "gancho": "dato",
+   "estructura": "cadena de datos",
+   "experimento": "no",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "centro"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "UN DÍA DE 18 HORAS",
+   "clave": "18 HORAS",
+   "variante": "LA LUNA NOS FRENÓ",
+   "t": 0.75,
+   "diseno": "centro",
+   "motivo": "la Tierra y la Luna enormes del primer segundo, coherente con el gancho; la cifra se lee en la cuadrícula 3:4",
+   "archivo": "01-portadas/portada.jpg"
+  }
+ },
+ "02": {
+  "archivo": "02-gran-muralla_v1.mp4",
+  "titulo": "La Gran Muralla China NO se ve desde el espacio 🧱🚀",
+  "youtube": {
+   "titulo": "La Gran Muralla China NO se ve desde el espacio 🧱🚀 #Shorts",
+   "descripcion": "Es larguísima, pero en muchos tramos mide 4 o 5 metros de ancho y tiene el color del suelo. El primer astronauta chino no la vio, y el mito es de una carta de 1754, cuando nadie había subido nunca. Lo que sí se ve desde arriba: las ciudades de noche.\n\n#Shorts #historia #espacio #mitos #curiosidades #granmuralla #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "tiktok": {
+   "texto": "La Gran Muralla China NO se ve desde el espacio 🧱🚀 Es larguísima, pero en muchos tramos mide 4 o 5 metros de ancho y tiene el color del suelo. El primer astronauta chino no la vio, y el mito es de una carta de 1754, cuando nadie había subido nunca. Lo que sí se ve desde arriba: las ciudades de noche. #historia #espacio #mitos #curiosidades #granmuralla #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "NASA — China's Wall Less Great in View from Space (Yang Liwei no la vio; Chiao la fotografió en 2004 con objetivo de 180 mm; desde órbita baja se ven sobre todo ciudades de noche; el material tiene el color del suelo)",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/history/PDFs/great_wall_less_great_from_space.pdf"
+   },
+   {
+    "titulo": "BBC Sky at Night — el mito viene de una carta de William Stukeley (1754); Yang Liwei, Shenzhou 5 (2003), 14 órbitas: «no vi nuestra Gran Muralla»; Alan Bean: desde la Luna no se ve nada hecho por el ser humano",
+    "url": "https://www.skyatnightmagazine.com/space-science/can-you-see-great-wall-china-from-space"
+   },
+   {
+    "titulo": "Scientific American — la Estación Espacial a ≈400 km; la muralla es estrecha",
+    "url": "https://www.scientificamerican.com/article/no-you-cant-see-the-great-wall-of-china-from-space/"
+   },
+   {
+    "titulo": "Scientific American — Jeffrey Hoffman: el color es casi el del terreno; Yang Liwei no la vio",
+    "url": "https://www.scientificamerican.com/article/is-chinas-great-wall-visible-from-space/"
+   },
+   {
+    "titulo": "Travel China Guide — ancho medio de 4–5 m, como una carretera de un carril",
+    "url": "https://www.travelchinaguide.com/china_great_wall/facts/seen-from-space.htm"
+   },
+   {
+    "titulo": "Al Jazeera (2003) — China's spaceman shatters a myth",
+    "url": "https://www.aljazeera.com/news/2003/10/17/chinas-spaceman-shatters-a-myth"
+   }
+  ],
+  "comentario": "¿Qué otro mito quieres que desmontemos? 🧱 Te leo 👇",
+  "etiquetas": {
+   "tema": "Histórico",
+   "gancho": "negacion",
+   "estructura": "misterio por pistas",
+   "experimento": "gancho de negación",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "arriba"
+  },
+  "version": 1,
+  "nota_montaje": "locución con la frase «Nadie había subido nunca.» quitada al montar (omitir, 02-locucion-corta.mp3) para no pasar de 60 s",
+  "portada": {
+   "texto": "NO SE VE DESDE EL ESPACIO",
+   "clave": "NO",
+   "variante": "¿LA VES DESDE ARRIBA?",
+   "t": 3.8,
+   "diseno": "arriba",
+   "motivo": "la torre y la muralla grandes y reconocibles; el texto de negación arriba sin taparlas y repite el gancho",
+   "archivo": "02-portadas/portada.jpg"
+  }
+ },
+ "03": {
+  "archivo": "03-bostezo_v1.mp4",
+  "titulo": "Tu perro copia tus bostezos 🐶🥱",
+  "youtube": {
+   "titulo": "Tu perro copia tus bostezos 🐶🥱 #Shorts",
+   "descripcion": "En un experimento, 21 de 29 perros bostezaron al ver bostezar a una persona. A nosotros nos pasa a más o menos la mitad, y se pega más con la familia. ¿Para qué sirve? Una idea: enfría el cerebro. Prueba: mira a tu perro y bosteza.\n\n#Shorts #perros #ciencia #curiosidades #bostezo #mascotas #parecementira",
+   "publico": true,
+   "para_ninos": false
+  },
+  "tiktok": {
+   "texto": "Tu perro copia tus bostezos 🐶🥱 En un experimento, 21 de 29 perros bostezaron al ver bostezar a una persona. A nosotros nos pasa a más o menos la mitad, y se pega más con la familia. ¿Para qué sirve? Una idea: enfría el cerebro. Prueba: mira a tu perro y bosteza. #perros #ciencia #curiosidades #bostezo #mascotas #parecementira #aprendeentiktok"
+  },
+  "fuentes": [
+   {
+    "titulo": "Joly-Mascheroni, Senju y Shepherd (Birkbeck, Londres), Biology Letters 2008 — 21 de 29 perros bostezaron; con la boca abierta sin bostezo, ninguno; en personas, 45–60 %",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2610100"
+   },
+   {
+    "titulo": "National Geographic — Dogs catch yawns from humans (29 perros, 21, control sin bostezos)",
+    "url": "https://www.nationalgeographic.com/science/article/dogs-catch-yawns-from-humans"
+   },
+   {
+    "titulo": "Smithsonian — hipótesis del enfriamiento del cerebro (Gallup); bolsa caliente 41 % frente a fría 9 %; basta con oír, leer o pensar en bostezos; los bebés bostezan en el útero",
+    "url": "https://www.smithsonianmag.com/science-nature/why-do-we-yawn-and-why-is-it-contagious-3749674/"
+   },
+   {
+    "titulo": "Live Science — bolsa fría 9 % frente a 41 %; respirando por la nariz no hubo bostezos contagiados",
+    "url": "https://www.livescience.com/36110-yawn-contagious.html"
+   },
+   {
+    "titulo": "ScienceDaily (Univ. de Albany, 2007) — respirando por la nariz o con frío en la frente no se contagia",
+    "url": "https://www.sciencedaily.com/releases/2007/06/070621161826.htm"
+   },
+   {
+    "titulo": "National Geographic (Norscia y Palagi, PLoS ONE 2011) — se contagia más con familia, luego amigos, conocidos y desconocidos",
+    "url": "https://www.nationalgeographic.com/science/article/111213-contagious-yawning-health-science-empathy-evolution"
+   },
+   {
+    "titulo": "Univ. de Washington (Neuroscience for Kids) — los bebés bostezan antes de nacer (≈11 semanas)",
+    "url": "https://faculty.washington.edu/chudler/yawning.html"
+   }
+  ],
+  "comentario": "¿Tu perro te devolvió el bostezo? 🐶🥱 Te leo 👇",
+  "etiquetas": {
+   "tema": "Ciencia",
+   "gancho": "dato",
+   "estructura": "experimento",
+   "experimento": "no",
+   "alcance": "universal",
+   "montaje": "denso",
+   "portada": "arriba"
+  },
+  "version": 1,
+  "portada": {
+   "texto": "TU PERRO TE COPIA",
+   "clave": "COPIA",
+   "variante": "21 DE 29 BOSTEZARON",
+   "t": 0.25,
+   "diseno": "arriba",
+   "motivo": "el perro dorado bostezando del fotograma 0; texto arriba sin tapar la boca, legible en 3:4",
+   "archivo": "03-portadas/portada.jpg"
+  }
+ }
+}
