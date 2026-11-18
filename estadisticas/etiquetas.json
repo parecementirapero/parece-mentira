@@ -139,5 +139,38 @@
   "portada": "abajo",
   "lote": "2026-11-17-tarde",
   "fuentes_en_descripcion": "no"
+ },
+ "5pSKNws_e-s": {
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "cadena de datos",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "centro",
+  "lote": "2026-11-18-manana",
+  "fuentes_en_descripcion": "no"
+ },
+ "rEiiPtGXz84": {
+  "tema": "Histórico",
+  "gancho": "negacion",
+  "estructura": "misterio por pistas",
+  "experimento": "gancho de negación",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "arriba",
+  "lote": "2026-11-18-manana",
+  "fuentes_en_descripcion": "no"
+ },
+ "tp7XFLAIkS0": {
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "arriba",
+  "lote": "2026-11-18-manana",
+  "fuentes_en_descripcion": "no"
  }
 }

@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-18-manana
 
-- **Estado**: **en revisión** (v1 de los 3). Esperan el «ok» en el chat.
+- **Estado**: **«ok» a los 3** (v1) en el chat, 2026-11-18 ≈08:40 (persona en el chat del Mac de Nico; no dijo nombre). YouTube hecho; TikTok en curso.
 - **Agente**: Agente 08:00 (Nico) · MacBook Air de Nico · carpeta local `Documents/Parece Mentira/lotes/2026-11-18-manana`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 (3 MP4 y 3 portadas enviados)
 - **Correo de aviso**: enviado a parecementirapero.media@gmail.com, id `1a1ed968a22c00b4`.
@@ -61,4 +61,12 @@ Base: `aprendizajes.md` (8 vídeos, tendencia/pista) y `estudio.md` (nada pasa d
 `generadores/`: `NN-guion.txt`, `ilus_01.py` (Tierra antigua, capas, geólogos en silueta, corales vivo y fósil, freno, playa, Babilonia, tablilla…), `ilus_02.py` (montañas, muralla ×2, torre, carta de 1754, pluma, vista cenital, carretera y coche, Estación Espacial sin banderas, cápsula, casco, teleobjetivo, noche, descenso…), `ilus_03.py` (perro que bosteza por piezas en 4 razas, perritos de la cuadrícula, siluetas con boca abierta, vagón, Londres, salón, libro, bocadillo, móvil, cerebro, ventilador, bolsas fría y templada, ecografía) y `gen_0N.py DIR [locucion.mp3 alineacion.json]`. Render en la nube; resultados copiados al Mac.
 
 ## Publicación
-Pendiente del «ok» (AGENTE §8): YouTube por API desde el Mac de Nico (1 h entre vídeos), TikTok por el navegador integrado (la persona elige el archivo).
+Aprobación: «Están muy bien súbelos» y, al pedir confirmación literal, «Ok» a los 3 (v1, SHA de arriba).
+| # | YouTube | TikTok |
+|---|---|---|
+| 01 v1 | https://youtube.com/shorts/5pSKNws_e-s — público, 08:45 | pendiente |
+| 02 v1 | https://youtube.com/shorts/rEiiPtGXz84 — programado 2026-11-18 09:50 (Madrid) | pendiente |
+| 03 v1 | https://youtube.com/shorts/tp7XFLAIkS0 — programado 2026-11-18 10:50 (Madrid) | pendiente |
+- YouTube por API (`subir_youtube.py`, `--prueba` antes: sin duplicados). Portada por API: **no** (403, el canal no tiene miniaturas personalizadas) → en Studio elegir el fotograma `portada.t` (0,75 s · 3,8 s · 0,25 s).
+- TikTok: navegador integrado del Mac de Nico (sesión iniciada, comprobado que no estaban); la persona elige el archivo.
+- Falta: comentarios fijados.
