@@ -7,7 +7,7 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 ## 2026-11-19 20:45 — Nico (chat del Mac de Nico) — rama `main` — El Niño publicado en YouTube + vídeos extra 02 y 03 en revisión
 **Hecho**: «súbelo» de Nico (20:19) → 01 El Niño en YouTube por API desde su Mac: https://youtube.com/shorts/HGERZv5VWiU (público, portada «abajo» puesta). `etiquetas.json` al día. «Genérame 2 más» (20:20) → 02 «El dólar no es americano» y 03 «Esta máquina engañó a Napoleón» (el Turco), los dos sacados de tendencias del día, con ≥ 2 fuentes por dato, voz oficial, montaje denso y MP4 en el chat.
 **Pruebas**: `motor.guion`; `construir` sin ⚠; `motor.calidad --mp4` 89/100 (02, ⚠ justificados en `estado.md`) y 100/100 (03); hojas de fotogramas revisadas. No se tocó `motor/`.
-**Pendiente**: TikTok del 01 (la página de subida está abierta en el navegador integrado del Mac de Nico: falta que él elija `lotes/2026-11-19-extra/01-el-nino_v1.mp4`); comentario fijado del 01; «ok» de 02 y 03 (oír antes los empalmes de las frases quitadas), sus portadas y fichas; copiar los MP4 de 02 y 03 al Mac.
+**Pendiente**: TikTok del 01 (la página de subida está abierta en el navegador integrado del Mac de Nico: falta que él elija `lotes/2026-11-19-extra/01-el-nino_v1.mp4`); comentario fijado del 01; «ok» de 02 y 03 (oír antes los empalmes de las frases quitadas), sus portadas y fichas. Los MP4 de 02 y 03 ya están también en el Mac de Nico (`lotes/2026-11-19-extra/`).
 **Siguiente paso**: Nico elige el archivo en TikTok y da «ok 2 y 3».
 
 ## 2026-11-19 20:15 — Nico (chat del Mac de Nico) — rama `main` — vídeo extra «Este niño cambia el clima» + tendencias
