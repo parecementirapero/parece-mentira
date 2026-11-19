@@ -2,7 +2,7 @@
 
 - **Estado**: **en revisión** (v1 entregado en el chat). Nada publicado: falta el «ok».
 - **Quién**: Nico (chat https://claude.ai/code/session_019BG1dHVpM78Z8196Jiin3v), 2026-11-19 19:53–20:15. No es un lote: es un vídeo suelto pedido a partir de las tendencias del día.
-- **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-19-extra` (Mac de Nico): `01-locucion.mp3`, `01-alineacion.json`, `01-el-nino_v1.mp4`.
+- **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-19-extra` (Mac de Nico): `01-locucion.mp3`, `01-alineacion.json`. **El MP4 no se pudo copiar al Mac** (el puente se cortó dos veces): está solo en el chat; hay que bajarlo de ahí.
 - **Redes**: YouTube y TikTok.
 
 ## Tendencias de hoy

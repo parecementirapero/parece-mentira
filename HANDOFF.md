@@ -6,7 +6,7 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ## 2026-11-19 20:15 — Nico (chat del Mac de Nico) — rama `main` — vídeo extra «Este niño cambia el clima» + tendencias
 **Encargo**: «genérame un vídeo en función a esos temas» (las tendencias del día). No es un lote: `lotes/2026-11-19-extra/`.
-**Hecho**: tendencias miradas (Google Trends MX/ES/AR/CO y prensa) → tema «el niño» (El Niño 2026). Guion de 153 palabras con ≥ 2 fuentes por dato (`guiones.md`), voz oficial por API desde el Mac de Nico (57,7 s), ilustraciones nuevas (`generadores/ilus_nino.py`), montaje denso de 40 planos, render en la nube, MP4 en el chat y en el Mac.
+**Hecho**: tendencias miradas (Google Trends MX/ES/AR/CO y prensa) → tema «el niño» (El Niño 2026). Guion de 153 palabras con ≥ 2 fuentes por dato (`guiones.md`), voz oficial por API desde el Mac de Nico (57,7 s), ilustraciones nuevas (`generadores/ilus_nino.py`), montaje denso de 40 planos, render en la nube, MP4 en el chat (la copia al Mac falló: el puente se cortó; bajarlo del chat).
 **Pruebas**: `motor.guion` ✓; `construir` sin ⚠; `motor.calidad --mp4` 100/100; ffprobe 1080×1920/30 fps/h264/AAC; hoja de fotogramas revisada. No se tocó `motor/`.
 **También**: la tarea programada de la mañana ahora analiza tendencias antes de elegir temas y las guarda en `lotes/tendencias/AAAA-MM-DD.md`. La de la tarde no se pudo cambiar (pide aprobación desde el Mac de Jorge). La regla falta en `DECISIONS.md` y `AGENTE.md` (tarea en TASKS).
 **No hecho**: portada, ficha de variables, correo. El lote 2026-11-19-manana sigue «pendiente de voz» (el 03 no llegó a generarse: en el Mac solo están 01 y 02); se retoma en su chat.
@@ -32,7 +32,7 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ## 2026-11-18 23:30 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-18-tarde v1 en revisión
 **Encargo** (en el chat del lote): «créame los vídeos que no has podido crear porque estaba apagado». El Mac de Jorge ya respondía.
-**Hecho**: voz oficial por API desde el Mac (sin fallos; en el 02 se omite «¿Y lo más loco?» para no pasar de 60 s), montaje denso con los tiempos reales, render en la nube, portadas elegidas, fichas de variables, MP4 en el chat y en el Mac. SHA cortos: 01 eb0ff4dd18f3 · 02 dfb4ed47de09 · 03 6a8c2e51fa19.
+**Hecho**: voz oficial por API desde el Mac (sin fallos; en el 02 se omite «¿Y lo más loco?» para no pasar de 60 s), montaje denso con los tiempos reales, render en la nube, portadas elegidas, fichas de variables, MP4 en el chat (la copia al Mac falló: el puente se cortó; bajarlo del chat). SHA cortos: 01 eb0ff4dd18f3 · 02 dfb4ed47de09 · 03 6a8c2e51fa19.
 **Pruebas**: `construir` sin ⚠ de lectura; `motor.calidad --mp4` 80/77/76 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; hojas de fotogramas revisadas (03 rehecho el primer plano); `ficha comprobar` 0 problemas. No se tocó `motor/`.
 **No hecho**: Studio (sin lecturas nuevas). Nada publicado: falta el «ok».
 **Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H → AGENTE §8 desde el Mac de Jorge. El de GTA 6 conviene publicarlo cuanto antes (sale el 19-11).
