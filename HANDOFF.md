@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-19 20:55 — Nico (chat del Mac de Nico) — rama `main` — 02 y 03 programados en YouTube
+**Hecho**: «súbelos» (20:45) → 02 dólar `Ve63IT5wgpY` (21:25) y 03 el Turco `QUFe8ovVpJE` (22:25) subidos por API con sus portadas; `etiquetas.json` y `metadatos.json` al día.
+**Pendiente**: TikTok de los tres (Nico tiene que elegir cada archivo), comentarios fijados en YouTube (aviso a las 22:30 en el chat), fichas de variables.
+
 ## 2026-11-19 20:45 — Nico (chat del Mac de Nico) — rama `main` — El Niño publicado en YouTube + vídeos extra 02 y 03 en revisión
 **Hecho**: «súbelo» de Nico (20:19) → 01 El Niño en YouTube por API desde su Mac: https://youtube.com/shorts/HGERZv5VWiU (público, portada «abajo» puesta). `etiquetas.json` al día. «Genérame 2 más» (20:20) → 02 «El dólar no es americano» y 03 «Esta máquina engañó a Napoleón» (el Turco), los dos sacados de tendencias del día, con ≥ 2 fuentes por dato, voz oficial, montaje denso y MP4 en el chat.
 **Pruebas**: `motor.guion`; `construir` sin ⚠; `motor.calidad --mp4` 89/100 (02, ⚠ justificados en `estado.md`) y 100/100 (03); hojas de fotogramas revisadas. No se tocó `motor/`.

@@ -24,3 +24,8 @@ Elegida: **«el niño»** (México; El Niño 2026 lleva semanas en las noticias 
 - **Hay que oír los empalmes** de las frases quitadas antes de publicar (02 hacia el segundo 54; 03 hacia los segundos 4 y 50).
 - MP4 enviados al chat (CRF 23). Sin portada ni ficha todavía. Ilustraciones en `generadores/ilus_extra2.py`.
 - Créditos de ElevenLabs tras las tres voces: 24.954.
+
+## Publicación de 02 y 03 (Nico: «súbelos», 20:45)
+- YouTube por API desde el Mac de Nico, separados 1 h (DECISIONS): 02 https://youtube.com/shorts/Ve63IT5wgpY programado a las 21:25 · 03 https://youtube.com/shorts/QUFe8ovVpJE programado a las 22:25. Portadas puestas por API: 02 «EL DÓLAR NO ES AMERICANO» (arriba, 55,8 s) · 03 «ENGAÑÓ A NAPOLEÓN» (abajo, 11,8 s). `--prueba` antes: sin duplicados; SHA de los MP4 del Mac iguales.
+- TikTok de 01, 02 y 03: pendiente de que Nico elija cada archivo en el navegador integrado (`lotes/2026-11-19-extra/`).
+- Comentarios fijados de los tres en YouTube: pendientes (aviso programado en el chat a las 22:30). Fichas de variables: no hechas.

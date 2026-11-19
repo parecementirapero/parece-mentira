@@ -75,14 +75,23 @@
       "estructura": "reconstrucción",
       "alcance": "universal",
       "experimento": "tema sacado de las tendencias del día",
-      "tendencia": "dólar hoy (MX)"
+      "tendencia": "dólar hoy (MX)",
+      "portada": "arriba"
     },
     "fuentes": [
       "https://www.iberdrola.com/cultura/spanish-dollar",
       "https://projects.exeter.ac.uk/RDavies/arian/dollar.html",
       "https://www.britannica.com/money/dollar-sign",
       "https://cnnespanol.cnn.com/2022/08/08/historia-del-dolar-orix/"
-    ]
+    ],
+    "portada": {
+      "texto": "EL DÓLAR NO ES AMERICANO",
+      "clave": "NO",
+      "archivo": "02-portadas/portada.jpg",
+      "t": 55.8,
+      "diseno": "arriba",
+      "motivo": "El símbolo dorado gigante y el billete se reconocen al instante"
+    }
   },
   "03": {
     "slug": "el-turco",
@@ -113,13 +122,22 @@
       "estructura": "misterio por pistas",
       "alcance": "universal",
       "experimento": "tema sacado de las tendencias del día",
-      "tendencia": "inteligencia artificial (Gemini)"
+      "tendencia": "inteligencia artificial (Gemini)",
+      "portada": "abajo"
     },
     "fuentes": [
       "https://www.lindahall.org/wolfgang-von-kempelen/",
       "https://atlasobscura.com/articles/object-of-intrigue-the-turk",
       "https://en.wikipedia.org/wiki/Mechanical_Turk",
       "https://www.history.com/news/how-a-phony-18th-century-chess-robot-fooled-the-world"
-    ]
+    ],
+    "portada": {
+      "texto": "ENGAÑÓ A NAPOLEÓN",
+      "clave": "NAPOLEÓN",
+      "archivo": "03-portadas/portada.jpg",
+      "t": 11.8,
+      "diseno": "abajo",
+      "motivo": "La cara del Turco con los engranajes es el sujeto más reconocible"
+    }
   }
 }

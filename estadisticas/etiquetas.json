@@ -208,5 +208,23 @@
     "estructura": "misterio por pistas",
     "experimento": "tema sacado de las tendencias del día",
     "portada": "abajo"
+  },
+  "Ve63IT5wgpY": {
+    "titulo": "El dólar no es americano (y su símbolo dice «pesos»)",
+    "lote": "2026-11-19-extra",
+    "tema": "Histórico",
+    "gancho": "negacion",
+    "estructura": "reconstrucción",
+    "experimento": "tema sacado de las tendencias del día",
+    "portada": "arriba"
+  },
+  "QUFe8ovVpJE": {
+    "titulo": "Esta máquina engañó a Napoleón en 1770",
+    "lote": "2026-11-19-extra",
+    "tema": "Histórico",
+    "gancho": "dato",
+    "estructura": "misterio por pistas",
+    "experimento": "tema sacado de las tendencias del día",
+    "portada": "abajo"
   }
 }
