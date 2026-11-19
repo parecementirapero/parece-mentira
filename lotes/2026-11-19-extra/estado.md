@@ -1,8 +1,8 @@
 # Estado — vídeo extra 2026-11-19 (El Niño)
 
-- **Estado**: **en revisión** (v1 entregado en el chat). Nada publicado: falta el «ok».
+- **Estado**: **publicado en YouTube** (Nico: «súbelo», 20:19): https://youtube.com/shorts/HGERZv5VWiU (público 20:23, portada puesta por API). TikTok: página de subida abierta en el navegador integrado, a la espera de que Nico elija el archivo.
 - **Quién**: Nico (chat https://claude.ai/code/session_019BG1dHVpM78Z8196Jiin3v), 2026-11-19 19:53–20:15. No es un lote: es un vídeo suelto pedido a partir de las tendencias del día.
-- **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-19-extra` (Mac de Nico): `01-locucion.mp3`, `01-alineacion.json`. **El MP4 no se pudo copiar al Mac** (el puente se cortó dos veces): está solo en el chat; hay que bajarlo de ahí.
+- **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-19-extra` (Mac de Nico): `01-locucion.mp3`, `01-alineacion.json`. `01-el-nino_v1.mp4` (copiado al tercer intento, SHA igual), `01-portadas/portada.jpg`, `metadatos.json`.
 - **Redes**: YouTube y TikTok.
 
 ## Tendencias de hoy
@@ -15,5 +15,5 @@ Elegida: **«el niño»** (México; El Niño 2026 lleva semanas en las noticias 
 - Etiquetas: tema Ciencia, gancho paradoja, `tendencia`: «el niño».
 
 ## No hecho
-- Portadas (AGENTE §6b), ficha de variables (§6) y correo: no se hicieron.
+- Portada elegida sin «ok»: «ESTE NIÑO CAMBIA EL CLIMA», diseño «abajo», 52,8 s (la mancha roja sobre el Pacífico). Ficha de variables y correo: no se hicieron.
 - `motor/` no se tocó. Ilustraciones nuevas en `generadores/ilus_nino.py` (mapa del Pacífico, Tierra con la franja, barca, peces, pesebre, desierto, sequía, monitor, boya…).

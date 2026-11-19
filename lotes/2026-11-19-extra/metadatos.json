@@ -2,10 +2,48 @@
   "01": {
     "slug": "el-nino",
     "titulo": "Por qué El Niño se llama así",
-    "youtube": {"titulo": "Este niño cambia el clima (y se llama así por la Navidad) #shorts", "descripcion": "El Niño debe su nombre a unos pescadores de Perú y a la Navidad. Y este año ha vuelto.\n\n#ElNiño #clima #curiosidades #ciencia #Perú #parecementira", "tags": ["El Niño", "fenómeno del Niño", "clima", "Perú", "La Niña", "curiosidades", "ciencia"]},
-    "tiktok": {"texto": "Este niño cambia el clima… y se llama así por la Navidad 🌊 #ElNiño #clima #curiosidades #ciencia #Perú #aprendeentiktok #parecementira"},
+    "youtube": {
+      "titulo": "Este niño cambia el clima (y se llama así por la Navidad) #shorts",
+      "descripcion": "El Niño debe su nombre a unos pescadores de Perú y a la Navidad. Y este año ha vuelto.\n\n#ElNiño #clima #curiosidades #ciencia #Perú #parecementira",
+      "tags": [
+        "El Niño",
+        "fenómeno del Niño",
+        "clima",
+        "Perú",
+        "La Niña",
+        "curiosidades",
+        "ciencia"
+      ],
+      "publico": true,
+      "para_ninos": false
+    },
+    "tiktok": {
+      "texto": "Este niño cambia el clima… y se llama así por la Navidad 🌊 #ElNiño #clima #curiosidades #ciencia #Perú #aprendeentiktok #parecementira"
+    },
     "comentario": "¿Tú sabías por qué se llama El Niño? Te leo 👇",
-    "etiquetas": {"tema": "Ciencia", "gancho": "paradoja", "estructura": "misterio por pistas", "alcance": "universal", "experimento": "tema sacado de las tendencias del día", "tendencia": "el niño (Google Trends MX)"},
-    "fuentes": ["https://www.gob.pe/9297", "https://wmo.int/sites/default/files/2026-06/2026-WEB-SGO-FAQs-El-Nino-26297_es.pdf", "https://www.weather.gov/fwd/basics", "https://wmo.int/es/news/media-centre/el-nino-alcanzara-una-intensidad-muy-fuerte-e-incrementara-el-riesgo-de-que-se-produzcan-fenomenos"]
+    "etiquetas": {
+      "tema": "Ciencia",
+      "gancho": "paradoja",
+      "estructura": "misterio por pistas",
+      "alcance": "universal",
+      "experimento": "tema sacado de las tendencias del día",
+      "tendencia": "el niño (Google Trends MX)",
+      "portada": "abajo"
+    },
+    "fuentes": [
+      "https://www.gob.pe/9297",
+      "https://wmo.int/sites/default/files/2026-06/2026-WEB-SGO-FAQs-El-Nino-26297_es.pdf",
+      "https://www.weather.gov/fwd/basics",
+      "https://wmo.int/es/news/media-centre/el-nino-alcanzara-una-intensidad-muy-fuerte-e-incrementara-el-riesgo-de-que-se-produzcan-fenomenos"
+    ],
+    "archivo": "01-el-nino_v1.mp4",
+    "portada": {
+      "texto": "ESTE NIÑO CAMBIA EL CLIMA",
+      "clave": "NIÑO",
+      "archivo": "01-portadas/portada.jpg",
+      "t": 52.8,
+      "diseno": "abajo",
+      "motivo": "La mancha roja sobre el Pacífico enseña El Niño de un vistazo"
+    }
   }
 }
