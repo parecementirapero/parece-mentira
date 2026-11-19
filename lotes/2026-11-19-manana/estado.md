@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-19-manana
 
-- **Estado**: en producción — **esperando al Mac de Nico para la voz** (ver «Bloqueo»).
+- **Estado**: **pendiente de voz** — el Mac de Nico se desconectó a las 18:42 y no volvió (comprobado cada 5 min hasta las 19:20). Correo de aviso enviado (id `1a1f502ab8956d65`).
 - **Agente**: Agente 08:00 (Nico) · MacBook Air de Nico · carpeta local `Documents/Parece Mentira/lotes/2026-11-19-manana`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dHnK2nwYYSBBZnUxmf
 - **Redes**: YouTube y TikTok (Instagram fuera, DECISIONS 2026-11-17).

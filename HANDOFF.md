@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-19 19:25 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-19-manana «pendiente de voz»
+**Qué pasó**: la tarea programada se disparó a las 18:35 (no a las 07:52). El Mac de Nico respondió al principio (reserva, créditos 26.689) y generó la voz de 01 y 02 (en su carpeta local); durante la del 03 se desconectó del puente (18:42) y no volvió (comprobado cada 5 min hasta las 19:20).
+**Hecho sin el Mac**: 3 temas con ≥ 2 fuentes por dato: 01 «El espacio huele a filete», 02 «Tu cerebro canta sin música» (canción pegada; **experimento: gancho de paradoja**), 03 «Esta torre ya no cae» (Pisa). `guiones.md`, `metadatos.json`, temas a «Usados» en `IDEAS.md`, `generadores/ilus_hoy.py` y `gen_0N.py` (36/36/32 planos) con hojas de fotogramas revisadas y corregidas con tiempos provisionales.
+**Pruebas**: `motor.guion` 158/155/157 palabras (un ⚠ justificado en el 01). No se tocó `motor/`.
+**Correo**: `[AVISO]` enviado (id `1a1f502ab8956d65`).
+**Siguiente paso**: con el Mac conectado, en el chat del lote: comprobar si existe `03-locucion.mp3`; si no, voz del 03 por API → `gen_0N.py DIR NN-locucion.mp3 NN-alineacion.json` → `motor.render` → `motor.calidad --mp4` → portadas → fichas → MP4 al chat → «ok». Ojo: el nombre `ilus_lote.py` choca con el del lote 2026-11-17-manana (recursión al importar); por eso este lote usa `ilus_hoy.py`.
+
 ## 2026-11-19 01:05 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — portada de GTA 6 y respuestas a comentarios
 **Hecho**: portada nueva del 01 hecha con nuestras ilustraciones («GTA 6 · 13 AÑOS · ESPERÁNDOLO», sin arte de Rockstar). YouTube: la persona verificó el canal → portada puesta por API (`--solo-portada`). TikTok: la web no deja subir imagen a un vídeo publicado → con su «sí» se borró el primero (0 vistas) y se resubió con la portada: https://www.tiktok.com/@parece.mentira85/video/7709660698535529750. 3 respuestas a comentarios en YouTube (con su visto bueno) y regla nueva AGENTE §8b + DECISIONS: el agente contesta comentarios en cada turno.
 **Aprendido**: canal verificado = miniaturas propias por API y comentarios fijables. En TikTok Studio, «Edit cover» de un vídeo ya publicado solo deja elegir fotograma; «Upload cover» solo existe al subir.

@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-18 23:30 — Agente 20:00 (Jorge) (lote 2026-11-18-tarde en revisión)_
+_Última actualización: 2026-11-19 19:25 — Agente 08:00 (Nico) (lote 2026-11-19-manana pendiente de voz: Mac de Nico desconectado)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
