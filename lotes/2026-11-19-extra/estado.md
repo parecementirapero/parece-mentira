@@ -17,3 +17,10 @@ Elegida: **«el niño»** (México; El Niño 2026 lleva semanas en las noticias 
 ## No hecho
 - Portada elegida sin «ok»: «ESTE NIÑO CAMBIA EL CLIMA», diseño «abajo», 52,8 s (la mancha roja sobre el Pacífico). Ficha de variables y correo: no se hicieron.
 - `motor/` no se tocó. Ilustraciones nuevas en `generadores/ilus_nino.py` (mapa del Pacífico, Tierra con la franja, barca, peces, pesebre, desierto, sequía, monitor, boya…).
+
+## 02 y 03 (pedido de Nico a las 20:20: «genérame 2 más») — en revisión, falta el «ok»
+- 02 «El dólar no es americano» · tendencia «dólar hoy» (MX) · voz oficial por API (61,6 s → 58,6 s quitando una frase con `omitir`) · 39 planos · `construir` sin ⚠ · `motor.calidad --mp4` 89/100 sin ❌; ⚠ justificados: densidad 4,6 elementos por plano (monedas y letras grandes sobre fondo limpio para que se lean), planos 14→15 parecidos (táler → dáler: la moneda cambia, el encuadre no, a propósito) y 43,8–48,9 s con el mismo encuadre (el pergamino donde se escriben la p y la s). SHA corto 0d8f42f4752c.
+- 03 «Esta máquina engañó a Napoleón» · tendencia: inteligencia artificial · voz oficial por API (62,8 s → 59,2 s quitando dos frases) · 44 planos · `construir` sin ⚠ · `motor.calidad --mp4` 100/100. SHA corto 5249ff1a0ee1. `motor.guion` avisaba de un tramo de ≈16 s sin pregunta ni dato: es la explicación del truco, montada con cortes cortos.
+- **Hay que oír los empalmes** de las frases quitadas antes de publicar (02 hacia el segundo 54; 03 hacia los segundos 4 y 50).
+- MP4 enviados al chat (CRF 23). Sin portada ni ficha todavía. Ilustraciones en `generadores/ilus_extra2.py`.
+- Créditos de ElevenLabs tras las tres voces: 24.954.

@@ -45,5 +45,81 @@
       "diseno": "abajo",
       "motivo": "La mancha roja sobre el Pacífico enseña El Niño de un vistazo"
     }
+  },
+  "02": {
+    "slug": "dolar",
+    "archivo": "02-dolar_v1.mp4",
+    "titulo": "El dólar no es americano",
+    "youtube": {
+      "titulo": "El dólar no es americano (y su símbolo dice «pesos») #shorts",
+      "descripcion": "La palabra dólar nació en una mina de plata de Bohemia en 1520, llegó a América por una moneda española y su símbolo viene, según la teoría más aceptada, de la abreviatura de «pesos».\n\n#dólar #dinero #historia #curiosidades #pesos #parecementira",
+      "publico": true,
+      "para_ninos": false,
+      "tags": [
+        "dólar",
+        "origen del dólar",
+        "símbolo del dólar",
+        "real de a ocho",
+        "pesos",
+        "historia del dinero",
+        "curiosidades"
+      ]
+    },
+    "tiktok": {
+      "texto": "El dólar no es americano… y su símbolo dice «pesos» 💵 #dólar #dinero #historia #curiosidades #pesos #aprendeentiktok #parecementira"
+    },
+    "comentario": "¿Sabías que cada $ que escribes es una abreviatura de «pesos»? Te leo 👇",
+    "etiquetas": {
+      "tema": "Histórico",
+      "gancho": "negacion",
+      "estructura": "reconstrucción",
+      "alcance": "universal",
+      "experimento": "tema sacado de las tendencias del día",
+      "tendencia": "dólar hoy (MX)"
+    },
+    "fuentes": [
+      "https://www.iberdrola.com/cultura/spanish-dollar",
+      "https://projects.exeter.ac.uk/RDavies/arian/dollar.html",
+      "https://www.britannica.com/money/dollar-sign",
+      "https://cnnespanol.cnn.com/2022/08/08/historia-del-dolar-orix/"
+    ]
+  },
+  "03": {
+    "slug": "el-turco",
+    "archivo": "03-el-turco_v1.mp4",
+    "titulo": "La máquina que engañó a Napoleón",
+    "youtube": {
+      "titulo": "Esta máquina engañó a Napoleón en 1770 #shorts",
+      "descripcion": "El Turco jugaba al ajedrez «solo» en 1770 y ganó a Benjamin Franklin y a Napoleón. Durante 84 años nadie pudo demostrar el truco: dentro había una persona.\n\n#ajedrez #inteligenciaartificial #historia #curiosidades #Napoleón #parecementira",
+      "publico": true,
+      "para_ninos": false,
+      "tags": [
+        "el turco",
+        "autómata ajedrecista",
+        "ajedrez",
+        "Napoleón",
+        "inteligencia artificial",
+        "historia",
+        "curiosidades"
+      ]
+    },
+    "tiktok": {
+      "texto": "La «inteligencia artificial» de 1770 que ganó a Napoleón… tenía truco ♟️ #ajedrez #inteligenciaartificial #IA #historia #curiosidades #Napoleón #parecementira"
+    },
+    "comentario": "¿Tú habrías descubierto el truco? Te leo 👇",
+    "etiquetas": {
+      "tema": "Histórico",
+      "gancho": "dato",
+      "estructura": "misterio por pistas",
+      "alcance": "universal",
+      "experimento": "tema sacado de las tendencias del día",
+      "tendencia": "inteligencia artificial (Gemini)"
+    },
+    "fuentes": [
+      "https://www.lindahall.org/wolfgang-von-kempelen/",
+      "https://atlasobscura.com/articles/object-of-intrigue-the-turk",
+      "https://en.wikipedia.org/wiki/Mechanical_Turk",
+      "https://www.history.com/news/how-a-phony-18th-century-chess-robot-fooled-the-world"
+    ]
   }
 }
