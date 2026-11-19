@@ -56,6 +56,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - GTA 6 tardó trece años (GTA 5 17-09-2013 → GTA 6 19-11-2026; Kennedy→Armstrong 8 años; Empire State 410 días; confirmado en feb. 2022; tráiler de dic. 2023 con 90+ M de vistas en 24 h; dos retrasos) — lote 2026-11-18-tarde (reservado por Jorge)
 - Estrella de neutrones: un terrón pesaría mil millones de toneladas (≈20 km, más masa que el Sol, 716 vueltas/s, malvavisco = mil bombas H, Jocelyn Bell 1967, LGM-1) — lote 2026-11-18-tarde
 - Mides menos por la noche: los discos intervertebrales pierden ≈19 mm al día (Spine 1985; 54 % en la 1.ª hora), Joseph Wasse y su caballo (1724), astronautas +3 % — lote 2026-11-18-tarde
+- El espacio huele a filete (Pettit y el humo de soldar, oxígeno atómico como explicación posible, Steve Pearce/NASA 2008, Eau de Space, polvo lunar = pólvora, formiato de etilo en Sagitario B2 con el IRAM de Sierra Nevada) — lote 2026-11-19-manana
+- La canción pegada (>90 % cada semana, Kraemer/Dartmouth 2005: el cerebro rellena los silencios, Ohrwurm, chicle en Reading 2015: un tercio menos) — lote 2026-11-19-manana
+- La Torre de Pisa estuvo a punto de caer (1173, inclinada en 1178 con tres pisos, guerras ≈100 años, pisos torcidos, 199 años, 5,5° en 1990, 600 t de plomo, extracción de tierra, ≈40 cm, reabierta en 2001, ≥200 años) — lote 2026-11-19-manana
 
 ## Continuaciones prometidas
 
