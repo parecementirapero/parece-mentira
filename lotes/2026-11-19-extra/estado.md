@@ -30,3 +30,4 @@ Elegida: **«el niño»** (México; El Niño 2026 lleva semanas en las noticias 
 - TikTok de 01, 02 y 03: pendiente de que Nico elija cada archivo en el navegador integrado (`lotes/2026-11-19-extra/`).
 - Comentarios fijados de los tres en YouTube: pendientes (aviso programado en el chat a las 22:30). Fichas de variables: no hechas.
 - **TikTok 01** (Nico eligió el archivo y escribió «sube el primero», 20:53): https://www.tiktok.com/@parece.mentira85/video/7709973442979974422 — publicado a las 20:55 con el texto de `metadatos.json`; portada = fotograma 0 (no se cambió). Al comprobarlo salía «Contenido en revisión · Solo yo» (revisión de TikTok). Falta 02 y 03.
+- **TikTok 02** (Nico eligió el archivo, «dale tú», 20:56): https://www.tiktok.com/@parece.mentira85/video/7709974123442670870 — publicado a las 20:58, portada = fotograma 0; en revisión de TikTok al comprobarlo. El 01 ya sale como «Todo el mundo». Falta el 03.
