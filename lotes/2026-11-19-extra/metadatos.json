@@ -1,0 +1,11 @@
+{
+  "01": {
+    "slug": "el-nino",
+    "titulo": "Por qué El Niño se llama así",
+    "youtube": {"titulo": "Este niño cambia el clima (y se llama así por la Navidad) #shorts", "descripcion": "El Niño debe su nombre a unos pescadores de Perú y a la Navidad. Y este año ha vuelto.\n\n#ElNiño #clima #curiosidades #ciencia #Perú #parecementira", "tags": ["El Niño", "fenómeno del Niño", "clima", "Perú", "La Niña", "curiosidades", "ciencia"]},
+    "tiktok": {"texto": "Este niño cambia el clima… y se llama así por la Navidad 🌊 #ElNiño #clima #curiosidades #ciencia #Perú #aprendeentiktok #parecementira"},
+    "comentario": "¿Tú sabías por qué se llama El Niño? Te leo 👇",
+    "etiquetas": {"tema": "Ciencia", "gancho": "paradoja", "estructura": "misterio por pistas", "alcance": "universal", "experimento": "tema sacado de las tendencias del día", "tendencia": "el niño (Google Trends MX)"},
+    "fuentes": ["https://www.gob.pe/9297", "https://wmo.int/sites/default/files/2026-06/2026-WEB-SGO-FAQs-El-Nino-26297_es.pdf", "https://www.weather.gov/fwd/basics", "https://wmo.int/es/news/media-centre/el-nino-alcanzara-una-intensidad-muy-fuerte-e-incrementara-el-riesgo-de-que-se-produzcan-fenomenos"]
+  }
+}

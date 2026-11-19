@@ -4,6 +4,14 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-19 20:15 — Nico (chat del Mac de Nico) — rama `main` — vídeo extra «Este niño cambia el clima» + tendencias
+**Encargo**: «genérame un vídeo en función a esos temas» (las tendencias del día). No es un lote: `lotes/2026-11-19-extra/`.
+**Hecho**: tendencias miradas (Google Trends MX/ES/AR/CO y prensa) → tema «el niño» (El Niño 2026). Guion de 153 palabras con ≥ 2 fuentes por dato (`guiones.md`), voz oficial por API desde el Mac de Nico (57,7 s), ilustraciones nuevas (`generadores/ilus_nino.py`), montaje denso de 40 planos, render en la nube, MP4 en el chat y en el Mac.
+**Pruebas**: `motor.guion` ✓; `construir` sin ⚠; `motor.calidad --mp4` 100/100; ffprobe 1080×1920/30 fps/h264/AAC; hoja de fotogramas revisada. No se tocó `motor/`.
+**También**: la tarea programada de la mañana ahora analiza tendencias antes de elegir temas y las guarda en `lotes/tendencias/AAAA-MM-DD.md`. La de la tarde no se pudo cambiar (pide aprobación desde el Mac de Jorge). La regla falta en `DECISIONS.md` y `AGENTE.md` (tarea en TASKS).
+**No hecho**: portada, ficha de variables, correo. El lote 2026-11-19-manana sigue «pendiente de voz» (el 03 no llegó a generarse: en el Mac solo están 01 y 02); se retoma en su chat.
+**Siguiente paso**: «ok» de Nico en el chat → portada, ficha y publicar (AGENTE §6b y §8).
+
 ## 2026-11-19 19:25 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-19-manana «pendiente de voz»
 **Qué pasó**: la tarea programada se disparó a las 18:35 (no a las 07:52). El Mac de Nico respondió al principio (reserva, créditos 26.689) y generó la voz de 01 y 02 (en su carpeta local); durante la del 03 se desconectó del puente (18:42) y no volvió (comprobado cada 5 min hasta las 19:20).
 **Hecho sin el Mac**: 3 temas con ≥ 2 fuentes por dato: 01 «El espacio huele a filete», 02 «Tu cerebro canta sin música» (canción pegada; **experimento: gancho de paradoja**), 03 «Esta torre ya no cae» (Pisa). `guiones.md`, `metadatos.json`, temas a «Usados» en `IDEAS.md`, `generadores/ilus_hoy.py` y `gen_0N.py` (36/36/32 planos) con hojas de fotogramas revisadas y corregidas con tiempos provisionales.
