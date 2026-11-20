@@ -6,7 +6,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 ## En curso
 - [ ] Lote 2026-11-19-manana — Agente 08:00 (Nico) — 2026-11-19 18:36 — **pendiente de voz**: guiones, metadatos y generadores hechos; voz de 01 y 02 en el Mac de Nico; falta la del 03, render, calidad, portadas y entrega. Se retoma en el chat https://claude.ai/code/session_019BG1dHnK2nwYYSBBZnUxmf cuando el Mac vuelva (se cayó a las 18:42). La tarea programada se disparó a las 18:35 en vez de a las 07:52
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
-- [ ] Publicar el lote 2026-11-17-tarde en YouTube y TikTok: 01 v3 y 02 v3 desde el Mac de Nico (descargados del chat, SHA iguales a `estado.md`; Nico: «sube los vídeos que me he descargado del lote de Jorge»). El 03 v2 no está descargado en el Mac de Nico: queda sin subir — Nico — 2026-11-17 23:05 — **YouTube hecho** (01 público `dOdQj9QyoBI`; 02 programado 23:59 `cjSc0D_gOaI`). Falta: TikTok de los dos (Nico tiene que elegir el archivo en el navegador integrado), portada por fotograma en Studio, comentarios fijados
 
 ## Pendiente
 - [ ] **Vídeos extra 2026-11-19** (`lotes/2026-11-19-extra/`): los tres publicados en TikTok y en YouTube (01 público; 02 programado 21:25; 03 programado 22:25). Faltan los comentarios fijados y las fichas de variables — Nico
@@ -59,6 +58,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-17-tarde publicado entero (rayo, Sol, cebolla) en YouTube y TikTok — comprobado en YouTube Studio y TikTok Studio el 2026-11-19 desde el Mac de Jorge
 - [x] Canal de YouTube verificado (miniaturas propias y comentarios fijados ya disponibles) — persona en el chat del lote 2026-11-18-tarde — 2026-11-19
 - [x] Lote 2026-11-18-tarde v1 (GTA 6, estrella de neutrones, mides menos) — Agente 20:00 (Jorge) — 2026-11-18 23:30 — **en revisión**: vídeos en el chat https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H, falta el «ok»
 - [x] Lectura a 48 h de YouTube Studio y TikTok Studio (16 vídeos) y estado de H0 y H7 en `motor/APRENDIZAJE.md` — Nico (tarea programada) — 2026-11-18 22:45
