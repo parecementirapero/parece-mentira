@@ -42,3 +42,4 @@ Base: `aprendizajes.md` (2026-11-20 09:20, 22 vídeos).
 - 12:55–13:20: Mac sin puente en 6 comprobaciones. La voz no se llegó a generar (no se gastó nada).
 - 13:20: correo `[AVISO]` (`1a1f8e64fbd69fe5`). Reintentos programados en este chat a las 14:21 y 15:21. Si el Mac responde: voz por API → `gen_0N.py DIR NN-locucion.mp3 NN-alineacion.json` → render → `motor.calidad --mp4` → portadas → fichas → MP4 al chat → «ok».
 - 14:23 (reintento 1): el Mac de Jorge sigue sin puente (2 intentos). Queda el reintento de las 15:21.
+- 15:21 (reintento 2): el Mac de Jorge sigue sin puente. Sin más reintentos automáticos: el lote queda «pendiente de voz» y se retoma escribiendo en este chat con el Mac encendido. Ojo: si esta noche la tarea de las 20:00 hace el lote 2026-11-20-tarde, este (19-tarde) sigue siendo aparte (no hay choque de nombres); que Nico o Jorge decidan si se termina o se descarta.
