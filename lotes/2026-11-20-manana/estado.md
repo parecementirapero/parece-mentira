@@ -2,7 +2,7 @@
 
 **Estado**: en revisión (v1) · Agente 08:00 (Nico) · rama `main`
 **Chat del lote** (vídeos y «ok»): https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR
-**Correo de aviso**: (se apunta al enviarlo)
+**Correo de aviso**: `1a1f9e9c2c12292c` (enviado a parecementirapero.media@gmail.com)
 
 ## Cronología
 - 17:26 (Madrid) se dispara la tarea de las 07:52 (≈9,5 h tarde). El lote no existía → se crea.

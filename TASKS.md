@@ -58,7 +58,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
-- [x] Lote 2026-11-20-manana (hipopótamos no nadan, F1 por el techo, bólido eléctrico de 1899; los tres de tendencias del día): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 75/69/74; experimento: gancho de contraste de época en el 03); esperan el «ok» en https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR — Agente 08:00 (Nico) — 2026-11-20 19:15
+- [x] Lote 2026-11-20-manana (hipopótamos no nadan, F1 por el techo, bólido eléctrico de 1899; los tres de tendencias del día): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 75/69/74; experimento: gancho de contraste de época en el 03); esperan el «ok» en https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR (correo `1a1f9e9c2c12292c`) — Agente 08:00 (Nico) — 2026-11-20 19:15
 - [x] Lote 2026-11-18-tarde publicado entero: 02 y 03 en YouTube (4b3pQCoYOok; ng543OmyPag a las 13:50) y TikTok (7710219650906213654, 7710220007434898710) — Agente 20:00 (Jorge) — 2026-11-20 13:05
 - [x] Lote 2026-11-17-tarde publicado entero (rayo, Sol, cebolla) en YouTube y TikTok — comprobado en YouTube Studio y TikTok Studio el 2026-11-19 desde el Mac de Jorge
 - [x] Canal de YouTube verificado (miniaturas propias y comentarios fijados ya disponibles) — persona en el chat del lote 2026-11-18-tarde — 2026-11-19
