@@ -62,6 +62,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - El espacio huele a filete (Pettit y el humo de soldar, oxígeno atómico como explicación posible, Steve Pearce/NASA 2008, Eau de Space, polvo lunar = pólvora, formiato de etilo en Sagitario B2 con el IRAM de Sierra Nevada) — lote 2026-11-19-manana
 - La canción pegada (>90 % cada semana, Kraemer/Dartmouth 2005: el cerebro rellena los silencios, Ohrwurm, chicle en Reading 2015: un tercio menos) — lote 2026-11-19-manana
 - La Torre de Pisa estuvo a punto de caer (1173, inclinada en 1178 con tres pisos, guerras ≈100 años, pisos torcidos, 199 años, 5,5° en 1990, 600 t de plomo, extracción de tierra, ≈40 cm, reabierta en 2001, ≥200 años) — lote 2026-11-19-manana
+- Los atardeceres de Marte son azules (Curiosity, cráter Gale, 15-04-2015; polvo finísimo que deja pasar el azul y lo mantiene junto al Sol; < 1 % del aire de la Tierra; Sol más pequeño y rosado; luz del polvo alto 2 h o más) — lote 2026-11-19-tarde
+- Naciste con unos 300 huesos y tienes 206 (cartílago que se suelda, fontanelas, 27 por mano y 26 por pie = 106, fémur ≈ 1/4 de la altura, estribo como un grano de arroz) — lote 2026-11-19-tarde
+- Las gotas de lluvia no tienen forma de lágrima (esfera < 2 mm, pan de hamburguesa, paracaídas y rotura cerca de 1 cm, 10 m/s = 36 km/h, ≥ 7 min desde 4.000 m) — lote 2026-11-19-tarde
 
 ## Continuaciones prometidas
 
