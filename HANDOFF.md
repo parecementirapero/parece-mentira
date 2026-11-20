@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-20 13:05 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — 02 y 03 del lote 2026-11-18-tarde publicados
+**Hecho**: «ok 2 y 3». YouTube por API (sin duplicados): 02 https://youtube.com/shorts/4b3pQCoYOok público; 03 https://youtube.com/shorts/ng543OmyPag programado 13:50; portadas por API (reintento al minuto: justo tras subir da 403). TikTok desde el navegador integrado con portada de imagen: 7710219650906213654 y 7710220007434898710. Archivos copiados a `PARA PUBLICAR/` para elegirlos fácil.
+**Pendiente**: comentarios fijados de los 3; fichas `publicar` del 02 y 03. El lote 2026-11-16-manana sigue sin publicar (Mac de Nico).
+
 ## 2026-11-19 20:55 — Nico (chat del Mac de Nico) — rama `main` — 02 y 03 programados en YouTube
 **Hecho**: «súbelos» (20:45) → 02 dólar `Ve63IT5wgpY` (21:25) y 03 el Turco `QUFe8ovVpJE` (22:25) subidos por API con sus portadas; `etiquetas.json` y `metadatos.json` al día.
 **Pendiente**: TikTok de los tres (Nico tiene que elegir cada archivo), comentarios fijados en YouTube (aviso a las 22:30 en el chat), fichas de variables.

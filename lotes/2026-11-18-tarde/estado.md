@@ -72,4 +72,5 @@ Créditos de ElevenLabs tras el lote: ≈24.200 (se gastaron ≈3.550).
 ## Publicación del 02 y 03 — «ok 2 y 3» en el chat (2026-11-20 12:45)
 - La persona: «vamos a subir los que faltan, súbelos» → confirmó «ok 2 y 3» (v1, SHA dfb4ed47de09 y 6a8c2e51fa19, comprobados en el Mac).
 - **YouTube** (`--prueba` antes, sin duplicados): 02 público https://youtube.com/shorts/4b3pQCoYOok · 03 programado 13:50 https://youtube.com/shorts/ng543OmyPag. Portadas puestas por API (`--solo-portada`, al minuto: justo tras subir daba 403).
-- **TikTok**: comprobado que no estaban; MP4 y portadas copiados a Descargas; subida por el navegador integrado (la persona elige los archivos).
+- **TikTok**: comprobado que no estaban; MP4 y portadas copiados a Descargas y a `PARA PUBLICAR/` (pedido de la persona); subidos desde el navegador integrado con su portada (imagen): 02 https://www.tiktok.com/@parece.mentira85/video/7710219650906213654 · 03 https://www.tiktok.com/@parece.mentira85/video/7710220007434898710
+- **Lote 2026-11-18-tarde publicado entero** en YouTube y TikTok.

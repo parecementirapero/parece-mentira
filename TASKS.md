@@ -11,7 +11,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 ## Pendiente
 - [ ] **Vídeos extra 2026-11-19** (`lotes/2026-11-19-extra/`): los tres publicados en TikTok y en YouTube (01 público; 02 programado 21:25; 03 programado 22:25). Faltan los comentarios fijados y las fichas de variables — Nico
 - [ ] **Tendencias**: registrar en `DECISIONS.md` y `AGENTE.md` §2 la regla nueva de Nico (2026-11-19): el turno de mañana analiza las tendencias del día, las guarda en `lotes/tendencias/AAAA-MM-DD.md` y los temas salen de ahí. La tarea programada de la mañana ya lo pide; **la de la tarde (Mac de Jorge) no se pudo cambiar**: hay que aprobar el cambio desde el Mac de Jorge — Nico/Jorge
-- [ ] Lote 2026-11-18-tarde 02 y 03 («ok 2 y 3» el 2026-11-20): YouTube hecho (4b3pQCoYOok, ng543OmyPag programado 13:50); falta TikTok — Agente 20:00 (Jorge) — 2026-11-20 12:50
 - [ ] 01 GTA 6 (lote 2026-11-18-tarde): escribir y fijar el comentario en YouTube y TikTok (el canal ya está verificado: se puede fijar) — Nico/Jorge
 - [ ] Comprobar en Studio por qué «La Gran Muralla» (`rEiiPtGXz84`) y «Tu perro copia tus bostezos» (`tp7XFLAIkS0`) llevan 7 y 8 vistas tras 12 h (¿visibilidad?, ¿restricción?) — Nico/Jorge
 - [ ] **Jorge: publicar en TikTok el lote 2026-11-18-manana (01, 02 y 03 v1, con «ok»)** desde su ordenador. MP4 en el chat https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 (misma cuenta de Claude; también en el Mac de Nico, `Documents/Parece Mentira/lotes/2026-11-18-manana/`). Comprobar SHA-256 con `estado.md`. Textos en `lotes/2026-11-18-manana/metadatos.json` → `tiktok.texto`; portada = fotograma `portada.t`; comentario = `comentario`. Antes, mirar en TikTok Studio que no estén ya. Luego apuntar los enlaces en `estado.md` y `ficha publicar … tiktok=<número>` — pedido por Nico 2026-11-18 ≈09:00 — Jorge
@@ -59,6 +58,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-18-tarde publicado entero: 02 y 03 en YouTube (4b3pQCoYOok; ng543OmyPag a las 13:50) y TikTok (7710219650906213654, 7710220007434898710) — Agente 20:00 (Jorge) — 2026-11-20 13:05
 - [x] Lote 2026-11-17-tarde publicado entero (rayo, Sol, cebolla) en YouTube y TikTok — comprobado en YouTube Studio y TikTok Studio el 2026-11-19 desde el Mac de Jorge
 - [x] Canal de YouTube verificado (miniaturas propias y comentarios fijados ya disponibles) — persona en el chat del lote 2026-11-18-tarde — 2026-11-19
 - [x] Lote 2026-11-18-tarde v1 (GTA 6, estrella de neutrones, mides menos) — Agente 20:00 (Jorge) — 2026-11-18 23:30 — **en revisión**: vídeos en el chat https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H, falta el «ok»
