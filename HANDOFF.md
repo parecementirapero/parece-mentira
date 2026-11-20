@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-20 22:50 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-20-tarde: ordenador no disponible
+**Qué pasó**: la tarea de las 19:52 se disparó a las 22:47. El Mac de Jorge no estaba conectado al puente (`device_list_dir` sin respuesta en 60 s; `get_device_info` y reintento: «not connected to the bridge»).
+**Hecho**: según AGENTE §1.6, lote en «Pendiente» con nota, `lotes/2026-11-20-tarde/estado.md`, este registro y correo `[AVISO]`. Nada producido, gastado ni publicado (sin el Mac no hay clave de ElevenLabs).
+**Pruebas**: ninguna (no se tocó `motor/`).
+**Pendiente**: este lote y los dos «pendiente de voz» (2026-11-19-manana y 2026-11-19-tarde) dependen de que los Macs estén encendidos con la app abierta a la hora de la tarea.
+**Siguiente paso**: con el Mac de Jorge encendido, escribir en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf para arrancar el lote (tendencias sin usar en `lotes/tendencias/2026-11-20.md`).
+
 ## 2026-11-20 19:15 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-20-manana v1 en revisión + tendencias
 **Qué pasó**: la tarea de las 07:52 se disparó a las 17:26. El lote no existía → se hizo entero en este turno con el Mac de Nico (se cayó del puente un rato durante el render y volvió).
 **Hecho**: regla «Temas según las tendencias del día» en `DECISIONS.md` y `AGENTE.md` §2 (`a970cb4`); análisis en `lotes/tendencias/2026-11-20.md` (`315df29`; Google Trends MX/AR/CO/ES ✅, TikTok Creative Center ❌ pide sesión, Studio → Investigación ❌ error). Los 3 temas salen de tendencias: 01 «Los hipopótamos NO saben nadar» (fiona hipopótamo), 02 «Un Fórmula 1 podría ir por el TECHO» (GP de Las Vegas), 03 «El primer coche en pasar de 100 km/h era ELÉCTRICO (1899)» (tesla argentina; **experimento: gancho de contraste de época**). ≥ 2 fuentes por dato (`guiones.md`), voz oficial por API (01 y 03 en versión corta para no pasar de 60 s), ilustraciones nuevas (`generadores/ilus_1120m.py`, 45 SVG), montaje denso (38/35/33 planos), render en la nube, portadas elegidas, fichas de variables, MP4 en el chat y en el Mac.
