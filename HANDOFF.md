@@ -6,7 +6,7 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ## 2026-11-20 22:50 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-20-tarde: ordenador no disponible
 **Qué pasó**: la tarea de las 19:52 se disparó a las 22:47. El Mac de Jorge no estaba conectado al puente (`device_list_dir` sin respuesta en 60 s; `get_device_info` y reintento: «not connected to the bridge»).
-**Hecho**: según AGENTE §1.6, lote en «Pendiente» con nota, `lotes/2026-11-20-tarde/estado.md`, este registro y correo `[AVISO]`. Nada producido, gastado ni publicado (sin el Mac no hay clave de ElevenLabs).
+**Hecho**: según AGENTE §1.6, lote en «Pendiente» con nota, `lotes/2026-11-20-tarde/estado.md`, este registro y correo `[AVISO]` `1a1faef9e1379be2`. Nada producido, gastado ni publicado (sin el Mac no hay clave de ElevenLabs).
 **Pruebas**: ninguna (no se tocó `motor/`).
 **Pendiente**: este lote y los dos «pendiente de voz» (2026-11-19-manana y 2026-11-19-tarde) dependen de que los Macs estén encendidos con la app abierta a la hora de la tarea.
 **Siguiente paso**: con el Mac de Jorge encendido, escribir en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf para arrancar el lote (tendencias sin usar en `lotes/tendencias/2026-11-20.md`).

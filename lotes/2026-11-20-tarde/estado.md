@@ -9,3 +9,4 @@
 
 ## Para retomar
 Escribir en el chat del turno con el Mac de Jorge encendido y la app de Claude abierta: el agente arranca el lote desde AGENTE §1 (tendencias sin usar en `lotes/tendencias/2026-11-20.md`).
+- Correo [AVISO]: `1a1faef9e1379be2`.
