@@ -1,6 +1,6 @@
 # Estado — lote 2026-11-19-tarde
 
-- **Estado**: en curso
+- **Estado**: **pendiente de voz** — el Mac de Jorge se desconectó del puente a las 12:55 (volvió un instante ≈13:05 y se cayó otra vez). Correo de aviso `[AVISO]` enviado (id `1a1f8e64fbd69fe5`).
 - **Agente**: Agente 20:00 (Jorge) · Mac de Jorge (`jorges-macbook-air-2`) · carpeta local `Documents/Parece Mentira/lotes/2026-11-19-tarde`
 - **Chat del lote**: https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq
 - **Redes**: YouTube y TikTok (Instagram fuera, DECISIONS 2026-11-17).
@@ -9,7 +9,7 @@
 ## Arranque
 - Lote nuevo (no existía `estado.md`). Mac de Jorge responde (12:50).
 - ElevenLabs a las 12:50: **24.584** caracteres libres de 40.000 (da para el lote: ≈3.500).
-- 12:55: el puente del Mac se cae («not connected to the bridge»). Mientras tanto, en la nube: temas, fuentes, guiones, metadatos y montaje con tiempos provisionales. El Mac vuelve un momento a las ≈13:40 y se cae antes de poder lanzar la voz.
+- 12:55: el puente del Mac se cae («not connected to the bridge»). Mientras tanto, en la nube: temas, fuentes, guiones, metadatos y montaje con tiempos provisionales. El Mac vuelve un momento a las ≈13:05 y se cae antes de poder lanzar la voz.
 - Studio (§1.8): no se abrió (Mac sin puente). No hay experimento aprobado en `estadisticas/experimentos/`.
 
 ## Temas (3, verificados con ≥ 2 fuentes; ver `guiones.md`)
@@ -37,3 +37,7 @@ Base: `aprendizajes.md` (2026-11-20 09:20, 22 vídeos).
 ## Montaje (tiempos provisionales, sin voz)
 - `generadores/ilus_1119t.py`: 46 SVG nuevos (paisaje de Marte de día y al atardecer con halo, atardecer en la Tierra, rover genérico, fotos, planeta, grano de polvo, haz de colores, botes de aire, soles; rayos X, esqueletos adulto y bebé, mano, pie, cráneo con fontanelas abierto y cerrado, bebé, cuarto, fémur, estribo, grano de arroz, oreja en corte, cartílago; gotas lágrima/esfera/pan/paracaídas, gotitas, pan de hamburguesa, paracaídas, lápiz, nubes, lluvia, velocímetro, perfil con nube).
 - `gen_01.py` 32 planos · `gen_02.py` 31 · `gen_03.py` 29. Hojas de fotogramas revisadas y corregidas (esqueleto más abajo para que los rótulos no le tapen el pecho, rótulos con cápsula sobre fondos claros, nube más baja para que no choque con la cifra).
+
+## Bloqueo y reintentos
+- 12:55–13:20: Mac sin puente en 6 comprobaciones. La voz no se llegó a generar (no se gastó nada).
+- 13:20: correo `[AVISO]` (`1a1f8e64fbd69fe5`). Reintentos programados en este chat a las 14:21 y 15:21. Si el Mac responde: voz por API → `gen_0N.py DIR NN-locucion.mp3 NN-alineacion.json` → render → `motor.calidad --mp4` → portadas → fichas → MP4 al chat → «ok».

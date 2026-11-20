@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-19 19:25 — Agente 08:00 (Nico) (lote 2026-11-19-manana pendiente de voz: Mac de Nico desconectado)_
+_Última actualización: 2026-11-20 13:20 — Agente 20:00 (Jorge) (lote 2026-11-19-tarde pendiente de voz: Mac de Jorge sin puente)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,6 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- Pendiente de voz: lote **2026-11-19-tarde** (atardecer azul en Marte, 300 huesos al nacer, las gotas no son lágrimas; experimento: gancho POV en el 01). Guiones, metadatos y montajes con tiempos provisionales en `lotes/2026-11-19-tarde/`; falta voz → render → «ok» en https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq. ElevenLabs: quedan 24.584 caracteres.
 - En revisión: lote **2026-11-18-tarde** v1 (GTA 6 tardó 13 años, terrón de estrella de neutrones, ahora mides menos; 57–59 s; experimento: gancho en segunda persona en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H y en `Documents/Parece Mentira/lotes/2026-11-18-tarde/` (Mac de Jorge). ElevenLabs: quedan ≈24.200 caracteres.
 - En revisión: lote **2026-11-18-manana** v1 (día de 18 horas, la Gran Muralla no se ve desde el espacio, tu perro copia tus bostezos; 58–59 s; experimento: gancho de negación en el 02). Vídeos en el chat https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 y en `Documents/Parece Mentira/lotes/2026-11-18-manana/` (Mac de Nico). ElevenLabs: quedan 27.748 caracteres.
 - En revisión: lote **2026-11-17-tarde** v1 (rayo más caliente que el Sol, el Sol que ves ya es pasado, cebolla; 55–57 s; experimento: gancho de orden en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dHf6SfJ6MbfA5kmnCP y en `Documents/Parece Mentira/lotes/2026-11-17-tarde/` (Mac de Jorge). ElevenLabs: quedan 28.812 caracteres.

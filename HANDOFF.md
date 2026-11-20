@@ -8,6 +8,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 **Hecho**: «ok 2 y 3». YouTube por API (sin duplicados): 02 https://youtube.com/shorts/4b3pQCoYOok público; 03 https://youtube.com/shorts/ng543OmyPag programado 13:50; portadas por API (reintento al minuto: justo tras subir da 403). TikTok desde el navegador integrado con portada de imagen: 7710219650906213654 y 7710220007434898710. Archivos copiados a `PARA PUBLICAR/` para elegirlos fácil.
 **Pendiente**: comentarios fijados de los 3; fichas `publicar` del 02 y 03. El lote 2026-11-16-manana sigue sin publicar (Mac de Nico).
 
+## 2026-11-20 13:20 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-19-tarde «pendiente de voz»
+**Qué pasó**: la tarea de las 20:00 del 19-11 se disparó el 20-11 a las 12:49. El lote lleva el nombre del turno que faltaba (2026-11-19-tarde) para no chocar con el de esta noche. El Mac de Jorge respondió al arrancar (reserva, créditos 24.584) y se cayó del puente a las 12:55; volvió un instante y se cayó antes de la voz.
+**Hecho sin el Mac**: 3 temas con ≥ 2 fuentes por dato: 01 «Los atardeceres en Marte son azules» (**experimento: gancho POV**), 02 «Naciste con 300 huesos», 03 «Las gotas no son así». `guiones.md`, `metadatos.json`, temas a «Usados» en `IDEAS.md`, `generadores/ilus_1119t.py` (46 SVG) y `gen_0N.py` (32/31/29 planos) con hojas de fotogramas revisadas.
+**Pruebas**: `motor.guion` 156/157/159 palabras sin ❌. No se tocó `motor/`.
+**Correo**: `[AVISO]` `1a1f8e64fbd69fe5`.
+**Siguiente paso**: con el Mac conectado, en el chat del lote (reintentos 14:21 y 15:21): voz por API → `python3 gen_0N.py DIR NN-locucion.mp3 NN-alineacion.json` → `motor.render` → `motor.calidad --mp4` (arreglar los ⚠ de lectura con tiempos reales: «HAMBURGUESA» en el 03) → portadas → fichas → MP4 al chat → «ok». Antes de la voz, `rm`/sobrescribir no hace falta: `voz.py` salta los MP3 que ya existan.
+
 ## 2026-11-19 20:55 — Nico (chat del Mac de Nico) — rama `main` — 02 y 03 programados en YouTube
 **Hecho**: «súbelos» (20:45) → 02 dólar `Ve63IT5wgpY` (21:25) y 03 el Turco `QUFe8ovVpJE` (22:25) subidos por API con sus portadas; `etiquetas.json` y `metadatos.json` al día.
 **Pendiente**: TikTok de los tres (Nico tiene que elegir cada archivo), comentarios fijados en YouTube (aviso a las 22:30 en el chat), fichas de variables.
