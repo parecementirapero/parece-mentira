@@ -68,3 +68,8 @@ Créditos de ElevenLabs tras el lote: ≈24.200 (se gastaron ≈3.550).
 - YouTube, respondidos con el visto bueno de la persona (3): Judith (GTA 6), Gabriel (rayo; se corrigió con amabilidad: sobreviven ~9 de cada 10, NWS), Rebeca (puertas). TikTok: solo uno de gente, «f8tf7fr7r5» (sin sentido), no se contesta.
 - Desde ahora es tarea del agente en cada turno (AGENTE §8b, DECISIONS).
 - TikTok del 01: borrado (7709657865832697110) y **resubido con la portada nueva** (imagen subida en «Upload cover»): https://www.tiktok.com/@parece.mentira85/video/7709660698535529750 — mismo texto y 29 hashtags.
+
+## Publicación del 02 y 03 — «ok 2 y 3» en el chat (2026-11-20 12:45)
+- La persona: «vamos a subir los que faltan, súbelos» → confirmó «ok 2 y 3» (v1, SHA dfb4ed47de09 y 6a8c2e51fa19, comprobados en el Mac).
+- **YouTube** (`--prueba` antes, sin duplicados): 02 público https://youtube.com/shorts/4b3pQCoYOok · 03 programado 13:50 https://youtube.com/shorts/ng543OmyPag. Portadas puestas por API (`--solo-portada`, al minuto: justo tras subir daba 403).
+- **TikTok**: comprobado que no estaban; MP4 y portadas copiados a Descargas; subida por el navegador integrado (la persona elige los archivos).
