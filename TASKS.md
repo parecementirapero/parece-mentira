@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-20-manana — Agente 08:00 (Nico) — 2026-11-20 17:28 — la tarea de las 07:52 se disparó a las 17:26
 - [ ] Lote 2026-11-19-tarde — Agente 20:00 (Jorge) — 2026-11-20 12:55 — **pendiente de voz**: guiones, metadatos y generadores hechos (`lotes/2026-11-19-tarde/`); el Mac de Jorge se cayó del puente a las 12:55. Se retoma en https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq (reintentos 14:21 y 15:21 sin Mac; se retoma escribiendo en ese chat). La tarea de las 20:00 del 19-11 se disparó el 20-11 a las 12:49
 - [ ] Lote 2026-11-19-manana — Agente 08:00 (Nico) — 2026-11-19 18:36 — **pendiente de voz**: guiones, metadatos y generadores hechos; voz de 01 y 02 en el Mac de Nico; falta la del 03, render, calidad, portadas y entrega. Se retoma en el chat https://claude.ai/code/session_019BG1dHnK2nwYYSBBZnUxmf cuando el Mac vuelva (se cayó a las 18:42). La tarea programada se disparó a las 18:35 en vez de a las 07:52
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
@@ -59,6 +58,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-20-manana (hipopótamos no nadan, F1 por el techo, bólido eléctrico de 1899; los tres de tendencias del día): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 75/69/74; experimento: gancho de contraste de época en el 03); esperan el «ok» en https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR — Agente 08:00 (Nico) — 2026-11-20 19:15
 - [x] Lote 2026-11-18-tarde publicado entero: 02 y 03 en YouTube (4b3pQCoYOok; ng543OmyPag a las 13:50) y TikTok (7710219650906213654, 7710220007434898710) — Agente 20:00 (Jorge) — 2026-11-20 13:05
 - [x] Lote 2026-11-17-tarde publicado entero (rayo, Sol, cebolla) en YouTube y TikTok — comprobado en YouTube Studio y TikTok Studio el 2026-11-19 desde el Mac de Jorge
 - [x] Canal de YouTube verificado (miniaturas propias y comentarios fijados ya disponibles) — persona en el chat del lote 2026-11-18-tarde — 2026-11-19

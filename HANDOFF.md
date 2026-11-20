@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-20 19:15 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-20-manana v1 en revisión + tendencias
+**Qué pasó**: la tarea de las 07:52 se disparó a las 17:26. El lote no existía → se hizo entero en este turno con el Mac de Nico (se cayó del puente un rato durante el render y volvió).
+**Hecho**: regla «Temas según las tendencias del día» en `DECISIONS.md` y `AGENTE.md` §2 (`a970cb4`); análisis en `lotes/tendencias/2026-11-20.md` (`315df29`; Google Trends MX/AR/CO/ES ✅, TikTok Creative Center ❌ pide sesión, Studio → Investigación ❌ error). Los 3 temas salen de tendencias: 01 «Los hipopótamos NO saben nadar» (fiona hipopótamo), 02 «Un Fórmula 1 podría ir por el TECHO» (GP de Las Vegas), 03 «El primer coche en pasar de 100 km/h era ELÉCTRICO (1899)» (tesla argentina; **experimento: gancho de contraste de época**). ≥ 2 fuentes por dato (`guiones.md`), voz oficial por API (01 y 03 en versión corta para no pasar de 60 s), ilustraciones nuevas (`generadores/ilus_1120m.py`, 45 SVG), montaje denso (38/35/33 planos), render en la nube, portadas elegidas, fichas de variables, MP4 en el chat y en el Mac.
+**Pruebas**: `motor.guion` sin ❌; `construir` sin ⚠ de lectura; `motor.calidad --mp4` 75/69/74 sin ❌ (⚠ justificados en `estado.md`); ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; hojas de fotogramas revisadas y corregidas; `ficha comprobar` 0 problemas. No se tocó `motor/`.
+**No hecho**: lectura de Studio (§1.8) y respuestas a comentarios (§8b) por falta de tiempo. Nada publicado.
+**Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR → AGENTE §8 desde el Mac de Nico. El turno de la tarde tiene tendencias sin usar en `lotes/tendencias/2026-11-20.md`.
+
 ## 2026-11-20 13:05 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — 02 y 03 del lote 2026-11-18-tarde publicados
 **Hecho**: «ok 2 y 3». YouTube por API (sin duplicados): 02 https://youtube.com/shorts/4b3pQCoYOok público; 03 https://youtube.com/shorts/ng543OmyPag programado 13:50; portadas por API (reintento al minuto: justo tras subir da 403). TikTok desde el navegador integrado con portada de imagen: 7710219650906213654 y 7710220007434898710. Archivos copiados a `PARA PUBLICAR/` para elegirlos fácil.
 **Pendiente**: comentarios fijados de los 3; fichas `publicar` del 02 y 03. El lote 2026-11-16-manana sigue sin publicar (Mac de Nico).

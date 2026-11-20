@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-20 13:20 — Agente 20:00 (Jorge) (lote 2026-11-19-tarde pendiente de voz: Mac de Jorge sin puente)_
+_Última actualización: 2026-11-20 19:15 — Agente 08:00 (Nico) (lote 2026-11-20-manana en revisión; primer lote con análisis de tendencias)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,6 +25,8 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- En revisión: lote **2026-11-20-manana** v1 (los hipopótamos no saben nadar, un F1 podría ir por el techo, el primer coche en pasar de 100 km/h era eléctrico; 56–58 s; los tres salen de las tendencias del día; experimento: gancho de contraste de época en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR y en `Documents/Parece Mentira/lotes/2026-11-20-manana/` (Mac de Nico). ElevenLabs: quedan ≈21.400 caracteres.
+- Tendencias del día: `lotes/tendencias/AAAA-MM-DD.md` (desde el 2026-11-20; la escribe el turno de mañana y la lee el de tarde). Regla en `DECISIONS.md` y `AGENTE.md` §2.
 - Pendiente de voz: lote **2026-11-19-tarde** (atardecer azul en Marte, 300 huesos al nacer, las gotas no son lágrimas; experimento: gancho POV en el 01). Guiones, metadatos y montajes con tiempos provisionales en `lotes/2026-11-19-tarde/`; falta voz → render → «ok» en https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq. ElevenLabs: quedan 24.584 caracteres.
 - En revisión: lote **2026-11-18-tarde** v1 (GTA 6 tardó 13 años, terrón de estrella de neutrones, ahora mides menos; 57–59 s; experimento: gancho en segunda persona en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dJgL6wqDoQhqXJ6S2H y en `Documents/Parece Mentira/lotes/2026-11-18-tarde/` (Mac de Jorge). ElevenLabs: quedan ≈24.200 caracteres.
 - En revisión: lote **2026-11-18-manana** v1 (día de 18 horas, la Gran Muralla no se ve desde el espacio, tu perro copia tus bostezos; 58–59 s; experimento: gancho de negación en el 02). Vídeos en el chat https://claude.ai/code/session_019BG1dJLtMKt7d9zxuM93s6 y en `Documents/Parece Mentira/lotes/2026-11-18-manana/` (Mac de Nico). ElevenLabs: quedan 27.748 caracteres.

@@ -65,6 +65,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - Los atardeceres de Marte son azules (Curiosity, cráter Gale, 15-04-2015; polvo finísimo que deja pasar el azul y lo mantiene junto al Sol; < 1 % del aire de la Tierra; Sol más pequeño y rosado; luz del polvo alto 2 h o más) — lote 2026-11-19-tarde
 - Naciste con unos 300 huesos y tienes 206 (cartílago que se suelda, fontanelas, 27 por mano y 26 por pie = 106, fémur ≈ 1/4 de la altura, estribo como un grano de arroz) — lote 2026-11-19-tarde
 - Las gotas de lluvia no tienen forma de lágrima (esfera < 2 mm, pan de hamburguesa, paracaídas y rotura cerca de 1 cm, 10 m/s = 36 km/h, ≥ 7 min desde 4.000 m) — lote 2026-11-19-tarde
+- Los hipopótamos no saben nadar ni flotar (fondo a saltitos, ≈5 min sin respirar, duermen en el agua, «sudor rojo» = protector solar, despegan las cuatro patas al correr, RVC 2024) — lote 2026-11-20-manana (tendencia «fiona hipopótamo»)
+- Un Fórmula 1 podría ir por el techo (alerones = alas al revés, carga ∝ velocidad², ≈200 km/h carga = peso, túnel de 4–5 km) — lote 2026-11-20-manana (tendencia «gran premio de las vegas»)
+- El primer coche en pasar de 100 km/h era eléctrico (1899, Jenatzy, torpedo, 105 km/h; ≈1/3 de los coches de EE. UU. en 1900; 60 taxis en Nueva York; gasolina barata, arranque eléctrico 1912, casi desaparecidos hacia 1935) — lote 2026-11-20-manana (tendencia «tesla argentina»)
 
 ## Continuaciones prometidas
 
