@@ -1,10 +1,10 @@
-# Estudio de audiencia y rendimiento — 2026-11-20 10:03
+# Estudio de audiencia y rendimiento — 2026-11-21 09:10
 
 Generado por `python3 estadisticas/estudio todo`. Método: `estadisticas/estudio/README.md`. Niveles: **pista** (menos de 5 vídeos por grupo o indistinguible del azar: solo para decidir qué probar), **indicio** (5 o más por grupo, p < 0,10 y mismo sentido en YouTube y TikTok), **regla** (10 o más por grupo, intervalo que no cruza el cero, repetido en dos semanas y p corregido por el número de comparaciones; o un experimento con ficha previa cerrado a favor).
 
 ## 1. Con qué contamos
 
-- Vídeos públicos: **23** · con ficha de variables: **16** (codificadas antes de publicar: 6).
+- Vídeos públicos: **28** · con ficha de variables: **21** (codificadas antes de publicar: 11).
 - Con «se quedaron viendo» leído a edad comparable (24 h o más): **10** (de ellos, ya con la medición de 48 h: 4).
 - Con retención de TikTok Studio a edad comparable: **7**.
 
@@ -25,29 +25,34 @@ Valor a 48 h; si el vídeo aún no llega, la última lectura con 24 h o más (ma
 
 | Vídeo | Se quedan (YT) | s por vista (YT) | Tiempo medio (TT) | Siguen a 3 s (TT) | Vistas YT | Vistas TT |
 |---|---|---|---|---|---|---|
-| Huellas en la Luna | ~79,4 (1,24) | ~26,5 (1,12) | ~19,8 (1,37) | ~63,0 (1,21) | 11.122 (7,92) | 618 (2,50) |
-| Guerra de 38 minutos | 60,1 (0,94) | 17,7 (0,75) | ~16,5 (1,15) | — | 1.428 (1,02) | 426 (1,72) |
-| Moáis | 52,0 (0,81) | 16,8 (0,71) | ~13,7 (0,95) | ~41,0 (0,79) | 1.220 (0,87) | 409 (1,66) |
-| Luna densa | 80,3 (1,25) | 29,4 (1,24) | 22,4 (1,56) | _60,0 a las 5 h_ | 6.462 (4,60) | 285 (1,15) |
-| Nudillos | 63,5 (0,99) | 23,6 (0,99) | _20,7 a las 4 h_ | — | 2.194 (1,56) | 275 (1,11) |
-| Puertas | ~47,7 (0,74) | ~19,8 (0,83) | _9,2 a las 4 h_ | — | 1.405 (1,00) | 240 (0,97) |
+| Huellas en la Luna | ~79,4 (1,24) | ~26,5 (1,12) | ~19,8 (1,37) | ~63,0 (1,21) | 11.122 (7,92) | 618 (2,41) |
+| Guerra de 38 minutos | 60,1 (0,94) | 17,7 (0,75) | ~16,5 (1,15) | — | 1.428 (1,02) | 426 (1,66) |
+| Moáis | 52,0 (0,81) | 16,8 (0,71) | ~13,7 (0,95) | ~41,0 (0,79) | 1.220 (0,87) | 409 (1,59) |
+| Luna densa | 80,3 (1,25) | 29,4 (1,24) | 22,4 (1,56) | _60,0 a las 5 h_ | 6.462 (4,60) | 285 (1,11) |
+| Nudillos | 63,5 (0,99) | 23,6 (0,99) | _20,7 a las 4 h_ | — | 2.194 (1,56) | 275 (1,07) |
+| Puertas | ~47,7 (0,74) | ~19,8 (0,83) | _9,2 a las 4 h_ | — | 1.405 (1,00) | 240 (0,94) |
 | Apolo 11 / móvil | ~35,2 (0,55) | ~11,5 (0,48) | — | — | 1.114 (0,79) | 5 (0,02) |
-| Plátano radiactivo | ~64,8 (1,01) | ~23,9 (1,01) | ~12,2 (0,85) | — | 1.491 (1,06) | 242 (0,98) |
-| Saturno flotaría | ~67,4 (1,05) | ~26,7 (1,12) | ~14,4 (1,00) | — | 2.295 (1,63) | 232 (0,94) |
-| Huella de koala | ~71,3 (1,11) | ~24,9 (1,05) | ~6,4 (0,45) | — | 3.224 (2,29) | 58 (0,23) |
+| Plátano radiactivo | ~64,8 (1,01) | ~23,9 (1,01) | ~12,2 (0,85) | — | 1.491 (1,06) | 242 (0,94) |
+| Saturno flotaría | ~67,4 (1,05) | ~26,7 (1,12) | ~14,4 (1,00) | — | 2.295 (1,63) | 232 (0,90) |
+| Huella de koala | ~71,3 (1,11) | ~24,9 (1,05) | ~6,4 (0,45) | — | 3.224 (2,30) | 58 (0,23) |
 | cjSc0D_gOaI | — | — | — | — | _0 a las 10 h_ | — |
-| dOdQj9QyoBI | _56,9 a las 24 h_ | _18,0 a las 24 h_ | — | — | 1.813 (1,29) | ~385 (1,56) |
-| 5pSKNws_e-s | _64,3 a las 14 h_ | _21,6 a las 14 h_ | — | — | 906 (0,64) | ~247 (1,00) |
-| rEiiPtGXz84 | _41,7 a las 13 h_ | — | — | — | ~9 (0,01) | ~242 (0,98) |
-| tp7XFLAIkS0 | _54,6 a las 12 h_ | — | — | — | ~8 (0,01) | ~217 (0,88) |
-| dMcGHyKbeaA | _60,8 a las 8 h_ | _17,0 a las 8 h_ | — | — | ~1.262 (0,90) | ~331 (1,34) |
-| G_xEqU97krk | _65,2 a las 7 h_ | _21,2 a las 7 h_ | — | — | ~633 (0,45) | — |
-| _9znalXgInI | — | — | — | — | ~954 (0,68) | ~4 (0,02) |
-| HGERZv5VWiU | — | — | — | — | _1.242 a las 13 h_ | _271 a las 12 h_ |
-| Ve63IT5wgpY | — | — | — | — | _19 a las 12 h_ | _245 a las 12 h_ |
-| QUFe8ovVpJE | — | — | — | — | _1.915 a las 11 h_ | — |
-| 7709510485921582358 | — | — | — | — | — | ~268 (1,09) |
-| 7709974444936006934 | — | — | — | — | — | _252 a las 12 h_ |
+| dOdQj9QyoBI | _56,9 a las 24 h_ | _18,0 a las 24 h_ | — | — | 1.813 (1,29) | 455 (1,77) |
+| 5pSKNws_e-s | _64,3 a las 14 h_ | _21,6 a las 14 h_ | — | — | 906 (0,65) | 247 (0,96) |
+| rEiiPtGXz84 | _41,7 a las 13 h_ | — | — | — | 10 (0,01) | 244 (0,95) |
+| tp7XFLAIkS0 | _54,6 a las 12 h_ | — | — | — | 15 (0,01) | 218 (0,85) |
+| dMcGHyKbeaA | _60,8 a las 8 h_ | _17,0 a las 8 h_ | — | — | 1.319 (0,94) | 524 (2,04) |
+| G_xEqU97krk | _65,2 a las 7 h_ | _21,2 a las 7 h_ | — | — | 732 (0,52) | — |
+| _9znalXgInI | — | — | — | — | 1.146 (0,82) | 5 (0,02) |
+| HGERZv5VWiU | — | — | — | — | ~1.403 (1,00) | ~274 (1,07) |
+| Ve63IT5wgpY | — | — | — | — | ~21 (0,01) | ~248 (0,97) |
+| QUFe8ovVpJE | — | — | — | — | ~2.570 (1,83) | — |
+| 4b3pQCoYOok | — | — | — | — | _1.947 a las 20 h_ | _249 a las 20 h_ |
+| ng543OmyPag | — | — | — | — | _6.033 a las 19 h_ | _247 a las 20 h_ |
+| W9NYUO0-CrU | — | — | — | — | _571 a las 8 h_ | — |
+| 7709510485921582358 | — | — | — | — | — | 272 (1,06) |
+| 7709974444936006934 | — | — | — | — | — | ~265 (1,03) |
+| LvYkPN5jc6A | — | — | — | — | — | — |
+| kHT4ncQZNQ4 | — | — | — | — | — | — |
 
 _En cursiva: lecturas con menos de 24 h. No entran en ningún cálculo._
 
@@ -110,7 +115,6 @@ _Una correlación no dice qué causa qué. Sin experimento, nunca pasa de «indi
 ## 4. Lo que esta muestra NO puede decir
 
 - **Variables que no varían** (todos los vídeos valen lo mismo, así que no se puede saber si importan): `subtitulo` = karaoke.
-- **Variables pegadas** (en estos vídeos van siempre juntas; un efecto de una puede ser de la otra): `alcance` y `f0_literal`.
 - **10 fichas se codificaron después de publicar**, sabiendo ya el resultado. Las variables subjetivas de esas fichas pueden estar contaminadas.
 - Retención por edad o por género: ninguna plataforma la da.
 
@@ -120,28 +124,28 @@ Desde 2026-11-01. Solo usuarios con sesión iniciada; edad y género los estima 
 
 | Edad | % | Mujeres | Hombres |
 |---|---|---|---|
-| 13–17 | 6,6 | 1,9 | 4,7 |
-| 18–24 | 12,8 | 2,7 | 10,1 |
-| 25–34 | 33,3 | 11,7 | 21,6 |
-| 35–44 | 25,3 | 11,6 | 13,7 |
-| 45–54 | 13,2 | 5,2 | 8,0 |
-| 55–64 | 5,0 | 1,7 | 3,3 |
+| 13–17 | 6,7 | 1,9 | 4,8 |
+| 18–24 | 12,7 | 2,8 | 9,9 |
+| 25–34 | 33,1 | 11,8 | 21,3 |
+| 35–44 | 25,7 | 12,0 | 13,7 |
+| 45–54 | 13,3 | 5,5 | 7,8 |
+| 55–64 | 5,0 | 1,8 | 3,2 |
 | 65+ | 3,6 | 1,4 | 2,2 |
 
-- Hombres 63,6 % · mujeres 36,2 %.
-- España 22,2 % · Latinoamérica 74,9 % de las 36.558 vistas con país.
-- Por país (% de vistas · segundos por vista): México 27,8 % · 25,8 s · España 22,2 % · 17,6 s · Argentina 12,5 % · 21,7 s · Colombia 9,9 % · 29,9 s · Perú 7,8 % · 22,6 s · Chile 6,6 % · 21,3 s · Venezuela 5,0 % · 23,2 s · Estados Unidos 2,9 % · 20,3 s.
+- Hombres 62,9 % · mujeres 37,2 %.
+- España 23,3 % · Latinoamérica 73,9 % de las 42.456 vistas con país.
+- Por país (% de vistas · segundos por vista): México 27,3 % · 25,9 s · España 23,3 % · 17,8 s · Argentina 12,5 % · 21,9 s · Colombia 9,7 % · 29,5 s · Perú 7,8 % · 23,0 s · Chile 6,5 % · 21,8 s · Venezuela 4,9 % · 23,3 s · República Dominicana 2,8 % · 21,6 s.
 
 **Público objetivo (propuesta de Claude, sin confirmar por Nico y Jorge)**: edades 18–24, 25–34; países España, México, Argentina, Colombia.
-- Hoy el **46,1 %** de la audiencia está en esas edades y el **72,6 %** de las vistas viene de esos países.
+- Hoy el **45,8 %** de la audiencia está en esas edades y el **72,8 %** de las vistas viene de esos países.
 
 ### Público por tema
 
 | Tema | Vídeos | Vistas | 18–34 | 35+ | Hombres |
 |---|---|---|---|---|---|
-| Espacio | 3 | 13.477 | 56,9 % | 40,0 % | 62,7 % |
-| Ciencia | 3 | 6.976 | 55,8 % | 42,3 % | 68,2 % |
-| Cotidiano | 2 | 3.209 | 35,9 % | 54,0 % | 57,6 % |
-| Misterio | 2 | 2.860 | 79,1 % | 20,8 % | 74,8 % |
-| Histórico | 2 | 2.091 | 81,2 % | 18,8 % | 100,0 % |
+| Espacio | 3 | 13.976 | 54,8 % | 42,7 % | 63,1 % |
+| Ciencia | 3 | 8.731 | 55,0 % | 43,4 % | 67,2 % |
+| Misterio | 2 | 3.732 | 75,3 % | 24,7 % | 72,3 % |
+| Cotidiano | 2 | 3.298 | 35,8 % | 53,8 % | 57,7 % |
+| Histórico | 3 | 2.884 | 79,9 % | 20,1 % | 100,0 % |
 
