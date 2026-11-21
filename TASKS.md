@@ -9,6 +9,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] Comentarios de YouTube del 02 (LvYkPN5jc6A) y del 03 (kHT4ncQZNQ4) del lote 2026-11-20-tarde, en `metadatos.json` → `comentario`: no se escribieron porque el Mac de Jorge estaba sin conexión a las 10:05 y a las 12:06. Se hacen desde el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf con el Mac encendido — Jorge
 - [ ] **Verificación de YouTube Studio para fijar comentarios** (aviso al fijar: «completa una verificación breve y única en YouTube Studio»; pide pasos de la persona). Después, fijar los comentarios del lote 2026-11-20-tarde — Nico/Jorge
 - [ ] **Vídeos extra 2026-11-19** (`lotes/2026-11-19-extra/`): los tres publicados en TikTok y en YouTube (01 público; 02 programado 21:25; 03 programado 22:25). Faltan los comentarios fijados y las fichas de variables — Nico
 - [ ] **Tendencias en la tarea de la tarde**: la regla ya está en `DECISIONS.md` y `AGENTE.md` §2 (2026-11-20); falta que la tarea programada de las 20:00 la pida en su texto (aprobar el cambio desde el Mac de Jorge). El manual ya lo dice, así que el agente de la tarde la sigue igualmente — Jorge
