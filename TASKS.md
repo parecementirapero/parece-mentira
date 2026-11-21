@@ -9,6 +9,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] **Verificación de YouTube Studio para fijar comentarios** (aviso al fijar: «completa una verificación breve y única en YouTube Studio»; pide pasos de la persona). Después, fijar los comentarios del lote 2026-11-20-tarde — Nico/Jorge
 - [ ] **Vídeos extra 2026-11-19** (`lotes/2026-11-19-extra/`): los tres publicados en TikTok y en YouTube (01 público; 02 programado 21:25; 03 programado 22:25). Faltan los comentarios fijados y las fichas de variables — Nico
 - [ ] **Tendencias en la tarea de la tarde**: la regla ya está en `DECISIONS.md` y `AGENTE.md` §2 (2026-11-20); falta que la tarea programada de las 20:00 la pida en su texto (aprobar el cambio desde el Mac de Jorge). El manual ya lo dice, así que el agente de la tarde la sigue igualmente — Jorge
 - [ ] 01 GTA 6 (lote 2026-11-18-tarde): escribir y fijar el comentario en YouTube y TikTok (el canal ya está verificado: se puede fijar) — Nico/Jorge
@@ -58,7 +59,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
-- [x] Lote 2026-11-20-tarde (16 amaneceres en la Estación Espacial, desde el Mulhacén se ve África, los flamencos nacen grises; el 02 sale de la tendencia «sierra nevada»): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 75/64/55; experimento: gancho de orden en el 03); hecho de madrugada a petición en el chat tras fallar el turno por Mac apagado; esperan el «ok» en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf (correo `1a1fb85d76e09223`) — Agente 20:00 (Jorge) — 2026-11-21 01:33
+- [x] Lote 2026-11-20-tarde **en YouTube** (W9NYUO0-CrU público · LvYkPN5jc6A 21-11 10:00 · kHT4ncQZNQ4 21-11 12:00; comentarios sin fijar porque falta la verificación de Studio). Antes: (16 amaneceres en la Estación Espacial, desde el Mulhacén se ve África, los flamencos nacen grises; el 02 sale de la tendencia «sierra nevada»): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 75/64/55; experimento: gancho de orden en el 03); hecho de madrugada a petición en el chat tras fallar el turno por Mac apagado; esperan el «ok» en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf (correo `1a1fb85d76e09223`) — Agente 20:00 (Jorge) — 2026-11-21 01:33
 - [x] Lote 2026-11-20-manana (hipopótamos no nadan, F1 por el techo, bólido eléctrico de 1899; los tres de tendencias del día): 3 vídeos v1 **en revisión** (método denso, `motor.calidad` sin ❌, 75/69/74; experimento: gancho de contraste de época en el 03); esperan el «ok» en https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR (correo `1a1f9e9c2c12292c`) — Agente 08:00 (Nico) — 2026-11-20 19:15
 - [x] Lote 2026-11-18-tarde publicado entero: 02 y 03 en YouTube (4b3pQCoYOok; ng543OmyPag a las 13:50) y TikTok (7710219650906213654, 7710220007434898710) — Agente 20:00 (Jorge) — 2026-11-20 13:05
 - [x] Lote 2026-11-17-tarde publicado entero (rayo, Sol, cebolla) en YouTube y TikTok — comprobado en YouTube Studio y TikTok Studio el 2026-11-19 desde el Mac de Jorge

@@ -1,6 +1,6 @@
 # Lote 2026-11-20-tarde — estado
 
-**Estado**: 🟡 **en revisión** (v1). Falta el «ok».
+**Estado**: 🟢 **«ok» para YouTube** (v1). TikTok e Instagram: no pedidos.
 **Agente**: Agente 20:00 (Jorge). Chat del lote: https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf
 **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-20-tarde/` (Mac de Jorge): MP4, SRT, manifiestos, `NN-episodio.json`, `NN-locucion.mp3`, `NN-alineacion.json`, `NN-portadas/portada.jpg`, `metadatos.json`.
 
@@ -49,6 +49,14 @@ Archivo: `lotes/tendencias/2026-11-20.md` (lo hizo el turno de mañana). Quedaba
 ## Generadores
 `generadores/`: `NN-guion.txt`, `ilus_1120t.py` (≈40 SVG nuevos: amanecer orbital ×2, ventanilla, campo de fútbol americano, torre de reloj, ciudad de noche, cumbre nevada, vista al sur con el Rif, casquete de la Tierra, personas, montañero, mapa del Estrecho, corona, piedras nevadas, prismáticos, playa, laguna ×2, flamenco ×4, pollito, gambita, algas, zanahoria, colador, nido, microscopio, gota de leche, plumas; reutiliza por ruta la Estación, la órbita, el casco, la montaña, la cara, el despertador y el velocímetro de lotes anteriores) y `gen_0N.py DIR [locucion.mp3 alineacion.json]`.
 
+## Publicación (2026-11-21 01:37)
+Petición en el chat: «súbelos a youtube los 3, uno ahora otro a las 10 de mañana y otro a las 12». Vale como «ok» solo para YouTube. Las horas las eligió la persona y cambian, para este lote, la separación de 1 h de DECISIONS.
+- 01 https://youtube.com/shorts/W9NYUO0-CrU: **público**, portada puesta por API.
+- 02 https://youtube.com/shorts/LvYkPN5jc6A: **programado** para el 2026-11-21 a las 10:00 (Madrid), portada puesta.
+- 03 https://youtube.com/shorts/kHT4ncQZNQ4: **programado** para el 2026-11-21 a las 12:00 (Madrid), portada puesta.
+- Sin duplicados: el script mira las últimas subidas del canal.
+- Comentario del 01 escrito. **No se pudo fijar**: YouTube pide «una verificación breve y única en YouTube Studio» para fijar comentarios, y esa la tiene que hacer una persona. Avisos en este chat a las 10:05 y a las 12:05 para escribir los comentarios del 02 y del 03.
+
 ## Siguiente paso
-«ok» (o «ok 1 y 3») en este chat → AGENTE §8 desde el Mac de Jorge.
+Comentarios del 02 y del 03 (avisos a las 10:05 y 12:05). Para fijarlos, Nico o Jorge tienen que hacer la verificación de YouTube Studio. TikTok, solo si lo piden.
 - Correo de revisión: `1a1fb85d76e09223`.

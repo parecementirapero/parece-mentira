@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-21 01:38 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — lote 2026-11-20-tarde en YouTube
+**Petición**: «súbelos a youtube los 3, uno ahora otro a las 10 de mañana y otro a las 12». Vale como «ok» solo para YouTube, con las horas que eligió la persona (no la separación de 1 h de DECISIONS, solo para este lote).
+**Hecho**: `subir_youtube.py` desde el Mac de Jorge (scripts iguales a los del repo): 01 https://youtube.com/shorts/W9NYUO0-CrU público; 02 https://youtube.com/shorts/LvYkPN5jc6A programado el 21-11 a las 10:00; 03 https://youtube.com/shorts/kHT4ncQZNQ4 programado el 21-11 a las 12:00. Portadas puestas por API. `etiquetas.json`, `publicado.json` y `ficha publicar` al día. Comentario del 01 escrito.
+**Bloqueo**: fijar comentarios pide «una verificación breve y única en YouTube Studio» (TASKS); no se hizo porque la tiene que hacer una persona.
+**Pendiente**: comentarios del 02 y del 03 (avisos en el chat a las 10:05 y 12:05); TikTok no se pidió.
+
 ## 2026-11-21 01:33 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — lote 2026-11-20-tarde v1 en revisión
 **Qué pasó**: el turno de las 20:00 no pudo hacerse (Mac fuera del puente a las 22:47). A la 01:03 una persona escribió en el chat «créame los vídeos que no has podido crear hoy en mi lote». El Mac ya respondía, así que se hizo el lote entero.
 **Hecho**: 01 «16 amaneceres al día» (Estación Espacial; Espacio, cadena de datos), 02 «Desde aquí se ve África» (Mulhacén; tendencia «sierra nevada»), 03 «Los flamencos nacen grises» (**experimento: gancho de orden**). ≥ 2 fuentes por dato (`guiones.md`, con los datos descartados), voz oficial por API desde el Mac (créditos 21.876 → 20.837), `ilus_1120t.py` (≈40 SVG nuevos + piezas de lotes anteriores cargadas por ruta), montaje denso (36/35/31 planos), render en la nube, portadas elegidas, fichas de variables, MP4 en el chat y en el Mac.

@@ -1,0 +1,29 @@
+{
+ "01": {
+  "youtube": {
+   "id": "W9NYUO0-CrU",
+   "url": "https://youtube.com/shorts/W9NYUO0-CrU",
+   "estado": "público",
+   "publicaEn": null,
+   "portada": "puesta"
+  }
+ },
+ "02": {
+  "youtube": {
+   "id": "LvYkPN5jc6A",
+   "url": "https://youtube.com/shorts/LvYkPN5jc6A",
+   "estado": "programado",
+   "publicaEn": "2026-11-21T10:00:00+01:00",
+   "portada": "puesta"
+  }
+ },
+ "03": {
+  "youtube": {
+   "id": "kHT4ncQZNQ4",
+   "url": "https://youtube.com/shorts/kHT4ncQZNQ4",
+   "estado": "programado",
+   "publicaEn": "2026-11-21T12:00:00+01:00",
+   "portada": "puesta"
+  }
+ }
+}
