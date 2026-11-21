@@ -57,6 +57,8 @@ Petición en el chat: «súbelos a youtube los 3, uno ahora otro a las 10 de ma�
 - Sin duplicados: el script mira las últimas subidas del canal.
 - Comentario del 01 escrito. **No se pudo fijar**: YouTube pide «una verificación breve y única en YouTube Studio» para fijar comentarios, y esa la tiene que hacer una persona. Avisos en este chat a las 10:05 y a las 12:05 para escribir los comentarios del 02 y del 03.
 
+- 2026-11-21 10:05: aviso del 02. **El Mac de Jorge no está conectado** (dos intentos: «not connected to the bridge»), así que el comentario del 02 queda sin escribir. Se escribe cuando el Mac vuelva: escribiendo en este chat o en el aviso de las 12:05 junto con el del 03.
+
 ## Siguiente paso
 Comentarios del 02 y del 03 (avisos a las 10:05 y 12:05). Para fijarlos, Nico o Jorge tienen que hacer la verificación de YouTube Studio. TikTok, solo si lo piden.
 - Correo de revisión: `1a1fb85d76e09223`.
