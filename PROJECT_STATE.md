@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-20 22:50 — Agente 20:00 (Jorge) (lote 2026-11-20-tarde sin hacer: Mac de Jorge fuera del puente)_
+_Última actualización: 2026-11-21 01:33 — Agente 20:00 (Jorge) (lote 2026-11-20-tarde en revisión)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,7 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
-- Sin hacer: lote **2026-11-20-tarde** — ordenador no disponible (Mac de Jorge fuera del puente a las 22:47). Se retoma en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf.
+- En revisión: lote **2026-11-20-tarde** v1 (16 amaneceres en la Estación Espacial, desde el Mulhacén se ve África, los flamencos nacen grises; 56–58 s; experimento: gancho de orden en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf y en `Documents/Parece Mentira/lotes/2026-11-20-tarde/` (Mac de Jorge). ElevenLabs: quedan 20.837 caracteres.
 - En revisión: lote **2026-11-20-manana** v1 (los hipopótamos no saben nadar, un F1 podría ir por el techo, el primer coche en pasar de 100 km/h era eléctrico; 56–58 s; los tres salen de las tendencias del día; experimento: gancho de contraste de época en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR y en `Documents/Parece Mentira/lotes/2026-11-20-manana/` (Mac de Nico). ElevenLabs: quedan ≈21.400 caracteres.
 - Tendencias del día: `lotes/tendencias/AAAA-MM-DD.md` (desde el 2026-11-20; la escribe el turno de mañana y la lee el de tarde). Regla en `DECISIONS.md` y `AGENTE.md` §2.
 - Pendiente de voz: lote **2026-11-19-tarde** (atardecer azul en Marte, 300 huesos al nacer, las gotas no son lágrimas; experimento: gancho POV en el 01). Guiones, metadatos y montajes con tiempos provisionales en `lotes/2026-11-19-tarde/`; falta voz → render → «ok» en https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq. ElevenLabs: quedan 24.584 caracteres.

@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-21 01:33 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — lote 2026-11-20-tarde v1 en revisión
+**Qué pasó**: el turno de las 20:00 no pudo hacerse (Mac fuera del puente a las 22:47). A la 01:03 una persona escribió en el chat «créame los vídeos que no has podido crear hoy en mi lote». El Mac ya respondía, así que se hizo el lote entero.
+**Hecho**: 01 «16 amaneceres al día» (Estación Espacial; Espacio, cadena de datos), 02 «Desde aquí se ve África» (Mulhacén; tendencia «sierra nevada»), 03 «Los flamencos nacen grises» (**experimento: gancho de orden**). ≥ 2 fuentes por dato (`guiones.md`, con los datos descartados), voz oficial por API desde el Mac (créditos 21.876 → 20.837), `ilus_1120t.py` (≈40 SVG nuevos + piezas de lotes anteriores cargadas por ruta), montaje denso (36/35/31 planos), render en la nube, portadas elegidas, fichas de variables, MP4 en el chat y en el Mac.
+**Pruebas**: `motor.guion` sin ❌; `construir` sin ⚠; ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; `motor.calidad --mp4` 75/64/55 sin ❌ (⚠ de densidad justificados en `estado.md`; los de contraste se arreglaron con cápsula y se volvió a renderizar); hojas de fotogramas revisadas y corregidas; `ficha comprobar` 0 problemas. No se tocó `motor/`.
+**Correo**: `1a1fb85d76e09223`.
+**No hecho**: Studio (§1.8) y respuestas a comentarios (§8b). Nada publicado.
+**Aprendido**: `ilus_m.py` del 16-11 escribe en su propia carpeta `svg/` al importarlo; por eso no se reutiliza su mar. Cuando las portadas automáticas no sacan al sujeto, se puede llamar a `motor.portadas.generar()` con fotogramas elegidos.
+**Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf → AGENTE §8 desde el Mac de Jorge.
+
 ## 2026-11-20 22:50 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-20-tarde: ordenador no disponible
 **Qué pasó**: la tarea de las 19:52 se disparó a las 22:47. El Mac de Jorge no estaba conectado al puente (`device_list_dir` sin respuesta en 60 s; `get_device_info` y reintento: «not connected to the bridge»).
 **Hecho**: según AGENTE §1.6, lote en «Pendiente» con nota, `lotes/2026-11-20-tarde/estado.md`, este registro y correo `[AVISO]` `1a1faef9e1379be2`. Nada producido, gastado ni publicado (sin el Mac no hay clave de ElevenLabs).

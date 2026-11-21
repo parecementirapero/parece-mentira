@@ -68,6 +68,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - Los hipopótamos no saben nadar ni flotar (fondo a saltitos, ≈5 min sin respirar, duermen en el agua, «sudor rojo» = protector solar, despegan las cuatro patas al correr, RVC 2024) — lote 2026-11-20-manana (tendencia «fiona hipopótamo»)
 - Un Fórmula 1 podría ir por el techo (alerones = alas al revés, carga ∝ velocidad², ≈200 km/h carga = peso, túnel de 4–5 km) — lote 2026-11-20-manana (tendencia «gran premio de las vegas»)
 - El primer coche en pasar de 100 km/h era eléctrico (1899, Jenatzy, torpedo, 105 km/h; ≈1/3 de los coches de EE. UU. en 1900; 60 taxis en Nueva York; gasolina barata, arranque eléctrico 1912, casi desaparecidos hacia 1935) — lote 2026-11-20-manana (tendencia «tesla argentina»)
+- La Estación Espacial ve dieciséis amaneceres al día (≈420 km, ≈28.000 km/h, ≈8 km/s, vuelta en ≈90 min, amanecer o atardecer cada 45 min, ida y vuelta a la Luna en un día, hora de Greenwich, ≈109 m como un campo de fútbol americano, habitada desde noviembre de 2000) — lote 2026-11-20-tarde
+- Desde el Mulhacén se ve África (3.479 m, techo de la península, Rif en días claros, horizonte ≈3,57·√h: 1,70 m → ≈5 km, cima → >200 km, se suman los dos horizontes, Muley Hacén y la leyenda de su tumba) — lote 2026-11-20-tarde (tendencia «sierra nevada»)
+- Los flamencos nacen grises (carotenoides de algas y artemias, cabeza del revés y pico que filtra, ≈3 años para el rosa, leche de buche roja de los dos padres, los padres se quedan casi blancos y recuperan el rosa) — lote 2026-11-20-tarde
 
 ## Continuaciones prometidas
 
