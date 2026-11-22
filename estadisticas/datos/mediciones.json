@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-21T09:52+01:00",
+ "generado": "2026-11-22T09:12+01:00",
  "edades_h": [
   24,
   48,
@@ -58,16 +58,16 @@
     "ultima": {
      "vistas": 625,
      "edad_h": {
-      "vistas": 135.4,
+      "vistas": 159.4,
       "medio_s": 32.6,
       "completo_pct": 32.6,
       "sigue_3s": 32.6,
       "vistas_studio": 32.6,
       "curva": 32.6,
       "duracion": 32.6,
-      "likes": 135.4,
-      "comentarios": 135.4,
-      "compartidos": 135.4
+      "likes": 159.4,
+      "comentarios": 159.4,
+      "compartidos": 159.4
      },
      "medio_s": 19.75,
      "completo_pct": 21.7,
@@ -132,20 +132,20 @@
      "comentarios": 0
     },
     "ultima": {
-     "vistas": 13647,
+     "vistas": 13661,
      "edad_h": {
-      "vistas": 135.5,
+      "vistas": 159.6,
       "se_quedan": 77.0,
       "seg_por_vista": 77.0,
       "vistas_studio": 77.0,
-      "likes": 135.5,
-      "comentarios": 135.5,
-      "compartidos": 135.5,
-      "subs": 135.5,
-      "pct_visto": 135.5,
-      "seg_por_vista_api": 135.5,
-      "vistas_enganchadas": 135.5,
-      "retencion_3s": 135.5
+      "likes": 159.6,
+      "comentarios": 159.6,
+      "compartidos": 159.6,
+      "subs": 159.6,
+      "pct_visto": 159.6,
+      "seg_por_vista_api": 159.6,
+      "vistas_enganchadas": 159.6,
+      "retencion_3s": 159.6
      },
      "se_quedan": 81.4,
      "seg_por_vista": 28.9,
@@ -154,10 +154,10 @@
      "comentarios": 0,
      "compartidos": 0,
      "subs": 9,
-     "pct_visto": 92.9,
+     "pct_visto": 92.8,
      "seg_por_vista_api": 44,
-     "vistas_enganchadas": 6786,
-     "retencion_3s": 132.7
+     "vistas_enganchadas": 6831,
+     "retencion_3s": 132.5
     },
     "48": {
      "vistas": 11122,
@@ -208,16 +208,16 @@
      "compartidos": 6
     },
     "ultima": {
-     "vistas": 440,
+     "vistas": 441,
      "edad_h": {
-      "vistas": 129.2,
+      "vistas": 153.2,
       "medio_s": 26.3,
       "completo_pct": 26.3,
       "vistas_studio": 26.3,
       "duracion": 26.3,
-      "likes": 129.2,
-      "comentarios": 129.2,
-      "compartidos": 129.2
+      "likes": 153.2,
+      "comentarios": 153.2,
+      "compartidos": 153.2
      },
      "medio_s": 16.52,
      "completo_pct": 13.0,
@@ -262,18 +262,18 @@
     "ultima": {
      "vistas": 1433,
      "edad_h": {
-      "vistas": 129.4,
+      "vistas": 153.4,
       "se_quedan": 70.8,
       "seg_por_vista": 70.8,
       "vistas_studio": 70.8,
-      "likes": 129.4,
-      "comentarios": 129.4,
-      "compartidos": 129.4,
-      "subs": 129.4,
-      "pct_visto": 129.4,
-      "seg_por_vista_api": 129.4,
-      "vistas_enganchadas": 129.4,
-      "retencion_3s": 129.4
+      "likes": 153.4,
+      "comentarios": 153.4,
+      "compartidos": 153.4,
+      "subs": 153.4,
+      "pct_visto": 153.4,
+      "seg_por_vista_api": 153.4,
+      "vistas_enganchadas": 153.4,
+      "retencion_3s": 153.4
      },
      "se_quedan": 60.1,
      "seg_por_vista": 17.7,
@@ -284,7 +284,7 @@
      "subs": 2,
      "pct_visto": 54.2,
      "seg_por_vista_api": 28,
-     "vistas_enganchadas": 826,
+     "vistas_enganchadas": 825,
      "retencion_3s": 115.0
     },
     "48": {
@@ -358,18 +358,18 @@
      "compartidos": 0
     },
     "ultima": {
-     "vistas": 415,
+     "vistas": 416,
      "edad_h": {
-      "vistas": 129.1,
+      "vistas": 153.2,
       "medio_s": 26.3,
       "completo_pct": 26.3,
       "sigue_3s": 26.3,
       "vistas_studio": 26.3,
       "curva": 26.3,
       "duracion": 26.3,
-      "likes": 129.1,
-      "comentarios": 129.1,
-      "compartidos": 129.1
+      "likes": 153.2,
+      "comentarios": 153.2,
+      "compartidos": 153.2
      },
      "medio_s": 13.66,
      "completo_pct": 16.1,
@@ -389,7 +389,7 @@
       "46": 11
      },
      "duracion": 46,
-     "likes": 22,
+     "likes": 23,
      "comentarios": 0,
      "compartidos": 0
     },
@@ -428,18 +428,18 @@
     "ultima": {
      "vistas": 1292,
      "edad_h": {
-      "vistas": 129.4,
+      "vistas": 153.4,
       "se_quedan": 70.8,
       "seg_por_vista": 70.8,
       "vistas_studio": 70.8,
-      "likes": 129.4,
-      "comentarios": 129.4,
-      "compartidos": 129.4,
-      "subs": 129.4,
-      "pct_visto": 129.4,
-      "seg_por_vista_api": 129.4,
-      "vistas_enganchadas": 129.4,
-      "retencion_3s": 129.4
+      "likes": 153.4,
+      "comentarios": 153.4,
+      "compartidos": 153.4,
+      "subs": 153.4,
+      "pct_visto": 153.4,
+      "seg_por_vista_api": 153.4,
+      "vistas_enganchadas": 153.4,
+      "retencion_3s": 153.4
      },
      "se_quedan": 52.0,
      "seg_por_vista": 16.8,
@@ -448,10 +448,10 @@
      "comentarios": 0,
      "compartidos": 0,
      "subs": 0,
-     "pct_visto": 61.2,
+     "pct_visto": 61.1,
      "seg_por_vista_api": 28,
-     "vistas_enganchadas": 624,
-     "retencion_3s": 115.1
+     "vistas_enganchadas": 625,
+     "retencion_3s": 115.0
     },
     "48": {
      "vistas": 1220,
@@ -494,10 +494,10 @@
       "vistas_studio": 49.7,
       "curva": 5.3,
       "duracion": 5.3,
-      "vistas": 108.2,
-      "likes": 108.2,
-      "comentarios": 108.2,
-      "compartidos": 108.2
+      "vistas": 132.2,
+      "likes": 132.2,
+      "comentarios": 132.2,
+      "compartidos": 132.2
      },
      "completo_pct": 21.6,
      "sigue_3s": 60,
@@ -529,7 +529,7 @@
       "44": 21
      },
      "duracion": 54,
-     "vistas": 292,
+     "vistas": 293,
      "likes": 10,
      "comentarios": 0,
      "compartidos": 0
@@ -574,26 +574,26 @@
       "se_quedan": 49.7,
       "seg_por_vista": 49.7,
       "vistas_studio": 49.7,
-      "vistas": 108.3,
-      "likes": 108.3,
-      "comentarios": 108.3,
-      "compartidos": 108.3,
-      "subs": 108.3,
-      "pct_visto": 108.3,
-      "seg_por_vista_api": 108.3,
-      "vistas_enganchadas": 108.3,
-      "retencion_3s": 108.3
+      "vistas": 132.4,
+      "likes": 132.4,
+      "comentarios": 132.4,
+      "compartidos": 132.4,
+      "subs": 132.4,
+      "pct_visto": 132.4,
+      "seg_por_vista_api": 132.4,
+      "vistas_enganchadas": 132.4,
+      "retencion_3s": 132.4
      },
      "seg_por_vista": 29.4,
      "vistas_studio": 6700,
-     "vistas": 7062,
+     "vistas": 7067,
      "likes": 70,
      "comentarios": 0,
      "compartidos": 1,
      "subs": 3,
-     "pct_visto": 76.9,
+     "pct_visto": 76.8,
      "seg_por_vista_api": 42,
-     "vistas_enganchadas": 3771,
+     "vistas_enganchadas": 3797,
      "retencion_3s": 129.3
     },
     "24": {
@@ -647,10 +647,10 @@
       "completo_pct": 4.0,
       "vistas_studio": 4.0,
       "duracion": 4.0,
-      "vistas": 106.9,
-      "likes": 106.9,
-      "comentarios": 106.9,
-      "compartidos": 106.9
+      "vistas": 130.9,
+      "likes": 130.9,
+      "comentarios": 130.9,
+      "compartidos": 130.9
      },
      "completo_pct": 18.6,
      "vistas_studio": 263,
@@ -694,26 +694,26 @@
       "se_quedan": 48.4,
       "seg_por_vista": 48.4,
       "vistas_studio": 48.4,
-      "vistas": 107.0,
-      "likes": 107.0,
-      "comentarios": 107.0,
-      "compartidos": 107.0,
-      "subs": 107.0,
-      "pct_visto": 107.0,
-      "seg_por_vista_api": 107.0,
-      "vistas_enganchadas": 107.0,
-      "retencion_3s": 107.0
+      "vistas": 131.0,
+      "likes": 131.0,
+      "comentarios": 131.0,
+      "compartidos": 131.0,
+      "subs": 131.0,
+      "pct_visto": 131.0,
+      "seg_por_vista_api": 131.0,
+      "vistas_enganchadas": 131.0,
+      "retencion_3s": 131.0
      },
      "seg_por_vista": 23.6,
      "vistas_studio": 2200,
-     "vistas": 2289,
+     "vistas": 2290,
      "likes": 36,
      "comentarios": 1,
      "compartidos": 1,
      "subs": 4,
-     "pct_visto": 65.6,
+     "pct_visto": 65.5,
      "seg_por_vista_api": 38,
-     "vistas_enganchadas": 1268,
+     "vistas_enganchadas": 1272,
      "retencion_3s": 116.2
     },
     "24": {
@@ -768,10 +768,10 @@
       "vistas_studio": 4.0,
       "curva": 4.0,
       "duracion": 4.0,
-      "vistas": 106.9,
-      "likes": 106.9,
-      "comentarios": 106.9,
-      "compartidos": 106.9
+      "vistas": 130.9,
+      "likes": 130.9,
+      "comentarios": 130.9,
+      "compartidos": 130.9
      },
      "completo_pct": 6.1,
      "vistas_studio": 229,
@@ -779,7 +779,7 @@
       "16": 14
      },
      "duracion": 55,
-     "vistas": 241,
+     "vistas": 242,
      "likes": 8,
      "comentarios": 0,
      "compartidos": 0
@@ -818,15 +818,15 @@
       "se_quedan": 47.3,
       "seg_por_vista": 47.3,
       "vistas_studio": 47.3,
-      "vistas": 105.9,
-      "likes": 105.9,
-      "comentarios": 105.9,
-      "compartidos": 105.9,
-      "subs": 105.9,
-      "pct_visto": 105.9,
-      "seg_por_vista_api": 105.9,
-      "vistas_enganchadas": 105.9,
-      "retencion_3s": 105.9
+      "vistas": 130.0,
+      "likes": 130.0,
+      "comentarios": 130.0,
+      "compartidos": 130.0,
+      "subs": 130.0,
+      "pct_visto": 130.0,
+      "seg_por_vista_api": 130.0,
+      "vistas_enganchadas": 130.0,
+      "retencion_3s": 130.0
      },
      "seg_por_vista": 19.8,
      "vistas_studio": 1400,
@@ -835,10 +835,10 @@
      "comentarios": 3,
      "compartidos": 0,
      "subs": 7,
-     "pct_visto": 59.4,
+     "pct_visto": 59.5,
      "seg_por_vista_api": 32,
-     "vistas_enganchadas": 681,
-     "retencion_3s": 120.4
+     "vistas_enganchadas": 683,
+     "retencion_3s": 120.3
     },
     "24": {
      "vistas": 1470,
@@ -887,10 +887,10 @@
     "ultima": {
      "vistas": 5,
      "edad_h": {
-      "vistas": 106.8,
-      "likes": 106.8,
-      "comentarios": 106.8,
-      "compartidos": 106.8
+      "vistas": 130.9,
+      "likes": 130.9,
+      "comentarios": 130.9,
+      "compartidos": 130.9
      },
      "likes": 0,
      "comentarios": 0,
@@ -930,27 +930,27 @@
       "se_quedan": 46.3,
       "seg_por_vista": 46.3,
       "vistas_studio": 46.3,
-      "vistas": 104.9,
-      "likes": 104.9,
-      "comentarios": 104.9,
-      "compartidos": 104.9,
-      "subs": 104.9,
-      "pct_visto": 104.9,
-      "seg_por_vista_api": 104.9,
-      "vistas_enganchadas": 104.9,
-      "retencion_3s": 104.9
+      "vistas": 129.0,
+      "likes": 129.0,
+      "comentarios": 129.0,
+      "compartidos": 129.0,
+      "subs": 129.0,
+      "pct_visto": 129.0,
+      "seg_por_vista_api": 129.0,
+      "vistas_enganchadas": 129.0,
+      "retencion_3s": 129.0
      },
      "seg_por_vista": 11.5,
      "vistas_studio": 1100,
-     "vistas": 1208,
+     "vistas": 1206,
      "likes": 12,
      "comentarios": 1,
      "compartidos": 0,
      "subs": 2,
-     "pct_visto": 44.3,
-     "seg_por_vista_api": 23,
-     "vistas_enganchadas": 444,
-     "retencion_3s": 108.6
+     "pct_visto": 43.9,
+     "seg_por_vista_api": 22,
+     "vistas_enganchadas": 452,
+     "retencion_3s": 108.4
     },
     "24": {
      "vistas": 1163,
@@ -997,20 +997,20 @@
     "id": "bja3TleMy94",
     "publicado": "2026-11-17T09:04+01:00",
     "ultima": {
-     "vistas": 1580,
+     "vistas": 1588,
      "edad_h": {
-      "vistas": 96.1,
+      "vistas": 120.1,
       "se_quedan": 37.5,
       "seg_por_vista": 37.5,
       "vistas_studio": 37.5,
-      "likes": 96.1,
-      "comentarios": 96.1,
-      "compartidos": 96.1,
-      "subs": 96.1,
-      "pct_visto": 96.1,
-      "seg_por_vista_api": 96.1,
-      "vistas_enganchadas": 96.1,
-      "retencion_3s": 96.1
+      "likes": 120.1,
+      "comentarios": 120.1,
+      "compartidos": 120.1,
+      "subs": 120.1,
+      "pct_visto": 120.1,
+      "seg_por_vista_api": 120.1,
+      "vistas_enganchadas": 120.1,
+      "retencion_3s": 120.1
      },
      "se_quedan": 64.8,
      "seg_por_vista": 23.9,
@@ -1019,10 +1019,10 @@
      "comentarios": 0,
      "compartidos": 0,
      "subs": 2,
-     "pct_visto": 60.7,
+     "pct_visto": 60.4,
      "seg_por_vista_api": 35,
-     "vistas_enganchadas": 872,
-     "retencion_3s": 114.9
+     "vistas_enganchadas": 902,
+     "retencion_3s": 114.6
     },
     "24": {
      "vistas": 1387,
@@ -1055,15 +1055,15 @@
     "id": "7709083847450807574",
     "publicado": "2026-11-17T11:22+01:00",
     "ultima": {
-     "vistas": 242,
+     "vistas": 243,
      "edad_h": {
-      "vistas": 93.8,
+      "vistas": 117.8,
       "medio_s": 35.3,
       "completo_pct": 35.3,
       "vistas_studio": 35.3,
-      "likes": 93.8,
-      "comentarios": 93.8,
-      "compartidos": 93.8
+      "likes": 117.8,
+      "comentarios": 117.8,
+      "compartidos": 117.8
      },
      "medio_s": 12.25,
      "completo_pct": 5.4,
@@ -1111,13 +1111,13 @@
     "ultima": {
      "vistas": 233,
      "edad_h": {
-      "vistas": 93.8,
+      "vistas": 117.8,
       "medio_s": 35.3,
       "completo_pct": 35.3,
       "vistas_studio": 35.3,
-      "likes": 93.8,
-      "comentarios": 93.8,
-      "compartidos": 93.8
+      "likes": 117.8,
+      "comentarios": 117.8,
+      "compartidos": 117.8
      },
      "medio_s": 14.37,
      "completo_pct": 8.5,
@@ -1161,20 +1161,20 @@
     "id": "aA9ji1Y1EPA",
     "publicado": "2026-11-17T10:05+01:00",
     "ultima": {
-     "vistas": 2304,
+     "vistas": 2305,
      "edad_h": {
-      "vistas": 95.1,
+      "vistas": 119.1,
       "se_quedan": 36.5,
       "seg_por_vista": 36.5,
       "vistas_studio": 36.5,
-      "likes": 95.1,
-      "comentarios": 95.1,
-      "compartidos": 95.1,
-      "subs": 95.1,
-      "pct_visto": 95.1,
-      "seg_por_vista_api": 95.1,
-      "vistas_enganchadas": 95.1,
-      "retencion_3s": 95.1
+      "likes": 119.1,
+      "comentarios": 119.1,
+      "compartidos": 119.1,
+      "subs": 119.1,
+      "pct_visto": 119.1,
+      "seg_por_vista_api": 119.1,
+      "vistas_enganchadas": 119.1,
+      "retencion_3s": 119.1
      },
      "se_quedan": 67.4,
      "seg_por_vista": 26.7,
@@ -1183,9 +1183,9 @@
      "comentarios": 0,
      "compartidos": 0,
      "subs": 2,
-     "pct_visto": 70.8,
+     "pct_visto": 70.7,
      "seg_por_vista_api": 39,
-     "vistas_enganchadas": 1256,
+     "vistas_enganchadas": 1263,
      "retencion_3s": 120.8
     },
     "24": {
@@ -1235,13 +1235,13 @@
     "ultima": {
      "vistas": 59,
      "edad_h": {
-      "vistas": 93.8,
+      "vistas": 117.8,
       "medio_s": 35.2,
       "completo_pct": 35.2,
       "vistas_studio": 35.2,
-      "likes": 93.8,
-      "comentarios": 93.8,
-      "compartidos": 93.8
+      "likes": 117.8,
+      "comentarios": 117.8,
+      "compartidos": 117.8
      },
      "medio_s": 6.41,
      "completo_pct": 1.5,
@@ -1285,20 +1285,20 @@
     "id": "0LBq1SkOWz4",
     "publicado": "2026-11-17T11:05+01:00",
     "ultima": {
-     "vistas": 3360,
+     "vistas": 3362,
      "edad_h": {
-      "vistas": 94.1,
+      "vistas": 118.1,
       "se_quedan": 35.5,
       "seg_por_vista": 35.5,
       "vistas_studio": 35.5,
-      "likes": 94.1,
-      "comentarios": 94.1,
-      "compartidos": 94.1,
-      "subs": 94.1,
-      "pct_visto": 94.1,
-      "seg_por_vista_api": 94.1,
-      "vistas_enganchadas": 94.1,
-      "retencion_3s": 94.1
+      "likes": 118.1,
+      "comentarios": 118.1,
+      "compartidos": 118.1,
+      "subs": 118.1,
+      "pct_visto": 118.1,
+      "seg_por_vista_api": 118.1,
+      "vistas_enganchadas": 118.1,
+      "retencion_3s": 118.1
      },
      "se_quedan": 71.3,
      "seg_por_vista": 24.9,
@@ -1307,9 +1307,9 @@
      "comentarios": 1,
      "compartidos": 3,
      "subs": 0,
-     "pct_visto": 63.0,
+     "pct_visto": 62.7,
      "seg_por_vista_api": 37,
-     "vistas_enganchadas": 1899,
+     "vistas_enganchadas": 1958,
      "retencion_3s": 118.1
     },
     "24": {
@@ -1357,32 +1357,32 @@
     "id": "5pSKNws_e-s",
     "publicado": "2026-11-18T08:43+01:00",
     "ultima": {
-     "vistas": 971,
+     "vistas": 1001,
      "edad_h": {
-      "vistas": 72.5,
+      "vistas": 96.5,
       "se_quedan": 13.9,
       "seg_por_vista": 13.9,
       "vistas_studio": 13.9,
-      "likes": 72.5,
-      "comentarios": 72.5,
-      "compartidos": 72.5,
-      "subs": 72.5,
-      "pct_visto": 72.5,
-      "seg_por_vista_api": 72.5,
-      "vistas_enganchadas": 72.5,
-      "retencion_3s": 72.5
+      "likes": 96.5,
+      "comentarios": 96.5,
+      "compartidos": 96.5,
+      "subs": 96.5,
+      "pct_visto": 96.5,
+      "seg_por_vista_api": 96.5,
+      "vistas_enganchadas": 96.5,
+      "retencion_3s": 96.5
      },
      "se_quedan": 64.3,
      "seg_por_vista": 21.6,
      "vistas_studio": 316,
-     "likes": 19,
+     "likes": 20,
      "comentarios": 1,
      "compartidos": 0,
-     "subs": 0,
-     "pct_visto": 56.3,
-     "seg_por_vista_api": 33,
-     "vistas_enganchadas": 377,
-     "retencion_3s": 115.1
+     "subs": 1,
+     "pct_visto": 63.6,
+     "seg_por_vista_api": 38,
+     "vistas_enganchadas": 517,
+     "retencion_3s": 122.9
     },
     "24": {
      "vistas": 611,
@@ -1423,10 +1423,10 @@
     "ultima": {
      "vistas": 247,
      "edad_h": {
-      "vistas": 63.9,
-      "likes": 63.9,
-      "comentarios": 63.9,
-      "compartidos": 63.9
+      "vistas": 88.0,
+      "likes": 88.0,
+      "comentarios": 88.0,
+      "compartidos": 88.0
      },
      "likes": 7,
      "comentarios": 1,
@@ -1479,32 +1479,32 @@
     "id": "dOdQj9QyoBI",
     "publicado": "2026-11-17T23:00+01:00",
     "ultima": {
-     "vistas": 1867,
+     "vistas": 1905,
      "edad_h": {
-      "vistas": 82.2,
+      "vistas": 106.2,
       "se_quedan": 23.6,
       "seg_por_vista": 23.6,
       "vistas_studio": 23.6,
-      "likes": 82.2,
-      "comentarios": 82.2,
-      "compartidos": 82.2,
-      "subs": 82.2,
-      "pct_visto": 82.2,
-      "seg_por_vista_api": 82.2,
-      "vistas_enganchadas": 82.2,
-      "retencion_3s": 82.2
+      "likes": 106.2,
+      "comentarios": 106.2,
+      "compartidos": 106.2,
+      "subs": 106.2,
+      "pct_visto": 106.2,
+      "seg_por_vista_api": 106.2,
+      "vistas_enganchadas": 106.2,
+      "retencion_3s": 106.2
      },
      "se_quedan": 56.9,
      "seg_por_vista": 18.0,
      "vistas_studio": 1600,
-     "likes": 40,
+     "likes": 41,
      "comentarios": 2,
      "compartidos": 2,
      "subs": 5,
-     "pct_visto": 49.5,
+     "pct_visto": 50.1,
      "seg_por_vista_api": 27,
-     "vistas_enganchadas": 949,
-     "retencion_3s": 110.3
+     "vistas_enganchadas": 972,
+     "retencion_3s": 110.5
     },
     "24": {
      "vistas": 1607,
@@ -1545,10 +1545,10 @@
     "ultima": {
      "vistas": 455,
      "edad_h": {
-      "vistas": 66.2,
-      "likes": 66.2,
-      "comentarios": 66.2,
-      "compartidos": 66.2
+      "vistas": 90.3,
+      "likes": 90.3,
+      "comentarios": 90.3,
+      "compartidos": 90.3
      },
      "likes": 30,
      "comentarios": 0,
@@ -1587,10 +1587,10 @@
     "ultima": {
      "vistas": 272,
      "edad_h": {
-      "vistas": 66.2,
-      "likes": 66.2,
-      "comentarios": 66.2,
-      "compartidos": 66.2
+      "vistas": 90.2,
+      "likes": 90.2,
+      "comentarios": 90.2,
+      "compartidos": 90.2
      },
      "likes": 7,
      "comentarios": 0,
@@ -1627,12 +1627,12 @@
     "id": "7709510869801209111",
     "publicado": "2026-11-18T14:59+01:00",
     "ultima": {
-     "vistas": 527,
+     "vistas": 529,
      "edad_h": {
-      "vistas": 66.2,
-      "likes": 66.2,
-      "comentarios": 66.2,
-      "compartidos": 66.2
+      "vistas": 90.2,
+      "likes": 90.2,
+      "comentarios": 90.2,
+      "compartidos": 90.2
      },
      "likes": 46,
      "comentarios": 0,
@@ -1672,27 +1672,27 @@
       "se_quedan": 7.8,
       "seg_por_vista": 7.8,
       "vistas_studio": 7.8,
-      "vistas": 66.4,
-      "likes": 66.4,
-      "comentarios": 66.4,
-      "compartidos": 66.4,
-      "subs": 66.4,
-      "pct_visto": 66.4,
-      "seg_por_vista_api": 66.4,
-      "vistas_enganchadas": 66.4,
-      "retencion_3s": 66.4
+      "vistas": 90.4,
+      "likes": 90.4,
+      "comentarios": 90.4,
+      "compartidos": 90.4,
+      "subs": 90.4,
+      "pct_visto": 90.4,
+      "seg_por_vista_api": 90.4,
+      "vistas_enganchadas": 90.4,
+      "retencion_3s": 90.4
      },
      "seg_por_vista": 17.0,
      "vistas_studio": 1100,
-     "vistas": 1324,
+     "vistas": 1325,
      "likes": 17,
      "comentarios": 0,
      "compartidos": 0,
      "subs": 1,
-     "pct_visto": 48.4,
+     "pct_visto": 48.7,
      "seg_por_vista_api": 27,
-     "vistas_enganchadas": 695,
-     "retencion_3s": 110.1
+     "vistas_enganchadas": 732,
+     "retencion_3s": 110.5
     },
     "24": {
      "vistas": 1262,
@@ -1735,10 +1735,10 @@
     "ultima": {
      "vistas": 244,
      "edad_h": {
-      "vistas": 63.9,
-      "likes": 63.9,
-      "comentarios": 63.9,
-      "compartidos": 63.9
+      "vistas": 87.9,
+      "likes": 87.9,
+      "comentarios": 87.9,
+      "compartidos": 87.9
      },
      "likes": 12,
      "comentarios": 1,
@@ -1777,14 +1777,14 @@
      "edad_h": {
       "se_quedan": 12.8,
       "vistas_studio": 12.8,
-      "vistas": 71.3,
-      "likes": 71.3,
-      "comentarios": 71.3,
-      "compartidos": 71.3,
-      "subs": 71.3,
-      "pct_visto": 71.3,
-      "seg_por_vista_api": 71.3,
-      "vistas_enganchadas": 71.3
+      "vistas": 95.4,
+      "likes": 95.4,
+      "comentarios": 95.4,
+      "compartidos": 95.4,
+      "subs": 95.4,
+      "pct_visto": 95.4,
+      "seg_por_vista_api": 95.4,
+      "vistas_enganchadas": 95.4
      },
      "vistas_studio": 7,
      "vistas": 10,
@@ -1835,10 +1835,10 @@
     "ultima": {
      "vistas": 221,
      "edad_h": {
-      "vistas": 63.8,
-      "likes": 63.8,
-      "comentarios": 63.8,
-      "compartidos": 63.8
+      "vistas": 87.9,
+      "likes": 87.9,
+      "comentarios": 87.9,
+      "compartidos": 87.9
      },
      "likes": 10,
      "comentarios": 1,
@@ -1877,14 +1877,15 @@
      "edad_h": {
       "se_quedan": 11.8,
       "vistas_studio": 11.8,
-      "vistas": 70.3,
-      "likes": 70.3,
-      "comentarios": 70.3,
-      "compartidos": 70.3,
-      "subs": 70.3,
-      "pct_visto": 70.3,
-      "seg_por_vista_api": 70.3,
-      "vistas_enganchadas": 70.3
+      "vistas": 94.4,
+      "likes": 94.4,
+      "comentarios": 94.4,
+      "compartidos": 94.4,
+      "subs": 94.4,
+      "pct_visto": 94.4,
+      "seg_por_vista_api": 94.4,
+      "vistas_enganchadas": 94.4,
+      "retencion_3s": 94.4
      },
      "vistas_studio": 8,
      "vistas": 16,
@@ -1892,9 +1893,10 @@
      "comentarios": 1,
      "compartidos": 0,
      "subs": 0,
-     "pct_visto": 44.8,
-     "seg_por_vista_api": 26,
-     "vistas_enganchadas": 8
+     "pct_visto": 61.6,
+     "seg_por_vista_api": 36,
+     "vistas_enganchadas": 12,
+     "retencion_3s": 116.7
     },
     "24": {
      "vistas": 8,
@@ -1935,10 +1937,10 @@
     "ultima": {
      "vistas": 5,
      "edad_h": {
-      "vistas": 56.5,
-      "likes": 56.5,
-      "comentarios": 56.5,
-      "compartidos": 56.5
+      "vistas": 80.5,
+      "likes": 80.5,
+      "comentarios": 80.5,
+      "compartidos": 80.5
      },
      "likes": 1,
      "comentarios": 0,
@@ -1973,17 +1975,17 @@
     "id": "_9znalXgInI",
     "publicado": "2026-11-19T00:26+01:00",
     "ultima": {
-     "vistas": 1272,
+     "vistas": 1276,
      "edad_h": {
-      "vistas": 56.7,
-      "likes": 56.7,
-      "comentarios": 56.7,
-      "compartidos": 56.7,
-      "subs": 56.7,
-      "pct_visto": 56.7,
-      "seg_por_vista_api": 56.7,
-      "vistas_enganchadas": 56.7,
-      "retencion_3s": 56.7
+      "vistas": 80.8,
+      "likes": 80.8,
+      "comentarios": 80.8,
+      "compartidos": 80.8,
+      "subs": 80.8,
+      "pct_visto": 80.8,
+      "seg_por_vista_api": 80.8,
+      "vistas_enganchadas": 80.8,
+      "retencion_3s": 80.8
      },
      "likes": 30,
      "comentarios": 5,
@@ -1991,8 +1993,8 @@
      "subs": 3,
      "pct_visto": 49.6,
      "seg_por_vista_api": 28,
-     "vistas_enganchadas": 544,
-     "retencion_3s": 105.9
+     "vistas_enganchadas": 551,
+     "retencion_3s": 105.8
     },
     "24": {
      "vistas": 954,
@@ -2038,27 +2040,27 @@
       "se_quedan": 6.8,
       "seg_por_vista": 6.8,
       "vistas_studio": 6.8,
-      "vistas": 65.4,
-      "likes": 65.4,
-      "comentarios": 65.4,
-      "compartidos": 65.4,
-      "subs": 65.4,
-      "pct_visto": 65.4,
-      "seg_por_vista_api": 65.4,
-      "vistas_enganchadas": 65.4,
-      "retencion_3s": 65.4
+      "vistas": 89.4,
+      "likes": 89.4,
+      "comentarios": 89.4,
+      "compartidos": 89.4,
+      "subs": 89.4,
+      "pct_visto": 89.4,
+      "seg_por_vista_api": 89.4,
+      "vistas_enganchadas": 89.4,
+      "retencion_3s": 89.4
      },
      "seg_por_vista": 21.2,
      "vistas_studio": 373,
-     "vistas": 781,
+     "vistas": 790,
      "likes": 26,
      "comentarios": 0,
      "compartidos": 0,
      "subs": 0,
-     "pct_visto": 74.0,
-     "seg_por_vista_api": 40,
-     "vistas_enganchadas": 307,
-     "retencion_3s": 129.3
+     "pct_visto": 68.5,
+     "seg_por_vista_api": 37,
+     "vistas_enganchadas": 380,
+     "retencion_3s": 124.7
     },
     "24": {
      "vistas": 633,
@@ -2101,10 +2103,10 @@
     "ultima": {
      "vistas": 277,
      "edad_h": {
-      "vistas": 36.3,
-      "likes": 36.3,
-      "comentarios": 36.3,
-      "compartidos": 36.3
+      "vistas": 60.3,
+      "likes": 60.3,
+      "comentarios": 60.3,
+      "compartidos": 60.3
      },
      "likes": 8,
      "comentarios": 0,
@@ -2121,20 +2123,44 @@
      },
      "comentarios": 0,
      "compartidos": 5
+    },
+    "48": {
+     "vistas": 277,
+     "vistas_modo": "interpolada",
+     "likes": 8,
+     "edad_h": {
+      "likes": 60.3,
+      "comentarios": 60.3,
+      "compartidos": 60.3
+     },
+     "comentarios": 0,
+     "compartidos": 5
     }
    },
    "youtube": {
     "id": "HGERZv5VWiU",
     "publicado": "2026-11-19T20:22+01:00",
     "ultima": {
-     "vistas": 1616,
+     "vistas": 1836,
      "edad_h": {
-      "vistas": 36.8,
-      "likes": 36.8,
-      "comentarios": 36.8
+      "vistas": 60.8,
+      "likes": 60.8,
+      "comentarios": 60.8,
+      "compartidos": 60.8,
+      "subs": 60.8,
+      "pct_visto": 60.8,
+      "seg_por_vista_api": 60.8,
+      "vistas_enganchadas": 60.8,
+      "retencion_3s": 60.8
      },
-     "likes": 36,
-     "comentarios": 0
+     "likes": 43,
+     "comentarios": 0,
+     "compartidos": 0,
+     "subs": 1,
+     "pct_visto": 57.1,
+     "seg_por_vista_api": 33,
+     "vistas_enganchadas": 727,
+     "retencion_3s": 114.2
     },
     "24": {
      "vistas": 1403,
@@ -2145,6 +2171,28 @@
       "comentarios": 36.8
      },
      "comentarios": 0
+    },
+    "48": {
+     "vistas": 1714,
+     "vistas_modo": "interpolada",
+     "likes": 43,
+     "edad_h": {
+      "likes": 60.8,
+      "comentarios": 60.8,
+      "compartidos": 60.8,
+      "subs": 60.8,
+      "pct_visto": 60.8,
+      "seg_por_vista_api": 60.8,
+      "vistas_enganchadas": 60.8,
+      "retencion_3s": 60.8
+     },
+     "comentarios": 0,
+     "compartidos": 0,
+     "subs": 1,
+     "pct_visto": 57.1,
+     "seg_por_vista_api": 33,
+     "vistas_enganchadas": 727,
+     "retencion_3s": 114.2
     }
    }
   },
@@ -2155,10 +2203,10 @@
     "ultima": {
      "vistas": 251,
      "edad_h": {
-      "vistas": 36.2,
-      "likes": 36.2,
-      "comentarios": 36.2,
-      "compartidos": 36.2
+      "vistas": 60.3,
+      "likes": 60.3,
+      "comentarios": 60.3,
+      "compartidos": 60.3
      },
      "likes": 9,
      "comentarios": 0,
@@ -2175,6 +2223,18 @@
      },
      "comentarios": 0,
      "compartidos": 0
+    },
+    "48": {
+     "vistas": 251,
+     "vistas_modo": "interpolada",
+     "likes": 9,
+     "edad_h": {
+      "likes": 60.3,
+      "comentarios": 60.3,
+      "compartidos": 60.3
+     },
+     "comentarios": 0,
+     "compartidos": 0
     }
    },
    "youtube": {
@@ -2183,12 +2243,22 @@
     "ultima": {
      "vistas": 24,
      "edad_h": {
-      "vistas": 35.8,
-      "likes": 35.8,
-      "comentarios": 35.8
+      "vistas": 59.8,
+      "likes": 59.8,
+      "comentarios": 59.8,
+      "compartidos": 59.8,
+      "subs": 59.8,
+      "pct_visto": 59.8,
+      "seg_por_vista_api": 59.8,
+      "vistas_enganchadas": 59.8
      },
      "likes": 1,
-     "comentarios": 0
+     "comentarios": 0,
+     "compartidos": 0,
+     "subs": 0,
+     "pct_visto": 31.6,
+     "seg_por_vista_api": 18,
+     "vistas_enganchadas": 9
     },
     "24": {
      "vistas": 21,
@@ -2199,6 +2269,26 @@
       "comentarios": 35.8
      },
      "comentarios": 0
+    },
+    "48": {
+     "vistas": 24,
+     "vistas_modo": "interpolada",
+     "likes": 1,
+     "edad_h": {
+      "likes": 59.8,
+      "comentarios": 59.8,
+      "compartidos": 59.8,
+      "subs": 59.8,
+      "pct_visto": 59.8,
+      "seg_por_vista_api": 59.8,
+      "vistas_enganchadas": 59.8
+     },
+     "comentarios": 0,
+     "compartidos": 0,
+     "subs": 0,
+     "pct_visto": 31.6,
+     "seg_por_vista_api": 18,
+     "vistas_enganchadas": 9
     }
    }
   },
@@ -2209,10 +2299,10 @@
     "ultima": {
      "vistas": 280,
      "edad_h": {
-      "vistas": 36.2,
-      "likes": 36.2,
-      "comentarios": 36.2,
-      "compartidos": 36.2
+      "vistas": 60.2,
+      "likes": 60.2,
+      "comentarios": 60.2,
+      "compartidos": 60.2
      },
      "likes": 16,
      "comentarios": 0,
@@ -2229,6 +2319,18 @@
      },
      "comentarios": 0,
      "compartidos": 0
+    },
+    "48": {
+     "vistas": 280,
+     "vistas_modo": "interpolada",
+     "likes": 16,
+     "edad_h": {
+      "likes": 60.2,
+      "comentarios": 60.2,
+      "compartidos": 60.2
+     },
+     "comentarios": 0,
+     "compartidos": 0
     }
    }
   },
@@ -2237,14 +2339,26 @@
     "id": "QUFe8ovVpJE",
     "publicado": "2026-11-19T22:25+01:00",
     "ultima": {
-     "vistas": 3273,
+     "vistas": 4037,
      "edad_h": {
-      "vistas": 34.8,
-      "likes": 34.8,
-      "comentarios": 34.8
+      "vistas": 58.8,
+      "likes": 58.8,
+      "comentarios": 58.8,
+      "compartidos": 58.8,
+      "subs": 58.8,
+      "pct_visto": 58.8,
+      "seg_por_vista_api": 58.8,
+      "vistas_enganchadas": 58.8,
+      "retencion_3s": 58.8
      },
-     "likes": 67,
-     "comentarios": 1
+     "likes": 74,
+     "comentarios": 1,
+     "compartidos": 0,
+     "subs": 2,
+     "pct_visto": 73,
+     "seg_por_vista_api": 43,
+     "vistas_enganchadas": 1012,
+     "retencion_3s": 116.3
     },
     "24": {
      "vistas": 2570,
@@ -2255,6 +2369,28 @@
       "comentarios": 34.8
      },
      "comentarios": 1
+    },
+    "48": {
+     "vistas": 3672,
+     "vistas_modo": "interpolada",
+     "likes": 74,
+     "edad_h": {
+      "likes": 58.8,
+      "comentarios": 58.8,
+      "compartidos": 58.8,
+      "subs": 58.8,
+      "pct_visto": 58.8,
+      "seg_por_vista_api": 58.8,
+      "vistas_enganchadas": 58.8,
+      "retencion_3s": 58.8
+     },
+     "comentarios": 1,
+     "compartidos": 0,
+     "subs": 2,
+     "pct_visto": 73,
+     "seg_por_vista_api": 43,
+     "vistas_enganchadas": 1012,
+     "retencion_3s": 116.3
     }
    }
   },
@@ -2263,15 +2399,27 @@
     "id": "7710219650906213654",
     "publicado": "2026-11-20T12:50+01:00",
     "ultima": {
-     "vistas": 249,
+     "vistas": 252,
      "edad_h": {
-      "vistas": 20.3,
-      "likes": 20.3,
-      "comentarios": 20.3,
-      "compartidos": 20.3
+      "vistas": 44.4,
+      "likes": 44.4,
+      "comentarios": 44.4,
+      "compartidos": 44.4
      },
-     "likes": 23,
-     "comentarios": 0,
+     "likes": 24,
+     "comentarios": 2,
+     "compartidos": 0
+    },
+    "24": {
+     "vistas": 249,
+     "vistas_modo": "interpolada",
+     "likes": 24,
+     "edad_h": {
+      "likes": 44.4,
+      "comentarios": 44.4,
+      "compartidos": 44.4
+     },
+     "comentarios": 2,
      "compartidos": 0
     }
    },
@@ -2279,14 +2427,24 @@
     "id": "4b3pQCoYOok",
     "publicado": "2026-11-20T12:44+01:00",
     "ultima": {
-     "vistas": 1947,
+     "vistas": 2587,
      "edad_h": {
-      "vistas": 20.4,
-      "likes": 20.4,
-      "comentarios": 20.4
+      "vistas": 44.5,
+      "likes": 44.5,
+      "comentarios": 44.5
      },
-     "likes": 54,
-     "comentarios": 1
+     "likes": 58,
+     "comentarios": 2
+    },
+    "24": {
+     "vistas": 2027,
+     "vistas_modo": "interpolada",
+     "likes": 58,
+     "edad_h": {
+      "likes": 44.5,
+      "comentarios": 44.5
+     },
+     "comentarios": 2
     }
    }
   },
@@ -2295,29 +2453,51 @@
     "id": "7710220007434898710",
     "publicado": "2026-11-20T12:51+01:00",
     "ultima": {
-     "vistas": 247,
+     "vistas": 255,
      "edad_h": {
-      "vistas": 20.3,
-      "likes": 20.3,
-      "comentarios": 20.3,
-      "compartidos": 20.3
+      "vistas": 44.4,
+      "likes": 44.4,
+      "comentarios": 44.4,
+      "compartidos": 44.4
      },
      "likes": 17,
      "comentarios": 0,
-     "compartidos": 0
+     "compartidos": 1
+    },
+    "24": {
+     "vistas": 248,
+     "vistas_modo": "interpolada",
+     "likes": 17,
+     "edad_h": {
+      "likes": 44.4,
+      "comentarios": 44.4,
+      "compartidos": 44.4
+     },
+     "comentarios": 0,
+     "compartidos": 1
     }
    },
    "youtube": {
     "id": "ng543OmyPag",
     "publicado": "2026-11-20T13:50+01:00",
     "ultima": {
-     "vistas": 6033,
+     "vistas": 10123,
      "edad_h": {
-      "vistas": 19.3,
-      "likes": 19.3,
-      "comentarios": 19.3
+      "vistas": 43.4,
+      "likes": 43.4,
+      "comentarios": 43.4
      },
-     "likes": 96,
+     "likes": 147,
+     "comentarios": 0
+    },
+    "24": {
+     "vistas": 6651,
+     "vistas_modo": "interpolada",
+     "likes": 147,
+     "edad_h": {
+      "likes": 43.4,
+      "comentarios": 43.4
+     },
      "comentarios": 0
     }
    }
@@ -2327,14 +2507,56 @@
     "id": "W9NYUO0-CrU",
     "publicado": "2026-11-21T01:36+01:00",
     "ultima": {
-     "vistas": 571,
+     "vistas": 723,
      "edad_h": {
-      "vistas": 7.6,
-      "likes": 7.6,
-      "comentarios": 7.6
+      "vistas": 31.6,
+      "likes": 31.6,
+      "comentarios": 31.6
      },
-     "likes": 20,
+     "likes": 25,
      "comentarios": 1
+    },
+    "24": {
+     "vistas": 671,
+     "vistas_modo": "interpolada",
+     "likes": 25,
+     "edad_h": {
+      "likes": 31.6,
+      "comentarios": 31.6
+     },
+     "comentarios": 1
+    }
+   }
+  },
+  "LvYkPN5jc6A": {
+   "youtube": {
+    "id": "LvYkPN5jc6A",
+    "publicado": "2026-11-21T10:00+01:00",
+    "ultima": {
+     "vistas": 111,
+     "edad_h": {
+      "vistas": 23.2,
+      "likes": 23.2,
+      "comentarios": 23.2
+     },
+     "likes": 3,
+     "comentarios": 0
+    }
+   }
+  },
+  "kHT4ncQZNQ4": {
+   "youtube": {
+    "id": "kHT4ncQZNQ4",
+    "publicado": "2026-11-21T12:00+01:00",
+    "ultima": {
+     "vistas": 1523,
+     "edad_h": {
+      "vistas": 21.2,
+      "likes": 21.2,
+      "comentarios": 21.2
+     },
+     "likes": 22,
+     "comentarios": 0
     }
    }
   }
