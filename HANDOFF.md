@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-22 11:45 — Agente 08:00 (Nico) — rama `main` — Studio y comentarios tras el lote
+**Qué pasó**: la tarea volvió a dispararse (relanzamiento a mano de las 10:22). El lote 2026-11-22-manana ya estaba en revisión: no se duplicó nada ni se mandó otro correo.
+**Hecho**: lo que faltaba del turno: `estadisticas/studio.json` con 7 Shorts (§1.8) y 6 respuestas a comentarios de YouTube (§8b); detalle en `lotes/2026-11-22-manana/estado.md`.
+**Pruebas**: bandeja «Sin responder» de Studio vacía tras recargar. No se tocó `motor/`.
+**Pendiente**: «ok» del lote; comentarios de TikTok; `cjSc0D_gOaI` y los flamencos en `studio.json`.
+**Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dJXULpjXQekLYXshSe.
+
 ## 2026-11-22 11:15 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-22-manana v1 en revisión
 **Qué pasó**: tercera ejecución de la tarea de hoy (10:26). Esta vez el Mac de Nico respondía, así que se retomó el lote (idempotente) y se hizo entero.
 **Hecho**: 01 «El baloncesto empezó con cestas de melocotones» (tendencia «bàsquet»; Histórico, reconstrucción), 02 «Tu sangre viene de una estrella que explotó» (Espacio, cadena de datos; **experimento H3: gancho en segunda persona**), 03 «Tus ojos ven el mundo al revés» (Ciencia, experimento; Stratton 1896). ≥ 2 fuentes por dato (`guiones.md`, con lo descartado: 93 %, kilonova de 2017, Kepler, fecha de las redes). Voz oficial por API desde el Mac (créditos 20.837 → ≈18.460), `ilus_1122m.py` (≈45 SVG nuevos + piezas de lotes anteriores por ruta), montaje denso (38/38/34 planos), render en la nube, portadas elegidas, fichas, MP4 y portadas en el chat y en el Mac.

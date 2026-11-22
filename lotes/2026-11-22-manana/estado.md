@@ -48,6 +48,10 @@ Voz oficial por API desde el Mac (2.377 caracteres; créditos 20.837 → ≈18.4
 ## Portadas (sin «ok»)
 - 01 «LA CANASTA TENÍA FONDO» · arriba · 7,3 s. 02 «TU SANGRE VIENE DE ESTRELLAS» · abajo · 1,2 s. 03 «VES EL MUNDO AL REVÉS» · arriba · 4,0 s. Las automáticas no sacaban al sujeto, así que se generaron con `motor.portadas.generar()` sobre fotogramas elegidos; la variante de texto de 02 y 03 se generó pero su hoja no se miró.
 
+## Después de la entrega (11:45, nueva ejecución de la tarea: el lote ya existía, no se duplicó nada)
+- **YouTube Studio (§1.8)**: «se quedaron viendo» de 7 Shorts con 24 h o más, en `estadisticas/studio.json`: el Turco 69,7 %, El Niño 65,9 %, el dólar 59,1 %, lote 18-tarde 02 71,5 % y 03 79,7 % (10,1 mil vistas), 16 amaneceres 45,5 %, Mulhacén 58,6 %. Los flamencos aún no tenían 24 h; `cjSc0D_gOaI` no cargó. Las horas de `ng543OmyPag` no se pudieron leer.
+- **Comentarios (§8b)**: 6 respuestas en YouTube (todas las «sin responder»): el Turco (1), estrella de neutrones (2), GTA 6 (2), koala (1). Ninguno saltado. TikTok Studio no se miró.
+
 ## No hecho
-- AGENTE §1.8 (YouTube Studio → `studio.json`) y §8b (contestar comentarios). TikTok Creative Center y Studio → Investigación en el análisis de tendencias.
+- TikTok Creative Center y Studio → Investigación en el análisis de tendencias; comentarios de TikTok.
 - Nada publicado: se espera el «ok» en el chat del lote.

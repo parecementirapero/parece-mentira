@@ -257,5 +257,61 @@
   "horas": 0.0,
   "duracion": 60,
   "seg_por_vista": null
+ },
+ "HGERZv5VWiU": {
+  "seQuedan": 65.9,
+  "fecha": "2026-11-22",
+  "hora": "11:08",
+  "vistas": 1800,
+  "horas": 12.1,
+  "seg_por_vista": 24.2
+ },
+ "Ve63IT5wgpY": {
+  "seQuedan": 59.1,
+  "fecha": "2026-11-22",
+  "hora": "11:08",
+  "vistas": 24,
+  "horas": 0.1,
+  "seg_por_vista": null
+ },
+ "QUFe8ovVpJE": {
+  "seQuedan": 69.7,
+  "fecha": "2026-11-22",
+  "hora": "11:08",
+  "vistas": 4000,
+  "horas": 32.8,
+  "seg_por_vista": 29.5
+ },
+ "4b3pQCoYOok": {
+  "seQuedan": 71.5,
+  "fecha": "2026-11-22",
+  "hora": "11:08",
+  "vistas": 2500,
+  "horas": 18.2,
+  "seg_por_vista": 26.2
+ },
+ "ng543OmyPag": {
+  "seQuedan": 79.7,
+  "fecha": "2026-11-22",
+  "hora": "11:08",
+  "vistas": 10100,
+  "horas": null,
+  "seg_por_vista": null
+ },
+ "W9NYUO0-CrU": {
+  "seQuedan": 45.5,
+  "fecha": "2026-11-22",
+  "hora": "11:08",
+  "vistas": 722,
+  "horas": 2.9,
+  "seg_por_vista": 14.5
+ },
+ "LvYkPN5jc6A": {
+  "seQuedan": 58.6,
+  "fecha": "2026-11-22",
+  "hora": "11:08",
+  "vistas": 112,
+  "horas": 0.7,
+  "seg_por_vista": 22.5
  }
 }
