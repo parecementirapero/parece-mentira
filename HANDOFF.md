@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-22 10:25 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-22-manana: ordenador no disponible + tendencias
+**Qué pasó**: la tarea de las 07:52 se disparó a las 10:18 y corrió en la nube sin acceso al Mac de Nico (sin puente: ni carpeta local, ni `claves.txt`, ni navegador integrado).
+**Hecho**: análisis de tendencias en `lotes/tendencias/2026-11-22.md` (`a881718`): Google Trends MX ✅ y ES ✅ por RSS; AR y CO ⚠️ (feed con datos del 27-10, no usados); TikTok Creative Center y Studio → Investigación ❌ (sin navegador). Buenas sin usar: baloncesto con cestas de melocotones (ES), luz a precio negativo (ES), fruta en la frontera / mosca de la fruta (MX). Lote en «Pendiente» según AGENTE §1.6, `lotes/2026-11-22-manana/estado.md`, este registro y correo `[AVISO]`. Nada gastado ni publicado.
+**Pruebas**: ninguna (no se tocó `motor/`).
+**Pendiente**: este lote; los dos «pendiente de voz» (2026-11-19-manana y -tarde). Tampoco hay lotes del 2026-11-21 en el repo (ninguna tarea dejó rastro ese día).
+**Siguiente paso**: con el Mac de Nico encendido, escribir en https://claude.ai/code/session_019BG1dJVmPqrtbuKRGs1cfJ para arrancar el lote; el turno de tarde puede usar las tendencias 1–3 (verificar con 2 fuentes).
+
 ## 2026-11-21 01:38 — Agente 20:00 (Jorge) (chat del lote) — rama `main` — lote 2026-11-20-tarde en YouTube
 **Petición**: «súbelos a youtube los 3, uno ahora otro a las 10 de mañana y otro a las 12». Vale como «ok» solo para YouTube, con las horas que eligió la persona (no la separación de 1 h de DECISIONS, solo para este lote).
 **Hecho**: `subir_youtube.py` desde el Mac de Jorge (scripts iguales a los del repo): 01 https://youtube.com/shorts/W9NYUO0-CrU público; 02 https://youtube.com/shorts/LvYkPN5jc6A programado el 21-11 a las 10:00; 03 https://youtube.com/shorts/kHT4ncQZNQ4 programado el 21-11 a las 12:00. Portadas puestas por API. `etiquetas.json`, `publicado.json` y `ficha publicar` al día. Comentario del 01 escrito.

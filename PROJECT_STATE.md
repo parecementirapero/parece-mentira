@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-21 01:38 — Agente 20:00 (Jorge) (lote 2026-11-20-tarde en YouTube)_
+_Última actualización: 2026-11-22 10:25 — Agente 08:00 (Nico) (lote 2026-11-22-manana sin hacer: Mac de Nico no disponible; tendencias del día guardadas)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,6 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- Sin hacer: lote **2026-11-22-manana** — ordenador no disponible (la ejecución de las 10:18 no tuvo el Mac de Nico). Tendencias del día en `lotes/tendencias/2026-11-22.md` (baloncesto, luz a precio negativo, fruta en la frontera: sin usar). Se retoma en https://claude.ai/code/session_019BG1dJVmPqrtbuKRGs1cfJ.
 - En YouTube (ok de la persona, solo YouTube): lote **2026-11-20-tarde** v1 — W9NYUO0-CrU público, LvYkPN5jc6A a las 10:00 y kHT4ncQZNQ4 a las 12:00 del 21-11 (16 amaneceres en la Estación Espacial, desde el Mulhacén se ve África, los flamencos nacen grises; 56–58 s; experimento: gancho de orden en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf y en `Documents/Parece Mentira/lotes/2026-11-20-tarde/` (Mac de Jorge). ElevenLabs: quedan 20.837 caracteres.
 - En revisión: lote **2026-11-20-manana** v1 (los hipopótamos no saben nadar, un F1 podría ir por el techo, el primer coche en pasar de 100 km/h era eléctrico; 56–58 s; los tres salen de las tendencias del día; experimento: gancho de contraste de época en el 03). Vídeos en el chat https://claude.ai/code/session_019BG1dLEec78Rq3eZBDrkLR y en `Documents/Parece Mentira/lotes/2026-11-20-manana/` (Mac de Nico). ElevenLabs: quedan ≈21.400 caracteres.
 - Tendencias del día: `lotes/tendencias/AAAA-MM-DD.md` (desde el 2026-11-20; la escribe el turno de mañana y la lee el de tarde). Regla en `DECISIONS.md` y `AGENTE.md` §2.

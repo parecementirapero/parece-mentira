@@ -9,6 +9,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
+- [ ] **Lote 2026-11-22-manana — ordenador no disponible** (la tarea de las 07:52 se disparó a las 10:18 en la nube sin el Mac de Nico: sin `claves.txt` no hay voz). Nada producido ni gastado; tendencias del día hechas en `lotes/tendencias/2026-11-22.md` (3 buenas sin usar). Se retoma en https://claude.ai/code/session_019BG1dJVmPqrtbuKRGs1cfJ con el Mac encendido — Agente 08:00 (Nico) — 2026-11-22 10:25
 - [ ] Comentarios de YouTube del 02 (LvYkPN5jc6A) y del 03 (kHT4ncQZNQ4) del lote 2026-11-20-tarde, en `metadatos.json` → `comentario`: no se escribieron porque el Mac de Jorge estaba sin conexión a las 10:05 y a las 12:06. Se hacen desde el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf con el Mac encendido — Jorge
 - [ ] **Verificación de YouTube Studio para fijar comentarios** (aviso al fijar: «completa una verificación breve y única en YouTube Studio»; pide pasos de la persona). Después, fijar los comentarios del lote 2026-11-20-tarde — Nico/Jorge
 - [ ] **Vídeos extra 2026-11-19** (`lotes/2026-11-19-extra/`): los tres publicados en TikTok y en YouTube (01 público; 02 programado 21:25; 03 programado 22:25). Faltan los comentarios fijados y las fichas de variables — Nico
