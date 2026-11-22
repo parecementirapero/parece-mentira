@@ -1,6 +1,6 @@
 # Lote 2026-11-22-manana — estado
 
-**Estado**: 🟢 **en revisión** (v1 de los 3 vídeos en el chat; falta el «ok»). Correo `1a202b869e5a1939`.
+**Estado**: 🟢 **programado en YouTube** (13:00, 14:00 y 15:00 del 22-11); TikTok pendiente de que la persona elija cada archivo.
 **Agente**: Agente 08:00 (Nico). Chat del lote (vídeos y «ok»): https://claude.ai/code/session_019BG1dJXULpjXQekLYXshSe · chat de la primera ejecución sin Mac: https://claude.ai/code/session_019BG1dJVmPqrtbuKRGs1cfJ
 
 ## Registro
@@ -51,6 +51,12 @@ Voz oficial por API desde el Mac (2.377 caracteres; créditos 20.837 → ≈18.4
 ## Después de la entrega (11:45, nueva ejecución de la tarea: el lote ya existía, no se duplicó nada)
 - **YouTube Studio (§1.8)**: «se quedaron viendo» de 7 Shorts con 24 h o más, en `estadisticas/studio.json`: el Turco 69,7 %, El Niño 65,9 %, el dólar 59,1 %, lote 18-tarde 02 71,5 % y 03 79,7 % (10,1 mil vistas), 16 amaneceres 45,5 %, Mulhacén 58,6 %. Los flamencos aún no tenían 24 h; `cjSc0D_gOaI` no cargó. Las horas de `ng543OmyPag` no se pudieron leer.
 - **Comentarios (§8b)**: 6 respuestas en YouTube (todas las «sin responder»): el Turco (1), estrella de neutrones (2), GTA 6 (2), koala (1). Ninguno saltado. TikTok Studio no se miró.
+
+## Publicación
+- **Aprobación**: en el chat del lote, «ponlo en próximos… tipo en programados»; a la pregunta de si era programar los 3 en YouTube a las 13:00, 14:00 y 15:00, «sí, haz eso, y si se puede hazlo también en TikTok». Vale como «ok» de los tres, programados (ninguno sale al momento, a petición de la persona).
+- **YouTube** (API, desde el Mac de Nico, portadas puestas): 01 https://youtube.com/shorts/awYmnuBzhrQ → 13:00 · 02 https://youtube.com/shorts/F4_DBK1lB50 → 14:00 · 03 https://youtube.com/shorts/60lZvOqwFtw → 15:00. `publicado.json`, `etiquetas.json` y fichas al día.
+- **Comentarios fijados**: pendientes hasta que cada vídeo sea público (avisos en el chat a las 13:05, 14:05 y 15:05).
+- **TikTok**: pendiente (ver chat): el selector de archivos lo tiene que usar la persona.
 
 ## No hecho
 - TikTok Creative Center y Studio → Investigación en el análisis de tendencias; comentarios de TikTok.

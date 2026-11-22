@@ -922,7 +922,8 @@
   "montaje": "denso",
   "subtitulo": "karaoke",
   "voz": "clon",
-  "reciclado": false
+  "reciclado": false,
+  "youtube": "awYmnuBzhrQ"
  },
  "2026-11-22-manana/02": {
   "lote": "2026-11-22-manana",
@@ -956,7 +957,8 @@
   "montaje": "denso",
   "subtitulo": "karaoke",
   "voz": "clon",
-  "reciclado": false
+  "reciclado": false,
+  "youtube": "F4_DBK1lB50"
  },
  "2026-11-22-manana/03": {
   "lote": "2026-11-22-manana",
@@ -990,6 +992,7 @@
   "montaje": "denso",
   "subtitulo": "karaoke",
   "voz": "clon",
-  "reciclado": false
+  "reciclado": false,
+  "youtube": "60lZvOqwFtw"
  }
 }
