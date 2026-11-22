@@ -1,6 +1,6 @@
 # Lote 2026-11-22-manana — estado
 
-**Estado**: ⛔ sin empezar — **ordenador no disponible** (AGENTE §1.6).
+**Estado**: 🟡 en curso (retomado 10:30 con el Mac de Nico).
 **Agente**: Agente 08:00 (Nico). Chat del turno: https://claude.ai/code/session_019BG1dJVmPqrtbuKRGs1cfJ
 
 ## Registro
@@ -14,3 +14,6 @@
 
 ## Para retomar
 Escribir en el chat del turno con el Mac de Nico encendido y la app de Claude abierta: el agente arranca el lote desde AGENTE §1 (verificar con 2 fuentes las tendencias 1–3 antes de usarlas).
+
+## Retomado con el Mac (10:30)
+- 10:26: nueva ejecución de la tarea (https://claude.ai/code/session_019BG1dJXULpjXQekLYXshSe). Esta vez el Mac de Nico **sí responde** (`get_device_info` y carpeta local OK). Créditos ElevenLabs: 20.837 (≈ 6 lotes). Se reserva el lote y se hace entero.
