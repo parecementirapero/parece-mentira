@@ -71,6 +71,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - La Estación Espacial ve dieciséis amaneceres al día (≈420 km, ≈28.000 km/h, ≈8 km/s, vuelta en ≈90 min, amanecer o atardecer cada 45 min, ida y vuelta a la Luna en un día, hora de Greenwich, ≈109 m como un campo de fútbol americano, habitada desde noviembre de 2000) — lote 2026-11-20-tarde
 - Desde el Mulhacén se ve África (3.479 m, techo de la península, Rif en días claros, horizonte ≈3,57·√h: 1,70 m → ≈5 km, cima → >200 km, se suman los dos horizontes, Muley Hacén y la leyenda de su tumba) — lote 2026-11-20-tarde (tendencia «sierra nevada»)
 - Los flamencos nacen grises (carotenoides de algas y artemias, cabeza del revés y pico que filtra, ≈3 años para el rosa, leche de buche roja de los dos padres, los padres se quedan casi blancos y recuperan el rosa) — lote 2026-11-20-tarde
+- El baloncesto empezó con cestas de melocotones con fondo (diciembre de 1891, Springfield, James Naismith, invierno, trece reglas, barandilla de la galería a ≈3 m = altura de hoy, nueve contra nueve, balón de fútbol, uno a cero, escalera y palo, se le quitó el fondo) — lote 2026-11-22-manana (tendencia «bàsquet»)
+- Tu sangre viene de estrellas (hierro de supernova; hidrógeno → helio → carbono y oxígeno; el hierro acaba el combustible; calcio de los huesos; hidrógeno del Big Bang, ≈13.800 millones de años; oro del choque de estrellas de neutrones) — lote 2026-11-22-manana
+- Tus ojos ven el mundo al revés (el cristalino invierte la imagen en la retina; George Stratton, 1896, un ojo tapado y un tubo con lentes ocho días; adaptación a los pocos días y extrañeza al quitárselo) — lote 2026-11-22-manana
 
 ## Continuaciones prometidas
 
