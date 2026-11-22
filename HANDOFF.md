@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-22 11:15 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-22-manana v1 en revisión
+**Qué pasó**: tercera ejecución de la tarea de hoy (10:26). Esta vez el Mac de Nico respondía, así que se retomó el lote (idempotente) y se hizo entero.
+**Hecho**: 01 «El baloncesto empezó con cestas de melocotones» (tendencia «bàsquet»; Histórico, reconstrucción), 02 «Tu sangre viene de una estrella que explotó» (Espacio, cadena de datos; **experimento H3: gancho en segunda persona**), 03 «Tus ojos ven el mundo al revés» (Ciencia, experimento; Stratton 1896). ≥ 2 fuentes por dato (`guiones.md`, con lo descartado: 93 %, kilonova de 2017, Kepler, fecha de las redes). Voz oficial por API desde el Mac (créditos 20.837 → ≈18.460), `ilus_1122m.py` (≈45 SVG nuevos + piezas de lotes anteriores por ruta), montaje denso (38/38/34 planos), render en la nube, portadas elegidas, fichas, MP4 y portadas en el chat y en el Mac.
+**Pruebas**: `motor.guion` sin ❌ (⚠ de 142–145 palabras: vídeos de 49–55 s); `construir` sin ⚠ de lectura; ffprobe 1080×1920/30 fps/h264/AAC 48 kHz; `motor.calidad --mp4` 78/85/80 sin ❌ (⚠ justificados en `estado.md`); hojas de fotogramas y primer segundo revisados; `ficha comprobar` 0 problemas. No se tocó `motor/`.
+**Correo**: `1a202b869e5a1939`.
+**No hecho**: Studio (§1.8), comentarios (§8b), TikTok Creative Center y Studio → Investigación. Los `.srt` y manifiestos no se copiaron al Mac. Nada publicado.
+**Pendiente**: «ok» de este lote; los dos «pendiente de voz» (2026-11-19-manana y -tarde).
+**Siguiente paso**: «ok» en https://claude.ai/code/session_019BG1dJXULpjXQekLYXshSe → AGENTE §8 desde el Mac de Nico. La tarde tiene libres las tendencias 2 y 3 de `lotes/tendencias/2026-11-22.md`.
+
 ## 2026-11-22 10:25 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-22-manana: ordenador no disponible + tendencias
 **Qué pasó**: la tarea de las 07:52 se disparó a las 10:18 y corrió en la nube sin acceso al Mac de Nico (sin puente: ni carpeta local, ni `claves.txt`, ni navegador integrado).
 **Hecho**: análisis de tendencias en `lotes/tendencias/2026-11-22.md` (`a881718`): Google Trends MX ✅ y ES ✅ por RSS; AR y CO ⚠️ (feed con datos del 27-10, no usados); TikTok Creative Center y Studio → Investigación ❌ (sin navegador). Buenas sin usar: baloncesto con cestas de melocotones (ES), luz a precio negativo (ES), fruta en la frontera / mosca de la fruta (MX). Lote en «Pendiente» según AGENTE §1.6, `lotes/2026-11-22-manana/estado.md`, este registro y correo `[AVISO]`. Nada gastado ni publicado.

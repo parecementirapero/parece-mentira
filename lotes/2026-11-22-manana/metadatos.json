@@ -36,9 +36,18 @@
    "estructura": "reconstrucción",
    "experimento": "no",
    "alcance": "universal",
-   "tendencia": "bàsquet"
+   "tendencia": "bàsquet",
+   "portada": "arriba"
   },
-  "locucion": "Esta canasta tenía fondo. El baloncesto empezó con cestas de melocotones. Cada vez que alguien encestaba, el balón se quedaba dentro. Pasó en diciembre de mil ochocientos noventa y uno, en Springfield, Estados Unidos. Un profesor canadiense, James Naismith, tenía un problema: era invierno, nevaba, y sus alumnos se aburrían encerrados en el gimnasio. Así que inventó un juego bajo techo con trece reglas. ¿Y las canastas? Clavó dos cestas de fruta en la barandilla de la galería, a unos tres metros del suelo. Y, por casualidad, esa es la misma altura que tienen hoy las canastas. Jugaron nueve contra nueve, con un balón de fútbol. ¿Y el marcador? Uno a cero. Una sola canasta en todo el partido. Lo peor era sacar el balón: primero subían con una escalera, luego con un palo. Hasta que a alguien se le ocurrió quitarle el fondo."
+  "locucion": "Esta canasta tenía fondo. El baloncesto empezó con cestas de melocotones. Cada vez que alguien encestaba, el balón se quedaba dentro. Pasó en diciembre de mil ochocientos noventa y uno, en Springfield, Estados Unidos. Un profesor canadiense, James Naismith, tenía un problema: era invierno, nevaba, y sus alumnos se aburrían encerrados en el gimnasio. Así que inventó un juego bajo techo con trece reglas. ¿Y las canastas? Clavó dos cestas de fruta en la barandilla de la galería, a unos tres metros del suelo. Y, por casualidad, esa es la misma altura que tienen hoy las canastas. Jugaron nueve contra nueve, con un balón de fútbol. ¿Y el marcador? Uno a cero. Una sola canasta en todo el partido. Lo peor era sacar el balón: primero subían con una escalera, luego con un palo. Hasta que a alguien se le ocurrió quitarle el fondo.",
+  "portada": {
+   "texto": "LA CANASTA TENÍA FONDO",
+   "clave": "FONDO",
+   "archivo": "01-portadas/portada.jpg",
+   "t": 7.3,
+   "diseno": "arriba",
+   "motivo": "La cesta de mimbre grande y entera se reconoce en la cuadrícula y el texto de arriba no la tapa; es la imagen del primer segundo"
+  }
  },
  "02": {
   "archivo": "02-sangre-de-estrellas_v1.mp4",
@@ -77,9 +86,18 @@
    "estructura": "cadena de datos",
    "experimento": "H3: gancho en segunda persona",
    "alcance": "universal",
-   "tendencia": "no"
+   "tendencia": "no",
+   "portada": "abajo"
   },
-  "locucion": "Tu sangre viene de estrellas. Su hierro se fabricó dentro de una estrella que explotó. ¿Cómo? Una estrella es un horno que aprieta átomos pequeños hasta pegarlos. Con hidrógeno hace helio. Con helio hace carbono y oxígeno, los mismos que forman la mayor parte de tu cuerpo. Las más grandes siguen hasta llegar al hierro, y ahí se acaba el combustible. La estrella se derrumba y revienta en una supernova, que siembra esos átomos por la galaxia. Mucho tiempo después, con ese polvo se formaron el Sol, la Tierra y, al final, tú. El calcio de tus huesos también salió de una estrella. ¿Y el hidrógeno del agua que bebes? Ese es aún más viejo: nació en el Big Bang, hace casi catorce mil millones de años. ¿Y el oro de un anillo? Probablemente, del choque de dos estrellas muertas. Literalmente, eres polvo de estrellas."
+  "locucion": "Tu sangre viene de estrellas. Su hierro se fabricó dentro de una estrella que explotó. ¿Cómo? Una estrella es un horno que aprieta átomos pequeños hasta pegarlos. Con hidrógeno hace helio. Con helio hace carbono y oxígeno, los mismos que forman la mayor parte de tu cuerpo. Las más grandes siguen hasta llegar al hierro, y ahí se acaba el combustible. La estrella se derrumba y revienta en una supernova, que siembra esos átomos por la galaxia. Mucho tiempo después, con ese polvo se formaron el Sol, la Tierra y, al final, tú. El calcio de tus huesos también salió de una estrella. ¿Y el hidrógeno del agua que bebes? Ese es aún más viejo: nació en el Big Bang, hace casi catorce mil millones de años. ¿Y el oro de un anillo? Probablemente, del choque de dos estrellas muertas. Literalmente, eres polvo de estrellas.",
+  "portada": {
+   "texto": "TU SANGRE VIENE DE ESTRELLAS",
+   "clave": "ESTRELLAS",
+   "archivo": "02-portadas/portada.jpg",
+   "t": 1.2,
+   "diseno": "abajo",
+   "motivo": "La gota de sangre delante de la supernova es la imagen del gancho, con colores fuertes; el texto abajo no tapa la explosión"
+  }
  },
  "03": {
   "archivo": "03-imagen-al-reves_v1.mp4",
@@ -122,8 +140,17 @@
    "estructura": "experimento",
    "experimento": "no",
    "alcance": "universal",
-   "tendencia": "no"
+   "tendencia": "no",
+   "portada": "arriba"
   },
-  "locucion": "Esta imagen está al revés. Así llega el mundo al fondo de tu ojo. ¿Por qué? El cristalino, la lente que tienes dentro del ojo, cruza los rayos de luz. Lo de arriba cae abajo y lo de la izquierda pasa a la derecha, como en una cámara antigua. Es tu cerebro el que le da la vuelta, sin que te enteres. ¿Y si lo engañas? En mil ochocientos noventa y seis, un psicólogo, George Stratton, quiso probarlo. Se tapó un ojo y en el otro se puso un tubo con lentes que le giraban la vista. Lo llevó ocho días. Al principio, todo estaba patas arriba: el suelo arriba, el cielo abajo. Pero a los pocos días, el mundo volvió a parecerle normal. Su cerebro se había adaptado. ¿Y al quitárselo? Durante un rato, lo raro era el mundo de siempre."
+  "locucion": "Esta imagen está al revés. Así llega el mundo al fondo de tu ojo. ¿Por qué? El cristalino, la lente que tienes dentro del ojo, cruza los rayos de luz. Lo de arriba cae abajo y lo de la izquierda pasa a la derecha, como en una cámara antigua. Es tu cerebro el que le da la vuelta, sin que te enteres. ¿Y si lo engañas? En mil ochocientos noventa y seis, un psicólogo, George Stratton, quiso probarlo. Se tapó un ojo y en el otro se puso un tubo con lentes que le giraban la vista. Lo llevó ocho días. Al principio, todo estaba patas arriba: el suelo arriba, el cielo abajo. Pero a los pocos días, el mundo volvió a parecerle normal. Su cerebro se había adaptado. ¿Y al quitárselo? Durante un rato, lo raro era el mundo de siempre.",
+  "portada": {
+   "texto": "VES EL MUNDO AL REVÉS",
+   "clave": "AL REVÉS",
+   "archivo": "03-portadas/portada.jpg",
+   "t": 4.0,
+   "diseno": "arriba",
+   "motivo": "Un ojo enorme se reconoce al instante en la cuadrícula y lleva el árbol al revés en la pupila; el texto arriba no tapa el iris"
+  }
  }
 }
