@@ -56,7 +56,8 @@ Voz oficial por API desde el Mac (2.377 caracteres; créditos 20.837 → ≈18.4
 - **Aprobación**: en el chat del lote, «ponlo en próximos… tipo en programados»; a la pregunta de si era programar los 3 en YouTube a las 13:00, 14:00 y 15:00, «sí, haz eso, y si se puede hazlo también en TikTok». Vale como «ok» de los tres, programados (ninguno sale al momento, a petición de la persona).
 - **YouTube** (API, desde el Mac de Nico, portadas puestas): 01 https://youtube.com/shorts/awYmnuBzhrQ → 13:00 · 02 https://youtube.com/shorts/F4_DBK1lB50 → 14:00 · 03 https://youtube.com/shorts/60lZvOqwFtw → 15:00. `publicado.json`, `etiquetas.json` y fichas al día.
 - **Comentarios fijados**: pendientes hasta que cada vídeo sea público (avisos en el chat a las 13:05, 14:05 y 15:05).
-- **TikTok**: pendiente (ver chat): el selector de archivos lo tiene que usar la persona.
+- **TikTok** (navegador integrado; la persona eligió cada archivo y aceptó el permiso de TikTok para guardar vídeos programados): 01 programado a las 13:00 y 03 a las 15:00 (22-11, GMT+1), con texto y hashtags; portada = fotograma inicial. **Falta el 02** (14:00): la persona no llegó a elegir el archivo.
+- 13:05: el comentario fijado del 01 **no se pudo poner**: el Mac de Nico se desconectó del puente (dos intentos). Se reintenta con el aviso de las 14:05.
 
 ## No hecho
 - TikTok Creative Center y Studio → Investigación en el análisis de tendencias; comentarios de TikTok.
