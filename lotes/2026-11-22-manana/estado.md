@@ -6,6 +6,7 @@
 ## Registro
 - 2026-11-22 10:18 (Madrid): la tarea de las 07:52 se disparó a las 10:18 y arrancó en la nube **sin acceso al Mac de Nico** (la ejecución no tuvo el puente del ordenador: ni carpeta local, ni `claves.txt`, ni navegador integrado).
 - Sin `claves.txt` no hay clave de ElevenLabs → no hay voz posible (no hay voz alternativa, DECISIONS). Siguiendo AGENTE §1.6 no se producen guiones ni montaje. Nada gastado ni publicado.
+- 10:24: esta ejecución era el lanzamiento a mano de las 10:18, pedido en el chat del proyecto porque el turno de las 08:00 no se ejecutó. Al retomar (arranque idempotente), el lote ya existía y el Mac seguía sin conexión: no se duplica nada ni se manda otro correo.
 - Sí se hizo el análisis de tendencias (solo lectura, desde la nube) para que lo tenga el turno de tarde: `lotes/tendencias/2026-11-22.md`.
 
 ## Tendencias de hoy
