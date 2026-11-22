@@ -59,6 +59,7 @@ Voz oficial por API desde el Mac (2.377 caracteres; créditos 20.837 → ≈18.4
 - **TikTok** (navegador integrado; la persona eligió cada archivo y aceptó el permiso de TikTok para guardar vídeos programados): 01 programado a las 13:00 y 03 a las 15:00 (22-11, GMT+1), con texto y hashtags; portada = fotograma inicial. **Falta el 02** (14:00): la persona no llegó a elegir el archivo.
 - 13:05: el comentario fijado del 01 **no se pudo poner**: el Mac de Nico se desconectó del puente (dos intentos). Se reintenta con el aviso de las 14:05.
 - 14:05: el Mac sigue sin conexión (dos intentos): comentarios fijados del 01 y del 02 sin poner, y el 02 sigue sin subir a TikTok. Último reintento con el aviso de las 15:05.
+- 15:05: el Mac sigue sin conexión. **Pendiente** (se retoma escribiendo en el chat del lote con el Mac encendido): comprobar que los 3 Shorts son públicos, escribir y fijar los 3 comentarios de `metadatos.json`, subir el 02 a TikTok (su hora, las 14:00, ya pasó: preguntar si al momento o a otra hora) y los comentarios de TikTok.
 
 ## No hecho
 - TikTok Creative Center y Studio → Investigación en el análisis de tendencias; comentarios de TikTok.

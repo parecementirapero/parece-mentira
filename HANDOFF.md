@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-22 15:06 — Agente 08:00 (Nico) (chat del lote) — rama `main` — lote 2026-11-22-manana programado; remate pendiente
+**Petición**: en el chat, «ponlo… tipo en programados» y, al preguntar, «sí, haz eso, y si se puede hazlo también en TikTok» → los tres programados (ninguno al momento).
+**Hecho**: YouTube por API desde el Mac de Nico, con portadas: 01 `awYmnuBzhrQ` 13:00, 02 `F4_DBK1lB50` 14:00, 03 `60lZvOqwFtw` 15:00. TikTok desde el navegador integrado (la persona eligió los archivos y aceptó el permiso de vídeos programados): 01 a las 13:00 y 03 a las 15:00. `publicado.json`, `etiquetas.json` y fichas `publicar` al día.
+**Bloqueo**: el Mac se desconectó del puente hacia las 13:00 y no volvió (intentos a las 13:05, 14:05 y 15:05).
+**Sin comprobar**: que los tres Shorts hayan pasado a públicos a su hora y que TikTok haya publicado los suyos.
+**Pendiente**: comprobar eso, fijar los 3 comentarios, subir el 02 a TikTok, comentarios de TikTok (TASKS → Pendiente).
+**Pruebas**: respuesta de la API de YouTube (`estado: private`, `publicaEn`, `portada: puesta`) y lista de TikTok Studio con las dos horas. No se tocó `motor/`.
+**Siguiente paso**: con el Mac encendido, escribir en https://claude.ai/code/session_019BG1dJXULpjXQekLYXshSe.
+
 ## 2026-11-22 11:45 — Agente 08:00 (Nico) — rama `main` — Studio y comentarios tras el lote
 **Qué pasó**: la tarea volvió a dispararse (relanzamiento a mano de las 10:22). El lote 2026-11-22-manana ya estaba en revisión: no se duplicó nada ni se mandó otro correo.
 **Hecho**: lo que faltaba del turno: `estadisticas/studio.json` con 7 Shorts (§1.8) y 6 respuestas a comentarios de YouTube (§8b); detalle en `lotes/2026-11-22-manana/estado.md`.

@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-22 11:15 — Agente 08:00 (Nico) (lote 2026-11-22-manana v1 en revisión en https://claude.ai/code/session_019BG1dJXULpjXQekLYXshSe: baloncesto / sangre de estrellas / ojos al revés; falta el «ok». ElevenLabs ≈18.460 créditos)_
+_Última actualización: 2026-11-22 15:06 — Agente 08:00 (Nico) (lote 2026-11-22-manana: 3 Shorts programados en YouTube a las 13:00/14:00/15:00; TikTok 01 y 03 programados, falta el 02; comentarios fijados sin poner porque el Mac de Nico se desconectó)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
