@@ -6,6 +6,13 @@
    "estado": "público",
    "publicaEn": null,
    "portada": "puesta"
+  },
+  "tiktok": {
+   "id": "7711366247224462614",
+   "url": "https://www.tiktok.com/@parece.mentira85/video/7711366247224462614",
+   "estado": "programado",
+   "publicaEn": "2026-11-23T15:25:00+01:00",
+   "portada": "imagen subida"
   }
  },
  "02": {
@@ -15,6 +22,13 @@
    "estado": "programado",
    "publicaEn": "2026-11-23T15:55:00+01:00",
    "portada": "puesta"
+  },
+  "tiktok": {
+   "id": "7711366830979419414",
+   "url": "https://www.tiktok.com/@parece.mentira85/video/7711366830979419414",
+   "estado": "programado",
+   "publicaEn": "2026-11-23T15:55:00+01:00",
+   "portada": "imagen subida"
   }
  },
  "03": {
@@ -24,6 +38,13 @@
    "estado": "programado",
    "publicaEn": "2026-11-23T16:55:00+01:00",
    "portada": "puesta"
+  },
+  "tiktok": {
+   "id": "7711367394031062294",
+   "url": "https://www.tiktok.com/@parece.mentira85/video/7711367394031062294",
+   "estado": "programado",
+   "publicaEn": "2026-11-23T16:55:00+01:00",
+   "portada": "imagen subida"
   }
  }
 }

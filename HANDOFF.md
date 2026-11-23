@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-23 15:06 — Jorge (con el agente) — rama `main` — lote 2026-11-22-tarde programado en YouTube y TikTok
+**Hecho**: YouTube MfV8ypLlIU0 (público), 3NbMXD2ksMI (15:55) y _8lkYb4lUG0 (16:55). TikTok 7711366247224462614 (15:25), 7711366830979419414 (15:55) y 7711367394031062294 (16:55), con texto y portada de imagen. `publicado.json`, `etiquetas.json` y fichas al día.
+**Aprendido**: (1) Justo después de subir, `subir_youtube.py` puede decir `"portada": "puesta"` y Studio enseñar igualmente un fotograma automático. Hay que mirarlo en Studio y repetir `--solo-portada` unos minutos después. (2) En la subida de TikTok, Cmd+A no selecciona el texto: el nombre del archivo se borra con Backspace y se comprueba con `innerText`. (3) El TikTok «02-sangre-de-estrellas_v1» (7710939317861944598, lote 22-11 mañana) está publicado sin texto.
+**Pendiente**: comentarios fijados (verificación de Studio), comentarios de TikTok y texto del TikTok de la sangre si lo quieren.
+
 ## 2026-11-23 14:55 — Agente 20:00 (Jorge) — rama `main` — disparo atrasado del turno del 22-11: nada que hacer
 **Qué pasó**: la tarea de las 19:52 del 22-11 se disparó hoy a las 14:53 (Madrid). El lote `2026-11-22-tarde` ya existe y está en revisión (v1 + 03 v2, correo `1a20895152b1ce72`), hecho por Jorge con el agente a las 14:25–14:34 en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf.
 **Hecho**: según AGENTE §1.3, no se duplica nada: ni lote, ni vídeos, ni correo. Tampoco se adelanta el lote `2026-11-23-tarde`: es del disparo de esta noche (20:00) y así no se pisa el chat de Jorge ni el navegador del Mac. Studio (§1.8) y comentarios (§8b) se dejan para ese turno por el mismo motivo.

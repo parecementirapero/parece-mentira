@@ -1,6 +1,6 @@
 # Lote 2026-11-22-tarde — estado
 
-**Estado**: 🟢 **«ok» de Jorge** (01 v1, 02 v1, 03 v2): en YouTube; TikTok en curso.
+**Estado**: 🟢 **programado en YouTube y TikTok** (01 v1, 02 v1, 03 v2).
 **Quién**: Jorge, con el agente, en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf. El turno de las 20:00 del 22-11 no se hizo, y Jorge pidió hacerlo hoy (23-11, ≈14:00) con sus temas.
 **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-22-tarde/` (Mac de Jorge): MP4, SRT, manifiestos, locuciones, alineaciones, portadas y `metadatos.json`.
 
@@ -50,6 +50,13 @@ Jorge, en el chat: «quiero que copies el estilo de los botes amarillos del dibu
   - 03 https://youtube.com/shorts/_8lkYb4lUG0 (16:55, v2)
 - TikTok: en TikTok Studio no estaba ninguno de los tres. La página de subida está abierta en el navegador integrado del Mac de Jorge. Los archivos están copiados en `PARA PUBLICAR/` para que Jorge los elija.
 
+- TikTok (2026-11-23 15:06): programados desde el navegador integrado con texto y portada (imagen que eligió Jorge en el selector).
+  - 01 https://www.tiktok.com/@parece.mentira85/video/7711366247224462614 (15:25)
+  - 02 https://www.tiktok.com/@parece.mentira85/video/7711366830979419414 (15:55)
+  - 03 https://www.tiktok.com/@parece.mentira85/video/7711367394031062294 (16:55)
+  - El editor de TikTok deja el nombre del archivo en el texto, y Cmd+A no lo selecciona: hay que borrarlo carácter a carácter. Comprobado con `innerText` antes de programar.
+- Portadas de YouTube (revisadas a petición de Jorge): justo después de subir, el script dijo «puesta», pero en Studio salía un fotograma automático (en el 01, «EL OTRO OJO»). Se volvió a lanzar `--solo-portada` en los tres y ahora salen las portadas buenas (comprobado en Studio → Detalles → Miniatura).
+
 ## Siguiente paso
-«ok» (o «ok 1 y 3») en este chat → AGENTE §8 desde el Mac de Jorge.
+Comentarios fijados (falta la verificación de YouTube Studio) y comentarios de TikTok.
 - Correo de revisión: `1a20895152b1ce72`.
