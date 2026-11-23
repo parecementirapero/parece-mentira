@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-23 14:55 — Agente 20:00 (Jorge) — rama `main` — disparo atrasado del turno del 22-11: nada que hacer
+**Qué pasó**: la tarea de las 19:52 del 22-11 se disparó hoy a las 14:53 (Madrid). El lote `2026-11-22-tarde` ya existe y está en revisión (v1 + 03 v2, correo `1a20895152b1ce72`), hecho por Jorge con el agente a las 14:25–14:34 en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf.
+**Hecho**: según AGENTE §1.3, no se duplica nada: ni lote, ni vídeos, ni correo. Tampoco se adelanta el lote `2026-11-23-tarde`: es del disparo de esta noche (20:00) y así no se pisa el chat de Jorge ni el navegador del Mac. Studio (§1.8) y comentarios (§8b) se dejan para ese turno por el mismo motivo.
+**Pruebas**: ninguna (no se tocó `motor/`).
+**Siguiente paso**: el «ok» del lote 2026-11-22-tarde se da en el chat de Jorge (enlace de arriba), no en este.
+
 ## 2026-11-23 14:34 — Jorge (con el agente) — rama `main` — lote 2026-11-22-tarde: 03 v2 (estilo y plano fijo)
 **Petición**: copiar el estilo del dibujo de la referencia («lo veo muy simple») y no cambiar de plano durante los botes.
 **Hecho**: muñecos propios con contorno grueso, brazos y ojos que siguen la pelota y astronauta que anda (`ilus_1122t.py` → `cartoon_todo`). El test es un solo plano fijo (`gen_03.py`, `CAM_TEST`; se anula el empujón automático del primer plano tras `construir`). Calidad 62/100 sin ❌. SHA `f6e541c23b54`. En el chat y en el Mac, con portada nueva.
