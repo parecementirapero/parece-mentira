@@ -8,7 +8,8 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 **Encargo**: el turno de las 20:00 del 22-11 no se hizo, y Jorge pidió hacerlo hoy con 3 temas: uno como «la imagen al revés», uno de amor y uno como un vídeo de otra cuenta (@datoserio: test de atención con un dinosaurio y el gorila). Se le avisó de que copiarlo no se puede (derechos y «contenido reutilizado») y eligió la **versión propia**.
 **Hecho**: 01 «Tu vista tiene un agujero» (punto ciego con prueba en pantalla, Mariotte y Luis XIV), 02 «Enamorarte cambia tu cerebro» (Fisher: área tegmental ventral y dopamina; Pisa 1999: serotonina como en el TOC), 03 «¿Cuántos botes cuentas?» (test propio: 11 botes, astronauta, fondo azul→naranja; Simons y Chabris 1999; radiólogos 2013). Fuentes y datos descartados en `guiones.md`. `ilus_1122t.py` (≈30 SVG nuevos más el lote del 22-11 mañana). Voz por API desde el Mac (créditos → 18.867). Render en la nube; MP4, portadas y textos en el Mac.
 **Pruebas**: `motor.guion` sin ❌; `construir` sin ⚠; ffprobe correcto; `motor.calidad --mp4` 45/55/58 sin ❌ (⚠ justificados en `estado.md`); hojas revisadas; 3 fichas. No se tocó `motor/`.
-**No hecho**: correo (se manda al acabar), Studio y respuestas a comentarios.
+**Correo**: `1a20895152b1ce72`.
+**No hecho**: Studio y respuestas a comentarios.
 **Siguiente paso**: «ok» de Jorge → AGENTE §8.
 
 ## 2026-11-22 15:06 — Agente 08:00 (Nico) (chat del lote) — rama `main` — lote 2026-11-22-manana programado; remate pendiente

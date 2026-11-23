@@ -37,3 +37,4 @@ SHA en el Mac = SHA del render. Voz oficial por API desde el Mac de Jorge; créd
 
 ## Siguiente paso
 «ok» (o «ok 1 y 3») en este chat → AGENTE §8 desde el Mac de Jorge.
+- Correo de revisión: `1a20895152b1ce72`.
