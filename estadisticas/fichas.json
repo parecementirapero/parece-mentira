@@ -1027,7 +1027,8 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "MfV8ypLlIU0"
  },
  "2026-11-22-tarde/02": {
   "lote": "2026-11-22-tarde",
@@ -1061,7 +1062,8 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "3NbMXD2ksMI"
  },
  "2026-11-22-tarde/03": {
   "lote": "2026-11-22-tarde",
@@ -1095,6 +1097,7 @@
   "voz": "clon",
   "reciclado": true,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "_8lkYb4lUG0"
  }
 }

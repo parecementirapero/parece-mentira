@@ -1,6 +1,6 @@
 # Lote 2026-11-22-tarde — estado
 
-**Estado**: 🟡 **en revisión** (v1). Falta el «ok».
+**Estado**: 🟢 **«ok» de Jorge** (01 v1, 02 v1, 03 v2): en YouTube; TikTok en curso.
 **Quién**: Jorge, con el agente, en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf. El turno de las 20:00 del 22-11 no se hizo, y Jorge pidió hacerlo hoy (23-11, ≈14:00) con sus temas.
 **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-22-tarde/` (Mac de Jorge): MP4, SRT, manifiestos, locuciones, alineaciones, portadas y `metadatos.json`.
 
@@ -41,6 +41,14 @@ Jorge, en el chat: «quiero que copies el estilo de los botes amarillos del dibu
 - Los 12,5 s del test son **un solo plano fijo**: sin cortes ni zoom. Se quita también el empujón automático de cámara del primer plano.
 - El fondo sigue pasando de azul a naranja (lo dice la voz). La misma voz; solo cambia el montaje. v1 (`6cdfb1160c94`) queda sustituida.
 - `motor.calidad` 62/100 sin ❌. Portada nueva sin el astronauta.
+
+## Publicación (2026-11-23 14:56)
+«ok, súbelos a youtube con 1 hora de programación cada uno, y a tiktok ábremelo para seleccionarlos y subirlos programados también» (Jorge).
+- YouTube por API desde el Mac de Jorge, sin duplicados y con las portadas puestas:
+  - 01 https://youtube.com/shorts/MfV8ypLlIU0 (público)
+  - 02 https://youtube.com/shorts/3NbMXD2ksMI (15:55)
+  - 03 https://youtube.com/shorts/_8lkYb4lUG0 (16:55, v2)
+- TikTok: en TikTok Studio no estaba ninguno de los tres. La página de subida está abierta en el navegador integrado del Mac de Jorge. Los archivos están copiados en `PARA PUBLICAR/` para que Jorge los elija.
 
 ## Siguiente paso
 «ok» (o «ok 1 y 3») en este chat → AGENTE §8 desde el Mac de Jorge.
