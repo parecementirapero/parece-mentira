@@ -74,6 +74,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - El baloncesto empezó con cestas de melocotones con fondo (diciembre de 1891, Springfield, James Naismith, invierno, trece reglas, barandilla de la galería a ≈3 m = altura de hoy, nueve contra nueve, balón de fútbol, uno a cero, escalera y palo, se le quitó el fondo) — lote 2026-11-22-manana (tendencia «bàsquet»)
 - Tu sangre viene de estrellas (hierro de supernova; hidrógeno → helio → carbono y oxígeno; el hierro acaba el combustible; calcio de los huesos; hidrógeno del Big Bang, ≈13.800 millones de años; oro del choque de estrellas de neutrones) — lote 2026-11-22-manana
 - Tus ojos ven el mundo al revés (el cristalino invierte la imagen en la retina; George Stratton, 1896, un ojo tapado y un tubo con lentes ocho días; adaptación a los pocos días y extrañeza al quitárselo) — lote 2026-11-22-manana
+- El punto ciego (nervio óptico sin células que detecten la luz, el cerebro lo rellena con el entorno y con el otro ojo, prueba de la cruz y el punto, Mariotte en el siglo XVII y la corte de Luis XIV) — lote 2026-11-22-tarde
+- El cerebro enamorado (Fisher: foto de la pareja frente a la de un conocido, área tegmental ventral, circuito de recompensa, dopamina, chocolate y drogas; Pisa 1999: veinte enamorados con la serotonina como en el TOC; la fase intensa no dura) — lote 2026-11-22-tarde
+- Test de atención: ceguera por falta de atención (los botes de la pelota amarilla con un astronauta que cruza; Simons y Chabris 1999, el gorila, ≈50 %; radiólogos 2013, 83 %) — lote 2026-11-22-tarde (formato pedido por Jorge, versión propia)
 
 ## Continuaciones prometidas
 
