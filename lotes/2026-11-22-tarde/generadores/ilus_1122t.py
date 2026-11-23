@@ -306,6 +306,110 @@ def bocadillo_num(nombre="bocadillo"):
     guardar(nombre, "".join(b), w, h)
 
 
+# ---------------------------------------------------------------------- 03 · estilo cartoon (v2, pedido por Jorge: «lo veo muy simple»)
+# Personajes propios: cuerpo de cápsula de color, cabeza grande con ojos enormes, contorno grueso. Brazos y pupilas van aparte
+# para que el montaje los mueva (los brazos giran desde el hombro: el centro del lienzo del brazo es el hombro).
+OL = "#1b1b2b"
+
+
+def muneco(nombre, cuerpo, piel="#ffe8d0", pelo="#3a2a1a", peinado=0, zapas="#ffffff"):
+    """Lienzo 360×760: cabeza en (180,150), hombros en (95,272) y (265,272), pies en y≈740. Sin brazos ni pupilas."""
+    w, h = 360, 760
+    b = ['<ellipse cx="180" cy="742" rx="120" ry="14" fill="#000" opacity="0.3"/>',
+         f'<rect x="118" y="500" width="50" height="220" rx="25" fill="#2a2a44" stroke="{OL}" stroke-width="8"/>',
+         f'<rect x="192" y="500" width="50" height="220" rx="25" fill="#2a2a44" stroke="{OL}" stroke-width="8"/>',
+         f'<ellipse cx="138" cy="726" rx="44" ry="20" fill="{zapas}" stroke="{OL}" stroke-width="8"/>',
+         f'<ellipse cx="222" cy="726" rx="44" ry="20" fill="{zapas}" stroke="{OL}" stroke-width="8"/>',
+         f'<rect x="100" y="250" width="160" height="290" rx="70" fill="{cuerpo}" stroke="{OL}" stroke-width="9"/>',
+         '<path d="M122 300 Q128 420 140 500" stroke="#ffffff" stroke-width="10" fill="none" opacity="0.25" stroke-linecap="round"/>',
+         f'<circle cx="180" cy="150" r="104" fill="{piel}" stroke="{OL}" stroke-width="9"/>']
+    if peinado == 0:
+        b.append(f'<path d="M82 128 Q90 40 180 40 Q270 40 278 128 Q240 84 180 92 Q120 84 82 128 Z" fill="{pelo}" stroke="{OL}" stroke-width="8"/>')
+    elif peinado == 1:
+        b.append(f'<path d="M150 50 Q170 10 190 48 Q210 14 222 56 Q200 46 180 60 Q160 46 150 50 Z" fill="{pelo}" stroke="{OL}" stroke-width="7"/>')
+    else:
+        b.append(f'<path d="M78 150 Q70 50 180 44 Q290 50 282 150 L290 240 Q260 200 262 120 Q180 100 98 120 Q100 200 70 240 Z" fill="{pelo}" stroke="{OL}" stroke-width="8"/>')
+    b += [f'<ellipse cx="146" cy="158" rx="30" ry="36" fill="#ffffff" stroke="{OL}" stroke-width="7"/>', f'<ellipse cx="214" cy="158" rx="30" ry="36" fill="#ffffff" stroke="{OL}" stroke-width="7"/>',
+          f'<path d="M118 112 Q146 100 170 112 M190 112 Q214 100 242 112" stroke="{OL}" stroke-width="7" fill="none" stroke-linecap="round"/>',
+          f'<path d="M160 214 Q180 228 200 214" stroke="{OL}" stroke-width="7" fill="none" stroke-linecap="round"/>',
+          '<ellipse cx="112" cy="196" rx="16" ry="9" fill="#ff8a8a" opacity="0.5"/><ellipse cx="248" cy="196" rx="16" ry="9" fill="#ff8a8a" opacity="0.5"/>']
+    guardar(nombre, "".join(b), w, h)
+
+
+def pupilas(nombre="pupilas"):
+    """Las dos pupilas (mismo lienzo y posición que la cabeza de muneco: 360×760 → solo se dibujan los ojos)."""
+    b = [f'<circle cx="146" cy="162" r="13" fill="{OL}"/><circle cx="214" cy="162" r="13" fill="{OL}"/>',
+         '<circle cx="150" cy="157" r="4" fill="#ffffff"/><circle cx="218" cy="157" r="4" fill="#ffffff"/>']
+    guardar(nombre, "".join(b), 360, 760)
+
+
+def brazo(nombre, color, piel="#ffe8d0"):
+    """Brazo de 200 px que cuelga desde el centro del lienzo (el hombro), para girarlo con «rot»."""
+    w, h = 120, 440
+    b = [f'<rect x="38" y="210" width="44" height="190" rx="22" fill="{color}" stroke="{OL}" stroke-width="8"/>',
+         f'<circle cx="60" cy="404" r="28" fill="{piel}" stroke="{OL}" stroke-width="8"/>']
+    guardar(nombre, "".join(b), w, h)
+
+
+def astronauta_cartoon(nombre, paso=0):
+    """Astronauta propio con contorno grueso; paso 0/1 cambia las piernas para andar."""
+    w, h = 420, 760
+    pl = [(150, 520, 120, 720), (250, 520, 280, 720)] if paso == 0 else [(150, 520, 180, 720), (250, 520, 230, 720)]
+    b = ['<ellipse cx="210" cy="742" rx="130" ry="14" fill="#000" opacity="0.3"/>',
+         f'<rect x="88" y="270" width="70" height="200" rx="30" fill="#c8ccd8" stroke="{OL}" stroke-width="8"/>']
+    for x0, y0, x1, y1 in pl:
+        b.append(f'<path d="M{x0} {y0} L{x1} {y1}" stroke="{OL}" stroke-width="70" stroke-linecap="round"/><path d="M{x0} {y0} L{x1} {y1}" stroke="#f4f4f8" stroke-width="54" stroke-linecap="round"/>')
+    b += [f'<rect x="120" y="250" width="180" height="300" rx="70" fill="#f4f4f8" stroke="{OL}" stroke-width="9"/>',
+          f'<rect x="170" y="330" width="80" height="60" rx="12" fill="#ffd23f" stroke="{OL}" stroke-width="6"/>',
+          f'<circle cx="210" cy="160" r="110" fill="#f4f4f8" stroke="{OL}" stroke-width="9"/>',
+          f'<ellipse cx="225" cy="165" rx="78" ry="64" fill="#ff9a3a" stroke="{OL}" stroke-width="8"/>',
+          '<path d="M180 130 Q210 110 245 125" stroke="#ffffff" stroke-width="12" fill="none" opacity="0.7" stroke-linecap="round"/>',
+          f'<path d="M290 300 Q340 380 320 450" stroke="{OL}" stroke-width="56" fill="none" stroke-linecap="round"/><path d="M290 300 Q340 380 320 450" stroke="#f4f4f8" stroke-width="40" fill="none" stroke-linecap="round"/>']
+    guardar(nombre, "".join(b), w, h)
+
+
+def bg_escenario(nombre, c1, c2, c3):
+    """Escenario con pared en degradado, foco cenital y suelo con rejilla en perspectiva."""
+    d = lg(f"{nombre}_p", (0, c1), (1, c2)) + lg(f"{nombre}_s", (0, c3), (1, "#0c0a1a"))
+    b = [f'<rect width="1080" height="1920" fill="url(#{nombre}_p)"/>',
+         '<ellipse cx="540" cy="1000" rx="520" ry="560" fill="#ffffff" opacity="0.10" filter="url(#blur40)"/>']
+    for k in range(5):
+        y = 360 + k * 230
+        b.append(f'<rect y="{y}" width="1080" height="4" fill="#ffffff" opacity="0.07"/>')
+    b.append(f'<rect y="1420" width="1080" height="500" fill="url(#{nombre}_s)"/>')
+    b.append('<rect y="1416" width="1080" height="8" fill="#ffffff" opacity="0.18"/>')
+    for k in range(-8, 9):  # rejilla en perspectiva
+        b.append(f'<path d="M{540 + k * 70} 1420 L{540 + k * 260} 1920" stroke="#ffffff" stroke-width="3" opacity="0.08"/>')
+    for k, y in enumerate([1470, 1540, 1640, 1780]):
+        b.append(f'<rect y="{y}" width="1080" height="3" fill="#ffffff" opacity="{0.05 + k * 0.02:.2f}"/>')
+    b.append('<ellipse cx="540" cy="1500" rx="420" ry="50" fill="#ffffff" opacity="0.07"/>')
+    b.append(grano())
+    guardar(nombre, "".join(b), defs=d)
+
+
+def pelota_cartoon(nombre, color):
+    w = h = 200
+    b = [f'<circle cx="100" cy="100" r="86" fill="{color}" stroke="{OL}" stroke-width="10"/>',
+         '<path d="M50 80 Q70 40 112 38" stroke="#ffffff" stroke-width="14" fill="none" opacity="0.7" stroke-linecap="round"/>']
+    guardar(nombre, "".join(b), w, h)
+
+
+def flecha_cartoon(nombre="flecha_abajo"):
+    w, h = 220, 260
+    b = [f'<path d="M70 10 H150 V130 H205 L110 245 L15 130 H70 Z" fill="#ffd23f" stroke="{OL}" stroke-width="10" stroke-linejoin="round"/>']
+    guardar(nombre, "".join(b), w, h)
+
+
+def cartoon_todo():
+    muneco("mu_a", "#ff5a4a", pelo="#3a2a1a", peinado=0); muneco("mu_b", "#3ac0b0", pelo="#e8a030", peinado=2)
+    muneco("mu_c", "#7a6aff", pelo="#2a1a10", peinado=1, zapas="#ffd23f"); muneco("mu_d", "#ff9ad0", pelo="#5a3a2a", peinado=0)
+    pupilas()
+    brazo("br_a", "#ff5a4a"); brazo("br_b", "#3ac0b0"); brazo("br_c", "#7a6aff"); brazo("br_d", "#ff9ad0")
+    astronauta_cartoon("astro_c0", 0); astronauta_cartoon("astro_c1", 1)
+    bg_escenario("esc_azul", "#1a2a6a", "#2f55b0", "#18203a"); bg_escenario("esc_naranja", "#8a2a3a", "#e0703a", "#2a1620")
+    pelota_cartoon("pel_amarilla", "#ffd23f"); pelota_cartoon("pel_blanca", "#f4f4f8"); flecha_cartoon()
+
+
 # ====================================================================== GENERAR
 def generar(dirsvg):
     m22 = _mod("lotes/2026-11-22-manana/generadores/ilus_1122m.py", "_ilus_1122m_t")
@@ -328,6 +432,7 @@ def generar(dirsvg):
     bg_escena("bg_escena_azul", "#2a4a9a", "#14204a", "#1a1a3a"); bg_escena("bg_escena_naranja", "#d0702a", "#6a2a10", "#2a1a14")
     pelota("pelota_amarilla", "#fff27a", "#e8b800"); pelota("pelota_blanca", "#ffffff", "#b8b8c8")
     gorila(); gorila("gorila_golpe", True); tac_pulmon(); tac_pulmon("tac_sin", False); caja_cerillas(); ojo_mira(); bocadillo_num()
+    cartoon_todo()
     return dirsvg
 
 

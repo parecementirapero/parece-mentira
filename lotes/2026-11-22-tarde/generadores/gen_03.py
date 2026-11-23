@@ -22,30 +22,38 @@ AZUL = ["#2a4a9a", "#14204a"]
 NAR = ["#d0702a", "#6a2a10"]
 OSC = ["#0a0a14", "#02020a"]
 
-# ------------------------------------------------------------------ la escena del test (tiempo absoluto)
-SUELO_Y, MANO_Y = 1490, 1062
-A_X, B_X = 386, 694                 # manos de los dos jugadores de la amarilla
-C_X, D_X, MANO2_Y, SUELO2_Y = 205, 875, 1092, 1468
-BOTES = [4.56, 5.36, 6.10, 6.85, 7.60, 8.35, 9.10, 9.80, 10.40, 10.90, 11.40]   # 11 botes (los «uno, dos» de la voz caen en los dos primeros)
+# ------------------------------------------------------------------ la escena del test (tiempo absoluto) · v2 estilo cartoon
+# v2 (Jorge: «lo veo muy simple» y «no cambies el plano en los botes, porque lía»): muñecos propios con contorno, brazos que
+# siguen la pelota, ojos que la miran, escenario con rejilla; un solo plano fijo durante todo el test.
+import math  # noqa: E402
+SUELO_Y, MANO_Y = 1462, 1240
+A_X, B_X = 470, 610                 # manos de los dos que se pasan la amarilla
+PA, PB = 330, 750                   # centros de esos dos muñecos (ancho 300, y=1200)
+PC, PD = 150, 930                   # los de atrás (ancho 250, y=1190), pelota blanca
+C_X, D_X, MANO2_Y, SUELO2_Y = 270, 810, 1230, 1420
+BOTES = [4.56, 5.36, 6.10, 6.85, 7.60, 8.35, 9.10, 9.80, 10.40, 10.90, 11.40]   # 11 botes
 FIN_TEST = 12.48
+CAM_TEST = cam(1.12, 1.12, (540, 1150))
+
+
+def _manos():
+    manos, lado = [(4.2, A_X)], A_X
+    for i, tb in enumerate(BOTES):
+        lado = B_X if lado == A_X else A_X
+        manos.append(((tb + BOTES[i + 1]) / 2 if i + 1 < len(BOTES) else tb + 0.36, lado))
+    return manos
+
+
+MANOS = _manos()
 
 
 def _amarilla(T):
-    """Posición de la pelota amarilla en el segundo absoluto T."""
-    # 1) pases por el aire antes de botar (A→B→A…), cada 0,9 s
     if T < 4.2:
         k = int(T // 0.9); u = (T - k * 0.9) / 0.9
         x0, x1 = (A_X, B_X) if k % 2 == 0 else (B_X, A_X)
-        return x0 + (x1 - x0) * u, MANO_Y - 320 * 4 * u * (1 - u)
-    # 2) botes: mano → suelo → otra mano
-    manos = [(4.2, A_X)]
-    lado = A_X
+        return x0 + (x1 - x0) * u, MANO_Y - 300 * 4 * u * (1 - u)
     for i, tb in enumerate(BOTES):
-        lado = B_X if lado == A_X else A_X
-        sig = BOTES[i + 1] if i + 1 < len(BOTES) else tb + 0.36
-        manos.append(((tb + sig) / 2 if i + 1 < len(BOTES) else tb + 0.36, lado))
-    for i, tb in enumerate(BOTES):
-        ta, xa = manos[i]; tc, xc = manos[i + 1]
+        ta, xa = MANOS[i]; tc, xc = MANOS[i + 1]
         if ta <= T <= tb:
             u = (T - ta) / (tb - ta)
             return xa + (540 - xa) * u, MANO_Y + (SUELO_Y - MANO_Y) * u * u
@@ -54,45 +62,85 @@ def _amarilla(T):
             return 540 + (xc - 540) * u, SUELO_Y - (SUELO_Y - MANO_Y) * (1 - (1 - u) ** 2)
     if T < 4.56:
         return A_X, MANO_Y
-    return manos[-1][1], MANO_Y
+    return MANOS[-1][1], MANO_Y
 
 
 def _blanca(T):
-    """La pelota blanca (la que despista) bota sin parar entre los dos jugadores de atrás, cada 0,7 s."""
     T = min(T, FIN_TEST - 0.3)
     k = int(T // 0.7); u = (T - k * 0.7) / 0.7
     x0, x1 = (C_X, D_X) if k % 2 == 0 else (D_X, C_X)
-    y = MANO2_Y + (SUELO2_Y - MANO2_Y) * (1 - abs(1 - 2 * u)) ** 0.8
-    return x0 + (x1 - x0) * u, y
+    return x0 + (x1 - x0) * u, MANO2_Y + (SUELO2_Y - MANO2_Y) * (1 - abs(1 - 2 * u)) ** 0.8
 
 
 def _astro(T):
-    """El astronauta cruza por detrás entre los segundos 5,4 y 10,8."""
     u = min(max((T - 5.4) / 5.4, 0), 1)
-    return -260 + 1600 * u, 1190 - 14 * abs(((T * 2.4) % 2) - 1)
+    return -260 + 1600 * u, 1185 - 10 * abs(((T * 2.4) % 2) - 1)
 
 
-def _keys(fn, d, paso=1 / 15):
-    t0 = D._V.ini
+def _muestras(d, paso=1 / 15):
     n = max(2, int(d / paso) + 1)
-    ks = []
-    for i in range(n + 1):
-        t = min(d, i * paso)
-        x, y = fn(t0 + t)
-        ks.append({"t": round(t, 3), "x": round(x, 1), "y": round(y, 1), "ease": "lineal"})
-    return ks
+    return [min(d, i * paso) for i in range(n + 1)]
+
+
+def _keys(fn, d):
+    t0 = D._V.ini
+    return [{"t": round(t, 3), "x": round(fn(t0 + t)[0], 1), "y": round(fn(t0 + t)[1], 1), "ease": "lineal"} for t in _muestras(d)]
+
+
+def _ang_brazo(T, hombro, idle, bola):
+    """Ángulo del brazo: apunta a la pelota cuando está cerca; si no, se balancea."""
+    bx, by = bola(T)
+    dx, dy = bx - hombro[0], by - hombro[1]
+    dist = math.hypot(dx, dy)
+    apunta = math.degrees(math.atan2(-dx, max(dy, 1)))
+    w = min(max((330 - dist) / 130, 0), 1)
+    return w * apunta + (1 - w) * (idle + 6 * math.sin(T * 5 + hombro[0]))
+
+
+def _muneco(nombre, brazo, x, y, ancho, bola, d, z, lado_dentro):
+    """Muñeco con brazos que siguen la pelota y pupilas que la miran."""
+    t0 = D._V.ini; k = ancho / 360
+    hy = y + (272 - 380) * k
+    h_in, h_out = (x + 85 * k * lado_dentro, hy), (x - 85 * k * lado_dentro, hy)
+    cab = (x, y + (150 - 380) * k)
+    def bob(T): return y + 4 * math.sin(T * 7 + x)
+    ks_cuerpo = [{"t": round(t, 3), "y": round(bob(t0 + t), 1), "ease": "lineal"} for t in _muestras(d, 0.1)]
+    ks_in = [{"t": round(t, 3), "rot": round(_ang_brazo(t0 + t, h_in, -18 * lado_dentro, bola), 1), "ease": "lineal"} for t in _muestras(d)]
+    ks_out = [{"t": round(t, 3), "rot": round(14 * lado_dentro + 8 * math.sin((t0 + t) * 4 + x), 1), "ease": "lineal"} for t in _muestras(d, 0.1)]
+    def pup(T):
+        bx, by = bola(T)
+        return x + max(-11, min(11, (bx - cab[0]) / 25)), bob(T) + max(-8, min(8, (by - cab[1]) / 40))
+    ks_pup = [{"t": round(t, 3), "x": round(pup(t0 + t)[0], 1), "y": round(pup(t0 + t)[1], 1), "ease": "lineal"} for t in _muestras(d)]
+    ab = 120 * k
+    return [IMG(brazo, ancho=ab, x=h_out[0], y=h_out[1], z=z - 0.01, keys=ks_out),
+            IMG(nombre, ancho=ancho, x=x, y=y, z=z, keys=ks_cuerpo),
+            IMG("pupilas", ancho=ancho, x=x, y=y, z=z + 0.005, keys=ks_pup),
+            IMG(brazo, ancho=ab, x=h_in[0], y=h_in[1], z=z + 0.01, keys=ks_in)]
 
 
 def escena(d, zoom=False):
-    """Todos los elementos de la escena del test para este plano."""
+    """La escena del test (mismo instante en cualquier plano)."""
     t0 = D._V.ini
     def op_nar(T): return min(max((T - 2.5) / 9.0, 0), 1)
-    return [BG("bg_escena_azul"), {**BG("bg_escena_naranja", z=0.06), "keys": [{"t": 0, "op": op_nar(t0), "ease": "lineal"}, {"t": d, "op": op_nar(t0 + d)}]},
-            IMG("astronauta", ancho=300, z=0.3, keys=_keys(_astro, d)),
-            IMG("jugador_b", ancho=260, x=C_X - 40, y=1205, z=0.35), IMG("jugador_a2", ancho=260, x=D_X + 40, y=1205, z=0.35, ex=-1),
-            IMG("pelota_blanca", ancho=70, z=0.4, keys=_keys(_blanca, d)),
-            IMG("jugador_a2", ancho=300, x=A_X - 56, y=1219, z=0.5), IMG("jugador_b", ancho=300, x=B_X + 56, y=1219, z=0.5, ex=-1),
-            IMG("pelota_amarilla", ancho=90, z=0.6, keys=_keys(_amarilla, d))]
+    def paso(T): return 1 if int(T * 4) % 2 else 0
+    ts = _muestras(d)
+    return [BG("esc_azul"), {**BG("esc_naranja", z=0.06), "keys": [{"t": 0, "op": op_nar(t0), "ease": "lineal"}, {"t": d, "op": op_nar(t0 + d)}]},
+            IMG("astro_c0", ancho=290, z=0.3, keys=[{**k, "op": 1 - paso(t0 + k["t"])} for k in _keys(_astro, d)]),
+            IMG("astro_c1", ancho=290, z=0.3, keys=[{**k, "op": paso(t0 + k["t"])} for k in _keys(_astro, d)]),
+            *_muneco("mu_c", "br_c", PC, 1190, 250, _blanca, d, 0.35, 1), *_muneco("mu_d", "br_d", PD, 1190, 250, _blanca, d, 0.35, -1),
+            IMG("pel_blanca", ancho=70, z=0.42, keys=_keys(_blanca, d)),
+            *_muneco("mu_a", "br_a", PA, 1200, 300, _amarilla, d, 0.5, 1), *_muneco("mu_b", "br_b", PB, 1200, 300, _amarilla, d, 0.5, -1),
+            IMG("pel_amarilla", ancho=86, z=0.6, keys=_keys(_amarilla, d))]
+
+
+def quietos(extra=(), op=1.0):
+    """Los dos jugadores de la amarilla quietos (para los planos después del test)."""
+    els = []
+    for nm, br, x, lado in (("mu_a", "br_a", PA, 1), ("mu_b", "br_b", PB, -1)):
+        k = 300 / 360; hy = 1200 + (272 - 380) * k
+        els += [IMG(br, ancho=100, x=x - 71 * lado, y=hy, z=0.49, rot=14 * lado, op=op), IMG(nm, ancho=300, x=x, y=1200, z=0.5, op=op),
+                IMG("pupilas", ancho=300, x=x, y=1200, z=0.505, op=op), IMG(br, ancho=100, x=x + 71 * lado, y=hy, z=0.51, rot=-18 * lado, op=op)]
+    return els + list(extra)
 
 
 def gente(n=10, marcados=(), y=1300):
@@ -106,47 +154,18 @@ def gente(n=10, marcados=(), y=1300):
 
 
 # ================================================================== PLANOS · el test
-@v.plano(0, "gancho: la pelota amarilla vuela entre dos jugadores; la blanca bota detrás")
+@v.plano(0, "el test entero en UN SOLO PLANO FIJO (sin cortes ni zoom: Jorge, «no cambies el plano en los botes»)")
 def _(d):
-    return P(AZUL, escena(d), cam(1.3, 1.36, (540, 1230)), vineta=0.45, sfx=[(0.02, "pop", -18)])
-
-
-@v.plano(4, "solo la amarilla: acercamiento a la pelota amarilla")
-def _(d):
-    return P(AZUL, escena(d), cam(1.6, 1.66, (540, 1250)), "corte", hud=[rotulo(0.05, d - 0.05, "SOLO LA AMARILLA", tam=80, color="#141414", capsula="#ffd23fe6", y=560)],
-             sfx=[(0.05, "roce", -22)])
-
-
-@v.plano(10, "uno, dos… sigue tú: plano general, empiezan los botes")
-def _(d):
-    return P(AZUL, escena(d), cam(1.3, 1.33, (540, 1230)), "corte")
-
-
-@v.plano(14, "concéntrate, que va rápido: un poco más cerca")
-def _(d):
-    return P(AZUL, escena(d), cam(1.5, 1.55, (540, 1260)), "corte")
-
-
-@v.plano(18, "ahora cambia de mano: plano general")
-def _(d):
-    return P(AZUL, escena(d), cam(1.3, 1.34, (540, 1230)), "corte")
-
-
-@v.plano(22, "más deprisa: acercamiento")
-def _(d):
-    return P(NAR, escena(d), cam(1.6, 1.65, (540, 1270)), "corte")
-
-
-@v.plano(24, "y ya está: plano general, la pelota se queda en la mano")
-def _(d):
-    return P(NAR, escena(d), cam(1.3, 1.32, (540, 1230)), "corte", sfx=[(0.2, "ding", -20)])
+    return P(["#1a2a6a", "#2f55b0"], escena(d), CAM_TEST, vineta=0.45, energia=0.6,
+             hud=[{**rotulo(1.9, 4.4, "SOLO LA AMARILLA", tam=78, color="#141414", capsula="#ffd23fe6", y=560), "fijo": True, "sin_pop": True}],
+             sfx=[(0.02, "pop", -18)] + [(tb, "golpe", -22) for tb in BOTES])
 
 
 # ================================================================== PLANOS · la revelación
 @v.plano(27, "¿cuántos botes has contado?: el bocadillo aparece sobre la escena quieta")
 def _(d):
-    return P(NAR, [BG("bg_escena_naranja"), IMG("jugador_a2", ancho=300, x=A_X - 56, y=1219, z=0.5), IMG("jugador_b", ancho=300, x=B_X + 56, y=1219, z=0.5, ex=-1),
-                   IMG("pelota_amarilla", ancho=90, x=B_X, y=MANO_Y, z=0.6, keys=late(0.1, 2)), IMG("bocadillo", ancho=520, x=540, y=760, z=0.7, keys=aparece(0.3))],
+    return P(NAR, [BG("esc_naranja"), *quietos(), IMG("pel_amarilla", ancho=86, x=B_X, y=MANO_Y, z=0.6, keys=late(0.1, 2)),
+                   IMG("bocadillo", ancho=520, x=540, y=760, z=0.7, keys=aparece(0.3))],
              cam(1.0, 1.05, (540, 1100)), "corte", hud=[amarillo(0.05, d - 0.05, "¿CUÁNTOS?", y=1640 - 300, tam=120, color="#ffd23f")], sfx=[(0.3, "pop", -18)])
 
 
@@ -163,17 +182,16 @@ def _(d):
 
 @v.plano(37, "¿has visto al astronauta?: la escena repetida con el astronauta rodeado")
 def _(d):
-    return P(AZUL, [BG("bg_escena_azul"), {**BG("bg_escena_naranja", z=0.06), "op": 0.6},
-                    IMG("astronauta", ancho=300, z=0.3, keys=[{"t": 0, "x": 380, "y": 1190}, {"t": d, "x": 700, "y": 1190, "ease": "lineal"}]),
-                    IMG("jugador_a2", ancho=300, x=A_X - 56, y=1219, z=0.5, op=0.45), IMG("jugador_b", ancho=300, x=B_X + 56, y=1219, z=0.5, ex=-1, op=0.45),
+    return P(AZUL, [BG("esc_azul"), {**BG("esc_naranja", z=0.06), "op": 0.6},
+                    IMG("astro_c0", ancho=290, z=0.3, keys=[{"t": 0, "x": 380, "y": 1185}, {"t": d, "x": 700, "y": 1185, "ease": "lineal"}]),
+                    *quietos(op=0.45),
                     {**senala(540, 1180, 0.3, d - 0.1, 240, MAGENTA), "keys": [{"t": 0.3, "escala": 1.6, "op": 0, "x": 460}, {"t": 0.55, "escala": 1.0, "op": 1, "ease": "golpe"}, {"t": d, "x": 700, "op": 1}]}],
              cam(1.0, 1.06, (540, 1150)), "corte", hud=[amarillo(0.4, d - 0.05, "¿EL ASTRONAUTA?", y=560, tam=110, color=MAGENTA)], sfx=[(0.3, "impacto", -16)])
 
 
 @v.plano(46, "¿y que el fondo ha pasado de azul a naranja?: el fondo cambia ante tus ojos")
 def _(d):
-    return P(AZUL, [BG("bg_escena_azul"), {**BG("bg_escena_naranja", z=0.06), "keys": [{"t": 0, "op": 0}, {"t": d * 0.8, "op": 1, "ease": "suave"}]},
-                    IMG("jugador_a2", ancho=300, x=A_X - 56, y=1219, z=0.5), IMG("jugador_b", ancho=300, x=B_X + 56, y=1219, z=0.5, ex=-1)],
+    return P(AZUL, [BG("esc_azul"), {**BG("esc_naranja", z=0.06), "keys": [{"t": 0, "op": 0}, {"t": d * 0.8, "op": 1, "ease": "suave"}]}, *quietos()],
              cam(1.0, 1.04, (540, 1100)), "corte", hud=[rotulo(0.1, d * 0.45, "AZUL", tam=120, color="#ffffff", capsula="#2a4a9ae6", y=560),
                                                        rotulo(d * 0.5, d - 0.05, "NARANJA", tam=120, color="#141414", capsula="#ff9a3ae6", y=560)], sfx=[(0.1, "brillo", -20)])
 
@@ -267,12 +285,27 @@ def _(d):
 
 @v.plano(152, "comenta cuántos botes contaste: la escena del test otra vez (bucle) con el bocadillo")
 def _(d):
-    return P(AZUL, [BG("bg_escena_azul"), IMG("jugador_a2", ancho=300, x=A_X - 56, y=1219, z=0.5), IMG("jugador_b", ancho=300, x=B_X + 56, y=1219, z=0.5, ex=-1),
-                    IMG("pelota_amarilla", ancho=90, z=0.6, keys=[{"t": 0, "x": A_X, "y": MANO_Y}, {"t": d * 0.5, "x": 540, "y": MANO_Y - 320, "ease": "salida"}, {"t": d, "x": B_X, "y": MANO_Y, "ease": "entrada"}]),
+    return P(AZUL, [BG("esc_azul"), *quietos(),
+                    IMG("pel_amarilla", ancho=86, z=0.6, keys=[{"t": 0, "x": A_X, "y": MANO_Y}, {"t": d * 0.5, "x": 540, "y": MANO_Y - 320, "ease": "salida"}, {"t": d, "x": B_X, "y": MANO_Y, "ease": "entrada"}]),
                     IMG("bocadillo", ancho=460, x=540, y=700, z=0.7, keys=aparece(0.2))],
              cam(1.0, 1.04, (540, 1150)), "corte", sfx=[(0.2, "pop", -18)])
 
 
-v.construir("2026-11-22-tarde-03-test-astronauta", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 83, "db": -14},
+import json as _json  # noqa: E402
+_v_construir = v.construir
+
+
+def _construir_sin_empujon(*a, **k):
+    r = _v_construir(*a, **k)
+    ruta = os.path.join(sys.argv[1], "episodio.json")
+    ep = _json.load(open(ruta))
+    ep["escenas"][0]["camara"] = {**ep["escenas"][0]["camara"], "zoom": list(CAM_TEST["zoom"])}
+    _json.dump(ep, open(ruta, "w"), ensure_ascii=False)
+    print("  ⇢ plano del test fijo: sin el empujón automático de cámara (petición de Jorge)")
+    return r
+
+
+v.construir = _construir_sin_empujon
+v.construir("2026-11-22-tarde-03-test-astronauta", version=2, bucle=0.35, musica={"generar": "curiosidad", "semilla": 83, "db": -14},
             claves=["botes", "amarillos", "amarilla", "uno", "dos", "rápido", "mano", "deprisa", "contado", "astronauta", "azul", "naranja", "ceguera", "atención",
                     "noventa", "baloncesto", "gorila", "pecho", "mitad", "trece", "radiólogos", "cerillas", "pulmón", "ochenta", "tres", "ojos", "comenta"])

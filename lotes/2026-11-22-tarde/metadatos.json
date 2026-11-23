@@ -101,7 +101,7 @@
   }
  },
  "03": {
-  "archivo": "03-test-astronauta_v1.mp4",
+  "archivo": "03-test-astronauta_v2.mp4",
   "titulo": "¿Cuántos botes cuentas? Test de atención 🟡👨‍🚀",
   "youtube": {
    "titulo": "¿Cuántos botes cuentas? Test de atención 🟡👨‍🚀 #Shorts",
@@ -134,16 +134,16 @@
    "experimento": "formato interactivo (test de atención; versión propia de un formato visto en otra cuenta)",
    "alcance": "universal",
    "tendencia": "no",
-   "portada": "centro"
+   "portada": "arriba"
   },
   "locucion": "Cuenta los botes amarillos. Solo la amarilla, no te despistes. Uno, dos… sigue tú. Concéntrate, que va rápido. Ahora cambia de mano. Más deprisa. Y ya está. ¿Cuántos botes has contado? Apúntalo. Ahora, la pregunta de verdad: ¿has visto al astronauta que ha cruzado por detrás? ¿Y que el fondo ha pasado de azul a naranja? Si no, tranquilo: le pasa a casi todo el mundo. Se llama ceguera por falta de atención. En mil novecientos noventa y nueve, dos psicólogos pidieron a la gente que contara pases de baloncesto. En mitad del vídeo, alguien disfrazado de gorila cruzaba, se paraba y se golpeaba el pecho. Más o menos la mitad no lo vio. En dos mil trece lo probaron con radiólogos: escondieron un gorila del tamaño de una caja de cerillas en un escáner de pulmón. Ochenta y tres de cada cien no lo vieron, aunque sus ojos pasaron por encima. Comenta cuántos botes contaste.",
   "portada": {
    "texto": "¿CUÁNTOS BOTES CUENTAS?",
    "clave": "BOTES",
    "archivo": "03-portadas/portada.jpg",
-   "t": 3.75,
-   "diseno": "centro",
-   "motivo": "Escena del test con la pelota amarilla y la pregunta; no enseña al astronauta para no estropear la sorpresa"
+   "t": 1.75,
+   "diseno": "arriba",
+   "motivo": "Los cuatro muñecos con la pelota amarilla en las manos y la pregunta arriba; no se ve al astronauta para no estropear la sorpresa"
   }
  }
 }

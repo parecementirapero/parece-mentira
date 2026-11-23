@@ -12,7 +12,7 @@
 |---|---|---|---|---|---|
 | 01 | Tu vista tiene un AGUJERO (haz la prueba) 👁️⚫ | 50,6 s | 1d07f855b04e | 45/100 | «TU VISTA TIENE UN AGUJERO» · abajo · 0,75 s |
 | 02 | Enamorarte cambia tu cerebro ❤️🧠 | 58,8 s | 27650c578d80 | 55/100 | «ENAMORARTE CAMBIA TU CEREBRO» · dato · 19,75 s |
-| 03 | ¿Cuántos botes cuentas? Test de atención 🟡👨‍🚀 | 58,5 s | 6cdfb1160c94 | 58/100 | «¿CUÁNTOS BOTES CUENTAS?» · centro · 3,75 s |
+| 03 | ¿Cuántos botes cuentas? Test de atención 🟡👨‍🚀 — **v2** | 58,5 s | f6e541c23b54 | 62/100 | «¿CUÁNTOS BOTES CUENTAS?» · arriba · 1,75 s |
 
 SHA en el Mac = SHA del render. Voz oficial por API desde el Mac de Jorge; créditos de ElevenLabs al acabar: **18.867**. El 02 lleva versión corta: se quita «Pues eso.» para no pasar de 60 s.
 
@@ -34,6 +34,13 @@ SHA en el Mac = SHA del render. Voz oficial por API desde el Mac de Jorge; créd
 - `motor.calidad --mp4`: **sin ❌**. Notas 45/55/58 (`calidad-0N.md`). Los ⚠ son de densidad (menos elementos por plano que la referencia, 24–26 planos) y del tramo quieto de la prueba del 01, que es a propósito.
 - Hojas de fotogramas revisadas. Arreglado antes del render: cámaras del test más cerca, rótulo largo de «ceguera por falta de atención» partido en dos, «⚠» que la fuente no tiene, versión corta del 02 (60,1 s → 58,8 s) y tiempos de lectura.
 - Fichas de variables: 3 nuevas.
+
+## v2 del 03 (2026-11-23 14:34)
+Jorge, en el chat: «quiero que copies el estilo de los botes amarillos del dibujo que te he mandado, lo veo muy simple el nuestro» y «no cambies el plano en los botes, porque lía».
+- Estilo nuevo **propio**: dibujo plano con contorno grueso, como pidió Jorge. Muñecos de cápsula de colores con cabeza grande y ojos enormes, brazos que siguen la pelota, pupilas que la miran, cuerpo que se balancea, astronauta con dos pasos y escenario con rejilla en el suelo. No se calcan los personajes de la otra cuenta (muñecos blancos de palo, disfraz de dinosaurio, comba).
+- Los 12,5 s del test son **un solo plano fijo**: sin cortes ni zoom. Se quita también el empujón automático de cámara del primer plano.
+- El fondo sigue pasando de azul a naranja (lo dice la voz). La misma voz; solo cambia el montaje. v1 (`6cdfb1160c94`) queda sustituida.
+- `motor.calidad` 62/100 sin ❌. Portada nueva sin el astronauta.
 
 ## Siguiente paso
 «ok» (o «ok 1 y 3») en este chat → AGENTE §8 desde el Mac de Jorge.

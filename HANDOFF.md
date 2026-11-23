@@ -4,6 +4,11 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-23 14:34 — Jorge (con el agente) — rama `main` — lote 2026-11-22-tarde: 03 v2 (estilo y plano fijo)
+**Petición**: copiar el estilo del dibujo de la referencia («lo veo muy simple») y no cambiar de plano durante los botes.
+**Hecho**: muñecos propios con contorno grueso, brazos y ojos que siguen la pelota y astronauta que anda (`ilus_1122t.py` → `cartoon_todo`). El test es un solo plano fijo (`gen_03.py`, `CAM_TEST`; se anula el empujón automático del primer plano tras `construir`). Calidad 62/100 sin ❌. SHA `f6e541c23b54`. En el chat y en el Mac, con portada nueva.
+**Siguiente paso**: «ok» de Jorge.
+
 ## 2026-11-23 14:25 — Jorge (con el agente, chat del lote 2026-11-20-tarde) — rama `main` — lote 2026-11-22-tarde v1 en revisión
 **Encargo**: el turno de las 20:00 del 22-11 no se hizo, y Jorge pidió hacerlo hoy con 3 temas: uno como «la imagen al revés», uno de amor y uno como un vídeo de otra cuenta (@datoserio: test de atención con un dinosaurio y el gorila). Se le avisó de que copiarlo no se puede (derechos y «contenido reutilizado») y eligió la **versión propia**.
 **Hecho**: 01 «Tu vista tiene un agujero» (punto ciego con prueba en pantalla, Mariotte y Luis XIV), 02 «Enamorarte cambia tu cerebro» (Fisher: área tegmental ventral y dopamina; Pisa 1999: serotonina como en el TOC), 03 «¿Cuántos botes cuentas?» (test propio: 11 botes, astronauta, fondo azul→naranja; Simons y Chabris 1999; radiólogos 2013). Fuentes y datos descartados en `guiones.md`. `ilus_1122t.py` (≈30 SVG nuevos más el lote del 22-11 mañana). Voz por API desde el Mac (créditos → 18.867). Render en la nube; MP4, portadas y textos en el Mac.
