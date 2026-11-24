@@ -1,6 +1,7 @@
 # Vídeo largo «¿Qué pasaría si te encerraras 500 días en una cueva sin reloj?» — estado
 
-**Estado**: 🟡 **v1 en revisión**. Falta el «ok» de Nico. No se ha publicado nada.
+**Estado**: 🟢 **YouTube público** (https://youtu.be/cA3b0FdYA8A, subido el 24-11 a las 11:27 tras el «ok» de Nico). TikTok: parte 1 ahora y las demás cada 2 h (13:30, 15:30, 17:30, 19:30), en curso.
+- Portada de YouTube: `portada-16x9.jpg`. La API dio 429 («too many thumbnails recently»), así que se pone a mano en Studio.
 **Quién**: Nico (encargo del 24-11), con el agente, en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf (el de Jorge; misma cuenta).
 **Carpeta local**: `Documents/Parece Mentira/lotes/largo-cueva-500-dias/` en el Mac de Jorge. Ahí están:
 - los 5 MP3 de voz y sus alineaciones,
