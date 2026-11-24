@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-24 01:45 — Jorge (con el agente) (lote 2026-11-23-tarde publicado y programado)_
+_Última actualización: 2026-11-24 05:30 — Nico (con el agente) (vídeo largo «500 días en una cueva» en revisión)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -20,11 +20,12 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Publicación por API de Instagram y TikTok (`publicar/`) | 🟡 código listo y probado en simulación (2026-11-17), **sin activar**: falta la puesta en marcha de `publicar/README.md`. Instagram publicará el Reel entero; TikTok solo puede dejar un borrador en la bandeja (se termina en el móvil) y depende de una prueba real. Hasta entonces, navegador |
 | Agente diario | ✅ manual en `AGENTE.md` (desde 2026-11-16: gancho en el fotograma 0, portadas elegidas por el agente sin «ok» §6b, imágenes reales de Openverse en prueba §5b) |
 | Openverse (`motor/openverse.py`) | 🟡 en el Mac de Nico falla la descarga: `thumb.wikimedia.org` da 403 (2026-11-17). Antes: ✅ probado de verdad en el Mac de Jorge (moái CC0 de Commons); desde la nube Wikimedia da 429 → se ejecuta en los Macs. Experimento «plano real» desde el lote 2026-11-17-manana |
-| Motor de montaje (v2.3) | ✅ en `main` (karaoke arriba, rótulos, SVG, música, −19 LUFS; v2.3: gancho entero en el fotograma 0) |
+| Motor de montaje (v2.3) | ✅ en `main` (karaoke arriba, rótulos, SVG, música, −19 LUFS; v2.3: gancho entero en el fotograma 0). **Desde 2026-11-24 también en horizontal 16:9** con `MOTOR_FORMATO=16:9` (subtítulo abajo, zonas seguras, hoja y calidad) |
 | Tarea programada 08:00 (Mac de Nico) | ✅ creada (`trig_01NLm6xzEFknTZ5Z7Uwr1qjU`, carpetas `Documents/Parece Mentira` + `Documents/Codex/Parece Mentira`); primera ejecución 2026-11-16 a las 07:52 |
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- En revisión: **vídeo largo «¿Qué pasaría si te encerraras 500 días en una cueva sin reloj?»** (`lotes/largo-cueva-500-dias/`, encargo de Nico). 8:31 en horizontal 16:9 para YouTube, con 294 planos, más 5 partes verticales para TikTok (1:47, 1:49, 1:41, 1:21 y 1:53) sacadas del mismo audio. Vídeos en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf y en `Documents/Parece Mentira/lotes/largo-cueva-500-dias/` (Mac de Jorge). Falta el «ok» de Nico. ElevenLabs: quedan 15.648 caracteres.
 - Lote **2026-11-23-tarde** publicado y programado (YouTube y TikTok: 01 ya, 02 a las 10:00, 03 a las 12:00 del 24-11). ElevenLabs: quedan 17.947 caracteres (se renueva el 15-12).
 - Antes en revisión (ya programado): lote **2026-11-22-tarde** v1 (temas de Jorge: el punto ciego, el cerebro enamorado y un test de atención en versión propia de un formato de otra cuenta). Vídeos en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf y en `Documents/Parece Mentira/lotes/2026-11-22-tarde/` (Mac de Jorge). ElevenLabs: quedan 18.867 caracteres.
 - Sin hacer: lote **2026-11-22-manana** — ordenador no disponible (la ejecución de las 10:18 no tuvo el Mac de Nico). Tendencias del día en `lotes/tendencias/2026-11-22.md` (baloncesto, luz a precio negativo, fruta en la frontera: sin usar). Se retoma en https://claude.ai/code/session_019BG1dJVmPqrtbuKRGs1cfJ.

@@ -35,6 +35,13 @@ Formato: decisión — fecha — quién — motivo. Si una decisión cambia, se 
 
 ## Estilo de los vídeos
 - Formato vertical 9:16, a pantalla completa (la ilustración ocupa todo el reel, sin panel/«cuadrito» en medio). — 2026-11-14 — Nico
+- **Vídeos largos en horizontal 16:9** (2026-11-24 — Nico, encargo del vídeo largo «500 días en una cueva»):
+  - Los vídeos largos de YouTube van en 1920×1080 a 30 fps, y sus partes para TikTok en vertical 9:16, sacadas del MISMO audio: la voz se genera una vez.
+  - Cada formato se compone para su pantalla, sin recortar el otro por el centro y sin bandas: cada plano se escribe una vez y `comun.adaptar` del lote lo recoloca con fondos dibujados en los dos formatos.
+  - En el horizontal el subtítulo va abajo centrado (y≈975) y no hay columna de botones.
+  - Motor: `MOTOR_FORMATO=16:9` (`motor/core.py`); `denso`, `render` (hoja) y `calidad` usan el formato de ese proceso.
+  - Los Shorts siguen siendo verticales.
+  - Motivo: un vídeo largo de YouTube se ve en horizontal y Nico lo quiere también en TikTok por partes.
 - ~~Sin título arriba, sin rótulos blancos con borde azul; solo subtítulo blanco abajo. — 2026-11-14 — Nico~~
 - Sin título fijo ni rótulos blancos con borde azul. **Subtítulo arriba (≈18 % de alto), tipo karaoke**: palabras dichas en gris translúcido, la actual en blanco negrita, palabras clave dentro de una cápsula oscura. Se permiten rótulos de dato integrados en la escena (cifra + unidad, barras con etiqueta). — 2026-11-15 — Nico — motivo: así lo hacen los 13 vídeos objetivo (`motor/OBJETIVO.md`)
 - Duración objetivo **45–60 s** (≈130–170 palabras de locución). — 2026-11-15 — Nico — motivo: mediana de los vídeos objetivo ≈57 s

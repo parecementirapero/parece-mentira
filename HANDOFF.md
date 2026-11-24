@@ -4,6 +4,31 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-24 05:30 — Nico (con el agente, chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf) — rama `main` — vídeo largo «500 días en una cueva» v1 en revisión
+**Encargo**: el prompt de Nico «video cueva 500 dias». Un vídeo largo de 8–9 min en 16:9 para YouTube y 5 partes en 9:16 para TikTok, del mismo audio y con la voz en un solo intento.
+**Hecho**:
+- **Voz**: 5 bloques con contexto, guion exacto, alineación idéntica al texto. Créditos 17.947 → 15.648.
+- **Motor**: horizontal con `MOTOR_FORMATO=16:9`. Pasa `motor.prueba`.
+- **Arte y montaje**:
+  - 190 SVG propios, con fondos en los dos formatos.
+  - `comun.adaptar` compone cada plano para las dos pantallas.
+  - 294 planos escritos por partes (`planos_p1…p5.py`).
+  - Marcas de TikTok (`marcas.py`) y arreglo del fotograma 0 de las partes 2–5 (`parche_inicios.py`).
+  - Corte exacto (`partir.py`): las partes suman 15.356 fotogramas, el total.
+- **Entregas**: MP4 en el chat y en el Mac de Jorge (`lotes/largo-cueva-500-dias/`). Detalle y SHA en `lotes/largo-cueva-500-dias/estado.md`.
+**Pruebas**:
+- `construir` sin avisos de lectura.
+- `motor.calidad --mp4` sin ❌ en los dos formatos; los ⚠ están justificados en `estado.md`.
+- Sincronía comprobada en los minutos 1, 4 y 8.
+- Ningún corte de parte cae dentro de una palabra.
+**Aprendido**: render de 8,5 min en la nube (2 núcleos, 8 GB):
+- En paralelo se queda sin memoria: hay que renderizar por tramos con `Episodio.render(desde, hasta, procesos=1)` y unir.
+- El grano hace que CRF 19 pese más de 500 MB: para entregar se recodifica a 5,5–6 Mbps.
+**Pendiente**:
+- «ok» de Nico y publicación (YouTube por API y TikTok con el navegador integrado).
+- Las miniaturas de YouTube del 02 y el 03 del lote 2026-11-23-tarde: reintento programado a las 08:30 en este chat.
+**Siguiente paso**: que Nico vea el vídeo en el chat.
+
 ## 2026-11-24 01:35 — Agente 20:00 (Jorge) — rama `main` — disparo atrasado del turno del 23-11: nada que hacer
 **Qué pasó**: la tarea de las 19:52 del 23-11 se disparó hoy 24-11 a la 01:33 (Madrid). El lote `2026-11-23-tarde` ya existe y está publicado y programado (YouTube y TikTok), hecho por Jorge con el agente entre las 00:47 y la 01:45 en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf.
 **Hecho**: según AGENTE §1.3, no se duplica nada: ni lote, ni vídeos, ni correo. No se adelanta el lote `2026-11-24-tarde` (es del disparo de esta noche a las 20:00) ni se toca el navegador del Mac (repaso de miniaturas en Studio y comentarios), para no pisar el chat de Jorge, que paró esa orden.

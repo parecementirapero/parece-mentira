@@ -1,0 +1,51 @@
+{
+ "fotogramas_total": 15356,
+ "suma_partes": 15356,
+ "partes": [
+  {
+   "parte": 1,
+   "inicio_s": 0.0,
+   "fin_s": 107.333,
+   "duracion_s": 107.333,
+   "fotogramas": 3220,
+   "fotogramas_esperados": 3220,
+   "archivo": "parte-1-de-5.mp4"
+  },
+  {
+   "parte": 2,
+   "inicio_s": 107.333,
+   "fin_s": 216.267,
+   "duracion_s": 108.933,
+   "fotogramas": 3268,
+   "fotogramas_esperados": 3268,
+   "archivo": "parte-2-de-5.mp4"
+  },
+  {
+   "parte": 3,
+   "inicio_s": 216.267,
+   "fin_s": 317.533,
+   "duracion_s": 101.267,
+   "fotogramas": 3038,
+   "fotogramas_esperados": 3038,
+   "archivo": "parte-3-de-5.mp4"
+  },
+  {
+   "parte": 4,
+   "inicio_s": 317.533,
+   "fin_s": 398.533,
+   "duracion_s": 81.0,
+   "fotogramas": 2430,
+   "fotogramas_esperados": 2430,
+   "archivo": "parte-4-de-5.mp4"
+  },
+  {
+   "parte": 5,
+   "inicio_s": 398.533,
+   "fin_s": 511.867,
+   "duracion_s": 113.333,
+   "fotogramas": 3400,
+   "fotogramas_esperados": 3400,
+   "archivo": "parte-5-de-5.mp4"
+  }
+ ]
+}
