@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-24 01:35 — Agente 20:00 (Jorge) — rama `main` — disparo atrasado del turno del 23-11: nada que hacer
+**Qué pasó**: la tarea de las 19:52 del 23-11 se disparó hoy 24-11 a la 01:33 (Madrid). El lote `2026-11-23-tarde` ya existe y está publicado y programado (YouTube y TikTok), hecho por Jorge con el agente entre las 00:47 y la 01:45 en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf.
+**Hecho**: según AGENTE §1.3, no se duplica nada: ni lote, ni vídeos, ni correo. No se adelanta el lote `2026-11-24-tarde` (es del disparo de esta noche a las 20:00) ni se toca el navegador del Mac (repaso de miniaturas en Studio y comentarios), para no pisar el chat de Jorge, que paró esa orden.
+**Pruebas**: ninguna (no se tocó `motor/`).
+**Siguiente paso**: lo pendiente del lote 2026-11-23-tarde (miniaturas en Studio, comentarios fijados) sigue en el chat de Jorge o en el turno de las 20:00.
+
 ## 2026-11-24 01:45 — Jorge (con el agente) — rama `main` — lote 2026-11-23-tarde publicado y programado
 **Hecho**:
 - «ok» de Jorge con horarios: 01 ahora, 02 a las 10:00 y 03 a las 12:00 del 24-11.
