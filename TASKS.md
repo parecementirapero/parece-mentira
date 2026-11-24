@@ -9,7 +9,6 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
 
 ## Pendiente
-- [ ] **Publicar el vídeo largo «500 días en una cueva»** (`lotes/largo-cueva-500-dias/`), solo con el «ok» de Nico: YouTube 16:9 por API y las 5 partes en TikTok, con los textos de `metadatos.json` — Nico
 - [ ] TikTok 7710939317861944598 («Tu sangre viene de estrellas», lote 2026-11-22-manana) publicado sin texto: sale el nombre del archivo. Ponerle el texto de `metadatos.json` → `tiktok.texto` (Editar en TikTok Studio) — Nico/Jorge
 - [ ] **Lote 2026-11-22-manana — rematar la publicación** (Mac de Nico desconectado desde ≈13:00): comprobar que los 3 Shorts programados (13:00/14:00/15:00) son públicos, fijar los 3 comentarios, subir el 02 a TikTok y comentarios de TikTok. Detalle en `lotes/2026-11-22-manana/estado.md` → «Publicación». Se retoma en https://claude.ai/code/session_019BG1dJXULpjXQekLYXshSe — Agente 08:00 (Nico) — 2026-11-22 15:06
 - [ ] Comentarios de YouTube del 02 (LvYkPN5jc6A) y del 03 (kHT4ncQZNQ4) del lote 2026-11-20-tarde, en `metadatos.json` → `comentario`: no se escribieron porque el Mac de Jorge estaba sin conexión a las 10:05 y a las 12:06. Se hacen desde el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf con el Mac encendido — Jorge
@@ -63,6 +62,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Publicado el vídeo largo de la cueva: YouTube cA3b0FdYA8A (público, con portada) y TikTok parte 1 (11:33) + partes 2–5 (13:30, 15:30, 17:30, 19:30) — Nico (con el agente) — 2026-11-24 11:45
 - [x] Vídeo largo «500 días en una cueva sin reloj»: voz en 5 bloques (≈2.300 créditos), motor en 16:9, 190 piezas de arte, 294 planos, horizontal 8:31 + 5 partes verticales del mismo audio, calidad sin ❌ — Nico (con el agente) — 2026-11-24 05:30
 - [x] Lote 2026-11-23-tarde — Jorge (con el agente) — 2026-11-24 01:45 — YouTube NcDWZOO-cEw (público), VIZRXKQ8eHQ (10:00), CcqDZeF_IjA (12:00); TikTok 01 publicado, 02 10:00, 03 12:00. Falta repasar miniaturas en Studio
 - [x] Lote 2026-11-22-tarde (temas de Jorge: el punto ciego, el cerebro enamorado y un test de atención en versión propia): 3 vídeos v1 **en revisión** (`motor.calidad` sin ❌, 45/55/58; experimento: formato interactivo en el 03); esperan el «ok» en https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf — Jorge (con el agente) — 2026-11-23 14:25

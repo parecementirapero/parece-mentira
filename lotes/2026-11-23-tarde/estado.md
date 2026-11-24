@@ -64,3 +64,5 @@ Jorge: «quiero que subas ahora uno con su portada, el siguiente mañana a las 1
 ## Siguiente paso
 Revisar las miniaturas en YouTube Studio. Comentarios fijados (necesitan la verificación de Studio).
 - Correo de revisión: `1a20ae5fe9867987`.
+
+- Miniaturas del 02 y del 03 puestas por la API el 24-11 a las 11:37, cuando volvió el Mac (respuesta 200).
