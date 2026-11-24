@@ -20,6 +20,9 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 - ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
 
 ## Usados
+- Tu gato no nota el dulce (Tas1r2 roto, 247 letras menos; Monell 2005; también tigres y guepardos; carnívoros estrictos; el helado, por la grasa) — lote 2026-11-24-tarde 01
+- Las lágrimas no caen en el espacio (Hadfield 2013 en la EEI: bola de agua pegada al ojo; tensión superficial; toalla; los líquidos suben a la cabeza: cara hinchada, piernas finas, nariz tapada) — lote 2026-11-24-tarde 02
+- Los vikingos no llevaban cuernos (Gjermundbu, Noruega 1943; Doepler y El anillo del nibelungo de Wagner, 1876; cascos de Veksø, Dinamarca, Edad del Bronce, ≈900 a. C.) — lote 2026-11-24-tarde 03
 - No ves tus ojos moverse: movimientos sacádicos, el cerebro bloquea la imagen y la ilusión del reloj parado — lote 2026-11-23-tarde 01 (Jorge, con el agente)
 - El Sol es blanco: dispersión del azul, cielo azul, Sol amarillento y rojo al atardecer, pico de emisión en el verde — lote 2026-11-23-tarde 02 (Jorge, con el agente)
 - Di el color, no leas: efecto Stroop (1935), lectura automática, uso en neuropsicología — lote 2026-11-23-tarde 03 (Jorge, con el agente)
