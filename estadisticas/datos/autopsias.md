@@ -2,7 +2,7 @@
 
 Generado por `python3 estadisticas/estudio todo`. Una por vídeo con lecturas de 24 h o más, la más reciente arriba. El índice «frente al canal» es el valor dividido por la mediana del canal (1,00 = lo normal).
 
-Vídeos con autopsia: 17 de 33. 
+Vídeos con autopsia: 17 de 39. 
 
 ### LvYkPN5jc6A (`LvYkPN5jc6A`)
 
@@ -10,9 +10,15 @@ Vídeos con autopsia: 17 de 33.
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 58,6 % | 25 h (provisional) | 0,90 |
 | segundos por vista (YouTube) | 22,5 s | 25 h (provisional) | 0,95 |
-| vistas (YouTube) | 111  | 24 h (provisional) | 0,08 |
+| vistas (YouTube) | 448  | 48 h | 0,30 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
+
+Curva de YouTube: se va el **-13 %** en los 3 primeros segundos; en el segundo 10 queda el 75 %.
+- Escalón en 6–6 s (92 → 82 %): «Tres mil cuatrocientos setenta y nueve metros:»
+- Escalón en 5–6 s (98 → 92 %): «Tres mil cuatrocientos setenta y nueve metros:»
+- Escalón en 19–19 s (57 → 52 %): «Por la curva de la Tierra.»
+_Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Ninguna.
 
@@ -22,14 +28,14 @@ Vídeos con autopsia: 17 de 33.
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 45,5 % | 34 h (provisional) | 0,70 |
 | segundos por vista (YouTube) | 14,5 s | 34 h (provisional) | 0,61 |
-| vistas (YouTube) | 822  | 48 h | 0,58 |
+| vistas (YouTube) | 822  | 48 h | 0,55 |
 
 **Diagnóstico: Fallo de tema: el primer segundo está dentro de norma y aun así la gente desliza.**
 
-Curva de YouTube: se va el **-7 %** en los 3 primeros segundos; en el segundo 10 queda el 70 %.
-- Escalón en 6–6 s (93 → 86 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
-- Escalón en 5–6 s (97 → 93 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
-- Escalón en 6–7 s (86 → 83 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
+Curva de YouTube: se va el **-9 %** en los 3 primeros segundos; en el segundo 10 queda el 71 %.
+- Escalón en 6–6 s (96 → 90 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
+- Escalón en 5–6 s (100 → 96 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
+- Escalón en 6–7 s (90 → 86 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** No repetir este tipo de tema sin cambiar el ángulo; apuntarlo en `lotes/IDEAS.md`.
@@ -39,15 +45,15 @@ _Las frases se sitúan por estimación (±2 s)._
 | | Valor | Edad de la lectura | Frente al canal |
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 79,7 % | 45 h (provisional) | 1,23 |
-| vistas (YouTube) | 10.119  | 48 h | 7,09 |
-| vistas (TikTok) | 256  | 48 h | 1,01 |
+| vistas (YouTube) | 10.119  | 48 h | 6,74 |
+| vistas (TikTok) | 256  | 48 h | 1,00 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
-Curva de YouTube: se va el **-19 %** en los 3 primeros segundos; en el segundo 10 queda el 88 %.
-- Escalón en 6–7 s (107 → 104 %): «Entre las vértebras de tu espalda hay unos discos blandos, como cojines llenos de agua.»
-- Escalón en 8–9 s (98 → 94 %): «Entre las vértebras de tu espalda hay unos discos blandos, como cojines llenos de agua.»
-- Escalón en 9–10 s (92 → 88 %): «Entre las vértebras de tu espalda hay unos discos blandos, como cojines llenos de agua.»
+Curva de YouTube: se va el **-20 %** en los 3 primeros segundos; en el segundo 10 queda el 91 %.
+- Escalón en 6–7 s (109 → 105 %): «Entre las vértebras de tu espalda hay unos discos blandos, como cojines llenos de agua.»
+- Escalón en 8–9 s (100 → 96 %): «Entre las vértebras de tu espalda hay unos discos blandos, como cojines llenos de agua.»
+- Escalón en 9–10 s (94 → 91 %): «Entre las vértebras de tu espalda hay unos discos blandos, como cojines llenos de agua.»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Ninguna.
@@ -58,15 +64,15 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 71,5 % | 46 h (provisional) | 1,10 |
 | segundos por vista (YouTube) | 26,2 s | 46 h (provisional) | 1,10 |
-| vistas (YouTube) | 2.524  | 48 h | 1,77 |
-| vistas (TikTok) | 252  | 48 h | 0,99 |
+| vistas (YouTube) | 2.524  | 48 h | 1,68 |
+| vistas (TikTok) | 252  | 48 h | 0,98 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
-Curva de YouTube: se va el **-16 %** en los 3 primeros segundos; en el segundo 10 queda el 87 %.
-- Escalón en 5–6 s (113 → 107 %): «es un trocito de estrella de neutrones.»
+Curva de YouTube: se va el **-16 %** en los 3 primeros segundos; en el segundo 10 queda el 88 %.
+- Escalón en 5–6 s (112 → 107 %): «es un trocito de estrella de neutrones.»
 - Escalón en 6–6 s (107 → 103 %): «¿Cómo puede pesar tanto?»
-- Escalón en 6–7 s (103 → 98 %): «¿Cómo puede pesar tanto?»
+- Escalón en 6–7 s (103 → 99 %): «¿Cómo puede pesar tanto?»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Ninguna.
@@ -77,7 +83,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 69,7 % | 61 h | 1,08 |
 | segundos por vista (YouTube) | 29,5 s | 61 h | 1,24 |
-| vistas (YouTube) | 3.672  | 48 h | 2,57 |
+| vistas (YouTube) | 3.672  | 48 h | 2,45 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -90,7 +96,7 @@ _Las frases se sitúan por estimación (±2 s)._
 | se quedaron viendo (YouTube) | 59,1 % | 62 h | 0,91 |
 | segundos por vista (YouTube) | 15,0 s | 62 h | 0,63 |
 | vistas (YouTube) | 24  | 48 h | 0,02 |
-| vistas (TikTok) | 251  | 48 h | 0,99 |
+| vistas (TikTok) | 251  | 48 h | 0,98 |
 
 **Diagnóstico: Fallo de ritmo: entran, pero se van a mitad.**
 
@@ -102,8 +108,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 65,9 % | 63 h | 1,02 |
 | segundos por vista (YouTube) | 24,2 s | 63 h | 1,02 |
-| vistas (YouTube) | 1.714  | 48 h | 1,20 |
-| vistas (TikTok) | 277  | 48 h | 1,09 |
+| vistas (YouTube) | 1.714  | 48 h | 1,14 |
+| vistas (TikTok) | 277  | 48 h | 1,08 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -117,7 +123,7 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 24,9 s | 36 h (provisional) | 1,05 |
 | tiempo medio (TikTok) | 6,4 s | 35 h (provisional) | 0,45 |
 | lo ven entero (TikTok) | 1,5 % | 35 h (provisional) | 0,12 |
-| vistas (YouTube) | 3.224  | 48 h | 2,26 |
+| vistas (YouTube) | 3.224  | 48 h | 2,15 |
 | vistas (TikTok) | 58  | 48 h | 0,23 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
@@ -138,7 +144,7 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 26,7 s | 36 h (provisional) | 1,12 |
 | tiempo medio (TikTok) | 14,4 s | 35 h (provisional) | 1,00 |
 | lo ven entero (TikTok) | 8,5 % | 35 h (provisional) | 0,65 |
-| vistas (YouTube) | 2.295  | 48 h | 1,61 |
+| vistas (YouTube) | 2.295  | 48 h | 1,53 |
 | vistas (TikTok) | 232  | 48 h | 0,91 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
@@ -146,7 +152,7 @@ _Las frases se sitúan por estimación (±2 s)._
 Curva de YouTube: se va el **-20 %** en los 3 primeros segundos; en el segundo 10 queda el 96 %.
 - Escalón en 5–6 s (114 → 110 %): «Es el único planeta del sistema solar así.»
 - Escalón en 7–8 s (104 → 101 %): «Un cubito de agua de un centímetro pesa un gramo.»
-- Escalón en 6–6 s (110 → 108 %): «Es el único planeta del sistema solar así.»
+- Escalón en 6–6 s (110 → 107 %): «Es el único planeta del sistema solar así.»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Ninguna.
@@ -159,15 +165,15 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 23,9 s | 38 h (provisional) | 1,01 |
 | tiempo medio (TikTok) | 12,2 s | 35 h (provisional) | 0,85 |
 | lo ven entero (TikTok) | 5,4 % | 35 h (provisional) | 0,42 |
-| vistas (YouTube) | 1.491  | 48 h | 1,04 |
+| vistas (YouTube) | 1.491  | 48 h | 0,99 |
 | vistas (TikTok) | 242  | 48 h | 0,95 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
 Curva de YouTube: se va el **-20 %** en los 3 primeros segundos; en el segundo 10 queda el 82 %.
 - Escalón en 8–9 s (92 → 88 %): «La culpa es del potasio.»
-- Escalón en 8–8 s (96 → 92 %): «La culpa es del potasio.»
 - Escalón en 6–6 s (107 → 103 %): «con un detector muy sensible se puede medir.»
+- Escalón en 8–8 s (96 → 92 %): «La culpa es del potasio.»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Ninguna.
@@ -178,7 +184,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 35,2 % | 46 h (provisional) | 0,54 |
 | segundos por vista (YouTube) | 11,5 s | 46 h (provisional) | 0,48 |
-| vistas (YouTube) | 1.114  | 48 h | 0,78 |
+| vistas (YouTube) | 1.114  | 48 h | 0,74 |
 | vistas (TikTok) | 5  | 48 h | 0,02 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
@@ -198,7 +204,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 47,7 % | 47 h (provisional) | 0,74 |
 | segundos por vista (YouTube) | 19,8 s | 47 h (provisional) | 0,83 |
-| vistas (YouTube) | 1.405  | 48 h | 0,98 |
+| vistas (YouTube) | 1.405  | 48 h | 0,94 |
 | vistas (TikTok) | 240  | 48 h | 0,94 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
@@ -218,8 +224,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 63,5 % | 48 h | 0,98 |
 | segundos por vista (YouTube) | 23,6 s | 48 h | 0,99 |
-| vistas (YouTube) | 2.194  | 48 h | 1,54 |
-| vistas (TikTok) | 275  | 48 h | 1,08 |
+| vistas (YouTube) | 2.194  | 48 h | 1,46 |
+| vistas (TikTok) | 275  | 48 h | 1,07 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -239,8 +245,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 29,4 s | 50 h | 1,24 |
 | tiempo medio (TikTok) | 22,4 s | 50 h | 1,56 |
 | lo ven entero (TikTok) | 21,6 % | 50 h | 1,66 |
-| vistas (YouTube) | 6.462  | 48 h | 4,53 |
-| vistas (TikTok) | 285  | 48 h | 1,12 |
+| vistas (YouTube) | 6.462  | 48 h | 4,31 |
+| vistas (TikTok) | 285  | 48 h | 1,11 |
 
 **Diagnóstico: Acierto: gancho y retención claramente por encima de lo normal del canal.**
 
@@ -269,8 +275,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 16,8 s | 71 h | 0,71 |
 | tiempo medio (TikTok) | 13,7 s | 26 h (provisional) | 0,95 |
 | lo ven entero (TikTok) | 16,1 % | 26 h (provisional) | 1,24 |
-| vistas (YouTube) | 1.220  | 48 h | 0,85 |
-| vistas (TikTok) | 409  | 48 h | 1,61 |
+| vistas (YouTube) | 1.220  | 48 h | 0,81 |
+| vistas (TikTok) | 409  | 48 h | 1,60 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
 Fuera de norma: primera frase de 18 palabras (norma: 9 como mucho).
@@ -297,8 +303,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 17,7 s | 71 h | 0,75 |
 | tiempo medio (TikTok) | 16,5 s | 26 h (provisional) | 1,15 |
 | lo ven entero (TikTok) | 13,0 % | 26 h (provisional) | 1,00 |
-| vistas (YouTube) | 1.428  | 48 h | 1,00 |
-| vistas (TikTok) | 426  | 48 h | 1,68 |
+| vistas (YouTube) | 1.428  | 48 h | 0,95 |
+| vistas (TikTok) | 426  | 48 h | 1,66 |
 
 **Diagnóstico: Fallo de ritmo: entran, pero se van a mitad.**
 
@@ -319,8 +325,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 26,5 s | 31 h (provisional) | 1,12 |
 | tiempo medio (TikTok) | 19,8 s | 33 h (provisional) | 1,37 |
 | lo ven entero (TikTok) | 21,7 % | 33 h (provisional) | 1,67 |
-| vistas (YouTube) | 11.122  | 48 h | 7,79 |
-| vistas (TikTok) | 618  | 48 h | 2,43 |
+| vistas (YouTube) | 11.122  | 48 h | 7,41 |
+| vistas (TikTok) | 618  | 48 h | 2,41 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -333,11 +339,11 @@ Curva de TikTok: se va el **37 %** en los 3 primeros segundos; en el segundo 10 
 Curva de YouTube: se va el **-29 %** en los 3 primeros segundos; en el segundo 10 queda el 112 %.
 - Escalón en 47–48 s (66 → 30 %): «Tan despacio que esta pisada podría seguir ahí dentro de millones de años.»
 - Escalón en 36–37 s (77 → 74 %): «Se ve el rastro, como una línea oscura sobre el gris.»
-- Escalón en 37–37 s (74 → 72 %): «¿Durarán para siempre?»
+- Escalón en 36–36 s (79 → 77 %): «Se ve el rastro, como una línea oscura sobre el gris.»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** Ninguna.
 
 ## Aún sin lecturas de 24 h
 
-60lZvOqwFtw, F4_DBK1lB50, awYmnuBzhrQ, kHT4ncQZNQ4, _9znalXgInI, G_xEqU97krk, dMcGHyKbeaA, tp7XFLAIkS0, rEiiPtGXz84, 5pSKNws_e-s, cjSc0D_gOaI, dOdQj9QyoBI, 7709510485921582358, 7709974444936006934, 7710939317861944598, 7710939621420535062.
+NcDWZOO-cEw, _8lkYb4lUG0, 3NbMXD2ksMI, MfV8ypLlIU0, 60lZvOqwFtw, F4_DBK1lB50, awYmnuBzhrQ, kHT4ncQZNQ4, _9znalXgInI, G_xEqU97krk, dMcGHyKbeaA, tp7XFLAIkS0, rEiiPtGXz84, 5pSKNws_e-s, cjSc0D_gOaI, dOdQj9QyoBI, 7709510485921582358, 7709974444936006934, 7710939317861944598, 7710939621420535062, CcqDZeF_IjA, VIZRXKQ8eHQ.
