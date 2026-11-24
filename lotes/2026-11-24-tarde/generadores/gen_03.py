@@ -20,9 +20,9 @@ def casco_que_pierde(x, y, ancho, t, d, z=0.5):
     cx1, cy = x + (190 - 450) * k, y + (190 - 310) * k
     cx2 = x + (710 - 450) * k
     w = 300 * k
-    return [IMG("casco_sin", ancho=ancho, x=x, y=y, z=z, keys=[{"t": 0, "rot": -4}, {"t": d, "rot": 4, "ease": "suave"}]),
-            IMG("cuerno", ancho=w, x=cx1, y=cy, z=z + 0.01, keys=[{"t": 0, "x": cx1, "y": cy, "rot": 0, "op": 1}, {"t": t, "x": cx1, "y": cy, "rot": 0, "op": 1}, {"t": t + 0.7, "x": cx1 - 420, "y": cy - 300, "rot": -200, "op": 0, "ease": "salida"}]),
-            IMG("cuerno_d", ancho=w, x=cx2, y=cy, z=z + 0.01, keys=[{"t": 0, "x": cx2, "y": cy, "rot": 0, "op": 1}, {"t": t, "x": cx2, "y": cy, "rot": 0, "op": 1}, {"t": t + 0.7, "x": cx2 + 420, "y": cy - 300, "rot": 200, "op": 0, "ease": "salida"}])]
+    return [IMG("casco_sin", ancho=ancho, x=x, y=y, z=z, keys=[{"t": 0, "rot": -10, "y": y + 60}, {"t": 0.25, "rot": 8, "y": y - 20, "ease": "salida"}, {"t": 0.5, "rot": -5, "y": y}, {"t": t, "rot": 3, "ease": "elastico"}, {"t": d, "rot": 0}]),
+            IMG("cuerno", ancho=w, x=cx1, y=cy, z=z + 0.01, keys=[{"t": 0, "x": cx1, "y": cy + 60, "rot": -12, "op": 1}, {"t": 0.25, "y": cy - 20, "rot": 10, "ease": "salida"}, {"t": 0.5, "y": cy, "rot": -6}, {"t": t, "x": cx1, "y": cy, "rot": 0, "op": 1}, {"t": t + 0.7, "x": cx1 - 420, "y": cy - 300, "rot": -200, "op": 0, "ease": "salida"}]),
+            IMG("cuerno_d", ancho=w, x=cx2, y=cy, z=z + 0.01, keys=[{"t": 0, "x": cx2, "y": cy + 60, "rot": -12, "op": 1}, {"t": 0.25, "y": cy - 20, "rot": 10, "ease": "salida"}, {"t": 0.5, "y": cy, "rot": -6}, {"t": t, "x": cx2, "y": cy, "rot": 0, "op": 1}, {"t": t + 0.7, "x": cx2 + 420, "y": cy - 300, "rot": 200, "op": 0, "ease": "salida"}])]
 
 
 @v.plano(0, "gancho: el casco con cuernos entra y los cuernos salen disparados")
@@ -198,7 +198,7 @@ def _(d):
 @v.plano(145, "¿qué otro mito quieres que desmonte?: el casco de disfraz vuelve a perder los cuernos (bucle)")
 def _(d):
     return P(FIO, [BG("bg_fiordo"), *casco_que_pierde(540, 1000, 900, d * 0.6, d)], cam(1.0, 1.06, (540, 1000)), "corte",
-             hud=[BANDA(), amarillo(0.2, d - 0.05, "¿OTRO MITO?", y=1400, tam=110, color="#e0302a")], sfx=[(d * 0.6, "zap", -16)])
+             hud=[BANDA(), rotulo(0.2, d - 0.05, "¿OTRO MITO?", tam=110, color="#ffffff", capsula="#c0392be6", y=1250)], sfx=[(d * 0.6, "zap", -16)])
 
 
 v.construir("2026-11-24-tarde-03-vikingos-cuernos", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 324, "db": -13},

@@ -4,6 +4,16 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-24 23:59 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-24-tarde v1 en revisión
+**Qué pasó**: la tarea de las 19:52 se disparó a las 22:30. El Mac de Jorge respondía; el lote se hizo entero.
+**Hecho**:
+- 01 «Tu gato NO nota el dulce» (Tas1r2, Monell 2005), 02 «En el espacio las lágrimas NO caen» (Hadfield 2013), 03 «Los vikingos NO llevaban cuernos» (Gjermundbu, Doepler 1876, Veksø). Experimento: gancho de negación en Histórico (03).
+- Voz por API desde el Mac (créditos 14.978 → 14.012). Estilo cartoon (`ilus_1124t.py`, `comun_1124t.py` con `BANDA()` para el subtítulo sobre fondos claros, `gen_0N.py`). Render en la nube.
+- MP4 y portadas en el chat; MP4, SRT, manifiestos, portadas y metadatos en el Mac. Correo `1a20f922774c58fd`.
+**Pruebas**: `motor.guion` sin ❌; `construir` sin avisos de lectura; `motor.calidad --mp4` sin ❌ (73/97/78); hojas revisadas; fichas 3 nuevas, `ficha comprobar` 0 problemas. No se tocó `motor/`.
+**Pendiente**: «ok» y publicación (YouTube por API +1 h / +2 h, TikTok por el navegador integrado). No se hicieron por la hora: datos de Studio (§1.8), tendencias, comentarios (§8b).
+**Siguiente paso**: que Jorge o Nico vean los vídeos en https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS y escriban «ok».
+
 ## 2026-11-24 11:45 — Nico (con el agente) — rama `main` — vídeo largo de la cueva publicado
 **Hecho**:
 - «Me encanta» y el «ok» de Nico.

@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-24 05:30 — Nico (con el agente) (vídeo largo «500 días en una cueva» en revisión)_
+_Última actualización: 2026-11-24 23:59 — Agente 20:00 (Jorge) (lote 2026-11-24-tarde en revisión)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -13,7 +13,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | GitHub (`parecementirapero/parece-mentira`) | ✅ conectado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Jorge | ✅ sesión iniciada en el navegador integrado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Nico | ✅ sesión iniciada en el navegador integrado (2026-11-15) |
-| ElevenLabs | ✅ voz «Archivo Oculto — Narración (clon)» (`op8soO9fvP07F3mjbJuB`, `eleven_v4`, 0.5/0.75), clave API en el Mac de Jorge («Parece Mentira») y en el de Nico («Parece Mentira - Nico»), prueba OK en los dos |
+| ElevenLabs | ✅ (quedan 14.012 caracteres el 24-11 por la noche, ≈5 lotes; se renuevan el 15-12) voz «Archivo Oculto — Narración (clon)» (`op8soO9fvP07F3mjbJuB`, `eleven_v4`, 0.5/0.75), clave API en el Mac de Jorge («Parece Mentira») y en el de Nico («Parece Mentira - Nico»), prueba OK en los dos |
 | Carpeta local de trabajo | ✅ Nico: `/Users/nico/Documents/Parece Mentira` (referencias en `Documents/Codex/Parece Mentira/referencias`) · ✅ Jorge: `/Users/jorgegomez/Documents/Parece Mentira` |
 | Web de estadísticas (`estadisticas/`) — YouTube, TikTok e Instagram | 🟢 YouTube y TikTok conectados: se actualiza solo cada mañana (GitHub Actions) y la página «Parece Mentira · Estadísticas» de Claude se republica a las 9:14. Navegación suave y audiencia de YouTube (edad, países, dispositivos, fuentes) con gráficas. Conclusiones automáticas diarias (`estadisticas/datos/aprendizajes.md`) que el agente de lotes usa para decidir. 🟡 Falta Instagram |
 | Estudio de audiencia y rendimiento (`estadisticas/estudio/`) | 🟢 en marcha desde 2026-11-17: cada mañana, tras las estadísticas, se generan `estadisticas/datos/estudio.md` (qué se sabe y con qué nivel: pista / indicio / regla), `autopsias.md` y `mediciones.json` (24 h, 48 h, 7 d, 28 d); los lunes, informe semanal. 10 vídeos con ficha (todas retrospectivas). 🟡 Hoy solo 3 vídeos tienen lectura con 24 h o más: **nada pasa de «pista»**. 🟡 Audiencia por vídeo y comentarios: código listo, sin probar contra la API real. Pendiente de Nico y Jorge: público objetivo, primer experimento, confirmar la ficha en AGENTE |

@@ -28,7 +28,7 @@ def bola(x, y, ancho, keys=None, z=0.6): return IMG("bola_agua", ancho=ancho, x=
 @v.plano(0, "gancho: una bola de agua crece encima del ojo y no cae")
 def _(d):
     ox, oy = ojo_en(540, 1050, 900)
-    return P(MOD, [BG("bg_modulo"), cara(ancho=900, keys=flota(d, 10, y=1050)), bola(ox, oy, 230, keys=[{"t": 0, "escala": 0.55, "y": oy}, {"t": d, "escala": 1.1, "y": oy, "ease": "suave"}] + flota(d, 10, y=oy)[1:])],
+    return P(MOD, [BG("bg_modulo"), cara(ancho=900, keys=arranque(540, 1050, d, "abajo", 220, 15)), bola(ox, oy, 230, keys=[{"t": 0, "escala": 0.55, "y": oy}, {"t": d, "escala": 1.1, "y": oy, "ease": "suave"}] + flota(d, 10, y=oy)[1:])],
              cam(1.0, 1.15, (540, 1000), (ox, oy)), vineta=0.45, hud=[BANDA()], sfx=[(0.05, "burbuja", -16), (0.6, "burbuja", -18)])
 
 
@@ -130,7 +130,7 @@ def _(d):
 def _(d):
     return P(ESP, [estrellas(60, 5), bola(540, 1000, 560, keys=[{"t": 0, "ex": 1.0, "ey": 1.0}, {"t": d * 0.3, "ex": 1.05, "ey": 0.95, "ease": "suave"}, {"t": d * 0.6, "ex": 0.97, "ey": 1.03, "ease": "suave"}, {"t": d, "ex": 1.0, "ey": 1.0}]),
                    senala(540, 1000, 0.3, d - 0.05, 300, CIAN)],
-             cam(1.0, 1.06, (540, 1000)), "corte", hud=[rotulo(0.2, d - 0.05, "TENSIÓN SUPERFICIAL", tam=80, color="#141414", capsula="#7df9ffe6", y=560)], sfx=[(0.3, "brillo", -18)])
+             cam(1.0, 1.06, (540, 1000)), "corte", sfx=[(0.3, "brillo", -18)])
 
 
 @v.plano(79, "el agua se agarra a sí misma: las moléculas se juntan")
@@ -166,7 +166,7 @@ def _(d):
 @v.plano(103, "y no es lo único raro: el astronauta da una vuelta")
 def _(d):
     return P(MOD, [BG("bg_modulo"), IMG("astro_c1", ancho=360, x=540, y=1100, z=0.5, keys=[{"t": 0, "rot": 0}, {"t": d, "rot": 160, "ease": "suave"}] + flota(d, 25, y=1100))],
-             cam(1.0, 1.05, (540, 1100)), "corte", hud=[BANDA(), amarillo(0.2, d - 0.05, "Y HAY MÁS", y=560, tam=110, color="#e0302a")], sfx=[(0.1, "whoosh", -22)])
+             cam(1.0, 1.05, (540, 1100)), "corte", hud=[BANDA(), rotulo(0.2, d - 0.05, "Y HAY MÁS", tam=110, color="#ffffff", capsula="#c0392be6", y=560)], sfx=[(0.1, "whoosh", -22)])
 
 
 @v.plano(109, "los líquidos del cuerpo también suben hacia la cabeza: flechas azules suben por el cuerpo")
@@ -179,7 +179,7 @@ def _(d):
 @v.plano(118, "la cara se hincha: la cara normal pasa a hinchada")
 def _(d):
     return P(MOD, [BG("bg_modulo"), cara(y=1080, ancho=820, keys=[{"t": 0, "op": 1}, {"t": d * 0.5, "op": 0}]), cara("cara_hinchada", y=1080, ancho=820, z=0.51, keys=[{"t": 0, "op": 0}, {"t": d * 0.5, "op": 1, "escala": 1.0}, {"t": d, "escala": 1.04}])],
-             cam(1.0, 1.06, (540, 1050)), "corte", hud=[BANDA(), rotulo(0.05, d - 0.03, "CARA HINCHADA", tam=96, color="#141414", capsula="#ffd23fe6", y=560)], sfx=[(d * 0.45, "pop", -18)])
+             cam(1.0, 1.06, (540, 1050)), "corte", hud=[BANDA()], sfx=[(d * 0.45, "pop", -18)])
 
 
 @v.plano(122, "las piernas adelgazan: las piernas se afinan")
@@ -213,6 +213,45 @@ def _(d):
 def _(d):
     return P(ESP, [BG("bg_amanecer_orbital"), IMG("estacion", ancho=640, x=540, y=820, z=0.55, keys=[{"t": 0, "x": 460}, {"t": d, "x": 620, "ease": "suave"}])],
              cam(1.0, 1.06, (540, 1000)), "corte", hud=[amarillo(0.3, d - 0.05, "¿TE ATREVES?", y=1250, tam=110, color=AMBAR)], sfx=[(0.1, "brillo", -20)])
+
+
+def _micro_bola(d, ancho=520, txt=None, col=CIAN):
+    return P(ESP, [estrellas(50, 9), bola(540, 1000, ancho, keys=[{"t": 0, "escala": 0.8}, {"t": d, "escala": 1.1, "ease": "salida"}]), brillo(540, 1000, 380, "#7ad0ff", 0.5, 0.06)],
+             cam(1.1, 1.25, (540, 1000)), "corte", hud=[amarillo(0.02, d - 0.02, txt, y=1400, tam=130, color=col)] if txt else [], sfx=[(0.02, "burbuja", -16)])
+
+
+@v.plano(37, "micro: «NO» en rojo sobre la lágrima")
+def _(d):
+    return P(OSC, [IMG("lagrima", ancho=260, x=540, y=1000, z=0.5, keys=[{"t": 0, "escala": 1.2}, {"t": d, "escala": 1.0}]), *tacha(540, 1000, 0.02, 160)],
+             cam(1.0, 1.1, (540, 1000)), "corte", sfx=[(0.02, "zap", -16)])
+
+
+@v.plano(37, "no bajó: la cara otra vez, la bola quieta en el ojo", mas=0.45)
+def _(d):
+    ox, oy = ojo_en(540, 1080, 820)
+    return P(MOD, [BG("bg_modulo"), cara(y=1080, ancho=820), bola(ox, oy, 120, keys=late(0.1, 2, 0.06, 0.4))], cam(1.15, 1.25, (540, 1000), (ox, oy)), "corte", hud=[BANDA()], sfx=[(0.1, "pop", -22)])
+
+
+@v.plano(55, "micro: la bola en grande", mas=0.0)
+def _(d):
+    return _micro_bola(d, 560)
+
+
+@v.plano(77, "micro: la piel de la bola tiembla")
+def _(d):
+    return _micro_bola(d, 760)
+
+
+@v.plano(77, "tensión superficial (sigue): la bola con el anillo", mas=0.45)
+def _(d):
+    return P(ESP, [estrellas(60, 5), bola(540, 1000, 560, keys=[{"t": 0, "ex": 1.03, "ey": 0.97}, {"t": d, "ex": 1.0, "ey": 1.0, "ease": "elastico"}]), senala(540, 1000, 0.05, d - 0.05, 300, CIAN)],
+             cam(1.0, 1.06, (540, 1000)), "corte", hud=[rotulo(0.02, d - 0.05, "TENSIÓN", tam=120, color="#141414", capsula="#7df9ffe6", y=560)], sfx=[])
+
+
+@v.plano(121, "micro: la cara hinchada de golpe")
+def _(d):
+    return P(MOD, [BG("bg_modulo"), cara("cara_hinchada", y=1100, ancho=900, keys=[{"t": 0, "escala": 1.15}, {"t": d, "escala": 1.0, "ease": "golpe"}])],
+             cam(1.2, 1.3, (540, 1000)), "corte", hud=[BANDA()], sfx=[(0.02, "pop", -16)])
 
 
 v.construir("2026-11-24-tarde-02-lagrimas-espacio", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 224, "db": -13},

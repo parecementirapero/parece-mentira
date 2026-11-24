@@ -39,7 +39,15 @@
    "tendencia": "no",
    "portada": "arriba"
   },
-  "locucion": "Tu gato ignora el dulce. No es que no le guste: es que no lo nota. Dale un pastel o un caramelo: para él, nada de eso sabe dulce. ¿Por qué? Para notar el dulce, la lengua necesita un receptor hecho con dos piezas. Y la receta de una de ellas está en un gen. En dos mil cinco, unos científicos del Centro Monell, en Estados Unidos, miraron ese gen en los gatos. Y estaba roto: le faltaban doscientas cuarenta y siete letras. Sin esa pieza, el receptor no se monta y el azúcar pasa sin avisar. Lo mismo les pasa a los tigres y a los guepardos. Y tiene sentido: los gatos solo comen carne, y la carne casi no tiene azúcar. Perder el dulce no les costó nada. Entonces, ¿por qué tu gato lame el helado? Por la grasa, no por el azúcar. ¿Tu gato te roba comida? Cuéntame cuál."
+  "locucion": "Tu gato ignora el dulce. No es que no le guste: es que no lo nota. Dale un pastel o un caramelo: para él, nada de eso sabe dulce. ¿Por qué? Para notar el dulce, la lengua necesita un receptor hecho con dos piezas. Y la receta de una de ellas está en un gen. En dos mil cinco, unos científicos del Centro Monell, en Estados Unidos, miraron ese gen en los gatos. Y estaba roto: le faltaban doscientas cuarenta y siete letras. Sin esa pieza, el receptor no se monta y el azúcar pasa sin avisar. Lo mismo les pasa a los tigres y a los guepardos. Y tiene sentido: los gatos solo comen carne, y la carne casi no tiene azúcar. Perder el dulce no les costó nada. Entonces, ¿por qué tu gato lame el helado? Por la grasa, no por el azúcar. ¿Tu gato te roba comida? Cuéntame cuál.",
+  "portada": {
+   "texto": "TU GATO NO NOTA EL DULCE",
+   "clave": "DULCE",
+   "archivo": "01-portadas/portada.jpg",
+   "t": 3.3,
+   "diseno": "arriba",
+   "motivo": "gato grande con la lengua fuera, reconocible en la cuadrícula; es el fotograma del gancho"
+  }
  },
  "02": {
   "archivo": "02-lagrimas-espacio_v1.mp4",
@@ -83,9 +91,17 @@
    "experimento": "no",
    "alcance": "universal",
    "tendencia": "no",
-   "portada": "arriba"
+   "portada": "dato"
   },
-  "locucion": "Las lágrimas no caen. Al menos, en el espacio. En dos mil trece, el astronauta canadiense Chris Hadfield lo probó en la Estación Espacial Internacional. Se echó agua en el ojo, como si llorara. Y la lágrima no bajó por la mejilla: se quedó pegada al ojo. Cuanto más agua, más grande se hacía la bola, hasta tapar el ojo entero. ¿Por qué? Sin gravedad, nada tira de la gota hacia abajo. Lo que manda es la tensión superficial: el agua se agarra a sí misma y a todo lo que toca. Por eso, allí arriba, las lágrimas se quitan con una toalla. Y no es lo único raro. Los líquidos del cuerpo también suben hacia la cabeza: la cara se hincha, las piernas adelgazan y la nariz se tapa, como si tuvieras un resfriado. Así que en el espacio puedes estar triste… pero llorar es otra historia. ¿Te atreverías a vivir allí arriba?"
+  "locucion": "Las lágrimas no caen. Al menos, en el espacio. En dos mil trece, el astronauta canadiense Chris Hadfield lo probó en la Estación Espacial Internacional. Se echó agua en el ojo, como si llorara. Y la lágrima no bajó por la mejilla: se quedó pegada al ojo. Cuanto más agua, más grande se hacía la bola, hasta tapar el ojo entero. ¿Por qué? Sin gravedad, nada tira de la gota hacia abajo. Lo que manda es la tensión superficial: el agua se agarra a sí misma y a todo lo que toca. Por eso, allí arriba, las lágrimas se quitan con una toalla. Y no es lo único raro. Los líquidos del cuerpo también suben hacia la cabeza: la cara se hincha, las piernas adelgazan y la nariz se tapa, como si tuvieras un resfriado. Así que en el espacio puedes estar triste… pero llorar es otra historia. ¿Te atreverías a vivir allí arriba?",
+  "portada": {
+   "texto": "LAS LÁGRIMAS NO CAEN",
+   "clave": "NO CAEN",
+   "archivo": "02-portadas/portada.jpg",
+   "t": 1.8,
+   "diseno": "dato",
+   "motivo": "la bola de agua pegada al ojo enseña la sorpresa que promete el texto; coherente con el primer segundo"
+  }
  },
  "03": {
   "archivo": "03-vikingos-cuernos_v1.mp4",
@@ -129,8 +145,16 @@
    "experimento": "gancho de negación (Histórico)",
    "alcance": "universal",
    "tendencia": "no",
-   "portada": "arriba"
+   "portada": "dato"
   },
-  "locucion": "Los vikingos no llevaban cuernos. Ese casco es un invento. El único casco vikingo casi completo que se conoce apareció en Noruega en mil novecientos cuarenta y tres: el casco de Gjermundbu. Es de hierro, redondo, con una protección para los ojos y la nariz. Ni un solo cuerno. Y en una batalla, unos cuernos serían más un estorbo que una ayuda. ¿Entonces de dónde salen? De la ópera. En mil ochocientos setenta y seis se estrenó El anillo del nibelungo, de Wagner. Y el diseñador Carl Emil Doepler vistió a los guerreros con cascos con cuernos y alas. Y la imagen se quedó para siempre. Lo más curioso es que sí existen cascos con cuernos en Escandinavia: los de Veksø, en Dinamarca. Pero son de hace unos tres mil años, de la Edad del Bronce. Más de mil quinientos años antes de los vikingos. ¿Qué otro mito quieres que desmonte?"
+  "locucion": "Los vikingos no llevaban cuernos. Ese casco es un invento. El único casco vikingo casi completo que se conoce apareció en Noruega en mil novecientos cuarenta y tres: el casco de Gjermundbu. Es de hierro, redondo, con una protección para los ojos y la nariz. Ni un solo cuerno. Y en una batalla, unos cuernos serían más un estorbo que una ayuda. ¿Entonces de dónde salen? De la ópera. En mil ochocientos setenta y seis se estrenó El anillo del nibelungo, de Wagner. Y el diseñador Carl Emil Doepler vistió a los guerreros con cascos con cuernos y alas. Y la imagen se quedó para siempre. Lo más curioso es que sí existen cascos con cuernos en Escandinavia: los de Veksø, en Dinamarca. Pero son de hace unos tres mil años, de la Edad del Bronce. Más de mil quinientos años antes de los vikingos. ¿Qué otro mito quieres que desmonte?",
+  "portada": {
+   "texto": "VIKINGOS SIN CUERNOS",
+   "clave": "CUERNOS",
+   "archivo": "03-portadas/portada.jpg",
+   "t": 11.8,
+   "diseno": "dato",
+   "motivo": "el casco real sin cuernos, grande y oscuro sobre la tierra: cumple lo que dice el texto"
+  }
  }
 }

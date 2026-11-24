@@ -26,7 +26,7 @@ def _(d):
 def _(d):
     return P(COC, [BG("bg_cocina"), gato(y=1000, keys=[{"t": 0, "rot": 0}, {"t": d * 0.5, "rot": -8, "ease": "suave"}, {"t": d, "rot": 0, "ease": "suave"}]),
                    IMG("pastel", ancho=420, x=300, y=1330, z=0.6, keys=late(0.3, 2, 0.06, 0.5))],
-             cam(1.05, 1.12, (480, 1150)), "corte", hud=[BANDA(), amarillo(0.05, d - 0.03, "¿NO LE GUSTA?", y=560, tam=96, color="#e0302a")], sfx=[(0.2, "roce", -20)])
+             cam(1.05, 1.12, (480, 1150)), "corte", hud=[BANDA(), rotulo(0.05, d - 0.03, "¿NO LE GUSTA?", tam=96, color="#ffffff", capsula="#c0392be6", y=560)], sfx=[(0.2, "roce", -20)])
 
 
 @v.plano(11, "es que no lo nota: primer plano de la lengua del gato")
@@ -193,7 +193,7 @@ def _(d):
 def _(d):
     return P(COC, [BG("bg_cocina"), gato("gato_lengua", x=380, y=1050, ancho=560),
                    IMG("helado", ancho=300, x=800, y=1050, z=0.6, keys=[{"t": 0, "x": 1250, "rot": 20}, {"t": 0.6, "x": 800, "rot": -8, "ease": "salida"}, {"t": d, "rot": 4}])],
-             cam(1.0, 1.06, (540, 1050)), "corte", hud=[BANDA(), amarillo(0.6, d - 0.05, "¿Y EL HELADO?", y=560, tam=100, color="#e0302a")], sfx=[(0.1, "whoosh", -20)])
+             cam(1.0, 1.06, (540, 1050)), "corte", hud=[BANDA(), rotulo(0.6, d - 0.05, "¿Y EL HELADO?", tam=100, color="#ffffff", capsula="#c0392be6", y=560)], sfx=[(0.1, "whoosh", -20)])
 
 
 @v.plano(138, "por la grasa: la bola del helado brilla")
