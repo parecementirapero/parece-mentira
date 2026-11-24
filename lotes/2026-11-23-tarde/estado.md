@@ -55,6 +55,7 @@ Jorge: «quiero que subas ahora uno con su portada, el siguiente mañana a las 1
   - `--solo-portada` falla con 429: «The user has uploaded too many thumbnails recently». Es el límite de miniaturas de la API.
   - Reintento programado para las 08:30 en este chat (`trig_0172TXfxSBGzs6C6JuNsTp2r`), antes de que se publiquen.
 - TikTok comprobado en la lista de Studio: los tres tienen texto y hora correctos.
+- Reintento de las 08:30 (24-11): no se pudo, porque el Mac de Jorge está desconectado (en reposo desde las 7). Las claves de YouTube solo están en el Mac. Se avisa a Jorge para que ponga las miniaturas a mano en Studio (Detalles → Miniatura → `PARA PUBLICAR/2311t-02-portada.jpg` y `2311t-03-portada.jpg`) antes de las 10:00 y las 12:00, o para que se relance `--solo-portada` cuando el Mac vuelva.
 - TikTok desde el navegador integrado, con texto (comprobado con `innerText`) y portada de imagen elegida por Jorge:
   - 01 https://www.tiktok.com/@parece.mentira85/video/7711527702997650710 (publicado 01:26)
   - 02 https://www.tiktok.com/@parece.mentira85/video/7711528083202886934 (10:00)

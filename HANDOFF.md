@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-24 08:30 — Agente (reintento programado, Jorge) — rama `main` — miniaturas de YouTube del lote 2026-11-23-tarde
+**Resultado**: no se hizo. El Mac de Jorge está desconectado del puente (en reposo) y las claves de YouTube solo están en él. El 02 (VIZRXKQ8eHQ, 10:00) y el 03 (CcqDZeF_IjA, 12:00) siguen con la miniatura automática.
+**Siguiente paso**: Jorge las pone a mano en Studio (`PARA PUBLICAR/2311t-0N-portada.jpg`), o se lanza `publicar/subir_youtube.py --solo-portada` cuando el Mac vuelva. Aviso enviado al móvil.
+
 ## 2026-11-24 05:30 — Nico (con el agente, chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf) — rama `main` — vídeo largo «500 días en una cueva» v1 en revisión
 **Encargo**: el prompt de Nico «video cueva 500 dias». Un vídeo largo de 8–9 min en 16:9 para YouTube y 5 partes en 9:16 para TikTok, del mismo audio y con la voz en un solo intento.
 **Hecho**:
