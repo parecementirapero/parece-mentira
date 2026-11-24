@@ -19,7 +19,7 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 - `publicado.json` y fichas al día.
 - ElevenLabs: 17.947 caracteres (plan Starter, se renueva el 15-12).
 **Pendiente**:
-- Repasar en YouTube Studio que las tres miniaturas se han quedado. El `--solo-portada` de repaso se paró a petición de Jorge.
+- Miniaturas de YouTube: la del 01 está bien. Las del 02 y el 03 son fotogramas automáticos, porque la API dio el límite de «too many thumbnails recently». Hay reintento a las 08:30 en este chat.
 - Comentarios fijados.
 **Siguiente paso**: lo anterior, en el próximo turno con el Mac conectado.
 

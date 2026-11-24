@@ -49,7 +49,12 @@ Jorge: «quiero que subas ahora uno con su portada, el siguiente mañana a las 1
   - 01 https://youtube.com/shorts/NcDWZOO-cEw (público)
   - 02 https://youtube.com/shorts/VIZRXKQ8eHQ (10:00)
   - 03 https://youtube.com/shorts/CcqDZeF_IjA (12:00)
-- **Falta repasar en Studio que las portadas se han quedado**. El `--solo-portada` de repaso se cortó: Jorge paró la orden.
+- Repaso en Studio a las 01:50 (Jorge: «revisa que todo esté bien»):
+  - 01 tiene la portada buena.
+  - 02 y 03 enseñan un fotograma automático («CIELO AZUL» y «ES NORMAL»).
+  - `--solo-portada` falla con 429: «The user has uploaded too many thumbnails recently». Es el límite de miniaturas de la API.
+  - Reintento programado para las 08:30 en este chat (`trig_0172TXfxSBGzs6C6JuNsTp2r`), antes de que se publiquen.
+- TikTok comprobado en la lista de Studio: los tres tienen texto y hora correctos.
 - TikTok desde el navegador integrado, con texto (comprobado con `innerText`) y portada de imagen elegida por Jorge:
   - 01 https://www.tiktok.com/@parece.mentira85/video/7711527702997650710 (publicado 01:26)
   - 02 https://www.tiktok.com/@parece.mentira85/video/7711528083202886934 (10:00)
