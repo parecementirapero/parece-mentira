@@ -12,9 +12,11 @@ import argparse, glob, json, os, re, subprocess, sys, wave
 
 import numpy as np
 
-W, H, FPS = 1080, 1920, 30
+from .core import W, H, FPS, HORIZONTAL   # MOTOR_FORMATO=16:9 → reglas del vídeo horizontal
 # Zona segura común a Shorts, Reels y TikTok (las guías no coinciden; se toma un valor prudente). Ver GUIA_CALIDAD §4.
 SEG_ARRIBA, SEG_ABAJO, SEG_IZQ, SEG_DER = 240, 1400, 60, 900
+if HORIZONTAL:   # vídeo largo 16:9: subtítulo abajo (y≈975), sin botones; nada pegado a los bordes
+    SEG_ARRIBA, SEG_ABAJO, SEG_IZQ, SEG_DER = 40, 880, 60, W - 60
 LEER = lambda txt: 0.25 + len(txt) / 17
 
 
@@ -65,7 +67,8 @@ def _a_wav(ruta):
     return out
 
 
-def _fotogramas(mp4, fps=10, w=90, h=160):
+def _fotogramas(mp4, fps=10, w=None, h=None):
+    w, h = (w or (90 if H > W else 160)), (h or (160 if H > W else 90))
     raw = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", mp4, "-vf", f"fps={fps},scale={w}:{h}", "-pix_fmt", "gray", "-f", "rawvideo", "-"])
     return np.frombuffer(raw, np.uint8).reshape(-1, h, w).astype(np.float32)
 
@@ -111,9 +114,9 @@ def analizar(ruta_ep, mp4=None):
             donde = []
             if y1 > SEG_ABAJO: donde.append(f"abajo (llega a y={y1:.0f}; límite {SEG_ABAJO})")
             if y0 < SEG_ARRIBA: donde.append(f"arriba (y={y0:.0f}; límite {SEG_ARRIBA})")
-            if x1 > SEG_DER and y1 > 800: donde.append(f"derecha, donde van los botones (x={x1:.0f}; límite {SEG_DER} por debajo de y=800)")
+            if not HORIZONTAL and x1 > SEG_DER and y1 > 800: donde.append(f"derecha, donde van los botones (x={x1:.0f}; límite {SEG_DER} por debajo de y=800)")
             if x0 < SEG_IZQ - 40 or x1 > W - SEG_IZQ + 40: donde.append(f"se sale por los lados (x={x0:.0f}…{x1:.0f})")
-            if not donde and y1 > 1250: dudosos.append(f"«{txt}» ({e['inicio']:.1f} s, llega a y={y1:.0f})")
+            if not donde and not HORIZONTAL and y1 > 1250: dudosos.append(f"«{txt}» ({e['inicio']:.1f} s, llega a y={y1:.0f})")
             if donde: fuera.append(f"«{txt}» (plano {i + 1}, {e['inicio']:.1f} s): " + ", ".join(donde))
             ks = h.get("keys") or []
             if len(ks) >= 2:
@@ -151,7 +154,7 @@ def analizar(ruta_ep, mp4=None):
         elif n1 > 5: av("⚠", f"La primera frase tiene {n1} palabras: mejor 5 o menos (el gancho se lee en medio segundo).", 4)
         if pal[0]["inicio"] > 0.5: av("⚠", f"La voz empieza en el segundo {pal[0]['inicio']:.2f}: que arranque antes de 0,4 s.", 4)
         if g["palabras_s"] > 3.3: av("⚠", f"Narración muy rápida ({g['palabras_s']} palabras/s): suena acelerada.", 4)
-        if pal[-1]["fin"] > 59.3: av("❌", f"La locución acaba en {pal[-1]['fin']:.1f} s: el Short no puede pasar de 60 s.", 15)
+        if dur < 75 and pal[-1]["fin"] > 59.3: av("❌", f"La locución acaba en {pal[-1]['fin']:.1f} s: el Short no puede pasar de 60 s.", 15)
     if not est.get("gancho"): av("⚠", "Sin `gancho`: en el fotograma 0 no se lee la primera frase entera (DECISIONS 2026-11-16).", 6)
     p0 = S[0]
     acc0 = [e for e in p0["elementos"] if any(0 < k.get("t", 0) <= 0.6 for k in (e.get("keys") or [])) or e.get("anim")]
@@ -166,7 +169,7 @@ def analizar(ruta_ep, mp4=None):
         av("❌", "Cámara con zoom menor que 1 (se ven bordes negros alrededor): " + ", ".join(alejados) + ". Usa p. ej. cam(1.07, 1.0).", 6 * len(alejados))
     quietos = [i + 1 for i, e in enumerate(S) if sum(_animado(x) for x in e["elementos"]) == 0 and e.get("camara", {}).get("zoom", [1, 1])[0] == e.get("camara", {}).get("zoom", [1, 1])[1]]
     pobres = [i + 1 for i, e in enumerate(S) if len(e["elementos"]) < 3 and e["fin"] - e["inicio"] > 1.0]
-    fondos = [next((x["archivo"] for x in e["elementos"] if x.get("tipo") == "imagen" and x.get("ancho", 0) >= 1080), "|".join(e["fondo"]["colores"])) for e in S]
+    fondos = [next((x["archivo"] for x in e["elementos"] if x.get("tipo") == "imagen" and x.get("ancho", 0) >= W), "|".join(e["fondo"]["colores"])) for e in S]
     svgs = {x["archivo"] for e in S for x in e["elementos"] if x.get("tipo") == "imagen"}
     racha, t0, peor = fondos[0], S[0]["inicio"], 0.0
     for e, f in zip(S, fondos):
@@ -220,7 +223,7 @@ def analizar(ruta_ep, mp4=None):
         # ---- riqueza de cada plano y parecido con el anterior (sobre el fotograma central, sin la franja del subtítulo)
         det, mids = [], []
         for e in S:
-            i = min(len(f) - 1, int((e["inicio"] + e["fin"]) / 2 * 10)); g = f[i][35:, :]
+            i = min(len(f) - 1, int((e["inicio"] + e["fin"]) / 2 * 10)); g = f[i][35:, :] if H > W else f[i][:-14, :]   # sin la franja del subtítulo (arriba en 9:16, abajo en 16:9)
             det.append(float((np.abs(np.diff(g, axis=0)).mean() + np.abs(np.diff(g, axis=1)).mean()) / 2)); mids.append(f[i])
         pobres = [f"plano {k + 1} ({S[k]['inicio']:.1f} s, detalle {x:.1f})" for k, x in enumerate(det) if x < 2.8]
         sim = [float(np.abs(mids[k] - mids[k + 1]).mean()) for k in range(len(mids) - 1)]

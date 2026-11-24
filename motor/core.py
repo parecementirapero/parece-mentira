@@ -1,10 +1,14 @@
 """Núcleo del motor: lienzo, tiempos, interpolación y composición."""
 import math
+import os
 
 import numpy as np
 from PIL import Image
 
-W, H, FPS = 1080, 1920, 30
+# Formato: vertical 9:16 por defecto (Shorts/TikTok). MOTOR_FORMATO=16:9 en el entorno → horizontal 1920×1080
+# (vídeos largos de YouTube; DECISIONS 2026-11-24). Se lee al importar: un proceso = un formato.
+HORIZONTAL = os.environ.get("MOTOR_FORMATO", "9:16") == "16:9"
+W, H, FPS = (1920, 1080, 30) if HORIZONTAL else (1080, 1920, 30)
 
 
 # ---------------------------------------------------------------- colores

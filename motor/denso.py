@@ -21,6 +21,7 @@ Qué hace solo:
 import json, os, random, shutil, subprocess
 
 from .tiempos import palabras_de_alineacion
+from .core import W, H, HORIZONTAL
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 CIAN, MAGENTA, LIMA, AMBAR = "#2ff3ff", "#ff3df2", "#7dff3a", "#ffe93d"  # neones para fondos oscuros
@@ -28,16 +29,20 @@ ESPACIO = ["#02030a", "#0a1030"]
 LEER = lambda txt: 0.25 + len(txt) / 17  # segundos mínimos para leer un texto (una cifra suelta: ~0,3 s)
 # Zona segura común a Shorts, Reels y TikTok (GUIA_CALIDAD §4): fuera de aquí, la app tapa el texto con sus botones.
 SEG_ARRIBA, SEG_ABAJO, SEG_DER = 240, 1400, 900
+# Horizontal 16:9 (vídeo largo de YouTube): subtítulo abajo centrado (y≈975) y nada pegado a los bordes; sin columna de botones.
+if HORIZONTAL:
+    SEG_ARRIBA, SEG_ABAJO, SEG_DER = 40, 880, W - 60
 
 _V = None  # vídeo que se está construyendo (lo usan flecha, fugaz, recorrido y fx)
 
 
 # ------------------------------------------------------------------ piezas básicas (del estilo v4)
 def IMG(n, **k): return {"tipo": "imagen", "archivo": f"svg/{n}.svg", **k}
-def BG(n, z=0.05, ancho=1180): return IMG(n, ancho=ancho, x=540, y=960, z=z)
+def BG(n, z=0.05, ancho=None): return IMG(n, ancho=ancho or W + 100, x=W / 2, y=H / 2, z=z)
 
 
-def polvo(color="#fff1c8", n=40, area=(0, 300, 1080, 1700), sem=1, clase="polvo"):
+def polvo(color="#fff1c8", n=40, area=None, sem=1, clase="polvo"):
+    area = area or ((0, 300, 1080, 1700) if not HORIZONTAL else (0, 0, W, H))
     return {"tipo": "particulas", "clase": clase, "color": color, "area": list(area), "n": n, "tam": [2, 5],
             "vel": [6, -10], "z": 0.9, "semilla": sem}
 
@@ -49,7 +54,7 @@ def brillo(x, y, r, color, i=0.5, z=0.06, pulso=None, keys=None):
     return b
 
 
-def cam(z0, z1, f0=(540, 960), f1=None, temblor=0):
+def cam(z0, z1, f0=(W / 2, H / 2), f1=None, temblor=0):
     return {"zoom": [z0, z1], "foco": [list(f0), list(f1 or f0)], "pan": [[0, 0], [0, 0]], "temblor": temblor}
 
 
@@ -170,7 +175,7 @@ def flecha(pts, t0, t1, color="#ffffffcc", g=8, disc=None, punta=True, z=0.5):
 
 def fugaz(t0, x0, y0, x1, y1, z=0.12):
     """Estrella fugaz lenta (se dibuja en 0,7 s y se apaga en 1,6 s), con su soplo."""
-    fx(_V.ini + t0, "fugaz", -25, pan=round((x0 + x1) / 1080 - 1, 2))
+    fx(_V.ini + t0, "fugaz", -25, pan=round((x0 + x1) / W - 1, 2))
     return {"tipo": "flecha", "puntos": [[x0, y0], [x1, y1]], "grosor": 3, "color": "#ffffffee", "punta": False, "z": z,
             "keys": [{"t": t0, "progreso": 0, "op": 1}, {"t": t0 + 0.7, "progreso": 1}, {"t": t0 + 1.0, "op": 1}, {"t": t0 + 1.6, "op": 0}]}
 
@@ -188,7 +193,7 @@ def recorrido(T0, T1, p0, p1, d, esc=None):
 
 
 # ------------------------------------------------------------------ piezas hechas (usan SVG de la biblioteca)
-def estrellas(n=40, sem=3): return polvo("#ffffff", n, (0, 0, 1080, 1920), sem, "estrellas")
+def estrellas(n=40, sem=3): return polvo("#ffffff", n, (0, 0, W, H), sem, "estrellas")
 def tierra(x, y, ancho, z=0.4, giro=4, keys=None): return IMG("tierra_hd", ancho=ancho, x=x, y=y, z=z, anim={"girar": giro}, keys=keys or [])
 def luna(x, y, ancho, z=0.4, keys=None, **k): return IMG("luna_hd", ancho=ancho, x=x, y=y, z=z, keys=keys or [], **k)
 
@@ -221,7 +226,7 @@ def sol(x, y, r=170, z=0.3):
 
 def fundido_blanco(keys, color="#fff6e0"):
     """Fogonazo a pantalla completa por encima de todo (keys con `op`)."""
-    return {"tipo": "forma", "forma": "rect", "ancho": 1300, "alto": 2200, "relleno": color, "x": 540, "y": 960, "hud": True, "z": 1, "keys": keys}
+    return {"tipo": "forma", "forma": "rect", "ancho": W + 220, "alto": H + 280, "relleno": color, "x": W / 2, "y": H / 2, "hud": True, "z": 1, "keys": keys}
 
 
 # ------------------------------------------------------------------ tiempos provisionales (sin voz)
@@ -337,11 +342,13 @@ class Video:
         tocado, M = False, 10  # M = margen para no quedarse justo en el borde
         for _ in range(10):
             x0, y0, x1, y1 = _caja(h)
-            if x1 - x0 > 900 - M and h.get("tam", 120) > 44:
+            if x1 - x0 > (900 if not HORIZONTAL else W - 240) - M and h.get("tam", 120) > 44:
                 h["tam"] = int(h.get("tam", 120) * 0.92); tocado = True; continue
             if y1 > SEG_ABAJO - M:
                 h["y"] = int(h.get("y", 960) - (y1 - SEG_ABAJO + M)) - 1; tocado = True; continue
-            if x1 > SEG_DER - M and y1 > 800:
+            if HORIZONTAL and (x0 < 60 + M or x1 > SEG_DER - M):
+                h["x"] = int(min(max(h.get("x", W / 2), (x1 - x0) / 2 + 60 + M), SEG_DER - M - (x1 - x0) / 2)); tocado = True; break
+            if not HORIZONTAL and x1 > SEG_DER - M and y1 > 800:
                 x_min = (x1 - x0) / 2 + 70  # sin salirse por la izquierda
                 x_nuevo = int(h.get("x", 540) - (x1 - SEG_DER + M)) - 1
                 if x_nuevo >= x_min:
@@ -356,13 +363,15 @@ class Video:
             self.MOVIDOS.append(f"«{(h.get('texto') or '') or h.get('unidad', '')}» en «{nombre}» → x={h.get('x', 540)}, y={h.get('y', 960)}, tam={h.get('tam', 120)}")
         return tocado
 
-    def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=320, grano=0.03, zona_segura=True,
-                  musica_viva=True, bucle=0.0, subtitulos="karaoke"):
+    def construir(self, id_, claves=(), musica=None, version=1, gancho=True, y_subtitulo=None, grano=0.03, zona_segura=True,
+                  musica_viva=True, bucle=0.0, subtitulos="karaoke", tam_subtitulo=None, ancho_subtitulo=None, ep_extra=None):
         """Monta todos los planos y escribe salida/episodio.json. Devuelve la lista de avisos de lectura (vacía = bien).
         zona_segura=True recoloca solos los rótulos que la app taparía (míralos luego en la hoja de fotogramas:
         al subirlos pueden pisar al sujeto; en ese caso, colócalos tú dentro de y=240…1400)."""
         self.MOVIDOS = []
         forzada = {}
+        if y_subtitulo is None:
+            y_subtitulo = 975 if HORIZONTAL else 320   # horizontal: subtítulo abajo centrado
         global _V
         _V = self
         self.PLANOS.sort(key=lambda p: p[0])
@@ -435,7 +444,8 @@ class Video:
             informe.append((d, nombre))
         ep = {"id": id_, "version": version, "audio": self.audio,
               "subtitulos": {"alineacion": self.alineacion, "max_chars": 26},
-              "estilo_subtitulos": {"modo": "karaoke", "y": y_subtitulo, "tam": 62, "claves": list(claves)},
+              "estilo_subtitulos": {"modo": "karaoke", "y": y_subtitulo, "tam": tam_subtitulo or (54 if HORIZONTAL else 62), "claves": list(claves),
+                                    **({"ancho_max": ancho_subtitulo or 1500} if HORIZONTAL or ancho_subtitulo else {})},
               "musica": dict(musica or {"generar": "curiosidad", "semilla": 1, "db": -13}), "lufs": -19, "grano": grano,
               "escenas": escenas, "sfx": sorted(self.FX, key=lambda e: e["t"])}
         if musica_viva and "archivo" not in ep["musica"]:
@@ -454,6 +464,8 @@ class Video:
             ep["estilo_subtitulos"] = {"modo": "palabra", "y": y_subtitulo if y_subtitulo > 600 else 1180, "tam": 104, "claves": list(claves)}
         if bucle:
             ep["bucle"] = bucle  # segundos finales que se funden con el primer fotograma (el Short enlaza al repetirse)
+        if ep_extra:
+            ep.update(ep_extra)
         if gancho:
             ep["estilo_subtitulos"]["gancho"] = True  # DECISIONS 2026-11-16: gancho entero en el fotograma 0
         json.dump(ep, open(os.path.join(self.out, "episodio.json"), "w"), ensure_ascii=False, indent=1)

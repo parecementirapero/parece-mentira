@@ -288,14 +288,15 @@ class Episodio:
     def hoja(self, salida, cada=2.0):
         self.precalentar(min(4, os.cpu_count() or 1))
         ts = list(np.arange(0.25, self.duracion, cada))
-        miniaturas = [self.frame(float(t)).resize((270, 480), Image.LANCZOS) for t in ts]
-        cols = 6
+        tw, th = (270, 480) if H > W else (480, 270)          # miniaturas con el formato del vídeo (9:16 o 16:9)
+        miniaturas = [self.frame(float(t)).resize((tw, th), Image.LANCZOS) for t in ts]
+        cols = 6 if H > W else 4
         filas = math.ceil(len(miniaturas) / cols)
-        hoja = Image.new("RGB", (cols * 278, filas * 510), (20, 20, 24))
+        hoja = Image.new("RGB", (cols * (tw + 8), filas * (th + 30)), (20, 20, 24))
         d = ImageDraw.Draw(hoja)
         f = ImageFont.truetype(FUENTE, 20)
         for i, (t, m) in enumerate(zip(ts, miniaturas)):
-            x, y = (i % cols) * 278 + 4, (i // cols) * 510 + 26
+            x, y = (i % cols) * (tw + 8) + 4, (i // cols) * (th + 30) + 26
             hoja.paste(m, (x, y))
             d.text((x, y - 24), f"{t:5.2f}s", font=f, fill=(230, 230, 230))
         os.makedirs(salida, exist_ok=True)

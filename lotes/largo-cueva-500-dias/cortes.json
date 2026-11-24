@@ -1,0 +1,36 @@
+{
+ "hueco_entre_bloques_s": 0.45,
+ "partes": [
+  {
+   "parte": 1,
+   "inicio": 0,
+   "fin": 107.57,
+   "ganancia_db": 0.4
+  },
+  {
+   "parte": 2,
+   "inicio": 107.57,
+   "fin": 216.5,
+   "ganancia_db": -0.6
+  },
+  {
+   "parte": 3,
+   "inicio": 216.5,
+   "fin": 317.75,
+   "ganancia_db": 0.2
+  },
+  {
+   "parte": 4,
+   "inicio": 317.75,
+   "fin": 398.76,
+   "ganancia_db": -0.3
+  },
+  {
+   "parte": 5,
+   "inicio": 398.76,
+   "fin": 511.36,
+   "ganancia_db": -0.4
+  }
+ ],
+ "total_s": 511.36
+}
