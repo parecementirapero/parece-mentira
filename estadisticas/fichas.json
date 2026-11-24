@@ -1243,7 +1243,9 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "pzAwPba_UOc",
+  "tiktok": "7711881249794706710"
  },
  "2026-11-24-tarde/03": {
   "lote": "2026-11-24-tarde",
@@ -1277,7 +1279,9 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "WpmGRnjy2CE",
+  "tiktok": "7711882275591294230"
  },
  "2026-11-24-tarde/02": {
   "lote": "2026-11-24-tarde",
@@ -1311,6 +1315,8 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "_DU6gOVopOM",
+  "tiktok": "7711881802566208790"
  }
 }

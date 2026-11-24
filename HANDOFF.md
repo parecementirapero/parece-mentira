@@ -4,6 +4,16 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-25 00:45 — Jorge (con el agente) — rama `main` — lote 2026-11-24-tarde publicado y programado
+**Hecho**:
+- Jorge: «sube uno ahora, mañana a las 10 otro y a las 12 otro»; confirmado en el chat («ok, así»): 01 ahora, 02 y 03 hoy 25-11 a las 10:00 y 12:00.
+- YouTube por API desde el Mac, con portada puesta en los tres: pzAwPba_UOc (público), _DU6gOVopOM (10:00), WpmGRnjy2CE (12:00).
+- TikTok desde el navegador integrado (Jorge eligió los archivos de `PARA PUBLICAR/2411t-*`): 7711881249794706710 (publicado), 7711881802566208790 (10:00), 7711882275591294230 (12:00), con texto y portada.
+- `publicado.json`, `etiquetas.json` y fichas al día.
+**Aprendido**: en el campo de descripción de TikTok, `cmd+a` no selecciona todo; funciona seleccionar el contenido con un `Range` por JS y pulsar Backspace de verdad. Los botones Save/Post/Schedule quedan fuera del panel estrecho: se pulsan con `click()` por JS.
+**Pendiente**: comentarios fijados (verificación de Studio).
+**Siguiente paso**: nada urgente; el turno de mañana sigue su manual.
+
 ## 2026-11-24 23:59 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-24-tarde v1 en revisión
 **Qué pasó**: la tarea de las 19:52 se disparó a las 22:30. El Mac de Jorge respondía; el lote se hizo entero.
 **Hecho**:

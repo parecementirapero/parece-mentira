@@ -331,5 +331,32 @@
     "estructura": "experimento",
     "experimento": "formato interactivo (test de atención; versión propia de un formato visto en otra cuenta)",
     "portada": "arriba"
+  },
+  "pzAwPba_UOc": {
+    "titulo": "Tu gato NO nota el dulce 🐱🍰",
+    "lote": "2026-11-24-tarde",
+    "tema": "Cotidiano",
+    "gancho": "dato",
+    "estructura": "misterio por pistas",
+    "experimento": "no",
+    "portada": "arriba"
+  },
+  "_DU6gOVopOM": {
+    "titulo": "En el espacio las lágrimas NO caen 😢🚀",
+    "lote": "2026-11-24-tarde",
+    "tema": "Espacio",
+    "gancho": "negacion",
+    "estructura": "experimento",
+    "experimento": "no",
+    "portada": "dato"
+  },
+  "WpmGRnjy2CE": {
+    "titulo": "Los vikingos NO llevaban cuernos ⚔️",
+    "lote": "2026-11-24-tarde",
+    "tema": "Histórico",
+    "gancho": "negacion",
+    "estructura": "misterio por pistas",
+    "experimento": "gancho de negación (Histórico)",
+    "portada": "dato"
   }
 }

@@ -1,6 +1,6 @@
 # Lote 2026-11-24-tarde — estado
 
-**Estado**: 🟢 **«ok» de Jorge (25-11 00:15) — YouTube publicado y programado; TikTok en curso**. Antes esperaban el «ok» en https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS (correo `1a20f922774c58fd`).
+**Estado**: 🟢 **publicado y programado en YouTube y TikTok** («ok» de Jorge, 25-11 00:15). Antes esperaban el «ok» en https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS (correo `1a20f922774c58fd`).
 **Quién**: Agente 20:00 (Jorge). La tarea de las 19:52 se disparó a las 22:30 (Madrid); el Mac de Jorge respondía.
 **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-24-tarde/` (Mac de Jorge): locuciones, alineaciones, MP4, SRT, manifiestos, portadas (`NN-portadas/portada.jpg`) y `metadatos.json`. El SHA es el del archivo en el Mac (al pasar por el chat se reempaqueta).
 
@@ -56,3 +56,9 @@ Jorge: «sube uno ahora, mañana a las 10 otro y a las 12 otro»; confirmado en 
   - 02 https://youtube.com/shorts/_DU6gOVopOM (programado 25-11 10:00)
   - 03 https://youtube.com/shorts/WpmGRnjy2CE (programado 25-11 12:00)
 - Copias para TikTok en `PARA PUBLICAR/2411t-*` (vídeos y portadas).
+- TikTok desde el navegador integrado, con texto (comprobado con `innerText`) y portada de imagen elegida por Jorge:
+  - 01 https://www.tiktok.com/@parece.mentira85/video/7711881249794706710 (publicado 00:18, «en revisión» al subir, lo normal)
+  - 02 https://www.tiktok.com/@parece.mentira85/video/7711881802566208790 (programado 25-11 10:00)
+  - 03 https://www.tiktok.com/@parece.mentira85/video/7711882275591294230 (programado 25-11 12:00)
+- `publicado.json`, `estadisticas/etiquetas.json` y fichas (`ficha publicar`) al día.
+- Pendiente: comentarios fijados (YouTube sigue pidiendo la verificación de Studio; tarea en `TASKS.md`).
