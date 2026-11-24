@@ -1,8 +1,8 @@
 # Lote 2026-11-23-tarde — estado
 
-**Estado**: 🟡 **v1 en revisión**: falta el «ok» de Jorge.
+**Estado**: 🟢 **publicado y programado en YouTube y TikTok**.
 **Quién**: Jorge, con el agente, en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf. El turno de las 20:00 del 23-11 no se hizo, y Jorge pidió hacerlo el 24-11 a las 00:47.
-**Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-23-tarde/` (Mac de Jorge). Ahí ya están las locuciones y las alineaciones. **Faltan los MP4, las portadas y `metadatos.json`**: el Mac se desconectó del puente durante el render. Están en el chat y se copian al Mac cuando vuelva.
+**Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-23-tarde/` (Mac de Jorge). Ahí ya están las locuciones y las alineaciones. El Mac se desconectó durante el render. MP4, SRT, portadas y `metadatos.json` se copiaron al volver (01:20). Las copias para TikTok están en `PARA PUBLICAR/2311t-*`. Al pasar por el chat, el SHA de los MP4 cambia (MP4 reempaquetado, misma duración).
 
 ## Vídeos
 | # | Título | Duración | SHA-256 corto | Calidad | Portada |
@@ -43,5 +43,18 @@ En `metadatos.json` → `fuentes`. Son:
 - Stanford Solar Center, Science News Explores y WTAMU.
 - APA, Stroop 1935 (York University), Simply Psychology y EBSCO.
 
+## Publicación (2026-11-24 01:20–01:45)
+Jorge: «quiero que subas ahora uno con su portada, el siguiente mañana a las 10 y el último a las 12», y luego «súbelos a youtube y tiktok en los horarios que te he dicho». Se entiende «mañana» como hoy 24-11 por la mañana (el mensaje es de la 01:15).
+- YouTube por API desde el Mac, con portada:
+  - 01 https://youtube.com/shorts/NcDWZOO-cEw (público)
+  - 02 https://youtube.com/shorts/VIZRXKQ8eHQ (10:00)
+  - 03 https://youtube.com/shorts/CcqDZeF_IjA (12:00)
+- **Falta repasar en Studio que las portadas se han quedado**. El `--solo-portada` de repaso se cortó: Jorge paró la orden.
+- TikTok desde el navegador integrado, con texto (comprobado con `innerText`) y portada de imagen elegida por Jorge:
+  - 01 https://www.tiktok.com/@parece.mentira85/video/7711527702997650710 (publicado 01:26)
+  - 02 https://www.tiktok.com/@parece.mentira85/video/7711528083202886934 (10:00)
+  - 03 https://www.tiktok.com/@parece.mentira85/video/7711528522870836502 (12:00)
+
 ## Siguiente paso
-«ok» de Jorge. Después, copiar los MP4 y las portadas al Mac (si no se ha hecho ya) y publicar como diga.
+Revisar las miniaturas en YouTube Studio. Comentarios fijados (necesitan la verificación de Studio).
+- Correo de revisión: `1a20ae5fe9867987`.

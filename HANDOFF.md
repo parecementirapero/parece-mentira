@@ -4,6 +4,19 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-24 01:45 — Jorge (con el agente) — rama `main` — lote 2026-11-23-tarde publicado y programado
+**Hecho**:
+- «ok» de Jorge con horarios: 01 ahora, 02 a las 10:00 y 03 a las 12:00 del 24-11.
+- YouTube por API: NcDWZOO-cEw, VIZRXKQ8eHQ y CcqDZeF_IjA.
+- TikTok desde el navegador integrado, con texto y portada: 7711527702997650710, 7711528083202886934 y 7711528522870836502.
+- El Mac volvió y ya tiene MP4, SRT, portadas y metadatos.
+- `publicado.json` y fichas al día.
+- ElevenLabs: 17.947 caracteres (plan Starter, se renueva el 15-12).
+**Pendiente**:
+- Repasar en YouTube Studio que las tres miniaturas se han quedado. El `--solo-portada` de repaso se paró a petición de Jorge.
+- Comentarios fijados.
+**Siguiente paso**: lo anterior, en el próximo turno con el Mac conectado.
+
 ## 2026-11-24 01:15 — Jorge (con el agente) — rama `main` — lote 2026-11-23-tarde v1 en revisión
 **Encargo**: «hazme el lote de hoy que no has podido hacer» (el turno de las 20:00 del 23-11 no se hizo).
 **Hecho**:
