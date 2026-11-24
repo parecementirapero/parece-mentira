@@ -62,3 +62,9 @@ Jorge: «sube uno ahora, mañana a las 10 otro y a las 12 otro»; confirmado en 
   - 03 https://www.tiktok.com/@parece.mentira85/video/7711882275591294230 (programado 25-11 12:00)
 - `publicado.json`, `estadisticas/etiquetas.json` y fichas (`ficha publicar`) al día.
 - Pendiente: comentarios fijados (YouTube sigue pidiendo la verificación de Studio; tarea en `TASKS.md`).
+
+## Comentarios contestados (AGENTE §8b) — 2026-11-25 ≈01:30, a petición de Jorge
+- **YouTube** (Studio → Comunidad, filtro «sin interactuar»): 25 respuestas. Sobre todo en el test de los botes (respuesta: 11; se pregunta por el astronauta y el fondo), y además en el Sol blanco, la sangre de estrellas, el cerebro enamorado, Stroop y los ojos al revés.
+- **TikTok**: 23 respuestas. 20 desde TikTok Studio → Comments y 3 que Studio no listaba (dahensito «12» y SANTIAGO «10» en el test de los botes, «mahoraga» en los ojos al revés), vistas en la página de cada vídeo.
+- Sin contestar a propósito: el comentario de Jorge («wow», cuenta propia), «f8tf7fr7r5» (sin sentido) y comentarios que son solo stickers o respuestas entre usuarios.
+- Aprendido: la lista de TikTok Studio → Comments no enseña todos los comentarios ni se actualiza al momento. Para no dejar ninguno, hay que mirar también la página de los vídeos que tienen comentarios (TikTok Studio → Posts, columna de comentarios). En YouTube Studio, al responder dentro de un hilo con respuestas, el botón «Responder» que vale es el de la caja abierta, no el último del hilo.

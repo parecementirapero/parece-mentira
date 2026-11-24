@@ -4,6 +4,10 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-25 01:35 — Jorge (con el agente) — rama `main` — comentarios contestados
+**Hecho**: Jorge: «quiero que respondas a todos los comentarios que no se han respondido de tiktok y youtube». 25 respuestas en YouTube y 23 en TikTok (detalle y lo aprendido en `lotes/2026-11-24-tarde/estado.md` → «Comentarios contestados»).
+**Pendiente**: nada nuevo.
+
 ## 2026-11-25 00:45 — Jorge (con el agente) — rama `main` — lote 2026-11-24-tarde publicado y programado
 **Hecho**:
 - Jorge: «sube uno ahora, mañana a las 10 otro y a las 12 otro»; confirmado en el chat («ok, así»): 01 ahora, 02 y 03 hoy 25-11 a las 10:00 y 12:00.
