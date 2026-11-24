@@ -20,6 +20,9 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 - ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
 
 ## Usados
+- No ves tus ojos moverse: movimientos sacádicos, el cerebro bloquea la imagen y la ilusión del reloj parado — lote 2026-11-23-tarde 01 (Jorge, con el agente)
+- El Sol es blanco: dispersión del azul, cielo azul, Sol amarillento y rojo al atardecer, pico de emisión en el verde — lote 2026-11-23-tarde 02 (Jorge, con el agente)
+- Di el color, no leas: efecto Stroop (1935), lectura automática, uso en neuropsicología — lote 2026-11-23-tarde 03 (Jorge, con el agente)
 - El dólar: origen de la palabra (táleros de Bohemia, real de a ocho) y del símbolo $ (abreviatura de pesos) — vídeo extra 2026-11-19 02 (Nico, chat)
 - El Turco: el autómata ajedrecista de 1770 que ganó a Napoleón y Franklin con una persona dentro — vídeo extra 2026-11-19 03 (Nico, chat)
 - El Niño: por qué se llama así y qué es (viento que se frena, La Niña, El Niño 2026) — vídeo extra 2026-11-19 (Nico, chat), tema sacado de las tendencias

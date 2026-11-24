@@ -4,6 +4,23 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-24 01:15 — Jorge (con el agente) — rama `main` — lote 2026-11-23-tarde v1 en revisión
+**Encargo**: «hazme el lote de hoy que no has podido hacer» (el turno de las 20:00 del 23-11 no se hizo).
+**Hecho**:
+- 01 «No ves tus ojos moverse» (sacádicas y reloj parado).
+- 02 «El Sol es blanco» (dispersión; pico en el verde).
+- 03 «Di el color, no leas» (Stroop; experimento: formato interactivo; cada ronda en un plano fijo).
+- Estilo cartoon (`ilus_1123t.py`, `comun_1123t.py`, `gen_0N.py`). Reutiliza `cartoon_todo` del 22-11 tarde.
+- Voz por API desde el Mac. Render en la nube. MP4 y portadas en el chat.
+- `metadatos.json` con fuentes, `guiones.md`, `estado.md`, fichas e IDEAS «Usados».
+**Pruebas**:
+- `construir` sin avisos de lectura.
+- `motor.calidad` 55/59/46 sin ❌.
+- Hojas de fotogramas y portadas revisadas.
+- No se tocó `motor/`.
+**Pendiente**: el Mac de Jorge se desconectó del puente durante el render, así que los MP4, las portadas y los textos no están todavía en `Documents/Parece Mentira/lotes/2026-11-23-tarde/`. Se copian cuando vuelva. Para subir a YouTube hace falta el Mac (claves).
+**Siguiente paso**: «ok» de Jorge en este chat.
+
 ## 2026-11-23 15:06 — Jorge (con el agente) — rama `main` — lote 2026-11-22-tarde programado en YouTube y TikTok
 **Hecho**: YouTube MfV8ypLlIU0 (público), 3NbMXD2ksMI (15:55) y _8lkYb4lUG0 (16:55). TikTok 7711366247224462614 (15:25), 7711366830979419414 (15:55) y 7711367394031062294 (16:55), con texto y portada de imagen. `publicado.json`, `etiquetas.json` y fichas al día.
 **Aprendido**: (1) Justo después de subir, `subir_youtube.py` puede decir `"portada": "puesta"` y Studio enseñar igualmente un fotograma automático. Hay que mirarlo en Studio y repetir `--solo-portada` unos minutos después. (2) En la subida de TikTok, Cmd+A no selecciona el texto: el nombre del archivo se borra con Backspace y se comprueba con `innerText`. (3) El TikTok «02-sangre-de-estrellas_v1» (7710939317861944598, lote 22-11 mañana) está publicado sin texto.

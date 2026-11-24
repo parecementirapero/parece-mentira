@@ -4,7 +4,7 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-23-tarde — Jorge (con el agente, chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf) — 2026-11-24 00:47 — el turno de las 20:00 del 23-11 no se hizo; Jorge pide hacerlo ahora
+- [ ] Lote 2026-11-23-tarde — Jorge (con el agente, chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf) — 2026-11-24 00:47 — el turno de las 20:00 del 23-11 no se hizo; Jorge pide hacerlo ahora. **v1 en revisión** (2026-11-24 01:15): vídeos y portadas en el chat; falta copiarlos al Mac (se desconectó) y el «ok»
 - [ ] Lote 2026-11-19-tarde — Agente 20:00 (Jorge) — 2026-11-20 12:55 — **pendiente de voz**: guiones, metadatos y generadores hechos (`lotes/2026-11-19-tarde/`); el Mac de Jorge se cayó del puente a las 12:55. Se retoma en https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq (reintentos 14:21 y 15:21 sin Mac; se retoma escribiendo en ese chat). La tarea de las 20:00 del 19-11 se disparó el 20-11 a las 12:49
 - [ ] Lote 2026-11-19-manana — Agente 08:00 (Nico) — 2026-11-19 18:36 — **pendiente de voz**: guiones, metadatos y generadores hechos; voz de 01 y 02 en el Mac de Nico; falta la del 03, render, calidad, portadas y entrega. Se retoma en el chat https://claude.ai/code/session_019BG1dHnK2nwYYSBBZnUxmf cuando el Mac vuelva (se cayó a las 18:42). La tarea programada se disparó a las 18:35 en vez de a las 07:52
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
