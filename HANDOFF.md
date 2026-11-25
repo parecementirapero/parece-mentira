@@ -4,6 +4,18 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-25 19:45 — Nico (con el agente) — rama `main` — lote 2026-11-25-manana v1 en revisión
+**Qué pasó**: a las 19:20 Nico escribió «sigue» y aprobó el acceso a `Documents/Parece Mentira`; el Mac respondía.
+**Hecho**:
+- Voz por API desde el Mac (créditos 14.012 → 12.911). Salió lenta: 64,2 / 56,5 / 60,5 s. El 01 y el 03 se recortaron con `omitir=` (frases enteras, sin otra voz) a 56,8 y 55,4 s.
+- Micro planos en los tres para el ritmo (`gen_0N.py`), render en la nube, portadas (01 y 03 a medida con `componer`), fichas.
+- MP4 y portadas en el chat; MP4, SRT, manifiestos, portadas y metadatos en el Mac.
+**Pruebas**: `construir` sin avisos; `motor.calidad --mp4` sin ❌ (91/88/87); hojas revisadas; `ficha comprobar` 0 problemas. No se tocó `motor/`.
+**Aprendido**: (1) con la carpeta sin conectar, el lote no pasa de «pendiente de voz»: la tarea programada la trae conectada, un chat a mano no. (2) Dos renders a la vez en la nube se pisan: `pkill` del render no mata el bucle que lo lanzó. (3) `motor.portadas` no siempre propone al protagonista: `componer(img, texto, clave, diseño)` con `Episodio.frame(t)` lo resuelve.
+**Pendiente**: «ok» de Nico y horas; **oír los empalmes** del 01 (≈6 s y ≈22 s) y del 03 (≈39 s). Sin correo (Nico estaba en el chat). Sin hacer: Studio §1.8, comentarios §8b.
+**Siguiente paso**: con el «ok», YouTube por API (+1 h entre vídeos) y TikTok por el navegador integrado.
+
+
 ## 2026-11-25 08:45 — Nico (con el agente) — rama `main` — lote 2026-11-25-manana pendiente de voz
 **Qué pasó**: Nico pidió el lote a mano a las 07:57 («para subirlo a las 11, 12 y 13»). El Mac contesta, pero el chat no tiene conectada `Documents/Parece Mentira` y la petición de acceso fue denegada: sin `claves.txt` no hay voz.
 **Hecho**:

@@ -7,7 +7,8 @@ import ilus_1125m  # noqa: E402
 
 SVG = ilus_1125m.generar(os.path.join(sys.argv[1], "_svg_lote"))
 VOZ = sys.argv[2:4]
-v = Video(sys.argv[1], os.path.join(AQUI, "01-guion.txt"), *(VOZ if len(VOZ) == 2 else ()), svg_extra=SVG)
+v = Video(sys.argv[1], os.path.join(AQUI, "01-guion.txt"), *(VOZ if len(VOZ) == 2 else ()), svg_extra=SVG,
+          omitir=[(17, 23), (63, 78)] if len(VOZ) == 2 else ())  # la toma salió a 64 s: se quitan dos frases enteras (el coste y la causa del fallo) para quedar por debajo de 60 s sin gastar otra voz
 NEG = ["#070a1e", "#141a3e"]
 SAT0, SAT1 = v.w(10), v.w(34)     # satélite de fondo que cruza durante varios planos
 SAT2, SAT3 = v.w(130), v.w(159)
@@ -70,7 +71,7 @@ def _(d):
     return P(NEG, [BG("bg_esp_violeta"), estrellas(40, 7), sat(d),
                    *cruza(IMG("estrella_nitida", ancho=700, x=540, y=1050, z=0.5), IMG("estrella_borrosa", ancho=820, x=540, y=1050, z=0.5), d * 0.35, 0.3),
                    IMG("estrella_borrosa", ancho=300, x=220, y=1500, z=0.4, keys=aparece(d * 0.5)), IMG("estrella_borrosa", ancho=240, x=870, y=700, z=0.4, keys=aparece(d * 0.6))],
-             cam(1.0, 1.08, (540, 1050)), "corte", hud=[amarillo(d * 0.45, d - 0.03, "MANCHAS", y=1300, tam=110, color=MAGENTA)], sfx=[(d * 0.35, "zap", -20)])
+             cam(1.0, 1.08, (540, 1050)), "corte", hud=[rotulo(d * 0.45, d - 0.03, "MANCHAS", y=1300, tam=110, color="#ffffff", capsula="#a01a8ae6")], sfx=[(d * 0.35, "zap", -20)])
 
 
 @v.plano(34, "¿el fallo?: micro plano, el Hubble con un anillo que busca")
@@ -201,7 +202,7 @@ def _(d):
     return P(NEG, [BG("bg_estudio"), IMG("espejito", ancho=380, x=320, y=1130, z=0.5, keys=aparece(0.0, 0.25)),
                    IMG("moneda_antigua", ancho=330, x=780, y=1030, z=0.5, keys=[{"t": 0, "y": 500, "rot": -120}, {"t": 0.45, "y": 1030, "rot": 0, "ease": "bote"}]),
                    flecha([[160, 800], [480, 800]], 0.4, 0.7, AMBAR, 7, punta=False, z=0.6), flecha([[620, 800], [940, 800]], 0.4, 0.7, AMBAR, 7, punta=False, z=0.6)],
-             cam(1.0, 1.06, (540, 1050)), "corte", hud=[rotulo(0.15, d - 0.03, "UNA MONEDA", tam=90, color="#141414", capsula="#ffd23fe6", y=1300)], sfx=[(0.4, "ding", -18)])
+             cam(1.0, 1.06, (540, 1050)), "corte", sfx=[(0.4, "ding", -18)])
 
 
 @v.plano(118, "con el error contrario: la curva y su contraria se juntan")
@@ -263,6 +264,49 @@ def _(d):
     return P(NEG, [BG("bg_esp_violeta"), estrellas(50, 4), IMG("estrella_nitida", ancho=620, x=560, y=760, z=0.2, keys=late(0.3, 3, 0.08, 0.6)),
                    *hub(540, 1100, 640, gaf=True, p1=(540, 1060), d=d)],
              cam(1.0, 1.06, (540, 1000)), "corte", sfx=[(0.1, "brillo", -20)])
+
+
+# ---------------------------------------------------------------- micro planos (golpes de 0,4–0,7 s en la última palabra de la frase)
+@v.plano(3, "micro: «miope», la estrella borrosa a pantalla completa", mas=0.22)
+def _(d):
+    return P(NEG, [BG("bg_esp_violeta"), estrellas(50, 4), IMG("estrella_borrosa", ancho=1100, x=540, y=1050, z=0.4, keys=[{"t": 0, "escala": 0.8}, {"t": d, "escala": 1.15, "ease": "salida"}])],
+             cam(1.1, 1.3, (540, 1050)), "corte", sfx=[(0.0, "zap", -22)])
+
+
+@v.plano(9, "micro: «borroso», primer plano de la foto desenfocada", mas=0.22)
+def _(d):
+    return P(NEG, [BG("bg_esp_violeta"), IMG("foto_borrosa", ancho=900, x=540, y=1100, z=0.5, keys=[{"t": 0, "rot": -6, "escala": 0.9}, {"t": d, "rot": 3, "escala": 1.05, "ease": "salida"}])],
+             cam(1.1, 1.25, (540, 1050)), "corte", sfx=[(0.0, "pop", -22)])
+
+
+@v.plano(48, "micro: «plano», el borde en primer plano", mas=0.22)
+def _(d):
+    return P(NEG, [BG("bg_estudio"), IMG("espejo_corte", ancho=980, x=540, y=1100, z=0.5), senala(970, 960, 0.0, d, 90, "#ff3d3d")],
+             cam(1.7, 2.2, (900, 990), (960, 965)), "corte", sfx=[(0.0, "ding", -22)])
+
+
+@v.plano(62, "micro: «pelo», el pelo cruza la pantalla en diagonal", mas=0.22)
+def _(d):
+    return P(NEG, [BG("bg_estudio"), IMG("pelo", ancho=1500, x=540, y=1050, z=0.5, rot=-18, keys=[{"t": 0, "x": 300}, {"t": d, "x": 760, "ease": "lineal"}])],
+             cam(1.1, 1.2, (540, 1050)), "corte", sfx=[(0.0, "roce", -22)])
+
+
+@v.plano(117, "micro: «moneda», la moneda gira", mas=0.22)
+def _(d):
+    return P(NEG, [BG("bg_estudio"), brillo(540, 1050, 460, "#ffd23f", 0.4, 0.06), IMG("moneda_antigua", ancho=620, x=540, y=1050, z=0.5, keys=[{"t": 0, "ex": 0.15}, {"t": d, "ex": 1.0, "ease": "salida"}])],
+             cam(1.0, 1.15, (540, 1050)), "corte", sfx=[(0.0, "ding", -20)])
+
+
+@v.plano(147, "micro: «arriba», la Tierra y el Hubble pequeño, muy alto", mas=0.22)
+def _(d):
+    return P(NEG, [BG("bg_amanecer_orbital"), *hub(540, 900, 260, gaf=True, p1=(560, 880), d=d), flecha([[540, 1500], [540, 1120]], 0.0, d * 0.8, CIAN, 9, z=0.4)],
+             cam(1.0, 1.12, (540, 1000)), "corte", sfx=[(0.0, "senal", -24)])
+
+
+@v.plano(157, "micro final: «con él», las gafas en primer plano sobre el tubo (bucle)", mas=0.22)
+def _(d):
+    return P(NEG, [BG("bg_esp_violeta"), estrellas(50, 4), IMG("estrella_nitida", ancho=620, x=560, y=760, z=0.2), *hub(540, 1100, 640, gaf=True, p1=(540, 1090), d=d)],
+             cam(1.25, 1.0, (540, 860), (540, 1000)), "corte", sfx=[(0.0, "pop", -22)])
 
 
 v.construir("2026-11-25-manana-01-hubble-miope", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 251, "db": -13},

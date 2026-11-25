@@ -7,7 +7,8 @@ import ilus_1125m  # noqa: E402
 
 SVG = ilus_1125m.generar(os.path.join(sys.argv[1], "_svg_lote"))
 VOZ = sys.argv[2:4]
-v = Video(sys.argv[1], os.path.join(AQUI, "03-guion.txt"), *(VOZ if len(VOZ) == 2 else ()), svg_extra=SVG)
+v = Video(sys.argv[1], os.path.join(AQUI, "03-guion.txt"), *(VOZ if len(VOZ) == 2 else ()), svg_extra=SVG,
+          omitir=[(107, 122)] if len(VOZ) == 2 else ())  # la toma salió a 60,5 s: se quita la frase de los 1.300 olivos del pueblo para quedar por debajo de 60 s sin gastar otra voz
 DIA = ["#8ad0ff", "#b87a3a"]
 TAR = ["#ff9a5a", "#8a5a2a"]
 ROM = ["#ffb86a", "#b8884a"]
@@ -146,7 +147,7 @@ def _(d):
 def _(d):
     return P(OSC, [BG("bg_estudio"), brillo(540, 1150, 520, "#7dff3a", 0.5, 0.06, pulso=[0.2, 0.5]),
                    IMG("brote", ancho=760, x=540, y=1180, z=0.5, keys=[{"t": 0, "escala": 0.7, "y": 1280}, {"t": 0.45, "escala": 1.0, "y": 1180, "ease": "elastico"}, {"t": d, "escala": 1.05, "ease": "suave"}])],
-             cam(1.0, 1.08, (540, 1150)), "corte", hud=[rotulo(0.3, d - 0.03, "VUELVE A BROTAR", tam=84, color="#141414", capsula="#7dff3ae6", y=620)], sfx=[(0.05, "brillo", -16)], energia=0.85)
+             cam(1.0, 1.08, (540, 1150)), "corte", hud=[rotulo(0.05, d - 0.03, "REBROTA", tam=110, color="#141414", capsula="#7dff3ae6", y=620)], sfx=[(0.05, "brillo", -16)], energia=0.85)
 
 
 @v.plano(107, "y no está solo: tres olivos en el olivar")
@@ -202,6 +203,54 @@ def _(d):
     return P(DIA, [BG("bg_olivar"), oli(keys=[{"t": 0, "escala": 0.96}, {"t": d, "escala": 1.04, "ease": "suave"}]), hojas(2),
                    IMG("botella_aceite", ancho=180, x=880, y=1420, z=0.6, keys=aparece(0.05, 0.2))],
              cam(1.0, 1.06, (540, 1050)), "corte", hud=[BANDA()], sfx=[(0.05, "pop", -20)])
+
+
+# ---------------------------------------------------------------- micro planos (golpes de ≈0,5 s en la última palabra de la frase)
+@v.plano(4, "micro: «Roma», el templo", mas=0.22)
+def _(d):
+    return P(ROM, [BG("bg_roma"), brillo(540, 800, 500, "#fff6d0", 0.5, 0.06)], cam(1.15, 1.35, (540, 800)), "corte", hud=[BANDA()], sfx=[(0.0, "ding", -22)])
+
+
+@v.plano(10, "micro: «años», el tronco retorcido en primer plano", mas=0.3)
+def _(d):
+    return P(DIA, [BG("bg_olivar"), oli(y=700, ancho=1900, keys=[{"t": 0, "y": 760}, {"t": d, "y": 660, "ease": "salida"}])],
+             cam(1.0, 1.1, (540, 1200)), "corte", hud=[BANDA()], sfx=[(0.0, "roce", -22)])
+
+
+@v.plano(19, "micro: «España», el punto del mapa late", mas=0.34)
+def _(d):
+    return P(["#2a7ad0", "#0a2a66"], [BG("bg_bajo_agua"), IMG("mapa_iberia", ancho=940, x=540, y=1130, z=0.5), brillo(785, 1080, 160, "#ff3d3d", 0.8, 0.6, pulso=[0.4, 0.25])],
+             cam(1.7, 2.1, (760, 1090)), "corte", sfx=[(0.0, "pop", -22)])
+
+
+@v.plano(45, "micro: «ahí», el olivo bajo el sol de la tarde, de cerca", mas=0.14)
+def _(d):
+    return P(TAR, [BG("bg_olivar_tarde"), oli(y=1000, ancho=1400, keys=[{"t": 0, "escala": 1.0}, {"t": d, "escala": 1.08, "ease": "salida"}])],
+             cam(1.0, 1.1, (540, 800)), "corte", hud=[BANDA()], sfx=[(0.0, "pop", -24)])
+
+
+@v.plano(61, "micro: «dentro», el hueco del tronco", mas=0.3)
+def _(d):
+    return P(DIA, [BG("bg_olivar"), oli(y=600, ancho=1900, n="olivo_hueco")], cam(1.0, 1.25, (540, 1300)), "corte", hud=[BANDA()], sfx=[(0.0, "rumor", -22, {"dur": 0.4})])
+
+
+@v.plano(91, "micro: «abrazarlo», las cinco figuras de cerca", mas=0.5)
+def _(d):
+    ns = ["mu_a", "mu_b", "mu_c", "mu_d", "mu_a"]
+    return P(DIA, [BG("bg_olivar"), oli(y=700, ancho=1700), *[IMG(n, ancho=250, x=120 + i * 210, y=1380, z=0.6 + i * 0.01, keys=late(i * 0.05, 1, 0.08, 0.25)) for i, n in enumerate(ns)]],
+             cam(1.0, 1.1, (540, 1300)), "corte", hud=[BANDA()], sfx=[(0.0, "pop", -22)])
+
+
+@v.plano(106, "micro: «base», los brotes de cerca", mas=0.08)
+def _(d):
+    return P(OSC, [BG("bg_estudio"), IMG("brote", ancho=1300, x=540, y=1300, z=0.5, keys=[{"t": 0, "y": 1360}, {"t": d, "y": 1260, "ease": "salida"}])],
+             cam(1.0, 1.15, (540, 1000)), "corte", sfx=[(0.0, "brillo", -22)])
+
+
+@v.plano(144, "micro: «año», la botella de aceite brilla", mas=0.2)
+def _(d):
+    return P(OSC, [BG("bg_estudio"), brillo(540, 1100, 520, "#f4e04a", 0.6, 0.06, pulso=[0.3, 0.3]), IMG("botella_aceite", ancho=460, x=540, y=1100, z=0.5, keys=late(0.0, 1, 0.08, 0.3))],
+             cam(1.0, 1.15, (540, 1100)), "corte", sfx=[(0.0, "ding", -20)])
 
 
 v.construir("2026-11-25-manana-03-olivo-roma", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 253, "db": -13},

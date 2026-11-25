@@ -224,6 +224,43 @@ def _(d):
              cam(1.0, 1.08, (540, 1050)), "corte", hud=[BANDA()], sfx=[(0.05, "agua", -18)])
 
 
+# ---------------------------------------------------------------- micro planos (golpes de ≈0,5 s en la última palabra de la frase)
+@v.plano(6, "micro: «pasas», la pasa en primer plano", mas=0.45)
+def _(d):
+    return P(BAN, [BG("bg_bano"), IMG("pasa", ancho=760, x=540, y=1100, z=0.5, keys=[{"t": 0, "escala": 0.85, "rot": -8}, {"t": d, "escala": 1.08, "rot": 4, "ease": "salida"}])],
+             cam(1.05, 1.2, (540, 1100)), "corte", hud=[BANDA()], sfx=[(0.0, "pop", -22)])
+
+
+@v.plano(24, "micro: «cuerpo», la chispa recorre el nervio de la palma", mas=0.5)
+def _(d):
+    return P(OSC, [BG("bg_estudio"), IMG("mano_nervio", ancho=700, x=540, y=1130, z=0.5), brillo(540, 1250, 300, "#ffd23f", 0.8, 0.6, keys=[{"t": 0, "y": 1500}, {"t": d, "y": 950, "ease": "lineal"}])],
+             cam(1.5, 1.8, (540, 1300), (520, 1050)), "corte", sfx=[(0.0, "zap", -22)])
+
+
+@v.plano(82, "micro: «pliega», las arrugas a pantalla completa", mas=0.3)
+def _(d):
+    return P(OSC, [BG("bg_estudio"), IMG("yema_arrugada", ancho=900, x=540, y=1500, z=0.5, keys=[{"t": 0, "y": 1560}, {"t": d, "y": 1460, "ease": "salida"}])],
+             cam(1.1, 1.25, (540, 1050)), "corte", sfx=[(0.0, "roce", -20)])
+
+
+@v.plano(116, "micro: «rápidos», la canica cruza con líneas de velocidad", mas=0.4)
+def _(d):
+    return P(LABC, [BG("bg_lab_claro"), IMG("canica", ancho=360, x=540, y=1050, z=0.5, keys=[{"t": 0, "x": 100}, {"t": d, "x": 900, "ease": "lineal"}]), *lineas_vel(400, 1050, 5, "#2a5ae8aa")],
+             cam(1.1, 1.2, (540, 1050)), "corte", hud=[BANDA()], sfx=[(0.0, "whoosh", -22)])
+
+
+@v.plano(136, "micro: «mejor», los dedos arrugados sujetan la canica", mas=0.26)
+def _(d):
+    return P(AGU, [BG("bg_bajo_agua"), IMG("mano_arrugada", ancho=900, x=540, y=1500, z=0.5), IMG("canica_azul", ancho=260, x=540, y=930, z=0.6, keys=late(0.0, 1, 0.1, 0.3))],
+             cam(1.2, 1.35, (540, 1000)), "corte", sfx=[(0.0, "ding", -22)])
+
+
+@v.plano(148, "micro: «manos», el dibujo del neumático en primer plano", mas=0.3)
+def _(d):
+    return P(OSC, [BG("bg_estudio"), IMG("neumatico", ancho=1100, x=700, y=1200, z=0.5, keys=[{"t": 0, "rot": 0}, {"t": d, "rot": -40, "ease": "lineal"}]), polvo("#8ad0ff", 50, (0, 400, 1080, 1700), 5)],
+             cam(1.1, 1.2, (540, 1100)), "corte", sfx=[(0.0, "agua", -22)])
+
+
 v.construir("2026-11-25-manana-02-dedos-arrugados", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 252, "db": -13},
             claves=["dedos", "pasas", "hincha", "no.", "cuerpo.", "propósito.", "nervio", "Nunca.", "orden:", "vasos", "sangre", "volumen", "pliega.",
                     "Newcastle,", "canicas", "doce", "secas,", "neumático:", "agua", "pies.", "lluvia"])
