@@ -1351,7 +1351,8 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "E1QFyVyJ7kU"
  },
  "2026-11-25-manana/02": {
   "lote": "2026-11-25-manana",
@@ -1385,7 +1386,8 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "0nGefmtqxcs"
  },
  "2026-11-25-manana/03": {
   "lote": "2026-11-25-manana",
@@ -1419,6 +1421,7 @@
   "voz": "clon",
   "reciclado": false,
   "experimento": "no",
-  "brazo": "-"
+  "brazo": "-",
+  "youtube": "8ISC2-AoXSM"
  }
 }

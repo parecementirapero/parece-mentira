@@ -1,362 +1,389 @@
 {
-  "_instrucciones": "Etiquetas a mano por vídeo (id de YouTube, las 11 letras de youtube.com/shorts/XXXXXXXXXXX). Corrigen o amplían las automáticas (tema por hashtags y lote por lotes/*/estado.md). Cualquier clave nueva (voz, gancho, duración...) aparece sola en el Laboratorio de la web. Claves que usa el análisis: tema, gancho (pregunta, dato, contraste, reto, orden, historia), estructura (comparación, experimento, reconstrucción, misterio por pistas, metáfora visual), experimento. Temas recomendados: Cotidiano, Histórico, Espacio, Ciencia, Misterio, Humor. Para unir a mano el mismo vídeo en otras redes: \"tiktok\": \"<número del vídeo>\", \"instagram\": \"<código del reel>\".",
-  "_ejemplo": {
-    "tema": "Cotidiano",
-    "voz": "v1",
-    "gancho": "pregunta"
-  },
-  "D_2cV1qhmfA": {
-    "tema": "Espacio",
-    "voz": "v1",
-    "gancho": "contraste",
-    "estructura": "comparación",
-    "experimento": "no"
-  },
-  "bS6AUPYxr7s": {
-    "tema": "Histórico",
-    "gancho": "contraste",
-    "estructura": "reconstrucción",
-    "experimento": "no"
-  },
-  "oZSuHN-46FI": {
-    "tema": "Ciencia",
-    "gancho": "contraste",
-    "estructura": "comparación",
-    "experimento": "no"
-  },
-  "XGf1wOPygU8": {
-    "tema": "Misterio",
-    "gancho": "reto",
-    "estructura": "misterio por pistas",
-    "experimento": "no"
-  },
-  "jQmhf8o1PfY": {
-    "tema": "Ciencia",
-    "gancho": "orden + comparación cotidiana (uñas)",
-    "estructura": "cadena de datos",
-    "experimento": "método denso (40 planos, micro escenas, efectos de sonido); rehace el tema del 02 del lote 2026-11-15-tarde",
-    "portada": "centro",
-    "voz": "Archivo Oculto — Narración (clon)",
-    "tiktok": "7708861385387543830",
-    "instagram": "Df0KoRARstw"
-  },
-  "7PoER_sR6R0": {
-    "tema": "Cotidiano",
-    "gancho": "dato",
-    "estructura": "experimento",
-    "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
-    "portada": "arriba",
-    "montaje": "denso",
-    "voz": "clon eleven_v4",
-    "lote": "2026-11-16-tarde",
-    "tiktok": "7708881722745703702",
-    "instagram": "Df0UCk8RMdf",
-    "fuentes_en_descripcion": "no"
-  },
-  "cTRgkuY21mw": {
-    "tema": "Cotidiano",
-    "gancho": "pregunta",
-    "estructura": "metáfora visual",
-    "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
-    "portada": "arriba",
-    "montaje": "denso",
-    "voz": "clon eleven_v4",
-    "lote": "2026-11-16-tarde",
-    "tiktok": "7708882083015413014",
-    "instagram": "Df0UQzOxS49",
-    "fuentes_en_descripcion": "no"
-  },
-  "hfRveipHIdk": {
-    "tema": "Histórico",
-    "gancho": "contraste",
-    "estructura": "comparación",
-    "experimento": "tema cotidiano (prueba del lote: histórico contado desde hoy)",
-    "portada": "dato",
-    "montaje": "denso",
-    "voz": "clon eleven_v4",
-    "lote": "2026-11-16-tarde",
-    "tiktok": "7708882489892179222",
-    "instagram": "Df0Uzrsxo0A",
-    "fuentes_en_descripcion": "no"
-  },
-  "bja3TleMy94": {
-    "tema": "Ciencia",
-    "gancho": "dato",
-    "estructura": "experimento",
-    "experimento": "no",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "dato",
-    "lote": "2026-11-17-manana",
-    "tiktok": "7709083847450807574",
-    "instagram": "Df1twcSx6JN",
-    "fuentes_en_descripcion": "no"
-  },
-  "aA9ji1Y1EPA": {
-    "tema": "Espacio",
-    "gancho": "dato",
-    "estructura": "comparación",
-    "experimento": "no (el «plano real» de la NASA no se pudo descargar: thumb.wikimedia.org bloqueado)",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "arriba",
-    "lote": "2026-11-17-manana",
-    "tiktok": "7709084200636255510",
-    "instagram": "Df1uAQJxhjZ",
-    "fuentes_en_descripcion": "no"
-  },
-  "0LBq1SkOWz4": {
-    "tema": "Misterio",
-    "gancho": "negacion",
-    "estructura": "misterio por pistas",
-    "experimento": "gancho de negación (2.º dato tras el pulpo del 2026-11-16-manana)",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "dato",
-    "lote": "2026-11-17-manana",
-    "tiktok": "7709084597069401366",
-    "instagram": "Df1uQs9xjyt",
-    "fuentes_en_descripcion": "no"
-  },
-  "dOdQj9QyoBI": {
-    "tema": "Ciencia",
-    "gancho": "contraste",
-    "estructura": "comparación",
-    "experimento": "no",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "centro",
-    "lote": "2026-11-17-tarde",
-    "fuentes_en_descripcion": "no"
-  },
-  "cjSc0D_gOaI": {
-    "tema": "Espacio",
-    "gancho": "dato",
-    "estructura": "reconstrucción",
-    "experimento": "no",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "abajo",
-    "lote": "2026-11-17-tarde",
-    "fuentes_en_descripcion": "no"
-  },
-  "5pSKNws_e-s": {
-    "tema": "Espacio",
-    "gancho": "dato",
-    "estructura": "cadena de datos",
-    "experimento": "no",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "centro",
-    "lote": "2026-11-18-manana",
-    "fuentes_en_descripcion": "no"
-  },
-  "rEiiPtGXz84": {
-    "tema": "Histórico",
-    "gancho": "negacion",
-    "estructura": "misterio por pistas",
-    "experimento": "gancho de negación",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "arriba",
-    "lote": "2026-11-18-manana",
-    "fuentes_en_descripcion": "no"
-  },
-  "tp7XFLAIkS0": {
-    "tema": "Ciencia",
-    "gancho": "dato",
-    "estructura": "experimento",
-    "experimento": "no",
-    "alcance": "universal",
-    "montaje": "denso",
-    "portada": "arriba",
-    "lote": "2026-11-18-manana",
-    "fuentes_en_descripcion": "no"
-  },
-  "G_xEqU97krk": {
-    "titulo": "El Sol que ves ya es pasado ☀️⏳",
-    "lote": "2026-11-17-tarde",
-    "tema": "Espacio",
-    "gancho": "dato",
-    "estructura": "reconstrucción",
-    "experimento": "no",
-    "portada": "abajo"
-  },
-  "dMcGHyKbeaA": {
-    "titulo": "Por qué lloras al cortar cebolla (y el truco que funciona) 🧅😢",
-    "lote": "2026-11-17-tarde",
-    "tema": "Cotidiano",
-    "gancho": "orden",
-    "estructura": "experimento",
-    "experimento": "gancho de orden",
-    "portada": "dato"
-  },
-  "_9znalXgInI": {
-    "titulo": "GTA 6 tardó 13 años: más que ir a la Luna 🎮🚀",
-    "lote": "2026-11-18-tarde",
-    "tema": "Histórico",
-    "gancho": "dato",
-    "estructura": "comparación",
-    "experimento": "no",
-    "portada": "imagen propia"
-  },
-  "HGERZv5VWiU": {
-    "titulo": "Este niño cambia el clima (y se llama así por la Navidad)",
-    "lote": "2026-11-19-extra",
-    "tema": "Ciencia",
-    "gancho": "paradoja",
-    "estructura": "misterio por pistas",
-    "experimento": "tema sacado de las tendencias del día",
-    "portada": "abajo"
-  },
-  "Ve63IT5wgpY": {
-    "titulo": "El dólar no es americano (y su símbolo dice «pesos»)",
-    "lote": "2026-11-19-extra",
-    "tema": "Histórico",
-    "gancho": "negacion",
-    "estructura": "reconstrucción",
-    "experimento": "tema sacado de las tendencias del día",
-    "portada": "arriba"
-  },
-  "QUFe8ovVpJE": {
-    "titulo": "Esta máquina engañó a Napoleón en 1770",
-    "lote": "2026-11-19-extra",
-    "tema": "Histórico",
-    "gancho": "dato",
-    "estructura": "misterio por pistas",
-    "experimento": "tema sacado de las tendencias del día",
-    "portada": "abajo"
-  },
-  "4b3pQCoYOok": {
-    "titulo": "Este terrón pesa lo mismo que una montaña 🧊⭐",
-    "lote": "2026-11-18-tarde",
-    "tema": "Espacio",
-    "gancho": "contraste",
-    "estructura": "comparación",
-    "experimento": "no",
-    "portada": "abajo"
-  },
-  "ng543OmyPag": {
-    "titulo": "Ahora mides menos que esta mañana 📏😴",
-    "lote": "2026-11-18-tarde",
-    "tema": "Cotidiano",
-    "gancho": "dato",
-    "estructura": "experimento",
-    "experimento": "gancho en segunda persona",
-    "portada": "abajo"
-  },
-  "W9NYUO0-CrU": {
-    "titulo": "16 amaneceres al día en la Estación Espacial 🌅🛰️",
-    "lote": "2026-11-20-tarde",
-    "tema": "Espacio",
-    "gancho": "dato",
-    "estructura": "cadena de datos",
-    "experimento": "no",
-    "portada": "abajo"
-  },
-  "LvYkPN5jc6A": {
-    "titulo": "Desde esta montaña de España se ve ÁFRICA 🏔️🌍",
-    "lote": "2026-11-20-tarde",
-    "tema": "Ciencia",
-    "gancho": "dato",
-    "estructura": "experimento",
-    "experimento": "no",
-    "portada": "centro"
-  },
-  "kHT4ncQZNQ4": {
-    "titulo": "Los flamencos nacen GRISES 🦩",
-    "lote": "2026-11-20-tarde",
-    "tema": "Ciencia",
-    "gancho": "orden",
-    "estructura": "reconstrucción",
-    "experimento": "gancho de orden («Mira este pollito gris.»)",
-    "portada": "centro"
-  },
-  "awYmnuBzhrQ": {
-    "titulo": "El baloncesto empezó con cestas de melocotones 🧺🏀",
-    "lote": "2026-11-22-manana",
-    "tema": "Histórico",
-    "gancho": "dato",
-    "estructura": "reconstrucción",
-    "experimento": "no",
-    "portada": "arriba",
-    "alcance": "universal",
-    "tendencia": "bàsquet"
-  },
-  "F4_DBK1lB50": {
-    "titulo": "Tu sangre viene de una estrella que explotó 💥🩸",
-    "lote": "2026-11-22-manana",
-    "tema": "Espacio",
-    "gancho": "dato",
-    "estructura": "cadena de datos",
-    "experimento": "H3: gancho en segunda persona",
-    "portada": "abajo",
-    "alcance": "universal",
-    "tendencia": "no"
-  },
-  "60lZvOqwFtw": {
-    "titulo": "Tus ojos ven el mundo al revés 👁️🙃",
-    "lote": "2026-11-22-manana",
-    "tema": "Ciencia",
-    "gancho": "dato",
-    "estructura": "experimento",
-    "experimento": "no",
-    "portada": "arriba",
-    "alcance": "universal",
-    "tendencia": "no"
-  },
-  "MfV8ypLlIU0": {
-    "titulo": "Tu vista tiene un AGUJERO (haz la prueba) 👁️⚫",
-    "lote": "2026-11-22-tarde",
-    "tema": "Ciencia",
-    "gancho": "dato",
-    "estructura": "experimento",
-    "experimento": "no",
-    "portada": "abajo"
-  },
-  "3NbMXD2ksMI": {
-    "titulo": "Enamorarte cambia tu cerebro ❤️🧠",
-    "lote": "2026-11-22-tarde",
-    "tema": "Ciencia",
-    "gancho": "dato",
-    "estructura": "cadena de datos",
-    "experimento": "no",
-    "portada": "dato"
-  },
-  "_8lkYb4lUG0": {
-    "titulo": "¿Cuántos botes cuentas? Test de atención 🟡👨‍🚀",
-    "lote": "2026-11-22-tarde",
-    "tema": "Ciencia",
-    "gancho": "orden",
-    "estructura": "experimento",
-    "experimento": "formato interactivo (test de atención; versión propia de un formato visto en otra cuenta)",
-    "portada": "arriba"
-  },
-  "pzAwPba_UOc": {
-    "titulo": "Tu gato NO nota el dulce 🐱🍰",
-    "lote": "2026-11-24-tarde",
-    "tema": "Cotidiano",
-    "gancho": "dato",
-    "estructura": "misterio por pistas",
-    "experimento": "no",
-    "portada": "arriba"
-  },
-  "_DU6gOVopOM": {
-    "titulo": "En el espacio las lágrimas NO caen 😢🚀",
-    "lote": "2026-11-24-tarde",
-    "tema": "Espacio",
-    "gancho": "negacion",
-    "estructura": "experimento",
-    "experimento": "no",
-    "portada": "dato"
-  },
-  "WpmGRnjy2CE": {
-    "titulo": "Los vikingos NO llevaban cuernos ⚔️",
-    "lote": "2026-11-24-tarde",
-    "tema": "Histórico",
-    "gancho": "negacion",
-    "estructura": "misterio por pistas",
-    "experimento": "gancho de negación (Histórico)",
-    "portada": "dato"
-  }
+ "_instrucciones": "Etiquetas a mano por vídeo (id de YouTube, las 11 letras de youtube.com/shorts/XXXXXXXXXXX). Corrigen o amplían las automáticas (tema por hashtags y lote por lotes/*/estado.md). Cualquier clave nueva (voz, gancho, duración...) aparece sola en el Laboratorio de la web. Claves que usa el análisis: tema, gancho (pregunta, dato, contraste, reto, orden, historia), estructura (comparación, experimento, reconstrucción, misterio por pistas, metáfora visual), experimento. Temas recomendados: Cotidiano, Histórico, Espacio, Ciencia, Misterio, Humor. Para unir a mano el mismo vídeo en otras redes: \"tiktok\": \"<número del vídeo>\", \"instagram\": \"<código del reel>\".",
+ "_ejemplo": {
+  "tema": "Cotidiano",
+  "voz": "v1",
+  "gancho": "pregunta"
+ },
+ "D_2cV1qhmfA": {
+  "tema": "Espacio",
+  "voz": "v1",
+  "gancho": "contraste",
+  "estructura": "comparación",
+  "experimento": "no"
+ },
+ "bS6AUPYxr7s": {
+  "tema": "Histórico",
+  "gancho": "contraste",
+  "estructura": "reconstrucción",
+  "experimento": "no"
+ },
+ "oZSuHN-46FI": {
+  "tema": "Ciencia",
+  "gancho": "contraste",
+  "estructura": "comparación",
+  "experimento": "no"
+ },
+ "XGf1wOPygU8": {
+  "tema": "Misterio",
+  "gancho": "reto",
+  "estructura": "misterio por pistas",
+  "experimento": "no"
+ },
+ "jQmhf8o1PfY": {
+  "tema": "Ciencia",
+  "gancho": "orden + comparación cotidiana (uñas)",
+  "estructura": "cadena de datos",
+  "experimento": "método denso (40 planos, micro escenas, efectos de sonido); rehace el tema del 02 del lote 2026-11-15-tarde",
+  "portada": "centro",
+  "voz": "Archivo Oculto — Narración (clon)",
+  "tiktok": "7708861385387543830",
+  "instagram": "Df0KoRARstw"
+ },
+ "7PoER_sR6R0": {
+  "tema": "Cotidiano",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
+  "portada": "arriba",
+  "montaje": "denso",
+  "voz": "clon eleven_v4",
+  "lote": "2026-11-16-tarde",
+  "tiktok": "7708881722745703702",
+  "instagram": "Df0UCk8RMdf",
+  "fuentes_en_descripcion": "no"
+ },
+ "cTRgkuY21mw": {
+  "tema": "Cotidiano",
+  "gancho": "pregunta",
+  "estructura": "metáfora visual",
+  "experimento": "tema cotidiano (prueba del lote 2026-11-16-tarde)",
+  "portada": "arriba",
+  "montaje": "denso",
+  "voz": "clon eleven_v4",
+  "lote": "2026-11-16-tarde",
+  "tiktok": "7708882083015413014",
+  "instagram": "Df0UQzOxS49",
+  "fuentes_en_descripcion": "no"
+ },
+ "hfRveipHIdk": {
+  "tema": "Histórico",
+  "gancho": "contraste",
+  "estructura": "comparación",
+  "experimento": "tema cotidiano (prueba del lote: histórico contado desde hoy)",
+  "portada": "dato",
+  "montaje": "denso",
+  "voz": "clon eleven_v4",
+  "lote": "2026-11-16-tarde",
+  "tiktok": "7708882489892179222",
+  "instagram": "Df0Uzrsxo0A",
+  "fuentes_en_descripcion": "no"
+ },
+ "bja3TleMy94": {
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "dato",
+  "lote": "2026-11-17-manana",
+  "tiktok": "7709083847450807574",
+  "instagram": "Df1twcSx6JN",
+  "fuentes_en_descripcion": "no"
+ },
+ "aA9ji1Y1EPA": {
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "comparación",
+  "experimento": "no (el «plano real» de la NASA no se pudo descargar: thumb.wikimedia.org bloqueado)",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "arriba",
+  "lote": "2026-11-17-manana",
+  "tiktok": "7709084200636255510",
+  "instagram": "Df1uAQJxhjZ",
+  "fuentes_en_descripcion": "no"
+ },
+ "0LBq1SkOWz4": {
+  "tema": "Misterio",
+  "gancho": "negacion",
+  "estructura": "misterio por pistas",
+  "experimento": "gancho de negación (2.º dato tras el pulpo del 2026-11-16-manana)",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "dato",
+  "lote": "2026-11-17-manana",
+  "tiktok": "7709084597069401366",
+  "instagram": "Df1uQs9xjyt",
+  "fuentes_en_descripcion": "no"
+ },
+ "dOdQj9QyoBI": {
+  "tema": "Ciencia",
+  "gancho": "contraste",
+  "estructura": "comparación",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "centro",
+  "lote": "2026-11-17-tarde",
+  "fuentes_en_descripcion": "no"
+ },
+ "cjSc0D_gOaI": {
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "reconstrucción",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "abajo",
+  "lote": "2026-11-17-tarde",
+  "fuentes_en_descripcion": "no"
+ },
+ "5pSKNws_e-s": {
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "cadena de datos",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "centro",
+  "lote": "2026-11-18-manana",
+  "fuentes_en_descripcion": "no"
+ },
+ "rEiiPtGXz84": {
+  "tema": "Histórico",
+  "gancho": "negacion",
+  "estructura": "misterio por pistas",
+  "experimento": "gancho de negación",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "arriba",
+  "lote": "2026-11-18-manana",
+  "fuentes_en_descripcion": "no"
+ },
+ "tp7XFLAIkS0": {
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "no",
+  "alcance": "universal",
+  "montaje": "denso",
+  "portada": "arriba",
+  "lote": "2026-11-18-manana",
+  "fuentes_en_descripcion": "no"
+ },
+ "G_xEqU97krk": {
+  "titulo": "El Sol que ves ya es pasado ☀️⏳",
+  "lote": "2026-11-17-tarde",
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "reconstrucción",
+  "experimento": "no",
+  "portada": "abajo"
+ },
+ "dMcGHyKbeaA": {
+  "titulo": "Por qué lloras al cortar cebolla (y el truco que funciona) 🧅😢",
+  "lote": "2026-11-17-tarde",
+  "tema": "Cotidiano",
+  "gancho": "orden",
+  "estructura": "experimento",
+  "experimento": "gancho de orden",
+  "portada": "dato"
+ },
+ "_9znalXgInI": {
+  "titulo": "GTA 6 tardó 13 años: más que ir a la Luna 🎮🚀",
+  "lote": "2026-11-18-tarde",
+  "tema": "Histórico",
+  "gancho": "dato",
+  "estructura": "comparación",
+  "experimento": "no",
+  "portada": "imagen propia"
+ },
+ "HGERZv5VWiU": {
+  "titulo": "Este niño cambia el clima (y se llama así por la Navidad)",
+  "lote": "2026-11-19-extra",
+  "tema": "Ciencia",
+  "gancho": "paradoja",
+  "estructura": "misterio por pistas",
+  "experimento": "tema sacado de las tendencias del día",
+  "portada": "abajo"
+ },
+ "Ve63IT5wgpY": {
+  "titulo": "El dólar no es americano (y su símbolo dice «pesos»)",
+  "lote": "2026-11-19-extra",
+  "tema": "Histórico",
+  "gancho": "negacion",
+  "estructura": "reconstrucción",
+  "experimento": "tema sacado de las tendencias del día",
+  "portada": "arriba"
+ },
+ "QUFe8ovVpJE": {
+  "titulo": "Esta máquina engañó a Napoleón en 1770",
+  "lote": "2026-11-19-extra",
+  "tema": "Histórico",
+  "gancho": "dato",
+  "estructura": "misterio por pistas",
+  "experimento": "tema sacado de las tendencias del día",
+  "portada": "abajo"
+ },
+ "4b3pQCoYOok": {
+  "titulo": "Este terrón pesa lo mismo que una montaña 🧊⭐",
+  "lote": "2026-11-18-tarde",
+  "tema": "Espacio",
+  "gancho": "contraste",
+  "estructura": "comparación",
+  "experimento": "no",
+  "portada": "abajo"
+ },
+ "ng543OmyPag": {
+  "titulo": "Ahora mides menos que esta mañana 📏😴",
+  "lote": "2026-11-18-tarde",
+  "tema": "Cotidiano",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "gancho en segunda persona",
+  "portada": "abajo"
+ },
+ "W9NYUO0-CrU": {
+  "titulo": "16 amaneceres al día en la Estación Espacial 🌅🛰️",
+  "lote": "2026-11-20-tarde",
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "cadena de datos",
+  "experimento": "no",
+  "portada": "abajo"
+ },
+ "LvYkPN5jc6A": {
+  "titulo": "Desde esta montaña de España se ve ÁFRICA 🏔️🌍",
+  "lote": "2026-11-20-tarde",
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "no",
+  "portada": "centro"
+ },
+ "kHT4ncQZNQ4": {
+  "titulo": "Los flamencos nacen GRISES 🦩",
+  "lote": "2026-11-20-tarde",
+  "tema": "Ciencia",
+  "gancho": "orden",
+  "estructura": "reconstrucción",
+  "experimento": "gancho de orden («Mira este pollito gris.»)",
+  "portada": "centro"
+ },
+ "awYmnuBzhrQ": {
+  "titulo": "El baloncesto empezó con cestas de melocotones 🧺🏀",
+  "lote": "2026-11-22-manana",
+  "tema": "Histórico",
+  "gancho": "dato",
+  "estructura": "reconstrucción",
+  "experimento": "no",
+  "portada": "arriba",
+  "alcance": "universal",
+  "tendencia": "bàsquet"
+ },
+ "F4_DBK1lB50": {
+  "titulo": "Tu sangre viene de una estrella que explotó 💥🩸",
+  "lote": "2026-11-22-manana",
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "cadena de datos",
+  "experimento": "H3: gancho en segunda persona",
+  "portada": "abajo",
+  "alcance": "universal",
+  "tendencia": "no"
+ },
+ "60lZvOqwFtw": {
+  "titulo": "Tus ojos ven el mundo al revés 👁️🙃",
+  "lote": "2026-11-22-manana",
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "no",
+  "portada": "arriba",
+  "alcance": "universal",
+  "tendencia": "no"
+ },
+ "MfV8ypLlIU0": {
+  "titulo": "Tu vista tiene un AGUJERO (haz la prueba) 👁️⚫",
+  "lote": "2026-11-22-tarde",
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "experimento",
+  "experimento": "no",
+  "portada": "abajo"
+ },
+ "3NbMXD2ksMI": {
+  "titulo": "Enamorarte cambia tu cerebro ❤️🧠",
+  "lote": "2026-11-22-tarde",
+  "tema": "Ciencia",
+  "gancho": "dato",
+  "estructura": "cadena de datos",
+  "experimento": "no",
+  "portada": "dato"
+ },
+ "_8lkYb4lUG0": {
+  "titulo": "¿Cuántos botes cuentas? Test de atención 🟡👨‍🚀",
+  "lote": "2026-11-22-tarde",
+  "tema": "Ciencia",
+  "gancho": "orden",
+  "estructura": "experimento",
+  "experimento": "formato interactivo (test de atención; versión propia de un formato visto en otra cuenta)",
+  "portada": "arriba"
+ },
+ "pzAwPba_UOc": {
+  "titulo": "Tu gato NO nota el dulce 🐱🍰",
+  "lote": "2026-11-24-tarde",
+  "tema": "Cotidiano",
+  "gancho": "dato",
+  "estructura": "misterio por pistas",
+  "experimento": "no",
+  "portada": "arriba"
+ },
+ "_DU6gOVopOM": {
+  "titulo": "En el espacio las lágrimas NO caen 😢🚀",
+  "lote": "2026-11-24-tarde",
+  "tema": "Espacio",
+  "gancho": "negacion",
+  "estructura": "experimento",
+  "experimento": "no",
+  "portada": "dato"
+ },
+ "WpmGRnjy2CE": {
+  "titulo": "Los vikingos NO llevaban cuernos ⚔️",
+  "lote": "2026-11-24-tarde",
+  "tema": "Histórico",
+  "gancho": "negacion",
+  "estructura": "misterio por pistas",
+  "experimento": "gancho de negación (Histórico)",
+  "portada": "dato"
+ },
+ "E1QFyVyJ7kU": {
+  "titulo": "El telescopio Hubble nació miope 🔭👓",
+  "lote": "2026-11-25-manana",
+  "tema": "Espacio",
+  "gancho": "dato",
+  "estructura": "reconstrucción",
+  "experimento": "no",
+  "portada": "arriba"
+ },
+ "0nGefmtqxcs": {
+  "titulo": "Por qué se te arrugan los dedos en el agua 🖐️💧",
+  "lote": "2026-11-25-manana",
+  "tema": "Cotidiano",
+  "gancho": "orden",
+  "estructura": "experimento",
+  "experimento": "gancho en segunda persona (H3)",
+  "portada": "arriba"
+ },
+ "8ISC2-AoXSM": {
+  "titulo": "Este olivo conoció a Roma (y sigue dando aceitunas) 🌳🏛️",
+  "lote": "2026-11-25-manana",
+  "tema": "Histórico",
+  "gancho": "dato",
+  "estructura": "comparación",
+  "experimento": "no",
+  "portada": "abajo"
+ }
 }

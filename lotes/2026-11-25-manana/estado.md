@@ -1,6 +1,6 @@
 # Lote 2026-11-25-manana — estado
 
-**Estado**: 🟡 **en revisión** (v1). Vídeos y portadas en el chat https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw; falta el «ok» de Nico y el horario. Sin correo: Nico estaba en el chat.
+**Estado**: 🟢 **programado en YouTube** para el 26-11 a las 11:00, 12:00 y 13:00 («súbelos pero para mañana a las 11, 12, 13», Nico, 25-11 19:39). TikTok: ver «Publicación». Antes: en revisión (v1). Vídeos y portadas en el chat https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw; falta el «ok» de Nico y el horario. Sin correo: Nico estaba en el chat.
 **Quién**: Nico (con el agente), lote pedido a mano («haz el lote de la mañana para subirlo a las 11, 12 y 13»). Por la mañana quedó pendiente de voz (la carpeta del Mac no estaba conectada y luego el Mac se desconectó); se retomó a las 19:20, cuando Nico escribió «sigue» y aprobó el acceso a `Documents/Parece Mentira`.
 **Carpeta local**: `Documents/Parece Mentira/lotes/2026-11-25-manana/` (Mac de Nico): locuciones, alineaciones, MP4, SRT, manifiestos, portadas (`NN-portadas/portada.jpg`), `metadatos.json` y `voz.py`.
 
@@ -53,3 +53,12 @@ Datos de YouTube Studio (§1.8), TikTok Creative Center y Studio → Investigaci
 
 ## Fuentes
 En `metadatos.json` → `fuentes` y en `guiones.md`.
+
+## Publicación (2026-11-25 19:40–)
+Nico: «súbelos pero para mañana a las 11, 12, 13».
+- YouTube por API desde el Mac de Nico, en privado con publicación programada y portada puesta por la API en los tres:
+  - 01 https://youtube.com/shorts/E1QFyVyJ7kU (26-11 11:00)
+  - 02 https://youtube.com/shorts/0nGefmtqxcs (26-11 12:00)
+  - 03 https://youtube.com/shorts/8ISC2-AoXSM (26-11 13:00)
+- Copias para TikTok en `PARA PUBLICAR/2511m-*` (vídeos y portadas), Mac de Nico.
+- `etiquetas.json` al día. Falta `ficha publicar` con los números de TikTok y los comentarios fijados (cuando sean públicos).
