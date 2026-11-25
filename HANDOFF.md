@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-25 08:10 — Agente 08:00 (Nico) — rama `main` — turno de mañana sin hacer (lote ya en curso)
+**Qué pasó**: la tarea programada de las 07:52 se disparó a las 08:07. En `TASKS.md` el lote 2026-11-25-manana ya estaba «En curso» por Nico (con el agente) desde las 08:05, pedido a mano en https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw, y las tendencias del día ya estaban en `lotes/tendencias/2026-11-25.md` (commit 4bf9c5b).
+**Hecho**: nada en el lote. Según AGENTE §1.4 no se toca para no duplicarlo; sin correo para no mandar dos avisos del mismo turno.
+**Pendiente**: nada de este turno; el lote sigue en ese chat.
+**Siguiente paso**: ninguno aquí.
+
 ## 2026-11-25 01:35 — Jorge (con el agente) — rama `main` — comentarios contestados
 **Hecho**: Jorge: «quiero que respondas a todos los comentarios que no se han respondido de tiktok y youtube». 25 respuestas en YouTube y 23 en TikTok (detalle y lo aprendido en `lotes/2026-11-24-tarde/estado.md` → «Comentarios contestados»).
 **Pendiente**: nada nuevo.
