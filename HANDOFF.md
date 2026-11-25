@@ -4,6 +4,16 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-25 08:45 — Nico (con el agente) — rama `main` — lote 2026-11-25-manana pendiente de voz
+**Qué pasó**: Nico pidió el lote a mano a las 07:57 («para subirlo a las 11, 12 y 13»). El Mac contesta, pero el chat no tiene conectada `Documents/Parece Mentira` y la petición de acceso fue denegada: sin `claves.txt` no hay voz.
+**Hecho**:
+- Tendencias (`lotes/tendencias/2026-11-25.md`): MX, AR y CO de hoy; ES con feed viejo.
+- 01 «El Hubble nació miope» (tendencia «nasa»), 02 «Por qué se te arrugan los dedos en el agua» (experimento: gancho en segunda persona), 03 «Este olivo conoció a Roma» (tendencia «aceite de oliva»). Dos fuentes o más por dato.
+- `ilus_1125m.py` (47 piezas nuevas, reutiliza los lotes 23-11 y 24-11 tarde), `comun_1125m.py`, `gen_01…03.py` (31, 29 y 27 planos).
+**Pruebas**: `motor.guion` sin ❌; `construir` sin avisos con tiempos provisionales; hojas de 1 fotograma por segundo revisadas. No se tocó `motor/`.
+**Pendiente**: carpeta del Mac → voz por API → render → `motor.calidad` → portadas → fichas → entrega y correo. Decidir el horario (a las 12:00 sale el 03 del lote de ayer).
+**Siguiente paso**: Nico añade la carpeta (+ → «Add folder») en https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw y escribe ahí.
+
 ## 2026-11-25 08:10 — Agente 08:00 (Nico) — rama `main` — turno de mañana sin hacer (lote ya en curso)
 **Qué pasó**: la tarea programada de las 07:52 se disparó a las 08:07. En `TASKS.md` el lote 2026-11-25-manana ya estaba «En curso» por Nico (con el agente) desde las 08:05, pedido a mano en https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw, y las tendencias del día ya estaban en `lotes/tendencias/2026-11-25.md` (commit 4bf9c5b).
 **Hecho**: nada en el lote. Según AGENTE §1.4 no se toca para no duplicarlo; sin correo para no mandar dos avisos del mismo turno.

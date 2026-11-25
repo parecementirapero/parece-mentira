@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-24 23:59 — Agente 20:00 (Jorge) (lote 2026-11-24-tarde en revisión)_
+_Última actualización: 2026-11-25 08:45 — Nico (con el agente) (lote 2026-11-25-manana pendiente de voz)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,6 +25,8 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- Pendiente de voz: lote **2026-11-25-manana** (el Hubble nació miope, por qué se arrugan los dedos en el agua, el olivo que conoció a Roma; experimento: gancho en segunda persona en el 02). Guiones, metadatos y montajes con tiempos provisionales en `lotes/2026-11-25-manana/`; falta conectar la carpeta del Mac de Nico al chat https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw → voz → render → «ok».
+- Lote **2026-11-24-tarde** publicado y programado (YouTube y TikTok: 01 ya, 02 a las 10:00 y 03 a las 12:00 del 25-11).
 - En revisión: **vídeo largo «¿Qué pasaría si te encerraras 500 días en una cueva sin reloj?»** (`lotes/largo-cueva-500-dias/`, encargo de Nico). 8:31 en horizontal 16:9 para YouTube, con 294 planos, más 5 partes verticales para TikTok (1:47, 1:49, 1:41, 1:21 y 1:53) sacadas del mismo audio. Vídeos en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf y en `Documents/Parece Mentira/lotes/largo-cueva-500-dias/` (Mac de Jorge). **Publicado** el 24-11: YouTube https://youtu.be/cA3b0FdYA8A; TikTok, parte 1 a las 11:33 y el resto a las 13:30, 15:30, 17:30 y 19:30. ElevenLabs: quedan 15.648 caracteres.
 - Lote **2026-11-23-tarde** publicado y programado (YouTube y TikTok: 01 ya, 02 a las 10:00, 03 a las 12:00 del 24-11). ElevenLabs: quedan 17.947 caracteres (se renueva el 15-12).
 - Antes en revisión (ya programado): lote **2026-11-22-tarde** v1 (temas de Jorge: el punto ciego, el cerebro enamorado y un test de atención en versión propia de un formato de otra cuenta). Vídeos en el chat https://claude.ai/code/session_019BG1dFtXHqVXWrKbh8QXsf y en `Documents/Parece Mentira/lotes/2026-11-22-tarde/` (Mac de Jorge). ElevenLabs: quedan 18.867 caracteres.

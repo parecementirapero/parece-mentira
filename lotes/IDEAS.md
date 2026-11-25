@@ -20,6 +20,9 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 - ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
 
 ## Usados
+- El Hubble nació miope (1990, ≈1.500 millones de dólares; borde del espejo de 2,4 m demasiado plano por 2,2 micras = 1/50 de un pelo; lente del aparato de medir 1,3 mm fuera de sitio; diciembre de 1993, siete astronautas, cinco paseos, espejitos de COSTAR como monedas; más de 1,5 millones de observaciones) — lote 2026-11-25-manana 01 (tendencia «nasa»)
+- Por qué se arrugan los dedos en el agua (no es que la piel se hinche: los nervios estrechan los vasos de las yemas; sin arrugas con el nervio dañado, sabido desde los años treinta; Newcastle 2013: canicas mojadas un 12 % más rápido, secas igual; como el dibujo de un neumático; también en los pies) — lote 2026-11-25-manana 02
+- El olivo que conoció a Roma (Farga del Arión, Ulldecona; plantado en el 314 con Constantino, datado por la Politécnica de Madrid; 8 m de contorno; rebrota desde la base; más de 1.300 olivos milenarios en el pueblo; sigue dando aceitunas) — lote 2026-11-25-manana 03 (tendencia «aceite de oliva»)
 - Tu gato no nota el dulce (Tas1r2 roto, 247 letras menos; Monell 2005; también tigres y guepardos; carnívoros estrictos; el helado, por la grasa) — lote 2026-11-24-tarde 01
 - Las lágrimas no caen en el espacio (Hadfield 2013 en la EEI: bola de agua pegada al ojo; tensión superficial; toalla; los líquidos suben a la cabeza: cara hinchada, piernas finas, nariz tapada) — lote 2026-11-24-tarde 02
 - Los vikingos no llevaban cuernos (Gjermundbu, Noruega 1943; Doepler y El anillo del nibelungo de Wagner, 1876; cascos de Veksø, Dinamarca, Edad del Bronce, ≈900 a. C.) — lote 2026-11-24-tarde 03
