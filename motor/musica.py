@@ -31,6 +31,8 @@ ESTILOS = {
                   "arpegio": True, "brillo": 0.7, "umbral": 0.25, "palmas": True, "piano": True},
     "ambicion": {"bpm": 143, "acordes": [("B", "m"), ("G", "M"), ("E", "m"), ("F#", "M")], "octava": 3,
                   "arpegio": False, "brillo": 0.5, "trap": True},
+    "cine_epico": {"bpm": 143, "acordes": [("B", "m"), ("G", "M"), ("D", "M"), ("A", "M")], "octava": 3,
+                    "arpegio": False, "brillo": 0.6, "cine": True, "epico": True},
     "cine": {"bpm": 143, "acordes": [("B", "m"), ("B", "m"), ("G", "M"), ("F#", "M")], "octava": 3,
               "arpegio": False, "brillo": 0.5, "cine": True},
     "misterio": {"bpm": 70, "acordes": [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], "octava": 2,
@@ -344,11 +346,25 @@ def _cine(salida, dur, cfg, semilla=1, energia=None, bucle=False):
                 c = c + (2 * ((fr * (1 + det / 100) * np.cumsum(vib) / SR + ph) % 1) - 1)
         pon(cuerdas, a0 * SR, _lp(c * env * 0.03, 3200))
         # piano: arpegio lento en negras de medio tiempo (cada 2 negras a 143), motivo oscuro
-        motivo = [0, 2, 1, 2, 0, 2, 1, 3] if k % 2 == 0 else [0, 2, 1, 2, 3, 2, 1, 2]
-        notas = [f3[0], f3[1], f3[2], f3[0] * 2]
-        for j, idx in enumerate(motivo):
-            pon(piano, (a0 + j * negra) * SR, nota_piano(notas[idx], 2.2, 0.9 if j % 2 == 0 else 0.7))
-        pon(piano, a0 * SR, nota_piano(f2[0], 3.5, 0.8))     # nota grave del acorde
+        if cfg.get("epico"):
+            # acordes de piano en golpes sincopados (empuje, no melancolía) + metal (brass) en el 1 y la «y» del 2
+            for j in (0, 3, 6, 8, 11, 14):
+                for fr in f3[:3] + [f3[0] * 2]:
+                    pon(piano, (a0 + j * negra / 2) * SR, nota_piano(fr, 0.6, 0.55 if j % 4 else 0.75))
+            for j, dd in ((0, 0.55), (3, 0.3), (8, 0.55), (11, 0.3)):
+                nb3 = int(dd * SR); tb3 = np.arange(nb3) / SR
+                env3 = np.minimum(1, tb3 / 0.02) * np.exp(-tb3 / (dd * 0.8))
+                br = sum(2 * ((fr * tb3 + rng.random()) % 1) - 1 for fr in (f3[0], f3[1], f3[2], f2[0]))
+                pon(cuerdas, (a0 + j * negra / 2) * SR, _lp(br * env3 * 0.05, 2600))
+            if k % 4 == 3:   # subida antes de cada bloque de 4 compases
+                ns = int(compas * 0.5 * SR); rr = rng.normal(0, 1, ns); rr = rr - _lp(rr, 1500)
+                pon(bat, (a0 + compas * 0.5) * SR, rr * np.linspace(0, 1, ns) ** 2 * 0.07)
+        else:
+            motivo = [0, 2, 1, 2, 0, 2, 1, 3] if k % 2 == 0 else [0, 2, 1, 2, 3, 2, 1, 2]
+            notas = [f3[0], f3[1], f3[2], f3[0] * 2]
+            for j, idx in enumerate(motivo):
+                pon(piano, (a0 + j * negra) * SR, nota_piano(notas[idx], 2.2, 0.9 if j % 2 == 0 else 0.7))
+            pon(piano, a0 * SR, nota_piano(f2[0], 3.5, 0.8))     # nota grave del acorde
         # 808 largo + pulso grave en corcheas (tras la intro)
         if intro <= a0 < fin:
             f0 = _acorde(raiz, tp, 1)[0]
@@ -368,7 +384,7 @@ def _cine(salida, dur, cfg, semilla=1, energia=None, bucle=False):
     while m * paso < dur:
         T = m * paso; i0 = T * SR; p16 = m % 16
         dentro = intro <= T < fin
-        if dentro and p16 in (0, 6, 10):
+        if dentro and p16 in ((0, 3, 6, 10, 11) if cfg.get("epico") else (0, 6, 10)):
             nb = int(0.3 * SR); tb = np.arange(nb) / SR
             pon(bat, i0, np.sin(2 * np.pi * np.cumsum(46 + 90 * np.exp(-tb / 0.03)) / SR) * np.exp(-tb / 0.16) * 0.42)
         if dentro and p16 == 8:
@@ -376,9 +392,11 @@ def _cine(salida, dur, cfg, semilla=1, energia=None, bucle=False):
             sn = (_lp(rr, 4500) - _lp(rr, 700)) * np.exp(-np.arange(nc) / SR / 0.09) * 0.32
             sn += np.sin(2 * np.pi * 180 * np.arange(nc) / SR) * np.exp(-np.arange(nc) / SR / 0.05) * 0.12
             pon(bat, i0, sn)
-        if dentro and p16 % 2 == 0:
-            nh = int(0.05 * SR); hh = rng.normal(0, 1, nh)
-            pon(bat, i0, (hh - _lp(hh, 6500)) * np.exp(-np.arange(nh) / SR / 0.02) * (0.06 + 0.03 * (p16 % 4 == 2)))
+        if dentro and (cfg.get("epico") or p16 % 2 == 0):
+            subs = 2 if (cfg.get("epico") and (m % 32) >= 29) else 1
+            for s_ in range(subs):
+                nh = int(0.05 * SR); hh = rng.normal(0, 1, nh)
+                pon(bat, i0 + s_ * paso / subs * SR, (hh - _lp(hh, 6500)) * np.exp(-np.arange(nh) / SR / 0.02) * (0.05 + 0.03 * (p16 % 4 == 2)))
         m += 1
 
     piano = _reverb(piano, 2.6, 0.38, semilla)
