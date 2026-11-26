@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-27 01:10 — Jorge (con el agente) — rama `main` — «El que copiaba» publicado
+**Hecho**: música cambiada a «cine_epico» (código, sin ElevenLabs; Jorge rechazó «emprende», «ambicion» y «cine»), portadas (16:9 compuesta, corto con motor.portadas), metadatos, YouTube largo olrobKKTa44 público con portada y comentario fijado; TikTok corto 7712633311755128086 con portada y comentario. Short de YouTube borrado a petición de Jorge (no quiere el corto en Shorts).
+**Nota**: Eleven Music gasta de los mismos caracteres que la voz (900/min) y la clave API no tiene permiso de música: no se usó.
+**Siguiente paso**: ver estadísticas en unos días.
+
+---
+
 ## 2026-11-26 21:20 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-26-tarde pendiente de voz
 **Hecho**: reserva; créditos (10.285); tendencias (sin archivo de la mañana, feeds de Trends sin respuesta; se usa la fecha: Black Friday); 3 temas verificados (subagentes de búsqueda, 2+ fuentes cada uno); guiones (`motor.guion` sin ❌), `metadatos.json`, `guiones.md`, `IDEAS.md` (Usados); arte nuevo `ilus_1126t.py` y generadores `gen_01..03.py` con hojas revisadas; hojas al chat; correo [AVISO] (id 1a2198087d4a87bc).
 **Bloqueo**: el Mac de Jorge se cayó del puente a las ≈20:10 y no volvió (reintentos hasta las 21:15). Había otra sesión usando el mismo Mac a la vez (commit 3dc63f1).

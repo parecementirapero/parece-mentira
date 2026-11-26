@@ -16,3 +16,8 @@
 - Solo cambia el audio (vídeo copiado de la v1): largo v2 SHA 16beace90cf2, corto v2 SHA 28e46ca82205; −19,2/−19,3 LUFS; calidad igual (55 y 72, sin ❌).
 - MP4 v2 y SRT copiados al Mac (`Documents/Parece Mentira/lotes/largo-el-que-copiaba/`).
 - Pendiente: portadas, metadatos y «ok» para publicar.
+
+## Publicado (2026-11-27, «súbelos a TikTok y YouTube con su portada»; luego «no quiero Short, solo el largo», Jorge)
+- YouTube largo: https://youtu.be/olrobKKTa44 (público, portada `portada-16x9.jpg` puesta por API, comentario fijado).
+- TikTok corto: https://www.tiktok.com/@parece.mentira85/video/7712633311755128086 (portada `portada-corto.jpg`, comentario escrito; la web no deja fijar).
+- Short de YouTube zKW16umj_VE: subido programado y borrado sin publicarse, a petición de Jorge.
