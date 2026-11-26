@@ -31,7 +31,7 @@ for n in (1, 2, 3, 4):
 C.comun.SVG_DIR = ARTE
 
 # palabras que el corto quita (índices de alineacion-completa.json; i1 = primera que se queda)
-OMITIR_CORTO = [(18, 28), (35, 150), (173, 211), (223, 243), (270, 290), (311, 328), (335, 592), (604, 705), (739, 749)]
+OMITIR_CORTO = [(18, 150), (173, 211), (223, 243), (270, 290), (311, 328), (335, 592), (604, 705), (739, 749)]
 
 v = Video(SALIDA, os.path.join(LOTE, "guion.txt"), os.path.join(LOTE, "voz", "locucion-completa.wav"),
           os.path.join(LOTE, "voz", "alineacion-completa.json"), svg_extra=ARTE, omitir=OMITIR_CORTO if CORTO else ())

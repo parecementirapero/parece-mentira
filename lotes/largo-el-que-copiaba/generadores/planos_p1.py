@@ -413,7 +413,7 @@ def planos(v, plano):
             adulto("profesora_enfadada", 820, 1420, z=0.55, keys=[{"t": 0, "x": 1250}, {"t": 0.3, "x": 820, "ease": "anticipa"}]),
             mesa(1500, z=0.45), mesa(-400, z=0.45), pie("mochila_cole", -150, 1430, 150, z=0.46)],
             cam(1.2, 1.3, (600, 1050)), "corte",
-            hud=[rotulo(0.3, d - 0.05, "!", tam=240, color=ROJO, capsula=None, x=640, y=640, rot=10)],
+            hud=[rotulo(0.3, d - 0.05, "!", tam=240, color=ROJO, capsula="#0b0d14d0", x=640, y=640, rot=10)],
             sfx=[(0.25, "golpe", -14)])
 
     @plano(72, "suspenso")
@@ -482,7 +482,7 @@ def planos(v, plano):
             pieza("examen_bien", 540, 960, 560, z=0.55, keys=aparece(0.0, 0.35) + late(0.6, 1, 0.08, 0.4)),
             nino("marta_nina_orgullosa", -330, 1400, z=0.45), nino("marta_nina_escribe_a", 1420, 1400, z=0.45)],
             cam(1.0, 1.08, (540, 960)), "corte",
-            hud=[amarillo(0.35, d - 0.05, "VALE", y=520, color=VERDE)],
+            hud=[amarillo(0.35, d - 0.05, "VALE", y=520, color=VERDE) | {"capsula": "#0b0d14d0"}],
             sfx=[(0.1, "ding", -18)])
 
     @plano(89, "lo copiado, no")
@@ -495,7 +495,7 @@ def planos(v, plano):
             *aspa(540, 960, 260, d * 0.45, ROJO, 30, 0.7),
             nino("lucas_nino_triste", 1420, 1400, z=0.45), nino("lucas_nino_pillado", -330, 1400, z=0.45)],
             cam(1.0, 1.08, (540, 960)), "corte",
-            hud=[amarillo(d * 0.45, d - 0.05, "NO", y=520, color=ROJO)],
+            hud=[amarillo(d * 0.45, d - 0.05, "NO", y=520, color=ROJO) | {"capsula": "#0b0d14d0"}],
             sfx=[(d * 0.45, "zap", -16)])
 
     # ================================================================== EL ÚLTIMO TIMBRE (37,4–57,8 s)
@@ -782,7 +782,7 @@ def planos(v, plano):
             senala(540, 1150, d * 0.2, d, 360, ORO),
             *cola(-600, S, n=2, alto=420),
             {**polvo("#fff6e0", 20, (-400, 700, 1500, 1400), 177), "_ancho": False}],
-            cam(1.2, 0.98, (540, 1080)), "corte", sfx=[(0.2, "pop", -22), (d * 0.45, "zap", -20)])
+            cam(1.2, 1.02, (540, 1080)), "corte", sfx=[(0.2, "pop", -22), (d * 0.45, "zap", -20)])
 
     @plano(185, "pide un préstamo")
     def _(d):
