@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-26 20:30 — Jorge (con el agente) — rama `main` — «El que copiaba» v1 en revisión
+**Hecho**: montaje completo (170 planos en 3 tramos + corto de 36 planos con la voz recortada, estilo B), música nueva «emprende» en `motor/musica.py` (motor.prueba OK), render y `motor.calidad` sin ❌ (55/100 largo, 72/100 corto). Vídeos enviados al chat.
+**Pendiente**: copiar MP4 al Mac (desconectado), portadas, metadatos (título, descripción, fuentes), «ok» de Jorge para publicar. Ojo: el agente de las 20:00 del Mac de Jorge se ha vuelto a disparar y hace el lote 2026-11-26-tarde en otra sesión.
+
+---
+
 ## 2026-11-26 — Jorge (con el agente) — rama `main` — vídeo largo «El que copiaba» pausado
 **Hecho**: guion v3, voz en el Mac de Jorge (3 bloques, 285 s), arte nuevo en 3 generadores (fondos, gente, cosas) revisado con hojas de contacto. Decidido: largo 16:9 para YouTube, corto de 1 min vertical estilo B (focos y contadores) con la misma voz, música nueva de «emprender».
 **Pendiente / siguiente paso**: ver `lotes/largo-el-que-copiaba/estado.md` (música, montaje de los dos vídeos, calidad, entrega). Jorge pidió parar y seguir luego.
