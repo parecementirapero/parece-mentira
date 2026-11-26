@@ -3,7 +3,7 @@
 Regla: no repetir temas de «Usados». Las continuaciones valen si aportan información nueva y se entienden solas.
 
 ## Candidatos
-- Darle a «posponer» en la alarma te deja peor: inercia del sueño (cotidiano)
+- Nadie sonreía en las fotos antiguas: exposiciones largas, soportes para la cabeza y costumbre (histórico; sin verificar)
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
 _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)_
 
@@ -20,6 +20,9 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 - ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
 
 ## Usados
+- Posponer la alarma (Sci Rep 2025: ≈3 millones de noches, más de la mitad acaban con posponer, 11 min de media; inercia del sueño de 15 min a más de 1 h; sueño ligero entre alarmas; Estocolmo 2023: 30 min de alarmas sin daño y algo mejor al despertar en quienes posponen siempre; alarma a la hora real y lejos de la cama) — lote 2026-11-26-tarde 01
+- La cara oculta de la Luna (rotación síncrona ≈27 días, frenada por las mareas; no es oscura; Luna 3 1959, Apolo 8 1968, Chang'e 4 2019; casi sin mares y llena de cráteres) — lote 2026-11-26-tarde 02
+- El Black Friday lo bautizó la policía de Filadelfia (día después de Acción de Gracias, partido Ejército–Marina, turnos sin librar; «Big Friday» 1961; lo de los números negros, de los años 80; primer viernes negro 1869, el oro en Nueva York) — lote 2026-11-26-tarde 03 (tendencia «black friday»)
 - Vibración fantasma (hospital de EE. UU. 2010: casi 7 de cada 10 médicos y enfermeros; universitarios 2012: casi 9 de cada 10; cerebro en alerta que prefiere equivocarse; cambiar de bolsillo o quitar la vibración) — lote 2026-11-25-tarde 01
 - Medallas olímpicas de arte (1912–1948; pintura, escultura, arquitectura, literatura y música; obras sobre el deporte; Coubertin y su «Oda al deporte» con seudónimos; Walter Winans, oro en tiro 1908 y en escultura 1912; fin por el amateurismo; no cuentan en el medallero) — lote 2026-11-25-tarde 02
 - La Vía Láctea que ya no vemos (atlas de 2016 con datos de satélite: un tercio de la humanidad, 60 % Europa, 80 % Norteamérica; luz que ilumina polvo y humedad; más de 8 de cada 10 bajo cielo contaminado; aléjate en noche sin luna) — lote 2026-11-25-tarde 03
