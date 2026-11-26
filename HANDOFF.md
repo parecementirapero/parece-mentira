@@ -4,6 +4,14 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-26 13:52 — Agente 20:00 (Jorge) — rama `main` — turno sin hacer (lote ya en revisión)
+**Qué pasó**: la tarea programada del 25-11 a las 19:52 se disparó con retraso el 26-11 a las 13:50 (al reactivarla). `lotes/2026-11-25-tarde/estado.md` ya existía: v1 en revisión desde las 13:45, hecho por Jorge con el agente en https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS, con correo enviado.
+**Hecho**: nada en el lote. Según AGENTE §1.3 no se duplica; sin correo para no mandar dos avisos del mismo turno. La tarea de las 20:00 vuelve a estar activa (se disparó desde el Mac de Jorge).
+**Pendiente**: el «ok» del lote 2026-11-25-tarde se da en ese otro chat, no en este.
+**Siguiente paso**: el turno de hoy (2026-11-26-tarde) a las 19:52.
+
+---
+
 ## 2026-11-26 13:45 — Jorge (con el agente) — rama `main` — lote 2026-11-25-tarde v1 en revisión
 **Qué pasó**: Jorge preguntó por el lote de las 20:00 del 25-11 (no corrió: tarea en pausa por Mac ausente) y pidió hacerlo con el estilo de dibujo del vídeo largo de la cueva.
 **Hecho**:
