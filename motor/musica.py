@@ -2,7 +2,9 @@
 
 Sirve como base mientras no se elija una fuente de música (ver DECISIONS.md, «Presupuesto y gastos»).
 Estilos: "curiosidad" (re menor, pad + arpegio suave, 92 bpm), "misterio" (más grave y lento),
-"emprende" (do mayor I–V–vi–IV, 112 bpm, piano, bombo y palmas que entran pronto: motivador, de «a por ello»).
+"emprende" (do mayor I–V–vi–IV, 112 bpm, piano, bombo y palmas que entran pronto: motivador, de «a por ello»),
+"ambicion" (trap oscuro de «mentalidad de negocio», si menor, 143 bpm a medio tiempo: 808 grave con glissando,
+bombo, palmada en el 3, charles en semicorcheas con redobles, campana/pluck menor y pad; intro sin 808 y «drop»).
 
 CLI:  python3 -m motor.musica salida.wav --dur 47 --estilo curiosidad --semilla 1
 """
@@ -25,6 +27,8 @@ ESTILOS = {
                     "arpegio": True, "brillo": 0.35},
     "emprende": {"bpm": 112, "acordes": [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], "octava": 3,
                   "arpegio": True, "brillo": 0.7, "umbral": 0.25, "palmas": True, "piano": True},
+    "ambicion": {"bpm": 143, "acordes": [("B", "m"), ("G", "M"), ("E", "m"), ("F#", "M")], "octava": 3,
+                  "arpegio": False, "brillo": 0.5, "trap": True},
     "misterio": {"bpm": 70, "acordes": [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], "octava": 2,
                   "arpegio": True, "brillo": 0.2},
 }
@@ -74,6 +78,8 @@ def generar(salida, dur, estilo="curiosidad", semilla=1, energia=None, bucle=Fal
     bucle: el último acorde es el que resuelve en el primero y no hay fundido largo: al reiniciarse el Short
     la música enlaza sin corte."""
     cfg = ESTILOS[estilo]
+    if cfg.get("trap"):
+        return _trap(salida, dur, cfg, semilla, energia, bucle)
     rng = np.random.default_rng(semilla)
     n = int(dur * SR)
     t = np.arange(n) / SR
@@ -165,6 +171,120 @@ def generar(salida, dur, estilo="curiosidad", semilla=1, energia=None, bucle=Fal
         w.setnchannels(2)
         w.setsampwidth(2)
         w.setframerate(SR)
+        w.writeframes((est * 32767).astype("<i2").tobytes())
+    return salida
+
+
+def _trap(salida, dur, cfg, semilla=1, energia=None, bucle=False):
+    """Base trap oscura a medio tiempo (estilo de los vídeos de «emprender» que gustan a Jorge)."""
+    rng = np.random.default_rng(semilla)
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    L, R = np.zeros(n), np.zeros(n)
+    negra = 60 / cfg["bpm"]            # 0,42 s
+    compas = 4 * negra * 2             # medio tiempo: un «compás» = 8 negras (3,36 s)
+    E = _curva(energia, t) if energia else np.full(n, 0.7)
+    intro = min(4 * negra * 2, dur * 0.1)          # primeros ~3,4 s sin 808 ni bombo
+    salida_t = dur - min(compas, 4.0)              # últimos segundos: se recoge
+    acs = cfg["acordes"]
+
+    def suma(x, i0, v, pan=0.5):
+        i0 = int(i0)
+        if i0 >= n or i0 < 0:
+            return
+        m = min(len(v), n - i0)
+        L[i0:i0 + m] += v[:m] * (1 - pan) * 2 * 0.5
+        R[i0:i0 + m] += v[:m] * pan * 2 * 0.5
+
+    # pad oscuro (acordes largos, filtrado)
+    k = 0
+    while k * compas < dur:
+        raiz, tp = acs[k % len(acs)]
+        f = _acorde(raiz, tp, cfg["octava"])
+        a0 = int(k * compas * SR); a1 = min(n, int(((k + 1) * compas + 0.8) * SR))
+        tt = np.arange(a1 - a0) / SR
+        env = np.minimum(1, tt / 0.8) * np.minimum(1, np.maximum(0, (a1 - a0) / SR - tt) / 0.8)
+        pad = sum(np.sin(2 * np.pi * fr * tt + rng.random() * 6) + 0.25 * np.sin(4 * np.pi * fr * 1.003 * tt) for fr in f[:3])
+        suma(None, a0, _lp(pad * env * 0.018, 900), 0.5)
+        # 808: nota raíz grave, larga, con glissando al cambiar de acorde
+        if a0 / SR >= intro and a0 / SR < salida_t:
+            f0 = _acorde(raiz, tp, 1)[0]
+            if f0 > 70: f0 /= 2
+            nb = int(compas * SR)
+            tb = np.arange(nb) / SR
+            fsig = _acorde(*acs[(k + 1) % len(acs)], 1)[0]
+            if fsig > 70: fsig /= 2
+            fr = f0 + (fsig - f0) * np.clip((tb - (compas - 0.18)) / 0.18, 0, 1)
+            fase = 2 * np.pi * np.cumsum(fr) / SR
+            b = np.sin(fase) + 0.18 * np.sin(2 * fase)
+            b = np.tanh(b * 1.6) * np.exp(-tb / 2.2) * np.minimum(1, tb / 0.01) * 0.42
+            # dos golpes de 808 por compás (en la 1 y en la «y» del 3)
+            suma(None, a0, b, 0.5)
+            suma(None, a0 + int(5.5 * negra * SR), b[: int(2.4 * negra * SR)] * 0.8, 0.5)
+        k += 1
+
+    # batería
+    paso = negra / 2                   # corchea a 143 bpm (= semicorchea a medio tiempo)
+    m = 0
+    while m * paso < dur:
+        T = m * paso
+        i0 = int(T * SR)
+        e = float(E[min(i0, n - 1)])
+        dentro = intro <= T < salida_t
+        pos16 = m % 16                 # 16 corcheas = 1 compás de medio tiempo
+        # bombo: 1 y algún síncopa
+        if dentro and pos16 in (0, 7, 10):
+            nb = int(0.25 * SR); tb = np.arange(nb) / SR
+            kk = np.sin(2 * np.pi * np.cumsum(48 + 110 * np.exp(-tb / 0.025)) / SR) * np.exp(-tb / 0.12) * 0.55
+            suma(None, i0, kk, 0.5)
+        # palmada / caja en el 3 (medio tiempo)
+        if (dentro or T >= intro * 0.5) and pos16 == 8:
+            nc = int(0.22 * SR); ruido = rng.normal(0, 1, nc)
+            cl = (ruido - _lp(ruido, 1200)) * np.exp(-np.arange(nc) / SR / 0.06) * 0.22
+            tono = np.sin(2 * np.pi * 190 * np.arange(nc) / SR) * np.exp(-np.arange(nc) / SR / 0.04) * 0.12
+            suma(None, i0, cl + tono, 0.5)
+        # charles: corcheas, redoble de semicorcheas/fusas al final de cada 2 compases
+        if T >= intro * 0.3 and T < dur - 1.0:
+            redoble = (m % 32) >= 28
+            subs = 3 if redoble and (m % 2 == 0) else (2 if redoble else 1)
+            for s in range(subs):
+                j0 = i0 + int(s * paso / subs * SR)
+                nh = int(0.04 * SR); hh = rng.normal(0, 1, nh)
+                hh = (hh - _lp(hh, 7000)) * np.exp(-np.arange(nh) / SR / 0.012) * (0.07 + 0.03 * (m % 2 == 0)) * (0.6 + 0.6 * e)
+                suma(None, j0, hh, 0.62)
+        m += 1
+
+    # campana / pluck menor: motivo de 8 corcheas sobre el acorde (entra a la vez que el 808)
+    motivo = [0, 2, 1, 2, 3, 2, 1, 0]
+    m = 0
+    while m * paso < dur:
+        T = m * paso
+        k = int(T // compas)
+        raiz, tp = acs[k % len(acs)]
+        f = _acorde(raiz, tp, cfg["octava"] + 1)
+        if (m % 16) in (0, 3, 6, 8, 11, 14) and T >= intro * 0.6:
+            fr = f[motivo[m % 8] % len(f)]
+            nb = int(0.9 * SR); tb = np.arange(nb) / SR
+            bell = (np.sin(2 * np.pi * fr * tb) + 0.5 * np.sin(2 * np.pi * fr * 2.76 * tb) * np.exp(-tb * 9)
+                    + 0.2 * np.sin(2 * np.pi * fr * 5.4 * tb) * np.exp(-tb * 14)) * np.exp(-tb * 3.5) * 0.06
+            suma(None, int(T * SR), bell, 0.35 + 0.3 * ((m // 3) % 2))
+            # eco
+            suma(None, int((T + paso * 3) * SR), bell * 0.35, 0.7)
+        m += 1
+
+    # barrido (subida) antes del drop
+    if intro > 1.0:
+        ns = int(min(intro, 3.0) * SR); a0 = int(intro * SR) - ns
+        rr = rng.normal(0, 1, ns); rr = rr - _lp(rr, 2000)
+        suma(None, max(0, a0), rr * np.linspace(0, 1, ns) ** 2 * 0.06, 0.5)
+
+    L, R = L * (0.85 + 0.25 * E), R * (0.85 + 0.25 * E)
+    fade = (np.minimum(1, t / 0.12) * np.minimum(1, (dur - t) / 0.2)) if bucle else (np.minimum(1, t / 0.4) * np.minimum(1, (dur - t) / 1.5))
+    L, R = np.tanh(L * fade * 1.4), np.tanh(R * fade * 1.4)
+    pico = max(np.abs(L).max(), np.abs(R).max(), 1e-6)
+    est = np.stack([L, R], 1) / pico * 0.7
+    with wave.open(salida, "wb") as w:
+        w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
         w.writeframes((est * 32767).astype("<i2").tobytes())
     return salida
 
