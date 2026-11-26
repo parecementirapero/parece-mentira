@@ -385,5 +385,32 @@
   "estructura": "comparación",
   "experimento": "no",
   "portada": "abajo"
+ },
+ "mDzJGj7ZF0k": {
+  "titulo": "Tu teléfono NO ha vibrado 📱👻",
+  "lote": "2026-11-25-tarde",
+  "tema": "Cotidiano",
+  "gancho": "negacion",
+  "estructura": "misterio por pistas",
+  "experimento": "no",
+  "portada": "arriba"
+ },
+ "DJWK7PCIAdY": {
+  "titulo": "Medalla olímpica por PINTAR 🥇🎨",
+  "lote": "2026-11-25-tarde",
+  "tema": "Histórico",
+  "gancho": "contraste",
+  "estructura": "cadena de datos",
+  "experimento": "no",
+  "portada": "dato"
+ },
+ "HWHIzTy66Jc": {
+  "titulo": "¿Ves la Vía Láctea? 🌌 (casi nadie puede)",
+  "lote": "2026-11-25-tarde",
+  "tema": "Espacio",
+  "gancho": "pregunta",
+  "estructura": "comparación",
+  "experimento": "gancho de pregunta (Espacio)",
+  "portada": "centro"
  }
 }

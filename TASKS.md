@@ -62,7 +62,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
-- [x] Lote 2026-11-25-tarde v1 — Jorge (con el agente) — 2026-11-26 13:45 — **en revisión**: 3 vídeos con el estilo de dibujo del vídeo largo, en el chat https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS y en el Mac de Jorge; se publica con «ok»
+- [x] Lote 2026-11-25-tarde v1 — Jorge (con el agente) — 2026-11-26 13:45 — **publicado** en YouTube y TikTok (01 ya, 02 a las 16:00, 03 a las 18:00 del 26-11); estilo de dibujo del vídeo largo
 - [x] Lote 2026-11-25-manana — Nico (con el agente) — 2026-11-25 19:45 — **en revisión** (v1): Hubble miope, dedos arrugados, olivo de Roma. Vídeos en el chat https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw y en el Mac de Nico. Falta «ok», horario y oír los empalmes del 01 y el 03
 - [x] Lote 2026-11-24-tarde **publicado y programado** (Jorge, con el agente, 25-11 00:45): YouTube pzAwPba_UOc (público) · _DU6gOVopOM (10:00) · WpmGRnjy2CE (12:00); TikTok 01 publicado, 02 10:00, 03 12:00. Falta el comentario fijado. Antes: 3 vídeos v1 (`motor.calidad` sin ❌, 73/97/78; experimento: gancho de negación en Histórico, el 03); esperan el «ok» en https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS (correo `1a20f922774c58fd`). Sin hacer por la hora: datos de Studio, tendencias y comentarios
 - [x] Publicado el vídeo largo de la cueva: YouTube cA3b0FdYA8A (público, con portada) y TikTok parte 1 (11:33) + partes 2–5 (13:30, 15:30, 17:30, 19:30) — Nico (con el agente) — 2026-11-24 11:45

@@ -4,6 +4,14 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-26 14:05 — Jorge (con el agente) — rama `main` — lote 2026-11-25-tarde publicado
+**Qué pasó**: Jorge: «sube uno ahora y los otros con 2 horas de diferencia cada uno».
+**Hecho**: YouTube por API desde el Mac con portada propia (01 público, 02 programado 16:00, 03 18:00). TikTok en el navegador integrado con texto y portada (01 ya, 02 16:00, 03 18:00). Comentario del 01 fijado en YouTube; en TikTok escrito (la web no deja fijar). `publicado.json`, `etiquetas.json` y fichas con ids.
+**Ojo**: la primera vez se eligió por error `2411t-01-gato.mp4` en TikTok; se canceló antes de publicar. Para evitarlo, las copias van a `PARA PUBLICAR/2511t-*`.
+**Pendiente**: comentarios del 02 y del 03 (avisos programados en el chat a las 16:05 y 18:05). Reactivar la tarea de las 20:00 desde el Mac de Jorge.
+
+---
+
 ## 2026-11-26 13:52 — Agente 20:00 (Jorge) — rama `main` — turno sin hacer (lote ya en revisión)
 **Qué pasó**: la tarea programada del 25-11 a las 19:52 se disparó con retraso el 26-11 a las 13:50 (al reactivarla). `lotes/2026-11-25-tarde/estado.md` ya existía: v1 en revisión desde las 13:45, hecho por Jorge con el agente en https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS, con correo enviado.
 **Hecho**: nada en el lote. Según AGENTE §1.3 no se duplica; sin correo para no mandar dos avisos del mismo turno. La tarea de las 20:00 vuelve a estar activa (se disparó desde el Mac de Jorge).
