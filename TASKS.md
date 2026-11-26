@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-25-tarde (hecho el 26-11 a petición de Jorge: la tarea de las 20:00 del 25-11 no corrió porque estaba pausada por Mac ausente) — Jorge (con el agente) — 2026-11-26 13:25 — estilo del vídeo largo de la cueva
 - [ ] Lote 2026-11-19-tarde — Agente 20:00 (Jorge) — 2026-11-20 12:55 — **pendiente de voz**: guiones, metadatos y generadores hechos (`lotes/2026-11-19-tarde/`); el Mac de Jorge se cayó del puente a las 12:55. Se retoma en https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq (reintentos 14:21 y 15:21 sin Mac; se retoma escribiendo en ese chat). La tarea de las 20:00 del 19-11 se disparó el 20-11 a las 12:49
 - [ ] Lote 2026-11-19-manana — Agente 08:00 (Nico) — 2026-11-19 18:36 — **pendiente de voz**: guiones, metadatos y generadores hechos; voz de 01 y 02 en el Mac de Nico; falta la del 03, render, calidad, portadas y entrega. Se retoma en el chat https://claude.ai/code/session_019BG1dHnK2nwYYSBBZnUxmf cuando el Mac vuelva (se cayó a las 18:42). La tarea programada se disparó a las 18:35 en vez de a las 07:52
 - [ ] Voz nueva «Narrador PM - Curiosidades v2» con Voice Design (prompt de documental de misterio de Nico; motivo: la v1 suena robótica/plana, nasal y con mal ritmo) — Nico — 2026-11-16 09:58 — falta generarla en ElevenLabs y pasar el voice_id
@@ -63,6 +62,7 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-25-tarde v1 — Jorge (con el agente) — 2026-11-26 13:45 — **en revisión**: 3 vídeos con el estilo de dibujo del vídeo largo, en el chat https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS y en el Mac de Jorge; se publica con «ok»
 - [x] Lote 2026-11-25-manana — Nico (con el agente) — 2026-11-25 19:45 — **en revisión** (v1): Hubble miope, dedos arrugados, olivo de Roma. Vídeos en el chat https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw y en el Mac de Nico. Falta «ok», horario y oír los empalmes del 01 y el 03
 - [x] Lote 2026-11-24-tarde **publicado y programado** (Jorge, con el agente, 25-11 00:45): YouTube pzAwPba_UOc (público) · _DU6gOVopOM (10:00) · WpmGRnjy2CE (12:00); TikTok 01 publicado, 02 10:00, 03 12:00. Falta el comentario fijado. Antes: 3 vídeos v1 (`motor.calidad` sin ❌, 73/97/78; experimento: gancho de negación en Histórico, el 03); esperan el «ok» en https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS (correo `1a20f922774c58fd`). Sin hacer por la hora: datos de Studio, tendencias y comentarios
 - [x] Publicado el vídeo largo de la cueva: YouTube cA3b0FdYA8A (público, con portada) y TikTok parte 1 (11:33) + partes 2–5 (13:30, 15:30, 17:30, 19:30) — Nico (con el agente) — 2026-11-24 11:45

@@ -4,6 +4,19 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-26 13:45 — Jorge (con el agente) — rama `main` — lote 2026-11-25-tarde v1 en revisión
+**Qué pasó**: Jorge preguntó por el lote de las 20:00 del 25-11 (no corrió: tarea en pausa por Mac ausente) y pidió hacerlo con el estilo de dibujo del vídeo largo de la cueva.
+**Hecho**:
+- Guiones (vibración fantasma; medallas olímpicas por arte 1912–1948; la Vía Láctea y la contaminación lumínica), voz por API desde el Mac (quedan 12.233 caracteres).
+- Ilustración nueva en `generadores/ilus_1125t.py` sobre los módulos del vídeo largo (`ilus_personajes`, `ilus_escenarios`, objetos): médicos, chicos, barón de Coubertin, tirador, medallas, caballete, podio, farolas, fondos `bg_via_lactea`, `bg_cielo_naranja`, `bg_galeria`. Piezas comunes en `comun_1125t.py`.
+- Render en la nube, portadas elegidas a ojo (01 arriba, 02 dato, 03 centro), fichas 2026-11-25-tarde/01–03.
+- MP4 y portadas en el chat; MP4, SRT y portadas en el Mac. Correo enviado.
+**Pruebas**: `motor.calidad` sin ❌ (01: 80/100; 02: 62/100; 03: 65/100); ffprobe 1080×1920, 30 fps, h264+aac, 52,7 / 59,6 / 54,5 s; `ficha comprobar` sin problemas.
+**Pendiente**: «ok» de Jorge o Nico para publicar. Reactivar la tarea de las 20:00 desde el Mac de Jorge.
+**Siguiente paso**: con «ok», publicar (YouTube por API desde el Mac, TikTok en el navegador integrado) y rellenar `publicado.json`.
+
+---
+
 ## 2026-11-25 19:45 — Nico (con el agente) — rama `main` — lote 2026-11-25-manana v1 en revisión
 **Qué pasó**: a las 19:20 Nico escribió «sigue» y aprobó el acceso a `Documents/Parece Mentira`; el Mac respondía.
 **Hecho**:

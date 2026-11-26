@@ -1,120 +1,144 @@
 {
- "01": {
-  "archivo": "01-vibracion-fantasma_v1.mp4",
-  "titulo": "Tu teléfono NO ha vibrado 📱👻",
-  "youtube": {
-   "titulo": "Tu teléfono NO ha vibrado 📱👻 #Shorts",
-   "descripcion": "Lo notas en el bolsillo, lo miras… y nada. Es la vibración fantasma: en un hospital de EE. UU. lo había sentido casi 7 de cada 10 médicos y enfermeros, y en universitarios casi 9 de cada 10. Tu cerebro está en alerta y prefiere equivocarse antes que perderse un mensaje.\n\n#Shorts #celular #telefono #cerebro #ciencia #parecementira #curiosidades #sabiasque #datoscuriosos",
-   "publico": true,
-   "para_ninos": false
+  "01": {
+    "archivo": "01-vibracion-fantasma_v1.mp4",
+    "titulo": "Tu teléfono NO ha vibrado 📱👻",
+    "youtube": {
+      "titulo": "Tu teléfono NO ha vibrado 📱👻 #Shorts",
+      "descripcion": "Lo notas en el bolsillo, lo miras… y nada. Es la vibración fantasma: en un hospital de EE. UU. lo había sentido casi 7 de cada 10 médicos y enfermeros, y en universitarios casi 9 de cada 10. Tu cerebro está en alerta y prefiere equivocarse antes que perderse un mensaje.\n\n#Shorts #celular #telefono #cerebro #ciencia #parecementira #curiosidades #sabiasque #datoscuriosos",
+      "publico": true,
+      "para_ninos": false
+    },
+    "tiktok": {
+      "texto": "Tu teléfono NO ha vibrado 📱👻 Lo notas en el bolsillo, lo miras… y nada. Es la vibración fantasma: en un hospital de EE. UU. lo había sentido casi 7 de cada 10 médicos y enfermeros, y en universitarios casi 9 de cada 10. Tu cerebro está en alerta y prefiere equivocarse antes que perderse un mensaje. #celular #telefono #cerebro #ciencia #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
+    },
+    "fuentes": [
+      {
+        "titulo": "Rothberg et al. (2010), BMJ — Phantom vibration syndrome among medical staff: a cross sectional survey",
+        "url": "https://www.bmj.com/content/341/bmj.c6914.long"
+      },
+      {
+        "titulo": "Wikipedia (en) — Phantom vibration syndrome (Drouin 2012: casi 9 de cada 10 universitarios; cómo reducirlo)",
+        "url": "https://en.wikipedia.org/wiki/Phantom_vibration_syndrome"
+      },
+      {
+        "titulo": "NPR (2013) — Phantom phone vibrations so common they've changed our brains",
+        "url": "https://www.npr.org/blogs/alltechconsidered/2013/09/27/226820044/phantom-phone-vibrations-so-common-they-ve-changed-our-brains"
+      },
+      {
+        "titulo": "Tufts Now (2011) — That old familiar feeling",
+        "url": "https://now.tufts.edu/2011/11/03/old-familiar-feeling"
+      }
+    ],
+    "comentario": "¿Cuántas veces te ha pasado hoy? 📱 Te leo 👇",
+    "etiquetas": {
+      "tema": "Cotidiano",
+      "gancho": "negacion",
+      "estructura": "misterio por pistas",
+      "experimento": "no",
+      "alcance": "universal",
+      "tendencia": "no",
+      "portada": "arriba"
+    },
+    "locucion": "Tu teléfono no ha vibrado. Lo has notado en el bolsillo, lo sacas… y no hay nada. Tranquilo: no te pasa solo a ti. Le pasa a casi todo el mundo. En dos mil diez preguntaron a médicos y enfermeros de un hospital de Estados Unidos. Casi siete de cada diez lo habían sentido. Y en dos mil doce, con estudiantes universitarios, fueron casi nueve de cada diez. Tiene nombre: vibración fantasma. ¿Por qué pasa? Tu cerebro vive pendiente de ese aviso, así que está en alerta todo el día. Cuando nota un roce de la ropa o un pequeño tirón de un músculo, prefiere equivocarse: mejor creer que vibra y mirar, que perderse un mensaje. Es lo mismo que oír tu nombre entre el ruido de una cafetería llena. ¿Y cómo se quita? A mucha gente le funciona cambiar el teléfono de bolsillo o quitar la vibración. ¿A ti te pasa?",
+    "portada": {
+      "texto": "NO HA VIBRADO",
+      "clave": "VIBRADO",
+      "archivo": "01-portadas/portada.jpg",
+      "t": 5.8,
+      "diseno": "arriba",
+      "motivo": "el teléfono se entiende al instante; la ciudad no dice nada"
+    }
   },
-  "tiktok": {
-   "texto": "Tu teléfono NO ha vibrado 📱👻 Lo notas en el bolsillo, lo miras… y nada. Es la vibración fantasma: en un hospital de EE. UU. lo había sentido casi 7 de cada 10 médicos y enfermeros, y en universitarios casi 9 de cada 10. Tu cerebro está en alerta y prefiere equivocarse antes que perderse un mensaje. #celular #telefono #cerebro #ciencia #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
+  "02": {
+    "archivo": "02-medallas-arte_v1.mp4",
+    "titulo": "Medalla olímpica por PINTAR 🥇🎨",
+    "youtube": {
+      "titulo": "Medalla olímpica por PINTAR 🥇🎨 #Shorts",
+      "descripcion": "Entre 1912 y 1948 los Juegos Olímpicos daban oro, plata y bronce en pintura, escultura, arquitectura, literatura y música. Coubertin ganó el oro de literatura de 1912 con un poema firmado con nombres inventados, y Walter Winans fue oro en tiro y en escultura.\n\n#Shorts #olimpiadas #juegosolimpicos #historia #arte #parecementira #curiosidades #sabiasque #datoscuriosos",
+      "publico": true,
+      "para_ninos": false
+    },
+    "tiktok": {
+      "texto": "Medalla olímpica por PINTAR 🥇🎨 Entre 1912 y 1948 los Juegos Olímpicos daban oro, plata y bronce en pintura, escultura, arquitectura, literatura y música. Coubertin ganó el oro de literatura de 1912 con un poema firmado con nombres inventados, y Walter Winans fue oro en tiro y en escultura. #olimpiadas #juegosolimpicos #historia #arte #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
+    },
+    "fuentes": [
+      {
+        "titulo": "Smithsonian Magazine — When the Olympics gave out medals for art",
+        "url": "https://www.smithsonianmag.com/arts-culture/when-the-olympics-gave-out-medals-for-art-6878965/"
+      },
+      {
+        "titulo": "Olympics.com — When Olympic medals were awarded for architecture, music and literature",
+        "url": "https://olympics.com/en/news/look-to-the-past-when-olympic-medals-were-awarded-for-architecture-music-and-lit"
+      },
+      {
+        "titulo": "Olympedia — Art Competitions",
+        "url": "https://www.olympedia.org/sports/ART"
+      },
+      {
+        "titulo": "Scientific American — When the Olympics awarded medals to artists",
+        "url": "https://www.scientificamerican.com/article/olympics-medals-to-artists/"
+      }
+    ],
+    "comentario": "¿En qué concurso olímpico de arte competirías tú? 🥇 Te leo 👇",
+    "etiquetas": {
+      "tema": "Histórico",
+      "gancho": "contraste",
+      "estructura": "cadena de datos",
+      "experimento": "no",
+      "alcance": "universal",
+      "tendencia": "no",
+      "portada": "dato"
+    },
+    "locucion": "Medalla olímpica por pintar. Y no es broma: entre mil novecientos doce y mil novecientos cuarenta y ocho, los Juegos Olímpicos daban medallas de oro, plata y bronce al arte. Había cinco concursos: pintura, escultura, arquitectura, literatura y música. Solo había una regla: la obra tenía que estar inspirada en el deporte. Fue idea del barón Pierre de Coubertin, el hombre que recuperó los Juegos. Y en mil novecientos doce, el oro de literatura se lo llevó un poema, «Oda al deporte», firmado con dos nombres inventados. Detrás estaba el propio Coubertin. Hubo hasta quien ganó en las dos cosas: Walter Winans fue oro en tiro en mil novecientos ocho, y oro en escultura cuatro años después, con un caballo de bronce. ¿Y por qué se acabó? Porque los artistas vivían de vender sus obras, y entonces los Juegos eran solo para aficionados. Hoy esas medallas no cuentan. ¿Tú en qué competirías?",
+    "portada": {
+      "texto": "MEDALLA POR PINTAR",
+      "clave": "PINTAR",
+      "archivo": "02-portadas/portada.jpg",
+      "t": 21.3,
+      "diseno": "dato",
+      "motivo": "el lienzo en el caballete cuenta 'pintar' sin leer"
+    }
   },
-  "fuentes": [
-   {
-    "titulo": "Rothberg et al. (2010), BMJ — Phantom vibration syndrome among medical staff: a cross sectional survey",
-    "url": "https://www.bmj.com/content/341/bmj.c6914.long"
-   },
-   {
-    "titulo": "Wikipedia (en) — Phantom vibration syndrome (Drouin 2012: casi 9 de cada 10 universitarios; cómo reducirlo)",
-    "url": "https://en.wikipedia.org/wiki/Phantom_vibration_syndrome"
-   },
-   {
-    "titulo": "NPR (2013) — Phantom phone vibrations so common they've changed our brains",
-    "url": "https://www.npr.org/blogs/alltechconsidered/2013/09/27/226820044/phantom-phone-vibrations-so-common-they-ve-changed-our-brains"
-   },
-   {
-    "titulo": "Tufts Now (2011) — That old familiar feeling",
-    "url": "https://now.tufts.edu/2011/11/03/old-familiar-feeling"
-   }
-  ],
-  "comentario": "¿Cuántas veces te ha pasado hoy? 📱 Te leo 👇",
-  "etiquetas": {
-   "tema": "Cotidiano",
-   "gancho": "negacion",
-   "estructura": "misterio por pistas",
-   "experimento": "no",
-   "alcance": "universal",
-   "tendencia": "no",
-   "portada": "arriba"
-  },
-  "locucion": "Tu teléfono no ha vibrado. Lo has notado en el bolsillo, lo sacas… y no hay nada. Tranquilo: no te pasa solo a ti. Le pasa a casi todo el mundo. En dos mil diez preguntaron a médicos y enfermeros de un hospital de Estados Unidos. Casi siete de cada diez lo habían sentido. Y en dos mil doce, con estudiantes universitarios, fueron casi nueve de cada diez. Tiene nombre: vibración fantasma. ¿Por qué pasa? Tu cerebro vive pendiente de ese aviso, así que está en alerta todo el día. Cuando nota un roce de la ropa o un pequeño tirón de un músculo, prefiere equivocarse: mejor creer que vibra y mirar, que perderse un mensaje. Es lo mismo que oír tu nombre entre el ruido de una cafetería llena. ¿Y cómo se quita? A mucha gente le funciona cambiar el teléfono de bolsillo o quitar la vibración. ¿A ti te pasa?"
- },
- "02": {
-  "archivo": "02-medallas-arte_v1.mp4",
-  "titulo": "Medalla olímpica por PINTAR 🥇🎨",
-  "youtube": {
-   "titulo": "Medalla olímpica por PINTAR 🥇🎨 #Shorts",
-   "descripcion": "Entre 1912 y 1948 los Juegos Olímpicos daban oro, plata y bronce en pintura, escultura, arquitectura, literatura y música. Coubertin ganó el oro de literatura de 1912 con un poema firmado con nombres inventados, y Walter Winans fue oro en tiro y en escultura.\n\n#Shorts #olimpiadas #juegosolimpicos #historia #arte #parecementira #curiosidades #sabiasque #datoscuriosos",
-   "publico": true,
-   "para_ninos": false
-  },
-  "tiktok": {
-   "texto": "Medalla olímpica por PINTAR 🥇🎨 Entre 1912 y 1948 los Juegos Olímpicos daban oro, plata y bronce en pintura, escultura, arquitectura, literatura y música. Coubertin ganó el oro de literatura de 1912 con un poema firmado con nombres inventados, y Walter Winans fue oro en tiro y en escultura. #olimpiadas #juegosolimpicos #historia #arte #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
-  },
-  "fuentes": [
-   {
-    "titulo": "Smithsonian Magazine — When the Olympics gave out medals for art",
-    "url": "https://www.smithsonianmag.com/arts-culture/when-the-olympics-gave-out-medals-for-art-6878965/"
-   },
-   {
-    "titulo": "Olympics.com — When Olympic medals were awarded for architecture, music and literature",
-    "url": "https://olympics.com/en/news/look-to-the-past-when-olympic-medals-were-awarded-for-architecture-music-and-lit"
-   },
-   {
-    "titulo": "Olympedia — Art Competitions",
-    "url": "https://www.olympedia.org/sports/ART"
-   },
-   {
-    "titulo": "Scientific American — When the Olympics awarded medals to artists",
-    "url": "https://www.scientificamerican.com/article/olympics-medals-to-artists/"
-   }
-  ],
-  "comentario": "¿En qué concurso olímpico de arte competirías tú? 🥇 Te leo 👇",
-  "etiquetas": {
-   "tema": "Histórico",
-   "gancho": "contraste",
-   "estructura": "cadena de datos",
-   "experimento": "no",
-   "alcance": "universal",
-   "tendencia": "no",
-   "portada": "arriba"
-  },
-  "locucion": "Medalla olímpica por pintar. Y no es broma: entre mil novecientos doce y mil novecientos cuarenta y ocho, los Juegos Olímpicos daban medallas de oro, plata y bronce al arte. Había cinco concursos: pintura, escultura, arquitectura, literatura y música. Solo había una regla: la obra tenía que estar inspirada en el deporte. Fue idea del barón Pierre de Coubertin, el hombre que recuperó los Juegos. Y en mil novecientos doce, el oro de literatura se lo llevó un poema, «Oda al deporte», firmado con dos nombres inventados. Detrás estaba el propio Coubertin. Hubo hasta quien ganó en las dos cosas: Walter Winans fue oro en tiro en mil novecientos ocho, y oro en escultura cuatro años después, con un caballo de bronce. ¿Y por qué se acabó? Porque los artistas vivían de vender sus obras, y entonces los Juegos eran solo para aficionados. Hoy esas medallas no cuentan. ¿Tú en qué competirías?"
- },
- "03": {
-  "archivo": "03-via-lactea_v1.mp4",
-  "titulo": "¿Ves la Vía Láctea? 🌌 (casi nadie puede)",
-  "youtube": {
-   "titulo": "¿Ves la Vía Láctea? 🌌 (casi nadie puede) #Shorts",
-   "descripcion": "Según el atlas del brillo del cielo nocturno de 2016, un tercio de la humanidad ya no puede ver la Vía Láctea desde donde vive: el 60 % en Europa y el 80 % en Norteamérica. La luz de las ciudades ilumina el polvo y la humedad del aire y tapa las estrellas.\n\n#Shorts #vialactea #estrellas #espacio #astronomia #parecementira #curiosidades #sabiasque #datoscuriosos",
-   "publico": true,
-   "para_ninos": false
-  },
-  "tiktok": {
-   "texto": "¿Ves la Vía Láctea? 🌌 (casi nadie puede) Según el atlas del brillo del cielo nocturno de 2016, un tercio de la humanidad ya no puede ver la Vía Láctea desde donde vive: el 60 % en Europa y el 80 % en Norteamérica. La luz de las ciudades ilumina el polvo y la humedad del aire y tapa las estrellas. #vialactea #estrellas #espacio #astronomia #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
-  },
-  "fuentes": [
-   {
-    "titulo": "Falchi et al. (2016), Science Advances — The new world atlas of artificial night sky brightness",
-    "url": "https://www.science.org/doi/10.1126/sciadv.1600377"
-   },
-   {
-    "titulo": "Wikipedia (en) — Light pollution (un tercio no ve la Vía Láctea; 60 % Europa, 80 % Norteamérica; 83 % bajo cielos contaminados)",
-    "url": "https://en.wikipedia.org/wiki/Light_pollution"
-   }
-  ],
-  "comentario": "¿Has visto alguna vez la Vía Láctea a simple vista? 🌌 Te leo 👇",
-  "etiquetas": {
-   "tema": "Espacio",
-   "gancho": "pregunta",
-   "estructura": "comparación",
-   "experimento": "gancho de pregunta (Espacio)",
-   "alcance": "universal",
-   "tendencia": "no",
-   "portada": "arriba"
-  },
-  "locucion": "¿Ves la Vía Láctea? Seguramente no. En dos mil dieciséis, un equipo de científicos hizo el primer gran atlas del brillo del cielo nocturno, con datos de satélite. Y la conclusión fue tremenda: un tercio de la humanidad ya no puede verla desde donde vive. En Europa, el sesenta por ciento de la gente. En Norteamérica, el ochenta. ¿Qué la tapa? La luz de nuestras ciudades. Las farolas, los carteles y las ventanas iluminan el polvo y la humedad del aire. Y el cielo se queda de un gris anaranjado, como un velo por encima de las estrellas. De hecho, más de ocho de cada diez personas viven bajo un cielo con contaminación lumínica. Y la Vía Láctea es nuestra propia galaxia: cientos de miles de millones de estrellas, y muchos solo la han visto en fotos. Para verla, aléjate de las ciudades en una noche sin luna. ¿Tú la has visto alguna vez?"
- }
+  "03": {
+    "archivo": "03-via-lactea_v1.mp4",
+    "titulo": "¿Ves la Vía Láctea? 🌌 (casi nadie puede)",
+    "youtube": {
+      "titulo": "¿Ves la Vía Láctea? 🌌 (casi nadie puede) #Shorts",
+      "descripcion": "Según el atlas del brillo del cielo nocturno de 2016, un tercio de la humanidad ya no puede ver la Vía Láctea desde donde vive: el 60 % en Europa y el 80 % en Norteamérica. La luz de las ciudades ilumina el polvo y la humedad del aire y tapa las estrellas.\n\n#Shorts #vialactea #estrellas #espacio #astronomia #parecementira #curiosidades #sabiasque #datoscuriosos",
+      "publico": true,
+      "para_ninos": false
+    },
+    "tiktok": {
+      "texto": "¿Ves la Vía Láctea? 🌌 (casi nadie puede) Según el atlas del brillo del cielo nocturno de 2016, un tercio de la humanidad ya no puede ver la Vía Láctea desde donde vive: el 60 % en Europa y el 80 % en Norteamérica. La luz de las ciudades ilumina el polvo y la humedad del aire y tapa las estrellas. #vialactea #estrellas #espacio #astronomia #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
+    },
+    "fuentes": [
+      {
+        "titulo": "Falchi et al. (2016), Science Advances — The new world atlas of artificial night sky brightness",
+        "url": "https://www.science.org/doi/10.1126/sciadv.1600377"
+      },
+      {
+        "titulo": "Wikipedia (en) — Light pollution (un tercio no ve la Vía Láctea; 60 % Europa, 80 % Norteamérica; 83 % bajo cielos contaminados)",
+        "url": "https://en.wikipedia.org/wiki/Light_pollution"
+      }
+    ],
+    "comentario": "¿Has visto alguna vez la Vía Láctea a simple vista? 🌌 Te leo 👇",
+    "etiquetas": {
+      "tema": "Espacio",
+      "gancho": "pregunta",
+      "estructura": "comparación",
+      "experimento": "gancho de pregunta (Espacio)",
+      "alcance": "universal",
+      "tendencia": "no",
+      "portada": "centro"
+    },
+    "locucion": "¿Ves la Vía Láctea? Seguramente no. En dos mil dieciséis, un equipo de científicos hizo el primer gran atlas del brillo del cielo nocturno, con datos de satélite. Y la conclusión fue tremenda: un tercio de la humanidad ya no puede verla desde donde vive. En Europa, el sesenta por ciento de la gente. En Norteamérica, el ochenta. ¿Qué la tapa? La luz de nuestras ciudades. Las farolas, los carteles y las ventanas iluminan el polvo y la humedad del aire. Y el cielo se queda de un gris anaranjado, como un velo por encima de las estrellas. De hecho, más de ocho de cada diez personas viven bajo un cielo con contaminación lumínica. Y la Vía Láctea es nuestra propia galaxia: cientos de miles de millones de estrellas, y muchos solo la han visto en fotos. Para verla, aléjate de las ciudades en una noche sin luna. ¿Tú la has visto alguna vez?",
+    "portada": {
+      "texto": "¿VES LA VÍA LÁCTEA?",
+      "clave": "LÁCTEA",
+      "archivo": "03-portadas/portada.jpg",
+      "t": 45.8,
+      "diseno": "centro",
+      "motivo": "el cielo estrellado es la promesa del vídeo; las otras son ciudad"
+    }
+  }
 }

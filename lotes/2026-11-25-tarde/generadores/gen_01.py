@@ -18,7 +18,7 @@ S_C, S_O = SUELO["bg_ciudad"], SUELO["bg_oficina_gris"]
 
 def bolsillo(d, t0=0.0, t1=None, ancho=980, y=1000):
     t1 = d if t1 is None else t1
-    return [OB("bolsillo", 540, y, ancho, keys=vibra(t0, t1, 540, 10) + [{"t": 0, "escala": 1.0}, {"t": d, "escala": 1.05, "ease": "suave"}]),
+    return [OB("bolsillo", 540, y, ancho, keys=vibra(t0, t1, 540, 14) + [{"t": 0, "escala": 1.18}, {"t": 0.35, "escala": 1.0, "ease": "salida"}, {"t": d, "escala": 1.05, "ease": "suave"}]),
             OB("ondas_vibra", 540, y - 60, ancho * 1.1, z=0.6, keys=[{"t": 0, "op": 0}, {"t": t0 + 0.05, "op": 1}, {"t": t1, "op": 1}, {"t": t1 + 0.1, "op": 0}] + late(t0, 3, 0.06, 0.3))]
 
 
@@ -44,7 +44,7 @@ def _(d):
 def _(d):
     return P(OSC, [BG("bg_ciudad"), OB("cara_chica_pensativa", 540, 1080, 900, keys=[{"t": 0, "escala": 1.0}, {"t": d, "escala": 1.04}]),
                    OB("telefono_movil", 820, 1240, 260, z=0.6, keys=[{"t": 0, "rot": -8}, {"t": d, "rot": -4}])],
-             cam(1.0, 1.06, (540, 1000)), "corte", hud=[cap(0.15, d - 0.05, "0 AVISOS", "#ffffff", "#c0392be6", 110)], sfx=[(0.1, "pop", -20)])
+             cam(1.0, 1.06, (540, 1000)), "corte", sfx=[(0.1, "pop", -20)])
 
 
 @v.plano(17, "tranquilo, no te pasa solo a ti: fila de gente en la calle")
@@ -97,14 +97,14 @@ def _(d):
 def _(d):
     ps = ("chico_bolsillo", "chica_saluda", "voluntario_5", "voluntario_2", "voluntario_4")
     return P(CIU, [BG("bg_ciudad")] + gente(10, 9, 0.15, 1130, 175, "#ff3df2", ps), cam(1.0, 1.05, (540, 1150)), "corte",
-             hud=[cap(0.3, d - 0.05, "9 DE CADA 10", "#ffffff", "#c0392be6", 120)], sfx=[(0.15 + 0.06 * i, "tic", -24) for i in range(9)])
+             sfx=[(0.15 + 0.06 * i, "tic", -24) for i in range(9)])
 
 
 @v.plano(68, "tiene nombre, vibración fantasma: el teléfono se vuelve transparente entre neuronas")
 def _(d):
     return P(CER, [BG("bg_cerebro"), OB("telefono_movil", 540, 1000, 420, keys=[{"t": 0, "op": 1}, {"t": d * 0.6, "op": 0.35, "ease": "suave"}] + flota(d, 16, 1000)),
                    OB("ondas_vibra", 540, 960, 760, z=0.6, keys=late(0.2, 3, 0.06, 0.4))],
-             cam(1.0, 1.08, (540, 1000)), "corte", hud=[amarillo(d * 0.35, d - 0.05, "VIBRACIÓN FANTASMA", y=1420, tam=84, color=CIAN)], sfx=[(d * 0.35, "brillo", -18)])
+             cam(1.0, 1.08, (540, 1000)), "corte", hud=[amarillo(0.05, d - 0.03, "VIBRACIÓN FANTASMA", y=1420, tam=84, color=CIAN)], sfx=[(d * 0.35, "brillo", -18)])
 
 
 @v.plano(72, "¿por qué pasa?: la chica piensa")
@@ -131,13 +131,13 @@ def _(d):
 def _(d):
     return P(OSC, [OB("bolsillo", 540, 1000, 1000, keys=[{"t": 0, "x": 520}, {"t": d * 0.5, "x": 560, "ease": "suave"}, {"t": d, "x": 530, "ease": "suave"}]),
                    flecha([[260, 1250], [820, 1150]], 0.2, 0.8, "#ffffffcc", 12, z=0.6)],
-             cam(1.1, 1.2, (540, 1000)), "corte", hud=[cap(0.3, d - 0.05, "UN ROCE", tam=110)], sfx=[(0.2, "roce", -16)])
+             cam(1.1, 1.2, (540, 1000)), "corte", hud=[cap(0.0, d - 0.02, "ROCE", tam=120)], sfx=[(0.2, "roce", -16)])
 
 
 @v.plano(97, "o un pequeño tirón de un músculo: anillo en la pierna del chico")
 def _(d):
     return P(CIU, [BG("bg_ciudad"), PZ("chico_bolsillo", 540, S_C, 1100), senala(600, 1170, 0.2, d - 0.05, 100, MAGENTA)],
-             cam(1.1, 1.3, (540, 1050), (580, 1150)), "corte", hud=[cap(0.3, d - 0.05, "UN TIRÓN", "#ffffff", "#c0392be6", 110)], sfx=[(0.25, "pop", -18)])
+             cam(1.1, 1.3, (540, 1050), (580, 1150)), "corte", hud=[cap(0.0, d - 0.02, "TIRÓN", "#ffffff", "#c0392be6", 120)], sfx=[(0.25, "pop", -18)])
 
 
 @v.plano(104, "prefiere equivocarse: el cerebro con un interrogante")
@@ -183,6 +183,24 @@ def _(d):
 @v.plano(148, "¿a ti te pasa?: el bolsillo vuelve a vibrar (bucle)")
 def _(d):
     return P(OSC, bolsillo(d, 0.2, d - 0.1), cam(1.0, 1.06, (540, 1000)), "corte", sfx=[(0.2, "zap", -22)])
+
+
+def micro(fondo, els, txt=None, col="#ffffff", cap_f="#c0392be6", sfx="pop"):
+    def fn(d):
+        return P(fondo, els(d), cam(1.15, 1.3, (540, 1000)), "corte", hud=[cap(0.0, d - 0.02, txt, col, cap_f, 130)] if txt else [], sfx=[(0.01, sfx, -18)])
+    return fn
+
+
+v.plano(16, "micro: la pantalla vacía en grande")(micro(OSC, lambda d: [OB("telefono_movil", 540, 1000, 560)], "NADA"))
+v.plano(64, "micro: un 9 enorme")(micro(CIU, lambda d: [BG("bg_ciudad"), brillo(540, 1000, 400, "#ff3df2", 0.5, 0.06)], "9", sfx="impacto"))
+v.plano(64, "nueve de cada diez (sigue)", mas=0.45)(lambda d: P(CIU, [BG("bg_ciudad")] + gente(10, 9, 0.0, 1130, 175, "#ff3df2", ("chico_bolsillo", "chica_saluda", "voluntario_5", "voluntario_2", "voluntario_4")),
+                                                           cam(1.0, 1.04, (540, 1150)), "corte", hud=[cap(0.0, d - 0.02, "9 DE 10", "#ffffff", "#c0392be6", 130)]))
+v.plano(71, "micro: el teléfono fantasma se desvanece")(micro(CER, lambda d: [BG("bg_cerebro"), OB("telefono_movil", 540, 1000, 520, keys=[{"t": 0, "op": 0.8}, {"t": d, "op": 0.2}])], sfx="brillo"))
+v.plano(93, "micro: la tela roza")(micro(OSC, lambda d: [OB("bolsillo", 540, 1000, 1300, keys=[{"t": 0, "x": 500}, {"t": d, "x": 580}])], sfx="roce"))
+v.plano(100, "micro: el músculo da un tirón")(micro(CIU, lambda d: [BG("bg_ciudad"), PZ("chico_bolsillo", 540, 1390, 1700, keys=vibra(0.05, d, 540, 6))], sfx="pop"))
+v.plano(128, "micro: la taza de café")(micro(["#3a2418", "#120a06"], lambda d: [BG("bg_ventana_invierno"), OB("taza_cafe", 540, 1050, 520, keys=aparece(0.0))], sfx="pop"))
+v.plano(128, "cafetería (sigue): el chico se ha girado", mas=0.55)(lambda d: P(["#3a2418", "#120a06"], [BG("bg_ventana_invierno"), PZ("voluntario_2", 170, SUELO["bg_ventana_invierno"], 760),
+        OB("cara_chico_alerta", 600, 1260, 820, z=0.55)], cam(1.05, 1.1, (540, 1150)), "corte", hud=[amarillo(0.0, d - 0.02, "TU NOMBRE", y=560, tam=120, color=AMBAR)]))
 
 
 v.construir("2026-11-25-tarde-01-vibracion-fantasma", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 1251, "db": -13},
