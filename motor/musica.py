@@ -3,6 +3,8 @@
 Sirve como base mientras no se elija una fuente de música (ver DECISIONS.md, «Presupuesto y gastos»).
 Estilos: "curiosidad" (re menor, pad + arpegio suave, 92 bpm), "misterio" (más grave y lento),
 "emprende" (do mayor I–V–vi–IV, 112 bpm, piano, bombo y palmas que entran pronto: motivador, de «a por ello»),
+"cine" (hip hop cinematográfico oscuro y motivador: piano con reverb, cuerdas, 808 largo y pulso grave, batería
+suave a medio tiempo; si menor Si m–Sol–Fa#; la base de los vídeos de «mentalidad de emprendedor»),
 "ambicion" (trap oscuro de «mentalidad de negocio», si menor, 143 bpm a medio tiempo: 808 grave con glissando,
 bombo, palmada en el 3, charles en semicorcheas con redobles, campana/pluck menor y pad; intro sin 808 y «drop»).
 
@@ -29,6 +31,8 @@ ESTILOS = {
                   "arpegio": True, "brillo": 0.7, "umbral": 0.25, "palmas": True, "piano": True},
     "ambicion": {"bpm": 143, "acordes": [("B", "m"), ("G", "M"), ("E", "m"), ("F#", "M")], "octava": 3,
                   "arpegio": False, "brillo": 0.5, "trap": True},
+    "cine": {"bpm": 143, "acordes": [("B", "m"), ("B", "m"), ("G", "M"), ("F#", "M")], "octava": 3,
+              "arpegio": False, "brillo": 0.5, "cine": True},
     "misterio": {"bpm": 70, "acordes": [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], "octava": 2,
                   "arpegio": True, "brillo": 0.2},
 }
@@ -80,6 +84,8 @@ def generar(salida, dur, estilo="curiosidad", semilla=1, energia=None, bucle=Fal
     cfg = ESTILOS[estilo]
     if cfg.get("trap"):
         return _trap(salida, dur, cfg, semilla, energia, bucle)
+    if cfg.get("cine"):
+        return _cine(salida, dur, cfg, semilla, energia, bucle)
     rng = np.random.default_rng(semilla)
     n = int(dur * SR)
     t = np.arange(n) / SR
@@ -281,6 +287,108 @@ def _trap(salida, dur, cfg, semilla=1, energia=None, bucle=False):
     L, R = L * (0.85 + 0.25 * E), R * (0.85 + 0.25 * E)
     fade = (np.minimum(1, t / 0.12) * np.minimum(1, (dur - t) / 0.2)) if bucle else (np.minimum(1, t / 0.4) * np.minimum(1, (dur - t) / 1.5))
     L, R = np.tanh(L * fade * 1.4), np.tanh(R * fade * 1.4)
+    pico = max(np.abs(L).max(), np.abs(R).max(), 1e-6)
+    est = np.stack([L, R], 1) / pico * 0.7
+    with wave.open(salida, "wb") as w:
+        w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
+        w.writeframes((est * 32767).astype("<i2").tobytes())
+    return salida
+
+
+def _reverb(x, seg=2.2, mezcla=0.3, sem=3):
+    from scipy.signal import fftconvolve
+    r = np.random.default_rng(sem)
+    n = int(seg * SR)
+    ir = r.normal(0, 1, n) * np.exp(-np.arange(n) / SR / (seg / 5))
+    ir = _lp(ir, 5000); ir /= np.sqrt(np.sum(ir ** 2))
+    w = fftconvolve(x, ir)[: len(x)]
+    return x * (1 - mezcla) + w * mezcla
+
+
+def _cine(salida, dur, cfg, semilla=1, energia=None, bucle=False):
+    """Hip hop cinematográfico oscuro (piano + cuerdas + 808 + pulso grave + batería suave a medio tiempo)."""
+    rng = np.random.default_rng(semilla)
+    n = int(dur * SR); t = np.arange(n) / SR
+    negra = 60 / cfg["bpm"]; compas = 8 * negra          # compás de medio tiempo (3,36 s)
+    E = _curva(energia, t) if energia else np.full(n, 0.7)
+    acs = cfg["acordes"]
+    intro = min(2 * compas * 0.5, dur * 0.12)             # 1 compás solo piano y cuerdas
+    fin = dur - min(compas * 0.6, 3.0)
+    piano, cuerdas, bajo, bat = (np.zeros(n) for _ in range(4))
+
+    def pon(buf, i0, v):
+        i0 = int(i0)
+        if 0 <= i0 < n:
+            m = min(len(v), n - i0); buf[i0:i0 + m] += v[:m]
+
+    def nota_piano(fr, d=2.5, vel=1.0):
+        nb = int(d * SR); tb = np.arange(nb) / SR
+        v = sum(a * np.sin(2 * np.pi * fr * h * (1 + 0.0004 * h) * tb) * np.exp(-tb * (1.2 + 0.9 * h)) for h, a in
+                ((1, 1.0), (2, 0.45), (3, 0.22), (4, 0.12), (5, 0.06)))
+        return v * np.minimum(1, tb / 0.004) * 0.26 * vel
+
+    k = 0
+    while k * compas < dur:
+        raiz, tp = acs[k % len(acs)]
+        f3 = _acorde(raiz, tp, cfg["octava"])               # tríada media
+        f2 = _acorde(raiz, tp, cfg["octava"] - 1)
+        a0 = k * compas
+        # cuerdas: acorde largo, ataque lento, saws filtrados + vibrato
+        nb = int((compas + 1.2) * SR); tb = np.arange(nb) / SR
+        env = np.minimum(1, tb / 1.0) * np.minimum(1, np.maximum(0, compas + 1.2 - tb) / 1.2)
+        c = 0
+        for fr in (f2[0], f3[0], f3[1], f3[2]):
+            for det in (-0.25, 0.25):
+                ph = rng.random()
+                vib = 1 + 0.003 * np.sin(2 * np.pi * 5.2 * tb + ph * 6)
+                c = c + (2 * ((fr * (1 + det / 100) * np.cumsum(vib) / SR + ph) % 1) - 1)
+        pon(cuerdas, a0 * SR, _lp(c * env * 0.03, 3200))
+        # piano: arpegio lento en negras de medio tiempo (cada 2 negras a 143), motivo oscuro
+        motivo = [0, 2, 1, 2, 0, 2, 1, 3] if k % 2 == 0 else [0, 2, 1, 2, 3, 2, 1, 2]
+        notas = [f3[0], f3[1], f3[2], f3[0] * 2]
+        for j, idx in enumerate(motivo):
+            pon(piano, (a0 + j * negra) * SR, nota_piano(notas[idx], 2.2, 0.9 if j % 2 == 0 else 0.7))
+        pon(piano, a0 * SR, nota_piano(f2[0], 3.5, 0.8))     # nota grave del acorde
+        # 808 largo + pulso grave en corcheas (tras la intro)
+        if intro <= a0 < fin:
+            f0 = _acorde(raiz, tp, 1)[0]
+            if f0 > 62: f0 /= 2
+            nb = int(compas * SR); tb = np.arange(nb) / SR
+            b = np.tanh(1.4 * np.sin(2 * np.pi * f0 * tb)) * np.exp(-tb / 2.8) * np.minimum(1, tb / 0.01) * 0.26
+            pon(bajo, a0 * SR, b)
+            for j in range(16):
+                if j % 4 in (1, 3):
+                    nb2 = int(negra * 0.45 * SR); tp2 = np.arange(nb2) / SR
+                    pu = np.sin(2 * np.pi * f0 * 2 * tp2) * np.exp(-tp2 / 0.09) * 0.10
+                    pon(bajo, (a0 + j * negra / 2) * SR, pu)
+        k += 1
+
+    # batería suave a medio tiempo: bombo 1 (+ síncopa), palmada con cuerpo en el 3, charles discretos
+    m = 0; paso = negra / 2
+    while m * paso < dur:
+        T = m * paso; i0 = T * SR; p16 = m % 16
+        dentro = intro <= T < fin
+        if dentro and p16 in (0, 6, 10):
+            nb = int(0.3 * SR); tb = np.arange(nb) / SR
+            pon(bat, i0, np.sin(2 * np.pi * np.cumsum(46 + 90 * np.exp(-tb / 0.03)) / SR) * np.exp(-tb / 0.16) * 0.42)
+        if dentro and p16 == 8:
+            nc = int(0.35 * SR); rr = rng.normal(0, 1, nc)
+            sn = (_lp(rr, 4500) - _lp(rr, 700)) * np.exp(-np.arange(nc) / SR / 0.09) * 0.32
+            sn += np.sin(2 * np.pi * 180 * np.arange(nc) / SR) * np.exp(-np.arange(nc) / SR / 0.05) * 0.12
+            pon(bat, i0, sn)
+        if dentro and p16 % 2 == 0:
+            nh = int(0.05 * SR); hh = rng.normal(0, 1, nh)
+            pon(bat, i0, (hh - _lp(hh, 6500)) * np.exp(-np.arange(nh) / SR / 0.02) * (0.06 + 0.03 * (p16 % 4 == 2)))
+        m += 1
+
+    piano = _reverb(piano, 2.6, 0.38, semilla)
+    cuerdas = _reverb(cuerdas, 3.0, 0.3, semilla + 1)
+    bat = _reverb(bat, 1.2, 0.15, semilla + 2)
+    g = 0.85 + 0.25 * E
+    L = (piano * 0.9 + cuerdas * 1.0 + bajo + bat) * g
+    R = (piano * 1.0 + cuerdas * 0.9 + bajo + bat) * g
+    fade = (np.minimum(1, t / 0.12) * np.minimum(1, (dur - t) / 0.2)) if bucle else (np.minimum(1, t / 0.6) * np.minimum(1, (dur - t) / 2.0))
+    L, R = np.tanh(L * fade * 1.3), np.tanh(R * fade * 1.3)
     pico = max(np.abs(L).max(), np.abs(R).max(), 1e-6)
     est = np.stack([L, R], 1) / pico * 0.7
     with wave.open(salida, "wb") as w:
