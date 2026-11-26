@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-26 13:45 — Jorge (con el agente) (lote 2026-11-25-tarde en revisión)_
+_Última actualización: 2026-11-26 21:20 — Agente 20:00 (Jorge) (lote 2026-11-26-tarde pendiente de voz)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -25,6 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- Pendiente de voz: lote **2026-11-26-tarde** (posponer la alarma, la cara oculta de la Luna, el Black Friday lo bautizó la policía; experimento: gancho de negación en el 02). Guiones, arte y generadores en `lotes/2026-11-26-tarde/`. El Mac de Jorge no respondió desde las 20:10. Se retoma con «sigue» en https://claude.ai/code/session_019BG1dJQa777yvYo7vRNCi3. ElevenLabs: quedan 10.285 caracteres (≈7.700 después de este lote).
 - **Publicado** (26-11, YouTube y TikTok: 01 a las 13:55, 02 a las 16:00, 03 a las 18:00): lote **2026-11-25-tarde** v1 (vibración fantasma, medallas olímpicas por arte, la Vía Láctea que casi nadie ve; 52–60 s), **primer lote con el estilo de dibujo del vídeo largo** (personajes y escenarios de `lotes/largo-cueva-500-dias`, a petición de Jorge). Hecho el 26-11 porque la tarea de las 20:00 está en pausa (Mac ausente: hay que reactivarla desde el Mac de Jorge). Vídeos en el chat https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS y en `Documents/Parece Mentira/lotes/2026-11-25-tarde/` (Mac de Jorge). ElevenLabs: quedan 12.233 caracteres.
 - En revisión: lote **2026-11-25-manana** v1 (el Hubble nació miope, por qué se arrugan los dedos en el agua, el olivo que conoció a Roma; 55–57 s; dos salen de tendencias; experimento: gancho en segunda persona en el 02). Vídeos en el chat https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw y en `Documents/Parece Mentira/lotes/2026-11-25-manana/` (Mac de Nico). El 01 y el 03 llevan frases quitadas de la toma para bajar de 60 s: oír los empalmes. ElevenLabs: quedan 12.911 caracteres.
 - Lote **2026-11-24-tarde** publicado y programado (YouTube y TikTok: 01 ya, 02 a las 10:00 y 03 a las 12:00 del 25-11).

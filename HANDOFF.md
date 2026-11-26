@@ -4,6 +4,16 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-26 21:20 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-26-tarde pendiente de voz
+**Hecho**: reserva; créditos (10.285); tendencias (sin archivo de la mañana, feeds de Trends sin respuesta; se usa la fecha: Black Friday); 3 temas verificados (subagentes de búsqueda, 2+ fuentes cada uno); guiones (`motor.guion` sin ❌), `metadatos.json`, `guiones.md`, `IDEAS.md` (Usados); arte nuevo `ilus_1126t.py` y generadores `gen_01..03.py` con hojas revisadas; hojas al chat; correo [AVISO] (id 1a2198087d4a87bc).
+**Bloqueo**: el Mac de Jorge se cayó del puente a las ≈20:10 y no volvió (reintentos hasta las 21:15). Había otra sesión usando el mismo Mac a la vez (commit 3dc63f1).
+**Decisión aplicada**: el prompt de la tarea programada dice «estilo v4 obligatorio», pero DECISIONS 2026-11-26 (Jorge) manda el estilo del vídeo largo: se ha seguido DECISIONS y se avisa en el correo para actualizar el prompt.
+**Pruebas**: `motor.guion` ×3; construcción con tiempos provisionales sin errores; hojas de fotogramas mirados. No se tocó `motor/`.
+**Pendiente**: voz → render → calidad → portadas → fichas → entrega → «ok». Studio §1.8 y comentarios §8b sin hacer.
+**Siguiente paso**: «sigue» en https://claude.ai/code/session_019BG1dJQa777yvYo7vRNCi3 con el Mac encendido (ver «Cómo seguir» en `lotes/2026-11-26-tarde/estado.md`). Black Friday es mañana: el 03 pierde fuerza si se publica tarde.
+
+---
+
 ## 2026-11-26 20:30 — Jorge (con el agente) — rama `main` — «El que copiaba» v1 en revisión
 **Hecho**: montaje completo (170 planos en 3 tramos + corto de 36 planos con la voz recortada, estilo B), música nueva «emprende» en `motor/musica.py` (motor.prueba OK), render y `motor.calidad` sin ❌ (55/100 largo, 72/100 corto). Vídeos enviados al chat.
 **Pendiente**: copiar MP4 al Mac (desconectado), portadas, metadatos (título, descripción, fuentes), «ok» de Jorge para publicar. Ojo: el agente de las 20:00 del Mac de Jorge se ha vuelto a disparar y hace el lote 2026-11-26-tarde en otra sesión.
