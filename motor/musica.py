@@ -1,7 +1,8 @@
 """Música de fondo generada por código (sin licencias de terceros) y mezcla final.
 
 Sirve como base mientras no se elija una fuente de música (ver DECISIONS.md, «Presupuesto y gastos»).
-Estilos: "curiosidad" (re menor, pad + arpegio suave, 92 bpm), "misterio" (más grave y lento).
+Estilos: "curiosidad" (re menor, pad + arpegio suave, 92 bpm), "misterio" (más grave y lento),
+"emprende" (do mayor I–V–vi–IV, 112 bpm, piano, bombo y palmas que entran pronto: motivador, de «a por ello»).
 
 CLI:  python3 -m motor.musica salida.wav --dur 47 --estilo curiosidad --semilla 1
 """
@@ -22,6 +23,8 @@ def hz(nota, octava):
 ESTILOS = {
     "curiosidad": {"bpm": 92, "acordes": [("D", "m"), ("A#", "M"), ("F", "M"), ("C", "M")], "octava": 3,
                     "arpegio": True, "brillo": 0.35},
+    "emprende": {"bpm": 112, "acordes": [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], "octava": 3,
+                  "arpegio": True, "brillo": 0.7, "umbral": 0.25, "palmas": True, "piano": True},
     "misterio": {"bpm": 70, "acordes": [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], "octava": 2,
                   "arpegio": True, "brillo": 0.2},
 }
@@ -108,7 +111,11 @@ def generar(salida, dur, estilo="curiosidad", semilla=1, energia=None, bucle=Fal
                 b0 = a0 + int(m * corchea * SR)
                 b1 = min(n, b0 + int(1.2 * SR))
                 tb = np.arange(b1 - b0) / SR
-                nota = (np.sin(2 * np.pi * fr * tb) + 0.3 * np.sin(4 * np.pi * fr * tb)) * np.exp(-tb * 4.5) * 0.05
+                if cfg.get("piano"):
+                    nota = (np.sin(2 * np.pi * fr * tb) + 0.45 * np.sin(4 * np.pi * fr * tb) + 0.18 * np.sin(6 * np.pi * fr * tb)) \
+                        * np.exp(-tb * 3.2) * np.minimum(1, tb / 0.004) * 0.07
+                else:
+                    nota = (np.sin(2 * np.pi * fr * tb) + 0.3 * np.sin(4 * np.pi * fr * tb)) * np.exp(-tb * 4.5) * 0.05
                 pan = 0.5 + 0.35 * np.sin(m * 1.3)
                 Larp[b0:b1] += nota * pan
                 Rarp[b0:b1] += nota * (1 - pan)
@@ -128,7 +135,8 @@ def generar(salida, dur, estilo="curiosidad", semilla=1, energia=None, bucle=Fal
         m = 0
         while m * negra < dur:
             i0 = int(m * negra * SR)
-            g = max(0.0, float(E[min(i0, n - 1)]) - 0.55) / 0.45
+            um = cfg.get("umbral", 0.55)
+            g = min(1.0, max(0.0, float(E[min(i0, n - 1)]) - um) / (1 - um))
             if g > 0:
                 nb = min(n - i0, int(0.22 * SR)); tb = np.arange(nb) / SR
                 bombo = np.sin(2 * np.pi * np.cumsum(45 + 70 * np.exp(-tb / 0.03)) / SR) * np.exp(-tb / 0.09) * 0.22 * g
@@ -137,6 +145,12 @@ def generar(salida, dur, estilo="curiosidad", semilla=1, energia=None, bucle=Fal
                 if ns > 0:
                     sh = rng.normal(0, 1, ns); sh = (sh - _lp(sh, 5000)) * np.exp(-np.arange(ns) / SR / 0.015) * 0.05 * g
                     L[j0:j0 + ns] += sh * 0.4; R[j0:j0 + ns] += sh * 0.6
+                if cfg.get("palmas") and m % 2 == 1:   # palmas en el 2 y el 4
+                    npl = min(n - i0, int(0.12 * SR))
+                    pl = rng.normal(0, 1, npl); pl = pl - _lp(pl, 900)
+                    env_p = np.exp(-np.arange(npl) / SR / 0.035)
+                    pl = pl * env_p * 0.09 * g
+                    L[i0:i0 + npl] += pl * 0.55; R[i0:i0 + npl] += pl * 0.45
             m += 1
         L, R = L * (0.8 + 0.35 * E), R * (0.8 + 0.35 * E)
     # vaivén lento del volumen
