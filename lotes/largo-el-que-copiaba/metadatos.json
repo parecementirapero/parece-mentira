@@ -1,0 +1,57 @@
+{
+ "largo": {
+  "formato": "16:9 1920×1080 · YouTube",
+  "archivo": "el-que-copiaba-16x9_v2.mp4",
+  "titulo": "El que copiaba en el colegio iba un paso por delante",
+  "youtube": {
+   "titulo": "El que copiaba en el colegio iba un paso por delante",
+   "descripcion": "En el colegio, copiar te costaba un suspenso. En la vida real, copiar bien te puede hacer rico.\n\nMarta y Lucas iban a la misma clase. Ella lo hacía todo original; él miraba de reojo al de al lado. Años después, los dos montan un negocio: Marta busca la idea que nadie ha tenido… y Lucas se fija en dónde hay cola. Esta es la historia de por qué, muchas veces, gana el que copia lo que ya funciona y lo mejora en una sola cosa. Y de la trampa que hay que evitar.\n\n00:00 En el colegio\n00:37 El último timbre\n00:58 La idea de Marta\n01:35 La cola de Lucas\n02:11 ¿Por qué funciona?\n02:35 En tu móvil\n03:07 Así aprendiste todo\n03:33 La trampa\n03:57 El regreso de Marta\n04:24 La regla que no te enseñan\n\nY tú, ¿qué copiarías… y qué le cambiarías? Te leo en los comentarios.\n\n#parecementira #emprender #negocios #emprendimiento #mentalidad #curiosidades",
+   "publico": true,
+   "para_ninos": false
+  },
+  "comentario": "¿Qué copiarías tú… y qué le cambiarías? 👇",
+  "portada": {
+   "archivo": "portada-16x9.jpg",
+   "texto": "EL QUE COPIABA GANÓ",
+   "motivo": "compuesta a mano: Lucas niño copiando (aula) frente a Lucas adulto con su local y la cola"
+  },
+  "etiquetas": {
+   "tema": "Cotidiano",
+   "gancho": "contraste",
+   "estructura": "historia",
+   "experimento": "no",
+   "portada": "compuesta"
+  }
+ },
+ "corto": {
+  "formato": "9:16 1080×1920 · TikTok y YouTube Shorts",
+  "archivo": "el-que-copiaba-corto-9x16_v2.mp4",
+  "titulo": "Copiar bien te puede hacer rico 🍔💡",
+  "youtube": {
+   "titulo": "Copiar bien te puede hacer rico 🍔💡 #Shorts",
+   "descripcion": "En el colegio, copiar te costaba un suspenso. En la vida real, copiar bien te puede hacer rico. Marta buscó la idea que nadie había tenido y cerró; Lucas copió la hamburguesería con cola, la hizo más rápida… y abrió dos locales.\n\n#Shorts #emprender #negocios #emprendimiento #parecementira #curiosidades",
+   "publico": true,
+   "para_ninos": false
+  },
+  "tiktok": {
+   "texto": "Copiar bien te puede hacer rico 🍔💡 Marta buscó la idea que nadie había tenido… y cerró. Lucas copió la hamburguesería con cola, la hizo más rápida y abrió dos locales. El truco: copia lo que funciona y mejora UNA sola cosa. #emprender #negocios #emprendimiento #mentalidad #parecementira #curiosidades #fyp #parati"
+  },
+  "comentario": "¿Qué copiarías tú… y qué le cambiarías? 👇",
+  "portada": {
+   "archivo": "portada-corto.jpg",
+   "texto": "COPIAR BIEN TE HACE RICO",
+   "clave": "RICO",
+   "diseno": "dato",
+   "t": 36.3,
+   "motivo": "la cola en la hamburguesería es la idea del vídeo"
+  },
+  "etiquetas": {
+   "tema": "Cotidiano",
+   "gancho": "contraste",
+   "estructura": "historia",
+   "experimento": "no",
+   "portada": "dato"
+  }
+ },
+ "fuentes": []
+}
