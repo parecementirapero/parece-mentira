@@ -1,4 +1,4 @@
-# Estudio de audiencia y rendimiento — 2026-11-26 09:32
+# Estudio de audiencia y rendimiento — 2026-11-26 10:07
 
 Generado por `python3 estadisticas/estudio todo`. Método: `estadisticas/estudio/README.md`. Niveles: **pista** (menos de 5 vídeos por grupo o indistinguible del azar: solo para decidir qué probar), **indicio** (5 o más por grupo, p < 0,10 y mismo sentido en YouTube y TikTok), **regla** (10 o más por grupo, intervalo que no cruza el cero, repetido en dos semanas y p corregido por el número de comparaciones; o un experimento con ficha previa cerrado a favor).
 
