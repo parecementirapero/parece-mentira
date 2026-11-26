@@ -23,3 +23,4 @@ Chat: https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS · Correo enviado 
 - Comentario fijado del 01: YouTube fijado; TikTok escrito, la web no da opción de fijar. 02 y 03: avisos programados en este chat a las 16:05 y 18:05.
 - Copias para subir en `PARA PUBLICAR/2511t-*` (Mac de Jorge). Instagram no se ha subido (no se pidió).
 - 16:05: no se pudo poner el comentario del 02 (YouTube y TikTok): el navegador integrado y la terminal del Mac de Jorge no estaban disponibles en la sesión. Queda pendiente; texto: «¿En qué concurso olímpico de arte competirías tú? 🥇 Te leo 👇».
+- 18:05: tampoco se pudo poner el comentario del 03 (navegador del Mac no disponible en la sesión). Pendientes los del 02 y 03; texto del 03: «¿Has visto alguna vez la Vía Láctea a simple vista? 🌌 Te leo 👇».
