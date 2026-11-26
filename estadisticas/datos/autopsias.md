@@ -2,7 +2,7 @@
 
 Generado por `python3 estadisticas/estudio todo`. Una por vídeo con lecturas de 24 h o más, la más reciente arriba. El índice «frente al canal» es el valor dividido por la mediana del canal (1,00 = lo normal).
 
-Vídeos con autopsia: 17 de 50. 
+Vídeos con autopsia: 17 de 55. 
 
 ### LvYkPN5jc6A (`LvYkPN5jc6A`)
 
@@ -10,11 +10,11 @@ Vídeos con autopsia: 17 de 50.
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 58,6 % | 25 h (provisional) | 0,90 |
 | segundos por vista (YouTube) | 22,5 s | 25 h (provisional) | 0,95 |
-| vistas (YouTube) | 448  | 48 h | 0,27 |
+| vistas (YouTube) | 448  | 48 h | 0,28 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
-Curva de YouTube: se va el **-12 %** en los 3 primeros segundos; en el segundo 10 queda el 75 %.
+Curva de YouTube: se va el **-11 %** en los 3 primeros segundos; en el segundo 10 queda el 76 %.
 - Escalón en 6–6 s (94 → 87 %): «Tres mil cuatrocientos setenta y nueve metros:»
 - Escalón en 5–6 s (101 → 94 %): «Tres mil cuatrocientos setenta y nueve metros:»
 - Escalón en 50–50 s (32 → 29 %): «Viene de Muley Hacén, un rey de Granada.»
@@ -28,14 +28,14 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 45,5 % | 34 h (provisional) | 0,70 |
 | segundos por vista (YouTube) | 14,5 s | 34 h (provisional) | 0,61 |
-| vistas (YouTube) | 822  | 48 h | 0,49 |
+| vistas (YouTube) | 822  | 48 h | 0,51 |
 
 **Diagnóstico: Fallo de tema: el primer segundo está dentro de norma y aun así la gente desliza.**
 
-Curva de YouTube: se va el **-30 %** en los 3 primeros segundos; en el segundo 10 queda el 90 %.
+Curva de YouTube: se va el **-29 %** en los 3 primeros segundos; en el segundo 10 queda el 90 %.
 - Escalón en 6–7 s (110 → 106 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
-- Escalón en 5–6 s (119 → 115 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
-- Escalón en 6–6 s (115 → 110 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
+- Escalón en 7–7 s (106 → 101 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
+- Escalón en 5–6 s (118 → 114 %): «Da vueltas a la Tierra a unos cuatrocientos veinte kilómetros de altura, y va rapidísimo:»
 _Las frases se sitúan por estimación (±2 s)._
 
 **Acción:** No repetir este tipo de tema sin cambiar el ángulo; apuntarlo en `lotes/IDEAS.md`.
@@ -45,8 +45,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | | Valor | Edad de la lectura | Frente al canal |
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 79,7 % | 45 h (provisional) | 1,23 |
-| vistas (YouTube) | 10.119  | 48 h | 6,06 |
-| vistas (TikTok) | 256  | 48 h | 0,94 |
+| vistas (YouTube) | 10.119  | 48 h | 6,32 |
+| vistas (TikTok) | 256  | 48 h | 1,02 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -64,14 +64,14 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 71,5 % | 46 h (provisional) | 1,10 |
 | segundos por vista (YouTube) | 26,2 s | 46 h (provisional) | 1,10 |
-| vistas (YouTube) | 2.524  | 48 h | 1,51 |
-| vistas (TikTok) | 252  | 48 h | 0,93 |
+| vistas (YouTube) | 2.524  | 48 h | 1,58 |
+| vistas (TikTok) | 252  | 48 h | 1,00 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
-Curva de YouTube: se va el **-18 %** en los 3 primeros segundos; en el segundo 10 queda el 90 %.
+Curva de YouTube: se va el **-19 %** en los 3 primeros segundos; en el segundo 10 queda el 91 %.
 - Escalón en 6–6 s (110 → 105 %): «¿Cómo puede pesar tanto?»
-- Escalón en 5–6 s (114 → 110 %): «es un trocito de estrella de neutrones.»
+- Escalón en 5–6 s (115 → 110 %): «es un trocito de estrella de neutrones.»
 - Escalón en 6–7 s (105 → 101 %): «¿Cómo puede pesar tanto?»
 _Las frases se sitúan por estimación (±2 s)._
 
@@ -83,7 +83,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 69,7 % | 61 h | 1,08 |
 | segundos por vista (YouTube) | 29,5 s | 61 h | 1,24 |
-| vistas (YouTube) | 3.672  | 48 h | 2,20 |
+| vistas (YouTube) | 3.672  | 48 h | 2,29 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -96,7 +96,7 @@ _Las frases se sitúan por estimación (±2 s)._
 | se quedaron viendo (YouTube) | 59,1 % | 62 h | 0,91 |
 | segundos por vista (YouTube) | 15,0 s | 62 h | 0,63 |
 | vistas (YouTube) | 24  | 48 h | 0,01 |
-| vistas (TikTok) | 251  | 48 h | 0,92 |
+| vistas (TikTok) | 251  | 48 h | 1,00 |
 
 **Diagnóstico: Fallo de ritmo: entran, pero se van a mitad.**
 
@@ -108,8 +108,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 65,9 % | 63 h | 1,02 |
 | segundos por vista (YouTube) | 24,2 s | 63 h | 1,02 |
-| vistas (YouTube) | 1.714  | 48 h | 1,03 |
-| vistas (TikTok) | 277  | 48 h | 1,02 |
+| vistas (YouTube) | 1.714  | 48 h | 1,07 |
+| vistas (TikTok) | 277  | 48 h | 1,10 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -123,8 +123,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 24,9 s | 36 h (provisional) | 1,05 |
 | tiempo medio (TikTok) | 6,4 s | 35 h (provisional) | 0,45 |
 | lo ven entero (TikTok) | 1,5 % | 35 h (provisional) | 0,12 |
-| vistas (YouTube) | 3.224  | 48 h | 1,93 |
-| vistas (TikTok) | 58  | 48 h | 0,21 |
+| vistas (YouTube) | 3.224  | 48 h | 2,01 |
+| vistas (TikTok) | 58  | 48 h | 0,23 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -144,8 +144,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 26,7 s | 36 h (provisional) | 1,12 |
 | tiempo medio (TikTok) | 14,4 s | 35 h (provisional) | 1,00 |
 | lo ven entero (TikTok) | 8,5 % | 35 h (provisional) | 0,65 |
-| vistas (YouTube) | 2.295  | 48 h | 1,38 |
-| vistas (TikTok) | 232  | 48 h | 0,85 |
+| vistas (YouTube) | 2.295  | 48 h | 1,43 |
+| vistas (TikTok) | 232  | 48 h | 0,92 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -165,8 +165,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 23,9 s | 38 h (provisional) | 1,01 |
 | tiempo medio (TikTok) | 12,2 s | 35 h (provisional) | 0,85 |
 | lo ven entero (TikTok) | 5,4 % | 35 h (provisional) | 0,42 |
-| vistas (YouTube) | 1.491  | 48 h | 0,89 |
-| vistas (TikTok) | 242  | 48 h | 0,89 |
+| vistas (YouTube) | 1.491  | 48 h | 0,93 |
+| vistas (TikTok) | 242  | 48 h | 0,96 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -184,7 +184,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 35,2 % | 46 h (provisional) | 0,54 |
 | segundos por vista (YouTube) | 11,5 s | 46 h (provisional) | 0,48 |
-| vistas (YouTube) | 1.114  | 48 h | 0,67 |
+| vistas (YouTube) | 1.114  | 48 h | 0,70 |
 | vistas (TikTok) | 5  | 48 h | 0,02 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
@@ -204,8 +204,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 47,7 % | 47 h (provisional) | 0,74 |
 | segundos por vista (YouTube) | 19,8 s | 47 h (provisional) | 0,83 |
-| vistas (YouTube) | 1.405  | 48 h | 0,84 |
-| vistas (TikTok) | 240  | 48 h | 0,88 |
+| vistas (YouTube) | 1.405  | 48 h | 0,88 |
+| vistas (TikTok) | 240  | 48 h | 0,95 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
 Fuera de norma: 13 palabras en pantalla en el fotograma 0 (norma: 5 o menos); primera frase de 11 palabras (norma: 9 como mucho).
@@ -224,8 +224,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 63,5 % | 48 h | 0,98 |
 | segundos por vista (YouTube) | 23,6 s | 48 h | 0,99 |
-| vistas (YouTube) | 2.194  | 48 h | 1,31 |
-| vistas (TikTok) | 275  | 48 h | 1,01 |
+| vistas (YouTube) | 2.194  | 48 h | 1,37 |
+| vistas (TikTok) | 275  | 48 h | 1,09 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -245,8 +245,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 29,4 s | 50 h | 1,24 |
 | tiempo medio (TikTok) | 22,4 s | 50 h | 1,56 |
 | lo ven entero (TikTok) | 21,6 % | 50 h | 1,66 |
-| vistas (YouTube) | 6.462  | 48 h | 3,87 |
-| vistas (TikTok) | 285  | 48 h | 1,05 |
+| vistas (YouTube) | 6.462  | 48 h | 4,03 |
+| vistas (TikTok) | 285  | 48 h | 1,13 |
 
 **Diagnóstico: Acierto: gancho y retención claramente por encima de lo normal del canal.**
 
@@ -275,8 +275,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 16,8 s | 71 h | 0,71 |
 | tiempo medio (TikTok) | 13,7 s | 26 h (provisional) | 0,95 |
 | lo ven entero (TikTok) | 16,1 % | 26 h (provisional) | 1,24 |
-| vistas (YouTube) | 1.220  | 48 h | 0,73 |
-| vistas (TikTok) | 409  | 48 h | 1,50 |
+| vistas (YouTube) | 1.220  | 48 h | 0,76 |
+| vistas (TikTok) | 409  | 48 h | 1,62 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
 Fuera de norma: primera frase de 18 palabras (norma: 9 como mucho).
@@ -303,8 +303,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 17,7 s | 71 h | 0,75 |
 | tiempo medio (TikTok) | 16,5 s | 26 h (provisional) | 1,15 |
 | lo ven entero (TikTok) | 13,0 % | 26 h (provisional) | 1,00 |
-| vistas (YouTube) | 1.428  | 48 h | 0,86 |
-| vistas (TikTok) | 426  | 48 h | 1,57 |
+| vistas (YouTube) | 1.428  | 48 h | 0,89 |
+| vistas (TikTok) | 426  | 48 h | 1,69 |
 
 **Diagnóstico: Fallo de ritmo: entran, pero se van a mitad.**
 
@@ -325,8 +325,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 26,5 s | 31 h (provisional) | 1,12 |
 | tiempo medio (TikTok) | 19,8 s | 33 h (provisional) | 1,37 |
 | lo ven entero (TikTok) | 21,7 % | 33 h (provisional) | 1,67 |
-| vistas (YouTube) | 11.122  | 48 h | 6,66 |
-| vistas (TikTok) | 618  | 48 h | 2,27 |
+| vistas (YouTube) | 11.122  | 48 h | 6,94 |
+| vistas (TikTok) | 618  | 48 h | 2,45 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -346,4 +346,4 @@ _Las frases se sitúan por estimación (±2 s)._
 
 ## Aún sin lecturas de 24 h
 
-pzAwPba_UOc, CcqDZeF_IjA, cA3b0FdYA8A, VIZRXKQ8eHQ, NcDWZOO-cEw, _8lkYb4lUG0, 3NbMXD2ksMI, MfV8ypLlIU0, 60lZvOqwFtw, F4_DBK1lB50, awYmnuBzhrQ, kHT4ncQZNQ4, _9znalXgInI, G_xEqU97krk, dMcGHyKbeaA, tp7XFLAIkS0, rEiiPtGXz84, 5pSKNws_e-s, cjSc0D_gOaI, dOdQj9QyoBI, 7709510485921582358, 7709974444936006934, 7710939317861944598, 7710939621420535062, 7711528083202886934, 7711684201434582294, 7711684498743708931, 7711684803371765014, 7711685171556273430, 7711685505779338519, 7711881249794706710, WpmGRnjy2CE, _DU6gOVopOM.
+WpmGRnjy2CE, _DU6gOVopOM, pzAwPba_UOc, CcqDZeF_IjA, cA3b0FdYA8A, VIZRXKQ8eHQ, NcDWZOO-cEw, _8lkYb4lUG0, 3NbMXD2ksMI, MfV8ypLlIU0, 60lZvOqwFtw, F4_DBK1lB50, awYmnuBzhrQ, kHT4ncQZNQ4, _9znalXgInI, G_xEqU97krk, dMcGHyKbeaA, tp7XFLAIkS0, rEiiPtGXz84, 5pSKNws_e-s, cjSc0D_gOaI, dOdQj9QyoBI, 0nGefmtqxcs, 7709510485921582358, 7709974444936006934, 7710939317861944598, 7710939621420535062, 7711528083202886934, 7711684201434582294, 7711684498743708931, 7711684803371765014, 7711685171556273430, 7711685505779338519, 7711881249794706710, 7711881802566208790, 7711882275591294230, 8ISC2-AoXSM, E1QFyVyJ7kU.
