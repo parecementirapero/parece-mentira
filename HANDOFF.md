@@ -4,6 +4,12 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-26 — Jorge (con el agente) — rama `main` — vídeo largo «El que copiaba» pausado
+**Hecho**: guion v3, voz en el Mac de Jorge (3 bloques, 285 s), arte nuevo en 3 generadores (fondos, gente, cosas) revisado con hojas de contacto. Decidido: largo 16:9 para YouTube, corto de 1 min vertical estilo B (focos y contadores) con la misma voz, música nueva de «emprender».
+**Pendiente / siguiente paso**: ver `lotes/largo-el-que-copiaba/estado.md` (música, montaje de los dos vídeos, calidad, entrega). Jorge pidió parar y seguir luego.
+
+---
+
 ## 2026-11-26 14:15 — Jorge (con el agente) — rama `main` — estilo del vídeo largo como estándar
 **Qué pasó**: Jorge: «quiero que a partir de ahora utilices siempre este estilo de dibujo» (el del vídeo largo, usado en el lote 2026-11-25-tarde).
 **Hecho**: `DECISIONS.md` (nueva decisión de estilo; la regla de Nico «sin personajes que reaccionen» queda matizada: personas sí, mascota no, confirmado por Jorge). `AGENTE.md` §5: cómo usar los módulos de `lotes/largo-cueva-500-dias/generadores/` y el lote 2026-11-25-tarde como modelo.
