@@ -10,3 +10,9 @@
 2. Montaje del largo (`generadores/gen.py` + `planos_*.py`, como la cueva: planos en coordenadas del vertical y `adaptar` a 16:9; anclas de suelo en el informe de fondos: aula 1420/870, colegio 1430/880, calle día 1440/880, café 1430/880, cocina 1440/880, habitación 1440/880, campo 1440/880, estudio 1400/860, ciudad 1390/830).
 3. Corto: mismo audio con `Video(..., omitir=…)` quitando las palabras (18,28),(35,150),(173,211),(223,243),(270,290),(311,328),(335,592),(604,705),(739,749) → ≈ 62 s. Estilo B.
 4. Render, `motor.calidad` sin ❌, portadas, entrega en el chat y en el Mac, correo, registro. Publicar solo con «ok».
+
+## v2 (2026-11-27 00:45): música nueva
+- Jorge no quería la música «emprende» (ni la prueba «ambicion»): «parece triste» con «cine»; aprobó «cine_epico» (Si m–Sol–Re–La, piano en golpes, metales, 808, batería a medio tiempo), hecha por código, sin ElevenLabs.
+- Solo cambia el audio (vídeo copiado de la v1): largo v2 SHA 16beace90cf2, corto v2 SHA 28e46ca82205; −19,2/−19,3 LUFS; calidad igual (55 y 72, sin ❌).
+- MP4 v2 y SRT copiados al Mac (`Documents/Parece Mentira/lotes/largo-el-que-copiaba/`).
+- Pendiente: portadas, metadatos y «ok» para publicar.

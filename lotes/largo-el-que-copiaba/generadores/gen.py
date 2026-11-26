@@ -40,7 +40,7 @@ plano = registrar(v)
 if CORTO:
     importlib.import_module("planos_corto").planos(v, plano)
     v.construir("el-que-copiaba-corto-9x16", version=1, bucle=0.3,
-                musica={"generar": "emprende", "semilla": 31, "db": -12},
+                musica={"generar": "cine_epico", "semilla": 31, "db": -12},
                 claves=["copiar", "rico", "Marta", "Lucas", "cafetería", "hamburguesería", "cola", "cinco", "dos", "locales",
                         "mejorar", "sola", "cosa", "primero", "mejor"],
                 ep_extra={"sfx_bajo_voz": True})
@@ -48,7 +48,7 @@ else:
     for n in PARTES:
         importlib.import_module(f"planos_p{n}").planos(v, plano)
     v.construir("el-que-copiaba" + ("-16x9" if HORIZONTAL else "-9x16"), version=1, bucle=0.0,
-                musica={"generar": "emprende", "semilla": 12, "db": -14},
+                musica={"generar": "cine_epico", "semilla": 4, "db": -14},
                 claves=["copiar", "copiaba", "rico", "trampa", "Marta", "Lucas", "colegio", "timbre", "cafetería", "tiempo",
                         "hamburguesería", "cola", "veinte", "cinco", "dos", "locales", "funciona", "golpes", "Google",
                         "Facebook", "Instagram", "Snapchat", "mejor", "copias", "mejoras", "rápido", "barato", "cerca",

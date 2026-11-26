@@ -9,7 +9,7 @@
 - **imagen_real**: detalle_medio=6.5 · detalle_min=2.7 · planos_pobres=1 · planos_calcados=2 · rachas_mismo_encuadre=1 · primer_fotograma_detalle=7.4 · rotulos_poco_contraste=0 · movimiento_primer_segundo=16.02
 - **sonido**: efectos=47 · por_minuto=47 · tipos=9 · whoosh_min=1.0 · max_en_1s=3 · musica_db=-12
 - **movimiento**: quieto_pct=1.7 · movimiento_medio=6.29 · bucle_diferencia=17.0
-- **mezcla**: voz_rms=-21.2 · musica_bajo_voz_db=-7.9 · sfx_pico_frente_a_voz_db=-4.3 · sfx_rms_bajo_voz_db=-9.2 · efectos_que_tapan_voz=10
+- **mezcla**: voz_rms=-21.2 · musica_bajo_voz_db=-5.1 · sfx_pico_frente_a_voz_db=-4.3 · sfx_rms_bajo_voz_db=-9.2 · efectos_que_tapan_voz=10
 
 - ⚠ Ritmo poco variado (variación 0.45; mejor ≥ 0,45).
 - ⚠ Menos de 3 micro planos (< 0,7 s): faltan golpes rápidos de detalle.
