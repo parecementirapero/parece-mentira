@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-26 14:15 — Jorge (con el agente) — rama `main` — estilo del vídeo largo como estándar
+**Qué pasó**: Jorge: «quiero que a partir de ahora utilices siempre este estilo de dibujo» (el del vídeo largo, usado en el lote 2026-11-25-tarde).
+**Hecho**: `DECISIONS.md` (nueva decisión de estilo; la regla de Nico «sin personajes que reaccionen» queda matizada: personas sí, mascota no, confirmado por Jorge). `AGENTE.md` §5: cómo usar los módulos de `lotes/largo-cueva-500-dias/generadores/` y el lote 2026-11-25-tarde como modelo.
+**Pendiente**: que lo vea Nico (cambia una decisión suya y el estilo v4 que aprobaron ambos).
+
+---
+
 ## 2026-11-26 14:05 — Jorge (con el agente) — rama `main` — lote 2026-11-25-tarde publicado
 **Qué pasó**: Jorge: «sube uno ahora y los otros con 2 horas de diferencia cada uno».
 **Hecho**: YouTube por API desde el Mac con portada propia (01 público, 02 programado 16:00, 03 18:00). TikTok en el navegador integrado con texto y portada (01 ya, 02 16:00, 03 18:00). Comentario del 01 fijado en YouTube; en TikTok escrito (la web no deja fijar). `publicado.json`, `etiquetas.json` y fichas con ids.
