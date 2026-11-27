@@ -3,6 +3,8 @@
 Regla: no repetir temas de «Usados». Las continuaciones valen si aportan información nueva y se entienden solas.
 
 ## Candidatos
+- Cataratas del Iguazú: más saltos que el Niágara (tendencia AR 2026-11-27; sin verificar)
+- Por qué la goma de los neumáticos se endurece con el frío (tendencia ES 2026-11-27; sin verificar)
 - Nadie sonreía en las fotos antiguas: exposiciones largas, soportes para la cabeza y costumbre (histórico; sin verificar)
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
 _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)_
@@ -20,6 +22,9 @@ _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)
 - ~~La miel encontrada en tumbas egipcias seguía siendo comestible~~ — **descartado 2026-11-17 (Agente 08:00, Nico): es un mito sin fuente primaria** (ver `lotes/2026-11-17-manana/guiones.md`)
 
 ## Usados
+- Anochece dos veces en el Burj Khalifa (828 m; la Tierra curva aleja el horizonte; fatwa de Dubái en Ramadán: plantas 80–150 +2 min, por encima +3, y al alba al revés; ascensor a 10 m/s, planta 124 en ≈1 min; en teoría ves ponerse el sol dos veces) — lote 2026-11-27-tarde 01 (tendencia «burj khalifa»)
+- La capa de ozono mide tres milímetros (300 unidades Dobson = 3 mm, dos monedas; frena la mayor parte del ultravioleta dañino; agujero sobre la Antártida en los años ochenta; CFC de neveras, aire acondicionado y espráis; el cloro sale intacto; Montreal 1987, ratificado por todos los países de la ONU; 2026 grande por el vórtice polar; curado hacia 2070) — lote 2026-11-27-tarde 02 (tendencia «agujero de la capa de ozono»)
+- La piel de gallina (músculo erector por pelo; vestigio de antepasados peludos: aire caliente y parecer más grande; emociones y sustos por el sistema simpático; Harvard 2020 en ratones: nervio y músculo despiertan las células madre del pelo y con frío crece pelo nuevo) — lote 2026-11-27-tarde 03
 - Posponer la alarma (Sci Rep 2025: ≈3 millones de noches, más de la mitad acaban con posponer, 11 min de media; inercia del sueño de 15 min a más de 1 h; sueño ligero entre alarmas; Estocolmo 2023: 30 min de alarmas sin daño y algo mejor al despertar en quienes posponen siempre; alarma a la hora real y lejos de la cama) — lote 2026-11-26-tarde 01
 - La cara oculta de la Luna (rotación síncrona ≈27 días, frenada por las mareas; no es oscura; Luna 3 1959, Apolo 8 1968, Chang'e 4 2019; casi sin mares y llena de cráteres) — lote 2026-11-26-tarde 02
 - El Black Friday lo bautizó la policía de Filadelfia (día después de Acción de Gracias, partido Ejército–Marina, turnos sin librar; «Big Friday» 1961; lo de los números negros, de los años 80; primer viernes negro 1869, el oro en Nueva York) — lote 2026-11-26-tarde 03 (tendencia «black friday»)
