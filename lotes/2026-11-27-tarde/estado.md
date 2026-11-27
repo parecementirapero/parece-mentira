@@ -10,7 +10,19 @@ _Agente 20:00 (Jorge). Arranque 2026-11-27 19:53 (Madrid). Chat: https://claude.
 - [x] Voz con la API desde el Mac (`voz.py`, sin contexto): 01 58,6 s · 02 58,3 s · 03 52,3 s. MP3 y alineación en `Documents/Parece Mentira/lotes/2026-11-27-tarde/`.
 - [x] Arte nuevo `generadores/ilus_1127t.py` (sobre los módulos del vídeo largo y `ilus_1126t`): rascacielos de escalones (de día y anocheciendo), sol de atardecer, ciudad del desierto (dos luces), cielo del desierto (atardecer y noche), cabina de ascensor, arco de la Tierra, dátiles y agua; anillo de ozono (entero y con agujero), rayo ultravioleta, dos monedas, nevera, espray, aire acondicionado, moléculas de ozono y CFC, átomo de cloro, polo sur, agujero, vórtice, borde de la atmósfera; antebrazo liso y de gallina (con mano), corte de piel en tres estados, gato tranquilo y erizado, ratón, células madre, auriculares, oyente, investigadora. Hojas de contacto revisadas.
 - [x] Generadores `gen_01..03.py` (30, 29 y 27 planos atados a palabras), hojas de fotogramas con la voz real revisadas. Sin ⚠ de lectura.
-- [ ] Render, `motor.calidad`, portadas, fichas, entrega.
+- [x] Render en la nube (1080×1920, 30 fps, H.264 + AAC 48 kHz estéreo): 01 59,1 s · 02 58,8 s · 03 52,8 s. `motor.calidad` sin ❌ (64, 63, 70/100; `calidad-0N.md`). Arreglados: «¡SUSTO!» con poco contraste (03), micro «3 MM» que salía diminuto (02), «+2 MIN» (01).
+- [x] Portadas (`motor.portadas`, elegidas a ojo, en `metadatos.json`).
+- [x] Fichas de variables (`estadisticas/fichas.json`, comprobadas).
+- [x] Vídeos y portadas enviados al chat. Correo de aviso enviado (id 1a21e77f9d68c858).
+- [ ] **Copia de MP4, SRT, manifiestos y portadas a `Documents/Parece Mentira/lotes/2026-11-27-tarde/` en el Mac**: el Mac estaba fuera del puente al terminar. Hacerlo al dar el «ok» (están en el chat: file_uuid 01 a8c427ce-0d31-4329-92cb-9dfc334f4475 · 02 f6156625-4c18-47cd-ab9b-20ec008a506c · 03 fb726403-85b0-4cb6-b9de-60e52207d9bf; portadas 82e2f296-6a06-408d-aca2-8dcf51b107d1, ee9055a7-d65e-472a-a69c-d085d574ab28, a888c8b4-0c2c-4938-a147-16821c07b3ec).
+
+## Estado: **en revisión** (v1) — esperando «ok» en el chat
+
+| # | Archivo | Duración | SHA-256 |
+|---|---|---|---|
+| 01 | `01-anochece-dos-veces_v1.mp4` | 59,1 s | cfb47a865e141c974be5a9243eacc5b137037b0378d5494d200450aa290aef6d |
+| 02 | `02-capa-de-ozono_v1.mp4` | 58,8 s | 06d6bc4f53adf04585a91cb93a0f6a374a870cacccd4aa536547e210bed1c75e |
+| 03 | `03-piel-de-gallina_v1.mp4` | 52,8 s | eb991b7e1d09fa19697e48e44180c019be4c80e0cef494bf9c43eb446b2df901 |
 
 ## Decisiones según las estadísticas
 - **[firme] primer segundo**: los tres abren con un objeto grande ya en marcha y una frase de 3–5 palabras.
@@ -33,7 +45,7 @@ Archivo: `lotes/tendencias/2026-11-27.md`. 01 ← «burj khalifa» (MX, CO); 02 
 - 01 y 03: `motor.guion` avisa de un tramo de ≈14 s sin pregunta ni cifra; cada frase tiene su acción en pantalla (horizonte que se aleja, sol que baja; gato que se eriza, auriculares).
 - 02: una frase de más de 22 palabras (la del cloro): es una cadena de tres acciones, cada una con su plano.
 - 01: 148 palabras (por debajo de 150) siguiendo la recomendación firme de guiones cortos.
-- Planos: 27–30 por vídeo (DENSO pide 35–40). El turno se ha comido mucho tiempo con el Mac cayéndose del puente; se priorizó que cada plano se entienda.
+- Planos: 27–30 por vídeo (DENSO pide 35–40) y ⚠ de `motor.calidad` por densidad (4–5 elementos por plano), pocos micro planos y 4 fondos por vídeo. Se dejan así: el Mac se cayó del puente varias veces y se priorizó tener la voz y entregar; cada plano tiene su acción y se lee.
 
 ## Datos con cuidado
 - 01: las fuentes no dan el año de la fatwa (Khaleej Times la publica en agosto de 2011): el guion no dice año. Los tramos varían un poco entre fuentes (80–150 / 151–160): se dice «de la ochenta a la ciento cincuenta, dos; por encima, tres». Lo de verlo dos veces es una consecuencia («en teoría podrías»), no algo que digan las fuentes: con 2–3 min de margen y 1 min de ascensor cuadra.

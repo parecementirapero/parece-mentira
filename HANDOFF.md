@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-27 20:35 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-27-tarde en revisión
+**Hecho**: reserva; tendencias (Google Trends en el navegador integrado; `lotes/tendencias/2026-11-27.md`); 3 temas verificados (2+ fuentes); guiones (`motor.guion` sin ❌); voz por API desde el Mac (2.567 caracteres; quedan ≈7.700); arte nuevo `ilus_1127t.py` y `gen_01..03.py`; render, `motor.calidad` sin ❌ (64/63/70), portadas, fichas; vídeos y portadas al chat; correo (id 1a21e77f9d68c858).
+**Bloqueos**: el Mac de Jorge entra y sale del puente (≈20:05–20:30); la voz se generó en una de sus ventanas. Los MP4 no se pudieron copiar a la carpeta local: hacerlo al dar el «ok» (file_uuid en `lotes/2026-11-27-tarde/estado.md`). Sin datos de Studio (§1.8) ni comentarios (§8b).
+**Decisión aplicada**: el prompt de la tarea dice «estilo v4», DECISIONS 2026-11-26 manda el del vídeo largo: se siguió DECISIONS (avisado en el correo).
+**Pruebas**: `motor.guion` ×3, hojas de fotogramas mirados (con voz real), ffprobe, `motor.calidad` ×3, `ficha comprobar`. No se tocó `motor/`.
+**Siguiente paso**: «ok» (o cambios) en https://claude.ai/code/session_019BG1dK7GpyrYsYXE518JkF → copiar MP4 al Mac → publicar según AGENTE §8.
+
+---
+
 ## 2026-11-27 01:10 — Jorge (con el agente) — rama `main` — «El que copiaba» publicado
 **Hecho**: música cambiada a «cine_epico» (código, sin ElevenLabs; Jorge rechazó «emprende», «ambicion» y «cine»), portadas (16:9 compuesta, corto con motor.portadas), metadatos, YouTube largo olrobKKTa44 público con portada y comentario fijado; TikTok corto 7712633311755128086 con portada y comentario. Short de YouTube borrado a petición de Jorge (no quiere el corto en Shorts).
 **Nota**: Eleven Music gasta de los mismos caracteres que la voz (900/min) y la clave API no tiene permiso de música: no se usó.

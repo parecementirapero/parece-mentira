@@ -130,7 +130,7 @@ def _(d):
 @v.plano(92, "o con un susto: cara de sorpresa")
 def _(d):
     return P(CASA, [BG("bg_oficina_gris"), OB("cara_chica_sorpresa", 540, 1200, 900, keys=[{"t": 0, "escala": 1.08}, {"t": 0.2, "escala": 1.0, "ease": "golpe"}])],
-             cam(1.0, 1.05, (540, 1150)), "corte", hud=[BANDA(), amarillo(0.05, d - 0.05, "¡SUSTO!", y=760, tam=130, color=AMBAR)], sfx=[(0.05, "impacto", -14)])
+             cam(1.0, 1.05, (540, 1150)), "corte", hud=[BANDA(), cap(0.05, d - 0.05, "¡SUSTO!", "#ffffff", "#c0392be6", 130, y=760)], sfx=[(0.05, "impacto", -14)])
 
 
 @v.plano(96, "lo manda el mismo sistema de alerta: el cerebro con un nervio amarillo hasta la piel")

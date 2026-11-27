@@ -219,7 +219,10 @@ def micro(fondo, els, txt=None, col="#ffffff", cap_f="#c0392be6", sfx="pop"):
     return fn
 
 
-v.plano(3, "micro: tres milímetros")(micro(ESP, lambda d: [estrellas(60, 2), OB("aura_ozono", 540, 1000, 1100)], "3 MM", "#141414", "#7df9ffe6", "impacto"))
+@v.plano(3, "micro: tres milímetros")
+def _(d):
+    return P(ESP, [estrellas(60, 2), OB("aura_ozono", 540, 1000, 1100)], cam(1.15, 1.3, (540, 1000)), "corte",
+             hud=[amarillo(0.0, d - 0.02, "3 MM", y=1000, tam=200, color=CIAN)], sfx=[(0.01, "impacto", -18)])
 v.plano(31, "micro: dos monedas")(micro(CASA, lambda d: [BG("bg_oficina_gris"), OB("dos_monedas", 540, 1050, 1000)], sfx="ding"))
 v.plano(42, "micro: el rayo violeta")(micro(ESP, lambda d: [estrellas(60, 19), OB("rayo_uv", 540, 1000, 260)], sfx="brillo"))
 v.plano(115, "micro: ONU")(micro(ESP, lambda d: [estrellas(60, 20), OB("foto_mundo", 540, 1050, 900)], "TODOS", "#141414", "#ffd23fe6", "impacto"))

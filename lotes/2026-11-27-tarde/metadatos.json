@@ -35,14 +35,23 @@
   ],
   "comentario": "¿Subirías corriendo para ver el atardecer dos veces? 🌇 Te leo 👇",
   "etiquetas": {
-   "tema": "Curiosidad",
+   "tema": "Ciencia",
    "gancho": "paradoja",
    "estructura": "comparación",
    "experimento": "gancho de paradoja",
    "alcance": "universal",
-   "tendencia": "burj khalifa"
+   "tendencia": "burj khalifa",
+   "portada": "dato"
   },
-  "locucion": "Aquí anochece dos veces. Esto es el Burj Khalifa, en Dubái: ochocientos veintiocho metros, el edificio más alto del mundo. ¿Y sabes qué pasa arriba? Que el atardecer dura más. La Tierra es curva: cuanto más alto subes, más lejos queda el horizonte, y el sol tarda más en esconderse. Abajo ya es de noche, pero en las plantas altas el sol sigue brillando. Tanto, que en Ramadán, cuando el ayuno se rompe al ponerse el sol, las autoridades religiosas de Dubái dieron una regla aparte. De la planta ochenta a la ciento cincuenta, dos minutos más. Por encima, tres. Y al amanecer, al revés: arriba el sol sale antes. Ahora, el truco. El ascensor sube a diez metros por segundo: planta ciento veinticuatro en un minuto. Así que, en teoría, podrías ver ponerse el sol en la calle, subir corriendo y verlo ponerse otra vez. ¿Lo intentarías?"
+  "locucion": "Aquí anochece dos veces. Esto es el Burj Khalifa, en Dubái: ochocientos veintiocho metros, el edificio más alto del mundo. ¿Y sabes qué pasa arriba? Que el atardecer dura más. La Tierra es curva: cuanto más alto subes, más lejos queda el horizonte, y el sol tarda más en esconderse. Abajo ya es de noche, pero en las plantas altas el sol sigue brillando. Tanto, que en Ramadán, cuando el ayuno se rompe al ponerse el sol, las autoridades religiosas de Dubái dieron una regla aparte. De la planta ochenta a la ciento cincuenta, dos minutos más. Por encima, tres. Y al amanecer, al revés: arriba el sol sale antes. Ahora, el truco. El ascensor sube a diez metros por segundo: planta ciento veinticuatro en un minuto. Así que, en teoría, podrías ver ponerse el sol en la calle, subir corriendo y verlo ponerse otra vez. ¿Lo intentarías?",
+  "portada": {
+   "texto": "ANOCHECE DOS VECES",
+   "clave": "DOS VECES",
+   "archivo": "01-portadas/portada.jpg",
+   "t": 44.25,
+   "diseno": "dato",
+   "motivo": "la torre y el sol poniente se reconocen en la cuadrícula; texto grande arriba que no tapa el sol"
+  }
  },
  "02": {
   "archivo": "02-capa-de-ozono_v1.mp4",
@@ -89,9 +98,18 @@
    "estructura": "reconstrucción",
    "experimento": "no",
    "alcance": "universal",
-   "tendencia": "agujero de la capa de ozono"
+   "tendencia": "agujero de la capa de ozono",
+   "portada": "arriba"
   },
-  "locucion": "Este escudo mide tres milímetros. Es la capa de ozono. Flota a más de diez kilómetros de altura. Pero si la aplastaras a la presión del suelo, sería tan fina como dos monedas apiladas. Y esos milímetros frenan casi toda la luz ultravioleta más dañina del sol. En los años ochenta apareció un agujero sobre la Antártida. ¿El culpable? Gases de neveras, aires acondicionados y espráis. Subían, la luz del sol les arrancaba el cloro, y cada átomo de cloro rompía ozono y salía intacto, listo para romper más. En mil novecientos ochenta y siete, el mundo firmó el Protocolo de Montreal y prohibió esos gases. Y pasó algo único: todos los países de la ONU lo ratificaron. Este año el agujero ha sido grande, por un frío polar muy fuerte. Pero con el cloro del año dos mil, habría sido mayor. Hacia dos mil setenta, estará curado. ¿Sabías que lo estábamos arreglando?"
+  "locucion": "Este escudo mide tres milímetros. Es la capa de ozono. Flota a más de diez kilómetros de altura. Pero si la aplastaras a la presión del suelo, sería tan fina como dos monedas apiladas. Y esos milímetros frenan casi toda la luz ultravioleta más dañina del sol. En los años ochenta apareció un agujero sobre la Antártida. ¿El culpable? Gases de neveras, aires acondicionados y espráis. Subían, la luz del sol les arrancaba el cloro, y cada átomo de cloro rompía ozono y salía intacto, listo para romper más. En mil novecientos ochenta y siete, el mundo firmó el Protocolo de Montreal y prohibió esos gases. Y pasó algo único: todos los países de la ONU lo ratificaron. Este año el agujero ha sido grande, por un frío polar muy fuerte. Pero con el cloro del año dos mil, habría sido mayor. Hacia dos mil setenta, estará curado. ¿Sabías que lo estábamos arreglando?",
+  "portada": {
+   "texto": "MIDE 3 MILÍMETROS",
+   "clave": "3 MILÍMETROS",
+   "archivo": "02-portadas/portada.jpg",
+   "t": 0.75,
+   "diseno": "arriba",
+   "motivo": "la Tierra con su anillo ocupa la portada, igual que el primer segundo; texto arriba sin tapar el planeta"
+  }
  },
  "03": {
   "archivo": "03-piel-de-gallina_v1.mp4",
@@ -130,8 +148,17 @@
    "estructura": "misterio por pistas",
    "experimento": "no",
    "alcance": "universal",
-   "tendencia": "no"
+   "tendencia": "no",
+   "portada": "arriba"
   },
-  "locucion": "Tu piel cree tener pelo. Mira tu brazo cuando hace frío: piel de gallina. Cada bultito es un músculo diminuto que tira de un pelo y lo pone de punta. A nuestros antepasados, cubiertos de pelo, eso les servía. El pelo erizado atrapa una capa de aire caliente, como un abrigo. Y ante un peligro, te hace parecer más grande: por eso un animal asustado se eriza entero. Nosotros perdimos casi todo el pelo, pero el reflejo se quedó. Por eso se te eriza la piel con una canción que te emociona, o con un susto: lo manda el mismo sistema de alerta. ¿Ya no sirve para nada? En dos mil veinte, en Harvard, vieron en ratones que ese nervio y ese músculo también despiertan las células madre del pelo. Con días de frío, crece pelo nuevo. La piel de gallina también avisa: hace falta abrigo. ¿A ti con qué se te pone?"
+  "locucion": "Tu piel cree tener pelo. Mira tu brazo cuando hace frío: piel de gallina. Cada bultito es un músculo diminuto que tira de un pelo y lo pone de punta. A nuestros antepasados, cubiertos de pelo, eso les servía. El pelo erizado atrapa una capa de aire caliente, como un abrigo. Y ante un peligro, te hace parecer más grande: por eso un animal asustado se eriza entero. Nosotros perdimos casi todo el pelo, pero el reflejo se quedó. Por eso se te eriza la piel con una canción que te emociona, o con un susto: lo manda el mismo sistema de alerta. ¿Ya no sirve para nada? En dos mil veinte, en Harvard, vieron en ratones que ese nervio y ese músculo también despiertan las células madre del pelo. Con días de frío, crece pelo nuevo. La piel de gallina también avisa: hace falta abrigo. ¿A ti con qué se te pone?",
+  "portada": {
+   "texto": "TU PIEL CREE TENER PELO",
+   "clave": "PELO",
+   "archivo": "03-portadas/portada.jpg",
+   "t": 5.75,
+   "diseno": "arriba",
+   "motivo": "el corte con el pelo de punta se ve limpio y grande; texto arriba legible y sin subtítulos encima"
+  }
  }
 }
