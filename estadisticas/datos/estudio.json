@@ -1,9 +1,9 @@
 {
- "generado": "2026-11-26T10:07+01:00",
+ "generado": "2026-11-27T09:31+01:00",
  "muestra": {
-  "videos": 55,
-  "con_ficha": 36,
-  "fichas_previas": 26,
+  "videos": 60,
+  "con_ficha": 39,
+  "fichas_previas": 29,
   "con_gancho_yt": 17,
   "definitivas_yt": 7,
   "con_retencion_tt": 7
@@ -37,9 +37,9 @@
   "yt_seg_por_vista": 23.75,
   "tt_medio_s": 14.37,
   "tt_completo": 13.0,
-  "yt_pct_visto": 56.3,
-  "yt_vistas": 1601.5,
-  "tt_vistas": 252.0
+  "yt_pct_visto": 55.8,
+  "yt_vistas": 1514.5,
+  "tt_vistas": 251.0
  },
  "filas": [
   {
@@ -125,21 +125,21 @@
      "edad_h": 63.7,
      "provisional": false,
      "ultima": 92.6,
-     "ultima_edad_h": 255.9
+     "ultima_edad_h": 279.9
     },
     "yt_vistas": {
      "valor": 11122,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 13682,
-     "ultima_edad_h": 255.9
+     "ultima": 13684,
+     "ultima_edad_h": 279.9
     },
     "tt_vistas": {
      "valor": 618,
      "edad_h": 48,
      "provisional": false,
      "ultima": 625,
-     "ultima_edad_h": 255.8
+     "ultima_edad_h": 279.7
     }
    },
    "publicado": "2026-11-15T17:38+01:00"
@@ -228,21 +228,21 @@
      "edad_h": 57.6,
      "provisional": false,
      "ultima": 54.2,
-     "ultima_edad_h": 249.8
+     "ultima_edad_h": 273.7
     },
     "yt_vistas": {
      "valor": 1428,
      "edad_h": 48,
      "provisional": false,
      "ultima": 1434,
-     "ultima_edad_h": 249.8
+     "ultima_edad_h": 273.7
     },
     "tt_vistas": {
      "valor": 426,
      "edad_h": 48,
      "provisional": false,
      "ultima": 442,
-     "ultima_edad_h": 249.5
+     "ultima_edad_h": 273.5
     }
    },
    "publicado": "2026-11-15T23:46+01:00"
@@ -330,21 +330,21 @@
      "edad_h": 57.5,
      "provisional": false,
      "ultima": 61.1,
-     "ultima_edad_h": 249.7
+     "ultima_edad_h": 273.7
     },
     "yt_vistas": {
      "valor": 1220,
      "edad_h": 48,
      "provisional": false,
      "ultima": 1292,
-     "ultima_edad_h": 249.7
+     "ultima_edad_h": 273.7
     },
     "tt_vistas": {
      "valor": 409,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 422,
-     "ultima_edad_h": 249.5
+     "ultima": 423,
+     "ultima_edad_h": 273.5
     }
    },
    "publicado": "2026-11-15T23:49+01:00"
@@ -432,21 +432,21 @@
      "edad_h": 60.6,
      "provisional": false,
      "ultima": 76.7,
-     "ultima_edad_h": 228.7
+     "ultima_edad_h": 252.7
     },
     "yt_vistas": {
      "valor": 6462,
      "edad_h": 48,
      "provisional": false,
      "ultima": 7070,
-     "ultima_edad_h": 228.7
+     "ultima_edad_h": 252.7
     },
     "tt_vistas": {
      "valor": 285,
      "edad_h": 48,
      "provisional": false,
      "ultima": 293,
-     "ultima_edad_h": 228.6
+     "ultima_edad_h": 252.5
     }
    },
    "publicado": "2026-11-16T20:51+01:00"
@@ -534,21 +534,21 @@
      "edad_h": 59.2,
      "provisional": false,
      "ultima": 65.5,
-     "ultima_edad_h": 227.3
+     "ultima_edad_h": 251.3
     },
     "yt_vistas": {
      "valor": 2194,
      "edad_h": 48,
      "provisional": false,
      "ultima": 2291,
-     "ultima_edad_h": 227.3
+     "ultima_edad_h": 251.3
     },
     "tt_vistas": {
      "valor": 275,
      "edad_h": 48,
      "provisional": false,
      "ultima": 284,
-     "ultima_edad_h": 227.2
+     "ultima_edad_h": 251.2
     }
    },
    "publicado": "2026-11-16T22:11+01:00"
@@ -636,21 +636,21 @@
      "edad_h": 58.2,
      "provisional": false,
      "ultima": 59.4,
-     "ultima_edad_h": 226.3
+     "ultima_edad_h": 250.3
     },
     "yt_vistas": {
      "valor": 1405,
      "edad_h": 48,
      "provisional": false,
      "ultima": 1496,
-     "ultima_edad_h": 226.3
+     "ultima_edad_h": 250.3
     },
     "tt_vistas": {
      "valor": 240,
      "edad_h": 48,
      "provisional": false,
      "ultima": 242,
-     "ultima_edad_h": 227.2
+     "ultima_edad_h": 251.2
     }
    },
    "publicado": "2026-11-16T23:15+01:00"
@@ -738,21 +738,21 @@
      "edad_h": 57.2,
      "provisional": false,
      "ultima": 44.0,
-     "ultima_edad_h": 225.3
+     "ultima_edad_h": 249.3
     },
     "yt_vistas": {
      "valor": 1114,
      "edad_h": 48,
      "provisional": false,
      "ultima": 1203,
-     "ultima_edad_h": 225.3
+     "ultima_edad_h": 249.3
     },
     "tt_vistas": {
      "valor": 5,
      "edad_h": 48,
      "provisional": false,
      "ultima": 5,
-     "ultima_edad_h": 227.2
+     "ultima_edad_h": 251.2
     }
    },
    "publicado": "2026-11-17T00:15+01:00"
@@ -844,21 +844,21 @@
      "edad_h": null,
      "provisional": false,
      "ultima": 65.2,
-     "ultima_edad_h": 216.5
+     "ultima_edad_h": 240.4
     },
     "yt_vistas": {
      "valor": 1491,
      "edad_h": 48,
      "provisional": false,
      "ultima": 1588,
-     "ultima_edad_h": 216.5
+     "ultima_edad_h": 240.4
     },
     "tt_vistas": {
      "valor": 242,
      "edad_h": 48,
      "provisional": false,
      "ultima": 245,
-     "ultima_edad_h": 214.2
+     "ultima_edad_h": 238.1
     }
    },
    "publicado": "2026-11-17T09:04+01:00"
@@ -950,21 +950,21 @@
      "edad_h": 71.3,
      "provisional": false,
      "ultima": 70.7,
-     "ultima_edad_h": 215.4
+     "ultima_edad_h": 239.4
     },
     "yt_vistas": {
      "valor": 2295,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 2305,
-     "ultima_edad_h": 215.4
+     "ultima": 2306,
+     "ultima_edad_h": 239.4
     },
     "tt_vistas": {
      "valor": 232,
      "edad_h": 48,
      "provisional": false,
      "ultima": 233,
-     "ultima_edad_h": 214.1
+     "ultima_edad_h": 238.1
     }
    },
    "publicado": "2026-11-17T10:05+01:00"
@@ -1056,21 +1056,21 @@
      "edad_h": 70.3,
      "provisional": false,
      "ultima": 62.6,
-     "ultima_edad_h": 214.4
+     "ultima_edad_h": 238.4
     },
     "yt_vistas": {
      "valor": 3224,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 3361,
-     "ultima_edad_h": 214.4
+     "ultima": 3362,
+     "ultima_edad_h": 238.4
     },
     "tt_vistas": {
      "valor": 58,
      "edad_h": 48,
      "provisional": false,
      "ultima": 59,
-     "ultima_edad_h": 214.1
+     "ultima_edad_h": 238.1
     }
    },
    "publicado": "2026-11-17T11:05+01:00"
@@ -1260,21 +1260,21 @@
      "edad_h": 58.3,
      "provisional": false,
      "ultima": 50.4,
-     "ultima_edad_h": 202.5
+     "ultima_edad_h": 226.5
     },
     "yt_vistas": {
      "valor": 1813,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 1905,
-     "ultima_edad_h": 202.5
+     "ultima": 1906,
+     "ultima_edad_h": 226.5
     },
     "tt_vistas": {
      "valor": 455,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 457,
-     "ultima_edad_h": 186.6
+     "ultima": 458,
+     "ultima_edad_h": 210.6
     }
    },
    "publicado": "2026-11-17T23:00+01:00"
@@ -1363,21 +1363,21 @@
      "edad_h": 48.6,
      "provisional": false,
      "ultima": 61.5,
-     "ultima_edad_h": 192.8
+     "ultima_edad_h": 216.8
     },
     "yt_vistas": {
      "valor": 906,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 994,
-     "ultima_edad_h": 192.8
+     "ultima": 995,
+     "ultima_edad_h": 216.8
     },
     "tt_vistas": {
      "valor": 247,
      "edad_h": 48,
      "provisional": false,
      "ultima": 248,
-     "ultima_edad_h": 184.3
+     "ultima_edad_h": 208.3
     }
    },
    "publicado": "2026-11-18T08:43+01:00"
@@ -1465,22 +1465,22 @@
      "valor": 41.8,
      "edad_h": 71.3,
      "provisional": false,
-     "ultima": 37.6,
-     "ultima_edad_h": 191.7
+     "ultima": 34.3,
+     "ultima_edad_h": 215.7
     },
     "yt_vistas": {
      "valor": 10,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 10,
-     "ultima_edad_h": 191.7
+     "ultima": 11,
+     "ultima_edad_h": 215.7
     },
     "tt_vistas": {
      "valor": 244,
      "edad_h": 48,
      "provisional": false,
      "ultima": 246,
-     "ultima_edad_h": 184.2
+     "ultima_edad_h": 208.2
     }
    },
    "publicado": "2026-11-18T09:50+01:00"
@@ -1569,21 +1569,21 @@
      "edad_h": 70.3,
      "provisional": false,
      "ultima": 59.5,
-     "ultima_edad_h": 190.7
+     "ultima_edad_h": 214.7
     },
     "yt_vistas": {
      "valor": 15,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 17,
-     "ultima_edad_h": 190.7
+     "ultima": 21,
+     "ultima_edad_h": 214.7
     },
     "tt_vistas": {
      "valor": 218,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 224,
-     "ultima_edad_h": 184.2
+     "ultima": 225,
+     "ultima_edad_h": 208.2
     }
    },
    "publicado": "2026-11-18T10:50+01:00"
@@ -1638,21 +1638,21 @@
      "edad_h": 66.4,
      "provisional": false,
      "ultima": 48.5,
-     "ultima_edad_h": 186.8
+     "ultima_edad_h": 210.7
     },
     "yt_vistas": {
      "valor": 1319,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 1319,
-     "ultima_edad_h": 186.8
+     "ultima": 1321,
+     "ultima_edad_h": 210.7
     },
     "tt_vistas": {
      "valor": 524,
      "edad_h": 48,
      "provisional": false,
      "ultima": 534,
-     "ultima_edad_h": 186.6
+     "ultima_edad_h": 210.5
     }
    },
    "publicado": "2026-11-18T14:47+01:00"
@@ -1707,14 +1707,14 @@
      "edad_h": 65.4,
      "provisional": false,
      "ultima": 75.6,
-     "ultima_edad_h": 185.7
+     "ultima_edad_h": 209.7
     },
     "yt_vistas": {
      "valor": 732,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 794,
-     "ultima_edad_h": 185.7
+     "ultima": 795,
+     "ultima_edad_h": 209.7
     },
     "tt_vistas": {
      "valor": null,
@@ -1810,21 +1810,21 @@
      "edad_h": 56.7,
      "provisional": false,
      "ultima": 50.5,
-     "ultima_edad_h": 177.1
+     "ultima_edad_h": 201.1
     },
     "yt_vistas": {
      "valor": 1146,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 1284,
-     "ultima_edad_h": 177.1
+     "ultima": 1285,
+     "ultima_edad_h": 201.1
     },
     "tt_vistas": {
      "valor": 5,
      "edad_h": 48,
      "provisional": false,
      "ultima": 6,
-     "ultima_edad_h": 176.8
+     "ultima_edad_h": 200.8
     }
    },
    "publicado": "2026-11-19T00:26+01:00"
@@ -1879,21 +1879,21 @@
      "edad_h": 60.8,
      "provisional": false,
      "ultima": 64.6,
-     "ultima_edad_h": 157.2
+     "ultima_edad_h": 181.1
     },
     "yt_vistas": {
      "valor": 1714,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 2010,
-     "ultima_edad_h": 157.2
+     "ultima": 2017,
+     "ultima_edad_h": 181.1
     },
     "tt_vistas": {
      "valor": 277,
      "edad_h": 48,
      "provisional": false,
      "ultima": 277,
-     "ultima_edad_h": 156.6
+     "ultima_edad_h": 180.6
     }
    },
    "publicado": "2026-11-19T20:22+01:00"
@@ -1948,21 +1948,21 @@
      "edad_h": 59.8,
      "provisional": false,
      "ultima": 26.5,
-     "ultima_edad_h": 156.1
+     "ultima_edad_h": 180.1
     },
     "yt_vistas": {
      "valor": 24,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 25,
-     "ultima_edad_h": 156.1
+     "ultima": 26,
+     "ultima_edad_h": 180.1
     },
     "tt_vistas": {
      "valor": 251,
      "edad_h": 48,
      "provisional": false,
      "ultima": 254,
-     "ultima_edad_h": 156.6
+     "ultima_edad_h": 180.6
     }
    },
    "publicado": "2026-11-19T21:25+01:00"
@@ -2017,14 +2017,14 @@
      "edad_h": 58.8,
      "provisional": false,
      "ultima": 82.1,
-     "ultima_edad_h": 155.1
+     "ultima_edad_h": 179.1
     },
     "yt_vistas": {
      "valor": 3672,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 4123,
-     "ultima_edad_h": 155.1
+     "ultima": 4124,
+     "ultima_edad_h": 179.1
     },
     "tt_vistas": {
      "valor": null,
@@ -2120,21 +2120,21 @@
      "edad_h": 68.8,
      "provisional": false,
      "ultima": 71.0,
-     "ultima_edad_h": 140.8
+     "ultima_edad_h": 164.8
     },
     "yt_vistas": {
      "valor": 2524,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 2942,
-     "ultima_edad_h": 140.8
+     "ultima": 2943,
+     "ultima_edad_h": 164.8
     },
     "tt_vistas": {
      "valor": 252,
      "edad_h": 48,
      "provisional": false,
      "ultima": 261,
-     "ultima_edad_h": 140.7
+     "ultima_edad_h": 164.7
     }
    },
    "publicado": "2026-11-20T12:44+01:00"
@@ -2223,21 +2223,21 @@
      "edad_h": 67.7,
      "provisional": false,
      "ultima": 70.3,
-     "ultima_edad_h": 139.7
+     "ultima_edad_h": 163.7
     },
     "yt_vistas": {
      "valor": 10119,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 10317,
-     "ultima_edad_h": 139.7
+     "ultima": 10320,
+     "ultima_edad_h": 163.7
     },
     "tt_vistas": {
      "valor": 256,
      "edad_h": 48,
      "provisional": false,
      "ultima": 264,
-     "ultima_edad_h": 140.7
+     "ultima_edad_h": 164.7
     }
    },
    "publicado": "2026-11-20T13:50+01:00"
@@ -2324,15 +2324,15 @@
      "valor": 49.7,
      "edad_h": 56.0,
      "provisional": false,
-     "ultima": 71.2,
-     "ultima_edad_h": 127.9
+     "ultima": 71.1,
+     "ultima_edad_h": 151.9
     },
     "yt_vistas": {
      "valor": 822,
      "edad_h": 48,
      "provisional": false,
      "ultima": 907,
-     "ultima_edad_h": 127.9
+     "ultima_edad_h": 151.9
     },
     "tt_vistas": {
      "valor": null,
@@ -2426,15 +2426,15 @@
      "valor": 50.7,
      "edad_h": 71.5,
      "provisional": false,
-     "ultima": 52.1,
-     "ultima_edad_h": 119.5
+     "ultima": 52.5,
+     "ultima_edad_h": 143.5
     },
     "yt_vistas": {
      "valor": 448,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 461,
-     "ultima_edad_h": 119.5
+     "ultima": 462,
+     "ultima_edad_h": 143.5
     },
     "tt_vistas": {
      "valor": null,
@@ -2529,14 +2529,14 @@
      "edad_h": 69.5,
      "provisional": false,
      "ultima": 73.1,
-     "ultima_edad_h": 117.5
+     "ultima_edad_h": 141.5
     },
     "yt_vistas": {
      "valor": 5245,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 6127,
-     "ultima_edad_h": 117.5
+     "ultima": 6140,
+     "ultima_edad_h": 141.5
     },
     "tt_vistas": {
      "valor": null,
@@ -2631,21 +2631,21 @@
      "edad_h": 68.6,
      "provisional": false,
      "ultima": 57.8,
-     "ultima_edad_h": 92.5
+     "ultima_edad_h": 116.5
     },
     "yt_vistas": {
      "valor": 2217,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 2289,
-     "ultima_edad_h": 92.5
+     "ultima": 2299,
+     "ultima_edad_h": 116.5
     },
     "tt_vistas": {
      "valor": 1066,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 1092,
-     "ultima_edad_h": 92.5
+     "ultima": 1095,
+     "ultima_edad_h": 116.5
     }
    },
    "publicado": "2026-11-22T13:00+01:00"
@@ -2732,15 +2732,15 @@
      "valor": 72.8,
      "edad_h": 67.6,
      "provisional": false,
-     "ultima": 71.4,
-     "ultima_edad_h": 91.5
+     "ultima": 73.4,
+     "ultima_edad_h": 115.5
     },
     "yt_vistas": {
      "valor": 4024,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 4199,
-     "ultima_edad_h": 91.5
+     "ultima": 4201,
+     "ultima_edad_h": 115.5
     },
     "tt_vistas": {
      "valor": null,
@@ -2834,15 +2834,15 @@
      "valor": 56.0,
      "edad_h": 66.6,
      "provisional": false,
-     "ultima": 64.2,
-     "ultima_edad_h": 90.5
+     "ultima": 65.4,
+     "ultima_edad_h": 114.5
     },
     "yt_vistas": {
      "valor": 4667,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 4965,
-     "ultima_edad_h": 90.5
+     "ultima": 4986,
+     "ultima_edad_h": 114.5
     },
     "tt_vistas": {
      "valor": null,
@@ -2937,22 +2937,22 @@
      "valor": 56.3,
      "edad_h": 66.6,
      "provisional": false,
-     "ultima": 56.3,
-     "ultima_edad_h": 66.6
+     "ultima": 62.3,
+     "ultima_edad_h": 90.6
     },
     "yt_vistas": {
      "valor": 5407,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 5483,
-     "ultima_edad_h": 66.6
+     "ultima": 5490,
+     "ultima_edad_h": 90.6
     },
     "tt_vistas": {
      "valor": 972,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 975,
-     "ultima_edad_h": 66.1
+     "ultima": 984,
+     "ultima_edad_h": 90.1
     }
    },
    "publicado": "2026-11-23T14:55+01:00"
@@ -3040,22 +3040,22 @@
      "valor": 66.5,
      "edad_h": 65.6,
      "provisional": false,
-     "ultima": 66.5,
-     "ultima_edad_h": 65.6
+     "ultima": 67.6,
+     "ultima_edad_h": 89.6
     },
     "yt_vistas": {
      "valor": 2657,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 2745,
-     "ultima_edad_h": 65.6
+     "ultima": 2817,
+     "ultima_edad_h": 89.6
     },
     "tt_vistas": {
      "valor": 862,
      "edad_h": 48,
      "provisional": false,
      "ultima": 864,
-     "ultima_edad_h": 65.6
+     "ultima_edad_h": 89.6
     }
    },
    "publicado": "2026-11-23T15:55+01:00"
@@ -3143,22 +3143,22 @@
      "valor": 47.1,
      "edad_h": 64.6,
      "provisional": false,
-     "ultima": 47.1,
-     "ultima_edad_h": 64.6
+     "ultima": 47.6,
+     "ultima_edad_h": 88.6
     },
     "yt_vistas": {
      "valor": 1712,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 1737,
-     "ultima_edad_h": 64.6
+     "ultima": 1744,
+     "ultima_edad_h": 88.6
     },
     "tt_vistas": {
      "valor": 968,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 992,
-     "ultima_edad_h": 64.6
+     "ultima": 1034,
+     "ultima_edad_h": 88.6
     }
    },
    "publicado": "2026-11-23T16:55+01:00"
@@ -3246,22 +3246,22 @@
      "valor": 60.1,
      "edad_h": 56.2,
      "provisional": false,
-     "ultima": 60.1,
-     "ultima_edad_h": 56.2
+     "ultima": 59.3,
+     "ultima_edad_h": 80.2
     },
     "yt_vistas": {
      "valor": 1300,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 1327,
-     "ultima_edad_h": 56.2
+     "ultima": 1412,
+     "ultima_edad_h": 80.2
     },
     "tt_vistas": {
      "valor": 235,
      "edad_h": 48,
      "provisional": false,
      "ultima": 235,
-     "ultima_edad_h": 56.1
+     "ultima_edad_h": 80.1
     }
    },
    "publicado": "2026-11-24T01:20+01:00"
@@ -3346,18 +3346,18 @@
      "ultima_edad_h": null
     },
     "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
+     "valor": 53.8,
+     "edad_h": 71.5,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 53.8,
+     "ultima_edad_h": 71.5
     },
     "yt_vistas": {
-     "valor": 1046,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 1071,
-     "ultima_edad_h": 47.5
+     "valor": 1071,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 1081,
+     "ultima_edad_h": 71.5
     },
     "tt_vistas": {
      "valor": null,
@@ -3415,18 +3415,18 @@
      "ultima_edad_h": null
     },
     "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
+     "valor": 23.4,
+     "edad_h": 70.1,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 23.4,
+     "ultima_edad_h": 70.1
     },
     "yt_vistas": {
-     "valor": 60,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 108,
-     "ultima_edad_h": 46.1
+     "valor": 109,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 120,
+     "ultima_edad_h": 70.1
     },
     "tt_vistas": {
      "valor": null,
@@ -3518,25 +3518,25 @@
      "ultima_edad_h": null
     },
     "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
+     "valor": 46.0,
+     "edad_h": 69.5,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 46.0,
+     "ultima_edad_h": 69.5
     },
     "yt_vistas": {
-     "valor": 1755,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 1890,
-     "ultima_edad_h": 45.5
+     "valor": 1915,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 2131,
+     "ultima_edad_h": 69.5
     },
     "tt_vistas": {
      "valor": 11,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 11,
-     "ultima_edad_h": 45.5
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 12,
+     "ultima_edad_h": 69.5
     }
    },
    "publicado": "2026-11-24T12:00+01:00"
@@ -3621,18 +3621,18 @@
      "ultima_edad_h": null
     },
     "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
+     "valor": 48.5,
+     "edad_h": 57.3,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 48.5,
+     "ultima_edad_h": 57.3
     },
     "yt_vistas": {
-     "valor": 1391,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 1535,
-     "ultima_edad_h": 33.3
+     "valor": 1538,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 1540,
+     "ultima_edad_h": 57.3
     },
     "tt_vistas": {
      "valor": null,
@@ -3731,11 +3731,11 @@
      "ultima_edad_h": null
     },
     "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 1280,
-     "ultima_edad_h": 23.5
+     "valor": 1283,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 1411,
+     "ultima_edad_h": 47.5
     },
     "tt_vistas": {
      "valor": null,
@@ -3834,11 +3834,11 @@
      "ultima_edad_h": null
     },
     "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 1244,
-     "ultima_edad_h": 21.5
+     "valor": 1279,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 1603,
+     "ultima_edad_h": 45.5
     },
     "tt_vistas": {
      "valor": null,
@@ -3851,43 +3851,46 @@
    "publicado": "2026-11-25T12:00+01:00"
   },
   {
-   "id": "0nGefmtqxcs",
-   "ficha": "2026-11-25-manana/02",
-   "titulo": "0nGefmtqxcs",
+   "id": "E1QFyVyJ7kU",
+   "ficha": "2026-11-25-manana/01",
+   "titulo": "E1QFyVyJ7kU",
    "variables": {
     "lote": "2026-11-25-manana",
-    "numero": "02",
+    "numero": "01",
     "momento": "previo",
     "codificado": "2026-11-25",
     "codificador": "Nico (con el agente)",
     "gancho_palabras": 4,
-    "gancho_persona": "tú",
+    "gancho_persona": "impersonal",
     "gancho_cifra": false,
     "gancho_negacion": false,
     "gancho_pregunta": false,
-    "palabras": 157,
-    "preguntas": 2,
-    "nota_calidad": 88.0,
+    "palabras": 160,
+    "preguntas": 3,
+    "nota_calidad": 91.0,
     "cortes_min": 36.7,
-    "palabras_seg": 2.78,
-    "f0_movimiento": 7.85,
-    "tema": "Cotidiano",
+    "palabras_seg": 2.46,
+    "f0_movimiento": 5.96,
+    "tema": "Espacio",
     "alcance": "universal",
-    "epoca": "actual",
-    "gancho": "orden",
+    "epoca": "siglo XX",
+    "gancho": "dato",
     "f0_palabras": 4,
     "f0_sujeto": "objeto",
     "f0_literal": true,
-    "estructura": "experimento",
-    "remate": "consejo",
-    "duracion_s": 57.0,
+    "estructura": "reconstrucción",
+    "remate": "pregunta",
+    "duracion_s": 56.8,
     "montaje": "denso",
     "subtitulo": "karaoke",
     "voz": "clon",
     "reciclado": false,
     "experimento": "no",
     "brazo": "-",
-    "youtube": "0nGefmtqxcs"
+    "youtube": "E1QFyVyJ7kU",
+    "hora": 11,
+    "dia_semana": "jueves",
+    "turno": "mañana"
    },
    "metricas": {
     "yt_se_quedan": {
@@ -3936,8 +3939,8 @@
      "valor": null,
      "edad_h": null,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 1961,
+     "ultima_edad_h": 22.5
     },
     "tt_vistas": {
      "valor": null,
@@ -3946,7 +3949,590 @@
      "ultima": null,
      "ultima_edad_h": null
     }
-   }
+   },
+   "publicado": "2026-11-26T11:00+01:00"
+  },
+  {
+   "id": "0nGefmtqxcs",
+   "ficha": "2026-11-25-manana/02",
+   "titulo": "0nGefmtqxcs",
+   "variables": {
+    "lote": "2026-11-25-manana",
+    "numero": "02",
+    "momento": "previo",
+    "codificado": "2026-11-25",
+    "codificador": "Nico (con el agente)",
+    "gancho_palabras": 4,
+    "gancho_persona": "tú",
+    "gancho_cifra": false,
+    "gancho_negacion": false,
+    "gancho_pregunta": false,
+    "palabras": 157,
+    "preguntas": 2,
+    "nota_calidad": 88.0,
+    "cortes_min": 36.7,
+    "palabras_seg": 2.78,
+    "f0_movimiento": 7.85,
+    "tema": "Cotidiano",
+    "alcance": "universal",
+    "epoca": "actual",
+    "gancho": "orden",
+    "f0_palabras": 4,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "estructura": "experimento",
+    "remate": "consejo",
+    "duracion_s": 57.0,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "0nGefmtqxcs",
+    "hora": 12,
+    "dia_semana": "jueves",
+    "turno": "mañana"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 1099,
+     "ultima_edad_h": 21.5
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    }
+   },
+   "publicado": "2026-11-26T12:00+01:00"
+  },
+  {
+   "id": "8ISC2-AoXSM",
+   "ficha": "2026-11-25-manana/03",
+   "titulo": "8ISC2-AoXSM",
+   "variables": {
+    "lote": "2026-11-25-manana",
+    "numero": "03",
+    "momento": "previo",
+    "codificado": "2026-11-25",
+    "codificador": "Nico (con el agente)",
+    "gancho_palabras": 5,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": false,
+    "gancho_negacion": false,
+    "gancho_pregunta": false,
+    "palabras": 155,
+    "preguntas": 3,
+    "nota_calidad": 87.0,
+    "cortes_min": 35.5,
+    "palabras_seg": 2.55,
+    "f0_movimiento": 9.67,
+    "tema": "Histórico",
+    "alcance": "universal",
+    "epoca": "antigua",
+    "gancho": "dato",
+    "f0_palabras": 5,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "estructura": "comparación",
+    "remate": "pregunta",
+    "duracion_s": 55.4,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "8ISC2-AoXSM",
+    "hora": 13,
+    "dia_semana": "jueves",
+    "turno": "mañana"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 2393,
+     "ultima_edad_h": 20.5
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    }
+   },
+   "publicado": "2026-11-26T13:00+01:00"
+  },
+  {
+   "id": "mDzJGj7ZF0k",
+   "ficha": "2026-11-25-tarde/01",
+   "titulo": "mDzJGj7ZF0k",
+   "variables": {
+    "lote": "2026-11-25-tarde",
+    "numero": "01",
+    "momento": "previo",
+    "codificado": "2026-11-26",
+    "codificador": "Agente 20:00 (Jorge)",
+    "gancho_palabras": 5,
+    "gancho_persona": "tú",
+    "gancho_cifra": false,
+    "gancho_negacion": true,
+    "gancho_pregunta": false,
+    "palabras": 152,
+    "preguntas": 3,
+    "nota_calidad": 80.0,
+    "cortes_min": 36.2,
+    "palabras_seg": 2.91,
+    "f0_movimiento": 3.98,
+    "tema": "Cotidiano",
+    "alcance": "universal",
+    "epoca": "actual",
+    "gancho": "negación",
+    "f0_palabras": 5,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "estructura": "misterio por pistas",
+    "remate": "pregunta",
+    "duracion_s": 52.7,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "mDzJGj7ZF0k",
+    "tiktok": "7712463082236431619",
+    "hora": 13,
+    "dia_semana": "jueves",
+    "turno": "mañana"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 971,
+     "ultima_edad_h": 19.6
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 237,
+     "ultima_edad_h": 19.6
+    }
+   },
+   "publicado": "2026-11-26T13:52+01:00"
+  },
+  {
+   "id": "DJWK7PCIAdY",
+   "ficha": "2026-11-25-tarde/02",
+   "titulo": "DJWK7PCIAdY",
+   "variables": {
+    "lote": "2026-11-25-tarde",
+    "numero": "02",
+    "momento": "previo",
+    "codificado": "2026-11-26",
+    "codificador": "Agente 20:00 (Jorge)",
+    "gancho_palabras": 4,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": false,
+    "gancho_negacion": false,
+    "gancho_pregunta": false,
+    "palabras": 152,
+    "preguntas": 2,
+    "nota_calidad": 62.0,
+    "cortes_min": 27.1,
+    "palabras_seg": 2.57,
+    "f0_movimiento": 3.56,
+    "tema": "Histórico",
+    "alcance": "universal",
+    "epoca": "siglo XX",
+    "gancho": "contraste",
+    "f0_palabras": 4,
+    "f0_sujeto": "objeto",
+    "f0_literal": true,
+    "estructura": "cadena de datos",
+    "remate": "pregunta",
+    "duracion_s": 59.6,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "DJWK7PCIAdY",
+    "tiktok": "7712463501876317462",
+    "hora": 16,
+    "dia_semana": "jueves",
+    "turno": "tarde"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 966,
+     "ultima_edad_h": 17.5
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 194,
+     "ultima_edad_h": 17.5
+    }
+   },
+   "publicado": "2026-11-26T16:00+01:00"
+  },
+  {
+   "id": "HWHIzTy66Jc",
+   "ficha": "2026-11-25-tarde/03",
+   "titulo": "HWHIzTy66Jc",
+   "variables": {
+    "lote": "2026-11-25-tarde",
+    "numero": "03",
+    "momento": "previo",
+    "codificado": "2026-11-26",
+    "codificador": "Agente 20:00 (Jorge)",
+    "gancho_palabras": 4,
+    "gancho_persona": "impersonal",
+    "gancho_cifra": false,
+    "gancho_negacion": false,
+    "gancho_pregunta": true,
+    "palabras": 154,
+    "preguntas": 3,
+    "nota_calidad": 65.0,
+    "cortes_min": 23.0,
+    "palabras_seg": 2.85,
+    "f0_movimiento": 2.78,
+    "tema": "Espacio",
+    "alcance": "universal",
+    "epoca": "actual",
+    "gancho": "pregunta",
+    "f0_palabras": 4,
+    "f0_sujeto": "lugar",
+    "f0_literal": true,
+    "estructura": "comparación",
+    "remate": "pregunta",
+    "duracion_s": 54.5,
+    "montaje": "denso",
+    "subtitulo": "karaoke",
+    "voz": "clon",
+    "reciclado": false,
+    "experimento": "no",
+    "brazo": "-",
+    "youtube": "HWHIzTy66Jc",
+    "tiktok": "7712463863001763094",
+    "hora": 18,
+    "dia_semana": "jueves",
+    "turno": "tarde"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 103,
+     "ultima_edad_h": 15.5
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 173,
+     "ultima_edad_h": 15.5
+    }
+   },
+   "publicado": "2026-11-26T18:00+01:00"
+  },
+  {
+   "id": "olrobKKTa44",
+   "ficha": null,
+   "titulo": "olrobKKTa44",
+   "variables": {
+    "hora": 0,
+    "dia_semana": "viernes",
+    "turno": "mañana"
+   },
+   "metricas": {
+    "yt_se_quedan": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_sigue_3s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_seg_por_vista": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_medio_s": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "tt_completo": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_pct_visto": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    },
+    "yt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": 4,
+     "ultima_edad_h": 8.6
+    },
+    "tt_vistas": {
+     "valor": null,
+     "edad_h": null,
+     "provisional": false,
+     "ultima": null,
+     "ultima_edad_h": null
+    }
+   },
+   "publicado": "2026-11-27T00:52+01:00"
   },
   {
    "id": "7709510485921582358",
@@ -4008,7 +4594,7 @@
      "edad_h": 48,
      "provisional": false,
      "ultima": 275,
-     "ultima_edad_h": 186.6
+     "ultima_edad_h": 210.5
     }
    }
   },
@@ -4072,7 +4658,7 @@
      "edad_h": 48,
      "provisional": false,
      "ultima": 281,
-     "ultima_edad_h": 156.6
+     "ultima_edad_h": 180.5
     }
    }
   },
@@ -4136,7 +4722,7 @@
      "edad_h": 48,
      "provisional": false,
      "ultima": 245,
-     "ultima_edad_h": 91.5
+     "ultima_edad_h": 115.5
     }
    }
   },
@@ -4199,8 +4785,8 @@
      "valor": 3922,
      "edad_h": 48,
      "provisional": false,
-     "ultima": 3981,
-     "ultima_edad_h": 90.5
+     "ultima": 4000,
+     "ultima_edad_h": 114.5
     }
    }
   },
@@ -4261,10 +4847,10 @@
     },
     "tt_vistas": {
      "valor": 256,
-     "edad_h": 24,
-     "provisional": true,
+     "edad_h": 48,
+     "provisional": false,
      "ultima": 256,
-     "ultima_edad_h": 47.5
+     "ultima_edad_h": 71.5
     }
    }
   },
@@ -4324,11 +4910,11 @@
      "ultima_edad_h": null
     },
     "tt_vistas": {
-     "valor": 286,
-     "edad_h": 24,
-     "provisional": true,
+     "valor": 289,
+     "edad_h": 48,
+     "provisional": false,
      "ultima": 289,
-     "ultima_edad_h": 46.0
+     "ultima_edad_h": 70.0
     }
    }
   },
@@ -4389,10 +4975,10 @@
     },
     "tt_vistas": {
      "valor": 11,
-     "edad_h": 24,
-     "provisional": true,
+     "edad_h": 48,
+     "provisional": false,
      "ultima": 11,
-     "ultima_edad_h": 44.0
+     "ultima_edad_h": 68.0
     }
    }
   },
@@ -4453,10 +5039,10 @@
     },
     "tt_vistas": {
      "valor": 11,
-     "edad_h": 24,
-     "provisional": true,
+     "edad_h": 48,
+     "provisional": false,
      "ultima": 11,
-     "ultima_edad_h": 42.0
+     "ultima_edad_h": 66.0
     }
    }
   },
@@ -4516,11 +5102,11 @@
      "ultima_edad_h": null
     },
     "tt_vistas": {
-     "valor": 8,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 9,
-     "ultima_edad_h": 40.0
+     "valor": 9,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 10,
+     "ultima_edad_h": 64.0
     }
    }
   },
@@ -4580,11 +5166,11 @@
      "ultima_edad_h": null
     },
     "tt_vistas": {
-     "valor": 3,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 4,
-     "ultima_edad_h": 38.0
+     "valor": 4,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 5,
+     "ultima_edad_h": 62.0
     }
    }
   },
@@ -4644,11 +5230,11 @@
      "ultima_edad_h": null
     },
     "tt_vistas": {
-     "valor": 6,
-     "edad_h": 24,
-     "provisional": true,
-     "ultima": 8,
-     "ultima_edad_h": 33.2
+     "valor": 9,
+     "edad_h": 48,
+     "provisional": false,
+     "ultima": 9,
+     "ultima_edad_h": 57.2
     }
    }
   },
@@ -4708,11 +5294,11 @@
      "ultima_edad_h": null
     },
     "tt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": 8,
-     "ultima_edad_h": 23.5
+     "valor": 8,
+     "edad_h": 24,
+     "provisional": true,
+     "ultima": 10,
+     "ultima_edad_h": 47.5
     }
    }
   },
@@ -4772,53 +5358,19 @@
      "ultima_edad_h": null
     },
     "tt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
+     "valor": 10,
+     "edad_h": 24,
+     "provisional": true,
      "ultima": 10,
-     "ultima_edad_h": 21.5
+     "ultima_edad_h": 45.5
     }
    }
   },
   {
-   "id": "8ISC2-AoXSM",
-   "ficha": "2026-11-25-manana/03",
-   "titulo": "8ISC2-AoXSM",
-   "variables": {
-    "lote": "2026-11-25-manana",
-    "numero": "03",
-    "momento": "previo",
-    "codificado": "2026-11-25",
-    "codificador": "Nico (con el agente)",
-    "gancho_palabras": 5,
-    "gancho_persona": "impersonal",
-    "gancho_cifra": false,
-    "gancho_negacion": false,
-    "gancho_pregunta": false,
-    "palabras": 155,
-    "preguntas": 3,
-    "nota_calidad": 87.0,
-    "cortes_min": 35.5,
-    "palabras_seg": 2.55,
-    "f0_movimiento": 9.67,
-    "tema": "Histórico",
-    "alcance": "universal",
-    "epoca": "antigua",
-    "gancho": "dato",
-    "f0_palabras": 5,
-    "f0_sujeto": "objeto",
-    "f0_literal": true,
-    "estructura": "comparación",
-    "remate": "pregunta",
-    "duracion_s": 55.4,
-    "montaje": "denso",
-    "subtitulo": "karaoke",
-    "voz": "clon",
-    "reciclado": false,
-    "experimento": "no",
-    "brazo": "-",
-    "youtube": "8ISC2-AoXSM"
-   },
+   "id": "7712633311755128086",
+   "ficha": null,
+   "titulo": "7712633311755128086",
+   "variables": {},
    "metricas": {
     "yt_se_quedan": {
      "valor": null,
@@ -4873,106 +5425,8 @@
      "valor": null,
      "edad_h": null,
      "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    }
-   }
-  },
-  {
-   "id": "E1QFyVyJ7kU",
-   "ficha": "2026-11-25-manana/01",
-   "titulo": "E1QFyVyJ7kU",
-   "variables": {
-    "lote": "2026-11-25-manana",
-    "numero": "01",
-    "momento": "previo",
-    "codificado": "2026-11-25",
-    "codificador": "Nico (con el agente)",
-    "gancho_palabras": 4,
-    "gancho_persona": "impersonal",
-    "gancho_cifra": false,
-    "gancho_negacion": false,
-    "gancho_pregunta": false,
-    "palabras": 160,
-    "preguntas": 3,
-    "nota_calidad": 91.0,
-    "cortes_min": 36.7,
-    "palabras_seg": 2.46,
-    "f0_movimiento": 5.96,
-    "tema": "Espacio",
-    "alcance": "universal",
-    "epoca": "siglo XX",
-    "gancho": "dato",
-    "f0_palabras": 4,
-    "f0_sujeto": "objeto",
-    "f0_literal": true,
-    "estructura": "reconstrucción",
-    "remate": "pregunta",
-    "duracion_s": 56.8,
-    "montaje": "denso",
-    "subtitulo": "karaoke",
-    "voz": "clon",
-    "reciclado": false,
-    "experimento": "no",
-    "brazo": "-",
-    "youtube": "E1QFyVyJ7kU"
-   },
-   "metricas": {
-    "yt_se_quedan": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    },
-    "tt_sigue_3s": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    },
-    "yt_seg_por_vista": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    },
-    "tt_medio_s": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    },
-    "tt_completo": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    },
-    "yt_pct_visto": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    },
-    "yt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
-    },
-    "tt_vistas": {
-     "valor": null,
-     "edad_h": null,
-     "provisional": false,
-     "ultima": null,
-     "ultima_edad_h": null
+     "ultima": 217,
+     "ultima_edad_h": 8.6
     }
    }
   }
@@ -7128,55 +7582,55 @@
  "audiencia": {
   "desde": "2026-11-01",
   "edad": {
-   "age13-17": 7.0,
-   "age18-24": 12.7,
-   "age25-34": 33.5,
-   "age35-44": 25.700000000000003,
-   "age45-54": 13.399999999999999,
-   "age55-64": 4.5,
-   "age65-": 3.4
+   "age13-17": 6.9,
+   "age18-24": 12.5,
+   "age25-34": 33.400000000000006,
+   "age35-44": 26.0,
+   "age45-54": 13.4,
+   "age55-64": 4.4,
+   "age65-": 3.3
   },
   "genero": {
-   "female": 39.49999999999999,
-   "male": 60.7
+   "female": 40.099999999999994,
+   "male": 59.8
   },
   "paises": {
-   "MX": 28.929091587525125,
-   "ES": 20.65624285318793,
-   "AR": 13.002082355348524,
-   "CO": 9.42957907533793,
-   "PE": 8.390808748299811,
-   "CL": 6.502244851286125,
-   "VE": 4.961542628100965,
-   "DO": 2.8490954392806844,
-   "EC": 2.744375835048568,
-   "US": 2.534936626584335
+   "MX": 28.937482478273058,
+   "ES": 20.213064199607516,
+   "AR": 13.164003364171572,
+   "CO": 9.73479114101486,
+   "PE": 8.232127838519766,
+   "CL": 6.436781609195402,
+   "VE": 5.072049341183067,
+   "EC": 2.8259041211101765,
+   "DO": 2.8045977011494254,
+   "US": 2.5791982057751612
   },
   "seg_por_vista_pais": {
-   "MX": 26.04560206374303,
-   "ES": 18.54437387098654,
-   "AR": 23.545639696352527,
-   "CO": 27.671687515956087,
-   "PE": 25.45115478410558,
-   "CL": 23.09144761199556,
-   "VE": 31.65938864628821,
-   "DO": 23.193916349809886,
-   "EC": 25.57894736842105,
-   "US": 24.245014245014247
+   "MX": 25.987986824258865,
+   "ES": 18.7872399445215,
+   "AR": 23.286480960899567,
+   "CO": 27.15585762008985,
+   "PE": 25.255414793624848,
+   "CL": 23.101045296167246,
+   "VE": 33.137298253371654,
+   "EC": 25.333333333333332,
+   "DO": 23.054778088764493,
+   "US": 23.843478260869563
   },
-  "vistas_con_pais": 83079,
-  "latam": 76.80882052022773,
-  "espana": 20.65624285318793,
+  "vistas_con_pais": 89175,
+  "latam": 77.20773759461733,
+  "espana": 20.213064199607516,
   "suscritos": [
    [
     "UNSUBSCRIBED",
-    97412,
-    70.16
+    104734,
+    69.1
    ],
    [
     "SUBSCRIBED",
-    109,
-    53.94
+    123,
+    43.2
    ]
   ],
   "edad_genero": [
@@ -7188,7 +7642,7 @@
    [
     "age13-17",
     "male",
-    4.8
+    4.7
    ],
    [
     "age18-24",
@@ -7198,37 +7652,37 @@
    [
     "age18-24",
     "male",
-    9.4
+    9.2
    ],
    [
     "age25-34",
     "female",
-    12.5
+    12.8
    ],
    [
     "age25-34",
     "male",
-    21
+    20.6
    ],
    [
     "age35-44",
     "female",
-    12.4
+    12.6
    ],
    [
     "age35-44",
     "male",
-    13.3
+    13.4
    ],
    [
     "age45-54",
     "female",
-    5.8
+    5.9
    ],
    [
     "age45-54",
     "male",
-    7.6
+    7.5
    ],
    [
     "age55-64",
@@ -7238,7 +7692,7 @@
    [
     "age55-64",
     "male",
-    2.7
+    2.6
    ],
    [
     "age65-",
@@ -7248,7 +7702,7 @@
    [
     "age65-",
     "male",
-    1.9
+    1.8
    ]
   ],
   "objetivo": {
@@ -7263,38 +7717,38 @@
     "AR",
     "CO"
    ],
-   "dentro_edad": 46.2,
-   "dentro_pais": 72.0169958713995
+   "dentro_edad": 45.900000000000006,
+   "dentro_pais": 72.049341183067
   }
  },
  "audiencia_por_tema": {
   "Espacio": {
    "videos": 6,
-   "vistas": 20556,
+   "vistas": 20662,
    "edad": {
-    "age13-17": 2.954514496983849,
-    "age18-24": 11.20775929169099,
-    "age25-34": 45.265465071025496,
-    "age35-44": 32.412006226892395,
-    "age45-54": 8.108990075890251
+    "age13-17": 2.9614170941825573,
+    "age18-24": 11.214388732939696,
+    "age25-34": 45.25025166973188,
+    "age35-44": 32.38270254573614,
+    "age45-54": 8.140751137353595
    },
    "genero": {
-    "male": 69.22364273204904,
-    "female": 30.725092430433932
+    "male": 69.24865937469751,
+    "female": 30.70085180524634
    }
   },
   "Histórico": {
    "videos": 4,
-   "vistas": 5016,
+   "vistas": 5046,
    "edad": {
-    "age18-24": 9.811562998405105,
-    "age25-34": 48.273504784688996,
-    "age35-44": 25.213257575757574,
-    "age45-54": 16.740629984051036
+    "age18-24": 9.75323028141102,
+    "age25-34": 48.13038049940547,
+    "age35-44": 25.30176377328577,
+    "age45-54": 16.853943717796273
    },
    "genero": {
-    "male": 82.8206937799043,
-    "female": 17.218261562998407
+    "male": 82.66064209274673,
+    "female": 17.378676179151803
    }
   },
   "Misterio": {
@@ -7312,34 +7766,34 @@
    }
   },
   "Ciencia": {
-   "videos": 10,
-   "vistas": 25333,
+   "videos": 12,
+   "vistas": 30077,
    "edad": {
-    "age13-17": 4.575987841945287,
-    "age18-24": 6.42226739825524,
-    "age25-34": 45.566162712667264,
-    "age35-44": 30.489132751746727,
-    "age45-54": 11.681305017171278
+    "age13-17": 4.165757888087243,
+    "age18-24": 6.119090999767263,
+    "age25-34": 45.80488413073112,
+    "age35-44": 32.160624397380055,
+    "age45-54": 10.682558100874424
    },
    "genero": {
-    "female": 44.54102159238937,
-    "male": 54.19383412939643
+    "female": 44.99655550753066,
+    "male": 53.93636000930944
    }
   },
   "Cotidiano": {
-   "videos": 3,
-   "vistas": 12188,
+   "videos": 4,
+   "vistas": 13173,
    "edad": {
-    "age13-17": 5.9635297013455855,
-    "age18-24": 10.411962586150311,
-    "age25-34": 38.447571381686906,
-    "age35-44": 29.550229734164752,
-    "age45-54": 14.851419428946503,
-    "age55-64": 0.8023465703971119
+    "age13-17": 5.5176117816746375,
+    "age18-24": 9.633416837470584,
+    "age25-34": 39.93202004099294,
+    "age35-44": 29.464222272830792,
+    "age45-54": 14.72793592955287,
+    "age55-64": 0.7423517801563805
    },
    "genero": {
-    "female": 41.96261896947818,
-    "male": 58.064440433213
+    "female": 42.95991042283459,
+    "male": 57.05764821984362
    }
   }
  }
