@@ -20,7 +20,7 @@ _Agente 20:00 (Jorge). Arranque 2026-11-27 19:53 (Madrid). Chat: https://claude.
 
 | # | Archivo | Duración | SHA-256 |
 |---|---|---|---|
-| 01 | `01-anochece-dos-veces_v1.mp4` | 59,1 s | cfb47a865e141c974be5a9243eacc5b137037b0378d5494d200450aa290aef6d |
+| 01 | `01-anochece-dos-veces_v2.mp4` | 59,1 s | 540303fa19a1fbae0a602c4c4d76b497189958dc0a0a88f2aadea359cafc58ea |
 | 02 | `02-capa-de-ozono_v1.mp4` | 58,8 s | 06d6bc4f53adf04585a91cb93a0f6a374a870cacccd4aa536547e210bed1c75e |
 | 03 | `03-piel-de-gallina_v1.mp4` | 52,8 s | eb991b7e1d09fa19697e48e44180c019be4c80e0cef494bf9c43eb446b2df901 |
 
@@ -55,3 +55,6 @@ Archivo: `lotes/tendencias/2026-11-27.md`. 01 ← «burj khalifa» (MX, CO); 02 
 
 ## Sin hacer en este turno
 - Datos de YouTube Studio (§1.8) y contestar comentarios (§8b): el Mac se cayó del puente varias veces (≈20:10–21:05); se priorizó la voz y el lote.
+
+## Cambios pedidos en el chat
+- 2026-11-27 ≈20:45 — «Anda haz mejor el edificio q parece un cohete vertebrado» → **01 v2**: rascacielos rehecho (aguja fina que se estrecha poco a poco, retranqueos escalonados que se alternan a los lados, cristal con montantes verticales, sin bandas horizontales; de noche la sombra ya no forma un rectángulo). «+2 MIN» más grande y centrado. Portada nueva (segundo 41,25, diseño «arriba»). `motor.calidad` sin ❌ (64/100). file_uuid v2: 4ebeeb8f-2674-4d87-af08-351cefbcf3c7; portada b004636d-5588-4563-a7ce-917a51f10df9. El «ok» vale para 01 v2, 02 v1 y 03 v1.

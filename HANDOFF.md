@@ -4,6 +4,13 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-27 20:50 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-27-tarde: 01 v2
+**Qué pasó**: en el chat del lote pidieron «haz mejor el edificio q parece un cohete vertebrado».
+**Hecho**: `torre()` de `ilus_1127t.py` rehecha (aguja fina con retranqueos alternos y cristal vertical); 01 v2 renderizado, `motor.calidad` sin ❌, portada nueva; enviado al chat.
+**Siguiente paso**: «ok» para 01 v2, 02 v1 y 03 v1 en https://claude.ai/code/session_019BG1dK7GpyrYsYXE518JkF. Siguen sin copiarse los MP4 al Mac.
+
+---
+
 ## 2026-11-27 20:35 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-27-tarde en revisión
 **Hecho**: reserva; tendencias (Google Trends en el navegador integrado; `lotes/tendencias/2026-11-27.md`); 3 temas verificados (2+ fuentes); guiones (`motor.guion` sin ❌); voz por API desde el Mac (2.567 caracteres; quedan ≈7.700); arte nuevo `ilus_1127t.py` y `gen_01..03.py`; render, `motor.calidad` sin ❌ (64/63/70), portadas, fichas; vídeos y portadas al chat; correo (id 1a21e77f9d68c858).
 **Bloqueos**: el Mac de Jorge entra y sale del puente (≈20:05–20:30); la voz se generó en una de sus ventanas. Los MP4 no se pudieron copiar a la carpeta local: hacerlo al dar el «ok» (file_uuid en `lotes/2026-11-27-tarde/estado.md`). Sin datos de Studio (§1.8) ni comentarios (§8b).

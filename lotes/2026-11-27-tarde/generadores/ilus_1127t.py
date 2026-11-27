@@ -44,43 +44,66 @@ def _rnd(sem):
 
 
 # =========================================================================== 01 · Burj Khalifa
-def torre(n="torre", w=420, h=1900, noche=0.0):
+def torre(n="torre", w=480, h=1900, noche=0.0):
     """Rascacielos-aguja de escalones en espiral (planta en Y), cristal azul plateado con la cara de poniente encendida.
     `noche` 0..1 oscurece la base (abajo ya ha anochecido, arriba sigue el sol)."""
     z = Lz(n, w, h, **ATARDECER)
     cx = w / 2
     base = h - 20
-    # tramos: (ancho total, alto del tramo)
-    tramos = [(380, 300), (330, 260), (280, 240), (230, 220), (180, 200), (130, 180), (90, 160), (56, 120)]
-    y = base
-    g_frio = z.lin((0, 0), (w, 0), [(0, "#2a3a5a"), (0.45, "#6a86b0"), (0.55, "#9ab4d8"), (1, "#3a4a6a")])
-    g_sol = z.lin((0, 0), (w, 0), [(0, "#3a3550"), (0.5, "#c08a7a"), (0.62, "#ffc890"), (1, "#ff9a50")])
-    for i, (a, t) in enumerate(tramos):
-        # tres lóbulos: central más alto; laterales retranqueados
-        for k, (dx, fa, dt) in enumerate([(-a * 0.33, 0.42, 0.35), (a * 0.33, 0.42, 0.65), (0, 0.5, 0.0)]):
-            aw = a * fa
-            top = y - t - (0 if k == 2 else -t * dt * 0.6)
-            x0 = cx + dx - aw / 2
-            z(f'<path d="M{F(x0)} {F(y)} L{F(x0)} {F(top + 20)} L{F(x0 + aw * (0.3 if dx > 0 else 0.7))} {F(top)} L{F(x0 + aw)} {F(top + 20)} L{F(x0 + aw)} {F(y)} Z" '
-              f'fill="{g_frio if k == 0 else g_sol}" stroke="#1a2236" stroke-width="2"/>')
-            # filas de ventanas
-            for yy in range(int(top + 26), int(y), 14):
-                z(f'<path d="M{F(x0 + 4)} {yy} L{F(x0 + aw - 4)} {yy}" stroke="#ffffff" stroke-width="2" opacity="{0.10 if k == 0 else 0.18}"/>')
-            # costilla vertical brillante
-            z(f'<path d="M{F(x0 + aw * 0.7)} {F(top + 20)} L{F(x0 + aw * 0.7)} {F(y)}" stroke="#ffe2c0" stroke-width="3" opacity="0.5"/>')
-        y -= t
+    alto = base - 40            # altura total hasta la punta de la aguja
+    # perfil: ancho que se estrecha poco a poco; retranqueos escalonados que se alternan izquierda/derecha
+    def ancho(y):               # semiancho del núcleo a una altura y (0 = suelo, 1 = punta)
+        return 26 + 128 * (1 - y) ** 1.8
+    g_sombra = z.lin((0, 0), (w, 0), [(0, "#1e2a46"), (0.4, "#4a6290"), (0.5, "#7a96c4"), (1, "#3a4a70")])
+    g_luz = z.lin((0, 0), (w, 0), [(0, "#4a3a58"), (0.45, "#b88a86"), (0.56, "#ffd2a0"), (0.75, "#ffb070"), (1, "#e07a48")])
+    Y = lambda f: base - f * alto
+    # alas: (lado, fracción de altura donde acaba, desplazamiento extra hacia fuera)
+    alas = [(-1, 0.09, 40), (1, 0.15, 36), (-1, 0.22, 32), (1, 0.29, 28), (-1, 0.36, 24), (1, 0.43, 20), (-1, 0.50, 16), (1, 0.57, 12), (-1, 0.63, 9), (1, 0.68, 6)]
+    silu = []
+    for lado, f_top, extra in alas:
+        y_top = Y(f_top)
+        a_out = ancho(f_top) + extra
+        a_in = ancho(f_top) * 0.2
+        xo = cx + lado * a_out
+        xi = cx + lado * a_in
+        # cara del ala: de la base al retranqueo, con el canto superior ligeramente inclinado
+        silu.append(f"M{F(xi)} {F(base)} L{F(xo + lado * extra * 0.15)} {F(base)} L{F(xo)} {F(y_top + 10)} L{F(xi)} {F(y_top - 6)} Z")
+        z(f'<path d="M{F(xi)} {F(base)} L{F(xo + lado * extra * 0.15)} {F(base)} L{F(xo)} {F(y_top + 10)} L{F(xi)} {F(y_top - 6)} Z" '
+          f'fill="{g_luz if lado > 0 else g_sombra}" opacity="0.97"/>',
+          f'<path d="M{F(xo)} {F(y_top + 10)} L{F(xi)} {F(y_top - 6)}" stroke="#fff0d8" stroke-width="3" opacity="0.7"/>')
+    # núcleo central continuo hasta la base de la aguja
+    f_n = 0.74
+    pts_l = [(cx - ancho(f), Y(f)) for f in [k / 40 * f_n for k in range(41)]]
+    pts_r = [(cx + ancho(f), Y(f)) for f in [k / 40 * f_n for k in range(40, -1, -1)]]
+    d = "M" + " L".join(f"{F(x)} {F(y)}" for x, y in pts_l + pts_r) + " Z"
+    silu.append(d)
+    z(f'<path d="{d}" fill="{z.lin((0, 0), (w, 0), [(0, "#2a3656"), (0.42, "#8a9cc0"), (0.5, "#e8eef8"), (0.6, "#ffcf9a"), (1, "#c87a50")])}"/>')
+    # líneas verticales del cristal (montantes), siguiendo el estrechamiento
+    for k in range(-6, 7):
+        t = k / 6
+        x0, y0 = cx + t * ancho(0) * 0.92, base
+        x1, y1 = cx + t * ancho(f_n) * 0.9, Y(f_n)
+        z(f'<path d="M{F(x0)} {F(y0)} L{F(x1)} {F(y1)}" stroke="#ffffff" stroke-width="2" opacity="{0.10 + 0.12 * (1 - abs(t)):.2f}"/>')
+    # reflejo largo del sol en la cara derecha
+    z(f'<path d="M{F(cx + ancho(0) * 0.35)} {F(base)} L{F(cx + ancho(f_n) * 0.3)} {F(Y(f_n))}" stroke="#fff4dc" stroke-width="10" opacity="0.35"/>')
     # aguja
-    z(f'<path d="M{F(cx - 18)} {F(y + 10)} L{F(cx - 4)} 8 L{F(cx + 4)} 8 L{F(cx + 18)} {F(y + 10)} Z" fill="{g_sol}" stroke="#1a2236" stroke-width="2"/>',
-      f'<circle cx="{F(cx)}" cy="14" r="6" fill="#ff5a4a"/><circle cx="{F(cx)}" cy="14" r="16" fill="#ff5a4a" opacity="0.3"/>')
+    ya = Y(f_n)
+    z(f'<path d="M{F(cx - ancho(f_n) * 0.55)} {F(ya)} L{F(cx - 2)} {F(base - alto)} L{F(cx + 2)} {F(base - alto)} L{F(cx + ancho(f_n) * 0.55)} {F(ya)} Z" '
+      f'fill="{z.lin((cx - 40, 0), (cx + 40, 0), [(0, "#6a7aa0"), (0.5, "#f4f6fa"), (1, "#ffb880")])}"/>',
+      f'<circle cx="{F(cx)}" cy="{F(base - alto + 6)}" r="6" fill="#ff5a4a"/><circle cx="{F(cx)}" cy="{F(base - alto + 6)}" r="16" fill="#ff5a4a" opacity="0.3"/>')
+    # podio en la base
+    z(f'<path d="M{F(cx - 230)} {F(base)} L{F(cx - 200)} {F(base - 40)} L{F(cx + 200)} {F(base - 40)} L{F(cx + 230)} {F(base)} Z" fill="#2a2436"/>',
+      f'<path d="M{F(cx - 200)} {F(base - 40)} L{F(cx + 200)} {F(base - 40)}" stroke="#ffd8a0" stroke-width="3" opacity="0.6"/>')
     if noche > 0:
         g = z.lin((0, h * 0.35), (0, h), [(0, "#0a0e22", 0), (0.5, "#0a0e22", noche * 0.55), (1, "#0a0e22", noche * 0.85)])
-        z(f'<rect x="0" y="{F(h * 0.35)}" width="{w}" height="{F(h * 0.65)}" fill="{g}"/>')
+        for dd in silu:
+            z(f'<path d="{dd}" fill="{g}"/>')
         # ventanas encendidas abajo
         r = _rnd(5)
         for _ in range(160):
             yy = r.uniform(h * 0.55, base - 10)
             frac = (base - yy) / (h * 0.45)
-            half = 190 - frac * 60
+            half = 140 - frac * 90
             xx = cx + r.uniform(-half, half) * 0.95
             z(f'<rect x="{F(xx)}" y="{F(yy)}" width="5" height="3" fill="#ffd890" opacity="{r.uniform(0.4, 0.9) * noche:.2f}"/>')
     z.guardar()

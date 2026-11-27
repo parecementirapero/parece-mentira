@@ -27,7 +27,7 @@ def cielo(sol_y0=1180, sol_y1=None, d=1.0, noche=False, sol=True, x_sol=760):
 
 
 def torre_el(x=420, ancho=330, noche=False, keys=None, z=0.45, base=1640):
-    alto = ancho * 1900 / 420
+    alto = ancho * 1900 / 480
     return OB("torre_noche" if noche else "torre", x, base - alto / 2, ancho, z=z, keys=keys)
 
 
@@ -123,7 +123,7 @@ def _(d):
 @v.plano(86, "de la planta ochenta a la ciento cincuenta: franja que se ilumina en la torre")
 def _(d):
     return P(NOCHE, cielo(0, sol=False, noche=True) + [torre_el(420, 380, noche=True),
-             {"tipo": "forma", "forma": "rect", "ancho": 240, "alto": 380, "relleno": "#ffd23f", "x": 420, "y": 900, "z": 0.5,
+             {"tipo": "forma", "forma": "rect", "ancho": 130, "alto": 380, "relleno": "#ffd23f", "x": 420, "y": 900, "z": 0.5,
               "keys": [{"t": 0, "op": 0}, {"t": 0.3, "op": 0.35}]}],
              cam(1.0, 1.05, (540, 1000)), "corte",
              hud=[cap(0.2, d - 0.05, "PLANTAS 80–150", "#141414", "#ffd23fe6", 84, x=760, y=900)], sfx=[(0.3, "tic", -20)])
@@ -132,7 +132,7 @@ def _(d):
 @v.plano(94, "dos minutos más: contador")
 def _(d):
     return P(NOCHE, cielo(0, sol=False, noche=True) + [torre_el(420, 380, noche=True)], cam(1.05, 1.08, (540, 1000)), "corte",
-             hud=[cap(0.05, d - 0.05, "+2 MIN", "#141414", "#5dff8ae6", 140, y=900, x=700)], sfx=[(0.1, "ding", -18)])
+             hud=[cap(0.05, d - 0.05, "+2 MIN", "#141414", "#5dff8ae6", 130, y=1000, x=540)], sfx=[(0.1, "ding", -18)])
 
 
 @v.plano(97, "por encima, tres: la punta, tres minutos")
@@ -207,7 +207,7 @@ v.plano(92, "micro: 150")(micro(NOCHE, lambda d: [BG("bg_cielo_noche_dubai"), to
 v.plano(117, "micro: 10 m/s")(micro(["#1a2236", "#0a0e1a"], lambda d: [BG("bg_cielo_dubai"), OB("ascensor", 540, 1100, 700)], sfx="whoosh"))
 
 
-v.construir("2026-11-27-tarde-01-anochece-dos-veces", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 1271, "db": -13},
+v.construir("2026-11-27-tarde-01-anochece-dos-veces", version=2, bucle=0.35, musica={"generar": "curiosidad", "semilla": 1271, "db": -13},
             claves=["anochece", "dos", "Burj", "Khalifa", "Dubái", "metros", "alto", "atardecer", "curva", "horizonte", "noche", "sol",
                     "Ramadán", "regla", "ochenta", "cincuenta", "minutos", "tres", "amanecer", "truco", "ascensor", "minuto", "otra"],
             ep_extra={"sfx_bajo_voz": True})
