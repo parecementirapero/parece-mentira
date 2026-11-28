@@ -4,6 +4,14 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-28 12:20 — Agente 08:00 (Nico) — rama `main` — segundo disparo del turno (lote ya en revisión)
+**Qué pasó**: la tarea de las 08:00 llegó otra vez a este mismo chat (lanzada a mano por Nico a las 11:45, con correcciones: sin Drive, sin Instagram, la carpeta del Mac es copia del repo, comprobar el saldo de ElevenLabs).
+**Hecho**: nada nuevo en el lote. `lotes/2026-11-28-manana/estado.md` ya estaba «en revisión» (commit 736e918), hecho en este mismo chat siguiendo ya esas correcciones (vídeos en el chat, solo YouTube y TikTok, clon propio del repo, saldo comprobado: 9.286 caracteres, llegaba para los 3). Según AGENTE §1.3 no se duplica y no se manda un segundo correo.
+**Pendiente**: el Mac de Nico sigue fuera del puente: copiar MP4 y portadas a la carpeta local al dar el «ok».
+**Siguiente paso**: «ok» o cambios en https://claude.ai/code/session_019BG1dKjnnRjJqNw5DCuPje.
+
+---
+
 ## 2026-11-28 12:25 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-28-manana en revisión
 **Hecho**: reserva (la tarea se disparó a las 11:45); créditos (9.286 → ≈6.650); tendencias (Google Trends MX/AR/CO/ES y YouTube Studio · Investigación en el navegador integrado; TikTok Creative Center pide sesión) → `lotes/tendencias/2026-11-28.md`; 3 temas de tendencias verificados con 3–4 fuentes; guiones (`motor.guion` sin ❌); voz por API desde el Mac; arte nuevo `ilus_1128m.py` y `gen_01..03.py`; render en la nube, `motor.calidad` sin ❌ (75/84/78), portadas, fichas; vídeos y portadas al chat; correo (id 1a221e0aa9b3d90c).
 **Bloqueos**: el Mac de Nico se desconectó del puente al terminar: MP4 y portadas sin copiar a la carpeta local (file_uuid en `lotes/2026-11-28-manana/estado.md`). Sin datos de Studio (§1.8) ni comentarios (§8b).
