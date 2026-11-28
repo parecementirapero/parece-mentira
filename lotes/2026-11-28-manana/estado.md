@@ -53,4 +53,4 @@ Archivo: `lotes/tendencias/2026-11-28.md`. Los tres salen de tendencias: 01 ← 
 
 ## Después de la entrega (chat, ≈12:45, Mac de nuevo conectado)
 - Datos de YouTube Studio (§1.8): «se quedaron viendo», vistas y horas de 20 Shorts del 21 al 26-11 en `estadisticas/studio.json` (falta HWHIzTy66Jc, no cargó a tiempo).
-- Comentarios (§8b): 6 respuestas redactadas y propuestas en el chat; se saltan 3 (salud, política y uno sin sentido). Sin publicar hasta que la persona lo confirme.
+- Comentarios (§8b): 5 respuestas redactadas y propuestas en el chat; se saltan 3 (salud, política y uno sin sentido). Sin publicar hasta que la persona lo confirme.
