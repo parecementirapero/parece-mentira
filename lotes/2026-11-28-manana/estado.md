@@ -15,7 +15,7 @@ _Agente 08:00 (Nico). La tarea programada se disparó a las 11:45 (Madrid) en ve
 - [x] Portadas (`motor.portadas`, elegidas a ojo, en `metadatos.json`).
 - [x] Fichas de variables (`estadisticas/fichas.json`, comprobadas).
 - [x] Vídeos y portadas enviados al chat. Correo de aviso enviado (id 1a221e0aa9b3d90c).
-- [ ] **Copia de MP4 y portadas a `Documents/Parece Mentira/lotes/2026-11-28-manana/` en el Mac**: el Mac se desconectó del puente al terminar. Hacerlo al dar el «ok» (están en el chat: file_uuid 01 67f3d252-10bc-4933-9673-4d65cf4ba959 · 02 664b51cc-3ad1-4cab-a39f-0ad724f01bc2 · 03 dbb34b67-600e-4e8c-902a-54744de7edee; portadas 4f4f2d02-9ff1-44fa-900c-ce2e1f79ec59, b16183db-a044-49d3-8746-0039db6e7257, 5580f64b-a9e5-4443-9b8a-bc08fa6e312e). Si el contenedor se ha reciclado, se vuelven a renderizar con `gen_0N.py` (MP3 en el Mac).
+- [x] Copia de MP4 y portadas a `Documents/Parece Mentira/lotes/2026-11-28-manana/` en el Mac (≈12:40, al volver el Mac; SHA-256 comprobado igual que en la tabla).
 
 ## Estado: **en revisión** (v1) — esperando «ok» en el chat
 
@@ -51,5 +51,6 @@ Archivo: `lotes/tendencias/2026-11-28.md`. Los tres salen de tendencias: 01 ← 
 - 02: profundidad «unos cinco centímetros» (las fuentes dan 4–5, 5, 5–8 y 8 cm). «Masa de aire polar» (Expansión cita a Conagua); ninguna fuente da número de frente frío. No se mencionan las víctimas del frío (regla: nada de muertes). «Más de dos mil metros de altura» es dato general de la ciudad, no de estas fuentes. Los chicos del dibujo no representan a nadie real.
 - 03: «se soplaba una bola o un cilindro» (ACerS dice corona; SciAm y DoITPoMS, cilindro: se dicen los dos). «En mil millones de años… un nanómetro» (ACerS sobre Gulbiten y Mauro 2017). «Más que la edad del universo» (SciAm y DoITPoMS).
 
-## Sin hacer en este turno
-- Datos de YouTube Studio (§1.8) y contestar comentarios (§8b): el turno empezó a las 11:45 y el Mac se desconectó al final.
+## Después de la entrega (chat, ≈12:45, Mac de nuevo conectado)
+- Datos de YouTube Studio (§1.8): «se quedaron viendo», vistas y horas de 20 Shorts del 21 al 26-11 en `estadisticas/studio.json` (falta HWHIzTy66Jc, no cargó a tiempo).
+- Comentarios (§8b): 6 respuestas redactadas y propuestas en el chat; se saltan 3 (salud, política y uno sin sentido). Sin publicar hasta que la persona lo confirme.

@@ -299,19 +299,163 @@
   "seg_por_vista": null
  },
  "W9NYUO0-CrU": {
-  "seQuedan": 45.5,
-  "fecha": "2026-11-22",
-  "hora": "11:08",
-  "vistas": 722,
-  "horas": 2.9,
-  "seg_por_vista": 14.5
+  "seQuedan": 47.0,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 907,
+  "horas": 5.0,
+  "seg_por_vista": 19.8
  },
  "LvYkPN5jc6A": {
+  "seQuedan": 63.0,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 466,
+  "horas": 2.7,
+  "seg_por_vista": 20.9
+ },
+ "kHT4ncQZNQ4": {
+  "seQuedan": 78.5,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 6100,
+  "horas": 47.6,
+  "seg_por_vista": 28.1
+ },
+ "awYmnuBzhrQ": {
+  "seQuedan": 64.9,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 2200,
+  "horas": 11.9,
+  "seg_por_vista": 19.5
+ },
+ "F4_DBK1lB50": {
+  "seQuedan": 65.2,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 4200,
+  "horas": 30.6,
+  "seg_por_vista": 26.2
+ },
+ "60lZvOqwFtw": {
+  "seQuedan": 72.6,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 4900,
+  "horas": 27.8,
+  "seg_por_vista": 20.4
+ },
+ "MfV8ypLlIU0": {
+  "seQuedan": 75.8,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 5500,
+  "horas": 40.2,
+  "seg_por_vista": 26.3
+ },
+ "3NbMXD2ksMI": {
+  "seQuedan": 60.0,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 2800,
+  "horas": 18.0,
+  "seg_por_vista": 23.1
+ },
+ "_8lkYb4lUG0": {
+  "seQuedan": 71.0,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1700,
+  "horas": 9.6,
+  "seg_por_vista": 20.3
+ },
+ "NcDWZOO-cEw": {
+  "seQuedan": 53.5,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1500,
+  "horas": 8.2,
+  "seg_por_vista": 19.7
+ },
+ "VIZRXKQ8eHQ": {
+  "seQuedan": 65.5,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1100,
+  "horas": 5.9,
+  "seg_por_vista": 19.3
+ },
+ "CcqDZeF_IjA": {
+  "seQuedan": 71.7,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 2100,
+  "horas": 12.4,
+  "seg_por_vista": 21.3
+ },
+ "pzAwPba_UOc": {
+  "seQuedan": 66.8,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1500,
+  "horas": 8.4,
+  "seg_por_vista": 20.2
+ },
+ "_DU6gOVopOM": {
+  "seQuedan": 62.1,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1500,
+  "horas": 11.4,
+  "seg_por_vista": 27.4
+ },
+ "WpmGRnjy2CE": {
+  "seQuedan": 67.5,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1700,
+  "horas": 9.9,
+  "seg_por_vista": 21.0
+ },
+ "E1QFyVyJ7kU": {
+  "seQuedan": 72.3,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 5800,
+  "horas": 62.2,
+  "seg_por_vista": 38.6
+ },
+ "0nGefmtqxcs": {
+  "seQuedan": 64.9,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1100,
+  "horas": 6.5,
+  "seg_por_vista": 21.3
+ },
+ "8ISC2-AoXSM": {
+  "seQuedan": 67.3,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 5100,
+  "horas": 40.0,
+  "seg_por_vista": 28.2
+ },
+ "mDzJGj7ZF0k": {
   "seQuedan": 58.6,
-  "fecha": "2026-11-22",
-  "hora": "11:08",
-  "vistas": 112,
-  "horas": 0.7,
-  "seg_por_vista": 22.5
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1100,
+  "horas": 5.9,
+  "seg_por_vista": 19.3
+ },
+ "DJWK7PCIAdY": {
+  "seQuedan": 52.8,
+  "fecha": "2026-11-28",
+  "hora": "12:45",
+  "vistas": 1000,
+  "horas": 4.4,
+  "seg_por_vista": 15.8
  }
 }
