@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-_Última actualización: 2026-11-27 20:35 — Agente 20:00 (Jorge) (lote 2026-11-27-tarde en revisión)_
+_Última actualización: 2026-11-28 12:25 — Agente 08:00 (Nico) (lote 2026-11-28-manana en revisión)_
 
 ## Resumen
 Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestructura casi lista; falta la voz y el montaje automático.
@@ -13,7 +13,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | GitHub (`parecementirapero/parece-mentira`) | ✅ conectado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Jorge | ✅ sesión iniciada en el navegador integrado |
 | YouTube / Instagram / TikTok / ElevenLabs — ordenador de Nico | ✅ sesión iniciada en el navegador integrado (2026-11-15) |
-| ElevenLabs | ✅ (quedan ≈7.700 caracteres el 27-11, ≈2 lotes; se renuevan el 15-12) voz «Archivo Oculto — Narración (clon)» (`op8soO9fvP07F3mjbJuB`, `eleven_v4`, 0.5/0.75), clave API en el Mac de Jorge («Parece Mentira») y en el de Nico («Parece Mentira - Nico»), prueba OK en los dos |
+| ElevenLabs | ✅ (quedan ≈6.650 caracteres el 28-11, ≈2 lotes; se renuevan el 15-12) voz «Archivo Oculto — Narración (clon)» (`op8soO9fvP07F3mjbJuB`, `eleven_v4`, 0.5/0.75), clave API en el Mac de Jorge («Parece Mentira») y en el de Nico («Parece Mentira - Nico»), prueba OK en los dos |
 | Carpeta local de trabajo | ✅ Nico: `/Users/nico/Documents/Parece Mentira` (referencias en `Documents/Codex/Parece Mentira/referencias`) · ✅ Jorge: `/Users/jorgegomez/Documents/Parece Mentira` |
 | Web de estadísticas (`estadisticas/`) — YouTube, TikTok e Instagram | 🟢 YouTube y TikTok conectados: se actualiza solo cada mañana (GitHub Actions) y la página «Parece Mentira · Estadísticas» de Claude se republica a las 9:14. Navegación suave y audiencia de YouTube (edad, países, dispositivos, fuentes) con gráficas. Conclusiones automáticas diarias (`estadisticas/datos/aprendizajes.md`) que el agente de lotes usa para decidir. 🟡 Falta Instagram |
 | Estudio de audiencia y rendimiento (`estadisticas/estudio/`) | 🟢 en marcha desde 2026-11-17: cada mañana, tras las estadísticas, se generan `estadisticas/datos/estudio.md` (qué se sabe y con qué nivel: pista / indicio / regla), `autopsias.md` y `mediciones.json` (24 h, 48 h, 7 d, 28 d); los lunes, informe semanal. 10 vídeos con ficha (todas retrospectivas). 🟡 Hoy solo 3 vídeos tienen lectura con 24 h o más: **nada pasa de «pista»**. 🟡 Audiencia por vídeo y comentarios: código listo, sin probar contra la API real. Pendiente de Nico y Jorge: público objetivo, primer experimento, confirmar la ficha en AGENTE |
@@ -25,6 +25,7 @@ Arranque de cero con cuentas compartidas. Nada publicado ahora mismo. Infraestru
 | Tarea programada 20:00 (Mac de Jorge) | ✅ creada; primera ejecución 2026-11-15 a las 19:52 |
 
 ## Contenido
+- En revisión: lote **2026-11-28-manana** v1 (en enero estamos más cerca del Sol, la nevada de Ciudad de México de 1967, el vidrio no se escurre; 55–58 s; los tres salen de tendencias; experimento: gancho POV en segunda persona en el 02). Vídeos en el chat https://claude.ai/code/session_019BG1dKjnnRjJqNw5DCuPje; la copia al Mac de Nico queda pendiente (se desconectó). El 03 lleva dos frases quitadas de la toma: oír los empalmes. ElevenLabs: quedan ≈6.650 caracteres.
 - En revisión: lote **2026-11-27-tarde** v1 (anochece dos veces en el Burj Khalifa, la capa de ozono mide tres milímetros, la piel de gallina; 53–59 s; 01 y 02 salen de tendencias; experimento: gancho de paradoja en el 01). Vídeos en el chat https://claude.ai/code/session_019BG1dK7GpyrYsYXE518JkF; la copia al Mac de Jorge queda pendiente (se desconectó). ElevenLabs: quedan ≈7.700 caracteres.
 - Pendiente de voz: lote **2026-11-26-tarde** (posponer la alarma, la cara oculta de la Luna, el Black Friday lo bautizó la policía; experimento: gancho de negación en el 02). Guiones, arte y generadores en `lotes/2026-11-26-tarde/`. El Mac de Jorge no respondió desde las 20:10. Se retoma con «sigue» en https://claude.ai/code/session_019BG1dJQa777yvYo7vRNCi3. ElevenLabs: quedan 10.285 caracteres (≈7.700 después de este lote).
 - **Publicado** (26-11, YouTube y TikTok: 01 a las 13:55, 02 a las 16:00, 03 a las 18:00): lote **2026-11-25-tarde** v1 (vibración fantasma, medallas olímpicas por arte, la Vía Láctea que casi nadie ve; 52–60 s), **primer lote con el estilo de dibujo del vídeo largo** (personajes y escenarios de `lotes/largo-cueva-500-dias`, a petición de Jorge). Hecho el 26-11 porque la tarea de las 20:00 está en pausa (Mac ausente: hay que reactivarla desde el Mac de Jorge). Vídeos en el chat https://claude.ai/code/session_019BG1dJB3X8kpbAbFL1YoGS y en `Documents/Parece Mentira/lotes/2026-11-25-tarde/` (Mac de Jorge). ElevenLabs: quedan 12.233 caracteres.

@@ -104,7 +104,7 @@ def _(d):
 def _(d):
     return P(VER, [BG("bg_playa_verano"), OB("termo_calor", 540, 1050, 300, keys=aparece(0.0)),
                    brillo(540, 1380, 220, "#ff5a2a", 0.6, 0.5, keys=late(0.3, 2, 0.12, 0.4))],
-             cam(1.0, 1.06, (540, 1050)), "corte", hud=[amarillo(0.2, d - 0.05, "VERANO", y=560, tam=130, color="#ff7a2a")], sfx=[(0.1, "subida", -20)])
+             cam(1.0, 1.06, (540, 1050)), "corte", hud=[cap(0.2, d - 0.05, "VERANO", "#ffffff", "#e0501ae6", 130, y=560)], sfx=[(0.1, "subida", -20)])
 
 
 @v.plano(46, "entonces, ¿por qué hace frío en enero?: ventana de invierno, nieva fuera")
@@ -188,7 +188,7 @@ def _(d):
 @v.plano(126, "enero es verano: el termómetro se pone rojo")
 def _(d):
     return P(VER, [BG("bg_playa_verano"), OB("termo_calor", 540, 1050, 300, keys=aparece(0.0)), OB("helado", 820, 1300, 220, keys=aparece(0.3))],
-             cam(1.0, 1.05, (540, 1050)), "corte", hud=[amarillo(0.0, d - 0.02, "ENERO: VERANO", y=560, tam=110, color="#ff7a2a")], sfx=[(0.1, "subida", -20)])
+             cam(1.0, 1.05, (540, 1050)), "corte", hud=[cap(0.0, d - 0.02, "ENERO: VERANO", "#ffffff", "#e0501ae6", 100, y=560)], sfx=[(0.1, "subida", -20)])
 
 
 @v.plano(129, "con días largos y calor: el sol hace un arco grande y alto")

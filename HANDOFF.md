@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-28 12:25 — Agente 08:00 (Nico) — rama `main` — lote 2026-11-28-manana en revisión
+**Hecho**: reserva (la tarea se disparó a las 11:45); créditos (9.286 → ≈6.650); tendencias (Google Trends MX/AR/CO/ES y YouTube Studio · Investigación en el navegador integrado; TikTok Creative Center pide sesión) → `lotes/tendencias/2026-11-28.md`; 3 temas de tendencias verificados con 3–4 fuentes; guiones (`motor.guion` sin ❌); voz por API desde el Mac; arte nuevo `ilus_1128m.py` y `gen_01..03.py`; render en la nube, `motor.calidad` sin ❌ (75/84/78), portadas, fichas; vídeos y portadas al chat; correo (id 1a221e0aa9b3d90c).
+**Bloqueos**: el Mac de Nico se desconectó del puente al terminar: MP4 y portadas sin copiar a la carpeta local (file_uuid en `lotes/2026-11-28-manana/estado.md`). Sin datos de Studio (§1.8) ni comentarios (§8b).
+**Decisión aplicada**: el prompt de la tarea dice «subida a la carpeta de Drive»; DECISIONS 2026-11-16 dice que Drive ya no se usa: se ha seguido DECISIONS (avisado en el correo).
+**Pruebas**: `motor.guion` ×3, hojas de fotogramas mirados con voz real, ffprobe, `motor.calidad` ×3, `ficha comprobar`. No se tocó `motor/`.
+**Siguiente paso**: «ok» (o cambios) en https://claude.ai/code/session_019BG1dKjnnRjJqNw5DCuPje → oír los empalmes del 03 → copiar MP4 al Mac → publicar según AGENTE §8.
+
+---
+
 ## 2026-11-27 20:50 — Agente 20:00 (Jorge) — rama `main` — lote 2026-11-27-tarde: 01 v2
 **Qué pasó**: en el chat del lote pidieron «haz mejor el edificio q parece un cohete vertebrado».
 **Hecho**: `torre()` de `ilus_1127t.py` rehecha (aguja fina con retranqueos alternos y cristal vertical); 01 v2 renderizado, `motor.calidad` sin ❌, portada nueva; enviado al chat.

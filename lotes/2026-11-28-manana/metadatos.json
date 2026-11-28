@@ -32,9 +32,18 @@
    "estructura": "comparación",
    "experimento": "no",
    "alcance": "universal",
-   "tendencia": "invierno / clima cdmx"
+   "tendencia": "invierno / clima cdmx",
+   "portada": "dato"
   },
-  "locucion": "Cerca del Sol, y helados. En enero estamos más cerca del Sol que nunca. Unos ciento cuarenta y siete millones de kilómetros. En julio, unos ciento cincuenta y dos: cinco millones más lejos. Y en México, en España o en Nueva York, julio es pleno verano. Entonces, ¿por qué hace frío en enero? Porque la distancia casi no importa. Lo que manda es la inclinación. La Tierra gira ladeada, unos veintitrés grados. En diciembre y enero, el norte mira hacia fuera del Sol. ¿Y qué pasa? Que los rayos llegan bajos, de lado, repartidos en más suelo, y los días son cortos. Menos horas de sol, y más flojas. Mientras, el sur mira de frente al Sol. Por eso en Argentina, en Chile o en Australia, enero es verano, con días largos y calor. El mismo planeta, con dos estaciones a la vez. ¿En tu país ahora hace frío o calor?"
+  "locucion": "Cerca del Sol, y helados. En enero estamos más cerca del Sol que nunca. Unos ciento cuarenta y siete millones de kilómetros. En julio, unos ciento cincuenta y dos: cinco millones más lejos. Y en México, en España o en Nueva York, julio es pleno verano. Entonces, ¿por qué hace frío en enero? Porque la distancia casi no importa. Lo que manda es la inclinación. La Tierra gira ladeada, unos veintitrés grados. En diciembre y enero, el norte mira hacia fuera del Sol. ¿Y qué pasa? Que los rayos llegan bajos, de lado, repartidos en más suelo, y los días son cortos. Menos horas de sol, y más flojas. Mientras, el sur mira de frente al Sol. Por eso en Argentina, en Chile o en Australia, enero es verano, con días largos y calor. El mismo planeta, con dos estaciones a la vez. ¿En tu país ahora hace frío o calor?",
+  "portada": {
+   "texto": "MÁS CERCA Y MÁS FRÍO",
+   "clave": "FRÍO",
+   "archivo": "01-portadas/portada.jpg",
+   "t": 54.75,
+   "diseno": "dato",
+   "motivo": "Sol enorme, Tierra con su eje y termómetro azul: se entiende la paradoja de un vistazo y coincide con el primer segundo; el texto no tapa al sujeto"
+  }
  },
  "02": {
   "archivo": "02-nevada-1967_v1.mp4",
@@ -73,9 +82,18 @@
    "estructura": "reconstrucción",
    "experimento": "gancho POV en segunda persona («Despiertas y está nevando.»)",
    "alcance": "nicho",
-   "tendencia": "nevada de la ciudad de méxico de 1967"
+   "tendencia": "nevada de la ciudad de méxico de 1967",
+   "portada": "dato"
   },
-  "locucion": "Despiertas y está nevando. Estás en Ciudad de México. Once de enero de mil novecientos sesenta y siete. ¿Nieve, aquí? Una masa de aire polar lleva dos días blanqueando el norte del país. Y a las dos de la madrugada, empieza a nevar en el Paseo de la Reforma. Cuatro grados bajo cero. La capital amanece blanca: unos cinco centímetros en San Ángel, en Chapultepec y en el mismísimo Zócalo. Los niños salen a jugar. La gente se lanza bolas de nieve en plena calle. Y los periódicos llenan la portada con fotos de Reforma nevada. La ciudad está a más de dos mil metros de altura. Pero desde que hay registros, solo ha nevado tres veces: en mil novecientos siete, en mil novecientos veinte… y esa, la de mil novecientos sesenta y siete. Desde entonces, ni un copo en el centro. Casi sesenta años. ¿Te lo contaron tus abuelos?"
+  "locucion": "Despiertas y está nevando. Estás en Ciudad de México. Once de enero de mil novecientos sesenta y siete. ¿Nieve, aquí? Una masa de aire polar lleva dos días blanqueando el norte del país. Y a las dos de la madrugada, empieza a nevar en el Paseo de la Reforma. Cuatro grados bajo cero. La capital amanece blanca: unos cinco centímetros en San Ángel, en Chapultepec y en el mismísimo Zócalo. Los niños salen a jugar. La gente se lanza bolas de nieve en plena calle. Y los periódicos llenan la portada con fotos de Reforma nevada. La ciudad está a más de dos mil metros de altura. Pero desde que hay registros, solo ha nevado tres veces: en mil novecientos siete, en mil novecientos veinte… y esa, la de mil novecientos sesenta y siete. Desde entonces, ni un copo en el centro. Casi sesenta años. ¿Te lo contaron tus abuelos?",
+  "portada": {
+   "texto": "NEVÓ EN MÉXICO",
+   "clave": "NEVÓ",
+   "archivo": "02-portadas/portada.jpg",
+   "t": 15.75,
+   "diseno": "dato",
+   "motivo": "La columna del ángel en la avenida nevada de noche, reconocible en México, con la nieve cayendo; texto arriba legible en 3:4"
+  }
  },
  "03": {
   "archivo": "03-vidrio-no-se-escurre_v1.mp4",
@@ -110,8 +128,17 @@
    "estructura": "misterio por pistas",
    "experimento": "no",
    "alcance": "universal",
-   "tendencia": "vidrio"
+   "tendencia": "vidrio",
+   "portada": "arriba"
   },
-  "locucion": "El vidrio no se escurre. Seguro te lo contaron así: el vidrio es un líquido muy lento, y por eso las ventanas de las catedrales antiguas son más gruesas abajo que arriba. Suena precioso… pero es falso. ¿Entonces por qué son más gruesas? Aquellos cristales se hacían a mano: se soplaba una bola o un cilindro de vidrio, se abría y se aplanaba. Nunca salía igual de grueso por todas partes. Y el cristalero, casi siempre, ponía la parte gruesa abajo. ¿Y si de verdad fluyera? En dos mil diecisiete, un equipo estudió el vidrio de la abadía de Westminster, del siglo trece: a temperatura ambiente, en mil millones de años se movería como mucho un nanómetro. Otros cálculos dicen que tardaría más que la edad del universo. El vidrio es un sólido, solo que con los átomos desordenados, como un líquido congelado al instante. ¿Tú también lo creías?"
+  "locucion": "El vidrio no se escurre. Seguro te lo contaron así: el vidrio es un líquido muy lento, y por eso las ventanas de las catedrales antiguas son más gruesas abajo que arriba. Suena precioso… pero es falso. ¿Entonces por qué son más gruesas? Aquellos cristales se hacían a mano: se soplaba una bola o un cilindro de vidrio, se abría y se aplanaba. Nunca salía igual de grueso por todas partes. Y el cristalero, casi siempre, ponía la parte gruesa abajo. ¿Y si de verdad fluyera? En dos mil diecisiete, un equipo estudió el vidrio de la abadía de Westminster, del siglo trece: a temperatura ambiente, en mil millones de años se movería como mucho un nanómetro. Otros cálculos dicen que tardaría más que la edad del universo. El vidrio es un sólido, solo que con los átomos desordenados, como un líquido congelado al instante. ¿Tú también lo creías?",
+  "portada": {
+   "texto": "EL VIDRIO NO GOTEA",
+   "clave": "NO",
+   "archivo": "03-portadas/portada.jpg",
+   "t": 32.75,
+   "diseno": "arriba",
+   "motivo": "Primer plano de las gotas de colores de la vidriera: la imagen más llamativa y la que el vídeo desmiente; el texto se lee en la cuadrícula"
+  }
  }
 }

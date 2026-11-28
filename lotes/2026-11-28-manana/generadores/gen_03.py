@@ -76,7 +76,7 @@ def _(d):
 @v.plano(39, "pero es falso: la vidriera que gotea se tacha")
 def _(d):
     return P(CAT, [BG("bg_catedral"), vid(540, 1000, 600, True)] + tacha(540, 1000, 0.2, 280),
-             cam(1.1, 1.15, (540, 1050)), "corte", hud=[amarillo(0.2, d - 0.05, "FALSO", y=1520, tam=150, color="#ff3d3d")], sfx=[(0.2, "impacto", -16)])
+             cam(1.1, 1.15, (540, 1050)), "corte", hud=[cap(0.2, d - 0.05, "FALSO", "#ffffff", "#c0392be6", 140, y=1250)], sfx=[(0.2, "impacto", -16)])
 
 
 @v.plano(42, "¿entonces por qué son más gruesas?: el corte del cristal gira")
@@ -135,7 +135,7 @@ def _(d):
 @v.plano(86, "¿y si de verdad fluyera?: la vidriera vuelve a gotear")
 def _(d):
     return P(CAT, [BG("bg_catedral"), vid(540, 1000, 600, True)] + gotas(540, 1560, d, 1), cam(1.1, 1.15, (540, 1150)), "corte",
-             hud=[amarillo(0.1, d - 0.05, "¿Y SI FLUYERA?", y=560, tam=110, color=CIAN)], sfx=[(0.1, "agua", -20)])
+             hud=[amarillo(0.0, d - 0.02, "¿Y SI FLUYERA?", y=560, tam=110, color=CIAN)], sfx=[(0.1, "agua", -20)])
 
 
 @v.plano(91, "en dos mil diecisiete, un equipo: la investigadora con el cristal")
@@ -217,6 +217,14 @@ def micro(fondo, els, txt=None, col="#ffffff", cap_f="#c0392be6", sfx="pop"):
     return fn
 
 
+
+
+v.plano(4, "micro: gota de vidrio que cae", mas=0.6)(micro(CAT, lambda d: [BG("bg_catedral"), OB("gota", 540, 1000, 380, keys=[{"t": 0, "y": 850}, {"t": d, "y": 1100}])], sfx="agua"))
+v.plano(25, "micro: la rosa de colores", mas=0.15)(micro(CAT, lambda d: [BG("bg_catedral"), OB("abadia", 540, 1500, 2300)], sfx="brillo"))
+v.plano(47, "micro: el horno al rojo", mas=0.5)(micro(TALLER, lambda d: [BG("bg_taller_vidrio"), brillo(540, 1000, 500, "#ff8a20", 0.7, 0.5)], sfx="rumor"))
+v.plano(75, "micro: el centro grueso del disco", mas=0.2)(micro(TALLER, lambda d: [BG("bg_taller_vidrio"), OB("disco_vidrio", 540, 1000, 1800, keys=[{"t": 0, "rot": 0}, {"t": d, "rot": 30}])], sfx="tic"))
+v.plano(90, "micro: las gotas de colores", mas=0.4)(micro(CAT, lambda d: [BG("bg_catedral"), OB("vidriera_gotea", 540, 300, 1400)], sfx="agua"))
+v.plano(137, "micro: galaxia", mas=0.5)(micro(ESP, lambda d: [BG("bg_via_lactea"), estrellas(120, 11)], sfx="brillo"))
 
 
 v.construir("2026-11-28-manana-03-vidrio-no-se-escurre", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 1283, "db": -13},

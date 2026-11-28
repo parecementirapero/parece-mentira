@@ -31,7 +31,7 @@ def calle(extra=(), sem=1, columna=True, cx=540, alto=1250):
 
 @v.plano(0, "gancho: la columna del ángel de noche, nevando; un copo grande cae delante")
 def _(d):
-    return P(NOCHE, calle([OB("copo_nieve", 830, 700, 260, z=0.8, keys=[{"t": 0, "y": 620, "rot": 0}, {"t": d, "y": 1150, "rot": 120}]),
+    return P(NOCHE, calle([OB("copo_nieve", 830, 700, 260, z=0.8, keys=[{"t": 0, "y": 560, "rot": 0}, {"t": 0.6, "y": 760, "rot": 40, "ease": "lineal"}, {"t": d, "y": 1150, "rot": 120}]),
                            OB("nieve_suelo", 540, 1700, 1200, z=0.7)], 1, alto=1150),
              cam(1.0, 1.08, (540, 900)), vineta=0.35, sfx=[(0.0, "whoosh", -16), (0.4, "brillo", -20)])
 
@@ -207,6 +207,14 @@ def micro(fondo, els, txt=None, col="#ffffff", cap_f="#c0392be6", sfx="pop"):
 v.plano(2, "micro: copo enorme")(micro(NOCHE, lambda d: [BG("bg_reforma_nieve"), nieve(80, 22), OB("copo_nieve", 540, 1000, 720, keys=[{"t": 0, "rot": 0}, {"t": d, "rot": 30}])], sfx="brillo"))
 v.plano(68, "micro: el ángel nevado")(micro(NOCHE, lambda d: [BG("bg_reforma_nieve"), nieve(90, 23), OB("columna_angel", 540, 1750, 640, z=0.3)], sfx="brillo"))
 v.plano(103, "micro: 2.000 metros")(micro(NOCHE, lambda d: [BG("bg_ciudad"), nieve(40, 24)], "2.000 M", "#141414", "#5dff8ae6", "impacto"))
+
+
+v.plano(17, "micro: el calendario de 1967", mas=0.35)(micro(SEPIA, lambda d: [BG("bg_galeria"), OB("calendario_hoja", 540, 1000, 640)], sfx="tic"))
+v.plano(32, "micro: la nieve que cubre el norte", mas=0.2)(micro(INV, lambda d: [BG("bg_alpes_nieve"), nieve(160, 25), OB("copo_nieve", 700, 900, 380, keys=[{"t": 0, "rot": 0}, {"t": d, "rot": 25}])], sfx="roce"))
+v.plano(52, "micro: el bulbo helado", mas=0.2)(micro(INV, lambda d: [BG("bg_reforma_nieve"), OB("termo_frio", 540, 700, 700)], sfx="tic"))
+v.plano(84, "micro: bola de nieve en primer plano", mas=0.2)(micro(["#8aa4c8", "#e8f0fa"], lambda d: [BG("bg_reforma_nieve"), OB("bola_nieve", 540, 1000, 700, keys=[{"t": 0, "rot": 0}, {"t": d, "rot": 40}])], sfx="golpe"))
+v.plano(116, "micro: muñeco de nieve", mas=0.2)(micro(INV, lambda d: [BG("bg_reforma_nieve"), nieve(80, 26), OB("muneco_nieve", 540, 1150, 760)], sfx="pop"))
+v.plano(133, "micro: el ángel dorado", mas=0.2)(micro(NOCHE, lambda d: [BG("bg_reforma_nieve"), nieve(90, 27), OB("columna_angel", 540, 1950, 1000, z=0.3)], sfx="brillo"))
 
 
 v.construir("2026-11-28-manana-02-nevada-1967", version=1, bucle=0.35, musica={"generar": "curiosidad", "semilla": 1282, "db": -13},
