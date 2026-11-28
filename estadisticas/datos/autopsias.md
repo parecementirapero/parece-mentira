@@ -28,7 +28,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 45,5 % | 34 h (provisional) | 0,70 |
 | segundos por vista (YouTube) | 14,5 s | 34 h (provisional) | 0,61 |
-| vistas (YouTube) | 822  | 48 h | 0,54 |
+| vistas (YouTube) | 822  | 48 h | 0,55 |
 
 **Diagnóstico: Fallo de tema: el primer segundo está dentro de norma y aun así la gente desliza.**
 
@@ -45,8 +45,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | | Valor | Edad de la lectura | Frente al canal |
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 79,7 % | 45 h (provisional) | 1,23 |
-| vistas (YouTube) | 10.119  | 48 h | 6,68 |
-| vistas (TikTok) | 256  | 48 h | 1,02 |
+| vistas (YouTube) | 10.119  | 48 h | 6,79 |
+| vistas (TikTok) | 256  | 48 h | 1,04 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -64,8 +64,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 71,5 % | 46 h (provisional) | 1,10 |
 | segundos por vista (YouTube) | 26,2 s | 46 h (provisional) | 1,10 |
-| vistas (YouTube) | 2.524  | 48 h | 1,67 |
-| vistas (TikTok) | 252  | 48 h | 1,00 |
+| vistas (YouTube) | 2.524  | 48 h | 1,69 |
+| vistas (TikTok) | 252  | 48 h | 1,03 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -83,7 +83,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 69,7 % | 61 h | 1,08 |
 | segundos por vista (YouTube) | 29,5 s | 61 h | 1,24 |
-| vistas (YouTube) | 3.672  | 48 h | 2,42 |
+| vistas (YouTube) | 3.672  | 48 h | 2,46 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -96,7 +96,7 @@ _Las frases se sitúan por estimación (±2 s)._
 | se quedaron viendo (YouTube) | 59,1 % | 62 h | 0,91 |
 | segundos por vista (YouTube) | 15,0 s | 62 h | 0,63 |
 | vistas (YouTube) | 24  | 48 h | 0,02 |
-| vistas (TikTok) | 251  | 48 h | 1,00 |
+| vistas (TikTok) | 251  | 48 h | 1,02 |
 
 **Diagnóstico: Fallo de ritmo: entran, pero se van a mitad.**
 
@@ -108,8 +108,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 65,9 % | 63 h | 1,02 |
 | segundos por vista (YouTube) | 24,2 s | 63 h | 1,02 |
-| vistas (YouTube) | 1.714  | 48 h | 1,13 |
-| vistas (TikTok) | 277  | 48 h | 1,10 |
+| vistas (YouTube) | 1.714  | 48 h | 1,15 |
+| vistas (TikTok) | 277  | 48 h | 1,13 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -123,8 +123,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 24,9 s | 36 h (provisional) | 1,05 |
 | tiempo medio (TikTok) | 6,4 s | 35 h (provisional) | 0,45 |
 | lo ven entero (TikTok) | 1,5 % | 35 h (provisional) | 0,12 |
-| vistas (YouTube) | 3.224  | 48 h | 2,13 |
-| vistas (TikTok) | 58  | 48 h | 0,23 |
+| vistas (YouTube) | 3.224  | 48 h | 2,16 |
+| vistas (TikTok) | 58  | 48 h | 0,24 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -144,8 +144,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 26,7 s | 36 h (provisional) | 1,12 |
 | tiempo medio (TikTok) | 14,4 s | 35 h (provisional) | 1,00 |
 | lo ven entero (TikTok) | 8,5 % | 35 h (provisional) | 0,65 |
-| vistas (YouTube) | 2.295  | 48 h | 1,52 |
-| vistas (TikTok) | 232  | 48 h | 0,92 |
+| vistas (YouTube) | 2.295  | 48 h | 1,54 |
+| vistas (TikTok) | 232  | 48 h | 0,95 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -165,8 +165,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 23,9 s | 38 h (provisional) | 1,01 |
 | tiempo medio (TikTok) | 12,2 s | 35 h (provisional) | 0,85 |
 | lo ven entero (TikTok) | 5,4 % | 35 h (provisional) | 0,42 |
-| vistas (YouTube) | 1.491  | 48 h | 0,98 |
-| vistas (TikTok) | 242  | 48 h | 0,96 |
+| vistas (YouTube) | 1.491  | 48 h | 1,00 |
+| vistas (TikTok) | 242  | 48 h | 0,99 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -184,7 +184,7 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 35,2 % | 46 h (provisional) | 0,54 |
 | segundos por vista (YouTube) | 11,5 s | 46 h (provisional) | 0,48 |
-| vistas (YouTube) | 1.114  | 48 h | 0,74 |
+| vistas (YouTube) | 1.114  | 48 h | 0,75 |
 | vistas (TikTok) | 5  | 48 h | 0,02 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
@@ -204,8 +204,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 47,7 % | 47 h (provisional) | 0,74 |
 | segundos por vista (YouTube) | 19,8 s | 47 h (provisional) | 0,83 |
-| vistas (YouTube) | 1.405  | 48 h | 0,93 |
-| vistas (TikTok) | 240  | 48 h | 0,96 |
+| vistas (YouTube) | 1.405  | 48 h | 0,94 |
+| vistas (TikTok) | 240  | 48 h | 0,98 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
 Fuera de norma: 13 palabras en pantalla en el fotograma 0 (norma: 5 o menos); primera frase de 11 palabras (norma: 9 como mucho).
@@ -224,8 +224,8 @@ _Las frases se sitúan por estimación (±2 s)._
 |---|---|---|---|
 | se quedaron viendo (YouTube) | 63,5 % | 48 h | 0,98 |
 | segundos por vista (YouTube) | 23,6 s | 48 h | 0,99 |
-| vistas (YouTube) | 2.194  | 48 h | 1,45 |
-| vistas (TikTok) | 275  | 48 h | 1,10 |
+| vistas (YouTube) | 2.194  | 48 h | 1,47 |
+| vistas (TikTok) | 275  | 48 h | 1,12 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
@@ -245,8 +245,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 29,4 s | 50 h | 1,24 |
 | tiempo medio (TikTok) | 22,4 s | 50 h | 1,56 |
 | lo ven entero (TikTok) | 21,6 % | 50 h | 1,66 |
-| vistas (YouTube) | 6.462  | 48 h | 4,27 |
-| vistas (TikTok) | 285  | 48 h | 1,14 |
+| vistas (YouTube) | 6.462  | 48 h | 4,33 |
+| vistas (TikTok) | 285  | 48 h | 1,16 |
 
 **Diagnóstico: Acierto: gancho y retención claramente por encima de lo normal del canal.**
 
@@ -275,8 +275,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 16,8 s | 71 h | 0,71 |
 | tiempo medio (TikTok) | 13,7 s | 26 h (provisional) | 0,95 |
 | lo ven entero (TikTok) | 16,1 % | 26 h (provisional) | 1,24 |
-| vistas (YouTube) | 1.220  | 48 h | 0,81 |
-| vistas (TikTok) | 409  | 48 h | 1,63 |
+| vistas (YouTube) | 1.220  | 48 h | 0,82 |
+| vistas (TikTok) | 409  | 48 h | 1,67 |
 
 **Diagnóstico: Fallo de primer segundo: gancho bajo y el arranque se sale de la norma.**
 Fuera de norma: primera frase de 18 palabras (norma: 9 como mucho).
@@ -303,8 +303,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 17,7 s | 71 h | 0,75 |
 | tiempo medio (TikTok) | 16,5 s | 26 h (provisional) | 1,15 |
 | lo ven entero (TikTok) | 13,0 % | 26 h (provisional) | 1,00 |
-| vistas (YouTube) | 1.428  | 48 h | 0,94 |
-| vistas (TikTok) | 426  | 48 h | 1,70 |
+| vistas (YouTube) | 1.428  | 48 h | 0,96 |
+| vistas (TikTok) | 426  | 48 h | 1,74 |
 
 **Diagnóstico: Fallo de ritmo: entran, pero se van a mitad.**
 
@@ -325,8 +325,8 @@ _Las frases se sitúan por estimación (±2 s)._
 | segundos por vista (YouTube) | 26,5 s | 31 h (provisional) | 1,12 |
 | tiempo medio (TikTok) | 19,8 s | 33 h (provisional) | 1,37 |
 | lo ven entero (TikTok) | 21,7 % | 33 h (provisional) | 1,67 |
-| vistas (YouTube) | 11.122  | 48 h | 7,34 |
-| vistas (TikTok) | 618  | 48 h | 2,46 |
+| vistas (YouTube) | 11.122  | 48 h | 7,46 |
+| vistas (TikTok) | 618  | 48 h | 2,52 |
 
 **Diagnóstico: Dentro de lo normal del canal.**
 
