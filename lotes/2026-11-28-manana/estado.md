@@ -17,7 +17,7 @@ _Agente 08:00 (Nico). La tarea programada se disparó a las 11:45 (Madrid) en ve
 - [x] Vídeos y portadas enviados al chat. Correo de aviso enviado (id 1a221e0aa9b3d90c).
 - [x] Copia de MP4 y portadas a `Documents/Parece Mentira/lotes/2026-11-28-manana/` en el Mac (≈12:40, al volver el Mac; SHA-256 comprobado igual que en la tabla).
 
-## Estado: **en revisión** (v1) — esperando «ok» en el chat
+## Estado: **publicando** (v1, aprobado en el chat ≈12:52: «súbelos» → confirmado «Solo los 3 vídeos»)
 
 | # | Archivo | Duración | SHA-256 |
 |---|---|---|---|
@@ -54,3 +54,8 @@ Archivo: `lotes/tendencias/2026-11-28.md`. Los tres salen de tendencias: 01 ← 
 ## Después de la entrega (chat, ≈12:45, Mac de nuevo conectado)
 - Datos de YouTube Studio (§1.8): «se quedaron viendo», vistas y horas de 20 Shorts del 21 al 26-11 en `estadisticas/studio.json` (falta HWHIzTy66Jc, no cargó a tiempo).
 - Comentarios (§8b): 5 respuestas redactadas y propuestas en el chat; se saltan 3 (salud, política y uno sin sentido). Sin publicar hasta que la persona lo confirme.
+
+## Publicación
+- YouTube (API desde el Mac, portada propia «puesta» en los tres): 01 https://youtube.com/shorts/Twgi7PB591o (público ≈12:55) · 02 https://youtube.com/shorts/aSdDivCV7aE (programado 13:55) · 03 https://youtube.com/shorts/Tk51LhcT_UE (programado 14:55).
+- TikTok: pendiente (navegador integrado; la persona elige los archivos `PARA PUBLICAR/2811m-*`).
+- Respuestas a comentarios de YouTube: NO publicadas (la persona eligió «Solo los 3 vídeos»).
