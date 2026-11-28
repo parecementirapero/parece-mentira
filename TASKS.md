@@ -4,7 +4,6 @@ Formato en curso: `- [ ] tarea — Nico|Jorge — AAAA-MM-DD HH:MM — nota`
 Regla: si una tarea está en curso por la otra persona, no se toca.
 
 ## En curso
-- [ ] Lote 2026-11-28-tarde (adelantado, pedido por Jorge en el chat del lote 2026-11-27-tarde) — Jorge (con el agente) — 2026-11-28 17:47 — sesión https://claude.ai/code/session_019BG1dK7GpyrYsYXE518JkF
 - [ ] Lote 2026-11-26-tarde — Agente 20:00 (Jorge) — 2026-11-26 21:20 — **pendiente de voz**: guiones, metadatos, arte y generadores hechos (`lotes/2026-11-26-tarde/`). El Mac de Jorge se cayó del puente a las 20:10. Se retoma escribiendo «sigue» en https://claude.ai/code/session_019BG1dJQa777yvYo7vRNCi3 con el Mac encendido
 - [ ] Lote 2026-11-19-tarde — Agente 20:00 (Jorge) — 2026-11-20 12:55 — **pendiente de voz**: guiones, metadatos y generadores hechos (`lotes/2026-11-19-tarde/`); el Mac de Jorge se cayó del puente a las 12:55. Se retoma en https://claude.ai/code/session_019BG1dKjUgmMjL827TDKKHq (reintentos 14:21 y 15:21 sin Mac; se retoma escribiendo en ese chat). La tarea de las 20:00 del 19-11 se disparó el 20-11 a las 12:49
 - [ ] Lote 2026-11-19-manana — Agente 08:00 (Nico) — 2026-11-19 18:36 — **pendiente de voz**: guiones, metadatos y generadores hechos; voz de 01 y 02 en el Mac de Nico; falta la del 03, render, calidad, portadas y entrega. Se retoma en el chat https://claude.ai/code/session_019BG1dHnK2nwYYSBBZnUxmf cuando el Mac vuelva (se cayó a las 18:42). La tarea programada se disparó a las 18:35 en vez de a las 07:52
@@ -64,8 +63,9 @@ Regla: si una tarea está en curso por la otra persona, no se toca.
 - [ ] Decidir si se limpian los títulos de los vídeos antiguos (ahora privados)
 
 ## Hecho
+- [x] Lote 2026-11-28-tarde (adelantado, pedido por Jorge) — Jorge (con el agente) — 2026-11-28 18:40 — **en revisión** (v1: el segundo intercalar, las estrellas en las fotos del Apolo, la tostada). «ok» en https://claude.ai/code/session_019BG1dK7GpyrYsYXE518JkF. MP4 ya en el Mac
 - [x] Lote 2026-11-28-manana — Agente 08:00 (Nico) — 2026-11-28 12:25 — **en revisión** (v1: en enero estamos más cerca del Sol, la nevada de Ciudad de México de 1967, el vidrio no se escurre; los tres de tendencias). «ok» en https://claude.ai/code/session_019BG1dKjnnRjJqNw5DCuPje. Falta copiar los MP4 al Mac (se desconectó) y oír los empalmes del 03
-- [x] Lote 2026-11-27-tarde — Agente 20:00 (Jorge) — 2026-11-27 20:35 — **en revisión** (v1: anochece dos veces en el Burj Khalifa, la capa de ozono mide tres milímetros, la piel de gallina). «ok» en https://claude.ai/code/session_019BG1dK7GpyrYsYXE518JkF. Falta copiar los MP4 al Mac (estaba fuera del puente)
+- [x] Lote 2026-11-27-tarde — Agente 20:00 (Jorge) — 2026-11-27 20:35 — **en revisión** (v1: anochece dos veces en el Burj Khalifa, la capa de ozono mide tres milímetros, la piel de gallina). «ok» en https://claude.ai/code/session_019BG1dK7GpyrYsYXE518JkF. MP4 copiados al Mac el 28-11
 - [x] Vídeo largo «El que copiaba en el colegio» — Jorge (con el agente) — 2026-11-27 01:10 — **publicado**: YouTube largo olrobKKTa44 (4:45, 16:9) y TikTok corto 7712633311755128086 (59 s, estilo B); música propia «cine_epico»
 - [x] Lote 2026-11-25-tarde v1 — Jorge (con el agente) — 2026-11-26 13:45 — **publicado** en YouTube y TikTok (01 ya, 02 a las 16:00, 03 a las 18:00 del 26-11); estilo de dibujo del vídeo largo
 - [x] Lote 2026-11-25-manana — Nico (con el agente) — 2026-11-25 19:45 — **en revisión** (v1): Hubble miope, dedos arrugados, olivo de Roma. Vídeos en el chat https://claude.ai/code/session_019BG1dKEg4xbEPyKDNcseyw y en el Mac de Nico. Falta «ok», horario y oír los empalmes del 01 y el 03

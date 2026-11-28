@@ -1,0 +1,140 @@
+{
+ "01": {
+  "archivo": "01-segundo-intercalar_v1.mp4",
+  "titulo": "Este segundo NO existe ⏰ 23:59:60",
+  "youtube": {
+   "titulo": "Este segundo NO existe ⏰ 23:59:60 #Shorts",
+   "descripcion": "Algunos minutos han tenido 61 segundos. Es el segundo intercalar: como la Tierra no gira siempre igual, desde 1972 se han añadido 27 para cuadrar los relojes atómicos con el planeta. Pero a los ordenadores no les gusta, y en 2022 se votó jubilarlo: hacia 2035 no habrá más.\n\n#Shorts #tiempo #reloj #ciencia #tierra #parecementira #curiosidades #sabiasque #datoscuriosos",
+   "publico": true,
+   "para_ninos": false
+  },
+  "tiktok": {
+   "texto": "Este segundo NO existe ⏰ 23:59:60 Algunos minutos han tenido 61 segundos. Es el segundo intercalar: como la Tierra no gira siempre igual, desde 1972 se han añadido 27 para cuadrar los relojes atómicos con el planeta. Pero a los ordenadores no les gusta, y en 2022 se votó jubilarlo: hacia 2035 no habrá más. #tiempo #reloj #ciencia #tierra #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
+  },
+  "fuentes": [
+   {
+    "titulo": "timeanddate — Leap seconds (23:59:60; 27 desde 1972; rotación irregular)",
+    "url": "https://www.timeanddate.com/time/leapseconds.html"
+   },
+   {
+    "titulo": "Live Science (2022) — Pesky 'leap second' will be abolished by 2035 (fallos en sistemas informáticos; un minuto en un siglo)",
+    "url": "https://www.livescience.com/goodbye-leap-second-2035"
+   },
+   {
+    "titulo": "Nature / Scientific American (18-11-2022) — The leap second's time is up (CGPM cerca de París; desde 2035; ≈1 minuto en un siglo; Google lo reparte en las horas de alrededor)",
+    "url": "https://www.scientificamerican.com/article/the-leap-seconds-time-is-up-world-votes-to-stop-pausing-clocks/"
+   }
+  ],
+  "comentario": "¿Sabías que un minuto puede tener 61 segundos? ⏰ Te leo 👇",
+  "etiquetas": {
+   "tema": "Ciencia",
+   "gancho": "negacion",
+   "estructura": "misterio por pistas",
+   "experimento": "gancho de negación",
+   "alcance": "universal",
+   "tendencia": "segundo intercalar (Studio · Investigación)",
+   "portada": "arriba"
+  },
+  "locucion": "Este segundo no existe. Mira el reloj: veintitrés, cincuenta y nueve, sesenta. Ese minuto tuvo sesenta y un segundos. Se llama segundo intercalar. Los relojes atómicos casi no fallan, pero la Tierra no gira siempre igual de rápido. A la larga se va frenando, un poquito. Así que, cuando la hora de los relojes y la del planeta se separan casi un segundo, se mete uno extra justo antes de medianoche. Desde mil novecientos setenta y dos se han añadido veintisiete. ¿El problema? A los ordenadores no les gusta un segundo que no existe: puede hacer fallar sistemas. Google, por ejemplo, lo reparte poco a poco en las horas de alrededor. Por eso, en dos mil veintidós, cerca de París, se votó jubilarlo: hacia dos mil treinta y cinco no se añadirán más. Dejarán que la diferencia crezca hasta un minuto, y para eso hará falta un siglo. ¿Tú lo sabías?",
+  "portada": {
+   "texto": "ESTE SEGUNDO NO EXISTE",
+   "clave": "NO EXISTE",
+   "archivo": "01-portadas/portada.jpg",
+   "t": 23.75,
+   "diseno": "arriba",
+   "motivo": "la Tierra grande y limpia con el texto arriba; ninguna candidata enseñaba el reloj"
+  }
+ },
+ "02": {
+  "archivo": "02-estrellas-luna_v1.mp4",
+  "titulo": "¿Dónde están las ESTRELLAS? 🌑📷",
+  "youtube": {
+   "titulo": "¿Dónde están las ESTRELLAS? 🌑📷 #Shorts",
+   "descripcion": "En las fotos del Apolo el cielo de la Luna sale negro y sin estrellas. No es un truco: la cámara se ajustó para el suelo iluminado y los trajes blancos, con muy poca luz y muy poco tiempo, y las estrellas son demasiado débiles para salir. Con una exposición larga aparecen… pero todo lo demás sale quemado.\n\n#Shorts #luna #apolo #espacio #fotografia #parecementira #curiosidades #sabiasque #datoscuriosos",
+   "publico": true,
+   "para_ninos": false
+  },
+  "tiktok": {
+   "texto": "¿Dónde están las ESTRELLAS? 🌑📷 En las fotos del Apolo el cielo de la Luna sale negro y sin estrellas. No es un truco: la cámara se ajustó para el suelo iluminado y los trajes blancos, con muy poca luz y muy poco tiempo, y las estrellas son demasiado débiles para salir. Con una exposición larga aparecen… pero todo lo demás sale quemado. #luna #apolo #espacio #fotografia #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
+  },
+  "fuentes": [
+   {
+    "titulo": "The Planetary Society — Why are there no stars in most space images? (exposición corta para la superficie iluminada y los trajes blancos; con exposición larga el primer plano se quema)",
+    "url": "https://www.planetary.org/articles/why-are-there-no-stars"
+   },
+   {
+    "titulo": "Discovery — Why aren't there stars in the Moon landing photos? (sin atmósfera el cielo es negro; el sol tan fuerte como al mediodía en la Tierra)",
+    "url": "https://www.discovery.com/science/apollo-50th-anniversary/why-aren-t-there-stars-in-the-moon-landing-photos-"
+   },
+   {
+    "titulo": "NASA Earth Matters — Where are the stars? (Apolo y Estación Espacial: exposición demasiado corta)",
+    "url": "https://science.nasa.gov/blogs/earth-matters/2011/09/28/where-are-the-stars/"
+   }
+  ],
+  "comentario": "¿Alguna vez te lo habías preguntado? 🌑 Te leo 👇",
+  "etiquetas": {
+   "tema": "Espacio",
+   "gancho": "pregunta",
+   "estructura": "mito y realidad",
+   "experimento": "no",
+   "alcance": "universal",
+   "tendencia": "estrellas en las fotos de la Luna (Studio · Investigación)",
+   "portada": "abajo"
+  },
+  "locucion": "¿Dónde están las estrellas? En las fotos del Apolo, ni una. El cielo de la Luna sale negro. Y no, no es un truco. Allí no hay aire, así que el cielo es negro también de día. Pero el sol pega igual de fuerte que aquí al mediodía. La cámara se ajustó para el suelo iluminado y los trajes blancos: muy poca luz y muy poco tiempo. Y las estrellas son tan débiles que no les da tiempo a aparecer. Es como hacerle una foto a un amigo bajo una farola, de noche: él sale bien y el cielo, vacío. Si dejas la cámara abierta mucho rato, las estrellas aparecen, pero el suelo y los astronautas salen blancos, quemados. Por eso casi ninguna foto de día en el espacio tiene estrellas, tampoco las de la Estación Espacial. Estaban ahí. ¿Lo sabías?",
+  "portada": {
+   "texto": "¿Y LAS ESTRELLAS?",
+   "clave": "ESTRELLAS",
+   "archivo": "02-portadas/portada.jpg",
+   "t": 1.75,
+   "diseno": "abajo",
+   "motivo": "el astronauta grande y el cielo negro, igual que el primer segundo"
+  }
+ },
+ "03": {
+  "archivo": "03-tostada_v1.mp4",
+  "titulo": "Tu tostada SIEMPRE cae así 🍞🧈",
+  "youtube": {
+   "titulo": "Tu tostada SIEMPRE cae así 🍞🧈 #Shorts",
+   "descripcion": "No es mala suerte: es física. En 1995 Robert Matthews explicó que, desde la altura de una mesa normal, la tostada solo tiene tiempo de dar media vuelta antes de llegar al suelo. Para caer bien, la mesa tendría que medir unos 3 metros. El truco: si se cae, empújala rápido hacia delante.\n\n#Shorts #tostada #desayuno #fisica #ciencia #parecementira #curiosidades #sabiasque #datoscuriosos",
+   "publico": true,
+   "para_ninos": false
+  },
+  "tiktok": {
+   "texto": "Tu tostada SIEMPRE cae así 🍞🧈 No es mala suerte: es física. En 1995 Robert Matthews explicó que, desde la altura de una mesa normal, la tostada solo tiene tiempo de dar media vuelta antes de llegar al suelo. Para caer bien, la mesa tendría que medir unos 3 metros. El truco: si se cae, empújala rápido hacia delante. #tostada #desayuno #fisica #ciencia #parecementira #curiosidades #sabiasque #datoscuriosos #fyp #parati"
+  },
+  "fuentes": [
+   {
+    "titulo": "Matthews (1995), European Journal of Physics — Tumbling toast, Murphy's Law and the fundamental constants (texto anotado; mesa de 75 cm, media vuelta, ≈3 m para vuelta entera, empujón > 1,6 m/s, BBC 300 lanzamientos 50/50)",
+    "url": "https://fermatslibrary.com/s/tumbling-toast-murphy-s-law-and-i-i-the-fundamental-constants"
+   },
+   {
+    "titulo": "Wikipedia (en) — Buttered toast phenomenon (Ig Nobel de Física 1996; mantequilla despreciable; mesas de más de 3 m)",
+    "url": "https://en.wikipedia.org/wiki/Buttered_toast_phenomenon"
+   },
+   {
+    "titulo": "Gizmodo (2011) — An experiment that solves the world's most important question (empujón rápido)",
+    "url": "https://gizmodo.com/an-experiment-that-solves-the-worlds-most-important-que-5867322"
+   }
+  ],
+  "comentario": "¿Te ha pasado hoy? 🍞 Te leo 👇",
+  "etiquetas": {
+   "tema": "Cotidiano",
+   "gancho": "historia",
+   "estructura": "experimento",
+   "experimento": "no",
+   "alcance": "universal",
+   "tendencia": "no",
+   "portada": "dato"
+  },
+  "locucion": "Se te cae la tostada. ¿Y cómo cae? Con la mantequilla abajo. No es mala suerte: es física. En mil novecientos noventa y cinco, el físico Robert Matthews lo explicó. Y no es por el peso de la mantequilla: casi no cuenta. Cuando la tostada resbala por el borde de la mesa, empieza a girar. Y desde la altura de una mesa normal, solo le da tiempo a dar media vuelta. Sale boca arriba y llega boca abajo. Para dar la vuelta entera, la mesa tendría que medir unos tres metros. Por eso le dieron el premio Ig Nobel de física. Y ojo: en la tele británica la lanzaron al aire trescientas veces y salió mitad y mitad. Lo que la hace caer mal es el borde de la mesa. ¿El truco? Si ves que se cae, empújala rápido hacia delante: casi no gira. ¿Te ha pasado hoy?",
+  "portada": {
+   "texto": "SIEMPRE CAE ASÍ",
+   "clave": "ASÍ",
+   "archivo": "03-portadas/portada.jpg",
+   "t": 47.75,
+   "diseno": "dato",
+   "motivo": "la tostada con mantequilla ocupa el centro; texto arriba con la palabra clave en amarillo"
+  }
+ }
+}

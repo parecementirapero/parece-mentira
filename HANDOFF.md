@@ -4,6 +4,15 @@ Lo más reciente arriba. Cada entrada: fecha, quién, rama, commit, qué se hizo
 
 ---
 
+## 2026-11-28 18:40 — Jorge (con el agente) — rama `main` — lote 2026-11-28-tarde adelantado, en revisión
+**Qué pasó**: Jorge pidió en el chat del lote 2026-11-27-tarde «hazme el lote de hoy adelantado».
+**Hecho**: reserva; temas de `tendencias/2026-11-28.md` (Studio · Investigación) + un cotidiano, verificados; guiones; voz por API (2.391 caracteres, quedan ≈5.900); arte `ilus_1128t.py`; `gen_01..03.py`; render, `motor.calidad` sin ❌ (66/60/55), portadas, fichas; vídeos al chat y al Mac; correo (id 1a2231f1ddc15690). También se copiaron al Mac los MP4 y portadas del lote 2026-11-27-tarde (01 v2).
+**Pruebas**: `motor.guion` ×3, hojas de fotogramas, ffprobe, `motor.calidad` ×3. No se tocó `motor/`.
+**Pendiente**: «ok» de los lotes 2026-11-27-tarde y 2026-11-28-tarde en el mismo chat. La tarea de las 20:00 encontrará `lotes/2026-11-28-tarde/estado.md` y no duplicará.
+**Siguiente paso**: «ok» → publicar según AGENTE §8.
+
+---
+
 ## 2026-11-28 12:20 — Agente 08:00 (Nico) — rama `main` — segundo disparo del turno (lote ya en revisión)
 **Qué pasó**: la tarea de las 08:00 llegó otra vez a este mismo chat (lanzada a mano por Nico a las 11:45, con correcciones: sin Drive, sin Instagram, la carpeta del Mac es copia del repo, comprobar el saldo de ElevenLabs).
 **Hecho**: nada nuevo en el lote. `lotes/2026-11-28-manana/estado.md` ya estaba «en revisión» (commit 736e918), hecho en este mismo chat siguiendo ya esas correcciones (vídeos en el chat, solo YouTube y TikTok, clon propio del repo, saldo comprobado: 9.286 caracteres, llegaba para los 3). Según AGENTE §1.3 no se duplica y no se manda un segundo correo.
