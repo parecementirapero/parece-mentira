@@ -7,6 +7,8 @@ Regla: no repetir temas de «Usados». Las continuaciones valen si aportan infor
 - Por qué la goma de los neumáticos se endurece con el frío (tendencia ES 2026-11-27; sin verificar)
 - Nadie sonreía en las fotos antiguas: exposiciones largas, soportes para la cabeza y costumbre (histórico; sin verificar)
 - La canción que no se te va de la cabeza: por qué se pega y cómo quitarla (cotidiano)
+- El segundo intercalar (23:59:60) y por qué se elimina (Studio · Investigación 2026-11-28; sin verificar)
+- ¿Flota un reloj de arena? (Studio · Investigación 2026-11-28; sin verificar)
 _(el agente añade aquí ideas que no use en su lote; cualquiera puede proponer)_
 
 ### Ganchos propuestos para los candidatos de arriba (2026-11-17, Nico; regla de `motor/APRENDIZAJE.md` H7: primera frase ≤ 5 palabras + un objeto grande en acción en el fotograma 0)
@@ -97,6 +99,9 @@ _(formato: `- tema — lote AAAA-MM-DD-manana|tarde`)_
 - El punto ciego (nervio óptico sin células que detecten la luz, el cerebro lo rellena con el entorno y con el otro ojo, prueba de la cruz y el punto, Mariotte en el siglo XVII y la corte de Luis XIV) — lote 2026-11-22-tarde
 - El cerebro enamorado (Fisher: foto de la pareja frente a la de un conocido, área tegmental ventral, circuito de recompensa, dopamina, chocolate y drogas; Pisa 1999: veinte enamorados con la serotonina como en el TOC; la fase intensa no dura) — lote 2026-11-22-tarde
 - Test de atención: ceguera por falta de atención (los botes de la pelota amarilla con un astronauta que cruza; Simons y Chabris 1999, el gorila, ≈50 %; radiólogos 2013, 83 %) — lote 2026-11-22-tarde (formato pedido por Jorge, versión propia)
+- En enero estamos más cerca del Sol (perihelio ≈147 millones de km, afelio ≈152; las estaciones por la inclinación ≈23°; enero es verano en Argentina, Chile y Australia) — lote 2026-11-28-manana
+- La nevada de Ciudad de México del 11-1-1967 (2 a. m. en Reforma, −4 °C, ≈5 cm en San Ángel, Chapultepec y el Zócalo; solo 1907, 1920 y 1967) — lote 2026-11-28-manana
+- El vidrio no se escurre (vidrieras más gruesas abajo por fabricación a mano; Westminster 2017: ≈1 nm en mil millones de años; sólido amorfo) — lote 2026-11-28-manana
 
 ## Continuaciones prometidas
 
